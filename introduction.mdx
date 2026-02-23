@@ -1,0 +1,117 @@
+---
+title: Introduction to Campium
+description: Discover Campium, the all-in-one SaaS platform designed to streamline summer camp operations including registration, billing, attendance, and communication.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Campium empowers camps of every size to run smarter operations. You get a connected platform to manage registration, billing, attendance, transportation, medication, and communication. Turn day-to-day tasks into organized, data-driven decisions that help your camp thrive.
+
+With Campium, you centralize all camp management in one place. Access custom reporting, mobile rostering, and secure camper profiles. Whether you run a small day camp or a large overnight program, Campium scales to meet your needs.
+
+## Key Features
+
+Explore the core capabilities that make Campium essential for summer camp management.
+
+<Columns cols={3}>
+  <Card title="Registration Management" icon="user-plus" href="#registration">
+    Streamline camper sign-ups with customizable forms and automated workflows.
+  </Card>
+  <Card title="Billing & Payments" icon="credit-card" href="#billing">
+    Handle invoices, payments, and refunds seamlessly with integrated processing.
+  </Card>
+  <Card title="Attendance Tracking" icon="check-circle" href="#attendance">
+    Use mobile check-in/out with real-time rosters and absence alerts.
+  </Card>
+  <Card title="Custom Reporting" icon="bar-chart" href="#reporting">
+    Build reports on any profile field and export to PDF, XLS, or labels.
+  </Card>
+  <Card title="Communication Tools" icon="message-circle" href="#communication">
+    Send updates to parents via email, SMS, or app notifications.
+  </Card>
+  <Card title="Medication & Transport" icon="shield" href="#safety">
+    Track health records and transportation logs securely.
+  </Card>
+</Columns>
+
+## Benefits for Camps of All Sizes
+
+Campium saves you time and reduces errors across operations. Small camps benefit from simple setup and low costs, while larger programs leverage advanced reporting and staff permissions. You make data-driven choices, like optimizing staffing based on attendance trends.
+
+Read-only report access ensures staff focus on what matters. Export options let you share insights easily. Mobile access keeps everything at your fingertips during busy days.
+
+<Callout kind="tip">
+  Start with our quickstart guide to set up your camp profile in under 10 minutes.
+</Callout>
+
+## Quick Start
+
+Get up and running quickly with these essential steps.
+
+<Steps>
+  <Step title="Create Your Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com/signup` using your email.
+  </Step>
+  <Step title="Configure Camp Profile" icon="settings">
+    Add your camp details, seasons, and staff members via the dashboard.
+  </Step>
+  <Step title="Import Campers" icon="upload">
+    Use CSV import or forms to add camper data.
+
+````csv
+name,email,age,group
+John Doe,john@example.com,10,Bunk 1
+Jane Smith,jane@example.com,11,Bunk 1
+````
+  </Step>
+  <Step title="Test Attendance" icon="check-circle">
+    Simulate check-in on the mobile app to verify setup.
+  </Step>
+</Steps>
+
+## Integrate with Our API
+
+For advanced automation, use the Campium API.
+
+<CodeGroup tabs="JavaScript,Python">
+````javascript
+const response = await fetch('https://api.example.com/v1/campers', {
+  headers: {
+    'Authorization': `Bearer ${YOUR_API_KEY}`
+  }
+});
+const campers = await response.json();
+console.log(campers);
+````
+````python
+import requests
+
+response = requests.get(
+    'https://api.example.com/v1/campers',
+    headers={'Authorization': f'Bearer {YOUR_API_KEY}'}
+)
+campers = response.json()
+print(campers)
+````
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Dive into full setup and your first registration.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your API access and manage tokens.
+  </Card>
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize reports and workflows.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+</Columns>

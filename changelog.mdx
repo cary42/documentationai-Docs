@@ -1,0 +1,117 @@
+---
+title: Changelog
+description: Stay updated on the latest releases, new features, and improvements in Campium.
+---
+
+## Recent Releases
+
+<Callout kind="info">
+  Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
+</Callout>
+
+Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
+
+<Update label="2024-12-05" description="v2.1.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added custom reporting filters for attendance and medication logs, with instant result previews and exports to PDF, XLS, and Avery labels.
+- Introduced mobile roster check-in/out functionality with absent status toggles for staff on the go.
+
+## Improvements
+
+- Enhanced communication tools with scheduled messaging for parents and staff.
+- Optimized dashboard performance for camps with `>500` campers.
+
+## Bug Fixes
+
+- Fixed billing recalculation errors during mid-season registrations.
+- Resolved transportation schedule overlaps in the planner.
+</Update>
+
+<Update label="2024-11-15" description="v2.0.0" tags={["feature", "breaking"]}>
+## New Features
+
+- Launched integrated transportation management with route optimization and real-time tracking.
+- Added medication administration tracking with allergy alerts and staff sign-offs.
+
+## Breaking Changes
+
+- Updated profile field schema; migrate custom fields using the new `{profileFields}` API endpoint.
+- Deprecated legacy reporting endpoints; switch to `/reports/v2`.
+
+## Bug Fixes
+
+- Corrected registration form validation for multi-week camps.
+- Improved email notification delivery rates.
+</Update>
+
+<Update label="2024-10-20" description="v1.9.0" tags={["bugfix", "improvement"]}>
+## Improvements
+
+- Streamlined billing workflows with automated invoice generation and payment reminders.
+- Upgraded attendance tracking with QR code check-ins.
+
+## Bug Fixes
+
+- Patched security vulnerability in file uploads for camper photos.
+- Fixed dashboard refresh issues on mobile devices.
+</Update>
+
+## Upgrading Campium
+
+Follow these steps to update your Campium instance safely.
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export all reports and camper profiles via the admin dashboard.
+
+    ```
+    # From your admin console
+    Reports > Export All > Select Format (PDF/XLS)
+    ```
+  </Step>
+  <Step title="Review Migration Notes" icon="book-open">
+    Check release notes above for breaking changes, especially in v2.0.0.
+  </Step>
+  <Step title="Apply Update" icon="download">
+    Use the dashboard update tool or contact support for assisted upgrades.
+  </Step>
+  <Step title="Test Key Features" icon="check-circle">
+    Verify registration, billing, and reporting workflows.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  For large camps, schedule upgrades during off-season. Contact support@campium.com for personalized migration assistance.
+</Callout>
+
+## Quick Version Comparison
+
+<Columns cols={3}>
+  <Card title="v2.1.0" icon="zap" href="#2024-12-05">
+    Mobile rosters and advanced reporting.
+  </Card>
+  <Card title="v2.0.0" icon="truck" href="#2024-11-15">
+    Transportation and medication tracking.
+  </Card>
+  <Card title="v1.9.0" icon="shield" href="#2024-10-20">
+    Security patches and billing fixes.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="No Breaking Changes" icon="check">
+    Updates like v2.1.0 and v1.9.0 require no schema changes. Simply apply and test.
+  </Tab>
+  <Tab title="With Breaking Changes" icon="alert-triangle">
+    For v2.0.0, update profile fields:
+
+````javascript
+// Old schema
+{ "fields": ["name", "age"] }
+
+// New schema
+{ "profileFields": ["name", "age", "allergies"] }
+````
+  </Tab>
+</Tabs>
