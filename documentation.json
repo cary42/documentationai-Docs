@@ -45,6 +45,15 @@
                 "icon": "plug"
               }
             ]
+          },
+          {
+            "group": "Reports",
+            "pages": [
+              {
+                "title": "Deposit Summary",
+                "path": "deposit-summary"
+              }
+            ]
           }
         ]
       },

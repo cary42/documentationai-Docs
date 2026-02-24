@@ -1,0 +1,307 @@
+---
+title: Deposit Summary report
+description: Use the Deposit Summary in Campium to review new and batched deposits, understand fees and net totals, filter by date, create deposits, and export or print.
+---
+
+## Overview
+
+The Deposit Summary report shows two related views of your payments in Campium:
+
+- **New deposits** – individual payments that are ready to be deposited but are not yet in a batch.
+- **Deposit summary** – existing deposit batches, each showing a total, estimated fees, and net amount.
+
+Use this report to reconcile check and cash activity, group payments into deposits, and compare what Campium shows to your bank and processor statements.
+
+<Callout kind="info">
+
+The Deposit Summary uses the **date the payment was entered in Campium**, not the date funds moved at the bank or processor.
+
+</Callout>
+
+## Sections in the Deposit Summary
+
+The page contains two main tables:
+
+- **New deposits**  
+  Shows recent check, cash, and certain manual payments that **have not been included in any deposit yet**. Use this section when you want to create a new deposit from individual payments.
+
+- **Deposit summary**  
+  Shows deposits that have already been grouped and sent through your normal processing. Each row represents a deposit and includes the total amount, estimated fees, and net amount.
+
+<Callout kind="info">
+
+Think of **New deposits** as a staging area for money you still need to group into a deposit, and **Deposit summary** as your history of deposits that can be matched to bank and processor reports.
+
+</Callout>
+
+## Filters and date range behavior
+
+The Deposit Summary includes a simple **Start date** and **End date** filter above the page.
+
+- The **date range applies only to the Deposit summary table** (batched deposits).
+- The **New deposits table always shows the current list of payments that are not yet in a deposit**, no matter which dates you choose.
+
+<ParamField query="Start date" param-type="date">
+
+First date in the range used to show batches in the Deposit summary table. By default, this is the first day of the current month.
+
+</ParamField>
+
+<ParamField query="End date" param-type="date">
+
+Last date in the range used to show batches in the Deposit summary table. By default, this is the last day of the current month.
+
+</ParamField>
+
+<Callout kind="alert">
+
+The date filter looks at **when the payment was entered in Campium**. It does not use bank settlement dates or processor cut‑offs. If a payment was entered outside your chosen range, it will not appear in the Deposit summary for that period, even if it settled during those dates.
+
+</Callout>
+
+<Callout kind="info">
+
+The New deposits list is **independent of the date range**. It always reflects the current set of check, cash, and eligible manual payments that have not yet been grouped into a deposit.
+
+</Callout>
+
+## Columns in the New deposits table
+
+The **New deposits** table shows individual payments that can be added to a deposit.
+
+<ParamField body="Select" param-type="boolean" show-location="false">
+
+Checkbox that lets you choose which payments to include in a new deposit. The header includes a **Toggle All** checkbox that selects or clears every payment currently shown in the table.
+
+</ParamField>
+
+<ParamField body="Date Entered" param-type="datetime" show-location="false">
+
+The date and time the payment was recorded in Campium. This reflects when staff or the system entered the payment, not when money moved between banks.
+
+</ParamField>
+
+<ParamField body="Type" param-type="string" show-location="false">
+
+The payment method, such as **Check**, **Cash**, or a manual payment type that is included in deposits.
+
+</ParamField>
+
+<ParamField body="Name" param-type="string" show-location="false">
+
+The name attached to the payment, such as the payer, family, or account holder.
+
+</ParamField>
+
+<ParamField body="Description" param-type="string" show-location="false">
+
+Any extra details about the payment, such as notes or status text, that help you recognize what the payment relates to.
+
+</ParamField>
+
+<ParamField body="Total" param-type="number" show-location="false">
+
+The amount of the individual payment, shown as a currency value.
+
+</ParamField>
+
+<ParamField body="Total (footer)" param-type="number" show-location="false">
+
+The grand total of all payments currently listed in the New deposits table. Use this to see the total amount you are about to group into a new deposit.
+
+</ParamField>
+
+## Columns in the Deposit summary table
+
+The **Deposit summary** table shows one row per deposit batch, along with totals and estimated fees.
+
+<ParamField body="Date" param-type="date" show-location="false">
+
+The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
+
+</ParamField>
+
+<ParamField body="Batch Number" param-type="string" show-location="false">
+
+The deposit batch number. Click this link to open a detailed view of the payments included in that deposit.
+
+</ParamField>
+
+<ParamField body="Number of Items" param-type="integer" show-location="false">
+
+How many individual payments are included in the deposit.
+
+</ParamField>
+
+<ParamField body="Total" param-type="number" show-location="false">
+
+The full amount of all payments in the deposit, before fees.
+
+</ParamField>
+
+<ParamField body="Fees" param-type="number" show-location="false">
+
+The estimated processing fees for the deposit. Hovering or viewing details may explain how these fees were estimated for your agency.
+
+</ParamField>
+
+<ParamField body="Net" param-type="number" show-location="false">
+
+The deposit amount after subtracting estimated fees. This is the amount you expect to receive after fees, though the exact processor or bank amounts may differ slightly.
+
+</ParamField>
+
+<ParamField body="Grand totals (footer)" param-type="object" show-location="false">
+
+A summary row below the Deposit summary table that shows grand totals for **Total**, **Fees**, and **Net** across all deposits in the current date range.
+
+</ParamField>
+
+<Callout kind="info">
+
+Use the **grand totals** in the footer to reconcile an entire period against your accounting system, bank deposits, or processor statements.
+
+</Callout>
+
+## How fees and net are calculated
+
+Campium estimates fees and net amounts for each deposit based on your agency’s configured processing rates and per‑transaction charges.
+
+At a high level:
+
+- The system uses the percentage rates and per‑payment fees you have set for card and ACH transactions.
+- It applies those rates to the payments in the deposit to calculate an **estimated fee amount**.
+- The **Net** column is the **Total minus the estimated Fees**.
+
+<Callout kind="info">
+
+Fee amounts in this report are **estimates**. They may not match your processor or bank exactly, especially for chargebacks, refunds, or special pricing. Always rely on your processor statement for final fee totals.
+
+</Callout>
+
+## Run the Deposit Summary report
+
+Use the Financial area in Campium to open and run the Deposit Summary for reconciliation.
+
+<Steps>
+  <Step title="Open the Deposit Summary" icon="bar-chart">
+
+    - Sign in to your Campium admin account.
+    - Go to the **Financial** or **Reports** area.
+    - Select **Deposit Summary** from the list of reports.
+
+  </Step>
+
+  <Step title="Choose your date range for deposits" icon="calendar">
+
+    - Use the **Start date** and **End date** fields to choose the period you want to review.
+    - Keep the default month to review current activity, or set dates that match your bank or processor statement.
+
+  </Step>
+
+  <Step title="Apply and review the results" icon="play-circle">
+
+    - Apply the date range to refresh the **Deposit summary** table.
+    - Confirm that deposit totals, estimated fees, and net amounts look reasonable for the selected period.
+    - Review the **New deposits** table to see which recent payments are **not yet included** in any deposit.
+
+  </Step>
+</Steps>
+
+When the page updates successfully, you see:
+
+- A **New deposits** table with current check, cash, and eligible manual payments that still need to be grouped into deposits.
+- A **Deposit summary** table listing deposits whose payments were entered within your chosen date range.
+
+## Create a deposit from new payments
+
+Use the **New deposits** table to group selected payments into a deposit and assign a date that matches when you will deposit or have deposited the funds.
+
+<Steps>
+  <Step title="Select payments to include" icon="check-circle">
+
+    - In the **New deposits** table, use the checkboxes to select the payments you want to include.
+    - Use **Toggle All** in the header to quickly select or clear all listed payments.
+    - Check the **Total** at the bottom of the table to confirm it matches what you expect to deposit.
+
+  </Step>
+
+  <Step title="Open the Create Deposit window" icon="play-circle">
+
+    - Click the **Create Deposit** button in the New deposits footer.
+    - A window opens showing a summary of the payments you selected and a field for the deposit date.
+
+  </Step>
+
+  <Step title="Set the deposit date and save" icon="calendar">
+
+    - Enter the **deposit date** you want associated with the new deposit (for example, the date you will bring the checks or cash to the bank).
+    - Choose **Save** or **Submit** to create the deposit.
+
+  </Step>
+
+  <Step title="Understand what happens to the payments" icon="info">
+
+    - Campium groups the selected payments into one or more deposits based on payment type (for example, cash and check).
+    - Each payment is now marked as part of a deposit and no longer appears in the **New deposits** table.
+    - The deposits will appear in the **Deposit summary** section once they move through your normal processing and receive a batch number.
+
+  </Step>
+
+  <Step title="Return to the Deposit Summary" icon="arrow-right">
+
+    - After saving, you return to the **Deposit Summary** page.
+    - The payments you grouped are removed from **New deposits** and will show in deposit views as processing continues.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Batch numbers (shown as **Batch Number** in the Deposit summary table) come from downstream Campium and processor workflows, not from the **Create Deposit** action. Use the batch links in the Deposit summary when you need to review the payments inside an existing deposit.
+
+</Callout>
+
+## Export, copy, and print options
+
+Both Deposit Summary tables include export and print buttons so you can share, save, or analyze the data outside of Campium.
+
+Available actions typically include:
+
+<Tabs>
+  <Tab title="Copy" icon="copy">
+
+    Copies the current table view to your clipboard. Use this when you want to paste rows directly into an email, document, or spreadsheet without creating a file.
+
+  </Tab>
+
+  <Tab title="Excel" icon="download">
+
+    Downloads the table as an Excel‑compatible file. This is helpful if your finance team prefers to use formulas, filters, and formatting in a spreadsheet.
+
+  </Tab>
+
+  <Tab title="CSV" icon="download">
+
+    Exports the table as a comma‑separated values file that you can open in Excel, Google Sheets, or import into other accounting tools.
+
+  </Tab>
+
+  <Tab title="PDF (landscape legal)" icon="file-text">
+
+    Creates a PDF snapshot of the table in landscape orientation on legal‑size paper. Use this when you need a fixed‑layout report for records or audits.
+
+  </Tab>
+
+  <Tab title="Print" icon="printer">
+
+    Opens your browser’s print dialog with the table formatted for printing. Combine this with the PDF option if you need both electronic and paper copies.
+
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+
+Use the table’s page‑size controls to adjust how many rows appear before you export or print. Increasing the page size lets you capture more data in a single file or printed report.
+
+</Callout>
