@@ -1,0 +1,218 @@
+---
+title: Revenue Summary report
+description: Review gross and net revenue, payments by type, and discounts for a selected season or program group, with flexible filters and export options.
+---
+
+## What the Revenue Summary report shows
+
+Use the Revenue Summary report to see how much revenue your camp brought in for a specific season or program group, how that breaks down by product, how families paid, and how discounts affected totals.
+
+At the top of the report, you see key figures such as total revenue, discounts, and how much money has been received versus still outstanding. The rest of the page is split into three tables:
+
+- **Products** – revenue by product.
+
+- **Payments** – money received by payment type.
+
+- **Discounts** – discounts applied during the period.
+
+<Callout kind="info" collapsed="false">
+  Revenue Summary focuses on **sales recorded in Campium** for the season or program group you select. It does not pull in data from outside systems.
+</Callout>
+
+## Filters and date range
+
+You control which sales appear in the Revenue Summary with two main filters: season/program group and date range.
+
+### Filters
+
+Use these options at the top of the report to define the scope of your summary.
+
+<ParamField body="Season" param-type="selector" required="true" deprecated="false">
+  Season or program group whose revenue you want to review. The report only includes sales tied to this selection.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Optional start and end dates that limit which sales are included, based on the **date the sale was recorded in Campium**.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  If you want to compare seasons, run the report once for each season or program group with the same date range.
+</Callout>
+
+### How the date range works
+
+The date range filters **which sales are included** in the summary. Campium looks at the date when each sale was recorded and includes only sales that fall between your start and end dates.
+
+- If you set a date range, the Products, Payments, and Discounts tables only include sales from that period.
+
+- If you leave the date range blank, the report includes **all sales** for the selected season or program group.
+
+This filter does not change how products or payment types are grouped; it only changes which transactions are counted.
+
+## Run the report
+
+Follow these steps to generate a Revenue Summary for the period you care about.
+
+<Steps>
+  <Step title="Select the season or program group" icon="folder" title-type="p">
+    Choose the season or program group you want to analyze from the filter area at the top of the page. The report will only include sales tied to this selection.
+
+    <Callout kind="info" collapsed="false">
+      You must choose a season or program group before the report can show any revenue. If the page looks empty, confirm you have a selection set.
+    </Callout>
+  </Step>
+
+  <Step title="Set an optional date range" icon="calendar" title-type="p">
+    If you need to focus on a specific period, enter a start and end date. Use this to see revenue for a month, a session, or a custom reconciliation window. Leave the dates blank to see all sales for the season or program group.
+  </Step>
+
+  <Step title="Run and review the summary" icon="play-circle" title-type="p">
+    Refresh or run the report. Review the headline totals at the top, then scroll through the **Products**, **Payments**, and **Discounts** sections to understand where your revenue is coming from and how families are paying.
+  </Step>
+</Steps>
+
+## Summary metrics at the top
+
+The top section of the Revenue Summary highlights overall revenue and collection status so you can quickly understand your position for the selected season or program group.
+
+Typical metrics include:
+
+- **Gross revenue** – the total value of all sales before discounts and adjustments.
+
+- **Discounts** – the total value of discounts applied, which reduce what you expect to collect.
+
+- **Net revenue** – the amount after discounts and adjustments, representing what you should collect for the period.
+
+- **Money received** – the amount actually paid so far, including all payment types.
+
+- **Percent received** – how much of your net revenue has been collected as a percentage.
+
+Use this section to confirm that what you have **billed**, what you have **collected**, and the **remaining balance** all make sense for your reconciliation period.
+
+<Callout kind="tip" collapsed="false">
+  When there is a remaining balance, you may see it as an underlined link labeled like "$4,250 A/R". Select this link to open the Accounts Receivable report for the same season or program group and review which accounts make up that balance.
+</Callout>
+
+## Products table
+
+The Products table shows how revenue breaks down by the items you sell (for example, camp sessions, add-ons, or merchandise). Each row represents a single product.
+
+### Columns
+
+<ParamField body="Product" param-type="text" required="true" deprecated="false">
+  Name or description of the product that was sold, such as "Week 1 Day Camp" or "Lunch Add-on".
+</ParamField>
+
+<ParamField body="Quantity" param-type="number" required="true" deprecated="false">
+  Total number of units sold for the product during the selected filters (for example, camper enrollments or items).
+</ParamField>
+
+<ParamField body="Average Cost" param-type="currency" required="true" deprecated="false">
+  Average price paid per unit of the product, calculated from the sales included in the report.
+</ParamField>
+
+<ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
+  Total revenue from this product for the selected season/program group and date range. This reflects the quantity sold multiplied by the average cost.
+</ParamField>
+
+Use this table to identify which products generate the most revenue and to spot pricing or enrollment trends across your offerings.
+
+## Payments table
+
+The Payments table summarizes **money received** by payment type. Each row represents a type of payment or adjustment.
+
+### Columns
+
+<ParamField body="Payment Type" param-type="text" required="true" deprecated="false">
+  Category of payment, such as **Credit Card**, **Cash**, **Check**, **ACH**, **Refund**, **Void**, or **Adjustment**.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  Total amount for that payment type within the selected filters. Positive values usually indicate money received; negative values indicate money returned or reversed.
+</ParamField>
+
+### Understanding common payment types
+
+Typical payment types you may see include:
+
+- **Credit card** – Payments processed by card. These amounts represent what families paid by card, not the net after processor fees.
+
+- **Cash** – Cash received at the office or during in-person events.
+
+- **Check** – Paper checks deposited for camp fees.
+
+- **ACH** – Direct bank transfers or e-check payments.
+
+You may also see:
+
+- **Refunds/voids** – Amounts returned to families or transactions canceled after they were created. These usually appear as negative amounts and **reduce** the total money received.
+
+- **Adjustments** – Manual changes applied to balances, which can increase or decrease totals depending on the context.
+
+<Callout kind="alert" collapsed="false">
+  Refunds, voids, and negative adjustments reduce your payment totals. When reconciling to bank deposits, be sure to account for these entries alongside positive payment types.
+</Callout>
+
+Use the Payments table to confirm that the total money received for the period matches what you expect from your bank deposits and processor reports, once you consider timing and fees.
+
+## Discounts table
+
+The Discounts table shows how discounts were used across your sales, so you can see the impact on revenue and which discounts are most common.
+
+### Columns
+
+<ParamField body="Discount" param-type="text" required="true" deprecated="false">
+  Name or description of the discount applied, such as "Sibling Discount" or "Early Registration".
+</ParamField>
+
+<ParamField body="Quantity" param-type="number" required="true" deprecated="false">
+  Number of times this discount was applied in the selected period.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  Total value of the discount across all uses. Higher amounts indicate a greater reduction to gross revenue.
+</ParamField>
+
+Compare discounts here with the **Discounts** figure in the summary metrics to understand how much they reduced your overall revenue.
+
+## Export and share the report
+
+Export options help you share the Revenue Summary, save it for your records, or analyze it further in other tools.
+
+Many accounts see export buttons directly above the tables for:
+
+- PDF
+
+- Excel
+
+- CSV
+
+- Print/copy
+
+Some setups also offer a dedicated export action that creates a full Revenue Summary file for download.
+
+<Callout kind="info" collapsed="false">
+  If you do not see the export option you expect, check with your Campium administrator. Export formats can vary by account.
+</Callout>
+
+Use these tabs to choose the export format that fits your task:
+
+<Tabs>
+  <Tab title="PDF" icon="download">
+    PDF exports are best when you need a **fixed snapshot** of the report to share with leadership, auditors, or boards. The layout is print-friendly and consistent for everyone who opens it.
+  </Tab>
+
+  <Tab title="Excel" icon="file-text">
+    Excel exports work well when finance staff want to **reconcile, reformat, or combine** the Revenue Summary with other spreadsheets. Use this format if you plan to add formulas, pivot tables, or custom views.
+  </Tab>
+
+  <Tab title="CSV" icon="file-text">
+    CSV is ideal for **importing into accounting or BI tools**. It provides the same data with a simple structure that many systems can read, without extra formatting.
+  </Tab>
+
+  <Tab title="Print/Copy" icon="printer">
+    Use **Print** for a quick paper copy or to save as a PDF from your browser. Use **Copy** to place the table data on your clipboard so you can paste it into email, documents, or other tools.
+  </Tab>
+</Tabs>
+
+When exporting, always confirm that the **season/program group and date range** filters are set correctly first. The export reflects exactly what you see on the screen.

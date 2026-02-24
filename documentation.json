@@ -50,8 +50,17 @@
             "group": "Reports",
             "pages": [
               {
-                "title": "Deposit Summary",
-                "path": "deposit-summary"
+                "group": "Financial",
+                "pages": [
+                  {
+                    "title": "Deposit Summary",
+                    "path": "deposit-summary"
+                  },
+                  {
+                    "title": "Revenue Summary",
+                    "path": "revenue-summary"
+                  }
+                ]
               }
             ]
           }
