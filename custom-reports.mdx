@@ -1,0 +1,282 @@
+---
+title: Create and use custom reports
+description: >-
+  Build, save, and share custom reports in Campium, including filters, display
+  fields, access settings, exports, labels, email, profile sheets, and batch
+  edits.
+---
+## What custom reports do
+
+Custom reports let you search and slice your Campium data in exactly the way you need, then reuse that setup anytime. You choose who appears, which fields you see, and how you share or export the results.
+
+Common ways admins use custom reports:
+
+- Find families in a specific program, grade, or session.
+
+- Build call lists, mailing labels, or email lists.
+
+- Review registrations or profiles updated in a recent time frame.
+
+You can return to your saved reports at any time, adjust filters or columns, and quickly refresh the results.
+
+<Callout kind="info" collapsed="false">
+  Start with a narrow question such as "Which campers are in Session A and have a remaining balance?" and build a report just for that. You can always add more filters or fields later.
+</Callout>
+
+## Open custom reports
+
+Access Custom Reports from your Campium admin navigation.
+
+- Go to the **Reports** section.
+
+- Choose **All Custom Reports** to see your saved reports, or **New Custom Report** to start a new one.
+
+- You can also access the page directly at `/report/report.php` when signed in to your admin account.
+
+The **All Custom Reports** page lists existing reports and quick actions like **New Report** and **New Category**.
+
+## Create a new custom report
+
+Use a new custom report when you need a view you do not see in the standard reports.
+
+<Steps>
+  <Step title="Start a new report" icon="bar-chart" title-type="p">
+    - Go to **Reports** → **All Custom Reports**.
+
+    - Select **New Custom Report** or **New Report**.
+  </Step>
+
+  <Step title="Name your report" icon="edit" title-type="p">
+    - Enter a clear **Report Name** so you and your team can recognize it later, for example, "Campers – Session A with balance".
+
+    - (Optional) Choose a **Category** so you can find it easily in the list view.
+  </Step>
+
+  <Step title="Choose access: Everyone vs Just Me" icon="users" title-type="p">
+    - Select **Everyone** to make the report visible to all admins who can access reports.
+
+    - Select **Just Me** to keep the report private to your own login.
+  </Step>
+
+  <Step title="Create the empty report" icon="check-circle" title-type="p">
+    - Click **Create Report**.
+
+    - Campium opens the report builder where you add filters, choose display fields, and save.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Use **Just Me** while you experiment with a new report. Once you are confident it returns the right rows, edit it to **Everyone** so your team can use the same view.
+</Callout>
+
+## Add filters to control which records appear
+
+Filters define **who** appears in the report. You can add one filter or many, depending on how specific you want to be.
+
+### Add and combine filters
+
+<Steps>
+  <Step title="Add your first filter" icon="plus" title-type="p">
+    - In the report builder, select **Add Another Filter**.
+
+    - Choose the field you want to filter by, such as **Session**, **Balance**, **Status**, or another data field.
+
+    - Pick an operator such as **is**, **contains any**, **is not**, and so on.
+
+    - Enter or choose the value (for example, a specific session name or status).
+  </Step>
+
+  <Step title="Add more filters to narrow results" icon="settings" title-type="p">
+    - Use **Add Another Filter** again to stack additional conditions.
+
+    - Combine filters to answer specific questions, such as "Status is Active" **and** "Balance is not 0".
+  </Step>
+</Steps>
+
+As you change filters, the report updates and shows how many records match.
+
+### Filter operators explained
+
+When you choose a filter, you also choose an operator. These control **how** Campium compares your records to the value you enter.
+
+- **is**\
+  Use this when you want an exact match.\
+  Example: `Status is Active` returns only rows where the status equals “Active”.
+
+- **contains any**\
+  Use this when the field can hold multiple values and you want records that match **at least one** of your selected values.\
+  Example: `Session contains any Session A, Session B` shows campers in Session A, Session B, or both.
+
+- **contains all**\
+  Use this when the field can hold multiple values and you only want records that match **every** value you select.\
+  Example: `Session contains all Session A, Session B` shows only campers enrolled in both sessions.
+
+- **is not**\
+  Use this to exclude a specific value.\
+  Example: `Status is not Cancelled` returns all records except those marked Cancelled.
+
+- **is null**\
+  Use this to find records where a field is **blank or missing** a value.\
+  Example: `Medical form is null` finds campers with no medical form on file.
+
+- **is not null**\
+  Use this to find records where a field **has any value at all** (not blank).\
+  Example: `Emergency contact is not null` returns everyone with at least one emergency contact entered.
+
+<Callout kind="info" collapsed="false">
+  If you are ever unsure which operator to use, try **is** for simple single-value fields (like Status) and **contains any** for fields where people can have more than one selection (like sessions or tags).
+</Callout>
+
+## Choose display fields (which columns you see)
+
+Display fields control **what information** shows as columns in your report results.
+
+<Steps>
+  <Step title="Open the display fields chooser" icon="columns" title-type="p">
+    - In the report builder, select **Choose Display Fields**.
+
+    - A list of available fields appears.
+  </Step>
+
+  <Step title="Add the columns you need" icon="plus" title-type="p">
+    - Select the fields you want to see for each record, such as **Name**, **Email**, **Phone**, **Session**, **Balance**, or other details.
+
+    - Keep only the columns that matter for your question to make the report easier to read.
+  </Step>
+
+  <Step title="Set the column order" icon="arrow-right" title-type="p">
+    - Adjust the order of selected fields so the most important details appear on the left.
+
+    - Confirm your changes to return to the report view.
+  </Step>
+</Steps>
+
+Your report now combines the filters you set with the display fields you chose to give you a focused view.
+
+## Save your custom report
+
+Saving your report locks in the filters and display fields so you can reuse them.
+
+<Steps>
+  <Step title="Save with a clear name and category" icon="save" title-type="p">
+    - Select **Save Report** in the report builder.
+
+    - Confirm or update the **Report Name**.
+
+    - (Optional) Assign or change the **Category** so similar reports group together.
+  </Step>
+
+  <Step title="Confirm access settings" icon="lock" title-type="p">
+    - Review whether the report is shared with **Everyone** or limited to **Just Me**.
+
+    - Update access if you are ready to share it with other admins.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Save often when building a more complex report. Saving updates the configuration so you do not lose your work if you navigate away or step away from your session.
+</Callout>
+
+## Run the report and review matches
+
+After you configure filters and display fields, the report view shows your results as a table.
+
+- Look for the record count near the top of the results, shown as **X matches**.\
+  This tells you how many rows meet all of your filter conditions.
+
+- Scan the columns to confirm the fields look correct and the records are what you expect.
+
+- Adjust filters or display fields if the matches are too broad or too narrow, then save again.
+
+If the number of matches is unexpectedly high or low, review your operators. For example, **contains any** will usually return more records than **contains all**.
+
+## Export and share results
+
+Once you are happy with your matches and columns, use the export and sharing tools built into the report results.
+
+### Export options
+
+The results grid supports several export formats:
+
+- **Copy** – Copies the visible results to your clipboard to paste into email, chat, or a document.
+
+- **CSV** – Downloads a comma-separated file, useful for spreadsheets or importing into other systems.
+
+- **Excel** – Creates a ready-to-open spreadsheet for Excel users.
+
+- **PDF** – Produces a printable or shareable PDF snapshot of the report.
+
+- **Print** – Sends the current view directly to your printer dialog.
+
+Choose the export option that best fits how you plan to work with or share the data.
+
+### Labels, email, and profile sheets
+
+In addition to standard exports, report results connect directly to communication and printing tools:
+
+- **Labels** – Generate mailing labels for the records in your report (for example, for families in a specific session).
+
+- **Email** – Start a mass email to the people included in your results.
+
+- **Create Profile Sheets** – Produce profile sheets for each matching record, using your configured profile layout.
+
+These actions always use the **current report matches**, so your filters control exactly who receives an email or appears on a label or profile sheet.
+
+## Batch edit selected rows
+
+Batch Edit lets you update a field for many records at once, based on the rows you select in your report.
+
+<Steps>
+  <Step title="Select the rows to change" icon="check-circle" title-type="p">
+    - In the results table, use the checkboxes to select one or more rows.
+
+    - Confirm that the **matches** count and your selections reflect exactly who you intend to change.
+  </Step>
+
+  <Step title="Launch Batch Edit" icon="settings" title-type="p">
+    - With rows selected, use the **Batch Edit** action.
+
+    - Choose which field you want to update (for example, a tag, status, or other editable field).
+  </Step>
+
+  <Step title="Apply the change" icon="alert-triangle" title-type="p">
+    - Set the new value you want to apply to all selected records.
+
+    - Review the summary of how many records will change.
+
+    - Confirm to apply the update.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Batch edits update many records at once. If you are testing a new report, start with a small selection and confirm the results before applying a larger change.
+</Callout>
+
+## Organize and find your custom reports
+
+The **All Custom Reports** page helps you manage your saved reports so your team can find the right one quickly.
+
+Use categories and list columns:
+
+- **Report Name** – The title you gave the report. Use descriptive names that describe the audience and purpose.
+
+- **Category** – A folder-like label (for example, “Registration”, “Finance”, “Communications”) to group related reports.
+
+- **Created By** – Shows which admin originally created the report, useful when you have questions about how it is built.
+
+- **Created Date** – The date the report was first created.
+
+- **Last Accessed** – The most recent time anyone opened the report; high-traffic reports are likely team favorites.
+
+Over time, review reports that are rarely used or have an old **Last Accessed** date. You can retire or rename them to keep your reports list clean and easier to navigate.
+
+## Next steps
+
+Once you have a few custom reports in place, consider:
+
+- Creating shared “home base” reports for key teams, such as registration, finance, or communications.
+
+- Duplicating a useful report and adjusting the filters slightly, rather than starting from scratch.
+
+- Reviewing who has access to high-impact reports to ensure the right admins see them.
+
