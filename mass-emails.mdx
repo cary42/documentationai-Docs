@@ -1,0 +1,339 @@
+---
+title: Mass Emails
+description: Send targeted mass emails to families and users in Campium, including filters, scheduling, marketing flags, attachments, and basic delivery stats.
+---
+## Access the Mass Emails page
+
+Open the Mass Emails tool from the main navigation.
+
+- Go to **Communication → Mass Emails**.
+
+- The Mass Emails list opens, showing all your active mass emails.
+
+<Callout kind="tip" collapsed="false">
+  Add the Mass Emails page to your browser bookmarks or admin shortcuts so you can jump back to it quickly when you need to send updates.
+</Callout>
+
+## Understand the Mass Emails list
+
+The Mass Emails list helps you review past emails, manage drafts, and track performance.
+
+Key parts of the list:
+
+- **Columns**
+
+  - **Subject** – The email title and main link to open or edit the email.
+
+  - **Status** – One of:
+
+    - **Draft** – Not sent yet; still editable.
+
+    - **Scheduled** – Set to send at a future date/time.
+
+    - **Sent** – Fully sent to all selected recipients.
+
+    - **Auto-Sending** – Ongoing email that automatically sends to new users who match its recipient filters.
+
+  - **Stats** – At-a-glance performance:
+
+    - **Sent** – Number of messages sent.
+
+    - **Opened** – Number of unique opens.
+
+    - **Open rate** – Percentage of sent emails that were opened.
+
+  - **Date Created** – When the email was first created.
+
+  - **Date Sent** – When the email actually went out (for Sent emails).
+
+- **Filters**
+
+  - **Active / Archived** – Switch between active emails and archived history.
+
+  - Quick filters: **All, Sent, Scheduled, Drafts, Auto-Sending** for fast status-based views.
+
+- **Common actions**
+
+  - **Open / Edit** – Click the **Subject** to open the email composer and edit settings, recipients, or content.
+
+  - **Copy** – Duplicate an existing email to reuse content and recipient filters.
+
+  - **Archive / Unarchive** – Hide older emails from the Active view without deleting their stats or logs.
+
+Use these tools to keep your communication organized and to quickly find past campaigns.
+
+## Create and send a new mass email
+
+Use these steps when you want to send a new communication to a group of families or users.
+
+<Steps>
+  <Step title="Start a new email" icon="plus" title-type="p">
+    - From **Communication → Mass Emails**, click **New Email**.
+
+    - The email composer opens on the **Settings** tab with a new Draft.
+
+    - The status stays as **Draft** until you send now or schedule it.
+  </Step>
+
+  <Step title="Complete the Settings tab" icon="settings" title-type="p">
+    - Fill in sender details, subject, and content.
+
+    - Choose whether this is a marketing email and set when it should send.
+
+    - Optionally add attachments such as PDFs or images.
+
+    You can find details on each field in the [Email settings reference](#email-settings-reference) below.
+  </Step>
+
+  <Step title="Choose recipients" icon="users" title-type="p">
+    - Go to the **Recipients** tab.
+
+    - Build or select filters to target the right families or users.
+
+    - Confirm the **recipient count** before sending.
+
+    If you skip this step, Campium warns you that no recipients are selected.
+  </Step>
+
+  <Step title="Test and preview your email" icon="play-circle" title-type="p">
+    - On the **Settings** tab, use **Send Test Email** to send a copy to yourself or a colleague.
+
+    - Use **Preview Email** to see how the email will look in a typical inbox.
+
+    Confirm that links, merge fields, and formatting look correct before sending to families.
+  </Step>
+
+  <Step title="Send or schedule the email" icon="rocket" title-type="p">
+    - If you want to send immediately, leave **When To Send** blank or set it to the current time, then click **Send Now**.
+
+    - If you want to send later, set **When To Send** to your future date/time. The email shows as **Scheduled** until it is sent.
+
+    - For emails using dynamic filters, you may see **Send To Updated Recipients** when filters or recipients change.
+
+    After sending, the email moves to **Sent** (or continues as **Auto-Sending** if you enabled auto-send).
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  Before you send, double-check both the **recipient count** and the **When To Send** time. Mass emails cannot be unsent once they have gone out.
+</Callout>
+
+## Composer tabs: Settings, Recipients, Logs
+
+Use the tabs at the top of the composer to move between content, audience, and history.
+
+<Tabs>
+  <Tab title="Settings" icon="settings">
+    The **Settings** tab controls the content, sender information, timing, and core email options.
+
+    Typical tasks on this tab:
+
+    - Set the **From** name and address.
+
+    - Enter the **Subject** line.
+
+    - Pick a **Template** and edit the message body.
+
+    - Mark the email as a **Marketing Email** (to include an unsubscribe link).
+
+    - Configure **When To Send**, test sends, and previews.
+
+    - Add **Attachments** if needed.
+
+    See [Email settings reference](#email-settings-reference) for field-by-field details.
+  </Tab>
+
+  <Tab title="Recipients" icon="users">
+    The **Recipients** tab defines who will receive the email.
+
+    On this tab you can:
+
+    - Use the **dynamic filter builder** to target specific groups (by session, status, payment state, and other criteria).
+
+    - Select from **saved filters** you use frequently.
+
+    - Choose to **display all users** when you want to send broadly.
+
+    - View the **estimated recipient count** and click **View Recipients** to review the list in more detail.
+
+    Campium shows a warning if you have not set any recipients so you do not accidentally schedule or send an email to zero people.
+  </Tab>
+
+  <Tab title="Logs" icon="bar-chart">
+    The **Logs** tab shows delivery and engagement details after you send.
+
+    Information on this tab typically includes:
+
+    - Per-recipient **sent** timestamps.
+
+    - **Opened** events for each recipient.
+
+    - High-level stats such as **Sent**, **Opened**, and **Time Sent**.
+
+    For some emails, you may also see a **Resend to non-openers** option, which lets you follow up only with families who did not open the first message.
+  </Tab>
+</Tabs>
+
+## Email settings reference
+
+Use these field descriptions as a quick reference while you work on the **Settings** tab.
+
+### From (required)
+
+Display name and email address that appear to recipients as the sender. Use a recognizable camp address so families trust and recognize your messages.
+
+### Subject (required)
+
+The email subject line shown in recipients' inboxes. Keep it clear and specific, for example, `Session 2: Bus Schedule and Packing List`.
+
+### Template (optional)
+
+Optional layout or content template to start from. Choose a template to reuse a standard header, footer, or structure, then edit the message body as needed.
+
+### Marketing Email (optional)
+
+Set to **Yes** for promotional or marketing-style emails. When you mark an email as marketing, Campium adds an unsubscribe link for compliance and recipient preferences.
+
+<Callout kind="info" collapsed="false">
+  Use **Marketing Email = Yes** for newsletters, promotions, or announcements families might want to opt out of. Use **No** for strictly operational notices where unsubscribes are not appropriate.
+</Callout>
+
+### When To Send (optional)
+
+Select a date and time to schedule the email. If you leave this blank or set it to now, the email sends immediately when you click **Send Now**. If you pick a future time, the email shows as **Scheduled** until that time.
+
+### Auto-send Emails To New Matching Recipients (optional)
+
+When set to **Yes**, Campium continues sending this email automatically to any new users who match the recipient filters in the future. The email status changes to **Auto-Sending** and remains active until you disable or archive it.
+
+<Callout kind="alert" collapsed="false">
+  If you enable **Auto-send Emails To New Matching Recipients**, treat this email like an ongoing campaign. Review the filters carefully so new families do not receive outdated content.
+</Callout>
+
+### Attachments (optional)
+
+Upload files to include with your email, such as JPG or PNG images, PDF documents, or QuickTime videos. Each file can be up to **10MB**, and you can upload multiple files per email.
+
+## Work with recipients and filters
+
+The **Recipients** tab is where you decide who receives your message.
+
+- **Dynamic filter builder**
+
+  - Add one or more conditions (for example, enrolled in a session, outstanding balance, camper age).
+
+  - Combine filters to narrow down to exactly the group you need.
+
+  - Save filters you use frequently so you can apply them quickly to future emails.
+
+- **Saved filters**
+
+  - Apply previously saved audience definitions in a single click.
+
+  - Useful for regular sends like "All current-season families" or "Staff members."
+
+- **Show all users**
+
+  - Use the option to **display all users** when you truly mean to send camp-wide.
+
+  - Combine with additional filters if you start broad and then refine.
+
+- **Recipient count and list**
+
+  - Review the **record count** displayed for your current filters.
+
+  - Click **View Recipients** to see the list of individual recipients when you need to verify who will receive the email.
+
+<Callout kind="tip" collapsed="false">
+  Always check the **recipient count** and, when sending to a sensitive group, use **View Recipients** to spot-check the list before sending.
+</Callout>
+
+Campium shows a **warning** on the Recipients tab if no recipients are set. Resolve this warning before you test, schedule, or send the email.
+
+## Sending, testing, and resending
+
+Use these actions in the composer to control how and when your email goes out.
+
+### Send Test Email
+
+- From the **Settings** tab, click **Send Test Email**.
+
+- Enter one or more test addresses (often your own or staff).
+
+- Review formatting, links, and merge fields in a real inbox before sending to families.
+
+### Preview Email
+
+- Click **Preview Email** to see how the email looks on screen.
+
+- Use this preview to catch spacing issues, long subject lines, or missing content.
+
+### Send Now vs scheduled send
+
+- **Send Now**
+
+  - Use when you are ready to send immediately.
+
+  - Works best when **When To Send** is blank or set to the current time.
+
+  - After you confirm, the email status becomes **Sent** and stats begin to update as recipients open it.
+
+- **Scheduled**
+
+  - Set **When To Send** to a future date and time.
+
+  - The email status shows as **Scheduled** on the list page.
+
+  - Campium automatically sends the email at the scheduled time; you can usually edit or cancel it while it is still in Scheduled status.
+
+### Resend to non-openers
+
+For some emails, Campium offers a **Resend to non-openers** option after the initial send:
+
+- Available when enough data is present to identify who did not open the original email.
+
+- Sends a follow-up only to recipients who did not open the first message.
+
+- Useful for reminders about forms, payments, or upcoming dates.
+
+Use the **Logs** tab and **Stats** on the list page to decide whether a resend is necessary.
+
+## Attachments best practices
+
+Attachments help you share detailed information such as schedules, forms, or flyers.
+
+Keep in mind:
+
+- Supported file types:
+
+  - Images such as JPG or PNG for visual materials.
+
+  - PDFs for documents, forms, and handouts.
+
+  - QuickTime videos for short clips.
+
+- Size limit:
+
+  - Each attachment can be up to **10MB**.
+
+  - If you have multiple large files, consider linking to a shared folder or website instead of attaching everything.
+
+Check that attachments open correctly from your **Send Test Email** before you send to families.
+
+## After sending: stats and logs
+
+Once your email is sent (or auto-sending), monitor performance from the list and the **Logs** tab.
+
+- On the **Mass Emails list**, review:
+
+  - **Sent** count, **Opened** count, and **Open rate**.
+
+  - **Status** to confirm the email is Sent, Scheduled, Draft, or Auto-Sending.
+
+- On the **Logs** tab, drill into:
+
+  - Individual recipients and whether their email was sent and opened.
+
+  - **Time Sent** to confirm when the system delivered the message.
+
+Use these insights to refine subjects, sending times, and audiences for future emails.
