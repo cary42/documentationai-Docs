@@ -95,7 +95,12 @@
           },
           {
             "group": "Forms",
-            "pages": []
+            "pages": [
+              {
+                "title": "Forms",
+                "path": "forms"
+              }
+            ]
           }
         ]
       },

@@ -1,0 +1,220 @@
+---
+title: Forms
+description: >-
+  Use Forms in Campium to collect structured information from families,
+  students, or staff, and manage their submissions in one place.
+---
+## Overview
+
+Forms in Campium help you collect structured information from your community and keep those responses connected to your existing data. Typical examples include collecting registrations, preferences, acknowledgments, or other structured inputs that you need to track over time.
+
+Open Forms from the main navigation as a top-level item labeled **Forms**. Campium loads the Forms page at the admin route `/communication/forms.php`. Bookmark this route if you manage forms frequently.
+
+<Callout kind="info" collapsed="false">
+  Some tabs and options inside a form are conditional based on the **Form Type** you select. For example, Registration forms include a Products Layout tab, and Upload a File forms hide the Questions tab.
+</Callout>
+
+## Create a new form
+
+Use the **New Form** button on the Forms list to start a new form and configure its core behavior.
+
+<Steps>
+  <Step title="Open the Forms list" icon="folder" title-type="p">
+    - From the main Campium navigation, select **Forms**.
+
+    - Confirm you are on the admin route `/communication/forms.php` with the list of existing forms.
+
+    You should see a list of forms and a primary action button labeled **New Form**.
+  </Step>
+
+  <Step title="Start a new form" icon="plus" title-type="p">
+    - Click the **New Form** button at the top of the list.
+
+    - Campium opens the form editor with the **Settings** tab active.
+
+    The editor shows additional tabs such as **Recipients**, **Questions**, and **Responses**, and may show **Products Layout** depending on the Form Type.
+  </Step>
+
+  <Step title="Complete required Settings fields" icon="settings" title-type="p">
+    In the **Settings** tab, fill out all required fields before saving:
+
+    - **Core details**
+
+      - **Form Name** (required)
+
+      - **Form Type** (required)
+
+      - **User Type** (required)
+
+      - **Season** (required)
+
+      - **Description** (optional text that appears beneath the form name on the Portal)
+
+    - **Availability**
+
+      - **Start Date** and **End Date** (required; control when the form is available on the Portal)
+
+      - **Cutoff Date** (optional; set a different business cutoff than the End Date if needed)
+
+    - **Visibility and locking**
+
+      - **Visibility** (Visible or Hidden)
+
+      - **Lock Form After Completion** (Yes or No)
+
+      - **Show Question Numbers?** (toggle to display question numbering on the form)
+
+    - **Statuses after completion**
+
+      - **Form Status After Completion** (required)
+
+      - **User Status After Completion** (required)
+
+    - **Fees and payments**
+
+      - **Application Fee** and **Manage Fees** options
+
+      - **Show # of spots left** on the form
+
+      - **Enable Payment Plan**
+
+      - **Allow User To Pay Later**
+
+      - **Pay In Full Upon Registration**
+
+      - **Due Date** for payment plan or pay-later balances
+
+      - **Default Payment To** (which account or category receives payments)
+
+      - **Minimum deposit settings** including override amount and scope
+
+    - **Discounts**
+
+      - **Discount settings panel**, including:
+
+        - **Allow Discounts**
+
+        - **Multiple Discounts**
+
+        - **Auto-Apply Discounts**
+
+    - **Email settings**
+
+      - **Admin Notifications** when forms are submitted
+
+      - **Approved Template**
+
+      - **Pending Template**
+
+      - **Rejected Template**
+
+    - **Custom text**
+
+      - **Button Text** (required label for the submit button)
+
+      - **Thank You Message**
+
+      - **Form Header Text**
+
+      - **Product Selection Header**
+
+      - **Cart Header** text areas
+
+    The value you choose for **Form Type** controls which tabs appear (for example, Products Layout vs. Questions) and how users interact with the form.
+  </Step>
+
+  <Step title="Choose a Form Type" icon="play-circle" title-type="p">
+    Select a **Form Type** based on what you are collecting:
+
+    - **Registration (With Products)** — used when families or users need to register and optionally purchase products; shows the **Products Layout** tab.
+
+    - **Standard (No Products for Purchase)** — used for typical questionnaires, acknowledgments, or preference forms without products to buy.
+
+    - **Upload a File** — used when the primary action is uploading documents; hides the **Questions** tab.
+
+    Changing the Form Type changes which configuration tabs appear in the editor.
+  </Step>
+
+  <Step title="Save Settings to create the form" icon="check-circle" title-type="p">
+    - After completing the required fields and initial settings, click the **Save Settings** button.
+
+    - Campium saves the form record and keeps you in the editor so you can configure Recipients, Questions, and other options.
+
+    When the save is successful, the current tab stays active and additional tabs remain available for further configuration.
+  </Step>
+</Steps>
+
+## Tabs inside a form
+
+Each form opens in a tabbed editor with consistent tab labels and order. Some tabs appear only for specific Form Types.
+
+### Settings tab
+
+Use **Settings** to define the core behavior and lifecycle of the form.
+
+- Sets the **Form Name**, **Form Type**, **User Type**, and **Season**.
+
+- Defines the **Start Date**, **End Date**, and optional **Cutoff Date** for when the form is available and when business actions stop.
+
+- Controls **Visibility** (Visible or Hidden) so you can prepare forms in advance or hide completed workflows.
+
+- Lets you enable or disable **Lock Form After Completion**, which prevents users from changing responses once submitted.
+
+- Sets **Form Status After Completion** and **User Status After Completion**, which determine back-office status values after a user finishes the form.
+
+- Includes fee, payment, discount, email, and custom text panels that control how the form behaves for registrations and payments.
+
+- Includes the **Save Settings** button you use to create or update the form record.
+
+You must complete Settings and click **Save Settings** before the form behaves correctly for recipients.
+
+### Products Layout tab (conditional)
+
+The **Products Layout** tab appears only when the **Form Type** is **Registration (With Products)**.
+
+- Lets you configure how products appear within the registration workflow.
+
+- Aligns products with the registration form so families can select and purchase items as part of completion.
+
+If you select a different Form Type (Standard or Upload a File), this tab does not appear.
+
+### Recipients tab
+
+Use the **Recipients** tab to control who receives the form and monitor readiness.
+
+- Defines the population of users, students, or families who should complete the form.
+
+- Shows any warnings related to missing or incomplete recipient configuration.
+
+- Uses a built-in recipient warning icon next to **Recipients** when there is a configuration issue.
+
+Configure recipients before publishing or communicating about the form so your target audience can see and complete it.
+
+### Questions tab (conditional)
+
+The **Questions** tab controls the structured prompts users see when they complete the form.
+
+- Lets you add, edit, and order questions that collect the data you need.
+
+- Supports different question types depending on your Campium configuration, such as text fields, choices, or other input types.
+
+For **Upload a File** forms, Campium hides the **Questions** tab. In those forms, the primary interaction is file upload rather than answering questions.
+
+### Responses tab
+
+Use the **Responses** tab to track progress and work with submitted data.
+
+- Groups users by response status:
+
+  - **Not Started**
+
+  - **In Progress**
+
+  - **Pending**
+
+  - **Approved**
+
+- Loads a responses table that lists individual responses for the current form.
+
+- Provides a central place to review who has completed the form, who still needs to respond, and which submissions you have approved.
+
