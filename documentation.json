@@ -63,6 +63,15 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "Communications",
+            "pages": [
+              {
+                "title": "Mass Emails",
+                "path": "mass-emails"
+              }
+            ]
           }
         ]
       },
@@ -133,5 +142,7 @@
         ]
       }
     ]
-  }
+  },
+  "template": "classic",
+  "logo-light": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1771944485530-urq2hwzgrun-453x453.jpg?q=85&fm=auto&auto=compress%2Cformat"
 }
