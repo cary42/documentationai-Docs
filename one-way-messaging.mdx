@@ -1,0 +1,194 @@
+---
+title: Send one-way emails
+description: Use One-way Messaging to send a single, targeted email to families, with subject, sender, schedule, recipients, and basic delivery logs.
+---
+
+## What one-way email messaging is
+
+One-way Messaging lets you send a single email from Campium to a selected audience, such as all parents in a session or a specific group. Recipients can read the message in their email inbox but do not reply back through Campium.
+
+Use this when you want to share updates, reminders, or announcements without starting a back-and-forth email conversation.
+
+## Open One-way Messaging
+
+Access one-way emails from the Communication menu.
+
+<Steps>
+  <Step title="Go to Communications" icon="folder">
+
+  - Sign in as an admin or staff user.
+  - Open the main navigation.
+  - Select **Communication**.
+
+  </Step>
+
+  <Step title="Open One-way Messaging" icon="arrow-right">
+
+  - Under Communication, choose **One-way Messaging** or **Email**.
+  - This opens the page where you create and manage individual one-way emails.
+
+  </Step>
+</Steps>
+
+You now see the screen where you set up the email details, choose who should receive it, and review logs after it sends.
+
+## Create and send a one-way email
+
+Use the email editor to fill in your message details, choose timing, test, and then send.
+
+<Steps>
+  <Step title="Set up email details (Settings tab)" icon="settings">
+
+  - Enter a **Name of Email** so you can recognize this message later in your list.
+  - Fill in **From Email Address (must be {{domains}})** using an allowed sender address for your camp.
+  - Add a clear **Subject** so families understand what the message is about.
+  - In the **Email** field, type or paste your message. Use the rich text tools to format headings, lists, or links as needed.
+
+  <Callout kind="tip">
+
+  Use the **Merge Variables: {first_name} {last_name} {email}** to personalize your message. For example, insert `{first_name}` in the greeting to show each recipient's first name.
+
+  </Callout>
+
+  - If needed, add addresses in **BCC (separate by commas)** to copy internal staff or additional recipients without showing their addresses to others.
+
+  </Step>
+
+  <Step title="Add attachments (optional)" icon="upload">
+
+  - In the **File (pdf or image)** field, attach any documents you want to include, such as a packing list or schedule.
+  - Attachments support common **pdf or image** formats.
+  - The attached file appears as part of the email your families receive.
+
+  <Callout kind="info">
+
+  Large attachments can make emails slower to load. When possible, link out to documents you store elsewhere and keep attachments small.
+
+  </Callout>
+
+  </Step>
+
+  <Step title="Choose when to send" icon="clock">
+
+  - Use **When To Send** to control timing.
+  - Set the date and time if you want to schedule the message for later.
+  - Leave it as soon as possible if you plan to send right away using **Send Now**.
+
+  </Step>
+
+  <Step title="Preview and test" icon="info">
+
+  - Click **Preview Email** to see how the message will look to families, including merge fields.
+  - Use **Send Test Email** to send a copy to yourself or a teammate to confirm formatting, links, and attachments.
+
+  <Callout kind="tip">
+
+  Always send a test email before sending a large communication. Check that the subject, greeting, and merge variables look correct.
+
+  </Callout>
+
+  </Step>
+
+  <Step title="Send the email" icon="play-circle">
+
+  - After reviewing your preview and test, return to the email editor.
+  - Confirm the **When To Send** time and your recipient selection.
+  - Click **Send Now** to queue the message to go out.
+
+  <Callout kind="alert">
+
+  Once you send an email, you cannot edit that specific send. Use **Send To Updated Recipients** (when available) if you later update the audience and need to send the same message to new recipients.
+
+  </Callout>
+
+  </Step>
+</Steps>
+
+When the email sends successfully, you will see status information such as **Sent: {{sent_datetime}}** and basic delivery and open information in the Logs area.
+
+## Settings, Recipients, and Logs
+
+Use the tabs in One-way Messaging to move between your email setup, audience, and delivery history.
+
+<Tabs>
+  <Tab title="Settings" icon="settings">
+
+  The **Settings** area controls the content and basic behavior of your one-way email.
+
+  Key fields include:
+
+  - **Name of Email**: A label for internal use so you and your team can recognize this message in lists and logs.
+  - **From Email Address (must be {{domains}})**: The sender address families see. This must match an allowed domain for your camp.
+  - **Subject**: The subject line that appears in the recipient's inbox.
+  - **Merge Variables: {first_name} {last_name} {email}**: Short codes you insert into the subject or body to personalize each email with the recipient's details.
+  - **Email**: The main message editor where you write and format the body of the email.
+  - **When To Send**: A date and time picker that controls when the email is delivered.
+  - **BCC (separate by commas)**: An optional field for extra recipients who should receive the email without being visible to the main audience.
+  - **File (pdf or image)**: An upload area for an attachment, such as a pdf or image, that is included with the email.
+
+  Actions available from Settings include:
+
+  - **Preview Email** to view the final layout.
+  - **Send Test Email** to send a test copy to yourself or another address.
+  - **Send Now** to send the message at the configured time.
+
+  <Callout kind="info">
+
+  Some screens also include options like **Save Template**, **Save Filter**, or **Save** so you can reuse content or audience filters later.
+
+  </Callout>
+
+  </Tab>
+
+  <Tab title="Recipients" icon="users">
+
+  The **Recipients** area controls who receives this one-way email. Use it to target the right families or participants based on your camp's data.
+
+  In this area you typically:
+
+  - Choose filters to narrow down who should receive the message (for example, by session, cabin, or role such as parent or guardian).
+  - Review the list of matched recipients to confirm the audience before you send.
+  - Adjust filters if the audience is too broad or too narrow.
+
+  After the first send, if your underlying data changes (for example, new families are added or records are updated), you may see a **Send To Updated Recipients** option. Use this action to send the same email to newly matching recipients without resending to everyone who already received it.
+
+  <Callout kind="tip">
+
+  Before sending, scan the recipient count shown in this area. Make sure the number of recipients matches your expectations for the announcement you are sending.
+
+  </Callout>
+
+  </Tab>
+
+  <Tab title="Logs" icon="bar-chart">
+
+  The **Logs** area shows basic delivery information for your one-way email. This helps you understand whether the message has gone out and how recipients are engaging with it.
+
+  Common status and activity labels include:
+
+  - **Received** or **Updated**: Indicate that the recipient record or delivery status has refreshed.
+  - **Opened**: Shows that the recipient opened the email at least once.
+  - **Sent: {{sent_datetime}}**: Displays the time the email was sent.
+  - **Not Sent**: Shows that the email did not send to that recipient, often due to filters or send conditions.
+
+  Use these logs to confirm that the email left Campium and to spot patterns, such as many **Not Sent** entries, that may suggest issues with your audience selection.
+
+  <Callout kind="info">
+
+  Logs focus on high-level delivery and open activity. They are not a full reporting tool, and some events (such as exact read time or forwarding) are not tracked.
+
+  </Callout>
+
+  </Tab>
+</Tabs>
+
+## When to use one-way emails
+
+Use One-way Messaging when you need to:
+
+- Announce schedule changes or weather updates.
+- Share arrival or departure instructions.
+- Send reminders about forms, payments, or packing lists.
+- Share general camp news that does not require a direct reply.
+
+For back-and-forth conversations or individual support, use your usual email or messaging tools outside of One-way Messaging, and reserve these emails for clear, consistent announcements to your families.
