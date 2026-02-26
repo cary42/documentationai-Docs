@@ -1,0 +1,133 @@
+---
+title: Payment Method Updates – Families with Failed Payments
+description: Run and interpret the Payment Method Updates report to see which families with failed or locked scheduled payments have recently updated their payment method.
+---
+
+## Overview
+
+Use the Payment Method Updates – Families with Failed Payments report to see which families with failed or locked scheduled payments have recently updated their payment method and when they did so.
+
+On the report page, you see this description:
+
+> Shows families who have at least one failed/locked scheduled payment and who recently updated their payment method.
+
+This report helps you confirm that families took action after a failed or locked scheduled payment, so you can decide whether to retry charges or follow up.
+
+<Callout kind="info">
+
+The report only includes families that **both** have at least one failed or locked scheduled payment **and** have recently updated a payment method. Families with failures but no recent update do not appear here.
+
+</Callout>
+
+## Run the report
+
+Use these steps to open the report, filter the date range, and review results.
+
+<Steps>
+
+<Step title="Open the Payment Method Updates report" icon="folder">
+
+- Sign in to the Campium Money admin portal.
+- Go to **Reports** › **System** › **Payment Method Updates – Families with Failed Payments**.
+- Confirm you see the page description: `Shows families who have at least one failed/locked scheduled payment and who recently updated their payment method.`
+
+When the page loads successfully, the table card heading reads `Payment Method Updates (Families with Failed Scheduled Payments)` and the Filters panel is visible at the top.
+
+</Step>
+
+<Step title="Set Filters (Start Date and End Date)" icon="settings">
+
+- In the **Filters** section, set **Start Date** to the earliest payment method update date you care about.
+- Set **End Date** to the latest payment method update date you want to include.
+- Click **Apply** to refresh the results.
+
+After you click Apply, the table refreshes to show all qualifying payment method updates in the selected date range.
+
+</Step>
+
+<Step title="Review report results" icon="bar-chart">
+
+- Look at the table titled **Payment Method Updates (Families with Failed Scheduled Payments)**.
+- For each row, review **Date**, **Name**, **Account**, **Type**, and **Link** to confirm which families updated which payment methods and when.
+- Use the Link column to jump to the relevant family or account record for follow-up.
+
+If no rows appear, the page shows: `No payment method updates found for families with failed/locked scheduled payments in the selected date range.`
+
+</Step>
+
+</Steps>
+
+<Callout kind="alert">
+
+If a family does **not** appear in this report but has failed or locked scheduled payments, they have not updated their payment method during the selected date range. Consider contacting them before attempting additional charges.
+
+</Callout>
+
+## Filters
+
+Use the Filters section to control which payment method updates appear in the report.
+
+### Filter fields
+
+All filters appear under the heading **Filters**, above the table.
+
+### Start Date
+
+Lower bound for the date range, based on when the family updated their payment method. The report includes payment method updates **on or after** this date.
+
+### End Date
+
+Upper bound for the date range, based on when the family updated their payment method. The report includes payment method updates **on or before** this date.
+
+### Apply
+
+Runs the report with the selected Start Date and End Date. Click Apply any time you change filter values to refresh the results.
+
+## Report table
+
+The main results appear in a card titled **Payment Method Updates (Families with Failed Scheduled Payments)**.
+
+Each row represents a **single payment method update** by a family that currently has at least one failed or locked scheduled payment.
+
+### Columns
+
+Use the columns to understand what changed and how to follow up.
+
+### Date
+
+Date and time when the family updated their payment method. Use this to confirm whether the update occurred after the failed or locked scheduled payment.
+
+### Name
+
+Family or account holder name associated with the updated payment method. Use this to identify who took action.
+
+### Account
+
+Internal account identifier or label for the family. This helps you match the update back to billing or CRM records.
+
+### Type
+
+Type of payment method that was updated, such as card or bank account. Use this to understand how future scheduled payments will be attempted.
+
+### Link
+
+Action link to open the related record (for example, the family profile or account detail page) where you can review the full payment history and manage scheduled payments.
+
+## Empty state and interpretation
+
+When no matching records are found for the selected filters, the report shows this message:
+
+> No payment method updates found for families with failed/locked scheduled payments in the selected date range.
+
+Use this behavior to interpret your results:
+
+- If you **expect** updates but see this message, expand the date range and click **Apply** again.
+- If you are checking follow-up after a recent failed billing run and see this message, families may not have updated payment methods yet and might still need outreach.
+
+## Using the report in your workflow
+
+Use the report alongside your failed or locked scheduled payment views to decide what to do next:
+
+- Confirm that a family appears here **after** they report updating their payment method.
+- Check the **Date** column to ensure enough time has passed before retrying charges.
+- Use the **Link** column to open the family or account record and reschedule payments or adjust payment plans as needed.

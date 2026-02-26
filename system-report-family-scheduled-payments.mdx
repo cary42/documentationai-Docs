@@ -1,0 +1,171 @@
+---
+title: Family Scheduled Payments report
+description: Review families’ scheduled payments for a season, filter by payment details and issues, and send targeted payment notification emails.
+---
+
+## Overview
+
+Use the Family Scheduled Payments report to review upcoming scheduled payments for families in a given season, identify gaps or issues, and trigger payment notification emails directly from the report.
+
+The page title in the UI appears as `Family Scheduled Payments for {season}`, where the season selector controls which season's schedules you review.
+
+<Callout kind="info">
+  The report focuses on **scheduled** activity for a single season, not historical payments already completed.
+</Callout>
+
+## Open the Family Scheduled Payments report
+
+Access the report from your Campium admin tools.
+
+<Steps>
+  <Step title="Select the season" icon="calendar" title-type="h3">
+    Use the season selector at the top of the page to choose the season you want to review.
+
+    The page title updates to `Family Scheduled Payments for {season}` to confirm which season is currently in view.
+  </Step>
+
+  <Step title="Open the report page" icon="folder" title-type="h3">
+    Go to the **Reports** area, then choose **System** and select the **Family Scheduled Payments** report.
+
+    Confirm that the report title shows the correct season before you begin reviewing results.
+  </Step>
+</Steps>
+
+## Filters
+
+Filters at the top of the report help you narrow which families and schedules appear before you review balances and send notifications.
+
+Use the **Apply Filters** button after any change to update the results.
+
+### Payment Type
+
+Filter families by how their scheduled payments are set up and whether a payment method is on file.
+
+Filter the list based on payment method status. Options:
+
+- **All**: Show all families in the season, regardless of payment method.
+- **Credit Card**: Show families with a credit card as their scheduled payment method.
+- **ACH**: Show families using ACH for scheduled payments.
+- **No Account on File**: Show families that do not have a payment account on file.
+
+### Issues
+
+Limit the report to families with potential problems in their schedule, or view only clean plans.
+
+Filter families based on whether the system has flagged any issues:
+
+- **All Families**: Show all families, whether or not they have issues.
+- **With Issues**: Show only families that have at least one issue flagged in the Issues column.
+- **No Issues**: Show only families whose schedules do not have any flagged issues.
+
+### Records per page
+
+Control how many rows appear at once in the report table.
+
+Set the maximum number of family rows displayed on each page of results. Options:
+
+- **100**
+- **500**
+- **1,000**
+- **2,000**
+
+Use higher values when exporting or scanning many families, and lower values for quicker page loads and easier scrolling.
+
+### Payment Plan
+
+Filter by families’ assigned payment plan within the selected season.
+
+Limit the report to a specific payment plan or show all families:
+
+- **All Plans**: Include all payment plans for the season.
+- **No Plan Assigned** (if available): Show families in the season that do not have any payment plan assigned.
+- **Individual plans**: Additional options list each configured payment plan, allowing you to review one plan at a time.
+
+### Apply Filters button
+
+After setting your filter options, apply them to refresh the table.
+
+Run the report with the current filter selections. The table below updates to show only families that match your chosen Payment Type, Issues, Records per page, and Payment Plan settings.
+
+## Table columns
+
+The main report table summarizes key information about each family’s scheduled payments, any gaps, and issues.
+
+Use the column details below as a reference when reviewing results or when deciding which families need follow-up.
+
+### Actions
+
+Shows the **mail icon** action for each family with tooltip `Send Email`. Click the icon to open the **Send Payment Notification** window and send an email about the family’s scheduled payments.
+
+### Family
+
+Displays the family name or household identifier that the payment plan and scheduled payments belong to.
+
+### Payment Plan
+
+Shows the payment plan currently assigned to the family for the selected season. This matches the plan options in the Payment Plan filter.
+
+### Balance
+
+Shows the family’s outstanding balance for the season. Use this to understand how much remains to be collected.
+
+### Scheduled
+
+Shows the total amount currently scheduled in future payments for the family. Compare this with Balance to see whether scheduled payments will fully cover what is owed.
+
+### Gap
+
+Shows the difference between the Balance and the Scheduled amount. A non‑zero gap suggests that scheduled payments may not fully cover the family’s remaining balance.
+
+### Next Payment
+
+Lists the date and amount of the next scheduled payment for the family. Use this to confirm when the next charge is expected.
+
+### Payment Methods
+
+Summarizes the payment methods associated with the family’s scheduled payments, such as whether they use credit card, ACH, or have no account on file.
+
+### Upcoming Schedule
+
+Provides a brief view of the upcoming scheduled payments for the family, including timing or installments, so you can quickly see how the remaining balance is planned.
+
+### Issues
+
+Lists any issues the system has detected for the family’s scheduled payments. Entries here align with the **Issues** filter and help you prioritize families that need attention.
+
+<Callout kind="alert">
+  Focus on families with a non‑zero **Gap** or entries in the **Issues** column when troubleshooting. These families are most likely to have under‑scheduled payments or configuration problems.
+</Callout>
+
+## Send payment notifications from the report
+
+Use the Actions column to send targeted payment notification emails to families based on what you see in the report.
+
+<Steps>
+  <Step title="Open the Send Payment Notification window" icon="mail" title-type="h3">
+    Find the family you want to contact and click the **mail icon** in the **Actions** column.
+
+    A tooltip labeled `Send Email` appears when you hover, and clicking opens the **Send Payment Notification** window.
+  </Step>
+
+  <Step title="Review previous emails sent" icon="info" title-type="h3">
+    Inside the window, find the **Previous Emails Sent** section.
+
+    Use this area to check whether you have already contacted the family about their scheduled payments and when those messages were sent. Use the **View** links (if shown) to review prior email details.
+  </Step>
+
+  <Step title="Preview the email content" icon="monitor" title-type="h3">
+    Scroll to the **Email Preview:** section inside the window.
+
+    Confirm that the email content matches what you expect to send about the family’s scheduled payments, gaps, or issues.
+  </Step>
+
+  <Step title="Send or cancel the notification" icon="check-circle" title-type="h3">
+    At the bottom of the window, choose one of the available buttons:
+
+    - **Send Email**: Send the payment notification to the family using the previewed content.
+    - **Cancel**: Close the window without sending a new email.
+
+    After you send, the new message appears in **Previous Emails Sent** the next time you open the window for that family.
+  </Step>
+</Steps>

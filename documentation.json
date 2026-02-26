@@ -63,6 +63,43 @@
                 ]
               },
               {
+                "group": "System",
+                "pages": [
+                  {
+                    "title": "Scheduled Payments Report",
+                    "path": "system-report-scheduled-payments"
+                  },
+                  {
+                    "title": "Family Scheduled Payments report",
+                    "path": "system-report-family-scheduled-payments"
+                  },
+                  {
+                    "title": "Scheduled Payments - Missing report",
+                    "path": "system-report-scheduled-payments-missing"
+                  },
+                  {
+                    "title": "Scheduled Payment Email Log",
+                    "path": "system-report-scheduled-payment-email-log"
+                  },
+                  {
+                    "title": "Expired CC Report",
+                    "path": "system-report-expired-cc-report"
+                  },
+                  {
+                    "title": "Family Payment Plans Report",
+                    "path": "system-report-payment-plans"
+                  },
+                  {
+                    "title": "Payment Method Updates – Families with Failed Payments",
+                    "path": "system-report-payment-method-updates-families-with-failed-payments"
+                  },
+                  {
+                    "title": "Families Without Primary Payment Method report",
+                    "path": "system-report-families-without-primary-payment-method"
+                  }
+                ]
+              },
+              {
                 "group": "Custom",
                 "pages": [
                   {

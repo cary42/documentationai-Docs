@@ -1,0 +1,238 @@
+---
+title: Family Payment Plans Report
+description: Review families assigned to payment plans, including balances, payment methods, and custom profile fields, using the Family Payment Plans Report.
+---
+
+## Overview
+
+Use the Family Payment Plans Report for the selected season to see which families are on payment plans, their current balances, primary contact details, payment methods, and any profile fields you choose to display.
+
+Finance admins typically use this report to confirm families are correctly assigned to plans, spot balances that need follow-up, and export contact details for outreach.
+
+<Callout kind="info">
+
+The report title includes the active season name, such as `Family Payment Plans Report for Summer 2025` or `Family Payment Plans Report for Fall 2025`.
+
+</Callout>
+
+## Run the Family Payment Plans Report
+
+Use this workflow to open the Family Payment Plans Report, choose the season, and filter by payment plan.
+
+<Steps>
+
+<Step title="Open the report page" icon="folder">
+
+- Go to the Money or Reports area of the admin portal.
+- Open the **Family Payment Plans Report** from the list of system reports.
+
+Success signal: The page header displays **Family Payment Plans Report for** your selected season and you see the season and payment plan filters above the results table.
+
+</Step>
+
+<Step title="Choose the season" icon="calendar">
+
+- In the **season selector** at the top of the page, choose the season you want to review, such as **Summer 2025**.
+
+Success signal: The page title updates to **Family Payment Plans Report for Summer 2025** and the results table reloads for that season.
+
+</Step>
+
+<Step title="Select a payment plan" icon="settings">
+
+- Use the **payment plan selector** to choose a specific plan or view all plans.
+- After selecting, wait for the report to refresh.
+
+Success signal: The table shows only families assigned to the selected payment plan (or all plans, depending on your choice).
+
+</Step>
+
+</Steps>
+
+### Filters and selectors
+
+Use these controls to scope what appears in the report.
+
+#### Season
+
+Use the season selector at the top of the page to choose the active season to report on. The report title updates to `Family Payment Plans Report for` the selected season and all results are limited to that season.
+
+#### Payment plan
+
+Use the payment plan selector to filter results to a single payment plan or view all plans. Use this to confirm enrollment or balances for a particular plan.
+
+<Callout kind="alert">
+
+If the table looks empty after switching seasons or payment plans, first confirm the **season selector** and **payment plan selector** are set as expected before assuming data is missing.
+
+</Callout>
+
+## Configure profile field display columns
+
+Use **Profile Fields Display Settings** to add custom profile information as columns in the report so you can see relevant context (for example, grade, campus, or internal flags) alongside each family.
+
+<Steps>
+
+<Step title="Open Profile Fields Display Settings" icon="settings">
+
+- Locate the **Profile Fields Display Settings** section near the top of the report.
+- Click **Display Columns** to open the configuration for which profile fields should appear as columns.
+
+Success signal: A settings area or dialog appears listing available profile fields with options to enable them for display.
+
+</Step>
+
+<Step title="Choose which profile fields to display" icon="edit">
+
+- In the profile field list, select the fields you want to appear as columns in the report.
+- Each selected field will become a dynamic column using its display name (such as `Campus`, `Grade`, or `Billing Status`).
+
+Success signal: The selected fields are marked as active or checked in the settings area.
+
+</Step>
+
+<Step title="Save profile field settings" icon="check-circle">
+
+- Click **Save Profile Field Settings** to apply your changes.
+- Wait for the report to reload with the new columns visible.
+
+Success signal: The table now shows additional columns with the profile field display names you selected. Your selections persist when you revisit the report.
+
+</Step>
+
+</Steps>
+
+### Profile display settings options
+
+Each configurable part of the **Profile Fields Display Settings** area controls which custom data appears in the report.
+
+#### Profile Fields Display Settings
+
+Use this configuration area to show or hide dynamic profile field columns in the report. Tailor the report to the information you care about most.
+
+#### Display Columns
+
+Use this button to open the profile field display configuration. Click it to choose which profile fields should appear as additional columns in the table.
+
+#### Save Profile Field Settings
+
+Use this button to save your selected profile fields and refresh the report. The report then displays one column per selected field, using each field's display name as the column header.
+
+#### Profile field selection
+
+Review the list of available profile fields that you can enable as columns. For each selected field, the report adds a dynamic column with the profile field's display name, such as `Team`, `Dorm`, or `Discount Code`.
+
+<Callout kind="info">
+
+Use profile field columns to avoid exporting to a spreadsheet for basic context. For deeper analysis or cross-report comparisons, consider using a custom report with the same profile fields.
+
+</Callout>
+
+## Report columns
+
+The main table shows one row per family with a payment plan in the selected season, plus any dynamic profile field columns you enabled.
+
+### Standard columns
+
+These columns always appear in the report.
+
+#### Name
+
+Family name shown on the account, typically the primary billing name. Use this to identify the family in other financial reports.
+
+#### Users
+
+Number of users linked to the family account. This usually reflects enrolled campers or participants associated with the family.
+
+#### Plan Name
+
+Name of the assigned payment plan for the family. This helps you confirm each family is on the correct plan and compare across different plan types.
+
+#### Balance
+
+Current outstanding balance for the family within the selected season and payment plan. Finance admins typically sort or filter by this column to identify high balances for follow-up.
+
+#### Phone
+
+Primary phone number for the family or guardian contact. Use this for quick outreach when you need to discuss payment arrangements.
+
+#### Guardian 1 Email
+
+Email address for the first guardian contact on the account. This is the main email most communications and billing notices use.
+
+#### Guardian 2 Email
+
+Email address for the second guardian contact, if available. Use this for copied communications or when Guardian 1 is unresponsive.
+
+#### Method
+
+Saved payment method associated with the family's payment plan, such as card or bank account. Use this to verify whether families have a valid method on file for scheduled payments.
+
+### Dynamic profile field columns
+
+When you enable profile fields in **Profile Fields Display Settings**, the report adds one column for each selected field.
+
+#### Dynamic profile field columns
+
+Additional columns that appear when you enable profile fields. Each column header uses the profile field's display name, such as `Grade`, `Campus`, `Program Type`, or any other field configured in your system. The values in these columns show the saved profile information for each family.
+
+<Callout kind="info">
+
+Dynamic profile field columns are read-only in this report. Update the underlying profile data in the family's record if values are incorrect, then rerun the report to see the changes.
+
+</Callout>
+
+## Empty state and no-results behavior
+
+When no families match the selected filters, the report shows a clear message instead of a blank table.
+
+### Empty state message
+
+The report shows the message `There are currently no payments scheduled.` when there are no matching payment plan records for the selected season and payment plan.
+
+Typical situations where you might see this message include:
+
+- The season is new and no families have been assigned to payment plans yet.
+- You selected a payment plan that no families are currently using.
+- Filters were changed from a previously populated state and no records match the new combination.
+
+<Callout kind="alert">
+
+If you expect families to appear but see `There are currently no payments scheduled.`, double-check the season and payment plan selections, then confirm that payment plans are actually assigned in family accounts.
+
+</Callout>
+
+## Practical uses and next steps
+
+Finance admins often pair the Family Payment Plans Report with other financial reports to reconcile revenue and monitor collections.
+
+After reviewing this report, you might:
+
+- Export the data (if export options are available) for offline analysis or mail merge.
+- Use the **Phone**, **Guardian 1 Email**, and **Guardian 2 Email** columns to contact families behind on payments.
+- Adjust **Profile Fields Display Settings** to surface information like discount codes, campus, or internal risk flags.
+
+<Columns cols={3}>
+
+<Card
+  title="Deposit Summary"
+  href="/deposit-summary"
+  icon="bar-chart"
+  cta="Review deposits"
+/>
+
+<Card
+  title="Revenue Summary"
+  href="/revenue-summary"
+  icon="bar-chart"
+  cta="Compare revenue"
+/>
+
+<Card
+  title="Custom Reports"
+  href="/custom-reports"
+  icon="code"
+  cta="Build a tailored report"
+/>
+
+</Columns>

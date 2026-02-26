@@ -1,0 +1,149 @@
+---
+title: Scheduled Payments - Missing report
+description: Identify families without scheduled payments for a selected season, understand each column in the Scheduled Payments - Missing report, and interpret no-data results.
+---
+
+## Purpose of the Scheduled Payments - Missing report
+
+Use the **Scheduled Payments - Missing** report to find families that do not have any scheduled payments set up for a given season. This helps you close gaps in payment plans before balances become overdue.
+
+When a family appears on this report, at least one student tied to that family has a balance for the selected season and no active scheduled payments covering that balance.
+
+<Callout kind="info">
+
+Run this report regularly during enrollment and early in the season to catch families who still need to set up scheduled payments.
+
+</Callout>
+
+## How to open and run the report
+
+Access the report from the system menu and choose the season you want to review.
+
+<Steps>
+
+  <Step title="Open the Scheduled Payments - Missing report" icon="folder">
+
+  - Go to the **Reports** area in your Campium Money admin portal.
+  - Select **System**.
+  - Open the **Scheduled Payments - Missing** report.
+
+  </Step>
+
+  <Step title="Select season or All Seasons" icon="settings">
+
+  - Use the **Season** selector at the top of the page.
+  - Choose a specific season (for example, **2024–2025**) or select **All Seasons**.
+  - The page title updates to show **Scheduled Payments - Missing for** the season name or **Scheduled Payments - Missing for All Seasons** so you always know which data you are viewing.
+
+  </Step>
+
+  <Step title="Review the results" icon="bar-chart">
+
+  - After you select a season, the system loads all families missing scheduled payments into the table.
+  - Scan the **Balance** and **Primary Payment** columns first to gauge urgency and how each family should be contacted.
+  - Export or print the page if you want to share it with your finance or billing team.
+
+  </Step>
+
+</Steps>
+
+When the report loads successfully with matching criteria, you see a table of families or a no-data message if everyone is covered.
+
+## When a family appears on this report
+
+A family appears on the **Scheduled Payments - Missing** report when:
+
+- The family has an outstanding **Balance** for the selected season, and  
+- The family does not have scheduled payments configured to pay down that balance.
+
+Families that have fully configured scheduled payments for their seasonal charges do not appear here.
+
+<Callout kind="alert">
+
+If a family appears on this report but you know they are paying by another method (for example, check or cash), document their arrangement in your internal notes. The report only tracks **scheduled** electronic payments, not ad-hoc or offline payments.
+
+</Callout>
+
+Use this report as a worklist to:
+
+- Reach out to guardians who still need to set up a payment plan  
+- Confirm payment preferences (scheduled payments versus one-time or offline payments)  
+- Reduce surprises at season start by making sure each family has a clear plan for their outstanding balance  
+
+## Table columns and data
+
+The report displays one row per family that is missing scheduled payments, plus a total in the footer.
+
+<Callout kind="info">
+
+All column labels in this section match the report UI exactly, including capitalization and spacing.
+
+</Callout>
+
+### Guardian 1
+
+Primary guardian name for the family, as stored in the family profile. Use this to identify who is financially responsible and to personalize outreach.
+
+### Phone
+
+Primary phone number for Guardian 1. Call this number to discuss setting up scheduled payments or to confirm an alternate payment arrangement.
+
+### Guardian 1 Email
+
+Email address for Guardian 1. Use this for sending reminders, payment plan offers, or direct links to the payment portal.
+
+### Primary Payment
+
+Current default payment method on file for the family, such as a card or bank account. If this field is empty or out of date, help the guardian add or update a valid method before you create scheduled payments.
+
+### User Type
+
+Classification of the family or account, based on your Campium Money configuration. Use this to filter or prioritize follow-up (for example, different handling for staff families versus standard families).
+
+### Balance
+
+Outstanding amount owed by the family for the selected season or across all seasons. Larger balances indicate higher priority for setting up scheduled payments.
+
+The **Balance** column also includes a footer row with a **total**:
+
+- The footer total shows the sum of the **Balance** column for all families in the report.  
+- Use the total to understand the overall financial exposure from families without scheduled payments.
+
+## No-data message and what it means
+
+If no families meet the criteria, the system shows this message instead of the table:
+
+> **There are currently no families missing scheduled payments.**
+
+This means that, for the selected season or all seasons, every family with a balance has scheduled payments set up, or no one has an outstanding balance.
+
+When you see this message, you do not need to take further action for scheduled payments for that season.
+
+## Using the report to take action
+
+Turn the report results into a concrete follow-up plan.
+
+<Steps>
+
+  <Step title="Prioritize by balance and contactability" icon="bar-chart">
+
+  - Sort or visually scan for higher **Balance** amounts first.
+  - Confirm that **Guardian 1**, **Phone**, and **Guardian 1 Email** fields look complete so you know how to reach each family.
+
+  </Step>
+
+  <Step title="Reach out to guardians" icon="users">
+
+  - Use **Phone** for urgent or high-balance families to discuss payment options live.
+  - Use **Guardian 1 Email** to send payment-plan instructions or links for lower-balance or non-urgent cases.
+
+  </Step>
+
+  <Step title="Set up or confirm payment plans" icon="check-circle">
+
+  - Work with each family to configure scheduled payments that cover their **Balance**.
+  - After scheduled payments are active and saved in Campium Money, the family should drop off the **Scheduled Payments - Missing** report the next time you refresh it.
+
+  </Step>
+
+</Steps>

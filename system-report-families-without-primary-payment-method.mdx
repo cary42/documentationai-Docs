@@ -1,0 +1,145 @@
+---
+title: Families Without Primary Payment Method report
+description: Identify families without a primary payment method on file, review their balances and active registrations, and plan follow-up actions.
+---
+
+## Purpose of this report
+
+Use the **Families Without Primary Payment Method** report to find families that do not have a primary payment method on file for a given season, along with how many active registrations and how much balance each family has outstanding.
+
+This report helps you prioritize outreach to families who still need to add a payment method, especially when they have active registrations and unpaid balances.
+
+<Callout kind="info">
+
+The UI title of the report includes the selected season, for example: `Families Without Primary Payment Method - Summer 2025`.
+
+</Callout>
+
+## Run the report
+
+Use this workflow whenever you want a current list of families missing a primary payment method.
+
+<Steps>
+
+<Step title="Open the report" icon="folder">
+
+- From the admin portal, go to **Reports**.
+- In the **System** section, open **Families Without Primary Payment Method**.
+- Confirm the page title shows **Families Without Primary Payment Method - [selected season]**.
+
+When the page loads successfully, you see a **Filters** card at the top and a results table with columns for **Primary Contact**, **Email**, **Active Registrations**, and **Balance**.
+
+</Step>
+
+<Step title="Set your filters" icon="settings">
+
+- In the **Filters** card, locate the **Season** selector.
+- Choose the season you want to review (for example, the current camp season).
+- Apply or refresh the report so the table reflects your selected season.
+
+After applying the filter, the results table updates and the page title includes the chosen season.
+
+</Step>
+
+<Step title="Review results and plan follow-up" icon="bar-chart">
+
+- Scan the **Balance** column to spot higher dollar amounts.
+- Check **Active Registrations** to see how many current registrations each family has.
+- Click a **Primary Contact** name to open the profile and review full account details.
+- Decide which families to contact first based on their combination of registrations and outstanding balance.
+
+At the bottom of the page, use the footer totals to understand your overall exposure for this season.
+
+</Step>
+
+</Steps>
+
+## Filters
+
+The Filters card appears at the top of the report and controls which families are included.
+
+### Season
+
+Season context for the report. The results only include families with activity in the selected season and without a primary payment method on file. The same family may appear or disappear when you switch seasons.
+
+<Callout kind="tip">
+
+If you manage multiple seasons at once, run this report separately for each active season so you do not miss families who only have registrations in a specific season.
+
+</Callout>
+
+## Columns in the results table
+
+Each row in the report represents one family account without a primary payment method defined for the selected season.
+
+### Primary Contact
+
+Name of the primary contact for the family account. This value links to the family profile and opens the profile view for quick access to account details.
+
+<Callout kind="info">
+
+Use the Primary Contact link to confirm whether the family has any other payment methods on file, recent payments, or special notes before you reach out.
+
+</Callout>
+
+### Email
+
+Primary email address associated with the family account. Use this to send reminders about adding a primary payment method or to follow up on outstanding balances.
+
+### Active Registrations
+
+Number of current, active registrations for this family in the selected season. Higher numbers indicate families whose participation depends more heavily on successful billing.
+
+### Balance
+
+Outstanding balance for the family account, shown as a currency value. This helps you judge financial impact when prioritizing which families to contact first.
+
+<Callout kind="alert">
+
+Families with **Active Registrations** greater than zero and a high **Balance** but no primary payment method are at higher risk for missed payments. Prioritize these accounts for outreach.
+
+</Callout>
+
+## Totals and footer
+
+The footer of the report summarizes how many families match your filters and the total outstanding balance among them.
+
+### Total families
+
+Displays as `Total: [X] familie(s)` and counts how many family accounts appear in the table for the selected season.
+
+### Total balance
+
+Shows the combined outstanding balance across all families in the report. Use this to understand the overall exposure for families missing a primary payment method.
+
+## Follow-up runbook
+
+This is a common workflow admins use after running the report.
+
+<Steps>
+
+<Step title="Prioritize families" icon="bar-chart">
+
+- Sort by **Balance** (descending) and then by **Active Registrations**.
+- Flag or note the top tier of families with both high balances and multiple registrations.
+- Decide on a threshold (for example, balance above a certain amount) for proactive outreach.
+
+</Step>
+
+<Step title="Review individual accounts" icon="book-open">
+
+- Click each **Primary Contact** name to open the profile.
+- Confirm recent payment activity, notes, or alternate arrangements.
+- Check whether the family already started adding a payment method but did not complete setup.
+
+</Step>
+
+<Step title="Contact families and track resolution" icon="mail">
+
+- Use the **Email** address to send reminders or payment method instructions.
+- Add internal notes in the profile on the outcome of each contact.
+- Re-run the **Families Without Primary Payment Method** report periodically to confirm the list is shrinking as families add payment methods.
+
+</Step>
+
+</Steps>

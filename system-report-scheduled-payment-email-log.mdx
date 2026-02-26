@@ -1,0 +1,151 @@
+---
+title: Scheduled Payment Email Log
+description: Audit scheduled payment related emails, filter by type, sender, date, and recipient, and view full message details in the Future Payment Email History report.
+---
+
+## Overview
+
+Use the **Scheduled Payment Email Log** to review all scheduled-payment related emails that Campium Money has sent, including reminders and payment issue notices. Admins rely on this report to confirm that messages were generated, see who received them, and review the exact content that was sent.
+
+Open this report from **Reports > System > Scheduled Payment Email Log**. The page displays results in a table titled **Future Payment Email History**.
+
+<Callout kind="info">
+
+The Scheduled Payment Email Log only shows emails related to scheduled or future payments. Use other communication logs for mass emails, SMS, or unrelated messages.
+
+</Callout>
+
+## Open the Scheduled Payment Email Log
+
+<Steps>
+
+<Step title="Navigate to the report" icon="folder">
+
+From the main navigation, go to **Reports > System > Scheduled Payment Email Log** while signed in to Campium Money as an admin-level user.
+
+</Step>
+
+<Step title="Confirm the report title and table" icon="monitor">
+
+Verify that the page title reads **Scheduled Payment Email Log** and that the main results card is titled **Future Payment Email History**. The page also shows a **Filters** section above the results.
+
+</Step>
+
+</Steps>
+
+When the page loads, the report shows recent scheduled-payment emails by default, along with a footer note such as `Showing 50 of 300 emails (Page 1 of 6)`.
+
+## Filters
+
+Use the **Filters** panel to narrow the list of emails before reviewing or exporting data. Each filter sits under the **Filters** heading and affects which rows appear in **Future Payment Email History**.
+
+### Email Type
+
+Filter by the category of scheduled payment email. Options:
+
+- **All Types**: Show all scheduled payment emails, regardless of category.
+- **No Account**: Show emails sent when a scheduled payment has no valid account on file.
+- **Payment Issue**: Show emails about failed or problematic scheduled payments.
+- **Reminder**: Show reminder emails for upcoming or scheduled payments.
+
+### Sent By
+
+Limit results by the staff user recorded as the sender. Options include **All Staff** plus individual staff names. Use this to audit which staff member initiated or triggered scheduled payment emails.
+
+### Date From
+
+Start of the date range for the **Date/Time** the email was sent. Leave blank to include all emails up to the **Date To** value.
+
+### Date To
+
+End of the date range for the **Date/Time** the email was sent. Leave blank to include all emails starting at **Date From** through the latest available.
+
+### Search User/Email
+
+Search by user name or email address in the **Recipient** field. Use this to quickly find all scheduled payment emails sent to a specific family or payer.
+
+### Records per page
+
+Control how many rows display at once in **Future Payment Email History**. Options include **50**, **100**, **250**, and **500** emails per page. Higher values reduce the number of pages but may require more scrolling.
+
+### Apply Filters
+
+Run the report with the current filter values. Click this after you adjust any filters to refresh the **Future Payment Email History** table.
+
+### Reset
+
+Clear all filters back to their default values. Use this to return to an unfiltered view of the scheduled payment email log.
+
+<Callout kind="tip">
+
+If the footer text still shows unexpected totals after changing filters, confirm that you clicked **Apply Filters** and that no search or date filters remain active.
+
+</Callout>
+
+## Future Payment Email History columns
+
+The **Future Payment Email History** table lists one row per scheduled payment email that matches your filters. Use the columns below to understand when the message was sent, who received it, and what it contained.
+
+### Date/Time
+
+Timestamp when the email was sent. This uses your system's date and time format and respects any date range filters you applied.
+
+### Recipient
+
+Name and email address of the person who received the message. This should correspond to the payer or contact tied to the scheduled payment.
+
+### Type
+
+Category of scheduled payment email, such as **No Account**, **Payment Issue**, or **Reminder**, matching the **Email Type** filter values.
+
+### Subject
+
+Email subject line that appeared in the recipient's inbox. Use this to confirm which exact template or message was used.
+
+### Payment Info
+
+Key payment details referenced in the email, such as installment description, due date, or amount. This helps you tie the email back to a specific scheduled or future payment.
+
+### Sent By
+
+Staff user or system identifier recorded as the sender. This aligns with the **Sent By** filter and supports staff-level auditing.
+
+### Message (View)
+
+Action or link to open the full email body. Use this to review the complete text of what the recipient received, including merge fields and payment details.
+
+<Callout kind="info">
+
+When no results match your filters, the table shows the message **No emails found matching the selected filters.** Adjust your filters or clear them with **Reset** to broaden the search.
+
+</Callout>
+
+## Run the report and view a specific email
+
+<Steps>
+
+<Step title="Set your filters" icon="settings">
+
+Use the **Filters** section to narrow the report to the timeframe, staff, and email types you care about. For example, choose **Email Type = Payment Issue**, select the staff member under **Sent By**, and set **Date From** and **Date To** to the period you are auditing.
+
+</Step>
+
+<Step title="Apply and review results" icon="play-circle">
+
+Click **Apply Filters**. The **Future Payment Email History** table refreshes, and the footer updates to show something like `Showing 25 of 25 emails (Page 1 of 1)`. Scan the **Date/Time**, **Recipient**, **Type**, and **Subject** columns to confirm you are seeing the correct set of emails.
+
+</Step>
+
+<Step title="Open the full message" icon="monitor">
+
+In the **Message** column for the email you want to audit, use the **View** action to open the complete email content. Verify that the text, payment details in **Payment Info**, and recipient information match your records and intended communication.
+
+</Step>
+
+</Steps>
+
+<Callout kind="alert">
+
+If you cannot locate an expected scheduled payment email, search the **Scheduled Payment Email Log** by **Search User/Email**, broaden the dates, and confirm that the payment in question was configured as a scheduled or future payment at the time the email should have been sent.
+
+</Callout>
