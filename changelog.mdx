@@ -1,60 +1,65 @@
 ---
 title: Changelog
-description: Stay updated on the latest releases, new features, and improvements in Campium.
+description: >-
+  Stay updated on the latest releases, new features, and improvements in
+  Campium.
 ---
-
 ## Recent Releases
 
-<Callout kind="info">
+<Callout kind="info" collapsed="false">
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
-<Update label="2024-12-05" description="v2.1.0" tags={["feature", "improvement"]}>
-## New Features
+<Update label="2026-02-26" description="Authentication updates" tags={["security","improvement"]}>
+  ## Security
 
-- Added custom reporting filters for attendance and medication logs, with instant result previews and exports to PDF, XLS, and Avery labels.
-- Introduced mobile roster check-in/out functionality with absent status toggles for staff on the go.
+  - Enforced a stronger password policy across registration, password reset, and password change flows.
 
-## Improvements
+  - Passwords now require a minimum of 12 characters and must include at least one uppercase letter, one lowercase letter, and one special character.
 
-- Enhanced communication tools with scheduled messaging for parents and staff.
-- Optimized dashboard performance for camps with `>500` campers.
+  ## Improvements
 
-## Bug Fixes
-
-- Fixed billing recalculation errors during mid-season registrations.
-- Resolved transportation schedule overlaps in the planner.
+  - Added Google and Apple sign-in buttons on the login page to reduce password entry friction for families and staff.
 </Update>
 
-<Update label="2024-11-15" description="v2.0.0" tags={["feature", "breaking"]}>
-## New Features
+<Update label="2026-02-25" description="Portal, reports, and payments" tags={["feature","improvement","bugfix"]}>
+  ## Improvements
 
-- Launched integrated transportation management with route optimization and real-time tracking.
-- Added medication administration tracking with allergy alerts and staff sign-offs.
+  - Updated product and session purchase flows to show clearer messaging when no sessions are available.
 
-## Breaking Changes
+  - Replaced the loading spinner with a no products available alert when nothing can be purchased.
 
-- Updated profile field schema; migrate custom fields using the new `{profileFields}` API endpoint.
-- Deprecated legacy reporting endpoints; switch to `/reports/v2`.
+  ## Reporting
 
-## Bug Fixes
+  - Enhanced expense reports with category and vendor dropdown filters, including dynamic filtering as options change.
 
-- Corrected registration form validation for multi-week camps.
-- Improved email notification delivery rates.
+  ## Bug Fixes
+
+  - Improved credit card payment cancellations by using voiding where appropriate to reduce transaction errors.
 </Update>
 
-<Update label="2024-10-20" description="v1.9.0" tags={["bugfix", "improvement"]}>
-## Improvements
+<Update label="2026-02-24" description="Login security, billing dashboard" tags={["security","feature","improvement","bugfix"]}>
+  ## Security and Improvements
 
-- Streamlined billing workflows with automated invoice generation and payment reminders.
-- Upgraded attendance tracking with QR code check-ins.
+  - Restricted logins to the correct agency-specific subdomain and now show an explicit error when a user attempts to sign in from the wrong domain.
 
-## Bug Fixes
+  - Increased mobile sign-in reliability by adjusting device fingerprinting logic to avoid IP-related false mismatches.
 
-- Patched security vulnerability in file uploads for camper photos.
-- Fixed dashboard refresh issues on mobile devices.
+  ## Billing
+
+  - Added a Scheduled Payments dashboard card with counts, status badges, primary payment details, and family balance context.
+
+  ## Bug Fixes
+
+  - Fixed future-date validation for scheduled communications (announcements and SMS) using timezone-aware date handling.
+</Update>
+
+<Update label="2026-02-23" description="Billing fix" tags={["bugfix"]}>
+  ## Bug Fixes
+
+  - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
 
 ## Upgrading Campium
@@ -62,7 +67,7 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 Follow these steps to update your Campium instance safely.
 
 <Steps>
-  <Step title="Backup Data" icon="database">
+  <Step title="Backup Data" icon="database" title-type="p">
     Export all reports and camper profiles via the admin dashboard.
 
     ```
@@ -70,32 +75,37 @@ Follow these steps to update your Campium instance safely.
     Reports > Export All > Select Format (PDF/XLS)
     ```
   </Step>
-  <Step title="Review Migration Notes" icon="book-open">
+
+  <Step title="Review Migration Notes" icon="book-open" title-type="p">
     Check release notes above for breaking changes, especially in v2.0.0.
   </Step>
-  <Step title="Apply Update" icon="download">
+
+  <Step title="Apply Update" icon="download" title-type="p">
     Use the dashboard update tool or contact support for assisted upgrades.
   </Step>
-  <Step title="Test Key Features" icon="check-circle">
+
+  <Step title="Test Key Features" icon="check-circle" title-type="p">
     Verify registration, billing, and reporting workflows.
   </Step>
 </Steps>
 
-<Callout kind="tip">
-  For large camps, schedule upgrades during off-season. Contact support@campium.com for personalized migration assistance.
+<Callout kind="tip" collapsed="false">
+  For large camps, schedule upgrades during off-season. Contact [support@campium.com](mailto:support@campium.com) for personalized migration assistance.
 </Callout>
 
 ## Quick Version Comparison
 
-<Columns cols={3}>
-  <Card title="v2.1.0" icon="zap" href="#2024-12-05">
-    Mobile rosters and advanced reporting.
+<Columns cols="3">
+  <Card title="Authentication updates" href="#2026-02-26" icon="shield" horizontal="false">
+    Stronger passwords and social sign-in options.
   </Card>
-  <Card title="v2.0.0" icon="truck" href="#2024-11-15">
-    Transportation and medication tracking.
+
+  <Card title="Login security, billing dashboard" href="#2026-02-24" icon="zap" horizontal="false">
+    Subdomain login restrictions and a Scheduled Payments dashboard card.
   </Card>
-  <Card title="v1.9.0" icon="shield" href="#2024-10-20">
-    Security patches and billing fixes.
+
+  <Card title="Portal, reports, and payments" href="#2026-02-25" icon="truck" horizontal="false">
+    Improved purchase messaging and new expense report filters.
   </Card>
 </Columns>
 
@@ -103,15 +113,17 @@ Follow these steps to update your Campium instance safely.
   <Tab title="No Breaking Changes" icon="check">
     Updates like v2.1.0 and v1.9.0 require no schema changes. Simply apply and test.
   </Tab>
+
   <Tab title="With Breaking Changes" icon="alert-triangle">
     For v2.0.0, update profile fields:
 
-````javascript
-// Old schema
-{ "fields": ["name", "age"] }
+    ```javascript
+    // Old schema
+    { "fields": ["name", "age"] }
 
-// New schema
-{ "profileFields": ["name", "age", "allergies"] }
-````
+    // New schema
+    { "profileFields": ["name", "age", "allergies"] }
+    ```
   </Tab>
 </Tabs>
+
