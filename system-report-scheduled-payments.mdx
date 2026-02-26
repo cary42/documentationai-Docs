@@ -19,7 +19,7 @@ Access the Scheduled Payments Report directly from the Reports area.
 
 <Steps>
   <Step title="Go to the report in Reports" icon="folder" titleType="p">
-    In Campium Money, go to **Reports** &gt; **System** &gt; **Scheduled Payments Report**.
+    In Campium Money, go to **Reports** &gt; **System** and select **Scheduled Payments Report**.
   </Step>
 
   <Step title="Confirm the page title" icon="check-circle" titleType="p">
@@ -35,7 +35,9 @@ The Scheduled Payments Report includes one primary filter and a column picker th
 
 Use the **Filter by Type** dropdown to narrow the list of scheduled payments by payment type.
 
-Filter label on the page: **Filter by Type**. Choose a specific scheduled payment type (for example, tuition installments vs. fees) to include only matching payments in the results table. When you change this value, the report immediately updates the table below.
+#### Filter by Type
+
+Choose a specific scheduled payment type, such as tuition installments or fees, to include only matching payments in the results table. When you change this value, the report immediately updates the table below.
 
 <Callout kind="info">
   Changes to **Filter by Type** update the report right away. You do not need to click a separate run or refresh button after adjusting this filter.
@@ -49,7 +51,7 @@ You configure these in the **Profile Fields Display Settings** panel using the *
 
 #### Select Profile Fields to Display
 
-Label on the page: **Select Profile Fields to Display**. Choose one or more profile fields to include as extra columns in the results table. A helper message below the control explains that selected fields appear as columns in the table, with each field name shown as its display name.
+Choose one or more profile fields to include as extra columns in the results table. Selected fields appear as columns in the table, with each field name shown as its display name.
 
 <Callout kind="info">
   Filters and profile field selections apply only to this report view. They control which scheduled payments you see and which columns appear; they do not change any underlying profile or payment data.
@@ -61,9 +63,7 @@ At the top of the report, Campium shows a card labeled **Expected Income** that 
 
 #### Expected Income
 
-Card title on the page: **Expected Income**. Displays the total amount of income expected from the scheduled payments currently included by your filters. When you change **Filter by Type**, this total updates to reflect the visible rows in the table.
-
-Use this value to understand short-term cash flow based on pending scheduled payments.
+See the total amount of income expected from the scheduled payments currently included by your filters. When you change **Filter by Type**, this total updates to reflect the visible rows in the table. Use this value to understand short-term cash flow based on pending scheduled payments.
 
 ## Results table columns
 
@@ -73,43 +73,43 @@ The main table lists one row per scheduled payment. Each row includes a blank Ac
 
 #### Actions
 
-Header: blank (no text). This first column shows row-level actions, such as a button or link to **Send Payment Notification** for that scheduled payment.
+Use this first column to access row-level actions, such as a button or link to **Send Payment Notification** for that scheduled payment.
 
 #### Name
 
-Header: **Name**. The primary person or student name associated with the scheduled payment.
+Shows the primary person or student name associated with the scheduled payment.
 
 #### Phone
 
-Header: **Phone**. The contact phone number pulled from the associated profile, used for follow-up if needed.
+Shows the contact phone number pulled from the associated profile, used for follow-up if needed.
 
 #### Guardian 1 Email
 
-Header: **Guardian 1 Email**. Email address for the first guardian or primary contact on the profile tied to this scheduled payment.
+Shows the email address for the first guardian or primary contact on the profile tied to this scheduled payment.
 
 #### Guardian 2 Email
 
-Header: **Guardian 2 Email**. Email address for the second guardian or additional contact, if available.
+Shows the email address for the second guardian or additional contact, if available.
 
 #### Amount
 
-Header: **Amount**. The scheduled payment amount for this row.
+Shows the scheduled payment amount for this row.
 
 #### Season
 
-Header: **Season**. The season, term, or program label that the scheduled payment belongs to (for example, Summer Session or Fall Season).
+Shows the season, term, or program label that the scheduled payment belongs to, such as Summer Session or Fall Season.
 
 #### Type
 
-Header: **Type**. The payment type for this scheduled payment (for example, tuition, registration fee, or another configured type). This value matches the options in **Filter by Type**.
+Shows the payment type for this scheduled payment, such as tuition, registration fee, or another configured type. This value matches the options in **Filter by Type**.
 
 #### Message
 
-Header: **Message**. Any note or message associated with the scheduled payment, which may help explain why the payment was created or what it covers.
+Shows any note or message associated with the scheduled payment, which may help explain why the payment was created or what it covers.
 
 #### Date
 
-Header: **Date**. The scheduled date when this payment is expected to process.
+Shows the scheduled date when this payment is expected to process.
 
 ### Dynamic profile field columns
 
@@ -117,7 +117,7 @@ In addition to the core columns, the table can show extra columns based on your 
 
 #### Dynamic profile field columns
 
-Header: varies by field. For each profile field you select under **Select Profile Fields to Display**, the table adds a column using that field's display name as the column header. Each row shows the value of that profile field for the profile tied to the scheduled payment.
+For each profile field you select under **Select Profile Fields to Display**, the table adds a column using that field's display name. Each row shows the value of that profile field for the profile tied to the scheduled payment.
 
 <Callout kind="info">
   Dynamic profile field columns update immediately when you change your selections. If you deselect a field, its column disappears from the table; selecting it again restores the column and values.
@@ -129,7 +129,7 @@ Use these steps to configure and view the Scheduled Payments Report for your cur
 
 <Steps>
   <Step title="Open the report page" icon="monitor" titleType="p">
-    In Campium Money, go to **Reports** &gt; **System** &gt; **Scheduled Payments Report**. Confirm that the page title reads **Scheduled Payments Report** and the **Expected Income** card appears above the table.
+    In Campium Money, go to **Reports** &gt; **System** and select **Scheduled Payments Report**. Confirm that the page title reads **Scheduled Payments Report** and the **Expected Income** card appears above the table.
   </Step>
 
   <Step title="Set the Filter by Type value" icon="settings" titleType="p">
@@ -159,7 +159,7 @@ From the Scheduled Payments Report, send a payment-related email for a specific 
   </Step>
 
   <Step title="Use the Actions column" icon="arrow-right" titleType="p">
-    In the blank **Actions** column for that row, click the available action (such as a button or link) to open the **Send Payment Notification** modal for that specific scheduled payment.
+    In the blank **Actions** column for that row, click the available action, such as a button or link, to open the **Send Payment Notification** modal for that specific scheduled payment.
   </Step>
 </Steps>
 
@@ -169,11 +169,11 @@ The **Send Payment Notification** modal includes two main fields that control th
 
 #### Email Type
 
-Label on the page: **Email Type:**. Choose a predefined email template or type (for example, scheduled payment reminder) to control the subject, base wording, and overall framing of the notification.
+Choose a predefined email template or type, such as a scheduled payment reminder, to control the subject, base wording, and overall framing of the notification.
 
 #### Additional Message (optional)
 
-Label on the page: **Additional Message (optional):**. Enter extra text you want to include in the email body, such as a personalized note or specific instructions about this payment. Leave it blank to send only the standard email content for the selected Email Type.
+Enter extra text you want to include in the email body, such as a personalized note or specific instructions about this payment. Leave it blank to send only the standard email content for the selected Email Type.
 
 <Callout kind="alert">
   Review the **Email Type** and any **Additional Message (optional)** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.

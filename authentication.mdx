@@ -1,0 +1,229 @@
+---
+title: Authentication and password security
+description: Understand how Campium authenticates users, enforces strong passwords, and handles Google and Apple sign-in, plus admin-focused troubleshooting tips.
+---
+
+## Overview
+
+Authentication in Campium controls how users access accounts and how passwords are secured across registration, login, and password management flows.
+
+<Callout kind="info">
+
+Recent updates enforce stronger password rules across all flows and add Google and Apple sign-in buttons to the login experience.
+
+</Callout>
+
+Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password.
+
+## Password strength rules
+
+Campium enforces a consistent password policy across registration, password reset, and password change actions.
+
+**Every new or updated password must:**
+
+- Be at least 12 characters long
+- Include at least one uppercase letter
+- Include at least one lowercase letter
+- Include at least one special character (for example: `!`, `@`, `#`, `$`, `%`)
+
+If a user submits a password that does not meet these rules, Campium rejects the change and shows an inline error explaining what is missing. The same validation runs on the server even if UI hints are bypassed, so weak passwords never get saved.
+
+### Where the rules apply
+
+Campium applies the same validation logic in these flows:
+
+- **User registration** from the portal or admin-invited signup
+- **Forgot password / reset password** links
+- **Change password** from within a logged-in session
+
+Users see updated UI hints in these flows that describe the minimum length and character requirements before they submit the form. As an admin, you can rely on the platform to enforce the policy; you do not need to manually review individual passwords.
+
+<Callout kind="tip">
+
+If users report that a password "will not save," have them read the inline password requirements on the page and adjust their password to meet all criteria.
+
+</Callout>
+
+## Reset your password
+
+Use this procedure when a user has forgotten their password or receives an invalid password error and cannot log in.
+
+<Steps>
+  <Step title="Start the reset flow" icon="lock">
+
+  - Ask the user to open the Campium login page.
+  - Instruct them to select the forgot password option.
+  - They should enter the email address associated with their Campium account and submit the form.
+
+  </Step>
+
+  <Step title="Check the reset email" icon="mail">
+
+  - The user receives an email with a secure password reset link.
+  - Confirm they check the correct inbox (and spam or promotions folders if necessary).
+  - If they do not receive an email after a short delay, confirm the email address you have on file and resend the reset from the admin tools if available.
+
+  </Step>
+
+  <Step title="Create a new strong password" icon="shield">
+
+  - When the user opens the reset link, the page shows inline guidance for password requirements.
+  - Ask them to enter a new password with at least 12 characters, including uppercase, lowercase, and a special character.
+  - If the password is too weak, the page highlights which rule is missing and blocks submission until all rules are satisfied.
+
+  </Step>
+
+  <Step title="Confirm access" icon="check-circle">
+
+  - After the reset succeeds, the user can return to the login page.
+  - Have them log in using their email and the new password.
+  - If login fails, confirm they are using the updated password and not a previously saved one in the browser.
+
+  </Step>
+</Steps>
+
+## Change your password while logged in
+
+Use this procedure when a user is already authenticated but wants to update their password for security or policy reasons.
+
+<Steps>
+  <Step title="Open account settings" icon="settings">
+
+  - Ask the user to sign in to Campium if they are not already logged in.
+  - Direct them to their account or profile settings section.
+  - Have them locate the security or password settings option.
+
+  </Step>
+
+  <Step title="Verify current password" icon="lock">
+
+  - The form typically asks for the current password before allowing changes.
+  - The user should enter their existing password to verify their identity.
+  - If they cannot recall it, redirect them to the reset password flow instead of continuing here.
+
+  </Step>
+
+  <Step title="Enter and confirm new password" icon="shield">
+
+  - The user must enter a new password that follows the same rules: at least 12 characters, with uppercase, lowercase, and a special character.
+  - Inline hints on the form show the requirements and update as they type.
+  - Campium runs server-side validation when they submit; if the password is weak, the change fails and the page shows what needs to be fixed.
+
+  </Step>
+
+  <Step title="Re-authenticate if prompted" icon="check-circle">
+
+  - After a successful change, Campium may ask the user to re-authenticate.
+  - Advise them to sign in again with the new password on any active devices or browsers.
+  - Encourage them to update any password managers they use so they do not get locked out later.
+
+  </Step>
+</Steps>
+
+## Email and password login behavior
+
+Standard login uses the combination of a registered email address and a password that meets the strength policy.
+
+When a user attempts to log in:
+
+- Campium verifies that the email belongs to an existing account.
+- The submitted password is checked against the stored credentials.
+- If the account requires a password update due to new policy rules, Campium prompts the user to reset or change their password before continuing.
+
+If validation fails, the login page shows an error. For security, some errors do not specify whether the email or password is incorrect, but when a password is too weak during a change or reset, the UI explicitly explains which requirement was not met.
+
+## Google and Apple sign-in
+
+Campium supports OAuth-based sign-in with Google and Apple in addition to email and password. These options appear as dedicated buttons on the login page.
+
+### High-level OAuth flow
+
+When a user selects **Sign in with Google** or **Sign in with Apple**:
+
+1. Campium redirects or opens a popup to the provider's sign-in page.
+2. The user authenticates with their Google or Apple account and reviews any requested access.
+3. The provider returns an authorization result to Campium.
+4. Campium logs the user into the associated account or shows an error if the sign-in fails or is cancelled.
+
+From an admin perspective, you should expect:
+
+- Users who choose Google or Apple do not enter a Campium password on that attempt.
+- Campium still associates their provider account with a Campium user record.
+- Standard account-level restrictions in Campium (roles, permissions, status) still apply after sign-in.
+
+<Callout kind="info">
+
+If your organization prefers a specific sign-in method, communicate this in your onboarding materials so users know whether to use email and password or a social provider.
+
+</Callout>
+
+### User expectations with Google and Apple
+
+Advise users of the following behavior:
+
+- They must complete the provider's sign-in steps, including any multi-factor prompts the provider requires.
+- If they cancel the provider's window or block popups, the sign-in will not complete.
+- If the provider reports an error, Campium shows a message such as `Sign-in was cancelled or failed` on the login page.
+
+As an admin, you do not manage Google or Apple passwords from Campium. Direct users to their provider's account settings for issues with those credentials.
+
+## Troubleshooting authentication issues
+
+Use these expandable sections to quickly diagnose and resolve the most common authentication problems users encounter.
+
+<ExpandableGroup>
+  <Expandable title="User sees 'Sign-in was cancelled or failed'" default-open="true">
+
+  This message appears when Google or Apple sign-in does not complete successfully or the user closes the provider window.
+
+  - Ask the user to try the sign-in again and complete all steps on the provider page.
+  - Confirm that their browser allows popups for your Campium domain if the sign-in opens in a new window.
+  - If the problem persists, have them use email and password login instead.
+  - If they cannot remember their password, guide them through the reset password steps above.
+
+  </Expandable>
+
+  <Expandable title="User reports 'my new password will not save'">
+
+  This usually indicates the new password does not meet the strength requirements.
+
+  - Verify the user is following the on-screen hints: at least 12 characters, with uppercase, lowercase, and a special character.
+  - Ask them to read any inline error text carefully; it highlights which rule is not satisfied.
+  - Encourage them to choose a longer passphrase instead of minor tweaks to an existing weak password.
+  - If they still cannot proceed, capture a screenshot of the form and error message for support.
+
+  </Expandable>
+
+  <Expandable title="User never receives the password reset email">
+
+  When the reset email does not arrive, the issue is usually an email mismatch or filtering.
+
+  - Confirm that the user entered the correct email address on the reset form.
+  - Check that their account in Campium uses the same email address.
+  - Ask them to check spam, junk, and promotions folders.
+  - If your tooling allows, resend the reset email from the admin console and verify that your mail system is not blocking delivery.
+
+  </Expandable>
+
+  <Expandable title="User is locked out after changing authentication method">
+
+  Switching between email/password and Google or Apple can cause confusion if the user expects one method to update the other.
+
+  - Explain that changing a Campium password does not change Google or Apple credentials, and vice versa.
+  - Confirm which sign-in method they last used successfully.
+  - Have them use that same method again; if it fails, walk them through a password reset (for email login) or direct them to manage their credentials with the provider.
+  - If the account appears disabled or restricted in Campium, review account status and permissions before attempting further logins.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Operational tips for admins
+
+Admins and technical staff can improve authentication reliability and support by adopting a few practices:
+
+- **Standardize password guidance** in onboarding materials so users know the 12-character requirement and character mix upfront.
+- **Encourage password managers** to help users generate and store strong passwords that meet Campium's rules.
+- **Document preferred sign-in options** (email/password vs Google vs Apple) for your organization to reduce confusion.
+- **Capture details when issues occur**, including the exact error message text, whether Google/Apple were used, and screenshots where possible, before escalating to support.
+
+These practices reduce support load and help users recover access quickly while keeping accounts secure.

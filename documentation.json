@@ -43,6 +43,11 @@
                 "title": "Integrations",
                 "path": "integrations",
                 "icon": "plug"
+              },
+              {
+                "title": "Authentication",
+                "path": "authentication",
+                "icon": "shield"
               }
             ]
           },
@@ -200,6 +205,10 @@
               {
                 "title": "Organize Documentation",
                 "path": "help-center/guides/organize-documentation"
+              },
+              {
+                "title": "Sign in and manage passwords",
+                "path": "help-center/guides/sign-in-and-passwords"
               }
             ]
           }
