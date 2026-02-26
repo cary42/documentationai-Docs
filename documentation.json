@@ -35,16 +35,6 @@
             "icon": "layers",
             "pages": [
               {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
-              },
-              {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              },
-              {
                 "title": "Authentication",
                 "path": "authentication",
                 "icon": "shield"
