@@ -1,6 +1,6 @@
 ---
 title: Authentication and password security
-description: Understand how Campium authenticates users, enforces strong passwords, and handles Google and Apple sign-in, plus admin-focused troubleshooting tips.
+description: Understand how Campium authenticates users, enforces strong passwords by application, and handles Google and Apple sign-in, plus admin-focused troubleshooting tips.
 ---
 
 ## Overview
@@ -9,38 +9,50 @@ Authentication in Campium controls how users access accounts and how passwords a
 
 <Callout kind="info">
 
-Recent updates enforce stronger password rules across all flows and add Google and Apple sign-in buttons to the login experience.
+Recent updates enforce stronger, application-specific password rules across all flows and add Google and Apple sign-in buttons to the login experience.
 
 </Callout>
 
-Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password.
+Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password. Client-side checks give real-time feedback, and server-side validation always runs before saving a password, so users cannot bypass the rules.
 
 ## Password strength rules
 
-Campium enforces a consistent password policy across registration, password reset, and password change actions.
+Campium enforces a consistent password policy across registration, password reset, and password change actions, while allowing different minimum lengths for the admin site and the portal.
 
 **Every new or updated password must:**
 
-- Be at least 12 characters long
+- Meet the minimum length for the site being used:
+  - **campiumdb.com (admin site):** at least 12 characters
+  - **Portal:** at least 8 characters
 - Include at least one uppercase letter
 - Include at least one lowercase letter
 - Include at least one special character (for example: `!`, `@`, `#`, `$`, `%`)
+- Not be a common weak password (for example, `password`, `123456`, `qwerty`) or an obvious repeat or sequence (like `aaaa`, `1234`)
 
-If a user submits a password that does not meet these rules, Campium rejects the change and shows an inline error explaining what is missing. The same validation runs on the server even if UI hints are bypassed, so weak passwords never get saved.
+If a user submits a password that does not meet these rules, Campium rejects the change and shows an inline error explaining what is missing. The same validation runs on the server even if UI hints are bypassed, so weak or prohibited passwords never get saved.
+
+### Password policy by application
+
+Campium applies the same character and weak-password checks everywhere, but the minimum length depends on where the user signs in:
+
+- **campiumdb.com (admin site):** 12-character minimum, plus upper/lower/special and blocked weak passwords.
+- **Portal:** 8-character minimum, plus the same upper/lower/special and blocked weak passwords.
+
+When you support users, always confirm which site they are using so you reference the correct minimum length.
 
 ### Where the rules apply
 
-Campium applies the same validation logic in these flows:
+Campium applies the same validation logic in these flows, with the appropriate minimum length for the site the user is on:
 
 - **User registration** from the portal or admin-invited signup
 - **Forgot password / reset password** links
 - **Change password** from within a logged-in session
 
-Users see updated UI hints in these flows that describe the minimum length and character requirements before they submit the form. As an admin, you can rely on the platform to enforce the policy; you do not need to manually review individual passwords.
+Users see updated UI hints in these flows that describe the minimum length for that site, character requirements, and blocked weak passwords before they submit the form. As an admin, you can rely on the platform to enforce the policy; you do not need to manually review individual passwords.
 
 <Callout kind="tip">
 
-If users report that a password "will not save," have them read the inline password requirements on the page and adjust their password to meet all criteria.
+If users report that a password "will not save," have them read the inline password requirements on the page and adjust their password to meet all criteria for the site they are using.
 
 </Callout>
 
@@ -51,7 +63,7 @@ Use this procedure when a user has forgotten their password or receives an inval
 <Steps>
   <Step title="Start the reset flow" icon="lock">
 
-  - Ask the user to open the Campium login page.
+  - Ask the user to open the appropriate Campium login page (campiumdb.com for admins or the portal for end users).
   - Instruct them to select the forgot password option.
   - They should enter the email address associated with their Campium account and submit the form.
 
@@ -67,9 +79,9 @@ Use this procedure when a user has forgotten their password or receives an inval
 
   <Step title="Create a new strong password" icon="shield">
 
-  - When the user opens the reset link, the page shows inline guidance for password requirements.
-  - Ask them to enter a new password with at least 12 characters, including uppercase, lowercase, and a special character.
-  - If the password is too weak, the page highlights which rule is missing and blocks submission until all rules are satisfied.
+  - When the user opens the reset link, the page shows inline guidance for password requirements, including the minimum length for that site.
+  - Ask portal users to enter a new password that is at least 8 characters long, and campiumdb.com admins to use at least 12 characters, in both cases including uppercase, lowercase, and a special character, and avoiding common or easily guessed passwords.
+  - If the password is too weak, too short for that site, or appears in the blocked list of common passwords, the page highlights which rule is missing or violated and blocks submission until all rules are satisfied.
 
   </Step>
 
@@ -105,9 +117,9 @@ Use this procedure when a user is already authenticated but wants to update thei
 
   <Step title="Enter and confirm new password" icon="shield">
 
-  - The user must enter a new password that follows the same rules: at least 12 characters, with uppercase, lowercase, and a special character.
-  - Inline hints on the form show the requirements and update as they type.
-  - Campium runs server-side validation when they submit; if the password is weak, the change fails and the page shows what needs to be fixed.
+  - The user must enter a new password that follows the same rules for their site: portal requires at least 8 characters, while campiumdb.com requires at least 12 characters, and both also require uppercase, lowercase, and a special character and block common or easily guessed passwords.
+  - Inline hints on the form show the requirements for that site and update as they type.
+  - Campium runs server-side validation when they submit; if the password is too short, weak, or on the blocked list, the change fails and the page shows what needs to be fixed.
 
   </Step>
 
@@ -122,7 +134,7 @@ Use this procedure when a user is already authenticated but wants to update thei
 
 ## Email and password login behavior
 
-Standard login uses the combination of a registered email address and a password that meets the strength policy.
+Standard login uses the combination of a registered email address and a password that meets the strength policy for the specific site (8-character minimum in the portal, 12-character minimum on campiumdb.com, plus character and weak-password rules).
 
 When a user attempts to log in:
 
@@ -130,7 +142,7 @@ When a user attempts to log in:
 - The submitted password is checked against the stored credentials.
 - If the account requires a password update due to new policy rules, Campium prompts the user to reset or change their password before continuing.
 
-If validation fails, the login page shows an error. For security, some errors do not specify whether the email or password is incorrect, but when a password is too weak during a change or reset, the UI explicitly explains which requirement was not met.
+If validation fails, the login page shows an error. For security, some errors do not specify whether the email or password is incorrect, but when a password is too weak, too short for the site, or appears on the blocked list during a change or reset, the UI explicitly explains which requirement was not met.
 
 ## Google and Apple sign-in
 
@@ -153,7 +165,7 @@ From an admin perspective, you should expect:
 
 <Callout kind="info">
 
-If your organization prefers a specific sign-in method, communicate this in your onboarding materials so users know whether to use email and password or a social provider.
+If your organization prefers a specific sign-in method for admins versus portal users, communicate this in your onboarding materials so users know whether to use email and password or a social provider.
 
 </Callout>
 
@@ -187,7 +199,8 @@ Use these expandable sections to quickly diagnose and resolve the most common au
 
   This usually indicates the new password does not meet the strength requirements.
 
-  - Verify the user is following the on-screen hints: at least 12 characters, with uppercase, lowercase, and a special character.
+  - Verify which site they are using, since the portal requires at least 8 characters while campiumdb.com requires at least 12 characters, and both also require uppercase, lowercase, and a special character.
+  - Remind them that common or easily guessed passwords are blocked on both sites even if they meet length and character rules.
   - Ask them to read any inline error text carefully; it highlights which rule is not satisfied.
   - Encourage them to choose a longer passphrase instead of minor tweaks to an existing weak password.
   - If they still cannot proceed, capture a screenshot of the form and error message for support.
@@ -221,9 +234,9 @@ Use these expandable sections to quickly diagnose and resolve the most common au
 
 Admins and technical staff can improve authentication reliability and support by adopting a few practices:
 
-- **Standardize password guidance** in onboarding materials so users know the 12-character requirement and character mix upfront.
+- **Standardize password guidance separately** for portal users and campiumdb.com admins so portal users know about the 8-character minimum and admins know about the 12-character minimum, along with the required character mix and blocked weak passwords.
 - **Encourage password managers** to help users generate and store strong passwords that meet Campium's rules.
-- **Document preferred sign-in options** (email/password vs Google vs Apple) for your organization to reduce confusion.
-- **Capture details when issues occur**, including the exact error message text, whether Google/Apple were used, and screenshots where possible, before escalating to support.
+- **Document preferred sign-in options** (email/password vs Google vs Apple) for your organization, and clarify which options apply to portal users versus admins.
+- **Capture details when issues occur**, including the exact error message text, which site and sign-in method were used (portal vs campiumdb.com, email/password vs Google/Apple), and screenshots where possible, before escalating to support.
 
 These practices reduce support load and help users recover access quickly while keeping accounts secure.
