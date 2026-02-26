@@ -146,54 +146,6 @@
         ]
       },
       {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "How to Create a Workspace",
-                "path": "help-center/faq/how-to-create-a-workspace"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Cannot Access Project",
-                "path": "help-center/troubleshooting/cannot-access-project"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Organize Documentation",
-                "path": "help-center/guides/organize-documentation"
-              },
-              {
-                "title": "Sign in and manage passwords",
-                "path": "help-center/guides/sign-in-and-passwords"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Changelog",
         "icon": "clock",
         "pages": [
