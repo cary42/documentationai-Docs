@@ -1,23 +1,23 @@
 ---
-title: Settings
-description: Understand how Settings in Campium control your seasons, security, communications, reports, and forms, and learn where to manage them.
+title: Site Settings
+description: Tab-by-tab reference for the Admin → Site Settings screen, including every setting key, type, behavior, and visibility condition.
 ---
 
-## What settings do for your camp
+## What Site Settings control
 
-Settings control how Campium behaves for your families, staff, and finance team. They bring together your camp details, schedules, communication tools, and reporting options so everything stays consistent and organized.
+Site Settings control how Campium behaves for your families, staff, and finance team across modules, payments, the mobile app, and admin behaviors. Each setting maps to a stored key that the platform reads whenever it renders portals, processes payments, or loads the mobile app.
 
-When you dial in your settings, you avoid last‑minute changes, reduce manual work, and give families a smoother experience when they log in, register, and pay.
+Settings on this screen save automatically as you change them, so updates apply quickly without a single global Save button.
 
 <Callout kind="info">
 
-Review your Settings at the start of each season and whenever your policies, pricing, or communication style changes. A quick review now prevents confusion later.
+Site Settings are shared across your entire account. Before changing anything, confirm how the change will affect families, staff, and existing workflows, especially payment and communication behavior.
 
 </Callout>
 
-## How to get to Settings
+## How to open Site Settings
 
-Use the main navigation to open your camp’s Settings.
+Use the Admin menu to reach the Site Settings screen.
 
 <Steps>
   <Step title="Open the Admin menu" icon="settings" titleType="p">
@@ -28,140 +28,848 @@ Use the main navigation to open your camp’s Settings.
 
   <Step title="Go to Site Settings" icon="settings" titleType="p">
 
-    In the Admin menu, click **Site Settings**. This opens the main Settings area for your Campium account.
+    In the Admin menu, click **Site Settings**. This opens the main Site Settings screen for your account.
 
   </Step>
 
-  <Step title="Confirm you are in the right place" icon="check-circle" titleType="p">
+  <Step title="Confirm you see the Site Settings tabs" icon="check-circle" titleType="p">
 
-    At the top of the page, you should see your camp name and a series of sections you can adjust, such as **Business Info & Logo**, **Seasons & Sessions**, **Authentication**, **Communications**, **Reports**, and **Forms**.
+    At the top of the page, you should see a row of tabs such as **Modules**, **Basic**, **Payment Info**, **Mobile App**, and **Admin** (Admin appears only for superusers).
 
   </Step>
 </Steps>
 
-When you are finished making changes, look for a **Save** or **Update** button in each section so your changes apply to your live site.
+When the page loads, the **Modules** tab appears first. Other tabs load on demand when you click them.
 
-## Business Info and Logo
+## How saving and validation work
 
-Your basic business details and branding live in the **Business Info & Logo** section. This is where you set the name, contact details, and logo families see across emails and portals.
+Site Settings use an autosave pattern instead of a single Save button.
 
-- Set your official camp name, address, phone number, and main contact email.
-- Upload your camp logo so it appears on family portals and communication.
-- Make sure families always see up‑to‑date contact details if they need help.
+- The page loads the **Modules** tab immediately, and other tabs load via background requests when you click them.
+- Each input that participates in autosave has the `save-input` class and saves as soon as you change it (for example, toggling a checkbox, picking a value, or leaving a text field).
+- The browser sends the new value to a save endpoint with the setting key and your account identifier.
 
-For step‑by‑step details, see the dedicated guide: [Business Info & Logo](/business-info-and-logo).
+<Callout kind="info">
 
-## Main settings areas
-
-The rest of Settings is organized into areas that match the way you run camp: seasons, security, communication, reports, and forms. Expand each area below to learn what it covers.
-
-<ExpandableGroup>
-
-  <Expandable title="Seasons & Sessions (your camp schedule)" default-open="true">
-
-  Use **Seasons & Sessions** to organize when your programs run and how families register.
-
-  - Set up each **season** (for example, Summer, Winter, School Year).
-  - Create **sessions** within a season (for example, Week 1 Overnight, Week 2 Day Camp).
-  - Control which seasons and sessions families can see and sign up for.
-
-  A clear Seasons & Sessions setup keeps your registration pages clean and makes it easier to report on attendance and revenue later. Learn more in [Seasons & Sessions](/seasons-and-sessions).
-
-  </Expandable>
-
-  <Expandable title="Authentication (sign-in and account security)" default-open="false">
-
-  **Authentication** settings control how families and staff sign in to Campium and how you protect their accounts.
-
-  - Decide how strict password rules should be.
-  - Set how often people need to log in again on shared devices.
-  - Turn on options that make it harder for someone to access an account they should not see.
-
-  Strong sign‑in settings reduce the chance of unauthorized access and help you meet your organization’s privacy expectations. For more detail, see [Authentication](/authentication).
-
-  </Expandable>
-
-  <Expandable title="Communications (Mass Emails, SMS, messaging, news, and app chat)" default-open="false">
-
-  Communications settings decide how you reach families and staff from inside Campium.
-
-  - **Mass Emails**: Configure who emails come from and which email types you plan to send at scale, such as announcements or reminders. See [Mass Emails](/mass-emails).
-  - **SMS**: Turn on text messaging and manage how you send short alerts, reminders, and updates. See [SMS](/sms).
-  - **One-way Messaging**: Set up alerts where you send messages, but families do not reply, such as emergency notifications. See [One-way Messaging](/one-way-messaging).
-  - **Portal News**: Manage the news items families see when they log into their portal, such as upcoming events or policy changes. See [Portal News](/portal-news).
-  - **Push Notifications**: Decide what types of notifications appear on families’ devices when they use the app. See [Push Notifications](/push-notifications).
-  - **App Chat**: Control how chat works between your team and families inside the Campium app. See [App Chat](/app-chat).
-
-  Together, these tools help you reach the right people at the right time, using the channels they prefer.
-
-  </Expandable>
-
-  <Expandable title="Reports (financial, system, and custom views)" default-open="false">
-
-  Report settings shape how you track money, attendance, and important follow‑up tasks.
-
-  - **Financial reports**: Summarize payments and revenue so your finance team can match Campium to your bank records and accounting tools. Common examples include [Deposit Summary](/deposit-summary) and [Revenue Summary](/revenue-summary).
-  - **System reports**: Use scheduled‑payment and payment‑status reports to stay ahead of issues like upcoming charges, expired cards, or missing payment methods. Examples include:
-    - [Scheduled Payments Report](/system-report-scheduled-payments)
-    - [Family Scheduled Payments report](/system-report-family-scheduled-payments)
-    - [Scheduled Payments - Missing report](/system-report-scheduled-payments-missing)
-    - [Scheduled Payment Email Log](/system-report-scheduled-payment-email-log)
-    - [Expired CC Report](/system-report-expired-cc-report)
-    - [Family Payment Plans Report](/system-report-payment-plans)
-    - [Payment Method Updates – Families with Failed Payments](/system-report-payment-method-updates-families-with-failed-payments)
-    - [Families Without Primary Payment Method report](/system-report-families-without-primary-payment-method)
-  - **Custom Reports**: Build and save your own report layouts so you can quickly answer questions your team asks often, like “Which families still need to complete medical forms?” See [Custom Reports](/custom-reports).
-
-  Thoughtful report settings make it easier to answer money and attendance questions without exporting data or doing manual counts.
-
-  </Expandable>
-
-  <Expandable title="Forms (registration and information collection)" default-open="false">
-
-  **Forms** settings control the information you collect from families before and during camp.
-
-  - Create and update registration forms so families give you what you need to enroll campers.
-  - Add health, waiver, and policy agreement questions so your staff has the right information on file.
-  - Decide which forms are required before a camper is considered fully registered.
-
-  A clear Forms setup keeps your staff prepared, reduces last‑minute paperwork at check‑in, and helps you meet your safety and compliance requirements. Learn more in [Forms](/forms).
-
-  </Expandable>
-
-</ExpandableGroup>
-
-## Tips for managing settings
-
-<Callout kind="tip">
-
-- **Review once per season**: Before opening registration for a new season, confirm your Seasons & Sessions, pricing, and Forms match your current plans.
-- **Test as a family**: After changes, log in as a test family to see what the portal, emails, and texts look like from their side.
-- **Limit who can change settings**: Give Settings access only to trusted team members so you avoid accidental changes during busy times.
-- **Document your choices**: Keep a short internal note on why you chose certain settings, such as refund rules or communication preferences, so new staff can follow the same approach.
+Watch for inline success or error messages after you change a field. If a validation fails, Campium does not store the new value.
 
 </Callout>
 
-## Related setup guides
+Key behaviors from the save logic:
 
-Use these guides to go deeper into the most common areas you will configure first.
+- **Boolean toggles**: When you click a checkbox or toggle, Campium flips the stored value between `0`/`off` and `1`/`on`. The UI represents the current stored state.
+- **`parent_contact_email` validation**: The **Contact Email Address** field on the Basic tab must pass Campium email verification (`isVerifiedEmail`). If verification fails, the save returns an error and the value does not change.
+- **`group_field` side effect**: Changing the **Group Field** select on the Basic or Mobile App tab calls `GroupCustom::setCustomID` with the new value. This updates the underlying group field configuration in addition to storing the setting.
+- **`surcharge` normalization**: When you change **Credit Card Surcharge**, Campium strips the percent symbol from the stored value. You can enter `3` or `3%`; the value saved for `surcharge` is numeric-like (for example, `3`).
+- **Skipped keys**: The save endpoint ignores internal keys such as `online_id`, `key`, `PHPSESSID`, `username`, and any key starting with `_`. These are not stored as settings.
+
+If you do not see the **Admin** tab, your user account is not a superuser; those settings are restricted.
+
+## Tabs and settings reference
+
+Use the tabs below as a reference to match what you see on the Site Settings screen. Each setting lists the UI label, underlying key, data type, and visibility or special behavior when relevant.
+
+<Tabs>
+
+  <Tab title="Modules" icon="settings">
+
+  The **Modules** tab controls which functional areas of Campium are available in your account and, in some cases, in the parent portal and mobile app. All settings here are stored as boolean toggles.
+
+  <Callout kind="tip">
+
+  Turn modules on when you are ready to use them end-to-end. Some modules (for example, payments, messaging) also depend on configuration elsewhere, such as payment processors or communication templates.
+
+  </Callout>
+
+  <ParamField body="Attendance Module" param-type="boolean">
+
+  **Attendance Module** (`att_module`) — Turns the Attendance module on or off across the admin experience.
+
+  </ParamField>
+
+  <ParamField body="Todo List Module" param-type="boolean">
+
+  **Todo List Module** (`todo_module`) — Enables the Todo List module for staff and appears here and on the Mobile App tab.
+
+  </ParamField>
+
+  <ParamField body="Medical Notes" param-type="boolean">
+
+  **Medical Notes** (`medical_tab`) — Shows or hides medical notes functionality for campers. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Medication Module" param-type="boolean">
+
+  **Medication Module** (`medication_module`) — Enables the medication-tracking module for recording and managing camper medications.
+
+  </ParamField>
+
+  <ParamField body="Pickup Module" param-type="boolean">
+
+  **Pickup Module** (`dismiss_module`) — Turns on the pickup/dismissal module for managing who picks up campers.
+
+  </ParamField>
+
+  <ParamField body="Pickup Popup" param-type="boolean">
+
+  **Pickup Popup** (`pickup_popup`) — Controls whether a pickup-related popup appears in workflows that involve camper dismissal.
+
+  </ParamField>
+
+  <ParamField body="Canteen Module (Admin)" param-type="boolean">
+
+  **Canteen Module (Admin)** (`canteen_flag`) — Enables canteen-related tools for admins.
+
+  </ParamField>
+
+  <ParamField body="Canteen Module (Portal)" param-type="boolean">
+
+  **Canteen Module (Portal)** (`canteen_portal`) — Shows or hides canteen access in the parent portal.
+
+  </ParamField>
+
+  <ParamField body="One-Way Messaging Module" param-type="boolean">
+
+  **One-Way Messaging Module** (`one_way_messaging`) — Enables one-way messaging so you can send alerts families cannot reply to.
+
+  </ParamField>
+
+  <ParamField body="Pre-Launch Checklist" param-type="boolean">
+
+  **Pre-Launch Checklist** (`launch_checklist`) — Turns on the pre-launch checklist module to guide setup before opening registration.
+
+  </ParamField>
+
+  <ParamField body="Allow Parents to Upload Profile Photos?" param-type="boolean">
+
+  **Allow Parents to Upload Profile Photos?** (`upload_module`) — Lets parents upload profile photos for campers in the portal.
+
+  </ParamField>
+
+  <ParamField body="Wait List Module" param-type="boolean">
+
+  **Wait List Module** (`waitlist`) — Enables wait list functionality for full sessions or programs.
+
+  </ParamField>
+
+  <ParamField body="Allow users to remove themselves from wait lists" param-type="boolean">
+
+  **Allow users to remove themselves from wait lists** (`remove_from_wait_list`) — Allows families to remove their own campers from wait lists through the portal.
+
+  </ParamField>
+
+  <ParamField body="Display Due Date On Parent Site" param-type="boolean">
+
+  **Display Due Date On Parent Site** (`duedate`) — Controls whether payment due dates appear to families in the portal.
+
+  </ParamField>
+
+  <ParamField body="Expense Report" param-type="boolean">
+
+  **Expense Report** (`expense_report`) — Enables the expense report module. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Photo Hosting" param-type="boolean">
+
+  **Photo Hosting** (`gallery_module`) — Turns on the photo gallery module for sharing photos with families.
+
+  </ParamField>
+
+  <ParamField body="Facial Recognition" param-type="boolean">
+
+  **Facial Recognition** (`facial_recognition`) — Enables facial recognition features within photo hosting, when available.
+
+  </ParamField>
+
+  <ParamField body="Videos Tab On Parent Site" param-type="boolean">
+
+  **Videos Tab On Parent Site** (`video_module`) — Shows or hides a videos tab in the parent portal.
+
+  </ParamField>
+
+  <ParamField body="Allow for access to Tax Receipts on Portal" param-type="boolean">
+
+  **Allow for access to Tax Receipts on Portal** (`tax_receipts`) — Lets families access tax receipts from their portal.
+
+  </ParamField>
+
+  <ParamField body="Calendar Module For Portal" param-type="boolean">
+
+  **Calendar Module For Portal** (`calendar_module`) — Enables a calendar view for families in the portal.
+
+  </ParamField>
+
+  <ParamField body="FAQ Module For Portal" param-type="boolean">
+
+  **FAQ Module For Portal** (`faq_module`) — Adds an FAQ section to the parent portal.
+
+  </ParamField>
+
+  <ParamField body="Contact Us Module For Portal" param-type="boolean">
+
+  **Contact Us Module For Portal** (`contact_us_module`) — Shows a Contact Us area in the portal so families can reach your team.
+
+  </ParamField>
+
+  <ParamField body="Contracts Module" param-type="boolean">
+
+  **Contracts Module** (`contracts_module`) — Enables contract-related workflows. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Bunking Module" param-type="boolean">
+
+  **Bunking Module** (`bunking`) — Turns on bunking features for assigning campers to bunks or cabins.
+
+  </ParamField>
+
+  <Callout kind="info">
+
+  The following module toggles appear only to **superusers** and control deeper account structure and internal tools.
+
+  </Callout>
+
+  <ParamField body="Even Split Calculator" param-type="boolean">
+
+  **Even Split Calculator** (`calc_even_split`) — Superuser-only. Controls access to internal even-split calculation tools.
+
+  </ParamField>
+
+  <ParamField body="User Module" param-type="boolean">
+
+  **User Module** (`user_module`) — Superuser-only. Governs internal user management module behavior.
+
+  </ParamField>
+
+  <ParamField body="Parent Module" param-type="boolean">
+
+  **Parent Module** (`parent_module`) — Superuser-only. Controls parent-management module availability.
+
+  </ParamField>
+
+  <ParamField body="Register Module" param-type="boolean">
+
+  **Register Module** (`register_module`) — Superuser-only. Toggles core registration module behavior on the account.
+
+  </ParamField>
+
+  <ParamField body="Special Weeks" param-type="boolean">
+
+  **Special Weeks** (`special_weeks`) — Superuser-only. Enables special-week handling. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Free" param-type="boolean">
+
+  **Free** (`free`) — Superuser-only. Used internally to mark free accounts or override billing. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Financial Module" param-type="boolean">
+
+  **Financial Module** (`financial_module`) — Superuser-only. Controls access to core financial features and reports.
+
+  </ParamField>
+
+  <ParamField body="Email Children" param-type="boolean">
+
+  **Email Children** (`email_children`) — Superuser-only. Governs whether children can be emailed directly from certain tools.
+
+  </ParamField>
+
+  </Tab>
+
+  <Tab title="Basic" icon="settings">
+
+  The **Basic** tab holds general site- and portal-level configuration such as contact details, default season, labels, and global JavaScript.
+
+  <ParamField body="Contact Email Address" param-type="string" required="true">
+
+  **Contact Email Address** (`parent_contact_email`) — Primary contact email families see and that Campium uses for various notifications. The save action verifies this email; if verification fails, the change is rejected with an error.
+
+  </ParamField>
+
+  <ParamField body="Default Season" param-type="string">
+
+  **Default Season** (`default_season`) — Selects which season Campium uses as the default context across admin and reports when none is specified.
+
+  </ParamField>
+
+  <ParamField body="Group Field" param-type="string">
+
+  **Group Field** (`group_field`) — Chooses which custom group field is used as the primary grouping dimension (for example, cabin or group). Changing this triggers `GroupCustom::setCustomID` to update the underlying group configuration and also appears on the Mobile App tab.
+
+  </ParamField>
+
+  <ParamField body="Contact Phone Number" param-type="string">
+
+  **Contact Phone Number** (`contact_phone_number`) — Phone number families see as the main contact for your camp.
+
+  </ParamField>
+
+  <ParamField body="One-Way Messages Per Day" param-type="integer">
+
+  **One-Way Messages Per Day** (`one_way_messages_per_day`) — Numeric field that represents how many one-way messages you plan to send per day. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Portal Logo Height" param-type="integer">
+
+  **Portal Logo Height** (`portal_logo_height`) — Height of the logo in the parent portal, typically in pixels.
+
+  </ParamField>
+
+  <ParamField body="Javascript for header" param-type="string">
+
+  **Javascript for header** (`header`) — Injects custom JavaScript into the header of your pages. Use cautiously; invalid code can affect all users.
+
+  </ParamField>
+
+  <ParamField body="Javascript for body" param-type="string">
+
+  **Javascript for body** (`javascript_body`) — Injects custom JavaScript into the body of your pages. As with header scripts, test carefully.
+
+  </ParamField>
+
+  <ParamField body="User Description (Singular)" param-type="string">
+
+  **User Description (Singular)** (`user_singular`) — Singular label used for a user-like entity (for example, "Camper" or "Participant").
+
+  </ParamField>
+
+  <ParamField body="User Plural (Plural)" param-type="string">
+
+  **User Plural (Plural)** (`user_plural`) — Plural label corresponding to `user_singular` (for example, "Campers").
+
+  </ParamField>
+
+  <ParamField body="Product Name (ie. Session)" param-type="string">
+
+  **Product Name (ie. Session)** (`product_text_single`) — Singular label for the core product you sell (for example, "Session" or "Program").
+
+  </ParamField>
+
+  <ParamField body="Product Name Plural (ie. Sessions)" param-type="string">
+
+  **Product Name Plural (ie. Sessions)** (`product_text_plural`) — Plural label for products (for example, "Sessions").
+
+  </ParamField>
+
+  <ParamField body="Email Footer" param-type="string">
+
+  **Email Footer** (`email_footer`) — Footer content appended to outgoing emails, such as contact info or disclaimers.
+
+  </ParamField>
+
+  </Tab>
+
+  <Tab title="Payment Info" icon="credit-card">
+
+  The **Payment Info** tab controls how scheduled charges behave, which emails send around payments, and which payment processor and credentials Campium uses.
+
+  <Callout kind="info">
+
+  Payment-related settings save immediately when you change them. Coordinate changes with your finance team, especially when switching processors or environments.
+
+  </Callout>
+
+  ### Charge notices and routing
+
+  <ParamField body="Charge Coming Email" param-type="boolean">
+
+  **Charge Coming Email** (`charge_coming`) — Toggles whether Campium sends upcoming charge emails before scheduled charges.
+
+  </ParamField>
+
+  <ParamField body="Charge Coming Guardian 1 Email" param-type="boolean">
+
+  **Charge Coming Guardian 1 Email** (`charge_coming_guardian1_owner_email`) — Controls whether upcoming charge emails go to Guardian 1 and the account owner.
+
+  </ParamField>
+
+  <ParamField body="Charge Coming Guardian 2 Email" param-type="boolean">
+
+  **Charge Coming Guardian 2 Email** (`charge_coming_guardian2_owner_email`) — Controls whether upcoming charge emails go to Guardian 2 and the account owner.
+
+  </ParamField>
+
+  <ParamField body="Charge Coming Account Owner Email" param-type="boolean">
+
+  **Charge Coming Account Owner Email** (`charge_coming_account_owner_email`) — Sends upcoming charge emails to the account owner address.
+
+  </ParamField>
+
+  <ParamField body="Days Before Charge" param-type="string">
+
+  **Days Before Charge** (`days_before_charge`) — Selects how many days in advance (typically 1–10) to send upcoming charge emails.
+
+  </ParamField>
+
+  <ParamField body="Send Scheduled Payment Receipt" param-type="boolean">
+
+  **Send Scheduled Payment Receipt** (`send_scheduled_payment_receipt`) — If enabled, sends a receipt email when a scheduled payment succeeds.
+
+  </ParamField>
+
+  <ParamField body="Send Payment Decline Email" param-type="boolean">
+
+  **Send Payment Decline Email** (`send_payment_decline_email`) — Admin-only. Controls whether Campium emails families when a payment is declined.
+
+  </ParamField>
+
+  <ParamField body="Failed Payment Notification Email" param-type="string">
+
+  **Failed Payment Notification Email** (`failed_payment_email`) — Email address where admin-level failed payment notifications are sent.
+
+  </ParamField>
+
+  <ParamField body="Payment Method Updated Email" param-type="string">
+
+  **Payment Method Updated Email** (`payment_method_updated_email`) — Email address that receives notifications when families update payment methods.
+
+  </ParamField>
+
+  <ParamField body="Receipt Emails" param-type="string">
+
+  **Receipt Emails** (`receipt_emails`) — Comma-separated list of email addresses that receive copies of payment receipts or related notices.
+
+  </ParamField>
+
+  <ParamField body="Credit Card Surcharge" param-type="string">
+
+  **Credit Card Surcharge** (`surcharge`) — Text field representing the surcharge percentage on card payments (for example, `3` or `3%`). The save logic strips the `%` before storing the value.
+
+  </ParamField>
+
+  ### Card brands and processing behavior
+
+  <ParamField body="Accept AMEX" param-type="boolean">
+
+  **Accept AMEX** (`amex`) — Admin-only. Determines whether you accept American Express cards.
+
+  </ParamField>
+
+  <ParamField body="Authorize and Capture" param-type="boolean">
+
+  **Authorize and Capture** (`auth_and_capture`) — Superuser-only. Controls whether charges are authorized and captured together or follow a different pattern, depending on processor support.
+
+  </ParamField>
+
+  ### Processor selection and credentials
+
+  <Callout kind="info">
+
+  Processor fields are often visible only when you choose the corresponding processor in the **Processor** select. Many of these are used by Campium employees to configure integrations.
+
+  </Callout>
+
+  <ParamField body="Processor" param-type="string">
+
+  **Processor** (`processor`) — Selects the payment processor integration (for example, Usio, Paysafe, NMI). Visibility of other fields depends on this choice.
+
+  </ParamField>
+
+  <ParamField body="Environment" param-type="string">
+
+  **Environment** (`environment`) — Chooses between TEST and LIVE modes for the selected processor.
+
+  </ParamField>
+
+  <ParamField body="Country" param-type="string">
+
+  **Country** (`country`) — Sets the processing country (for example, US or CA), used when configuring processor accounts.
+
+  </ParamField>
+
+  <ParamField body="Usio Merchant ID" param-type="string">
+
+  **Usio Merchant ID** (`usio_merchant_id`) — Merchant identifier for the Usio processor integration.
+
+  </ParamField>
+
+  <ParamField body="Usio Login" param-type="string">
+
+  **Usio Login** (`usio_login`) — Login credential for the Usio integration.
+
+  </ParamField>
+
+  <ParamField body="Usio Password" param-type="string">
+
+  **Usio Password** (`usio_password`) — Password credential for the Usio integration. Store securely.
+
+  </ParamField>
+
+  <ParamField body="Usio Checkout Key" param-type="string">
+
+  **Usio Checkout Key** (`usio_checkout_key`) — Checkout key used for hosted payment pages or tokenization with Usio.
+
+  </ParamField>
+
+  <ParamField body="Entry Point" param-type="string">
+
+  **Entry Point** (`entryPoint`) — Processor-specific URL or code used to route payment requests. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Payment Page" param-type="string">
+
+  **Payment Page** (`payment_page`) — Identifier or path for the hosted payment page, depending on processor.
+
+  </ParamField>
+
+  <ParamField body="ACH Merchant ID" param-type="string">
+
+  **ACH Merchant ID** (`ach_merchant_id`) — Merchant identifier for ACH processing.
+
+  </ParamField>
+
+  <ParamField body="API Key" param-type="string">
+
+  **API Key** (`api_key`) — API key for the configured processor (textarea to accommodate long keys).
+
+  </ParamField>
+
+  <ParamField body="Paysafe CC Value" param-type="string">
+
+  **Paysafe CC Value** (`paysafe_cc_value`) — Processor-specific field for Paysafe card configuration.
+
+  </ParamField>
+
+  <ParamField body="Paysafe Username" param-type="string">
+
+  **Paysafe Username** (`paysafe_username`) — Username for the Paysafe integration.
+
+  </ParamField>
+
+  <ParamField body="Paysafe Password" param-type="string">
+
+  **Paysafe Password** (`paysafe_password`) — Password for the Paysafe integration.
+
+  </ParamField>
+
+  <ParamField body="ACH Service Key" param-type="string">
+
+  **ACH Service Key** (`ach_service_key`) — Service key used by certain ACH processors. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="NMI API Key" param-type="string">
+
+  **NMI API Key** (`nmi_api_key`) — API key for the NMI processor integration.
+
+  </ParamField>
+
+  <ParamField body="NMI Bearer Token" param-type="string">
+
+  **NMI Bearer Token** (`nmi_bearer_token`) — Bearer token for modern NMI APIs (textarea to hold long token strings).
+
+  </ParamField>
+
+  ### Campium employee-only rate and fee fields
+
+  <Callout kind="info">
+
+  The following fields are intended for Campium employees when setting up or adjusting processor rates and fees.
+
+  </Callout>
+
+  <ParamField body="Credit Card Rate" param-type="string">
+
+  **Credit Card Rate** (`cc_rate`) — Campium employee-only. Sets the base percentage rate for card transactions used in internal calculations.
+
+  </ParamField>
+
+  <ParamField body="Credit Card Transaction Fee" param-type="string">
+
+  **Credit Card Transaction Fee** (`cc_transaction_fee`) — Campium employee-only. Flat per-transaction fee used for card charges.
+
+  </ParamField>
+
+  <ParamField body="ACH Percent" param-type="string">
+
+  **ACH Percent** (`ach_percent`) — Campium employee-only. Percentage fee applied to ACH transactions.
+
+  </ParamField>
+
+  <ParamField body="ACH Transaction Fee" param-type="string">
+
+  **ACH Transaction Fee** (`ach_transaction_fee`) — Campium employee-only. Flat fee charged per ACH transaction.
+
+  </ParamField>
+
+  </Tab>
+
+  <Tab title="Mobile App" icon="monitor">
+
+  The **Mobile App** tab controls which features appear in the Campium mobile app for staff and families, including chat, menu items, and support information.
+
+  <Callout kind="info">
+
+  Some Mobile App settings overlap keys on other tabs (for example, `todo_module` and `group_field`) but are presented here because they affect the app experience directly.
+
+  </Callout>
+
+  ### Superuser-only mobile configuration
+
+  <ParamField body="Bus Fields" param-type="array">
+
+  **Bus Fields** (`bus_fields`) — Superuser-only. Multi-select of fields used in bus tracking and display within the app.
+
+  </ParamField>
+
+  <ParamField body="Bus Tracking Module" param-type="boolean">
+
+  **Bus Tracking Module** (`bus_tracking_module`) — Superuser-only. Enables bus tracking functionality in the mobile app.
+
+  </ParamField>
+
+  ### Shared and module toggles
+
+  <ParamField body="Todo List Module" param-type="boolean">
+
+  **Todo List Module** (`todo_module`) — Shared with the Modules tab. Controls whether todo lists appear in the mobile app.
+
+  </ParamField>
+
+  <ParamField body="Group Field" param-type="string">
+
+  **Group Field** (`group_field`) — Shared with the Basic tab. Determines which group field the app uses for grouping; changing this calls `GroupCustom::setCustomID`.
+
+  </ParamField>
+
+  <ParamField body="Parent Chat Module" param-type="boolean">
+
+  **Parent Chat Module** (`parent_chat_module`) — Toggles chat between parents and your team inside the app.
+
+  </ParamField>
+
+  <ParamField body="Staff Chat Module" param-type="boolean">
+
+  **Staff Chat Module** (`staff_chat_module`) — Enables chat among staff within the app.
+
+  </ParamField>
+
+  ### App menu and profile options
+
+  <ParamField body="Staff Files Menu Item" param-type="boolean">
+
+  **Staff Files Menu Item** (`app_staff_files`) — Shows a Staff Files menu option in the app.
+
+  </ParamField>
+
+  <ParamField body="Parent Files Menu Item" param-type="boolean">
+
+  **Parent Files Menu Item** (`app_parent_files`) — Shows a Parent Files menu option in the app.
+
+  </ParamField>
+
+  <ParamField body="My Group Menu Item" param-type="boolean">
+
+  **My Group Menu Item** (`app_my_group`) — Displays a "My Group" section in the app for group-based views.
+
+  </ParamField>
+
+  <ParamField body="Support Menu Item" param-type="boolean">
+
+  **Support Menu Item** (`app_support`) — Adds a Support menu entry to the app navigation.
+
+  </ParamField>
+
+  <ParamField body="Useful Links Menu Item" param-type="boolean">
+
+  **Useful Links Menu Item** (`app_useful_links`) — Shows a list of useful links in the app via a dedicated menu item.
+
+  </ParamField>
+
+  <ParamField body="Allow Mobile Address Updates" param-type="boolean">
+
+  **Allow Mobile Address Updates** (`mobile_update_address`) — Lets families update their address from within the mobile app.
+
+  </ParamField>
+
+  ### Support and branding content
+
+  <ParamField body="Support Text" param-type="string">
+
+  **Support Text** (`app_support_text`) — Text shown in the app Support area, such as instructions or contact guidance.
+
+  </ParamField>
+
+  <ParamField body="Support Email" param-type="string">
+
+  **Support Email** (`app_email`) — Email address displayed in the app for support.
+
+  </ParamField>
+
+  <ParamField body="Support Phone" param-type="string">
+
+  **Support Phone** (`app_phone`) — Phone number displayed in the app for support.
+
+  </ParamField>
+
+  <ParamField body="Main Page Photo" param-type="string">
+
+  **Main Page Photo** (`main_page_photo`) — Reference (for example, filename or path) to the photo shown on the app main page.
+
+  </ParamField>
+
+  <ParamField body="Mobile Main Page Text" param-type="string">
+
+  **Mobile Main Page Text** (`mobile_main_page_text`) — Text content displayed on the main page of the mobile app.
+
+  </ParamField>
+
+  </Tab>
+
+  <Tab title="Admin" icon="shield">
+
+  The **Admin** tab surfaces account-level administrative settings. This tab is shown only for **superusers**; standard admin users do not see it.
+
+  <Callout kind="info">
+
+  Changes on the Admin tab affect subscription status, time zones, and high-level account configuration. Only superusers should adjust these settings.
+
+  </Callout>
+
+  <ParamField body="Account Owner" param-type="string">
+
+  **Account Owner** (`account_owner`) — Cary-only. Selects the internal account owner record used for billing or support routing.
+
+  </ParamField>
+
+  <ParamField body="Parent Theme" param-type="string">
+
+  **Parent Theme** (`parent_theme`) — Chooses the visual theme for the parent portal.
+
+  </ParamField>
+
+  <ParamField body="Renew" param-type="string">
+
+  **Renew** (`renew`) — Select Yes/No to mark whether the account is set to renew. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Subscribed" param-type="string">
+
+  **Subscribed** (`subscribed`) — Select Yes/No to track subscription status for the account.
+
+  </ParamField>
+
+  <ParamField body="Auto Archive Inactive Families" param-type="boolean">
+
+  **Auto Archive Inactive Families** (`auto_archive`) — Toggles automatic archiving of inactive families after 3 years of inactivity based on Campium rules.
+
+  </ParamField>
+
+  ### Superuser-only configuration fields
+
+  <ParamField body="Custom Date Format" param-type="string">
+
+  **Custom Date Format** (`custom_date_format`) — Superuser-only. Sets the display format for dates across the account.
+
+  </ParamField>
+
+  <ParamField body="Custom Time Format" param-type="string">
+
+  **Custom Time Format** (`custom_time_format`) — Superuser-only. Sets the display format for times (for example, 12-hour vs 24-hour).
+
+  </ParamField>
+
+  <ParamField body="Time Zone" param-type="string">
+
+  **Time Zone** (`time_zone`) — Superuser-only. Configures the default time zone used for timestamps and schedules.
+
+  </ParamField>
+
+  <ParamField body="Working Year" param-type="string">
+
+  **Working Year** (`working_year`) — Superuser-only. Text field representing the primary operational year for internal logic. No in-app help text.
+
+  </ParamField>
+
+  <ParamField body="Training URL" param-type="string">
+
+  **Training URL** (`training_url`) — Superuser-only. URL or information related to training resources associated with the account.
+
+  </ParamField>
+
+  <ParamField body="Enable Mobile App" param-type="boolean">
+
+  **Enable Mobile App** (`enable_mobile_app`) — Superuser-only. Globally enables or disables mobile app access for the account.
+
+  </ParamField>
+
+  <ParamField body="Stripe Customer ID" param-type="string">
+
+  **Stripe Customer ID** (`stripe_customer_id`) — Superuser-only. Links the account to a Stripe customer record for billing or internal use.
+
+  </ParamField>
+
+  <ParamField body="Stripe Data" param-type="string">
+
+  **Stripe Data** (`stripe_data`) — Superuser-only. Select or flag related to Stripe billing data. No in-app help text.
+
+  </ParamField>
+
+  </Tab>
+
+</Tabs>
+
+## Tips for working safely with Site Settings
+
+<Callout kind="tip">
+
+- **Change one thing at a time**: Because settings auto-save, adjust a single field, confirm the behavior, then move on.
+- **Document sensitive changes**: For payment processors and Admin tab options, note what changed, when, and why for your internal records.
+- **Use test mode where possible**: For processors that support a TEST environment, validate configuration there before switching to LIVE.
+
+</Callout>
+
+## Related pages
+
+Use these guides to configure the features that depend on your Site Settings choices.
 
 <Columns cols={3}>
 
   <Card title="Business Info & Logo" href="/business-info-and-logo" icon="folder" cta="Set your branding">
 
-  Update your camp name, contact details, and logo so families see the right information everywhere.
+  Configure your camp name, contact details, and logo that families see across portals and emails.
 
   </Card>
 
   <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar-sync" cta="Organize programs">
 
-  Plan your camp calendar, create sessions, and control what shows during registration.
+  Plan your camp calendar and sessions that work alongside your Site Settings.
 
   </Card>
 
   <Card title="Authentication" href="/authentication" icon="shield" cta="Secure sign-in">
 
-  Adjust sign‑in rules and security options to protect family and staff accounts.
+  Adjust sign-in rules and security options impacted by your global settings.
+
+  </Card>
+
+</Columns>
+
+<Columns cols={3}>
+
+  <Card title="Mass Emails" href="/mass-emails" icon="mail" cta="Configure campaigns">
+
+  Set up large-scale email communications that rely on your contact and payment settings.
+
+  </Card>
+
+  <Card title="SMS" href="/sms" icon="message-circle" cta="Enable texting">
+
+  Manage text messaging behavior that complements one-way messaging and alerts.
+
+  </Card>
+
+  <Card title="Forms" href="/forms" icon="file-text" cta="Collect information">
+
+  Build registration and information forms that align with your modules and reporting setup.
 
   </Card>
 
