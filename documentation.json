@@ -27,6 +27,11 @@
                 "title": "Quickstart",
                 "path": "quickstart",
                 "icon": "zap"
+              },
+              {
+                "title": "Seasons & Sessions",
+                "path": "seasons-and-sessions",
+                "icon": "calendar-sync"
               }
             ]
           },

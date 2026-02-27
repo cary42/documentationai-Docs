@@ -1,0 +1,446 @@
+---
+title: Seasons and sessions
+description: >-
+  Understand how Seasons group Sessions and Subproducts in Campium, and learn
+  how to create, copy, and manage capacities and waitlists from the admin UI.
+---
+## Overview
+
+Seasons group your sessions (called Products in the admin UI) so families can register for the right offerings in the right time frame. Sessions can also have subproducts/options for variants like time slots or age groups, each with their own price, deposit, capacity, and waitlists.
+
+This guide walks through how Seasons, Sessions/Products, and Subproducts/options work together, and how to configure fields like capacity, dates, and waitlists using the existing admin screens.
+
+<Callout kind="info" collapsed="false">
+  Navigation and exact menu labels can vary by deployment. This guide focuses on the modal windows and URLs that appear when you manage Seasons, Sessions/Products, and Subproducts/options in the admin area.
+</Callout>
+
+## Key definitions
+
+### Season
+
+A **Season** represents a registration period, such as "Summer 2025" or "School Year 2025–26". Each Season contains:
+
+- Sessions/Products families can register for
+
+- Associated forms
+
+- Payment plans
+
+When you clone a Season, Campium copies these items from an existing Season into a new one along with Forms.
+
+### Session (Product)
+
+A **Session** is the main thing a family registers for (for example, "Week 1 Day Camp"). In the admin UI, these may appear with your own term (for example, "Session", "Program", or "Class") based on how you configure labels under **Admin → Site Settings → Basic** tab.
+
+Sessions:
+
+- Live inside a Season
+
+- Have their own name, public name, price, deposit, capacity, and dates
+
+- Can have one or more Subproducts/options beneath them
+
+- Link to registration and waitlist reports
+
+### Subproduct / Option
+
+A **Subproduct/Option** is a variant under a Session, for example:
+
+- Morning vs afternoon track under a week-long camp
+
+- Age group options under one program
+
+- Add-ons that appear and register separately
+
+Subproducts/options:
+
+- Inherit the parent Session context
+
+- Have their own name, description, price, deposit, capacity, and status
+
+- Can have their own staff assignment
+
+- Show separate registration and waitlist links in the options list
+
+### Capacity
+
+**Capacity** controls how many registrations you accept:
+
+- For Sessions (Products): the Capacity field in the create/edit modal controls the session-level capacity.
+
+- For Subproducts/options: the Capacity field in the options edit modal controls capacity per option.
+
+Tooltips and helper text indicate that:
+
+- For Sessions: `"Capacity:"` has a tooltip `Set to zero or leave blank for unlimited`.
+
+- For Subproducts/options: `"Capacity"` uses helper text `blank or 0 for unlimited`.
+
+### Waitlist
+
+**Waitlist** links appear in the admin UI so you can see who is waiting when capacity is reached or when your configuration enables waitlists.
+
+Link patterns from the templates:
+
+- Session waitlist link from the session list: a waitlist report URL that is shown when the Session/Product is configured to show waitlists.
+
+- Subproduct/option waitlist link from the options list: `/report/wait-list.php?pgcryid=<pgcryid>&product_id=<product_id>`.
+
+<Callout kind="info" collapsed="false">
+  The templates confirm where waitlist links appear and which URLs they use. They do not expose deeper business logic such as how families are added to the waitlist or when they move off the waitlist. Work with your Campium support contact if you need details on waitlist behavior beyond these confirmed links.
+</Callout>
+
+## Work with Seasons
+
+### Clone an existing Season
+
+Cloning a Season lets you reuse all of the Sessions (Products), forms, and payment plans from one Season in another, which is useful when you run the same structure each year.
+
+<Steps>
+  <Step title="Open the Season clone modal" icon="folder" title-type="p">
+    - Go to the Seasons area in the admin.
+
+    - Select the Season you want to copy.
+
+    - Use the Season clone action (often labeled `Clone` or similar) to open the Season clone modal.
+  </Step>
+
+  <Step title="Review the clone note" icon="info" title-type="p">
+    The Season clone modal includes an alert describing what the clone does. The text from the template is:
+
+    > **Note:** This feature will create a copy of all sessions/products, forms, and payment plans from the selected season to a new season. This operation may take a few moments to complete. Please do not close this window until the process is finished.
+
+    The exact label used for sessions/products is configurable under **Admin → Site Settings → Basic**.
+  </Step>
+
+  <Step title="Fill in clone fields" icon="edit" title-type="p">
+    The Season clone modal includes:
+
+    <ParamField body="Copy From Season" param-type="string" required="true" deprecated="false">
+      Read-only label showing the name of the Season you are copying from, displayed as `Copy From Season` with the selected Season name.
+    </ParamField>
+
+    <ParamField body="New Season Name" param-type="string" required="true" deprecated="false">
+      The name for the new Season that will receive the copied Sessions/Products, forms, and payment plans. For example, `Summer 2026`.
+    </ParamField>
+  </Step>
+
+  <Step title="Start the clone" icon="play-circle" title-type="p">
+    - Click **Save** to start cloning the Season.
+
+    - Leave the window open until the process finishes, as the note indicates.
+
+    - Click **Cancel** if you decide not to clone.
+
+    When the clone completes, the new Season appears in your Seasons list with copied Sessions/Products, forms, and payment plans that you can then adjust.
+  </Step>
+</Steps>
+
+## Work with Sessions (Products)
+
+Sessions are created and managed within a Season. The admin UI uses your configured labels (for example, "Session" or "Program") based on **Admin → Site Settings → Basic**, but the behavior described here is the same regardless of the label text.
+
+### Create a new Session/Product
+
+Use the New Session/Product modal to define a session that families can register for.
+
+<Steps>
+  <Step title="Open the new session modal" icon="plus" title-type="p">
+    - Navigate to the Products/Sessions list within the Season.
+
+    - Click the button that opens the New Session/Product modal (the exact label varies based on **Admin → Site Settings → Basic**).
+  </Step>
+
+  <Step title="Fill required naming and pricing fields" icon="edit" title-type="p">
+    The create modal uses the following fields, based on the `new-product.html` template. Some labels may vary depending on how you configure your terminology under **Admin → Site Settings → Basic**.
+
+    <ParamField body="Session/Product Name" param-type="string" required="true" deprecated="false">
+      Labeled as the name field for the Session/Product (often marked with an asterisk). Tooltip: `This will appear as the name in CampiumDB.` Use this for internal/admin reporting and CampiumDB.
+    </ParamField>
+
+    <ParamField body="Public Name" param-type="string" required="false" deprecated="false">
+      Labeled `Public Name:`. Tooltip: `This will appear as the name on the parent site as well as on any invoices.` Use this when you want a different display name for families.
+    </ParamField>
+
+    <ParamField body="Description" param-type="string" required="false" deprecated="false">
+      Text area with placeholder `Enter description here (e.g., June 16 - 20)`. This description appears on the parent site to help families understand the session details.
+    </ParamField>
+
+    <ParamField body="Price" param-type="number" required="true" deprecated="false">
+      Labeled `Price: *` with placeholder `e.g. 100.50`. Enter the full price for the Session/Product.
+    </ParamField>
+
+    <ParamField body="Min. Deposit" param-type="number" required="true" deprecated="false">
+      Labeled `Min. Deposit: *`. Tooltip: `Fixed amount like $100`. Enter the minimum amount a family must pay at registration if deposit-based payment plans apply.
+    </ParamField>
+  </Step>
+
+  <Step title="Set capacity and purchase rules" icon="settings" title-type="p">
+    Control how many registrations you accept and whether a child can register multiple times.
+
+    <ParamField body="Capacity" param-type="integer" required="false" deprecated="false">
+      Labeled `Capacity:` with tooltip `Set to zero or leave blank for unlimited`. Use a positive integer to cap registrations, or `0`/blank to allow unlimited registrations at the session level.
+    </ParamField>
+
+    <ParamField body="Allow Discounts To Be Applied?" param-type="boolean" required="false" deprecated="false">
+      Yes/No field labeled `Allow Discounts To Be Applied?`. Choose Yes to allow discount rules to impact this Session/Product; choose No to prevent discounts from applying.
+    </ParamField>
+
+    <ParamField body="Can this be purchased twice for the same child?" param-type="boolean" required="false" deprecated="false">
+      Yes/No field labeled `Can this be purchased twice for the same child?` with default `No`. Set to Yes if a child may register for this session more than once (for example, multiple weeks).
+    </ParamField>
+  </Step>
+
+  <Step title="Configure attendance and stats fields" icon="bar-chart" title-type="p">
+    These fields affect attendance tracking and internal statistics without changing how the Session/Product appears on the parent site, unless otherwise noted.
+
+    <ParamField body="Staff" param-type="array" required="false" deprecated="false">
+      Multi-select field labeled `Staff`. Use this to associate one or more staff members with the Session/Product.
+    </ParamField>
+
+    <ParamField body="Days of Week For Attendance Only" param-type="array" required="false" deprecated="false">
+      Set of checkboxes or selections labeled `Days of Week For Attendance Only` covering Sunday through Saturday. Use this to indicate which days attendance occurs for this Session.
+    </ParamField>
+
+    <ParamField body="Number of Weeks Used for admin stats only" param-type="integer" required="false" deprecated="false">
+      Labeled `Number of Weeks Used for admin stats only`. Tooltip explains it is used for multi-week sessions. Enter how many weeks this session spans for internal reporting.
+    </ParamField>
+
+    <ParamField body="Start Date For Attendance Only" param-type="date" required="false" deprecated="false">
+      Labeled `Start Date For Attendance Only`. This date is used for attendance tracking and internal reference.
+    </ParamField>
+
+    <ParamField body="End Date For Attendance Only" param-type="date" required="false" deprecated="false">
+      Labeled `End Date For Attendance Only`. Use this with the start date to define the attendance range.
+    </ParamField>
+
+    <ParamField body="Hide From Attendance" param-type="boolean" required="false" deprecated="false">
+      Checkbox labeled `Hide From Attendance`. Check this when you do not want this Session/Product to appear in attendance screens.
+    </ParamField>
+
+    <ParamField body="Expiration Date" param-type="date" required="false" deprecated="false">
+      Labeled `Expiration Date Can't be purchased after this date`. This date controls the last day families can purchase/register for the Session/Product.
+    </ParamField>
+  </Step>
+
+  <Step title="Save the new Session/Product" icon="check-circle" title-type="p">
+    - Review all fields for accuracy.
+
+    - Click **Save** to create the Session/Product.
+
+    - Click **Cancel** to close without saving.
+
+    After saving, the new Session/Product appears in the list for that Season, and registration and reporting links will be available according to your configuration.
+  </Step>
+</Steps>
+
+### Copy an existing Session/Product
+
+Copying a Session/Product lets you reuse most settings from an existing session while changing the name or Season.
+
+<Steps>
+  <Step title="Open the copy session modal" icon="copy" title-type="p">
+    - In the Sessions/Products list, locate the item you want to copy.
+
+    - Use the copy action to open the copy modal (often labeled `Copy` or similar).
+  </Step>
+
+  <Step title="Enter copy details" icon="edit" title-type="p">
+    The copy modal includes:
+
+    <ParamField body="New Session/Product Name" param-type="string" required="true" deprecated="false">
+      Labeled as the new name for the copied Session/Product. Enter the new name for the copied Session/Product. The exact label can vary based on **Admin → Site Settings → Basic**.
+    </ParamField>
+
+    <ParamField body="Season" param-type="string" required="true" deprecated="false">
+      Dropdown labeled `Season`. Choose which Season should contain the copied Session/Product.
+    </ParamField>
+  </Step>
+
+  <Step title="Create the copy" icon="play-circle" title-type="p">
+    - Click **Copy** to create the new Session/Product with the provided name in the selected Season.
+
+    - Click **Close** to exit without copying.
+
+    The new Session/Product will then appear in the chosen Season's Sessions/Products list.
+  </Step>
+</Steps>
+
+## Manage Subproducts/options
+
+Subproducts/options let you define multiple choices under a single Session/Product. You manage them from the Product options list and the edit option modal.
+
+### View and edit Subproducts/options list
+
+The options list displays Subproducts/options with summary data and inline editing for key financial and capacity fields.
+
+The `product-options.html` template includes:
+
+- Parent summary:
+
+  - `Parent Price: <product_price>`
+
+  - `Parent Deposit: <product_min_deposit>`
+
+  - `Parent Capacity: <product_capacity>`
+
+- Table headers:
+
+  - `Option Name (displayed in reports)`
+
+  - `Description (displayed on parent site)`
+
+  - `Profile Fields`
+
+  - `Response`
+
+  - `Status`
+
+  - `Price` (inline editable)
+
+  - `Min. Dep.` (inline editable)
+
+  - `Capacity` (inline editable)
+
+  - `Wait`
+
+  - `# Reg.`
+
+- Actions:
+
+  - Button: `New Subproduct`
+
+  - Bulk link: `Delete`
+
+<Callout kind="info" collapsed="false">
+  The `Price`, `Min. Dep.`, and `Capacity` columns are inline editable in the options list. You can click directly into these cells to adjust values without opening the full edit modal. Use the edit option modal for name, description, status, and staff changes.
+</Callout>
+
+### Add a new Subproduct/option
+
+Use the `New Subproduct` button to add an option under a Session/Product.
+
+<Steps>
+  <Step title="Open the new Subproduct form" icon="plus" title-type="p">
+    - From the Session/Product row, click into its options/subproducts area.
+
+    - Click **New Subproduct** to open the option create modal (fields mirror the edit modal described below).
+  </Step>
+
+  <Step title="Configure core Subproduct fields" icon="edit" title-type="p">
+    The `edit-product-option.html` template defines these fields, which also apply when creating a new Subproduct:
+
+    <ParamField body="Option Name" param-type="string" required="true" deprecated="false">
+      Labeled `Option Name`. This appears in reports under the Session/Product.
+    </ParamField>
+
+    <ParamField body="Description" param-type="string" required="false" deprecated="false">
+      Optional field labeled `Description`. This is displayed on the parent site so families can see what distinguishes this option.
+    </ParamField>
+
+    <ParamField body="Price" param-type="number" required="false" deprecated="false">
+      Labeled `Price`. Defines the price for this specific Subproduct/option. You can also adjust this inline from the options list under the `Price` column.
+    </ParamField>
+
+    <ParamField body="Minimum Deposit" param-type="number" required="false" deprecated="false">
+      Labeled `Minimum Deposit`. Defines the minimum deposit for this option and is also inline editable under `Min. Dep.` in the options list.
+    </ParamField>
+
+    <ParamField body="Capacity" param-type="integer" required="false" deprecated="false">
+      Labeled `Capacity` with helper text `blank or 0 for unlimited`. Controls how many registrations you accept for this option. You can also adjust this inline from the `Capacity` column.
+    </ParamField>
+  </Step>
+
+  <Step title="Set staff and status" icon="users" title-type="p">
+    Complete the remaining Subproduct fields:
+
+    <ParamField body="Staff" param-type="array" required="false" deprecated="false">
+      Optional multi-select labeled `Staff`. Use this to assign staff members specifically to this option.
+    </ParamField>
+
+    <ParamField body="Status" param-type="string" required="true" deprecated="false">
+      Labeled `Status`. Use the available status values (for example, Active, Inactive) to control whether the option can be registered for.
+    </ParamField>
+  </Step>
+
+  <Step title="Save the Subproduct/option" icon="check-circle" title-type="p">
+    - Click **Save** to create or update the Subproduct/option.
+
+    - Click **Cancel** to abandon changes.
+
+    The option appears in the options list with the configured name, description, price, deposit, capacity, and status, and the `Wait` and `# Reg.` columns update according to your registrations and waitlists.
+  </Step>
+</Steps>
+
+### Edit an existing Subproduct/option
+
+You can adjust Subproducts/options in two ways:
+
+- **Inline edits** in the options list:
+
+  - Click directly into the `Price`, `Min. Dep.`, or `Capacity` cells to modify values.
+
+  - Save or confirm inline changes according to your UI controls.
+
+- **Full edit modal**:
+
+  - Click the edit action for a Subproduct/option.
+
+  - Adjust any field described in the previous section (Option Name, Description, Price, Minimum Deposit, Capacity, Staff, Status).
+
+  - Click **Save** to apply changes or **Cancel** to close without saving.
+
+## View registrations and waitlists
+
+Use the links in the Sessions/Products list and the Subproducts/options list to open detailed reports for registrations and waitlists.
+
+### Session-level registrations and waitlist
+
+From the main Sessions/Products list:
+
+- **Registered** link:
+
+  - Uses the pattern `/report/product-user.php?id=<id>`.
+
+  - Opens a report showing users registered for that Session/Product.
+
+- **Wait Listed** link:
+
+  - Uses a waitlist report URL generated from your configuration.
+
+  - Is displayed when `show_wait` is true for the Session/Product.
+
+  - Opens the waitlist report associated with that Session/Product.
+
+<Callout kind="info" collapsed="false">
+  The exact content, filters, and URL of these reports depend on your Campium configuration. The patterns shown here confirm where to click from the Sessions/Products list; the Wait Listed link path can vary.
+</Callout>
+
+### Subproduct/option registrations and waitlist
+
+From the Subproducts/options list (`product-options.html`):
+
+- **Wait** column:
+
+  - Each option row links to `/report/wait-list.php?pgcryid=<pgcryid>&product_id=<product_id>`.
+
+  - Opens the waitlist list for that Session/Product and context represented by `pgcryid`.
+
+- **# Reg.** column:
+
+  - Each option row links to `/report/product-user.php?id=<product_id>&key=<key>&pp_id=<id>`.
+
+  - Opens a registration report for that specific Subproduct/option under the Session/Product.
+
+These links let you quickly jump from configuring options to monitoring who is registered or waiting at both the Session and Subproduct levels.
+
+## Summary
+
+- **Seasons** group Sessions/Products, forms, and payment plans and can be cloned with the Season clone modal.
+
+- **Sessions/Products** are created and copied using modals that define names, prices, deposits, capacities, and attendance-related fields.
+
+- **Subproducts/options** extend Sessions with variants, managed through the options list and edit modal with inline editing for price, deposit, and capacity.
+
+- **Registrations and waitlists** are accessed through consistent report links from both the Sessions/Products list and the Subproducts/options list.
+
