@@ -28,13 +28,9 @@ You control which sales appear in the Revenue Summary with two main filters: sea
 
 Use these options at the top of the report to define the scope of your summary.
 
-<ParamField query="Season" param-type="" required="false" deprecated="false">
-  Season or program group whose revenue you want to review. The report only includes sales tied to this selection.
-</ParamField>
+- **Season** — Season or program group whose revenue you want to review. The report only includes sales tied to this selection.
 
-<ParamField query="Date Range" param-type="" required="false" deprecated="false">
-  Optional start and end dates that limit which sales are included, based on the **date the sale was recorded in Campium**.
-</ParamField>
+- **Date Range** — Optional start and end dates that limit which sales are included, based on the **date the sale was recorded in Campium**.
 
 <Callout kind="tip" collapsed="false">
   If you want to compare seasons, run the report once for each season or program group with the same date range.
@@ -100,21 +96,13 @@ The Products table shows how revenue breaks down by the items you sell (for exam
 
 ### Columns
 
-<ParamField body="Product" param-type="text" required="true" deprecated="false">
-  Name or description of the product that was sold, such as "Week 1 Day Camp" or "Lunch Add-on".
-</ParamField>
+- **Product** — Name or description of the product that was sold, such as "Week 1 Day Camp" or "Lunch Add-on".
 
-<ParamField body="Quantity" param-type="number" required="true" deprecated="false">
-  Total number of units sold for the product during the selected filters (for example, camper enrollments or items).
-</ParamField>
+- **Quantity** — Total number of units sold for the product during the selected filters (for example, camper enrollments or items).
 
-<ParamField body="Average Cost" param-type="currency" required="true" deprecated="false">
-  Average price paid per unit of the product, calculated from the sales included in the report.
-</ParamField>
+- **Average Cost** — Average price paid per unit of the product, calculated from the sales included in the report.
 
-<ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
-  Total revenue from this product for the selected season/program group and date range. This reflects the quantity sold multiplied by the average cost.
-</ParamField>
+- **Total Revenue** — Total revenue from this product for the selected season/program group and date range. This reflects the quantity sold multiplied by the average cost.
 
 Use this table to identify which products generate the most revenue and to spot pricing or enrollment trends across your offerings.
 
@@ -124,13 +112,9 @@ The Payments table summarizes **money received** by payment type. Each row repre
 
 ### Columns
 
-<ParamField body="Payment Type" param-type="text" required="true" deprecated="false">
-  Category of payment, such as **Credit Card**, **Cash**, **Check**, **ACH**, **Refund**, **Void**, or **Adjustment**.
-</ParamField>
+- **Payment Type** — Category of payment, such as **Credit Card**, **Cash**, **Check**, **ACH**, **Refund**, **Void**, or **Adjustment**.
 
-<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
-  Total amount for that payment type within the selected filters. Positive values usually indicate money received; negative values indicate money returned or reversed.
-</ParamField>
+- **Amount** — Total amount for that payment type within the selected filters. Positive values usually indicate money received; negative values indicate money returned or reversed.
 
 ### Understanding common payment types
 
@@ -162,17 +146,11 @@ The Discounts table shows how discounts were used across your sales, so you can 
 
 ### Columns
 
-<ParamField body="Discount" param-type="text" required="true" deprecated="false">
-  Name or description of the discount applied, such as "Sibling Discount" or "Early Registration".
-</ParamField>
+- **Discount** — Name or description of the discount applied, such as "Sibling Discount" or "Early Registration".
 
-<ParamField body="Quantity" param-type="number" required="true" deprecated="false">
-  Number of times this discount was applied in the selected period.
-</ParamField>
+- **Quantity** — Number of times this discount was applied in the selected period.
 
-<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
-  Total value of the discount across all uses. Higher amounts indicate a greater reduction to gross revenue.
-</ParamField>
+- **Amount** — Total value of the discount across all uses. Higher amounts indicate a greater reduction to gross revenue.
 
 Compare discounts here with the **Discounts** figure in the summary metrics to understand how much they reduced your overall revenue.
 

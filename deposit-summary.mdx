@@ -1,10 +1,8 @@
 ---
 title: Deposit Summary report
-description: >-
-  Use the Deposit Summary in Campium to review new and batched deposits,
-  understand fees and net totals, filter by date, create deposits, and export or
-  print.
+description: Use the Deposit Summary in Campium to review new and batched deposits, understand fees and net totals, filter by date, create deposits, and export or print.
 ---
+
 ## Overview
 
 The Deposit Summary report shows two related views of your payments in Campium:
@@ -41,13 +39,9 @@ The Deposit Summary includes a simple **Start date** and **End date** filter abo
 
 - The **New deposits table always shows the current list of payments that are not yet in a deposit**, no matter which dates you choose.
 
-<ParamField query="Start date" param-type="date" required="false" deprecated="false">
-  First date in the range used to show batches in the Deposit summary table. By default, this is the first day of the current month.
-</ParamField>
+- **Start date** — First date in the range used to show batches in the Deposit summary table. By default, this is the first day of the current month.
 
-<ParamField query="End date" param-type="date" required="false" deprecated="false">
-  Last date in the range used to show batches in the Deposit summary table. By default, this is the last day of the current month.
-</ParamField>
+- **End date** — Last date in the range used to show batches in the Deposit summary table. By default, this is the last day of the current month.
 
 <Callout kind="alert" collapsed="false">
   The date filter looks at **when the payment was entered in Campium**. It does not use bank settlement dates or processor cut‑offs. If a payment was entered outside your chosen range, it will not appear in the Deposit summary for that period, even if it settled during those dates.
@@ -61,65 +55,37 @@ The Deposit Summary includes a simple **Start date** and **End date** filter abo
 
 The **New deposits** table shows individual payments that can be added to a deposit.
 
-<ParamField body="Select" param-type="boolean" required="false" deprecated="false">
-  Checkbox that lets you choose which payments to include in a new deposit. The header includes a **Toggle All** checkbox that selects or clears every payment currently shown in the table.
-</ParamField>
+- **Select** — Checkbox that lets you choose which payments to include in a new deposit. The header includes a **Toggle All** checkbox that selects or clears every payment currently shown in the table.
 
-<ParamField body="Date Entered" param-type="datetime" required="false" deprecated="false">
-  The date and time the payment was recorded in Campium. This reflects when staff or the system entered the payment, not when money moved between banks.
-</ParamField>
+- **Date Entered** — The date and time the payment was recorded in Campium. This reflects when staff or the system entered the payment, not when money moved between banks.
 
-<ParamField body="Type" param-type="string" required="false" deprecated="false">
-  The payment method, such as **Check**, **Cash**, or a manual payment type that is included in deposits.
-</ParamField>
+- **Type** — The payment method, such as **Check**, **Cash**, or a manual payment type that is included in deposits.
 
-<ParamField body="Name" param-type="string" required="false" deprecated="false">
-  The name attached to the payment, such as the payer, family, or account holder.
-</ParamField>
+- **Name** — The name attached to the payment, such as the payer, family, or account holder.
 
-<ParamField body="Description" param-type="string" required="false" deprecated="false">
-  Any extra details about the payment, such as notes or status text, that help you recognize what the payment relates to.
-</ParamField>
+- **Description** — Any extra details about the payment, such as notes or status text, that help you recognize what the payment relates to.
 
-<ParamField body="Total" param-type="number" required="false" deprecated="false">
-  The amount of the individual payment, shown as a currency value.
-</ParamField>
+- **Total** — The amount of the individual payment, shown as a currency value.
 
-<ParamField body="Total (footer)" param-type="number" required="false" deprecated="false">
-  The grand total of all payments currently listed in the New deposits table. Use this to see the total amount you are about to group into a new deposit.
-</ParamField>
+- **Total (footer)** — The grand total of all payments currently listed in the New deposits table. Use this to see the total amount you are about to group into a new deposit.
 
 ## Columns in the Deposit summary table
 
 The **Deposit summary** table shows one row per deposit batch, along with totals and estimated fees.
 
-<ParamField body="Date" param-type="date" required="false" deprecated="false">
-  The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
-</ParamField>
+- **Date** — The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
 
-<ParamField body="Batch Number" param-type="string" required="false" deprecated="false">
-  The deposit batch number. Click this link to open a detailed view of the payments included in that deposit.
-</ParamField>
+- **Batch Number** — The deposit batch number. Click this link to open a detailed view of the payments included in that deposit.
 
-<ParamField body="Number of Items" param-type="integer" required="false" deprecated="false">
-  How many individual payments are included in the deposit.
-</ParamField>
+- **Number of Items** — How many individual payments are included in the deposit.
 
-<ParamField body="Total" param-type="number" required="false" deprecated="false">
-  The full amount of all payments in the deposit, before fees.
-</ParamField>
+- **Total** — The full amount of all payments in the deposit, before fees.
 
-<ParamField body="Fees" param-type="number" required="false" deprecated="false">
-  The estimated processing fees for the deposit. Hovering or viewing details may explain how these fees were estimated for your agency.
-</ParamField>
+- **Fees** — The estimated processing fees for the deposit. Hovering or viewing details may explain how these fees were estimated for your agency.
 
-<ParamField body="Net" param-type="number" required="false" deprecated="false">
-  The deposit amount after subtracting estimated fees. This is the amount you expect to receive after fees, though the exact processor or bank amounts may differ slightly.
-</ParamField>
+- **Net** — The deposit amount after subtracting estimated fees. This is the amount you expect to receive after fees, though the exact processor or bank amounts may differ slightly.
 
-<ParamField body="Grand totals (footer)" param-type="object" required="false" deprecated="false">
-  A summary row below the Deposit summary table that shows grand totals for **Total**, **Fees**, and **Net** across all deposits in the current date range.
-</ParamField>
+- **Grand totals (footer)** — A summary row below the Deposit summary table that shows grand totals for **Total**, **Fees**, and **Net** across all deposits in the current date range.
 
 <Callout kind="info" collapsed="false">
   Use the **grand totals** in the footer to reconcile an entire period against your accounting system, bank deposits, or processor statements.
@@ -250,4 +216,3 @@ Available actions typically include:
 <Callout kind="info" collapsed="false">
   Use the table’s page‑size controls to adjust how many rows appear before you export or print. Increasing the page size lets you capture more data in a single file or printed report.
 </Callout>
-

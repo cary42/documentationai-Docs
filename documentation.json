@@ -1,1 +1,178 @@
-{"name":"Campium","colors":{"light":{"brand":"#3898EC"},"dark":{"brand":"#81BCEF"}},"navigation":{"tabs":[{"tab":"Documentation","icon":"book","groups":[{"group":"Getting Started","icon":"rocket","pages":[{"title":"Introduction","path":"introduction","icon":"home"},{"title":"Quickstart","path":"quickstart","icon":"zap"},{"title":"Settings","path":"settings","icon":"cog"},{"title":"Business Info & Logo","path":"business-info-and-logo","icon":"building-2"},{"title":"Seasons & Sessions","path":"seasons-and-sessions","icon":"calendar-sync"}]},{"group":"Core Concepts","icon":"layers","pages":[{"title":"Authentication","path":"authentication","icon":"shield"}]},{"group":"Reports","pages":[{"group":"Financial","pages":[{"title":"Deposit Summary","path":"deposit-summary"},{"title":"Revenue Summary","path":"revenue-summary"}]},{"group":"System","pages":[{"title":"Scheduled Payments Report","path":"system-report-scheduled-payments"},{"title":"Family Scheduled Payments report","path":"system-report-family-scheduled-payments"},{"title":"Scheduled Payments - Missing report","path":"system-report-scheduled-payments-missing"},{"title":"Scheduled Payment Email Log","path":"system-report-scheduled-payment-email-log"},{"title":"Expired CC Report","path":"system-report-expired-cc-report"},{"title":"Family Payment Plans Report","path":"system-report-payment-plans"},{"title":"Payment Method Updates – Families with Failed Payments","path":"system-report-payment-method-updates-families-with-failed-payments"},{"title":"Families Without Primary Payment Method report","path":"system-report-families-without-primary-payment-method"}]},{"group":"Custom","pages":[{"title":"Custom Reports","path":"custom-reports"}]}]},{"group":"Communications","pages":[{"title":"Mass Emails","path":"mass-emails"},{"title":"SMS","path":"sms"},{"title":"One-way Messaging","path":"one-way-messaging"},{"title":"Portal News","path":"portal-news"},{"title":"Push Notifications","path":"push-notifications"},{"title":"App Chat","path":"app-chat"}]},{"group":"Forms","pages":[{"title":"Forms","path":"forms"}]}]},{"tab":"Changelog","icon":"clock","pages":[{"title":"Release History","path":"changelog","icon":"history"}]}]},"template":"classic","logo-light":"https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1771944485530-urq2hwzgrun-453x453.jpg?q=85&fm=auto&auto=compress%2Cformat"}
+{
+  "name": "Campium",
+  "colors": {
+    "light": {
+      "brand": "#3898EC"
+    },
+    "dark": {
+      "brand": "#81BCEF"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "home"
+              },
+              {
+                "title": "Quickstart",
+                "path": "quickstart",
+                "icon": "zap"
+              },
+              {
+                "title": "Site Settings",
+                "path": "settings",
+                "icon": "cog"
+              },
+              {
+                "title": "Business Info & Logo",
+                "path": "business-info-and-logo",
+                "icon": "building-2"
+              },
+              {
+                "title": "Seasons & Sessions",
+                "path": "seasons-and-sessions",
+                "icon": "calendar-sync"
+              }
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "icon": "layers",
+            "pages": [
+              {
+                "title": "Authentication",
+                "path": "authentication",
+                "icon": "shield"
+              }
+            ]
+          },
+          {
+            "group": "Reports",
+            "pages": [
+              {
+                "group": "Financial",
+                "pages": [
+                  {
+                    "title": "Deposit Summary",
+                    "path": "deposit-summary"
+                  },
+                  {
+                    "title": "Revenue Summary",
+                    "path": "revenue-summary"
+                  }
+                ]
+              },
+              {
+                "group": "System",
+                "pages": [
+                  {
+                    "title": "Scheduled Payments Report",
+                    "path": "system-report-scheduled-payments"
+                  },
+                  {
+                    "title": "Family Scheduled Payments report",
+                    "path": "system-report-family-scheduled-payments"
+                  },
+                  {
+                    "title": "Scheduled Payments - Missing report",
+                    "path": "system-report-scheduled-payments-missing"
+                  },
+                  {
+                    "title": "Scheduled Payment Email Log",
+                    "path": "system-report-scheduled-payment-email-log"
+                  },
+                  {
+                    "title": "Expired CC Report",
+                    "path": "system-report-expired-cc-report"
+                  },
+                  {
+                    "title": "Family Payment Plans Report",
+                    "path": "system-report-payment-plans"
+                  },
+                  {
+                    "title": "Payment Method Updates – Families with Failed Payments",
+                    "path": "system-report-payment-method-updates-families-with-failed-payments"
+                  },
+                  {
+                    "title": "Families Without Primary Payment Method report",
+                    "path": "system-report-families-without-primary-payment-method"
+                  }
+                ]
+              },
+              {
+                "group": "Custom",
+                "pages": [
+                  {
+                    "title": "Custom Reports",
+                    "path": "custom-reports"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Communications",
+            "pages": [
+              {
+                "title": "Mass Emails",
+                "path": "mass-emails"
+              },
+              {
+                "title": "SMS",
+                "path": "sms"
+              },
+              {
+                "title": "One-way Messaging",
+                "path": "one-way-messaging"
+              },
+              {
+                "title": "Portal News",
+                "path": "portal-news"
+              },
+              {
+                "title": "Push Notifications",
+                "path": "push-notifications"
+              },
+              {
+                "title": "App Chat",
+                "path": "app-chat"
+              }
+            ]
+          },
+          {
+            "group": "Forms",
+            "pages": [
+              {
+                "title": "Forms",
+                "path": "forms"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  },
+  "template": "classic",
+  "logo-light": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1771944485530-urq2hwzgrun-453x453.jpg?q=85&fm=auto&auto=compress%2Cformat"
+}

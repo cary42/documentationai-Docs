@@ -1,15 +1,17 @@
 ---
 title: Site Settings
-description: Guided reference for the Admin → Site Settings screen so camp admins can safely adjust modules, payments, mobile app options, and other account-wide behavior.
+description: >-
+  Guided reference for the Admin → Site Settings screen so camp admins can
+  safely adjust modules, payments, mobile app options, and other account-wide
+  behavior.
 ---
-
 ## What Site Settings control
 
 Site Settings control how Campium behaves for your families, staff, and finance team across modules, payments, the mobile app, and admin behaviors. Campium reads these choices whenever it renders portals, processes payments, or loads the mobile app.
 
 Settings on this screen save automatically as you change them, so updates apply quickly without a single global Save button.
 
-<Callout kind="info">
+<Callout kind="info" collapsed="false">
   Site Settings are shared across your entire account. Before changing anything, confirm how the change will affect families, staff, and existing workflows, especially payment and communication behavior.
 </Callout>
 
@@ -18,15 +20,15 @@ Settings on this screen save automatically as you change them, so updates apply 
 Use the Admin menu to reach the Site Settings screen.
 
 <Steps>
-  <Step title="Open the Admin menu" icon="settings">
+  <Step title="Open the Admin menu" icon="settings" title-type="p">
     From the left sidebar, click **Admin**.
   </Step>
 
-  <Step title="Go to Site Settings" icon="settings">
+  <Step title="Go to Site Settings" icon="settings" title-type="p">
     In the Admin menu, click **Site Settings**. This opens the main Site Settings screen for your account.
   </Step>
 
-  <Step title="Confirm you see the Site Settings tabs" icon="check-circle">
+  <Step title="Confirm you see the Site Settings tabs" icon="check-circle" title-type="p">
     At the top of the page, you should see a row of tabs such as **Modules**, **Basic**, **Payment Info**, **Mobile App**, and **Admin** (Admin appears only for superusers).
   </Step>
 </Steps>
@@ -59,33 +61,56 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
   <Tab title="Modules" icon="settings">
     The **Modules** tab controls which functional areas of Campium are available in your account and, in some cases, in the parent portal and mobile app. All settings here are on/off toggles.
 
-    <Callout kind="tip">
+    <Callout kind="tip" collapsed="false">
       Turn modules on when you are ready to use them end-to-end. Some modules (for example, payments and messaging) also depend on configuration elsewhere, such as payment processors or communication templates.
     </Callout>
 
     - **Attendance Module** — Turns the Attendance module on or off across the admin experience.
+
     - **Todo List Module** — Enables the Todo List module for staff and appears here and on the Mobile App tab.
+
     - **Medical Notes** — Shows or hides medical notes functionality for campers. No in-app help text.
+
     - **Medication Module** — Enables the medication-tracking module for recording and managing camper medications.
+
     - **Pickup Module** — Turns on the pickup/dismissal module for managing who picks up campers.
+
     - **Pickup Popup** — Controls whether a pickup-related popup appears in workflows that involve camper dismissal.
+
     - **Canteen Module (Admin)** — Enables canteen-related tools for admins.
+
     - **Canteen Module (Portal)** — Shows or hides canteen access in the parent portal.
+
     - **One-Way Messaging Module** — Enables one-way messaging so you can send alerts families cannot reply to.
+
     - **Pre-Launch Checklist** — Turns on the pre-launch checklist module to guide setup before opening registration.
+
     - **Allow Parents to Upload Profile Photos?** — Lets parents upload profile photos for campers in the portal.
+
     - **Wait List Module** — Enables wait list functionality for full sessions or programs.
+
     - **Allow users to remove themselves from wait lists** — Allows families to remove their own campers from wait lists through the portal.
+
     - **Display Due Date On Parent Site** — Controls whether payment due dates appear to families in the portal.
+
     - **Expense Report** — Enables the expense report module. No in-app help text.
+
     - **Photo Hosting** — Turns on the photo gallery module for sharing photos with families.
+
     - **Facial Recognition** — Enables facial recognition features within photo hosting, when available.
+
     - **Videos Tab On Parent Site** — Shows or hides a videos tab in the parent portal.
+
     - **Allow for access to Tax Receipts on Portal** — Lets families access tax receipts from their portal.
+
     - **Calendar Module For Portal** — Enables a calendar view for families in the portal.
+
     - **FAQ Module For Portal** — Adds an FAQ section to the parent portal.
+
     - **Contact Us Module For Portal** — Shows a Contact Us area in the portal so families can reach your team.
+
     - **Contracts Module** — Enables contract-related workflows. No in-app help text.
+
     - **Bunking Module** — Turns on bunking features for assigning campers to bunks or cabins.
   </Tab>
 
@@ -93,85 +118,106 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
     The **Basic** tab holds general site- and portal-level configuration such as contact details, default season, labels, and email footer text.
 
     - **Contact Email Address** — Primary contact email families see and that Campium uses for various notifications. Campium checks this email; if the check fails, the change is rejected with an error.
+
     - **Default Season** — Selects which season Campium uses as the default context across admin and reports when none is specified.
+
     - **Group Field** — Chooses which custom group field is used as the primary grouping dimension (for example, cabin or group). Changing this updates how groups appear in multiple areas, including the Mobile App tab.
+
     - **Contact Phone Number** — Phone number families see as the main contact for your camp.
+
     - **One-Way Messages Per Day** — Number of one-way messages you plan to send per day. No in-app help text.
+
     - **Portal Logo Height** — Height of the logo in the parent portal, typically in pixels.
+
     - **Email Footer** — Footer content appended to outgoing emails, such as contact info or disclaimers.
   </Tab>
 
   <Tab title="Payment Info" icon="credit-card">
     The **Payment Info** tab controls how scheduled charges behave, which emails send around payments, and a few options that affect how card payments are handled.
 
-    <Callout kind="info">
+    <Callout kind="info" collapsed="false">
       Payment-related settings save immediately when you change them. Coordinate changes with your finance team, especially when changing who receives emails or how surcharges work.
     </Callout>
 
     ### Charge notices and routing
 
     - **Charge Coming Email** — Toggles whether Campium sends upcoming charge emails before scheduled charges.
+
     - **Charge Coming Guardian 1 Email** — Controls whether upcoming charge emails go to Guardian 1 and the account owner.
+
     - **Charge Coming Guardian 2 Email** — Controls whether upcoming charge emails go to Guardian 2 and the account owner.
+
     - **Charge Coming Account Owner Email** — Sends upcoming charge emails to the account owner address.
+
     - **Days Before Charge** — Selects how many days in advance (typically 1–10) to send upcoming charge emails.
+
     - **Send Scheduled Payment Receipt** — If enabled, sends a receipt email when a scheduled payment succeeds.
+
     - **Send Payment Decline Email** — Admin-only. Controls whether Campium emails families when a payment is declined.
+
     - **Failed Payment Notification Email** — Email address where admin-level failed payment notifications are sent.
+
     - **Payment Method Updated Email** — Email address that receives notifications when families update payment methods.
+
     - **Receipt Emails** — Comma-separated list of email addresses that receive copies of payment receipts or related notices.
+
     - **Credit Card Surcharge** — Text field representing the surcharge percentage on card payments (for example, `3` or `3%`). Campium treats both formats as the same percentage.
 
     ### Card brands and processing behavior
 
     - **Accept AMEX** — Admin-only. Determines whether you accept American Express cards.
+
     - **Authorize and Capture** — Superuser-only. Controls whether charges are authorized and captured together or follow a different pattern, depending on processor support.
   </Tab>
 
   <Tab title="Mobile App" icon="monitor">
     The **Mobile App** tab controls which features appear in the Campium mobile app for staff and families, including chat, menu items, and support information.
 
-    <Callout kind="info">
+    <Callout kind="info" collapsed="false">
       Some Mobile App settings overlap fields on other tabs (for example, the todo list and group settings) but are presented here because they affect the app experience directly.
     </Callout>
 
     ### Shared and module toggles
 
     - **Todo List Module** — Shared with the Modules tab. Controls whether todo lists appear in the mobile app.
+
     - **Group Field** — Shared with the Basic tab. Determines which group field the app uses for grouping.
+
     - **Parent Chat Module** — Toggles chat between parents and your team inside the app.
+
     - **Staff Chat Module** — Enables chat among staff within the app.
 
     ### App menu and profile options
 
     - **Staff Files Menu Item** — Shows a Staff Files menu option in the app.
+
     - **Parent Files Menu Item** — Shows a Parent Files menu option in the app.
+
     - **My Group Menu Item** — Displays a "My Group" section in the app for group-based views.
+
     - **Support Menu Item** — Adds a Support menu entry to the app navigation.
+
     - **Useful Links Menu Item** — Shows a list of useful links in the app via a dedicated menu item.
+
     - **Allow Mobile Address Updates** — Lets families update their address from within the mobile app.
 
     ### Support and branding content
 
     - **Support Text** — Text shown in the app Support area, such as instructions or contact guidance.
+
     - **Support Email** — Email address displayed in the app for support.
+
     - **Support Phone** — Phone number displayed in the app for support.
+
     - **Main Page Photo** — Reference (for example, filename or path) to the photo shown on the app main page.
+
     - **Mobile Main Page Text** — Text content displayed on the main page of the mobile app.
-  </Tab>
-
-  <Tab title="Admin" icon="shield">
-    The **Admin** tab surfaces account-level administrative settings and is visible only to superusers and Campium support.
-
-    <Callout kind="info">
-      The Admin tab is not part of normal camp admin configuration. If you have questions about subscription status, time zones, training URLs, or similar account-wide items, contact Campium support instead of changing these settings yourself.
-    </Callout>
   </Tab>
 </Tabs>
 
 ## Tips for working safely with Site Settings
 
-<Callout kind="tip">
+<Callout kind="tip" collapsed="false">
   - **Change one thing at a time**: Because settings auto-save, adjust a single field, confirm the behavior, then move on.
 
   - **Document sensitive changes**: For payment options and any Admin-level settings, note what changed, when, and why for your internal records.
@@ -183,30 +229,31 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
 
 Use these guides to configure the features that depend on your Site Settings choices.
 
-<Columns cols={3}>
-  <Card title="Business Info & Logo" href="/business-info-and-logo" icon="folder" cta="Set your branding">
+<Columns cols="3">
+  <Card title="Business Info & Logo" href="/business-info-and-logo" icon="folder" cta="Set your branding" horizontal="false">
     Configure your camp name, contact details, and logo that families see across portals and emails.
   </Card>
 
-  <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar-sync" cta="Organize programs">
+  <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar-sync" cta="Organize programs" horizontal="false">
     Plan your camp calendar and sessions that work alongside your Site Settings.
   </Card>
 
-  <Card title="Authentication" href="/authentication" icon="shield" cta="Secure sign-in">
+  <Card title="Authentication" href="/authentication" icon="shield" cta="Secure sign-in" horizontal="false">
     Adjust sign-in rules and security options impacted by your global settings.
   </Card>
 </Columns>
 
-<Columns cols={3}>
-  <Card title="Mass Emails" href="/mass-emails" icon="mail" cta="Configure campaigns">
+<Columns cols="3">
+  <Card title="Mass Emails" href="/mass-emails" icon="mail" cta="Configure campaigns" horizontal="false">
     Set up large-scale email communications that rely on your contact and payment settings.
   </Card>
 
-  <Card title="SMS" href="/sms" icon="message-circle" cta="Enable texting">
+  <Card title="SMS" href="/sms" icon="message-circle" cta="Enable texting" horizontal="false">
     Manage text messaging behavior that complements one-way messaging and alerts.
   </Card>
 
-  <Card title="Forms" href="/forms" icon="file-text" cta="Collect information">
+  <Card title="Forms" href="/forms" icon="file-text" cta="Collect information" horizontal="false">
     Build registration and information forms that align with your modules and reporting setup.
   </Card>
 </Columns>
+
