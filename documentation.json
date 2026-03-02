@@ -42,6 +42,11 @@
                 "title": "Seasons & Sessions",
                 "path": "seasons-and-sessions",
                 "icon": "calendar-sync"
+              },
+              {
+                "title": "Profiles",
+                "path": "profiles",
+                "icon": "users"
               }
             ]
           },
