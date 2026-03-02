@@ -1,6 +1,6 @@
 ---
 title: Business Info & Logo
-description: Update your camp business details and logo so families see the right name, contact info, and branding across your Campium portals and communications.
+description: Update your camp business details, logo, and optional DKIM email authentication so families see the right name, contact info, and branding across Campium.
 ---
 
 ## What Business Info & Logo controls
@@ -73,6 +73,90 @@ Typical fields include:
 </Steps>
 
 After updating the text fields, you will save your changes in the section at the bottom of the page (see **Saving changes and common issues**).
+
+## DKIM: verify your email domain (optional)
+
+DKIM settings let you prove that Campium is allowed to send email on behalf of your camp domain, which helps messages stay out of spam folders.
+
+When you enter your camp email domain in the Business Info or contact settings, Campium can generate DKIM records for that domain. The DKIM status may show **Not verified** until you publish the records and they are detected.
+
+Publishing these records is optional, but strongly recommended to improve email deliverability and reduce the chance of messages going to Spam.
+
+<Callout kind="info">
+
+If someone else manages your website or email hosting, share the DKIM records with that person or team. They must add the records at the domain host or DNS provider to complete verification.
+
+</Callout>
+
+### How DKIM with CNAME records works
+
+After you enter your email domain, Campium generates several **CNAME** DNS records that point to DKIM keys hosted by the email service. You need to copy these records exactly and add them to your domain at your DNS or hosting provider.
+
+Detection of the records can take time. DNS changes may take **up to 72 hours** to fully propagate, so the DKIM status may stay **Not verified** for a while even if the records are correct.
+
+A typical set of generated DKIM records looks like this:
+
+| Type  | Name                | Value                                   |
+| ----- | ------------------- | --------------------------------------- |
+| CNAME | xxxxxxxxxx._domainkey | xxxxxxx.dkim.amazonses.com             |
+| CNAME | xxxxxxxx._domainkey | xxxxxxxx.dkim.amazonses.com            |
+| CNAME | xxxxxxx._domainkey  | xxxxxxx.dkim.amazonses.com             |
+
+Your actual values will be different. Always copy the **Type**, **Name**, and **Value** exactly as shown in your own DKIM section.
+
+<Callout kind="tip">
+
+The page includes links to instructions for common DNS and hosting providers, including GoDaddy, DreamHost, Cloudflare, HostGator, Namecheap, Names.co.uk, and Wix. Use those links if you are not sure where to add CNAME records for your domain.
+
+</Callout>
+
+### Set up DKIM for your domain
+
+Use these steps after you have confirmed the main email domain you want Campium emails to come from.
+
+<Steps>
+  <Step title="Choose the correct email domain" titleType="p">
+
+    Look at the main email address you use for outgoing communications, such as `info@campbluehills.org`. The email domain is the part **after** the `@` symbol (`campbluehills.org` in this example). Enter or confirm that domain in the Business Info or contact settings so the generated DKIM records match the domain families see in their inbox.
+
+  </Step>
+
+  <Step title="Open the DKIM section and review status" titleType="p">
+
+    In the Business Info & Logo area, find the DKIM or email authentication section. Check the status line. If it shows **Not verified**, Campium will generate a list of DKIM CNAME records that you need to publish at your DNS provider.
+
+  </Step>
+
+  <Step title="Copy the generated CNAME records" titleType="p">
+
+    For each DKIM record shown, copy the **Type**, **Name**, and **Value** exactly as displayed. Avoid adding extra spaces or changing the capitalization. Keep the records handy to paste into your DNS provider.
+
+  </Step>
+
+  <Step title="Add CNAME records at your DNS or hosting provider" titleType="p">
+
+    Sign in to the provider that manages DNS for your domain (for example, GoDaddy, DreamHost, Cloudflare, HostGator, Namecheap, Names.co.uk, or Wix). In the DNS management area, add a new **CNAME** record for each DKIM entry, using the copied **Name** and **Value** fields. Save or apply changes for all records.
+
+  </Step>
+
+  <Step title="Wait for DNS propagation and confirm verification" titleType="p">
+
+    After you add the CNAME records, return to the DKIM section in Campium. The status may remain **Not verified** for some time while DNS updates propagate. Check back periodically over the next few hours or days. Once the records are detected, the status will change to show that your domain is verified.
+
+  </Step>
+</Steps>
+
+### DKIM verification troubleshooting
+
+If the DKIM status still shows **Not verified** after 72 hours:
+
+- Confirm that each record uses **Type CNAME**, not TXT or another type.
+- Compare the **Name** and **Value** fields at your DNS provider to the generated records in Campium and fix any typos.
+- Make sure you added the records under the correct domain (for example, `campbluehills.org`, not a different domain or subdomain).
+- If your DNS provider adds the domain automatically, check whether you need to use the full name (`xxxxxxxxxx._domainkey.campbluehills.org`) or only the prefix (`xxxxxxxxxx._domainkey`), based on their instructions.
+- Ask whoever manages your domain or DNS to confirm that the records are present and not overridden by other entries.
+
+If everything looks correct and the domain still does not verify, contact your internal Campium administrator or support with screenshots of your DNS records so they can help review the configuration.
 
 ## Upload or replace your logo
 
