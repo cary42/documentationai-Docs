@@ -47,6 +47,11 @@
                 "title": "Profiles",
                 "path": "profiles",
                 "icon": "users"
+              },
+              {
+                "title": "Import Users",
+                "path": "import-users",
+                "icon": "file-up"
               }
             ]
           },

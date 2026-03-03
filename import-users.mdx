@@ -1,0 +1,221 @@
+---
+title: Import Users
+description: >-
+  Import new or updated users into Campium from a CSV file, with precautions for
+  duplicates and data integrity, plus completion email behavior.
+---
+## Overview
+
+Use the Import Users tool to load many new users into Campium at once or update details for existing users from a CSV file.&#x20;
+
+The Import Users screen can be found by going to **Admin** -> **Import & Export** -> **Import Users**
+
+## Where to find it
+
+Access the Import Users tool from within the Campium admin UI. Depending on your configuration, it may appear in areas such as users, profiles, or data/imports.
+
+<Callout kind="info" collapsed="false">
+  If you do not see an Import option in your admin menus, contact your Campium support contact or an internal admin with higher permissions to confirm that bulk imports are enabled for your account.
+</Callout>
+
+When you open the Import Users screen, you typically see options to upload a CSV file and map its columns to fields such as name, email, or profile attributes.
+
+## Before you start
+
+Prepare your data and account before running any import to avoid duplicate records.
+
+<Callout kind="info" collapsed="false">
+  Confirm that your admin role is allowed to perform bulk imports. If your organization restricts this, ask a system administrator to either run the import for you or temporarily grant access.
+</Callout>
+
+Recommended practices:
+
+- **Start with a small test import**\
+  Create a small CSV (for example, 3–5 users) that represents typical data. Use this to validate mapping, and duplicates.
+
+- **Keep a backup of your current data**\
+  If you have a report or export feature, export your existing users or profiles first. This gives you a reference if you need to compare or roll back changes.
+
+- **Use stable identifiers**\
+  If your org uses unique IDs, emails, or usernames to identify users, keep them consistent between systems. In your CSV, make sure these values are correct and unique.
+
+- **Clean your CSV in advance**\
+  Remove obvious duplicates, fix misspellings in emails, and ensure each column contains a single type of data (for example, first name, not a mix of names and notes).
+
+
+
+<Video uid="1187cda4-d26f-4da3-8a83-427d8cf7c65a" src="https://campium-static.s3.dualstack.us-east-2.amazonaws.com/video/Import%20users%20to%20Campium.mp4" render-type="video" width="560" height="315" controls="true" allow-full-screen="true" />
+
+## Import workflow
+
+Follow these steps each time you use the Import Users tool. Adjust step names according to what you see on screen; wording may vary slightly between environments.
+
+<Steps>
+  <Step title="Open the Import Users tool" icon="folder" title-type="p">
+    - Sign in to the Campium admin UI with an account that has Administrator access
+
+    - Navigate to **Admin** -> **Import & Export** -> **Import Users**
+
+    Success check: You see a page that lets you browse for a file or upload a CSV, with options to configure how the import behaves.
+  </Step>
+
+  <Step title="Prepare and upload your CSV file" icon="upload" title-type="p">
+    - Create or open your CSV file in a spreadsheet tool.
+
+    - Ensure each column has a clear, consistent meaning (for example, first name, last name, email).
+
+    - Save the file as CSV with a header row describing each column, if your import supports headers.
+
+    - In the Import Users tool, use the file picker or drag-and-drop area to select your CSV file.
+
+    - Confirm the file appears as selected and, if shown, that the row count matches your expectations.
+
+    - Example CSV - [https://campiumdb.com/imports/download-template.php](https://campiumdb.com/imports/download-template.php)
+
+    Success check: The screen advances to a mapping or preview step that shows your CSV columns and sample data.
+  </Step>
+
+  <Step title="Map CSV columns to Campium fields" icon="settings" title-type="p">
+    - For each CSV column shown, choose the matching field in Campium using the dropdowns or field selectors you see.
+
+    - Pay special attention to identifiers such as **Guardian 1 Email** (or the equivalent field in your configuration), since the import uses this email address to determine whether there is a matching family.
+
+    - If the UI offers an option like "Ignore this column" or similar, use it for columns that you do not want to import.
+
+    - Review any required fields indicated on the screen and confirm you mapped at least one field that can uniquely identify a user.
+
+    Success check: All important columns are mapped to the fields you expect, with no obvious mismatches (for example, emails under a phone field), and Guardian 1 Email is correctly mapped for every family.
+  </Step>
+
+  <Step title="Run a test import" icon="play-circle" title-type="p">
+    - Create a small CSV with a handful of users that represent typical data and cases, including at least one that already exists in Campium if you want to test updates.
+
+    - Upload and configure this test file using the same mappings and settings you plan to use for the full import.
+
+    - When prompted, confirm that you want to proceed with the import.
+
+    After the import runs, review any summary or result message. Look for counts such as "records created", "records updated", or "rows with errors".
+
+    Success check: The number of created/updated users matches your expectations for the test file, and you see no unexpected error messages.
+  </Step>
+
+  <Step title="Verify imported users" icon="check-circle" title-type="p">
+    - Open the profiles or users area in Campium.
+
+    - Search for the users from your test import by email, name, or ID.
+
+    - Open a few records and confirm that fields like name, email, and any other key attributes imported correctly.
+
+    Success check: User records in Campium match your CSV values. If something looks off, adjust mappings or settings and rerun a small test before continuing.
+  </Step>
+
+  <Step title="Run the full import" icon="rocket" title-type="p">
+    - Once you are satisfied with the test results, return to the Import Users tool.
+
+    - Upload your full CSV file and apply the same mappings and options that worked during testing.
+
+    - Review any summary page carefully, including counts and behavior for existing users.
+
+    - Confirm the import to start processing.
+
+    After completion, review the summary again and spot-check a mix of newly created and previously existing users to confirm the results. The admin account that uploaded the file receives an email when processing finishes, summarizing how many families, campers, and guardians the import created.
+
+    Success check: The total numbers of created/updated/failed rows are close to what you expected from the full CSV, the completion email matches those counts, and sampled user records show correct data.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  After each import finishes, the account that uploaded the CSV receives a completion email showing how many families, campers, and guardians were created. If you do not see it, check your spam or junk folder and any email filters.
+</Callout>
+
+<Callout kind="alert" collapsed="false">
+  The import relies on Guardian 1 Email to match families. If you enter the wrong email or leave it blank for an existing family, the import can create a duplicate family or link users to the wrong family.
+</Callout>
+
+## How duplicates and updates typically work
+
+The Import Users tool relies on the email address of Guardian 1 to decide whether a row belongs to an **existing family** or should create a **new family**.
+
+- **Family matching**\
+  When Guardian 1 Email in your CSV matches an existing Guardian 1 email in Campium, the import associates the row with that existing family and may update related user records based on your settings.
+
+- **New vs. existing families**\
+  If Guardian 1 Email from the CSV does not match any existing Guardian 1 email, or if it is missing, the import treats the row as a new family and creates a new family record along with its users.
+
+- **Error handling**\
+  When the import cannot process a row because a required field is missing or invalid, the tool may skip that row and show it as an error or warning in the results. Use these messages to clean up your source data and rerun only the problematic rows if needed.
+
+<Callout kind="alert" collapsed="false">
+  Because family matching is based on Guardian 1 Email, never guess or reuse email values. Always confirm this column in your CSV before running a large import, and validate the behavior using a small test file that includes at least one existing family.
+</Callout>
+
+## Troubleshooting
+
+Use these common scenarios and answers when an import does not behave as expected.
+
+<ExpandableGroup>
+  <Expandable title="Some users did not import or show as errors" default-open="false">
+    - Check the result summary for messages about skipped rows or validation errors.
+
+    - Review your CSV for missing required fields or invalid data formats (for example, malformed emails).
+
+    - Confirm that your mapping step associated each CSV column with the correct Campium field.
+
+    - If the tool lets you download an error file, use it to correct only the affected rows and rerun them in a smaller import.
+  </Expandable>
+
+  <Expandable title="I see duplicate user records after import" default-open="false">
+    - Search for the duplicates and compare which fields differ (for example, same name but different emails, or vice versa).
+
+    - Review the Guardian 1 Email values for those families. Incorrect, inconsistent, or missing Guardian 1 emails in the CSV can cause the import to create new families instead of attaching users to the correct existing family.
+
+    - Adjust your CSV so that the correct Guardian 1 Email column is populated and consistent with existing data, then test again with a small sample.
+
+    - If duplicates already exist, decide whether to merge or deactivate one of the records according to your internal data policies.
+  </Expandable>
+
+  <Expandable title="Existing user data was overwritten unexpectedly" default-open="false">
+    - Identify which fields changed unexpectedly and confirm that those columns were present in your CSV.
+
+    - Review the import settings you chose for updates; options like "overwrite existing values" can replace data even when the CSV column was incomplete or outdated.
+
+    - Update your process to either:
+
+      - Remove sensitive columns from the CSV, or
+
+      - Change the import settings to avoid overwriting existing values.
+
+    - Restore affected values manually using your backups or data exports where possible.
+  </Expandable>
+
+  <Expandable title="Users did not receive expected emails or invites" default-open="false">
+    - Confirm that you enabled the notification or invite option during import; if you disabled it for testing, users will not receive emails.
+
+    - Check your email or messaging logs (if available) to see whether messages were generated and delivered.
+
+    - Verify that your email templates, from-address, and domain settings are correctly configured in your Campium settings.
+
+    - If you plan a broad notification, run another small test import targeting a few internal test accounts to confirm email behavior before contacting all users.
+  </Expandable>
+
+  <Expandable title="I am not sure if it is safe to run a large import" default-open="false">
+    - Export your existing users or profiles so you have a snapshot of data before any changes.
+
+    - Validate your process with multiple test imports using 3–10 rows that represent different use cases (new users, existing users, and users with partial data).
+
+    - Confirm how duplicates, overwrites, and notifications behave based on these tests, paying particular attention to how Guardian 1 Email affects family matching.
+
+    - Once you are confident in the results, schedule the full import at a time when your team can monitor results and respond to any issues.
+  </Expandable>
+
+  <Expandable title="I did not receive the import completion email" default-open="false">
+    - Check the spam or junk folder for the email account tied to your Campium admin login in case the message was filtered.
+
+    - Confirm that you are looking at the inbox for the admin account that uploaded the CSV; completion emails go to the uploading user, not to every admin.
+
+    - Allow a few minutes for email delivery, especially during peak times.
+
+    - If you still do not see the email, compare the on-screen import summary with your data to verify results, and contact your internal IT or Campium support if you suspect a broader email delivery issue.
+  </Expandable>
+</ExpandableGroup>
+
