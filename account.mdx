@@ -1,0 +1,258 @@
+---
+title: Manage your Campium account
+description: >-
+  Update your password, default season, two-factor authentication, and system
+  digest email preferences in the Campium admin account section.
+---
+## Account overview
+
+Use the Campium account section to manage your own login, security, and communication shortcuts. All settings here apply only to your staff account.
+
+You can access these pages from the admin navigation:
+
+- Click on your name in the top right and then click on **My Settings.**
+
+<Callout kind="info" collapsed="false">
+  Changes you make in the Account section affect only your user login and messages. They do not change other admins or family accounts.
+</Callout>
+
+---
+
+## Account Settings
+
+Account Settings at `/account/` cover:
+
+- Changing your password
+
+- Choosing your default season
+
+- Turning two-factor authentication (2FA) on or off
+
+- Email Digest
+
+### Change your password
+
+Use this form when you know your current password and want to update it.
+
+<Callout kind="alert" collapsed="false">
+  If you do not remember your current password, use the reset-password link on the login page instead of the in-account change form.
+</Callout>
+
+<Steps>
+  <Step title="Open the password form" icon="settings" title-type="p">
+    - Go to `/account/` from the admin navigation.
+
+    - Find the **Change Password** section.
+  </Step>
+
+  <Step title="Enter your current and new password" icon="lock" title-type="p">
+    - Enter your **current password** in the `Old password` field.
+
+    - Enter your **new password** in the `New password` field.
+
+    - Re-type the same new password in `Confirm password`.
+  </Step>
+
+  <Step title="Review password requirements" icon="info" title-type="p">
+    - Make your password long and unique to Campium.
+
+    - Use a mix of uppercase, lowercase, numbers, and special characters.
+
+    - Avoid common phrases, names, or passwords you use on other sites.
+  </Step>
+
+  <Step title="Save and confirm" icon="check-circle" title-type="p">
+    - Submit the form to save your new password.
+
+    - If the current password is correct and the new passwords match, you see a success message and your new password takes effect immediately.
+
+    - If there is an error (mismatch or invalid current password), fix the highlighted fields and submit again.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  After changing your password on a shared computer, sign out of Campium when you are done.
+</Callout>
+
+---
+
+### Set your default season
+
+Your default season controls which season Campium shows first in many admin screens (for example, financials or reporting). You can still switch seasons on the reports; this setting just picks your starting point.
+
+<Steps>
+  <Step title="Open default season setting" icon="settings" title-type="p">
+    - Go to `/account/`.
+
+    - Locate the **Default Season** dropdown.
+  </Step>
+
+  <Step title="Choose your preferred season" icon="calendar" title-type="p">
+    - Open the dropdown to see the available seasons.
+
+    - Select the season you work in most often (for example, `Summer 2025`).
+  </Step>
+
+  <Step title="Save your choice" icon="check-circle" title-type="p">
+    - Save or apply the change (the page may auto-save when you choose a season, depending on your setup).
+
+    - On pages that support it, Campium now opens with this season pre-selected.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Changing your default season affects only what you see when you first open pages. It does not change the current season for families or your public portal.
+</Callout>
+
+---
+
+### Manage two-factor authentication (2FA)
+
+Two-factor authentication adds a second check at sign-in using your mobile phone. When enabled, you enter your password and then confirm a code or prompt sent to your phone.
+
+2FA sessions last **about 12 hours**. During that time, you usually do not need to re-enter a code on the same browser. Standard non-2FA sessions are shorter (about 90 minutes).
+
+<Callout kind="tip" collapsed="false">
+  Use 2FA on accounts with access to payment data, refunds, or staff scheduling to reduce the risk from stolen passwords.
+</Callout>
+
+#### Requirements for 2FA
+
+- A **mobile phone number** on your user profile
+
+- Access to that device when you sign in
+
+- Ability to receive calls or messages, depending on your 2FA method
+
+If your account does not have a mobile number, the 2FA section shows a warning and you cannot turn it on until you add one.
+
+#### Turn 2FA on
+
+<Steps>
+  <Step title="Confirm your mobile number" icon="users" title-type="p">
+    - Go to `/account/`.
+
+    - In the **Two-Factor Authentication** section, verify that your mobile number is displayed and correct.
+
+    - If the number is missing or wrong, update your user profile first, then return to this page.
+  </Step>
+
+  <Step title="Enable two-factor authentication" icon="shield" title-type="p">
+    - In the 2FA section, switch the **Two-Factor Authentication** toggle to **On**.
+
+    - Follow any on-screen prompts to confirm the change.
+  </Step>
+
+  <Step title="Sign in with 2FA" icon="lock" title-type="p">
+    - On your next sign-in, enter your email and password as usual.
+
+    - Complete the second step sent to your phone.
+
+    - After you finish, Campium keeps your session active for about 12 hours on that browser before asking for 2FA again.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  If you sign in from a new browser or device, Campium asks for 2FA again, even if your 12-hour window is still active on another device.
+</Callout>
+
+#### Turn 2FA off
+
+Only disable 2FA if you are changing devices or have another strong security control in place.
+
+<Steps>
+  <Step title="Open 2FA settings" icon="settings" title-type="p">
+    - Go to `/account/`.
+
+    - Scroll to the **Two-Factor Authentication** section.
+  </Step>
+
+  <Step title="Disable the toggle" icon="minus" title-type="p">
+    - Switch the 2FA toggle to **Off**.
+
+    - Confirm the change if prompted.
+  </Step>
+
+  <Step title="Verify access" icon="check-circle" title-type="p">
+    - Sign out and sign back in to confirm that you are no longer asked for a 2FA step.
+
+    - If you did not intend to disable 2FA, return to `/account/` and turn it back on immediately.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  If you lose access to your mobile phone and cannot complete 2FA, contact an internal Campium admin or support channel defined by your organization to regain access.
+</Callout>
+
+---
+
+### Email digest (System Digest Email)
+
+System Digest Email sends a summary of recent activity to your own email address, including registrations, logins, emails sent, revenue, payments received, and discounts for a selected time period. This setting is only available for Administrators.
+
+The digest is an HTML email sent to the email address on your staff account. Campium sends the digest based on your personal preferences, so each admin can choose their own schedule.
+
+#### Where to manage digest settings
+
+Manage your digest settings on the Email Digest settings page:
+
+- Click on your name in the top right and then click on **My Settings.**
+
+On this page you see a **Email** **Digest** tab with frequency options and a **Send Test Email** button.&#x20;
+
+<Callout kind="info" collapsed="false">
+  Digest settings apply to your login only. Other admins need to configure their own digest preferences on the same settings page.
+</Callout>
+
+#### Digest frequencies and coverage
+
+Each digest covers a specific time window and is sent after that window ends.
+
+- **Daily**: Sent every morning, covering the previous day.
+
+- **Weekly**: Sent Sunday mornings, covering the prior Sunday through Saturday.
+
+- **Monthly**: Sent on the 1st of each month, covering the prior calendar month.
+
+Digest metrics include:
+
+- Registered users count
+
+- Login count
+
+- Emails sent count
+
+- Revenue sum
+
+- Payments received sum
+
+- Discounts count and total discount amount
+
+If you enable more than one frequency, you receive a separate email for each schedule you select.
+
+<Callout kind="tip" collapsed="false">
+  Start with the weekly digest to get a broad view of activity, then add daily or monthly digests if you want more detailed or long-range summaries.
+</Callout>
+
+#### Turn the email digest on or off
+
+Use the checkboxes on the System Digest Email card to opt in or out of daily, weekly, or monthly summaries.
+
+<Callout kind="info" collapsed="false">
+  To fully opt out of system digests, clear all three checkboxes (Daily, Weekly, and Monthly). When no frequencies are selected, Campium does not send you digest emails.
+</Callout>
+
+#### Send a test digest email
+
+Use the test option to confirm delivery and preview what the digest looks like before you rely on it for monitoring.
+
+Keep your account settings up to date and encourage other admins with sensitive access to:
+
+- Use strong, unique passwords
+
+- Turn on two-factor authentication
+
+- Standardize communications with well-named canned messages
+
+- Enable a System Digest Email schedule that matches how closely they monitor activity
+
