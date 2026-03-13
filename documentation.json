@@ -102,6 +102,10 @@
                 "group": "System",
                 "pages": [
                   {
+                    "title": "Waitlist",
+                    "path": "waitlist"
+                  },
+                  {
                     "title": "Scheduled Payments Report",
                     "path": "system-report-scheduled-payments"
                   },
