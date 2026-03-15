@@ -1,515 +1,358 @@
 ---
 title: Scheduling
-description: Manage staff shifts, publish updates, and keep your schedule accurate and up to date for your team.
+description: Use the Staff Scheduler to manage weekly and monthly shifts, publish updates, and keep your staff schedule accurate.
 ---
 
 ## What scheduling is for
 
-Scheduling helps you decide who works which shifts and when. Use it to see coverage at a glance, avoid gaps, and make sure the right people are in the right place at the right time.
+Scheduling lets you decide who works which shifts and when. Use it to see coverage by week or month, avoid gaps, and make sure the right people are assigned to the right department at the right time.
 
-The scheduler is designed for office and admin staff who plan staff coverage. You use it to view the current schedule, add or adjust shifts, handle time off, and prevent staff from being double-booked.
+The admin scheduler is designed for office and admin staff who plan staff coverage. You use it to view the current schedule, add or adjust shifts, move shifts between staff, publish changes, and print or review past publishes.
 
 ## What you can do in the Staff Scheduler
 
 Use the Staff Scheduler to manage day-to-day staffing without leaving the system:
 
-- See who is working on any day, week, or month.
-- Add, edit, move, copy, or cancel shifts.
-- Set up repeating shifts, if available, to save time on common patterns.
-- Record staff time off or unavailable time so you do not schedule over it.
+- See who is working in any week or month.
+- Add, edit, delete, or move shifts.
+- Assign shifts to specific staff or leave them as open shifts.
+- Filter by department and search for specific staff.
 - Publish schedule updates and choose who to notify.
-- Review publish history to understand what staff have already seen.
-- Spot and resolve conflicts so no one is double-booked.
-- Print or share the schedule, if your screen offers these options.
+- Review publish history to see what was sent and when.
+- Print the schedule when you need a paper copy.
 
 ## Understanding the scheduler screen
 
-The main scheduling screen usually includes several areas that work together.
+The admin scheduler page uses a two-column layout: a staff sidebar on the left and the main calendar on the right.
 
 <Callout kind="info">
-  Your screen may look slightly different depending on your setup. If you do not see one of these areas, it may not be available in your account.
+  If something you expect is missing, check that you are on the admin scheduler page and that you have permission to manage staff schedules.
 </Callout>
 
-### Date controls
+### Staff sidebar
 
-Date controls let you move through the schedule.
+The sidebar helps you focus on the right people:
 
-- A **Today** button (if available) jumps back to the current day or week.
-- Left and right arrows move backward or forward in time.
-- A date picker opens a calendar so you can jump directly to a specific date.
+- **Staff list** shows all staff who can be scheduled.
+- **Staff search** filters the list as you type a name.
+- **Department filter** lets you narrow the calendar to one department at a time.
+- A **Manage departments** link opens department settings so you can adjust which departments appear on the scheduler.
 
-When you change the date, the schedule grid updates to show that time frame.
+Changes you make in the sidebar update which staff and shifts you see in the main calendar.
 
-### View options (Day, Week, Month)
+### Date controls and views
 
-View options change how much of the schedule you see at once.
+Use the date controls above the calendar to change what part of the schedule you are looking at.
 
-- **Day view** focuses on one day, useful for detailed coverage and exact times.
-- **Week view** shows the pattern across a full week, which helps spot gaps or overlaps.
-- **Month view** (if available) shows a broad overview of shifts and time off.
+- **Prev** moves the view backward (one week or one month).
+- **Next** moves the view forward.
+- **Today** jumps back to the current week or month.
 
-Switch between views to match the type of planning you are doing.
+View options let you see more or less detail:
 
-### Filters (Role, Location, Staff)
+- **Week view** shows a single week, with days across and staff and shifts within that week.
+- **Month view** shows all days in the selected month.
 
-Filters narrow the schedule to the people or areas you care about right now.
-
-- **Role or Position** filters show only certain job types, such as instructors or front desk.
-- **Location or Program** filters focus on one site or program at a time.
-- **Staff** filters let you view a single person or a small group.
-
-If you cannot find a shift, check whether a filter is hiding it.
+When you switch between week and month, the system remembers your choice for next time.
 
 ### Schedule grid and shift blocks
 
-The schedule grid shows time across the top or side, and staff, roles, or locations along the other side.
+The schedule grid is the main calendar area where you see shifts.
 
-- Each **shift block** usually shows the staff name, start and end time, and sometimes role or location.
-- Time off or unavailable time may appear in a different color or pattern so you can tell it apart from worked shifts.
-- If your system supports it, conflict warnings may appear on or near shift blocks.
+- Each **shift block** shows the staff name (or "Open Shift"), the start and end times, and the department by color.
+- Shifts in different departments display in different colors so you can see coverage by department at a glance.
+- You can select a shift block to open its details, or drag it to move it to another day or staff row.
 
-You use this grid to add new shifts, open existing ones, and see coverage.
+Use this grid to see who is working, where you need more coverage, and which shifts are still open.
 
 ### Toolbars and actions
 
-The scheduling toolbar often includes common actions:
+The toolbar above the calendar includes common actions:
 
-- Buttons for **Add shift**, **Publish**, **Print**, or **More actions**.
-- Icons for **filters**, **view options**, or **publish history**.
-- Menus that include options like **Copy schedule** or **Templates**, if available.
+- **Add Shift** to create a new shift for a given day.
+- **Publish (N)** to publish your latest changes, where `N` is the count of unpublished changes.
+- **History** to review past publishes and who was notified.
+- **Print** to print the current view of the schedule using your browser's print tools.
 
-If you are not sure what a button does, hover over it to see a label, if your browser supports it.
+Hover over any icon to see its label, if your browser supports this.
 
 ## Viewing the schedule
 
-Use the schedule view to see who is working on a given day, week, or time range.
-
-<Callout kind="info">
-  Your screen may show different views such as **Day**, **Week**, or **Month**, and may include filters like **Role**, **Location**, or **Program**.
-</Callout>
+Use the schedule view to see who is working within a specific week or month.
 
 <Steps>
   <Step title="Open the scheduling area" icon="monitor" titleType="p">
-    Go to the staff scheduling area from your main navigation. Look for a label such as **Scheduling**, **Staff Schedule**, or **Shifts**.
+    From the admin navigation, go to the Staff Scheduler page. Look for a label such as **Scheduling** or **Staff Schedule**.
   </Step>
 
-  <Step title="Choose your view" icon="settings" titleType="p">
-    Use the buttons or tabs at the top to switch between **Day**, **Week**, or **Month** views, if available. Pick the view that makes it easiest to see coverage.
+  <Step title="Choose Week or Month view" icon="settings" titleType="p">
+    Use the view toggle above the calendar to switch between **Week** and **Month**. Pick **Week** for more detail or **Month** for a broader overview.
   </Step>
 
-  <Step title="Adjust the date range" icon="calendar" titleType="p">
-    Use the arrows or date picker to move forward or backward in time. Confirm you are looking at the correct week or day before making changes.
+  <Step title="Use Prev, Next, or Today" icon="arrow-right" titleType="p">
+    Select **Prev** or **Next** to move backward or forward in time. Use **Today** to jump back to the current week or month.
   </Step>
 
-  <Step title="Filter the schedule (optional)" icon="filter" titleType="p">
-    If your screen supports it, use filters such as **Role**, **Location**, or **Staff member** to narrow the schedule to the group you care about right now.
+  <Step title="Filter by department or staff" icon="filter" titleType="p">
+    In the sidebar, apply the **Department** filter to narrow the schedule to one department, and use **Staff search** to quickly find a specific person.
   </Step>
 </Steps>
 
-When the schedule loads, you should see staff names alongside their shifts, with start and end times, and possibly the role or location for each shift.
+When the schedule loads, you should see staff names and their shifts as colored blocks on the calendar for the selected week or month.
 
 ## Adding a shift
 
-Add a shift when you assign a staff member to work at a specific time.
+Add a shift when you need coverage on a specific date and time.
 
 <Callout kind="tip">
-  Before you add a shift, decide who should work it, where they will work, and the start and end times. This reduces changes later.
+  Decide the date, start and end times, department, and whether the shift will be open or assigned to a specific staff member before you create it.
 </Callout>
 
 <Steps>
   <Step title="Start a new shift" icon="plus" titleType="p">
-    In the schedule view, select the day and time where you want to add a shift. You may click on an empty time slot or use an **Add shift** or **New shift** button.
+    Use the **Add Shift** button or click an empty day cell in the schedule grid for the date you want. This opens the shift modal.
   </Step>
 
-  <Step title="Select the staff member" icon="users" titleType="p">
-    Choose the staff member from the **Staff** or **Employee** dropdown. Confirm you have the correct person, especially if you have staff with similar names.
+  <Step title="Set the date and times" icon="clock" titleType="p">
+    In the modal, set the **Date**, then choose the **Start time** and **End time** from the dropdowns. Times appear in 30-minute increments.
   </Step>
 
-  <Step title="Set the shift time" icon="clock" titleType="p">
-    Enter the **Start time** and **End time**. Some screens also allow you to set the **Date** or **Days** if the shift repeats. Make sure the times match what you agreed with the staff member.
+  <Step title="Assign staff or leave it open" icon="users" titleType="p">
+    Use the **Staff** dropdown to select a staff member, or choose **Open Shift** to leave the shift unassigned for now. If you assign a staff member, a **View profile** link appears so you can open their profile in a new window.
   </Step>
 
-  <Step title="Add details like role or location" icon="settings" titleType="p">
-    You may see fields such as **Role**, **Position**, **Location**, or **Notes**. Fill in these fields to make it clear what the shift is for and where the staff member should be.
+  <Step title="Choose the department and notes" icon="settings" titleType="p">
+    Select a **Department** for the shift so it displays with the correct color on the schedule. Optionally, add **Notes** to describe special duties or instructions.
   </Step>
 
   <Step title="Save the shift" icon="check-circle" titleType="p">
-    Select **Save**, **Create**, or a similar button. Confirm that the new shift now appears on the schedule in the correct place for that staff member.
+    Select **Save Shift** to create the shift. Confirm that the new shift block appears on the calendar on the correct date, with the correct staff member or as an open shift.
   </Step>
 </Steps>
 
-If the shift does not appear as expected, refresh your view or check that your filters are not hiding it.
-
-### Creating repeating shifts (if available)
-
-If your scheduling screen offers repeating or recurring shifts, use them to set up regular patterns, such as a weekly class or standing front desk coverage.
-
-<Callout kind="info">
-  Look for options like **Repeat**, **Repeats weekly**, **Repeat on days**, or **Copy to future** when you create or edit a shift.
-</Callout>
-
-<Steps>
-  <Step title="Open a shift for repeat setup" icon="edit" titleType="p">
-    Add a new shift or open an existing shift that you want to repeat.
-  </Step>
-
-  <Step title="Turn on repeating options" icon="settings" titleType="p">
-    If available, select a **Repeat** or **Recurring** option. Choose how often the shift repeats, such as every week, every other week, or on specific weekdays.
-  </Step>
-
-  <Step title="Set the start and end of the pattern" icon="calendar" titleType="p">
-    Choose when the repeating pattern should begin and when it should stop. For example, you may repeat from the start of a season until a certain end date.
-  </Step>
-
-  <Step title="Review and save the repeating shifts" icon="check-circle" titleType="p">
-    Before you save, check that the summary of the repeating pattern matches what you expect. After saving, scan the next few weeks to confirm the shifts appear correctly.
-  </Step>
-</Steps>
-
-If you later need to change or stop a repeating shift, open one of the shifts and look for options to update **Only this shift** or **This and future shifts**, if offered.
+If the shift does not appear where you expect, check that you are on the correct week or month and that your department filter is not hiding it.
 
 ## Editing a shift
 
-Edit a shift whenever times, roles, or locations change.
+Edit a shift when the date, time, staff member, department, or notes need to change.
 
 <Callout kind="info">
-  Some systems track changes to shifts. Make sure you only edit shifts you are allowed to change, especially close to the shift start time.
+  Shifts use a single date and start and end times in 30-minute increments. If you change the date, the shift moves to that new day in the calendar.
 </Callout>
 
 <Steps>
-  <Step title="Find the shift you need to change" icon="search" titleType="p">
-    In the schedule view, locate the staff member and the day with the shift you want to adjust.
-  </Step>
-
   <Step title="Open the shift details" icon="edit" titleType="p">
-    Select the shift. You may click on the shift block or use an **Edit** icon or menu option such as **Edit shift**.
+    In the schedule grid, locate the shift and select its block. This opens the shift modal with the current details.
   </Step>
 
-  <Step title="Update the information" icon="settings" titleType="p">
-    Adjust fields such as **Start time**, **End time**, **Role**, **Location**, or **Notes**. If the shift should move to a different staff member and your screen allows it, change the **Staff** field.
+  <Step title="Adjust date and times" icon="clock" titleType="p">
+    Update the **Date**, **Start time**, or **End time** as needed. Use the dropdowns to keep times aligned to 30-minute increments.
   </Step>
 
-  <Step title="Handle repeating shifts carefully (if applicable)" icon="alert-triangle" titleType="p">
-    If you are editing a shift that is part of a repeating pattern and you see options such as **Only this shift** or **All future shifts**, choose the option that matches your intent so you do not change past or unrelated dates by mistake.
+  <Step title="Change staff or department" icon="users" titleType="p">
+    Use the **Staff** dropdown to assign the shift to a different staff member or set it back to **Open Shift**. Update the **Department** if the shift belongs to a different department.
   </Step>
 
-  <Step title="Save your changes" icon="check-circle" titleType="p">
-    Select **Save**, **Update**, or similar. Confirm that the schedule now shows the updated time, role, or staff member.
+  <Step title="Update notes and save" icon="settings" titleType="p">
+    Edit the **Notes** if you need to change instructions or add context. Select **Save Shift** and confirm that the shift block on the calendar reflects the updated date, time, staff, and department color.
   </Step>
 </Steps>
 
-If your system supports drag-and-drop, you may move a shift directly on the calendar. After moving it, check that the times and any conflict warnings still look correct.
+If you assigned a staff member, use the **View profile** link in the modal to quickly open their profile in another window while you review their other details.
 
-### Moving and resizing shifts (if available)
+## Moving shifts with drag-and-drop
 
-If your scheduler allows drag-and-drop, you can quickly adjust shifts without opening the full details.
+Drag-and-drop lets you quickly move shifts without opening the modal first.
 
 <Steps>
-  <Step title="Move a shift to a new time or staff member" icon="arrow-right" titleType="p">
-    Click and hold the shift block, then drag it to a new time slot, day, or staff row, if the screen supports this. Release it where you want the shift to land.
+  <Step title="Drag a shift to a new day or staff row" icon="arrow-right" titleType="p">
+    In the schedule grid, click and hold a shift block, then drag it to a different day cell or staff row. Release the mouse to drop the shift in the new spot.
   </Step>
 
-  <Step title="Resize a shift to change its length" icon="edit" titleType="p">
-    If available, drag the top or bottom edge of the shift block to shorten or extend the shift time. Watch the displayed start and end times as you drag.
+  <Step title="Review the updated shift" icon="monitor" titleType="p">
+    After moving, check that the shift now appears on the correct date and under the correct staff row. The department color and times remain the same unless you edit them separately.
   </Step>
 
-  <Step title="Confirm the new details" icon="check-circle" titleType="p">
-    After moving or resizing, check that the new time, date, and staff member (if changed) are correct, and that no unexpected conflict warnings appear.
+  <Step title="Fine-tune details if needed" icon="edit" titleType="p">
+    If you need to adjust the exact times or notes after moving, select the shifted block to open the modal and update the **Start time**, **End time**, or **Notes**, then save again.
   </Step>
 </Steps>
 
-If drag-and-drop does not work on your screen, use the standard edit steps instead.
+If drag-and-drop does not appear to work, make sure you are clicking firmly on the shift block and dragging within the visible calendar area.
 
-## Removing or canceling a shift
+## Deleting a shift
 
-Remove or cancel a shift when it should no longer be worked.
+Delete a shift when it should no longer be worked.
 
 <Callout kind="alert">
-  Removing a shift may affect payroll, staffing, and communication with staff. Confirm that you are canceling the correct shift before you continue.
+  Deleting a shift removes it from the schedule. Double-check the date, time, staff member, and department before you delete it.
 </Callout>
 
 <Steps>
-  <Step title="Locate the shift to remove" icon="search" titleType="p">
-    Use the schedule view to find the exact shift you want to remove, checking the staff name, date, and time.
+  <Step title="Open the shift to delete" icon="search" titleType="p">
+    Find the shift block in the schedule grid and select it to open the shift modal.
   </Step>
 
-  <Step title="Open the shift actions" icon="settings" titleType="p">
-    Select the shift to open its details. Look for a **Delete**, **Remove**, or **Cancel shift** option, which may appear as a button or in a menu.
+  <Step title="Use the Delete option" icon="trash" titleType="p">
+    In the modal, select **Delete**. This button only appears when you are editing an existing shift, not when you are creating a new one.
   </Step>
 
-  <Step title="Confirm the removal" icon="trash" titleType="p">
-    If a confirmation message appears, read it and then confirm you want to remove the shift. The shift should disappear from the schedule for that staff member.
-  </Step>
-
-  <Step title="Notify the staff member if needed" icon="info" titleType="p">
-    If your system does not automatically notify staff about changes, contact the staff member to let them know the shift was canceled or reassigned.
+  <Step title="Confirm the deletion" icon="check-circle" titleType="p">
+    If a confirmation appears, confirm the deletion. The shift should disappear from the calendar for that date and staff member.
   </Step>
 </Steps>
 
-If you remove a shift by accident, check whether your system allows you to undo the change or re-add the shift with the same details.
+If you delete the wrong shift, recreate it with the same date, times, staff member, department, and notes, then publish again so staff see the correction.
 
-## Copying or reusing a schedule (if available)
+## Managing departments from the scheduler
 
-If your scheduler includes copy or template tools, use them to save time when your schedule follows a regular pattern.
-
-<Callout kind="tip">
-  Copying a schedule works best when most shifts stay the same from week to week and only a few details change.
-</Callout>
+Use the Manage departments link to keep your department list aligned with how you schedule staff.
 
 <Steps>
-  <Step title="Open copy or template options" icon="settings" titleType="p">
-    In the scheduling toolbar or menu, look for options such as **Copy day**, **Copy week**, **Duplicate shifts**, or **Templates**.
+  <Step title="Open department management" icon="settings" titleType="p">
+    In the staff sidebar, select the **Manage departments** link. This opens the department management page in a new window or tab.
   </Step>
 
-  <Step title="Choose what to copy" icon="calendar" titleType="p">
-    If available, pick whether you want to copy a single day, a full week, or a saved template. Then select the date range you want to copy from and the one you want to copy to.
+  <Step title="Adjust departments" icon="edit" titleType="p">
+    Add, edit, or deactivate departments as needed according to your organization's structure and naming.
   </Step>
 
-  <Step title="Review copied shifts" icon="monitor" titleType="p">
-    After copying, scan the target days or weeks to confirm that shifts appear for the correct staff, roles, and locations. Adjust any exceptions, such as holidays or special events.
-  </Step>
-
-  <Step title="Save and plan to publish" icon="check-circle" titleType="p">
-    Once you are satisfied with the copied schedule, make any last changes and plan when you will publish so staff see the new shifts.
+  <Step title="Return to the scheduler" icon="monitor" titleType="p">
+    Go back to the scheduler page and refresh if necessary. Confirm that new or updated departments appear in the **Department** filter and the shift **Department** dropdown.
   </Step>
 </Steps>
 
-If you find you are making the same changes every time you copy, consider creating a smaller template or pattern and applying it more selectively, if your system supports templates.
+When you assign a department in the shift modal, the shift block uses that department's color in the schedule grid.
 
 ## Publishing the schedule
 
-Publishing makes your latest changes visible to staff. Until you publish, staff cannot see new shifts or changes you have made.
+Publishing makes your latest changes visible to staff and, if you choose, sends them email notifications.
 
 <Callout kind="info">
-  Think of publishing as sending out a new edition of the schedule. You can make many edits in the background, then publish once when you are ready to share them.
+  Think of publishing as releasing a new version of the schedule. You can make multiple edits in the scheduler, then publish them together once you are ready.
 </Callout>
 
 <Steps>
-  <Step title="Open the publish option" icon="play-circle" titleType="p">
-    In the scheduling toolbar, select **Publish**. The button usually shows how many unpublished shifts you have, such as **Publish (5)**.
+  <Step title="Review the unpublished count" icon="info" titleType="p">
+    Look at the **Publish (N)** button in the toolbar. The number `N` shows how many changes are waiting to be published.
   </Step>
 
-  <Step title="Choose who to notify" icon="users" titleType="p">
-    When the publish options appear, pick how you want to notify staff about this update.
+  <Step title="Open the publish modal" icon="play-circle" titleType="p">
+    Select **Publish (N)**. The publish modal appears and shows options for who to notify about these changes.
+  </Step>
 
-    - **Only notify staff with new or changed shifts** — Sends an email only to people whose shifts were added or changed.
-    - **Notify everyone with upcoming shifts** — Sends an email to everyone who has a shift in the schedule.
-    - **Do not notify anyone** — Publishes the schedule without sending any emails.
+  <Step title="Choose a notification option" icon="users" titleType="p">
+    Select one of the notify modes:
+
+    - **Notify only staff with new or changed shifts** — Email only staff whose shifts are part of this publish.
+    - **Notify all staff with upcoming shifts** — Email every staff member who has an upcoming shift on the schedule.
+    - **Do not notify anyone** — Publish the changes without sending any emails.
 
   </Step>
 
-  <Step title="Publish the schedule" icon="check-circle" titleType="p">
-    Select **Publish** to confirm. Staff can now see the updated schedule, and any emails you chose to send will go out based on the option you selected.
+  <Step title="Confirm publishing" icon="check-circle" titleType="p">
+    Select **Publish** in the modal. The system applies your changes to the staff-facing schedule and sends any emails based on the option you chose. The number on the **Publish** button resets when publishing completes.
   </Step>
 </Steps>
 
-If staff report that they cannot see a change you made, check whether you have published since making that change.
+If staff say they do not see a change you made, check the **Publish (N)** button to confirm that `N` is zero and publish again if needed.
 
-### Understanding unpublished vs published changes
+### Viewing publish history
 
-Unpublished changes exist only in the scheduler for admins; published changes are what staff see.
-
-- When you add or edit shifts, those updates may stay in an **unpublished** state until you publish.
-- The number on the **Publish** button, if shown, helps you track how many changes are waiting.
-- Publishing does not remove older schedule information; it layers your new edits onto what staff see next.
-
-If you expect many last-minute edits, you may choose to publish more often but with more focused notifications.
-
-## Viewing publish history
-
-Use publish history to see who published the schedule, when they did it, and who was notified.
+Publish history helps you see what was published, when, and who was notified.
 
 <Steps>
   <Step title="Open publish history" icon="clock" titleType="p">
-    In the scheduling toolbar, select the clock or history icon. This opens the list of past publishes.
+    In the scheduler toolbar, select the **History** button or icon. This opens a modal listing past publishes.
   </Step>
 
   <Step title="Review past publishes" icon="info" titleType="p">
-    Look through the list to see each publish, including the **Date**, who published it, how many shifts were included, and who was emailed.
+    Look through the list to see each publish date, who performed the publish, and the notification choice (who received emails).
   </Step>
 </Steps>
 
-If there is confusion about which version of the schedule staff received, use this list to confirm the most recent publish and who it reached.
+Use this list when you need to confirm which version of the schedule staff received or verify that an email notification went out.
 
-## Handling time off or unavailable time (if available)
+## Printing the schedule
 
-If your scheduling screen supports time off or unavailable time, use it to block times when staff cannot work.
-
-<Callout kind="info">
-  You may see options such as **Time off**, **Unavailable**, **PTO**, or **Leave**. These often work like shifts but show staff are not available.
-</Callout>
+Printing lets you create an offline copy of the schedule using your browser's print tools.
 
 <Steps>
-  <Step title="Start a new time off entry" icon="plus" titleType="p">
-    From the schedule or staff view, look for a button such as **Add time off**, **Mark unavailable**, or similar. You may also open a staff member and choose a **Time off** tab.
+  <Step title="Set up the view you want to print" icon="monitor" titleType="p">
+    Choose **Week** or **Month** view and use the **Prev**, **Next**, and **Today** controls to show the date range you want to print. Apply any department filter you want reflected in the printout.
   </Step>
 
-  <Step title="Choose the staff member and dates" icon="users" titleType="p">
-    Select the staff member if not already selected. Enter the **Start date** and **End date**, or pick the specific day and times when they are unavailable.
+  <Step title="Open the print dialog" icon="download" titleType="p">
+    Select the **Print** button in the scheduler toolbar. Your browser's print dialog opens with a preview of the current schedule view.
   </Step>
 
-  <Step title="Add details and reason" icon="info" titleType="p">
-    You may see fields for **Reason** (for example, vacation or sick), **Location**, or **Notes**. Fill these in to help others understand why the staff member is not available.
-  </Step>
-
-  <Step title="Save the time off" icon="check-circle" titleType="p">
-    Select **Save** or **Add**. Confirm that the schedule now shows the staff member as unavailable or blocked out for those times.
+  <Step title="Confirm and print" icon="check-circle" titleType="p">
+    In the browser print dialog, adjust settings such as layout or scaling if needed, then confirm to print. Check the printed copy to ensure dates, times, and staff names are clear.
   </Step>
 </Steps>
 
-If you later approve or deny time off in another area, return to the schedule to confirm that shifts match the final decision and do not overlap with denied time off.
-
-### Using time off to avoid scheduling mistakes
-
-Time off entries are only useful if you rely on them while scheduling.
-
-- Check the schedule for time off before assigning extra shifts to a staff member.
-- When you see a conflict between a shift and time off, adjust the shift or reassign coverage.
-- Use notes to record important details, such as whether time off is paid or unpaid, if that matters for your policies.
-
-## Preventing conflicts and double-booking
-
-Use the schedule and any built-in warnings to avoid overlapping shifts and double-booked staff.
-
-<Callout kind="tip">
-  Many systems show conflict warnings, such as colored borders, icons, or messages if a staff member is scheduled for two places at once.
-</Callout>
-
-To reduce conflicts:
-
-- Check a staff member's full day or week view before adding a new shift.
-- Watch for any warning icons or messages when you save a shift.
-- Avoid giving one staff member overlapping **Start time** and **End time** ranges, even across different locations.
-- Keep time off entries up to date so you do not schedule staff who are on leave.
-
-If the system warns you about a conflict:
-
-- Read the message to see which other shift is affected.
-- Decide whether the conflict is accidental or allowed in special cases, such as on-call coverage.
-- Open the new and existing shifts (or time off entries) to see the full picture before changing anything.
-
-If the conflict is not allowed:
-
-- Adjust the new shift times so they no longer overlap.
-- Reassign one of the shifts to a different staff member.
-- Remove a shift if coverage is not needed after all.
-
-If the overlap is allowed in your policies, keep both shifts and add a clear note so others understand why the conflict is intentional.
-
-After resolving a conflict, scan the schedule again to confirm the staff member is scheduled in only one active shift per time period, unless you intentionally allowed an overlap.
-
-## Handling last-minute changes
-
-Last-minute changes are common. Handle them in a way that keeps staff informed and the schedule accurate.
-
-<Callout kind="alert">
-  When you update the schedule close to a shift start time, staff might already be on their way. Make sure you clearly communicate urgent changes.
-</Callout>
-
-<Steps>
-  <Step title="Adjust the shift or coverage" icon="edit" titleType="p">
-    Edit, move, or cancel the affected shift as soon as you know about the change. If someone is calling out, reassign the shift to another staff member or shorten it to match partial coverage.
-  </Step>
-
-  <Step title="Publish if staff rely on the online schedule" icon="play-circle" titleType="p">
-    If your staff check the online schedule, publish the change so they see it. Consider notifying **Only staff with new or changed shifts** so you do not flood others with messages.
-  </Step>
-
-  <Step title="Use additional communication if needed" icon="users" titleType="p">
-    For urgent changes, use other tools such as **Mass Emails**, **SMS**, or **Push Notifications** to reach staff quickly, especially if they may not see a schedule update in time.
-  </Step>
-
-  <Step title="Add notes for context" icon="info" titleType="p">
-    Add a short note on the shift explaining the reason for the change, such as a sick call, weather issue, or special event, so others understand why the schedule looks different.
-  </Step>
-</Steps>
-
-After the hectic period passes, review the affected day or week to ensure the final schedule matches what actually happened.
-
-## Printing or sharing the schedule (if available)
-
-If your scheduler offers printing or sharing features, use them to create offline or summary views.
-
-<Steps>
-  <Step title="Open print or export options" icon="download" titleType="p">
-    In the scheduling toolbar or a menu, look for options like **Print**, **Download**, or **Export**. These may appear near the publish button or under a **More** menu.
-  </Step>
-
-  <Step title="Choose what to include" icon="settings" titleType="p">
-    If available, pick the view (Day, Week, Month), the locations or roles to include, and whether to show time off, notes, or staff contact details.
-  </Step>
-
-  <Step title="Create and review the copy" icon="monitor" titleType="p">
-    Generate the print preview or downloaded file. Check that dates, times, and names are clear and readable before you share or print.
-  </Step>
-</Steps>
-
-If you share a printed schedule, remind staff that the online schedule is the source of truth when differences appear.
+The printed schedule reflects exactly what you see on-screen, including the current view and department filter.
 
 ## Troubleshooting common scheduling issues
 
 <Callout kind="info">
-  Use this section when something on the schedule does not look right or you cannot make the change you expect.
+  Use this section when something on the admin scheduler does not look right or you cannot make the change you expect.
 </Callout>
 
 <ExpandableGroup>
   <Expandable title="I cannot see a shift I just added" default-open="true">
 
-  - Check that you are on the correct **Date**, **Week**, or **Month**.
-  - Clear or adjust filters such as **Role**, **Location**, or **Staff** that might be hiding the shift.
-  - Refresh the schedule view and look again for the staff member and time.
-  - Confirm that you saved the shift, and that it did not show an error or conflict message when you tried to save.
+  - Confirm you are viewing the correct **Week** or **Month** and that you did not move to a different date with **Prev** or **Next**.
+  - Check the **Department** filter in the sidebar; if it is set to another department, the shift may be hidden.
+  - Search for the staff member in the sidebar to focus on their row, or look for **Open Shift** if the shift is unassigned.
+  - Try refreshing the page and checking again for the staff member and date.
 
   </Expandable>
 
-  <Expandable title="The system says there is a conflict or overlap">
+  <Expandable title="A shift shows the wrong staff member or department">
 
-  - Read the message to see which other shift or time off entry is affected.
-  - Open the other shift or time off and adjust times so they no longer overlap.
-  - If the overlap is allowed in your policies, confirm you want to keep both and note the reason in the **Notes** field.
-  - If you believe the conflict warning is incorrect, double-check the staff member's full day or week to confirm how many shifts they have.
-
-  </Expandable>
-
-  <Expandable title="I cannot edit or delete a shift">
-
-  - Make sure you have permission to change that staff member's schedule.
-  - Check whether the shift is in the past or already approved for payroll; some systems lock these shifts.
-  - Try editing a different shift to see if the issue is with your access or with that specific shift.
-  - If needed, contact an admin or supervisor who has permission to adjust locked shifts.
+  - Select the shift block to open the modal and verify the **Staff** and **Department** fields.
+  - If you meant to move the shift, drag and drop it to the correct staff row or edit the **Staff** field, then save.
+  - Update the **Department** so the shift displays with the correct color in the schedule grid.
+  - Publish your changes so staff see the corrected assignment.
 
   </Expandable>
 
-  <Expandable title="Time off is not showing on the schedule">
+  <Expandable title="I cannot delete or change a shift">
 
-  - Confirm that time off is turned on in your system, if that setting exists.
-  - Check the staff member's time off dates and times for mistakes.
-  - Refresh the schedule and ensure no filters are hiding time off entries.
-  - Make sure you are looking at the same location or program as the time off entry, if those options are used in your setup.
+  - Make sure you are selecting the shift block itself in the schedule grid so the modal opens.
+  - Check that you have admin access to manage staff schedules on this page.
+  - Try editing a different shift; if that works, there may be an issue with the specific shift you are trying to change.
+  - If you still cannot update it, contact a system administrator to review your permissions or the schedule data.
 
   </Expandable>
 
-  <Expandable title="Staff say their schedule looks different from mine">
+  <Expandable title="The Publish button shows a number but staff do not see updates">
 
-  - Check the **Publish** button to see if there are unpublished changes that staff have not seen yet.
-  - Review **Publish history** to confirm when the last publish occurred and who was notified.
-  - Make sure staff are viewing the correct date range and that they do not have filters hiding some shifts.
-  - If needed, publish again and notify staff with new or changed shifts so everyone has the same information.
+  - Look at the **Publish (N)** button; if `N` is greater than zero, you still have unpublished changes.
+  - Select **Publish (N)**, choose an appropriate notification option, and complete the publish.
+  - Use **History** to confirm that the publish recorded correctly and that notifications were sent if you selected them.
+  - Ask staff to refresh their schedule view or log out and back in if they still do not see changes.
+
+  </Expandable>
+
+  <Expandable title="My printed schedule looks different from the screen">
+
+  - Confirm you are on the same **Week** or **Month** and with the same **Department** filter before you select **Print**.
+  - In the browser print preview, check scaling or orientation settings that might cut off days or staff rows.
+  - If needed, switch between **Week** and **Month** view and try printing again to get the layout you prefer.
 
   </Expandable>
 </ExpandableGroup>
 
 ## Good habits for accurate schedules
 
-Keep these habits in mind to maintain a clean, reliable staff schedule:
+Keep these habits in mind to maintain a clear, reliable staff schedule in the admin scheduler:
 
-- Review the upcoming week at least once to confirm coverage and spot gaps or overlaps.
-- Update shifts as soon as you know about changes, rather than waiting until the last minute.
-- Record time off and unavailable time before you assign new shifts.
-- Use notes on shifts for anything unusual, such as coverage swaps or special duties.
-- Periodically check with staff to confirm the schedule matches their understanding.
-- Plan your publish times so staff know when to expect new schedules, such as always publishing the next week by a certain day.
-- Avoid making large changes without publishing; long batches of unpublished edits can confuse staff.
-- After copying or repeating shifts, spot-check a few days at random to catch small mistakes.
-- Use filters to review each location, role, or staff member in turn and confirm there are no double-bookings.
-- Keep communication channels, like email addresses and phone numbers, up to date so staff can receive schedule notifications and urgent updates.
+- Review the upcoming week in **Week** view to confirm coverage and spot gaps.
+- Use departments consistently so the schedule colors match how your teams work.
+- Create shifts as **Open Shift** when you know coverage is needed but have not chosen a staff member yet.
+- Update shifts as soon as you learn about changes, then publish so staff see the latest version.
+- Use the **History** button to confirm publishes, especially before you send follow-up messages to staff.
+- Plan a regular time to publish new schedules so staff know when to check for updates.
+- Print the schedule when necessary, but treat the published online schedule as the source of truth.
