@@ -58,7 +58,8 @@
                 "path": "import-users",
                 "icon": "file-up"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Staff Scheduling",
@@ -69,7 +70,8 @@
                 "path": "scheduling",
                 "icon": "calendar-clock"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Core Concepts",
@@ -80,7 +82,8 @@
                 "path": "authentication",
                 "icon": "shield"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Reports",
@@ -156,7 +159,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Communications",
@@ -185,7 +189,8 @@
                 "title": "App Chat",
                 "path": "app-chat"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Forms",
@@ -194,9 +199,11 @@
                 "title": "Forms",
                 "path": "forms"
               }
-            ]
+            ],
+            "public": true
           }
-        ]
+        ],
+        "public": true
       },
       {
         "tab": "Changelog",
