@@ -1,0 +1,550 @@
+---
+title: Discounts
+description: Manage discount codes and multi-session discount configurations in Campium Admin, including settings, usage, and common troubleshooting.
+---
+
+## What you can do with Discounts
+
+Use the Discounts page in Campium Admin to manage all discount codes and multi-session discount configurations for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them.
+
+Use this page when you want to:
+
+- Create new discount codes for promotions or financial aid
+- Edit, archive, or delete existing discounts
+- Control when and where a discount can be used
+- Set up multi-session discounts that reward additional registrations
+
+<Callout kind="info">
+
+Discounts affect how much families pay at checkout. Make changes only if you understand your pricing policies and how they appear on invoices.
+
+</Callout>
+
+## Open the Discounts page
+
+<Steps>
+  <Step title="Open the Admin menu" icon="settings" title-type="p">
+    From the left sidebar, click **Admin**.
+  </Step>
+
+  <Step title="Go to Discounts" icon="settings" title-type="p">
+    In the Admin menu, click **Discounts**.
+  </Step>
+</Steps>
+
+When the page loads, you see a list of discounts and any multi-session discount configurations available to your account.
+
+## Discount list: columns and status
+
+Each row in the discount list represents a single discount code. Use the columns to understand how each discount behaves.
+
+<ParamField body="code" param-type="string" show-location="false">
+
+**Code** — The discount code families or staff enter at checkout.
+
+</ParamField>
+
+<ParamField body="description" param-type="string" show-location="false">
+
+**Description** — The text that appears on invoices and receipts. Use customer-friendly wording.
+
+</ParamField>
+
+<ParamField body="status" param-type="string" show-location="false">
+
+**Status** — Indicates whether the discount can currently be used. Typical values include:
+- **In use**: Discount is active and can be applied when other conditions are met.
+- **Not in use**: Discount is disabled or blocked by another setting.
+- **Expired**: Discount is past its end date.
+
+</ParamField>
+
+<ParamField body="amount" param-type="number" show-location="false">
+
+**Amount** — Shows either a fixed dollar amount or a percentage discount, depending on how you configured it.
+
+</ParamField>
+
+<ParamField body="public" param-type="boolean" show-location="false">
+
+**Public?** — Shows whether families can use the code in the parent portal:
+- **Yes**: Parents can enter this code at checkout.
+- **No**: Only staff can apply it from Admin.
+
+</ParamField>
+
+<ParamField body="allowDuplicates" param-type="boolean" show-location="false">
+
+**Allow duplicates?** — Controls whether the same user can receive the discount more than once:
+- **Yes**: The same user can use this discount multiple times.
+- **No**: The user can only receive this discount once.
+
+</ParamField>
+
+<ParamField body="usage" param-type="integer" show-location="false">
+
+**Usage** — How many times the discount has been successfully used.
+
+</ParamField>
+
+<ParamField body="limit" param-type="integer" show-location="false">
+
+**Limit** — Maximum number of allowed uses, if you set one. Blank or zero means no limit.
+
+</ParamField>
+
+<ParamField body="startEndDate" param-type="string" show-location="false">
+
+**Start Date / End Date** — The date range when the discount is valid. Outside this window, the discount cannot be applied.
+
+</ParamField>
+
+Use the action menu on each row to edit, archive, or delete a discount.
+
+## Create a new discount
+
+Create a new discount when you want to launch a promotion, offer financial aid, or apply staff-only adjustments.
+
+<Steps>
+  <Step title="Start a new discount" icon="plus" title-type="p">
+    Click **Add New Discount** on the Discounts page.
+  </Step>
+
+  <Step title="Enter code and description" icon="edit" title-type="p">
+    - Fill in **Discount Code**. This is what families or staff enter at checkout.  
+    - Fill in **Discount Description**. This appears on invoices and receipts.
+  </Step>
+
+  <Step title="Set the discount value" icon="edit" title-type="p">
+    Enter either:
+    
+    - **Fixed Amount** (for example, `25.00` for a twenty-five dollar discount), or  
+    - **Percent** (for example, `10` for ten percent off)
+
+    Leave the other field at zero. The system only accepts one positive value.
+
+  </Step>
+
+  <Step title="Optionally limit total uses" icon="settings" title-type="p">
+    In **Limit**, enter the maximum number of times this discount can be used.  
+    Leave blank or enter `0` for no limit.
+  </Step>
+
+  <Step title="Choose cart vs product behavior" icon="settings" title-type="p">
+    Set **Apply To Entire Cart**:
+    
+    - **Yes**: Apply the discount to the entire cart.  
+    - **No**: Allow product-level targeting through **Apply Only To These Products**.
+
+  </Step>
+
+  <Step title="Control who can use the discount" icon="users" title-type="p">
+    Set **Allow On Portal?**:
+    
+    - **Yes**: Families can enter the code during checkout in the parent portal.  
+    - **No**: Only staff can apply the discount in Admin.
+
+  </Step>
+
+  <Step title="Control repeat usage" icon="settings" title-type="p">
+    Set **Allow Duplicate?**:
+    
+    - **Yes**: The same user can receive the discount multiple times.  
+    - **No**: The discount applies at most once per user.
+
+  </Step>
+
+  <Step title="Choose calculation order" icon="settings" title-type="p">
+    Set **Apply After Other Discounts?**:
+    
+    - **Yes**: Calculate this discount after other discounts.  
+    - **No**: Use standard calculation order with other discounts.
+
+  </Step>
+
+  <Step title="Add optional date window" icon="calendar" title-type="p">
+    Optionally set **Start Date** and **End Date** to control when the discount is active.  
+    Leave these blank to allow use at any time (subject to other settings).
+  </Step>
+
+  <Step title="Target specific products (optional)" icon="package" title-type="p">
+    In **Apply Only To These Products**, select the products the discount should apply to.  
+    Leave this blank to allow the discount to apply across all eligible products.
+  </Step>
+
+  <Step title="Save the discount" icon="check-circle" title-type="p">
+    Review your entries and click **Save**.  
+    If the save succeeds, the discount appears in the list with the updated settings.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations.
+
+</Callout>
+
+## Edit, archive, or delete a discount
+
+Use the action menu on each discount row to update or remove a discount.
+
+<Steps>
+  <Step title="Open the action menu" icon="settings" title-type="p">
+    In the discount list, click the action menu for the discount you want to change.
+  </Step>
+
+  <Step title="Edit a discount" icon="edit" title-type="p">
+    Choose **Edit Discount** to update fields like amount, dates, or description.  
+    Adjust the fields, then click **Save**. Changes affect new uses of the discount.
+  </Step>
+
+  <Step title="Archive a discount" icon="archive" title-type="p">
+    Choose **Archive Discount** when you want to stop using a discount but keep its history.  
+    Archived discounts move out of the active list and no longer apply to new checkouts.
+  </Step>
+
+  <Step title="Delete a discount" icon="trash" title-type="p">
+    Choose **Delete Discount** to permanently remove the discount from your account.  
+    Confirm the deletion when prompted.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+Deleting a discount performs a hard delete in the database and cannot be undone. Use **Archive** when you want to preserve history. A delete may fail if the system cannot remove the record; in that case you see an error and the discount remains.
+
+</Callout>
+
+## Key settings explained
+
+### Public vs non-public discounts
+
+Use public settings to control who can apply a discount.
+
+- **Public = Yes**: Parents can enter the code themselves in the parent portal during checkout.  
+- **Public = No**: Staff must apply the discount from Admin; parents cannot see or use the code.
+
+Public discounts work well for general promotions. Non-public discounts work better for case-by-case adjustments or internal programs.
+
+### Limit (capacity)
+
+Limit controls how many times a discount can be used across all families.
+
+- **Blank or 0**: No usage cap. The discount can be used indefinitely, subject to date range and other rules.
+- **Any positive number**: The discount stops working after it reaches that many successful uses.
+
+Use limits for early-bird specials, limited-seat promotions, or grants with fixed budgets.
+
+### Date range
+
+Start and end dates control when a discount is active.
+
+- If you set a **Start Date**, the code cannot be used before that date.  
+- If you set an **End Date**, the code stops working after that date.  
+- If you leave both blank, the discount stays active unless you archive or delete it, or it hits a usage limit.
+
+When a discount is outside its date range, families and staff see validation errors and the discount will not apply.
+
+### Product restriction
+
+Product restrictions control where a discount applies.
+
+- If you select one or more products in **Apply Only To These Products**, the discount applies only to those products.  
+- If you leave this blank, the discount can apply broadly across eligible products and forms.
+
+Use product restrictions to limit discounts to certain camps, add-ons, or seasons.
+
+## Multi-session discounts
+
+Multi-session discounts automatically reward a registrant who enrolls in multiple qualifying sessions. These rules work on top of your regular discounts and use existing discount codes as tiers.
+
+### Access and permissions
+
+The **Multi-Session Discount Configurations** section may be visible only to superusers or specific admin roles. If you do not see this section on the Discounts page, contact your Campium admin team to request access.
+
+<Callout kind="info">
+
+Multi-session configurations are global pricing rules. Limit access to staff who manage tuition policies and discounts across your organization.
+
+</Callout>
+
+### What a multi-session configuration includes
+
+Each multi-session configuration defines a volume-based discount rule.
+
+<ParamField body="name" param-type="string" show-location="false">
+
+**Name** — Internal label for the rule, such as `Summer Session Volume Discount`.
+
+</ParamField>
+
+<ParamField body="form" param-type="string" show-location="false">
+
+**Form (optional)** — Limits the rule to one registration form, or applies it to all forms when left unset.
+
+</ParamField>
+
+<ParamField body="minimumSessions" param-type="integer" show-location="false">
+
+**Minimum Sessions** — Minimum number of qualifying sessions required before the rule can grant any discount.
+
+</ParamField>
+
+<ParamField body="enabled" param-type="boolean" show-location="false">
+
+**Enabled** — Turns the rule on or off without deleting it. Disabled rules do not apply at checkout.
+
+</ParamField>
+
+<ParamField body="discountTiers" param-type="array" show-location="false">
+
+**Discount Tiers** — One or more tier rows. Each tier sets:
+- A **Session Count** threshold.
+- A **Discount** (selected from your existing discount codes) that applies when the threshold is met.
+
+</ParamField>
+
+### Before you build multi-session rules
+
+Multi-session tiers reference existing discount codes. Create the underlying discount codes first on the main Discounts list, then use those codes in your multi-session configuration tiers.
+
+This gives you consistent invoice descriptions and lets you reuse existing discount logic.
+
+### How tiers work
+
+Tiers are threshold-based. The system evaluates how many qualifying sessions a registrant has and finds the best match among your tiers.
+
+- When the user reaches a tier's **Session Count**, they qualify for that tier's discount.  
+- If multiple tiers qualify, the system uses the best matching tier for that session count, typically the highest threshold they meet.
+
+**Example**
+
+- Tier for **2 sessions** → uses discount code `MULTI2`.  
+- Tier for **4 sessions** → uses discount code `MULTI4`.  
+
+If a registrant has 5 qualifying sessions, the 4-session tier applies.
+
+### Create a multi-session configuration
+
+Use these steps from the Multi-Session Discount Configurations section on the Discounts page.
+
+<Steps>
+  <Step title="Open multi-session configurations" icon="settings" title-type="p">
+    Scroll to **Multi-Session Discount Configurations** on the Discounts page.  
+    If you do not see this section, your account or role may not have access.
+  </Step>
+
+  <Step title="Start a new configuration" icon="plus" title-type="p">
+    Click **Add Multi-Session Discount** to open the configuration form.
+  </Step>
+
+  <Step title="Name and scope the rule" icon="edit" title-type="p">
+    - Enter a **Name** to identify the rule internally.  
+    - Optionally choose a **Form** to limit where the rule applies, or leave this blank to apply across forms where eligible.
+  </Step>
+
+  <Step title="Set minimum sessions" icon="settings" title-type="p">
+    In **Minimum Sessions**, enter the minimum number of qualifying sessions required before any tier can apply.  
+    Use `1` or higher; the system rejects values less than `1`.
+  </Step>
+
+  <Step title="Enable the configuration" icon="check-circle" title-type="p">
+    Set **Enabled** to **Yes** so the rule is active once you save it.  
+    You can toggle this later without deleting the configuration.
+  </Step>
+
+  <Step title="Add discount tiers" icon="plus" title-type="p">
+    Add one or more tier rows. For each row:
+    
+    - Enter the **Session count** threshold.  
+    - Select the **Discount** from your existing discount codes.
+
+    The configuration requires at least one complete tier row to save successfully.
+  </Step>
+
+  <Step title="Save the configuration" icon="check-circle" title-type="p">
+    Review your tiers and settings, then click **Save**.  
+    On success, the configuration appears in the multi-session list and will apply to new qualifying registrations.
+  </Step>
+</Steps>
+
+### Edit or delete a multi-session configuration
+
+<Steps>
+  <Step title="Edit a configuration" icon="edit" title-type="p">
+    In the multi-session list, click the pencil icon for the configuration you want to change.  
+    Update the name, form, minimum sessions, enabled flag, or tier rows, then click **Save**.
+  </Step>
+
+  <Step title="Delete a configuration" icon="trash" title-type="p">
+    Click the trash icon to remove a configuration entirely.  
+    Confirm the deletion when prompted. After deletion, the rule no longer appears or applies at checkout.
+  </Step>
+</Steps>
+
+You can disable a configuration temporarily by setting **Enabled** to **No**, instead of deleting it.
+
+## Best practices
+
+<Callout kind="tip">
+
+Use these guidelines to keep discounts understandable for both staff and families.
+
+</Callout>
+
+- Use clear, easy-to-type discount codes families can understand.  
+- Write descriptions that make sense on invoices and statements; avoid internal shorthand.  
+- Use date windows for time-limited promotions like early-bird or holiday specials.  
+- Prefer **Archive** over **Delete** when you want to preserve history for reporting and audits.  
+- Test discounts with a sample checkout, including multi-session rules, before announcing them.  
+- For multi-session tiers, keep thresholds simple and predictable so staff can explain them easily.
+
+## Troubleshooting
+
+Use this section when you see an error while saving a discount or multi-session configuration, or when a discount does not apply as expected.
+
+<ExpandableGroup>
+
+  <Expandable title="Error: Discount code is required." default-open="false">
+
+  The system shows **Discount code is required.** when you leave the **Discount Code** field blank while creating or editing a discount.
+
+  Fix it by entering a code:
+
+  - Use only allowed characters.  
+  - Make the code short and easy to type.  
+  - Save again after adding the code.
+
+  </Expandable>
+
+  <Expandable title="Error: Discount code cannot contain &" default-open="false">
+
+  The system shows **Discount code cannot contain &** when the code includes the `&` character.
+
+  Update the code to remove `&` and use letters, numbers, or other allowed symbols instead. Then save the discount again.
+
+  </Expandable>
+
+  <Expandable title="Error: Discount code already exists" default-open="false">
+
+  When you try to save a discount with a code that another discount already uses, you see **Discount code already exists**.
+
+  To resolve this:
+
+  - Choose a different, unique code.  
+  - Search the Discounts list to confirm how the existing code is used.  
+  - Save the new discount with a distinct code.
+
+  </Expandable>
+
+  <Expandable title="Error: Discount description is required." default-open="false">
+
+  If you leave the **Discount Description** blank, the system returns **Discount description is required.**
+
+  Enter a clear description that will appear on invoices, then save again.
+
+  </Expandable>
+
+  <Expandable title="Error: Only amount or percent can be greater than zero" default-open="false">
+
+  The system enforces that only one of **Fixed Amount** or **Percent** is positive. When both fields are greater than zero, you see **Only amount or percent can be greater than zero**.
+
+  Fix it by:
+
+  - Keeping the field you want (amount or percent) as a positive number.  
+  - Setting the other field to `0` or leaving it empty.  
+  - Saving the discount again.
+
+  </Expandable>
+
+  <Expandable title="Discount is not showing for families at checkout" default-open="false">
+
+  If families cannot see or use a discount code in the parent portal, check the following:
+
+  - **Allow On Portal? = Yes** on the discount.  
+  - The current date is between the discount's **Start Date** and **End Date**, or both are blank.  
+  - The **Limit** has not been reached. If usage equals the limit, the discount no longer applies.  
+  - Product restrictions match the items in the cart; the discount applies only to qualifying products.  
+  - The discount is not archived and its status indicates it is in use.
+
+  After adjusting settings, test again with a sample registration.
+
+  </Expandable>
+
+  <Expandable title="Multi-session discounts are not applying" default-open="false">
+
+  If a multi-session discount does not apply when expected:
+
+  - Confirm the configuration is **Enabled**.  
+  - Check that the **Minimum Sessions** is met by the registrant's qualifying sessions.  
+  - Make sure registrations are for products and forms that the configuration covers.  
+  - Verify each tier row has both a **Session count** and a valid **Discount** selected.  
+  - Confirm the discount codes used in tiers are active and not archived or expired.
+
+  Save any fixes and test again with a multi-session registration.
+
+  </Expandable>
+
+  <Expandable title="Error: Name is required." default-open="false">
+
+  When saving a multi-session configuration without a **Name**, the system returns **Name is required.**
+
+  Enter a clear internal name for the configuration and save again.
+
+  </Expandable>
+
+  <Expandable title="Error: Minimum sessions must be at least 1." default-open="false">
+
+  If you set **Minimum Sessions** to zero or a negative number, the system shows **Minimum sessions must be at least 1.**
+
+  Update **Minimum Sessions** to `1` or higher, then save again.
+
+  </Expandable>
+
+  <Expandable title="Error: At least one discount tier is required." default-open="false">
+
+  When you save a multi-session configuration without any valid tier rows, you see **At least one discount tier is required.**
+
+  Add at least one tier row with both:
+
+  - A **Session count**, and  
+  - A selected **Discount** from your existing codes.
+
+  Then save the configuration.
+
+  </Expandable>
+
+  <Expandable title="Error: Access denied. when saving multi-session configuration" default-open="false">
+
+  If your role does not have permission to manage multi-session configurations, the system can respond with **Access denied.** when you attempt to save.
+
+  In this case:
+
+  - Do not keep retrying the same action.  
+  - Contact your Campium admin or system owner to request the required access or to have them create the configuration for you.
+
+  </Expandable>
+
+</ExpandableGroup>
+
+## Related pages
+
+<Columns cols={2}>
+  <Card
+    title="Site Settings"
+    href="/settings"
+    icon="settings"
+    cta="Manage global settings"
+  >
+    Configure account-wide options that work alongside discounts, such as seasons, payments, and branding.
+  </Card>
+
+  <Card
+    title="Seasons & Sessions"
+    href="/seasons-and-sessions"
+    icon="calendar"
+    cta="Review session setup"
+  >
+    Review how sessions are structured so your discount and multi-session rules align with actual offerings.
+  </Card>
+</Columns>
