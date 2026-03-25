@@ -1,68 +1,130 @@
 ---
-title: Getting Started with Campium
+title: Quickstart for Campium Admins
 description: >-
-  Learn how to set up your Campium account and complete your first camp
-  management tasks in minutes.
+  Configure seasons, sessions, and registration forms so families can start
+  registering and purchasing in your Campium site.
 ---
-## Prerequisites
+Get your Campium site ready for families to register and purchase in a single setup flow. You will create a season, configure site settings, add sessions, and build a registration form that sells those sessions to the right recipients.
 
 <Callout kind="info" collapsed="false">
-  Before starting, ensure you have:
-
-  - A valid email address for account verification
-
-  - Basic camp details ready (name, dates, location)
+  Campium uses the term **Session** for anything purchasable (for example: Sessions, Expeditions, Classes, Courses, Programs, Products). You can relabel this term under **Admin → Site Settings**; parents never see this label, it is only visible to admins on the backend.
 </Callout>
 
-Campium streamlines camp operations like registration and attendance. Follow these steps to get up and running quickly.
+<Callout kind="tip" collapsed="false">
+  Before you start, decide how you want to group offerings into seasons (for example, Summer 2025, School Year 2025–26). A clear season structure keeps reporting and registration organized.
+</Callout>
 
-## Create and Verify Your Account
+## Complete your initial setup
 
-Sign up in under 2 minutes to access your dashboard.
+Follow these steps in order to get your first offerings live and purchasable.
 
 <Steps>
-  <Step title="Sign Up" icon="user-plus" title-type="p">
+  <Step title="Create a new season" icon="calendar" title-type="p">
+    From the main navigation, go to **Seasons → Add New Season**.
 
+    - Enter a clear season name such as **Summer 2025**.
+
+    - Set the start and end dates that cover all sessions in this season.
+
+    - Save the season.
+
+    When you finish, you return to the Seasons list and see your new season listed. For more detail on season structure, see [Seasons & Sessions](/seasons-and-sessions).
   </Step>
 
-  <Step title="Verify Email" icon="mail" title-type="p">
+  <Step title="Configure site settings" icon="settings" title-type="p">
+    Open **Admin → Site Settings** to configure the basics of your site.
 
+    - On the **Basic** tab, review items like your organization name and terminology for **Sessions**.
+
+    - On the **Payment Info** tab, enter the payment details required to process online payments.
+
+    - Review other tabs as needed; changes auto-save as you make them.
+
+    Site Settings control global behavior such as modules, branding, and payments. Learn more in [Site Settings](/settings).
   </Step>
 
-  <Step title="Log In" icon="log-in" title-type="p">
+  <Step title="Create sessions in your season" icon="package" title-type="p">
+    With your season and settings in place, add the specific offerings families can purchase.
 
+    - Go to **Seasons**, click your new season, then choose **Add New Session**.
+
+    - Enter the session name, dates, pricing, capacity, and any other required details.
+
+    - Repeat for each camp, class, or program you want to offer in this season.
+
+    Created sessions now exist as products tied to your season, but they are not yet available for purchase. For field-by-field guidance, see [Seasons & Sessions](/seasons-and-sessions).
+  </Step>
+
+  <Step title="Create a registration form" icon="file-text" title-type="p">
+    Next, build the form families will complete to register and purchase sessions.
+
+    - Go to **Forms** in the navigation.
+
+    - Click **Create Form** (or the equivalent button) to start a new form.
+
+    - Give the form a clear name such as **Summer 2025 Registration**.
+
+    - Save the form to unlock its tabs (Settings, Products Layout, Recipients, Questions, Responses).
+
+    This form becomes the main entry point families use to choose sessions and provide required information. For deeper form options, see [Forms](/forms).
+  </Step>
+
+  <Step title="Make sessions available to purchase" icon="shopping-cart" title-type="p">
+    Attach your season’s sessions to the registration form so families can add them to their cart.
+
+    - Open **Forms**, click your registration form, then go to the **Products Layout** (or **Sessions Layout**) tab.
+
+    - Add the sessions from your season that you want to sell through this form.
+
+    - Arrange and group sessions in a way that makes sense for families browsing your offerings.
+
+    When you finish, the form shows your sessions as purchasable options once it is published to families. Detailed layout options are covered in [Forms](/forms).
+  </Step>
+
+  <Step title="Set recipients for the form" icon="users" title-type="p">
+    Define which user profiles are eligible to complete this registration form.
+
+    - In your form, open the **Recipients** tab.
+
+    - Filter **User Type** to **Camper**.
+
+    - Set **Status** filters to include **Active**, **Inactive**, and **Pending**, based on who should be able to register.
+
+    - Save your recipient settings.
+
+    Correct recipient filters ensure the right families see the form when they log in. Learn more in [Forms](/forms).
+  </Step>
+
+  <Step title="Add questions for campers and families" icon="help-circle" title-type="p">
+    Collect the information you need during registration by adding questions to the form.
+
+    - Go to the **Questions** tab in your form.
+
+    - Add new questions for camper details, medical info, waivers, policies, and any other required information.
+
+    - Organize questions into pages or sections so the form is easy to complete.
+
+    - Save after you add or edit questions.
+
+    Once questions are in place, your registration form both sells sessions and captures all necessary data in one flow. Additional options are described in [Forms](/forms).
   </Step>
 </Steps>
 
-## Configure Basic Camp Settings
+## Learn more
 
-Set up your camp profile to enable registrations.
-
-<Steps>
-  <Step title="Access Settings" icon="settings" title-type="p">
-    From the dashboard, click **Admin -> Site Settings** in the left sidebar.
-  </Step>
-
-  <Step title="Save Changes" icon="save" title-type="p">
-    Click **Save Settings**. A confirmation banner appears.
-  </Step>
-</Steps>
-
-## Next Steps
-
-Dive deeper into Campium features.
+Use these pages to go deeper into each part of the setup when you are ready.
 
 <Columns cols="3">
-  <Card title="Authentication" href="/authentication" icon="shield" horizontal="false">
-    Secure your account with multi-factor authentication and team roles.
+  <Card title="Site Settings" href="/settings" icon="settings" horizontal="false">
+    Configure modules, payment information, and core terminology for your Campium site.
   </Card>
 
-  <Card title="Custom Reports" href="/reports" icon="bar-chart-3" horizontal="false">
-    Build reports for attendance and billing insights.
+  <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar" horizontal="false">
+    Learn how seasons organize your offerings and how to structure sessions as purchasable products.
   </Card>
 
-  <Card title="Integrations" href="/integrations" icon="plug" horizontal="false">
-    Connect with payment gateways and email services.
+  <Card title="Forms" href="/forms" icon="file-text" horizontal="false">
+    Explore form settings, products layout, recipients, questions, and how responses are stored.
   </Card>
 </Columns>
 
