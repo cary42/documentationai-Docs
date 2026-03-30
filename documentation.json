@@ -92,20 +92,20 @@
                 "group": "Financial",
                 "pages": [
                   {
-                    "title": "Deposit Summary",
-                    "path": "deposit-summary"
-                  },
-                  {
-                    "title": "Revenue Summary",
-                    "path": "revenue-summary"
+                    "title": "Accounts Receivable",
+                    "path": "account-balance"
                   },
                   {
                     "title": "ACH Returns & Rejects",
                     "path": "ach-returns"
                   },
                   {
-                    "title": "Accounts Receivable",
-                    "path": "account-balance"
+                    "title": "Deposit Summary",
+                    "path": "deposit-summary"
+                  },
+                  {
+                    "title": "Revenue Summary",
+                    "path": "revenue-summary"
                   }
                 ]
               },
@@ -113,28 +113,16 @@
                 "group": "System",
                 "pages": [
                   {
-                    "title": "Waitlist",
-                    "path": "waitlist"
-                  },
-                  {
-                    "title": "Scheduled Payments Report",
-                    "path": "system-report-scheduled-payments"
-                  },
-                  {
                     "title": "Active Cart Report",
                     "path": "system-report-active-cart"
                   },
                   {
-                    "title": "Family Scheduled Payments report",
-                    "path": "system-report-family-scheduled-payments"
+                    "title": "Attendance Kiosk",
+                    "path": "system-report-attendance-kiosk"
                   },
                   {
-                    "title": "Scheduled Payments - Missing report",
-                    "path": "system-report-scheduled-payments-missing"
-                  },
-                  {
-                    "title": "Scheduled Payment Email Log",
-                    "path": "system-report-scheduled-payment-email-log"
+                    "title": "Charts",
+                    "path": "system-report-charts"
                   },
                   {
                     "title": "Expired CC Report",
@@ -145,16 +133,32 @@
                     "path": "system-report-payment-plans"
                   },
                   {
-                    "title": "Payment Method Updates – Families with Failed Payments",
-                    "path": "system-report-payment-method-updates-families-with-failed-payments"
+                    "title": "Family Scheduled Payments report",
+                    "path": "system-report-family-scheduled-payments"
                   },
                   {
                     "title": "Families Without Primary Payment Method report",
                     "path": "system-report-families-without-primary-payment-method"
                   },
                   {
-                    "title": "Charts",
-                    "path": "system-report-charts"
+                    "title": "Payment Method Updates – Families with Failed Payments",
+                    "path": "system-report-payment-method-updates-families-with-failed-payments"
+                  },
+                  {
+                    "title": "Scheduled Payments Report",
+                    "path": "system-report-scheduled-payments"
+                  },
+                  {
+                    "title": "Scheduled Payments - Missing report",
+                    "path": "system-report-scheduled-payments-missing"
+                  },
+                  {
+                    "title": "Scheduled Payment Email Log",
+                    "path": "system-report-scheduled-payment-email-log"
+                  },
+                  {
+                    "title": "Waitlist",
+                    "path": "waitlist"
                   }
                 ]
               },

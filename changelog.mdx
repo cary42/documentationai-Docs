@@ -12,6 +12,109 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-03-30" description="Encrypted URLs and CRM follow-ups" tags={["security","improvement"]}>
+  ## Security
+
+  - Implemented URL-safe encryption for data passed in links to reduce the risk of tampering and exposure of sensitive identifiers.
+
+  ## Improvements
+
+  - Enhanced CRM proposal follow-up tools so staff can track responses more accurately and schedule reminders with clearer status indicators.
+</Update>
+
+<Update label="2026-03-29" description="Email notifications and duplicate prevention" tags={["improvement","bugfix"]}>
+  ## Improvements
+
+  - Refined email notification logic so families and staff receive updates only when relevant fields change.
+
+  ## Bug Fixes
+
+  - Prevented duplicate email sends in edge cases where forms or tickets were saved multiple times in quick succession.
+</Update>
+
+<Update label="2026-03-28" description="Admin forms, sessions, and donations" tags={["feature","improvement"]}>
+  ## New
+
+  - Expanded the admin form editor so staff can configure more advanced questions and layout options without custom development.
+
+  ## Improvements
+
+  - Updated the sessions layout to make capacity, dates, and age groups easier to scan for both staff and families.
+  - Improved donation page layout and behavior to highlight suggested amounts, recurring options, and donor contact details more clearly.
+</Update>
+
+<Update label="2026-03-27" description="Invoices, PDFs, and ticket notifications" tags={["improvement","bugfix"]}>
+  ## Improvements
+
+  - Refined family invoice templates for a cleaner, more readable PDF layout that highlights balances, discounts, and due dates.
+  - Added template-aware invoice links so admins can switch between alternative layouts without regenerating underlying billing data.
+  - Improved PDF generation for invoices and receipts to align columns, totals, and headers consistently across devices.
+  - Enhanced email template field retrieval so notifications show the right family, session, and balance details every time.
+
+  ## Bug Fixes
+
+  - Adjusted ticket notification logic to avoid missed or duplicate alerts when staff collaborate on the same ticket thread.
+</Update>
+
+<Update label="2026-03-26" description="Matrix reports, proposals, and ticket email accuracy" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added session selection controls to matrix-style reports so staff can include or exclude specific sessions before generating results.
+
+  ## Improvements
+
+  - Refined matrix session handling and report feedback so long-running reports show clearer progress and completion messages.
+  - Improved proposal management workflows, including more reliable tracking of proposal status and related email history.
+
+  ## Bug Fixes
+
+  - Fixed several SQL query edge cases in matrix reports to avoid incomplete or inconsistent results.
+  - Corrected email retrieval in new ticket flows so replies always use the correct family or contact email address.
+</Update>
+
+<Update label="2026-03-25" description="Email, forms, scheduler, and checkout updates" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added file upload support to the email sending form, allowing staff to attach PDFs, forms, and other documents directly to outgoing messages.
+
+  ## Improvements
+
+  - Streamlined email and PDF generation routines to produce more consistent formatting across different templates and languages.
+  - Enhanced the scheduler so background email and notification tasks run more reliably and respect updated user filters.
+  - Tightened image validation and user form handling in PDFs and checkout flows, reducing the chance of broken images or incomplete submissions.
+  - Updated caching for custom year and custom report logic to improve load times for frequently used reports.
+  - Clarified option and custom-answer handling in forms to reduce confusion when parents update answers inline during registration.
+
+  ## Bug Fixes
+
+  - Reduced unnecessary form record updates during saves, which helps avoid conflicting edits and improves performance.
+  - Fixed several email handling edge cases so previews, logs, and sends stay in sync, even when user IDs or addresses change.
+</Update>
+
+<Update label="2026-03-24" description="Email logging, payments, and PDF handling" tags={["improvement","bugfix"]}>
+  ## Improvements
+
+  - Refactored email logging so admins have clearer visibility into when messages were queued, sent, and delivered.
+  - Improved PDF creation and error handling in notification and results pages, reducing failed downloads and partial exports.
+
+  ## Bug Fixes
+
+  - Corrected payment authorization updates so successful card charges store the correct authorization code for future reference.
+  - Removed redundant SQL conditions in form-notification scripts to eliminate rare cases of missed notifications.
+  - Normalized how display values are rendered in results pages to protect against malformed data and ensure consistent formatting.
+</Update>
+
+<Update label="2026-03-23" description="PDF generation and scheduler filters" tags={["improvement","bugfix"]}>
+  ## Improvements
+
+  - Improved PDF generation stability and styling for exported notifications and results so long reports render consistently.
+  - Updated scheduler user filters to include active-status checks, ensuring that only current families and staff receive scheduled communications.
+
+  ## Bug Fixes
+
+  - Resolved several PDF error-handling paths to avoid blank or partially rendered documents when underlying data is incomplete.
+</Update>
+
 <Update label="2026-02-26" description="Authentication updates" tags={["security","improvement"]}>
   ## Security
 
@@ -96,22 +199,22 @@ Follow these steps to update your Campium instance safely.
 ## Quick Version Comparison
 
 <Columns cols="3">
-  <Card title="Authentication updates" href="#2026-02-26" icon="shield" horizontal="false">
-    Stronger passwords and social sign-in options.
+  <Card title="Encrypted URLs and CRM follow-ups" href="#2026-03-30" icon="shield" horizontal="false">
+    URL-safe encrypted links and improved proposal follow-up tracking.
   </Card>
 
-  <Card title="Login security, billing dashboard" href="#2026-02-24" icon="zap" horizontal="false">
-    Subdomain login restrictions and a Scheduled Payments dashboard card.
+  <Card title="Email notifications and duplicates" href="#2026-03-29" icon="zap" horizontal="false">
+    Smarter notification logic and safeguards against duplicate sends.
   </Card>
 
-  <Card title="Portal, reports, and payments" href="#2026-02-25" icon="truck" horizontal="false">
-    Improved purchase messaging and new expense report filters.
+  <Card title="Admin forms, sessions, donations" href="#2026-03-28" icon="truck" horizontal="false">
+    Richer form editor, clearer session views, and better donation pages.
   </Card>
 </Columns>
 
 <Tabs>
   <Tab title="No Breaking Changes" icon="check">
-    Updates like v2.1.0 and v1.9.0 require no schema changes. Simply apply and test.
+    Updates like v2.1.0 and v1.9.0 require no schema changes. Apply the release and verify your key workflows.
   </Tab>
 
   <Tab title="With Breaking Changes" icon="alert-triangle">
@@ -126,4 +229,3 @@ Follow these steps to update your Campium instance safely.
     ```
   </Tab>
 </Tabs>
-
