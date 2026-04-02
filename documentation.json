@@ -175,6 +175,18 @@
             "public": true
           },
           {
+            "group": "Transportation",
+            "icon": "bus",
+            "pages": [
+              {
+                "title": "Transportation",
+                "path": "trans",
+                "icon": "bus"
+              }
+            ],
+            "public": true
+          },
+          {
             "group": "Communications",
             "pages": [
               {
