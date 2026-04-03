@@ -1,0 +1,273 @@
+---
+title: Transportation
+description: Use Transportation in CampiumDB to manage buses and riders, view live tracking, and review pickup privileges for safe, organized dismissal.
+---
+
+## Overview
+
+Use Transportation in CampiumDB to manage bus routes, assign campers as riders, track buses on a map, and review pickup privileges for dismissal.
+
+Transportation has two main parts:
+
+- **Buses / Vehicles**: manage bus lists, assign riders, order riders, view a live map, and optionally send messages to riders.
+- **Pickup Privileges**: see who is allowed to pick up a camper and run a pickup privileges report.
+
+<Callout kind="info">
+
+Transportation is available in the admin portal. Your access depends on your user role and Transportation or Bus permissions.
+
+</Callout>
+
+## Who uses this
+
+<Callout kind="info">
+
+Transportation typically involves three groups:
+
+- **Transportation coordinators / office staff**: set up buses and riders; monitor routes.
+- **Bus staff**: check riders in, see rider lists, and communicate updates from the Riders page (if Email Riders is enabled).
+- **Admins / super users**: configure which profile field or fields represent buses and control who can access Transportation.
+
+</Callout>
+
+## Getting to Transportation
+
+Access Transportation features from the admin portal:
+
+- **Buses / Transportation**: open this area to work with the **Bus list**, Riders pages, and Map tab. This is commonly labeled **Bus** in the navigation.
+- **Reports**: open the **Pickup Privileges** report when you need a printable or exportable list of authorized pickup people.
+
+## Buses: basics
+
+### What is a bus in CampiumDB
+
+A bus (or vehicle/route) is a named item you assign campers to as riders and, optionally, track in real time on a map.
+
+You use buses to:
+
+- Assign campers as **riders** for transportation.
+- Order riders in the sequence they will be picked up or dropped off.
+- Optionally track the bus in real time on a map when tracking is enabled.
+
+### The Bus list page
+
+The Bus list shows a summary of each bus so you can see the day at a glance.
+
+On the Bus list you typically see:
+
+- **Vehicle name**
+- **Number of riders**
+- **Arrival time** (optional)
+- **Destination** (optional)
+- **Tracking status** (on or off) and a link to open the bus on the **Map** tab when tracking is on
+
+Use the Bus list to confirm buses exist, review rider counts, and jump into Riders or Map views.
+
+## Day-to-day workflow
+
+Use this workflow on a typical season and bus day, from setup through communication.
+
+<Steps>
+
+  <Step title="Set up buses for the season" icon="settings" titleType="p">
+
+  Open the **Bus list** to confirm your buses for the season.
+
+  - Check that each expected bus or vehicle appears.
+  - Confirm the **Vehicle name** matches what staff expect to see on their lists.
+  - For each bus, optionally set:
+    - **Arrival time**
+    - **Destination**
+
+  If you do not see the buses you expect, go to the Troubleshooting section at the end of this page.
+
+  </Step>
+
+  <Step title="Add riders to a bus" icon="users" titleType="p">
+
+  From the **Bus list**, click a bus to manage its riders on the **Riders** page.
+
+  - Click **Add Riders**.
+  - Select the campers who should be on this bus.
+  - Save your changes.
+
+  After you save, the Riders list shows each camper assigned to that bus as a rider.
+
+  </Step>
+
+  <Step title="Order riders by pickup or dropoff sequence" icon="list-ordered" titleType="p">
+
+  Use the **Riders** page to put riders in the order the bus will serve them.
+
+  - Drag the **sort or reorder** handle next to each rider.
+  - Arrange riders so the list matches your planned pickup or dropoff sequence.
+
+  The order you set here guides staff and can improve coordination with your schedule and map view.
+
+  </Step>
+
+  <Step title="Add stop times and addresses (recommended)" icon="map" titleType="p">
+
+  Still on the **Riders** page, click into fields to fill out per-rider details.
+
+  - Enter the **Pickup/Dropoff time** (the stop time) for each rider.
+  - Add the **Address** for each stop.
+
+  Tips:
+
+  - Use a consistent time format for all riders on a route.
+  - Enter full addresses (street, city, state) for best map accuracy and clearer directions for staff.
+
+  </Step>
+
+  <Step title="Check riders in on bus day" icon="check-circle" titleType="p">
+
+  On the day of transportation, open the **Riders** page with the correct date selected.
+
+  - Find each camper as they arrive or board.
+  - Click **Check-in** for each rider as they get on the bus.
+  - If you select the wrong rider by mistake, use **undo** when available to reverse the check-in.
+
+  The Riders page then reflects who is on the bus for that date.
+
+  </Step>
+
+  <Step title="View the map for live tracking" icon="monitor" titleType="p">
+
+  Use the **Map** tab to see live location for buses with tracking enabled.
+
+  - From the Bus list, open the bus and switch to the **Map** tab, or open the Map tab directly from Bus list if available.
+  - Confirm that tracking is on for the bus you want to monitor.
+
+  When tracking is enabled, the map shows the bus location and updates periodically rather than instantly. Only buses with tracking enabled show as live on the map.
+
+  </Step>
+
+  <Step title="Email riders for a bus (optional)" icon="mail" titleType="p">
+
+  Use **Email Riders** to send optional updates or reminders to riders and their families for a specific bus.
+
+  - On the **Riders** page, click **Email Riders**.
+  - Fill in:
+    - **From email**
+    - **Subject**
+    - **Email body**
+  - Click **Save Email** first.
+  - Use **Preview** to confirm the content and formatting.
+  - Click **Send Test Email** to send a trial message to yourself or a staff address.
+  - When everything looks correct, click **Send to All Riders**.
+
+  The editor supports simple placeholders like `{first_name}`, `{last_name}`, and `{email}` when those placeholders are enabled in your template.
+
+  </Step>
+
+</Steps>
+
+## Pickup Privileges (Dismissal): basics
+
+### What are pickup privileges
+
+Pickup privileges define which people are authorized to pick up a camper.
+
+Use pickup privileges for:
+
+- End-of-day dismissal verification.
+- Front desk and security confirmation when adults arrive.
+- Reporting and audit trails for who is allowed to pick up each camper.
+
+### Add or update pickup people
+
+Pickup people are usually managed from the camper profile or through your organization’s pickup workflow.
+
+When you add or update a pickup person, you normally enter:
+
+- **Name**
+- **Relationship** to the camper
+- **Phone** number
+
+Keep these fields accurate so staff can quickly confirm identity and contact information during dismissal.
+
+### Pickup Privileges report
+
+Run the **Pickup Privileges** report when you need a list of campers and their approved pickup people.
+
+You can typically use the report to:
+
+- View each camper with their authorized pickup people.
+- Filter by season or product when filters are available.
+- Export or print the report, depending on your reporting tools.
+
+Use printed or exported copies at dismissal points where live access to the admin portal is limited.
+
+## Troubleshooting
+
+<ExpandableGroup>
+
+  <Expandable title="I do not see the Bus area in navigation" default-open="false">
+
+  If you do not see Buses, Transportation, or Bus in the admin navigation, your user role may not include Transportation or Bus permissions.
+
+  Ask an admin to review your role and grant Transportation or Bus access if appropriate.
+
+  </Expandable>
+
+  <Expandable title="A bus is missing from the Bus list" default-open="false">
+
+  When a bus you expect is missing from the Bus list, common causes include:
+
+  - The bus or vehicle field is not configured for your agency.
+  - The bus exists in profiles or settings but is not marked as a bus field.
+
+  Ask a super user or admin to review Bus settings and confirm which profile fields represent buses.
+
+  </Expandable>
+
+  <Expandable title="A camper does not appear in the Riders list" default-open="false">
+
+  If a camper does not show on the Riders page for a bus, check:
+
+  - The camper is actually assigned to that bus.
+  - The camper is active in your system.
+  - The camper has an **active session on that date**. Some views hide riders who are not scheduled for the selected day.
+
+  Update the camper’s bus assignment or session dates as needed, then refresh the Riders page.
+
+  </Expandable>
+
+  <Expandable title="The map is blank or does not show my bus" default-open="false">
+
+  When the **Map** tab is blank or does not show the bus you expect, consider:
+
+  - Tracking may not be enabled for that bus.
+  - The bus may not be sending location updates currently.
+  - Network or browser restrictions, such as ad blockers, can interfere with map tiles.
+
+  Try these steps:
+
+  - Confirm tracking is enabled and the bus shows **Tracking On** on the Bus list.
+  - Refresh the page and reopen the **Map** tab.
+  - If the issue persists, check with your IT team about browser extensions or network filters.
+
+  </Expandable>
+
+  <Expandable title="Email sending is failing or formatting looks wrong" default-open="false">
+
+  If Email Riders messages do not send or look incorrect:
+
+  - Click **Save Email** before you preview or send.
+  - Use **Send Test Email** first to see exactly what families will receive.
+  - Avoid pasting content directly from Word or other rich editors. Paste as plain text if formatting becomes messy, then reapply simple formatting in the editor.
+
+  When a test email looks good and sends successfully, try sending again to all riders.
+
+  </Expandable>
+
+</ExpandableGroup>
+
+## Glossary
+
+- **Bus / Vehicle**: a route or vehicle you assign riders to for transportation.
+- **Rider**: a camper assigned to a bus.
+- **Stop time**: the planned pickup or dropoff time for a rider.
+- **Tracking**: live location sharing for a bus, displayed on the Map tab.
+- **Pickup privileges**: the list of authorized pickup people for a camper.
