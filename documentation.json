@@ -257,6 +257,24 @@
             "icon": "history"
           }
         ]
+      },
+      {
+        "tab": "FAQ",
+        "pages": [
+          {
+            "group": "Profiles",
+            "pages": [
+              {
+                "title": "Can I log in as a parent?",
+                "path": "help-center/faq/can-i-login-as-a-parent"
+              }
+            ]
+          },
+          {
+            "group": "General",
+            "pages": []
+          }
+        ]
       }
     ]
   },
