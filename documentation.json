@@ -141,7 +141,7 @@
                     "path": "system-report-families-without-primary-payment-method"
                   },
                   {
-                    "title": "Payment Method Updates – Families with Failed Payments",
+                    "title": "Payment Method Updates - Families with Failed Payments",
                     "path": "system-report-payment-method-updates-families-with-failed-payments"
                   },
                   {
@@ -272,7 +272,12 @@
           },
           {
             "group": "General",
-            "pages": []
+            "pages": [
+              {
+                "title": "Allow staff to quickly email their assigned sessions",
+                "path": "help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions"
+              }
+            ]
           }
         ]
       }
