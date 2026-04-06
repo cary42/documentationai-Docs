@@ -260,6 +260,11 @@
                 "title": "Tiered pricing",
                 "path": "tiered-pricing",
                 "icon": "badge-dollar-sign"
+              },
+              {
+                "title": "Subproducts",
+                "path": "subproducts",
+                "icon": "boxes"
               }
             ]
           }
@@ -295,6 +300,5 @@
         ]
       }
     ]
-  },
-  "title": "Campium Documentation"
+  }
 }

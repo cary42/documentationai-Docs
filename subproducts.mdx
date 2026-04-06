@@ -1,0 +1,306 @@
+---
+title: Subproducts
+description: Use subproducts to offer the same session in different ways by grade, age band, or other profile answers, with their own prices, caps, and wait lists.
+---
+
+## What subproducts are
+
+Subproducts let you offer one session in different ways to different campers, based on how their profile is answered.
+
+A common example is **grade-based pricing**. You might charge younger campers one price and older campers another, or give each group a different capacity. Instead of cloning the same session three times, you create one main session and add subproducts like:
+
+- Grade 3–4
+- Grade 5–6
+- Grade 7–8
+
+Each of these is still part of the same session product, but with its own settings.
+
+### What each subproduct can control
+
+Each subproduct can have its own:
+
+- **Price**
+- **Minimum deposit**
+- **Capacity** (including unlimited, when allowed)
+- **Status** (for example, open or wait list)
+- **Description** (shown on the parent-facing site)
+- **Option name** (used in admin and reports)
+- **Staff** (optional, in the edit screen)
+
+The main session still has its own overall price, deposit, and capacity. Those appear at the top of the Subproducts page as a reference. Subproducts override those numbers for campers who match them.
+
+## When to use subproducts
+
+Use subproducts when one session should not look or behave the same for every camper.
+
+Common reasons:
+
+- **Different prices by group**  
+  For example, Grade 1–2 at 350, Grade 3–4 at 375, Grade 5–6 at 400.
+
+- **Different seat limits by group**  
+  You might allow 20 younger campers and 12 older campers in the same session.
+
+- **Hide the session for some campers**  
+  Only certain profile answers should see or be able to register for the session at all.
+
+- **Separate wait lists per group**  
+  You want a wait list and capacity that tracks per grade or age band without creating duplicate session products.
+
+Subproducts are about giving you control by **segment** (grade, age band, transportation choice, etc.) while keeping your catalog cleaner.
+
+## Which profile questions work best
+
+Subproducts are built from profile questions where families pick from a **fixed list of answers**.
+
+Good fits include questions like:
+
+- Grade (for example, Kindergarten, 1st, 2nd, 3rd)
+- Age band (for example, 5–7, 8–10, 11–13)
+- Transportation choice (for example, Bus A, Bus B, Parent pick-up)
+- Cabin type or experience level, when chosen from a set list
+
+In the New Subproduct flow you:
+
+1. Choose one or more profile questions.
+2. For each question, choose which answers should create subproducts.
+
+Only the answers you select turn into subproducts. Answers you never select do not match anything for that session, so those families usually do not see that session as a regular option.
+
+## How camper matching works
+
+The matching rules determine which campers see which subproduct, and whether the session shows as available at all.
+
+When a family tries to book a session that uses subproducts, the system:
+
+1. Looks at which profile questions are tied to subproducts on that session.
+2. Reads the camper’s saved answers to those questions.
+3. Finds a subproduct where **all** of the required answers match the camper’s answers.
+
+If it finds a match, the camper sees that subproduct’s price, capacity, and status. If it does not, the session may not appear as available for that camper.
+
+<Callout kind="info">
+
+Key things to remember when helping families:
+
+- Every profile question you use for subproducts matters. If a subproduct depends on both grade and another answer, the camper must match **both** for at least one of the defined combinations.
+- If a camper has no answer saved yet for a question that drives subproducts, there may be no match. The session may not show as a normal purchasable option until the family answers those questions.
+- Only the combinations you actually created as subproducts exist. There is no automatic catch‑all subproduct for "everyone else" unless you add one on purpose.
+
+</Callout>
+
+When troubleshooting, it often helps to compare the camper’s profile answers to the Profile fields and Response columns for the subproducts on that session.
+
+## Where to find subproducts in admin
+
+Access subproducts from within the session product itself.
+
+<Callout kind="info">
+
+To work with subproducts:
+
+- Open the session product in admin.
+- Click **Subproducts** in that product’s menu.
+
+The page address includes `admin/products/product-options.php` along with the product and security key. You can bookmark it if you often return to the same product.
+
+</Callout>
+
+At the top of the Subproducts page you see the **parent price**, **minimum deposit**, and **overall capacity**. Below that, you see:
+
+- A **New Subproduct** button for the step‑by‑step setup.
+- A **table of existing subproducts** with quick editing for key numbers.
+
+## Create new subproducts
+
+Use the New Subproduct wizard to build subproducts from one or more profile questions.
+
+<Steps>
+
+<Step title="Open the New Subproduct wizard" icon="plus">
+
+- Go to the session product in admin.
+- Click **Subproducts**.
+- Click **New Subproduct**.
+
+You should now see a screen where you can choose profile questions to drive your subproducts.
+
+</Step>
+
+<Step title="Choose profile questions" icon="settings">
+
+- Under **Profile Fields**, select the question or questions that should control how this session changes (for example, **Grade**).
+
+If you are starting out, pick **one** question so it is easier to understand how matching works.
+
+</Step>
+
+<Step title="Pick which answers need subproducts" icon="check-circle">
+
+- For each selected question, use the dropdown to pick which answers you want to create subproducts for (for example, "3rd", "4th", "5th" grade).
+- Skip any answers that should **not** have access to this session. Those campers will usually not see the session as available.
+
+The system uses only the answers you choose to build the subproduct list.
+
+</Step>
+
+<Step title="Understand combinations when using multiple questions" icon="info">
+
+If you select more than one profile question, the system creates one subproduct for **every combination** of the answers you selected.
+
+Imagine:
+
+- Question A (Grade) = 3rd, 4th
+- Question B (Swim level) = Beginner, Intermediate
+
+You will get four subproducts:
+
+- 3rd grade + Beginner
+- 3rd grade + Intermediate
+- 4th grade + Beginner
+- 4th grade + Intermediate
+
+This is helpful when you truly need that level of detail, but it can grow quickly.
+
+</Step>
+
+<Step title="Avoid creating too many options" icon="alert-triangle">
+
+Before you save:
+
+- Check how many combinations you are about to create.
+- Remove any answers you do not actually need, especially when using two or more questions together.
+
+A small change to your selections can dramatically reduce the number of subproducts and keep your admin and reports easier to manage.
+
+</Step>
+
+<Step title="Save and review key settings" icon="check-circle">
+
+Click **Save** to create the subproducts.
+
+New subproducts usually start with:
+
+- The **parent product’s price**
+- The **parent minimum deposit**
+- A default **capacity** that you can change
+
+Right after creation, review for each new subproduct:
+
+- **Price**
+- **Minimum deposit**
+- **Capacity**
+- **Status** (open, wait list, etc.)
+
+Update anything that should differ from the parent or from other subproducts.
+
+</Step>
+
+</Steps>
+
+When everything looks correct, test the parent portal using camper profiles that represent each answer you care about, to make sure the right subproducts appear.
+
+## Understand the subproducts table
+
+The subproducts table shows each option for that session and how it behaves. Each row is one subproduct. Each column tells you something different:
+
+- **Option name**  
+  Short internal label for the subproduct. This appears in admin and reports.
+
+- **Description**  
+  Text shown on the parent site next to this option. Use friendly wording for families.
+
+- **Profile fields**  
+  Which profile question or questions define this option (for example, Grade, Swim level).
+
+- **Response**  
+  The specific answer or answers that must match (for example, "3rd grade", "Intermediate").
+
+- **Status**  
+  Whether this option is open, full, on wait list, or in another state based on your setup.
+
+- **Price**  
+  The amount a matching camper will be charged for this option.
+
+- **Min. Dep.**  
+  The minimum deposit required when a family registers for this option.
+
+- **Capacity**  
+  The seat limit for this option. Check the edit screen for how unlimited capacity works if that is enabled.
+
+- **Wait**  
+  A link into the wait‑list reporting for this particular option.
+
+- **# Reg.**  
+  The number of registrations that currently match this subproduct.
+
+Use this table to see, at a glance, which campers can get in, what they will pay, and how full each segment is.
+
+## Edit or delete subproducts
+
+You can adjust subproducts from the table or open a full edit screen when you need more changes.
+
+<Steps>
+
+<Step title="Make quick inline edits" icon="edit">
+
+Use quick edits when you only need to adjust a number.
+
+- In the subproducts table, click on **Price**, **Min. Dep.**, or **Capacity** for the row you want to change.
+- Type the new value.
+- Finish the field (for example, press <kbd>Enter</kbd> or click away) to save.
+
+Quick edits are best for small corrections across several options.
+
+</Step>
+
+<Step title="Open the full edit screen" icon="settings">
+
+Use the full edit when you need to change more than just numbers.
+
+- In the subproducts table, click the **pencil** icon for the subproduct you want to edit.
+- In the modal that opens, review and adjust:
+
+  - **Option name**
+  - **Description**
+  - **Price**
+  - **Minimum deposit**
+  - **Capacity**
+  - **Assigned staff** (optional)
+  - **Status** and any wait‑list behavior
+
+- Save your changes when you are done.
+
+The full edit gives you complete control over how that option appears to families and staff.
+
+</Step>
+
+<Step title="Delete unused subproducts safely" icon="trash">
+
+You can delete subproducts that **do not** have any registrations.
+
+- In the table, select the checkboxes for the subproducts you want to remove.
+- Use the bulk delete action to remove them.
+
+Subproducts that already have registrations are protected:
+
+- The checkbox does **not** appear for subproducts that are in use.
+- You cannot delete those from this screen, which helps you avoid breaking existing registrations.
+
+If you need to retire an in‑use subproduct, change its **Status** instead (for example, close it or move it to wait list) so new families cannot pick it.
+
+</Step>
+
+</Steps>
+
+## Practical tips
+
+<Callout kind="tip">
+
+- **Start simple.** Begin with one profile question (often Grade) until your team is comfortable with how matching works.
+- **Add complexity only when needed.** Use a second question (for example, swim level) only when you truly need combined control over price or capacity.
+- **Test like a parent.** After changing prices or caps, log in as a test family with different profile answers to confirm they see the right options and prices.
+- **Name options clearly.** Keep option names consistent (for example, "Week 1 – Grade 3–4") so reports stay easy to read. Use the Description field for parent‑friendly language.
+- **Review regularly.** At the start of each season, quickly scan your subproducts for outdated options, strange capacities, or missing wait‑list settings.
+
+</Callout>
