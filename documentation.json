@@ -48,11 +48,6 @@
                 "icon": "file-text"
               },
               {
-                "title": "Profiles",
-                "path": "profiles",
-                "icon": "users"
-              },
-              {
                 "title": "Import Users",
                 "path": "import-users",
                 "icon": "upload"
@@ -169,6 +164,33 @@
               }
             ],
             "public": true
+          },
+          {
+            "group": "Profile Management",
+            "pages": [
+              {
+                "group": "Payments",
+                "pages": [
+                  {
+                    "title": "Processing Refunds and Voids",
+                    "path": "processing-refunds-and-voids"
+                  }
+                ]
+              },
+              {
+                "title": "Profiles",
+                "path": "profiles",
+                "icon": "users"
+              },
+              {
+                "title": "How to create data views for profiles",
+                "path": "how-to-create-data-views-for-profiles"
+              },
+              {
+                "title": "Managing multiple email addresses",
+                "path": "managing-multiple-email-addresses"
+              }
+            ]
           },
           {
             "group": "Transportation",

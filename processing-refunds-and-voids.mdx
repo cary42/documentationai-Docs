@@ -1,0 +1,88 @@
+---
+title: Processing Refunds and Voids
+description: >-
+  Refund or void credit card and ACH payments from a user profile’s Sales tab,
+  and remove scheduled or future payments when needed.
+---
+## Overview
+
+Process refunds and voids for credit card and ACH payments from the **Sales** tab in an individual user’s profile. You can also remove scheduled or future payments from the same place.
+
+Refunds are available only after a payment settles. Before settlement, you may see a **Void** or **Remove** option instead of **Refund**, depending on whether the payment has already run or is still scheduled.
+
+## When refunds are available
+
+Refunds become available once the original charge has fully settled to your merchant account.
+
+- For **credit card payments**, this is typically the next day.
+
+- For **ACH payments**, settlement typically takes **3–5 business days**.
+
+Before settlement, the payment is still pending and you will see a **Void** option instead of **Refund**. Voiding cancels the payment before it completes.
+
+<Callout kind="info" collapsed="false">
+  If the transaction has not settled yet, you see a **Void** option that cancels the pending payment. Depending on your daily batching cutoff, you may see a message indicating you can no longer void the transaction. When that message appears, wait for the payment to settle, then issue a refund instead of a void.
+</Callout>
+
+Once the payment settles, the **Void** option is no longer available and a **Refund** option appears for that transaction.
+
+## How to issue a refund
+
+Use the Sales tab in a user’s profile to refund completed credit card or ACH payments.
+
+<Steps>
+  <Step title="Open the user's Sales tab" icon="users" title-type="p">
+    - Go to the relevant user’s profile.
+
+    - Click the **Sales** tab to view their charges and payments.
+  </Step>
+
+  <Step title="Select the completed payment" icon="search" title-type="p">
+    - In the payment list, find the completed **credit card** or **ACH** payment you want to refund.
+
+    - Hover over the payment row until a **Refund** link appears.
+  </Step>
+
+  <Step title="Enter refund details" icon="edit" title-type="p">
+    - Click the **Refund** link.
+
+    - Enter the **amount** you want to refund. You can issue a full or partial refund.
+
+    - Enter a **reason** for the refund.
+  </Step>
+
+  <Step title="Confirm the refund" icon="check-circle" title-type="p">
+    - Review the refund amount and reason, then confirm the refund.
+
+    - The refund appears on the family’s invoice along with the reason you entered, so they can clearly see why the adjustment was made.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  As of December 2, 2025, if the original transaction included a surcharge, that surcharge amount is **not** refunded to the family when you issue a refund. The surcharge is kept by your organization.
+</Callout>
+
+## Canceling scheduled or future payments
+
+Cancel scheduled or future payments from the same Sales tab in the user’s profile.
+
+<Steps>
+  <Step title="Open the user's Sales tab" icon="users" title-type="p">
+    - Go to the user’s profile.
+
+    - Click the **Sales** tab.
+  </Step>
+
+  <Step title="Remove the future payment" icon="trash" title-type="p">
+    - Find the scheduled or future payment you want to cancel.
+
+    - Follow the same steps you use to access refunds and voids. Instead of a **Refund** or **Void** link, you see a **Remove** option.
+
+    - Click **Remove** to cancel the scheduled or future payment.
+  </Step>
+</Steps>
+
+The payment will no longer process on the scheduled date once you remove it.
+
+<Iframe uid="1c6ae5af-715c-4aaa-b536-7e4787db8d3c" src="https://share.layerpath.com/e/cm19txkzc0014jp0daq2qw6i2/tour" title="Embedded content" height="400" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
+
