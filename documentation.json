@@ -1,5 +1,9 @@
 {
   "name": "Campium",
+  "initialRoute": "quickstart",
+  "template": "classic",
+  "logo-light": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1771944485530-urq2hwzgrun-453x453.jpg?q=85&fm=auto&auto=compress%2Cformat",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1774525971012-boy26cxwcdb-dark-theme-logo.png?q=85&fm=auto&auto=compress%2Cformat",
   "colors": {
     "light": {
       "brand": "#3898EC"
@@ -31,22 +35,22 @@
               {
                 "title": "Site Settings",
                 "path": "settings",
-                "icon": "cog"
+                "icon": "settings"
               },
               {
                 "title": "Account",
                 "path": "account",
-                "icon": "circle-user"
+                "icon": "user"
               },
               {
                 "title": "Business Info & Logo",
                 "path": "business-info-and-logo",
-                "icon": "building-2"
+                "icon": "file-text"
               },
               {
                 "title": "Seasons & Sessions",
                 "path": "seasons-and-sessions",
-                "icon": "calendar-sync"
+                "icon": "calendar"
               },
               {
                 "title": "Profiles",
@@ -56,19 +60,19 @@
               {
                 "title": "Import Users",
                 "path": "import-users",
-                "icon": "file-up"
+                "icon": "upload"
               }
             ],
             "public": true
           },
           {
             "group": "Staff Scheduling",
-            "icon": "calendar-days",
+            "icon": "calendar",
             "pages": [
               {
                 "title": "Scheduling",
                 "path": "scheduling",
-                "icon": "calendar-clock"
+                "icon": "calendar"
               }
             ],
             "public": true
@@ -141,7 +145,7 @@
                     "path": "system-report-families-without-primary-payment-method"
                   },
                   {
-                    "title": "Payment Method Updates - Families with Failed Payments",
+                    "title": "Payment Method Updates \u0015 Families with Failed Payments",
                     "path": "system-report-payment-method-updates-families-with-failed-payments"
                   },
                   {
@@ -176,12 +180,12 @@
           },
           {
             "group": "Transportation",
-            "icon": "bus",
+            "icon": "file-text",
             "pages": [
               {
                 "title": "Transportation",
                 "path": "transportation",
-                "icon": "bus"
+                "icon": "file-text"
               }
             ],
             "public": true
@@ -212,7 +216,7 @@
               {
                 "title": "App Chat",
                 "path": "app-chat",
-                "icon": "lucide-message-square"
+                "icon": "file-text"
               }
             ],
             "public": true
@@ -229,20 +233,35 @@
           },
           {
             "group": "Admin",
-            "icon": "file-cog",
+            "icon": "file-text",
             "pages": [
               {
                 "title": "Discounts",
                 "path": "discounts",
-                "icon": "badge-percent"
+                "icon": "file-text"
               },
               {
                 "title": "Contracts",
                 "path": "contracts",
-                "icon": "signature"
+                "icon": "file-text"
+              },
+              {
+                "title": "Payment Plans",
+                "path": "payment-plans",
+                "icon": "file-text"
               }
             ],
             "public": true
+          },
+          {
+            "group": "Seasons & Sessions",
+            "pages": [
+              {
+                "title": "Tiered pricing",
+                "path": "tiered-pricing",
+                "icon": "badge-dollar-sign"
+              }
+            ]
           }
         ],
         "public": true
@@ -262,34 +281,20 @@
         "tab": "FAQ",
         "pages": [
           {
-            "group": "Profiles",
-            "pages": [
-              {
-                "title": "Can I log in as a parent?",
-                "path": "help-center/faq/can-i-login-as-a-parent"
-              }
-            ]
+            "group": "Payments",
+            "pages": []
+          },
+          {
+            "group": "Portal",
+            "pages": []
           },
           {
             "group": "General",
-            "pages": [
-              {
-                "title": "How to change a user's name",
-                "path": "how-to-change-a-users-name"
-              },
-              {
-                "title": "Allow staff to quickly email their assigned sessions",
-                "path": "help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions"
-              }
-            ]
+            "pages": []
           }
         ]
       }
     ]
   },
-  "template": "classic",
-  "logo-light": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1771944485530-urq2hwzgrun-453x453.jpg?q=85&fm=auto&auto=compress%2Cformat",
-  "title": "Campium Documentation",
-  "initialRoute": "quickstart",
-  "logo-dark": "https://blob-cdn.documentation.ai/org-0d8eec32-96fa-419f-9505-03b1e136b066/doc-76bb5730-4569-4c2d-926d-aa8a7b125b49/1774525971012-boy26cxwcdb-dark-theme-logo.png?q=85&fm=auto&auto=compress%2Cformat"
+  "title": "Campium Documentation"
 }

@@ -1,0 +1,200 @@
+---
+title: Tiered pricing
+description: Configure tiered pricing for Campium products so prices and minimum deposits change automatically based on effective dates and pricing date rules.
+---
+
+## What tiered pricing does
+
+Tiered pricing lets you define multiple prices for the same product or priced option over time. Each tier has an effective date and optional minimum deposit override, so Campium can automatically use the correct price based on when a family registers or when staff change an enrollment.
+
+Use tiers to:
+
+- Schedule price increases ahead of a season.
+- Offer early-bird discounts that expire on a specific date.
+- Adjust required deposits for certain date ranges.
+
+<Callout kind="info">
+
+Access tiered pricing from the **Seasons** link in the left-hand navigation, then open the product in the admin product editor and manage tiers in the pricing area.
+
+</Callout>
+
+## Tier row fields
+
+Each tier is a row in the pricing editor. Campium evaluates these fields together to decide which price to use.
+
+<ParamField body="effectiveDate" param-type="date" required="true" show-location="false">
+
+**Effective date** — the first calendar date this tier applies. Campium treats this date as inclusive and uses the tier from that day forward until a newer tier with a later effective date replaces it.
+
+</ParamField>
+
+<ParamField body="price" param-type="money" required="true" show-location="false">
+
+**Price** — the amount to charge when this tier is in effect. You can type the value with or without currency symbols or commas; Campium normalizes the format when you save.
+
+</ParamField>
+
+<ParamField body="minimumDeposit" param-type="money" show-location="false">
+
+**Minimum deposit (optional)** — overrides the usual minimum deposit for this product or priced option while the tier applies. If you leave this blank, Campium uses your normal minimum deposit rules for that product or option.
+
+</ParamField>
+
+## How Campium selects a tier
+
+Campium always uses the tier that was in effect on the **pricing date**.
+
+When pricing, Campium:
+
+1. Considers only tiers whose **effective date** is on or before the pricing date.
+2. From those, selects the tier with the **latest effective date**.
+
+If no tiers exist for a product or priced option, Campium uses the regular price defined in the product setup.
+
+### Selection examples
+
+- Tiers:  
+  - 500.00 effective January 1  
+  - 550.00 effective March 1  
+  Pricing date **February 15** → Campium uses **500.00** (January 1 tier).
+
+- Same tiers:  
+  Pricing date **March 1 or later** → Campium uses **550.00** (March 1 tier).
+
+- No tiers created at all → Campium uses the **base price** from the product setup for that product or priced option.
+
+## What counts as the pricing date
+
+The pricing date is the date Campium uses to decide which tier applies.
+
+### New registrations and checkout
+
+For new registrations at checkout, Campium:
+
+- Uses **today's date** as the pricing date.
+- Interprets “today” in your **agency time zone**, so late-night registrations behave consistently with your local business day.
+
+### Changing an existing enrollment
+
+When staff change an existing enrollment (for example, switching a participant from one session to another), you may see an option like **Use original purchase date**.
+
+- If staff select **Use original purchase date**, Campium bases tiered pricing on the **original sale line's created date**, not today.
+- If staff do not use that option, Campium uses **today** as the pricing date for the change.
+
+This helps preserve original pricing when you move families between sessions after a price increase.
+
+## Base product vs priced options
+
+Tiered pricing works independently for the base product and for each priced option.
+
+- **Base product tiers** apply to the main product price.
+- **Priced option tiers** are maintained separately for each option line in the pricing grid.
+
+Key behaviors:
+
+- Each price row in the product editor has its own **Tiers** control.  
+  - Selecting **Tiers** next to the base price opens the schedule for the product price.  
+  - Selecting **Tiers** next to a specific priced option opens the schedule for that option.
+- Campium stores each tier schedule with the correct product and option. When families register, the system automatically applies the tier schedule that belongs to that exact price line.
+
+## Managing tiers in the product editor
+
+Use these steps to create, edit, or remove tiered pricing rows in the admin product editor.
+
+<Steps>
+
+<Step title="Open the product from Seasons" icon="folder">
+
+- Click **Seasons** in the left-hand navigation menu.
+- Open the relevant season or session group until you see the list of products.
+- Click the product you want to edit to open the admin product editor.
+
+</Step>
+
+<Step title="Locate the pricing area" icon="settings">
+
+- Scroll to the **pricing** section of the product editor.
+- Find the price row you want to manage (base product or a specific priced option).
+- Next to that price row, click **Tiers** (this may show as **Tiers (n)** if tiers already exist).
+
+</Step>
+
+<Step title="Review existing tiers" icon="monitor">
+
+- In the inline panel, review the list of tiers showing:
+  - **Effective date**
+  - **Price**
+  - **Min. deposit**
+- Confirm which row is currently in effect by comparing effective dates with today or the pricing date scenario you care about.
+
+</Step>
+
+<Step title="Add a new pricing tier" icon="plus">
+
+- Click **Add pricing tier** (or the equivalent add action).
+- Enter:
+  - **Effective date** in `YYYY-MM-DD` format.
+  - **Price** as a number, with or without currency symbol/commas.
+  - **Minimum deposit** only if you want to override the usual deposit while this tier is active.
+- Save the tier. Campium adds the row to the schedule and will use it for pricing when its effective date is reached.
+
+</Step>
+
+<Step title="Edit or remove existing tiers" icon="edit">
+
+- To adjust a tier, use the **Edit** action on that row, update the fields, and save.
+- To remove a tier that no longer applies, use the **Remove/Delete** action on that row.
+- When you finish adjustments, save or publish the product changes as required by your workflow.
+
+</Step>
+
+</Steps>
+
+<Callout kind="info">
+
+If you do not see the **Tiers** control or if saving tiers returns a **Forbidden** error, your account is not authorized to manage pricing tiers. Contact your Campium administrator to adjust your permissions.
+
+</Callout>
+
+## Saving and validation rules
+
+Campium validates tier rows when you save them to keep pricing schedules consistent.
+
+<ParamField body="effectiveDate" param-type="date" required="true" show-location="false">
+
+You must provide an **effective date** in `YYYY-MM-DD` format. Campium does not allow blank effective dates for any tier row.
+
+</ParamField>
+
+<ParamField body="price" param-type="money" required="true" show-location="false">
+
+You must provide a **price** that parses as a valid number. You may type the value with or without a currency symbol and commas; Campium normalizes the stored amount on save.
+
+</ParamField>
+
+<ParamField body="minimumDeposit" param-type="money" show-location="false">
+
+**Minimum deposit** is optional. When left blank, Campium uses the product or priced option's normal minimum deposit rules instead of a tier-specific override.
+
+</ParamField>
+
+<Callout kind="info">
+
+Campium does not allow **two tiers for the same product or option with the same effective date**. If you try to save a duplicate date for the same scope, the save fails. Edit the existing tier for that date instead of adding a new one.
+
+</Callout>
+
+## Operational tips
+
+<Callout kind="tip">
+
+Plan and maintain tiered pricing deliberately so families see the prices you expect.
+
+- **Plan ahead** by entering future tiers before planned price changes or early-bird deadlines.
+- **Document internally** which tiers correspond to which campaigns (for example, “Early Bird”, “Standard”, “Last-Minute”) so staff understand pricing changes.
+- For products with **multiple priced options**, confirm each option has the tiers you intend; options do not inherit tiers from the base price.
+- Remember that some **admin reports and lists** display stored amounts, not tier calculations. At checkout, Campium always applies the tier rules based on pricing date, even if some admin views appear inconsistent.
+- Run a **test registration** around each important date change to confirm the expected tier and minimum deposit are applied.
+
+</Callout>
