@@ -211,7 +211,8 @@
               },
               {
                 "title": "App Chat",
-                "path": "app-chat"
+                "path": "app-chat",
+                "icon": "lucide-message-square"
               }
             ],
             "public": true
@@ -234,6 +235,11 @@
                 "title": "Discounts",
                 "path": "discounts",
                 "icon": "badge-percent"
+              },
+              {
+                "title": "Contracts",
+                "path": "contracts",
+                "icon": "signature"
               }
             ],
             "public": true

@@ -1,0 +1,397 @@
+---
+title: Manage contracts
+description: >-
+  Create, send, and track digital contracts for staff, campers, and guardians in
+  the Admin Contracts area, including templates, statuses, and signing.
+---
+## What you can do in Contracts
+
+Use the Admin Contracts area to build reusable contract templates, generate individual contracts for staff, campers, or guardians, email them for electronic signature, and track status through to completion.
+
+Common tasks:
+
+- Enable the Contracts Module for your site
+
+- Create and maintain contract templates
+
+- Generate contract instances for specific people
+
+- Email contracts with personalized links
+
+- Monitor Draft, Sent, Signed, and Completed statuses
+
+- Download signed contracts as PDFs and review signature details
+
+<Callout kind="info" collapsed="false">
+  The Contracts Module is designed to streamline collecting signatures. It does not replace your legal counsel. Confirm with your attorney that your contract wording and signing process meet your local legal requirements.
+</Callout>
+
+## Enable the Contracts Module
+
+Turn on the Contracts Module before you try to create or send contracts.
+
+<Callout kind="info" collapsed="false">
+  You need Admin-level access to change Site Settings. Site Settings save automatically as you change them.
+</Callout>
+
+<Steps>
+  <Step title="Open Site Settings" icon="settings" title-type="p">
+    Go to **Admin → Site Settings**, then open the **Modules** tab.
+  </Step>
+
+  <Step title="Enable the Contracts Module" icon="check-circle" title-type="p">
+    Find **Contracts Module** and toggle it on. The description confirms this enables staff contracts, lets you build templates, send them out, and collect signatures digitally.
+  </Step>
+
+  <Step title="Open the Contracts area" icon="folder" title-type="p">
+    In the admin navigation, go to **Admin → Contracts**. You now see tabs or sections for managing contract templates and contract instances.
+  </Step>
+</Steps>
+
+When the module is enabled and accessible, you are ready to build templates.
+
+## Contract templates
+
+Contract templates define the content and layout you reuse across many staff or family members.
+
+A template includes:
+
+- Internal name and description
+
+- Active or inactive status
+
+- Optional default header
+
+- HTML body content with merge fields to personalize each contract
+
+### Create a new contract template
+
+<Steps>
+  <Step title="Open the templates list" icon="folder" title-type="p">
+    Go to **Admin → Contracts** and switch to the **Templates** tab (or section) to see all existing templates.
+  </Step>
+
+  <Step title="Add a new template" icon="plus" title-type="p">
+    Click **Add Template** or **New Template**. The template editor opens with fields for name, description, header, and HTML content.
+  </Step>
+
+  <Step title="Enter template details" icon="edit" title-type="p">
+    Give the template a clear **Name** and short **Description** so other admins recognize when to use it. Set the template to **Active** if you want it available right away.
+  </Step>
+
+  <Step title="Set an optional header" icon="file-text" title-type="p">
+    If you use a standard contract heading or letterhead, enter it in the **Header** field or choose the default header. The system can apply this header to every contract generated from this template.
+  </Step>
+
+  <Step title="Add HTML content and merge fields" icon="code" title-type="p">
+    Enter the main contract body using the HTML editor. Insert merge fields such as `user_name` or `agency_name` wherever you want the system to personalize content for each recipient.
+  </Step>
+
+  <Step title="Save the template" icon="check-circle" title-type="p">
+    Click **Save**. The template now appears in the templates list and is available when generating new contracts.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Create separate templates for different groups (for example, counselor contracts, leadership contracts, camper agreements) so you can track and report on each type more easily.
+</Callout>
+
+### How template changes affect existing contracts
+
+<Callout kind="alert" collapsed="false">
+  When you edit a contract template, the changes only apply to contracts generated **after** the edit. Existing contract instances keep their original content. You cannot update previously generated or sent contracts by editing the template.
+</Callout>
+
+If you need a new version of a contract for future hires or families, update the template and generate new contract instances from the updated version.
+
+### Activate or deactivate templates
+
+Use active/inactive status to control which templates admins can choose when generating contracts.
+
+<Steps>
+  <Step title="Change template status" icon="edit" title-type="p">
+    In **Admin → Contracts → Templates**, locate the template, open it, and change the status to **Active** or **Inactive**.
+  </Step>
+
+  <Step title="Save the change" icon="check-circle" title-type="p">
+    Click **Save**. Active templates can be used for new contracts. Inactive templates stay in the system for record-keeping but are hidden from new contract generation.
+  </Step>
+</Steps>
+
+### Delete vs. deactivate templates
+
+<Callout kind="alert" collapsed="false">
+  If a template has any existing contract instances, you cannot delete it. Instead, set the template to inactive. This prevents new contracts from using it while preserving historical data.
+</Callout>
+
+Use delete only for templates that were never used or were created in error and have no associated contracts.
+
+## Merge fields in templates and emails
+
+Merge fields personalize templates and emails with data from your site, such as the recipient name, the template name, and the contract link.
+
+### Template content merge fields
+
+Use these merge fields directly in the HTML body of a template.
+
+- **`user_name`** — Full name of the staff member, camper, or guardian associated with the contract.
+
+- **`agency_name`** — Name of your camp or organization as defined in your business or account settings.
+
+- **`template_name`** — Name of the contract template being used, helpful for headings or internal references.
+
+You can include other profile-based merge fields if they are available in your system. Keep merge fields consistent and test them by generating a draft contract.
+
+### Email merge fields
+
+When you send or resend a contract email, you can include merge fields in the subject and body to personalize the message.
+
+- **`template_name`** — The contract template name, so recipients know what they are signing.
+
+- **`user_name`** — The recipient's name (staff member, camper, or guardian).
+
+- **`contract_url`** — Unique, secure link to the contract in the parent portal. Recipients click this to review and sign.
+
+- **`agency_name`** — Your camp or agency name, useful for branding and clarity in the email.
+
+<Callout kind="tip" collapsed="false">
+  Include `contract_url` in every contract email so recipients can access their contract directly, even if they are not logged in to the portal.
+</Callout>
+
+## Contract instances (individual contracts)
+
+A contract instance is a specific, generated contract for one person (staff member, camper, or guardian) based on a template.
+
+Instances track:
+
+- Which template was used
+
+- Who the contract is for
+
+- Current status (Draft, Sent, Signed, Completed)
+
+- Signature details (typed name or drawn signature, date/time, IP address)
+
+- Portal views and PDF downloads
+
+### Generate a contract instance
+
+<Steps>
+  <Step title="Open the contracts list" icon="folder" title-type="p">
+    Go to **Admin → Contracts** and switch to the **Contracts** or **Instances** tab to see existing contracts.
+  </Step>
+
+  <Step title="Start a new contract" icon="plus" title-type="p">
+    Click **New Contract**, **Add Contract**, or similar. The system prompts you to choose a template and a recipient.
+  </Step>
+
+  <Step title="Choose template and recipient" icon="users" title-type="p">
+    Select the appropriate **Template** from the active list, then search for and select the staff member, camper, or guardian who should sign this contract.
+  </Step>
+
+  <Step title="Review generated content" icon="monitor" title-type="p">
+    Preview the contract content to ensure merge fields (such as `user_name`) appear correctly. Confirm the header and body show what you expect.
+  </Step>
+
+  <Step title="Save as draft" icon="check-circle" title-type="p">
+    Save the contract. It starts in **Draft** status until you send it by email.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  After you generate and save a contract instance, you cannot edit its text or structure. To change the wording, update the template and generate a new contract.
+</Callout>
+
+## Contract statuses
+
+Statuses show where each contract is in the signing process.
+
+- **Draft** — The contract is generated and saved but has not been emailed to the recipient yet.
+
+- **Sent** — You have emailed the contract link to the recipient. They can open it in the portal and sign.
+
+- **Signed** — The recipient has submitted their signature, but any follow-up automation (such as status changes) has not fully completed yet.
+
+- **Completed** — The contract is fully signed and any configured automations have run. Treat this as the final, signed record.
+
+Use the status column in the Contracts list to filter or sort and quickly see which staff, campers, or guardians still need to sign.
+
+## Send and resend contract emails
+
+Emailing a contract sends the recipient a personalized link they use to access the contract in the parent portal.
+
+<Steps>
+  <Step title="Open the contract instance" icon="folder" title-type="p">
+    In **Admin → Contracts**, locate the contract instance you want to send and open its details.
+  </Step>
+
+  <Step title="Compose the email" icon="edit" title-type="p">
+    Click **Send Email** or **Email Contract**. Enter a subject and body, and include email merge fields such as `user_name`, `template_name`, and `contract_url`.
+  </Step>
+
+  <Step title="Send the contract" icon="upload" title-type="p">
+    Review the message and click **Send**. The contract status moves to **Sent** when the email leaves the system.
+  </Step>
+
+  <Step title="Resend if needed" icon="repeat" title-type="p">
+    If the recipient cannot find the email, open the same contract and choose **Resend Email**. Confirm the email address is correct before resending.
+  </Step>
+</Steps>
+
+When the recipient clicks the contract link, they arrive at the signing page in the parent portal.
+
+## Signing experience in the parent portal
+
+Recipients review and sign contracts through the parent portal using a simple flow.
+
+### How recipients sign
+
+<Steps>
+  <Step title="Open the contract link" icon="external-link" title-type="p">
+    The recipient clicks the personalized `contract_url` from their email. Depending on your settings, they may access the contract with or without logging in.
+  </Step>
+
+  <Step title="Review the contract" icon="monitor" title-type="p">
+    The contract opens with the header and HTML content from your template, filled in with merge fields such as their name and your agency name.
+  </Step>
+
+  <Step title="Provide a signature" icon="edit" title-type="p">
+    The recipient signs by either typing their name into a signature field or drawing their signature on-screen, depending on your configuration.
+  </Step>
+
+  <Step title="Confirm acceptance" icon="check-circle" title-type="p">
+    They check a confirmation box acknowledging they agree to the contract terms and then submit the signed contract.
+  </Step>
+</Steps>
+
+When the signature is submitted, the system:
+
+- Records the typed or drawn signature
+
+- Stores the date and time of signing
+
+- Captures the IP address of the device used
+
+- Updates the contract status to **Signed** or **Completed** (depending on configuration)
+
+### View tracking and PDFs
+
+Admins can see when a contract was viewed, signed, and downloaded.
+
+- Portal view tracking shows when the recipient opened the contract page.
+
+- You can download a PDF of the signed contract from the contract instance details.
+
+<Callout kind="info">
+  You can also find signed contract PDFs on the related user profile under the **Files** tab, alongside other uploaded documents.
+</Callout>
+
+<Callout kind="tip" collapsed="false">
+  Download PDFs for long-term storage outside the system or to share signed contracts internally with HR or leadership.
+</Callout>
+
+### Optional status changes on signing
+
+You can configure the system so that when a contract is signed, the associated user status (for example, staff status) updates automatically.
+
+<Callout kind="info" collapsed="false">
+  If you rely on automatic status changes after signing, test the flow with an internal user first to confirm the correct statuses update as expected.
+</Callout>
+
+## Limitations and best practices
+
+<Callout kind="alert" collapsed="false">
+  - You cannot edit a contract instance after it is generated or sent.
+
+  - Editing a template does not change any existing contract instances.
+
+  - You cannot delete a template that has associated contract instances; set it to inactive instead.
+</Callout>
+
+To keep contract data clean:
+
+- Use descriptive template names and keep a version history in the name (for example, "Counselor Contract v2").
+
+- Use inactive status instead of deleting templates that might need to be referenced later.
+
+- Download and archive PDFs of signed contracts for your own legal and operational records.
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Recipient says the link lets them sign without logging in" default-open="false">
+    The contract email includes a tokenized `contract_url` that uniquely identifies the recipient and contract. The system allows signing from that link without requiring a portal login, which reduces friction for families and staff.
+
+    You still capture a full record of the signature, including name, date/time, and IP address.
+  </Expandable>
+
+  <Expandable title="Recipient says the contract link expired or does not work" default-open="false">
+    Contract links remain valid until the contract is signed or deleted. If a link no longer works:
+
+    - Confirm the contract still exists and is not deleted.
+
+    - Check that the contract is not already in **Completed** status.
+
+    - Resend the contract email from **Admin → Contracts** to generate a fresh email with a working link.
+
+    If problems continue, verify that the email address on the recipient profile is correct and that they are clicking the full link (not a truncated version).
+  </Expandable>
+
+  <Expandable title="Admin needs to change a contract after sending it" default-open="false">
+    You cannot edit the content of a contract instance after it is generated or sent. To make changes:
+
+    - Update the underlying template with the new wording.
+
+    - Generate a new contract instance for the same recipient from the updated template.
+
+    - Optionally mark the original contract as obsolete in your internal notes and do not use its PDF going forward.
+  </Expandable>
+
+  <Expandable title="Signed contract is missing a signature or date" default-open="false">
+    If a contract shows **Completed** status, the system should have captured a signature, date/time, and IP address.
+
+    - Open the contract instance and review the signature details section.
+
+    - If data appears incomplete, download the PDF and verify whether the signature is visible there.
+
+    - If the problem persists, contact support and provide the contract ID and recipient details so they can review the record.
+  </Expandable>
+</ExpandableGroup>
+
+## FAQs
+
+<ExpandableGroup>
+  <Expandable title="Can recipients sign from a mobile device?" default-open="false">
+    Yes. The contract page in the parent portal is mobile-friendly. Recipients can open the `contract_url` on a phone or tablet, review the contract, type their name, or draw a signature using a touchscreen.
+  </Expandable>
+
+  <Expandable title="Can I see who has not signed yet?" default-open="false">
+    Use the **Status** column and filters in **Admin → Contracts** to find contracts still in **Draft** or **Sent** status. These represent people who have not yet completed signing.
+
+    You can resend emails from those contract instances to remind recipients.
+  </Expandable>
+
+  <Expandable title="Can multiple people sign the same contract?" default-open="false">
+    Contracts are designed as one-to-one between the system user (staff, camper, or guardian profile) and a contract instance. If you need multiple people to sign for the same camper (for example, two guardians), generate separate contract instances for each person.
+  </Expandable>
+
+  <Expandable title="How long are signed contracts stored?" default-open="false">
+    Signed contracts and their PDFs remain available in **Admin → Contracts** as part of your account history. Use PDF downloads for your own long-term storage or local backups according to your camp's record retention policies.
+  </Expandable>
+</ExpandableGroup>
+
+## Related pages
+
+<Columns cols="3">
+  <Card title="Site Settings" href="/settings" icon="settings" cta="Configure global modules and options" horizontal="true">
+    Adjust the Contracts Module and other site-wide settings that affect how contracts work.
+  </Card>
+
+  <Card title="Profiles" href="/profiles" icon="users" cta="Manage staff, camper, and guardian data" horizontal="true">
+    Review and update the people records that contracts attach to and pull merge field data from.
+  </Card>
+
+  <Card title="Discounts" href="/discounts" icon="badge-percent" cta="See another Admin configuration pattern" horizontal="true">
+    Learn patterns for managing configuration-heavy admin tools that are similar to Contracts.
+  </Card>
+</Columns>
