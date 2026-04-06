@@ -286,6 +286,19 @@
         "tab": "FAQ",
         "pages": [
           {
+            "group": "Email",
+            "pages": [
+              {
+                "title": "Resend an email to non-openers",
+                "path": "resend-email-to-non-openers"
+              },
+              {
+                "title": "Email users that have not completed a form",
+                "path": "email-users-who-have-not-completed-a-form"
+              }
+            ]
+          },
+          {
             "group": "Payments",
             "pages": []
           },
@@ -295,9 +308,15 @@
           },
           {
             "group": "General",
-            "pages": []
+            "pages": [
+              {
+                "title": "How to change a user's name",
+                "path": "how-to-change-a-users-name"
+              }
+            ]
           }
-        ]
+        ],
+        "icon": "circle-question-mark-icon"
       }
     ]
   }
