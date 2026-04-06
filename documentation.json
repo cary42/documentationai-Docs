@@ -48,11 +48,6 @@
                 "icon": "file-text"
               },
               {
-                "title": "Seasons & Sessions",
-                "path": "seasons-and-sessions",
-                "icon": "calendar"
-              },
-              {
                 "title": "Profiles",
                 "path": "profiles",
                 "icon": "users"
@@ -66,21 +61,14 @@
             "public": true
           },
           {
-            "group": "Staff Scheduling",
-            "icon": "calendar",
-            "pages": [
-              {
-                "title": "Scheduling",
-                "path": "scheduling",
-                "icon": "calendar"
-              }
-            ],
-            "public": true
-          },
-          {
             "group": "Core Concepts",
             "icon": "layers",
             "pages": [
+              {
+                "title": "Seasons & Sessions",
+                "path": "seasons-and-sessions",
+                "icon": "calendar"
+              },
               {
                 "title": "Authentication",
                 "path": "authentication",
@@ -172,6 +160,10 @@
                   {
                     "title": "Custom Reports",
                     "path": "custom-reports"
+                  },
+                  {
+                    "title": "Allow a staff user to see a report",
+                    "path": "allow-a-staff-user-to-see-a-report"
                   }
                 ]
               }
@@ -236,19 +228,24 @@
             "icon": "file-text",
             "pages": [
               {
-                "title": "Discounts",
-                "path": "discounts",
+                "title": "Contracts",
+                "path": "contracts",
                 "icon": "file-text"
               },
               {
-                "title": "Contracts",
-                "path": "contracts",
+                "title": "Discounts",
+                "path": "discounts",
                 "icon": "file-text"
               },
               {
                 "title": "Payment Plans",
                 "path": "payment-plans",
                 "icon": "file-text"
+              },
+              {
+                "title": "Staff Scheduling",
+                "path": "scheduling",
+                "icon": "calendar"
               }
             ],
             "public": true
@@ -257,14 +254,14 @@
             "group": "Seasons & Sessions",
             "pages": [
               {
-                "title": "Tiered pricing",
-                "path": "tiered-pricing",
-                "icon": "badge-dollar-sign"
-              },
-              {
                 "title": "Subproducts",
                 "path": "subproducts",
                 "icon": "boxes"
+              },
+              {
+                "title": "Tiered pricing",
+                "path": "tiered-pricing",
+                "icon": "badge-dollar-sign"
               }
             ]
           }
