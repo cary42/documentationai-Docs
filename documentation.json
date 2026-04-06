@@ -338,5 +338,10 @@
         "icon": "circle-question-mark-icon"
       }
     ]
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-TQ6X1ZLX0W"
+    }
   }
 }
