@@ -274,6 +274,10 @@
             "group": "General",
             "pages": [
               {
+                "title": "How to change a user's name",
+                "path": "how-to-change-a-users-name"
+              },
+              {
                 "title": "Allow staff to quickly email their assigned sessions",
                 "path": "help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions"
               }
