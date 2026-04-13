@@ -1,149 +1,464 @@
-openapi: '3.0.0'
+openapi: 3.0.3
 info:
-  version: 1.0.0
   title: Campium API
-  license:
-    name: MIT
+  version: 2.0.0
+  description: |
+    Slim OpenAPI for routes **implemented** on `/api/v2` (JSON `data` / `error` envelope).
+    Full browser reference (this file + vendored SwaggerHub paths): regenerate `openapi/campium-v2-catalog.yaml` with
+    `python3 www/prod/cursor_scripts/merge-campium-openapi-catalog.py` after editing this YAML or refreshing `openapi/swaggerhub-campium-1.0.0.json`.
+    Live hub: https://app.swaggerhub.com/apis-docs/SUPPORT_157/Campium/1.0.0
 servers:
-  - url: http://api.campium.com/v1
+  - url: https://api-v2.campium.com
+    description: Production v2 (DocumentRoot …/api/v2 — paths /health, /menu, …)
+  - url: https://campiumdb.com/api/v2
+    description: Admin portal path (same app; /api/v2 prefix stripped)
+  - url: https://{host}/api/v2
+    description: Other hosts with path prefix
+    variables:
+      host:
+        default: campiumdb.com
+tags:
+  - name: Session
+    description: Authentication (ported from api1 validate / token model)
+  - name: AppShell
+    description: Mobile app shell (menu, flags)
+  - name: News
+    description: In-app news (basic.Announcement, type SI for parent feed; staff CRUD)
 paths:
-  /projects:
+  /health:
     get:
-      summary: List all projects
-      operationId: listProjects
+      tags:
+        - Session
+      summary: Liveness check
+      operationId: healthCheck
+      security: []
+      responses:
+        '200':
+          description: API is reachable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiSuccess'
+              examples:
+                default:
+                  value:
+                    data:
+                      status: ok
+                      api: campium-v2
+  /menu:
+    get:
+      tags:
+        - AppShell
+      summary: App menu and feature flags
+      description: |
+        Same payload as legacy `GET .../api1/index.php?params=menu` after token auth.
+        Requires `X-API-KEY` (mobile or agency key) and `Token` header with valid JWT.
+      operationId: getAppMenu
       parameters:
-        - name: limit
+        - $ref: '#/components/parameters/XRequestId'
+      responses:
+        '200':
+          description: Menu document
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiSuccessMenu'
+        '401':
+          description: Missing or invalid API key / token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+  /news:
+    get:
+      tags:
+        - News
+      summary: List news items
+      description: |
+        Returns Site Information (`SI`) announcements for the authenticated agency, newest first.
+
+        **Staff** sees full fields per row. **Non-staff** sees `id`, `date`, and personalized `text` (same shapes as `GET /news/{id}`).
+
+        Query **`live`** (optional):
+        - `live=1`, `true`, `yes`, `y`, or `on` — only items that are **live now**: `status_code` `AC`, `show_flag` `Y`, non-empty `message`, and `now()` between `start_date` and `end_date` (aligned with legacy `api1/alerts.php`).
+        - `live=0`, `false`, `no`, `n`, or `off` — all SI rows the caller may access (staff: entire agency list; parents/guardians: filtered by `checkAccess` / Administrator).
+        - **Omitted** — staff default is **all** SI rows; non-staff default is **live-only** (typical in-app feed).
+      operationId: listNews
+      parameters:
+        - $ref: '#/components/parameters/XRequestId'
+        - name: live
           in: query
-          description: How many items to return at one time (max 100)
           required: false
-          schema:
-            type: integer
-            format: int32
-      responses:
-        200:
-          description: An paged array of projects
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Projects'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-    post:
-      summary: Create project
-      operationId: createProject
-      responses:
-        201:
-          description: Null response
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-  /projects/{projectId}:
-    get:
-      summary: Get project info
-      operationId: getProjectById
-      parameters:
-        - name: projectId
-          in: path
-          required: true
-          description: The id of the project to retrieve
           schema:
             type: string
+          description: >
+            `1`/`true`/`yes` = only currently live items; `0`/`false`/`no` = include non-live (staff) or historical/upcoming SI the user can access (non-staff). Omit = staff all SI, non-staff live-only.
+          examples:
+            liveOnly:
+              value: '1'
+            allForStaff:
+              value: '0'
       responses:
-        200:
-          description: Expected response to a valid request
+        '200':
+          description: List wrapper with `live`, `record_count`, and `results`
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Projects'
-        default:
-          description: unexpected error
+                $ref: '#/components/schemas/ApiSuccessNewsList'
+        '400':
+          description: Invalid `live` query value
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-  /documents:
-    get:
-      summary: List all documents
-      operationId: listDocuments
+                $ref: '#/components/schemas/ApiErrorBody'
+        '401':
+          description: Missing or invalid API key / token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+    post:
+      tags:
+        - News
+      summary: Create a news item
+      description: |
+        Staff only. Creates an announcement for the authenticated agency (same persistence as admin Communications).
+        Defaults type `SI`, status `AC`, show `Y`. Requires `start_date` and `end_date` (YYYY-MM-DD or ISO datetime).
+      operationId: createNews
       parameters:
-        - name: limit
-          in: query
-          description: How many items to return at one time (max 100)
-          required: false
+        - $ref: '#/components/parameters/XRequestId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsWrite'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiSuccessNewsStaff'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+        '401':
+          description: Missing or invalid API key / token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+        '403':
+          description: Not staff
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+  /news/{id}:
+    get:
+      tags:
+        - News
+      summary: Get one news item
+      description: |
+        Staff see full announcement fields. Parents see `id`, `date`, and `text` (personalized) only if the item would appear
+        in the legacy alerts feed (type SI, active, shown, current date in range, `checkAccess` or Administrator role).
+      operationId: getNewsById
+      parameters:
+        - $ref: '#/components/parameters/XRequestId'
+        - name: id
+          in: path
+          required: true
           schema:
             type: integer
-            format: int32
+            minimum: 1
       responses:
-        200:
-          description: An paged array of documents
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
+        '200':
+          description: News document
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Documents'
-        default:
-          description: unexpected error
+                oneOf:
+                  - $ref: '#/components/schemas/ApiSuccessNewsStaff'
+                  - $ref: '#/components/schemas/ApiSuccessNewsParent'
+        '401':
+          description: Missing or invalid API key / token
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-components:
-  schemas:
-    Project:
-      required:
-        - id
-        - name
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
-        description:
-          type: string
-    Projects:
-      type: array
-      items:
-        $ref: '#/components/schemas/Project'
-    Document:
-      required:
-        - id
-        - title
-      properties:
-        id:
-          type: integer
-          format: int64
-        title:
-          type: string
+                $ref: '#/components/schemas/ApiErrorBody'
+        '404':
+          description: Not found or not visible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+    patch:
+      tags:
+        - News
+      summary: Update a news item
+      description: Staff only. Partial update; omitted fields unchanged.
+      operationId: patchNewsById
+      parameters:
+        - $ref: '#/components/parameters/XRequestId'
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: true
         content:
-          type: string
-    Documents:
-      type: array
-      items:
-        $ref: '#/components/schemas/Document'
-    Error:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsPatch'
+      responses:
+        '200':
+          description: Updated announcement
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiSuccessNewsStaff'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+        '401':
+          description: Missing or invalid API key / token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+        '403':
+          description: Not staff
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+security:
+  - ApiKeyAuth: []
+    legacyToken: []
+components:
+  parameters:
+    XRequestId:
+      name: X-Request-Id
+      in: header
+      required: false
+      schema:
+        type: string
+        format: uuid
+      description: Optional correlation id; echoed when present.
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+    legacyToken:
+      type: apiKey
+      in: header
+      name: Token
+      description: JWT issued by api1 validate flow (same as legacy mobile).
+  schemas:
+    ApiError:
+      type: object
       required:
         - code
         - message
       properties:
         code:
-          type: integer
-          format: int32
+          type: string
+          example: unauthorized
         message:
           type: string
+        details:
+          type: object
+          additionalProperties: true
+    ApiErrorBody:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          $ref: '#/components/schemas/ApiError'
+    ApiSuccess:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    ApiSuccessMenu:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          description: Legacy menu object (photo_gallery, news, users, etc.)
+          additionalProperties: true
+    NewsWrite:
+      type: object
+      required:
+        - subject
+        - message
+        - start_date
+        - end_date
+      properties:
+        subject:
+          type: string
+        message:
+          type: string
+        start_date:
+          type: string
+          description: Date or datetime (YYYY-MM-DD or ISO)
+        end_date:
+          type: string
+        announcement_type_code:
+          type: string
+          default: SI
+        status_code:
+          type: string
+          default: AC
+        show_flag:
+          type: string
+          default: 'Y'
+        pin_to_top:
+          oneOf:
+            - type: boolean
+            - type: string
+              enum:
+                - 'Y'
+                - 'N'
+        expand_full:
+          oneOf:
+            - type: boolean
+            - type: string
+              enum:
+                - 'Y'
+                - 'N'
+        name:
+          type: string
+    NewsPatch:
+      type: object
+      description: Any subset of writable fields; at least one property expected.
+      properties:
+        subject:
+          type: string
+        message:
+          type: string
+        start_date:
+          type: string
+        end_date:
+          type: string
+        announcement_type_code:
+          type: string
+        status_code:
+          type: string
+        show_flag:
+          type: string
+        pin_to_top:
+          oneOf:
+            - type: boolean
+            - type: string
+              enum:
+                - 'Y'
+                - 'N'
+        expand_full:
+          oneOf:
+            - type: boolean
+            - type: string
+              enum:
+                - 'Y'
+                - 'N'
+        name:
+          type: string
+    NewsItemStaff:
+      type: object
+      properties:
+        id:
+          type: integer
+        subject:
+          type: string
+        message:
+          type: string
+        announcement_type_code:
+          type: string
+        status_code:
+          type: string
+        show_flag:
+          type: string
+        live_flag:
+          type: string
+        start_date:
+          type: string
+        end_date:
+          type: string
+        pin_to_top:
+          type: string
+        expand_full:
+          type: string
+        name:
+          type: string
+        created_datetime:
+          type: string
+    NewsItemParent:
+      type: object
+      properties:
+        id:
+          type: integer
+        date:
+          type: string
+        text:
+          type: string
+    ApiSuccessNewsStaff:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          $ref: '#/components/schemas/NewsItemStaff'
+    ApiSuccessNewsParent:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          $ref: '#/components/schemas/NewsItemParent'
+    NewsListPayload:
+      type: object
+      required:
+        - live
+        - record_count
+        - results
+      properties:
+        live:
+          type: boolean
+          description: Whether results were restricted to currently live rows (see `GET /news` description).
+        record_count:
+          type: integer
+        results:
+          type: array
+          items:
+            description: Staff rows match NewsItemStaff; non-staff rows match NewsItemParent.
+            type: object
+            additionalProperties: true
+    ApiSuccessNewsList:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          $ref: '#/components/schemas/NewsListPayload'

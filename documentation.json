@@ -169,18 +169,19 @@
             "group": "Profile Management",
             "pages": [
               {
+                "title": "Profiles",
+                "path": "profiles",
+                "icon": "users"
+              },
+              {
                 "group": "Payments",
                 "pages": [
                   {
                     "title": "Processing Refunds and Voids",
                     "path": "processing-refunds-and-voids"
                   }
-                ]
-              },
-              {
-                "title": "Profiles",
-                "path": "profiles",
-                "icon": "users"
+                ],
+                "icon": "circle-dollar-sign-icon"
               },
               {
                 "title": "How to create data views for profiles",
@@ -284,6 +285,16 @@
                 "title": "Tiered pricing",
                 "path": "tiered-pricing",
                 "icon": "badge-dollar-sign"
+              }
+            ]
+          },
+          {
+            "group": "Portal",
+            "pages": [
+              {
+                "title": "Photo Hosting",
+                "path": "photo-hosting",
+                "icon": "images"
               }
             ]
           }
