@@ -67,7 +67,7 @@ The Profiles screen is split into a header at the top and tabs below.
 
 The header gives you a quick snapshot of who you are looking at:
 
-- **Name and status**: Shows the person’s full name and a badge that reflects their current status (for example, active or inactive).
+- **Name and status**: Shows the person’s full name and a badge that reflects their current status (for example, active, inactive, or **Suspended**). When the status is **Suspended**, the person cannot log in to the portal or app.
 
 - **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly.
 
@@ -249,6 +249,30 @@ Use the profile header Actions menu item **Send Password Reset Email** when a pa
   If a family reports that they did not receive the reset email, first confirm the email address in the profile header, then resend the **Send Password Reset Email** action after correcting any obvious typos.
 </Callout>
 
+## Suspend an account (prevent login)
+
+Use the **Suspended** status on a profile when you need to block portal or app login for that account without deleting the profile or its history.
+
+When to use this: choose **Suspended** for situations like security concerns on an account, policy violations, or when a staff member or camper should no longer have portal access even though you want to keep their record.
+
+<Steps>
+  <Step title="Locate the status control on the profile" icon="search" title-type="p">
+    Open the person’s profile and look in the header area for the status control next to their name. Confirm that you are viewing the correct person and family before changing the status.
+  </Step>
+
+  <Step title="Change the status to Suspended" icon="shield" title-type="p">
+    Use the status control to select **Suspended** from the available options. Save or confirm the change if prompted, and let the family or staff member know that they will no longer be able to sign in.
+  </Step>
+
+  <Step title="Restore access by returning the status to active" icon="check-circle" title-type="p">
+    When you are ready to allow login again, go back to the same status control and change it from **Suspended** to the appropriate active or non-suspended status for that person. Save the change and confirm that the person can now sign in as expected.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  The **Suspended** status blocks portal and app login for the account but does not delete the profile or its data. You can reverse this at any time by changing the status back to an active or non-suspended value.
+</Callout>
+
 ### Tabs and main content
 
 Under the header, you see a row of tabs that organize all of the information for this person. The tab set can change based on:
@@ -315,7 +339,7 @@ Each tab focuses on a different part of the person’s record. Use these section
       </Step>
 
       <Step title="Open the Switch modal and choose the new session" icon="edit" title-type="p">
-        Click **Switch** to open a modal titled like `Switch [Session Name] For [Person Name]`. In the modal, use the `switch_to_session` selector to choose the session you want to move the person into. Review the `price_difference` shown in the window so you understand whether this switch will increase or decrease the charge.
+        Click **Switch** link seen when hovering over the session to choose the session you want to move the person into. Review the `Price Difference` shown in the window so you understand whether this switch will increase or decrease the charge.
       </Step>
 
       <Step title="Confirm the price difference and complete the switch" icon="check-circle" title-type="p">
@@ -375,8 +399,6 @@ Each tab focuses on a different part of the person’s record. Use these section
       <Step title="Open the processor dashboard for more payment details" icon="external-link" title-type="p">
         When available, click the **Payments** button or link on the Sales tab to open the payment processor’s dashboard in a new browser tab. Use that view to check settlement status, processor-specific refund limits, and any declines or disputes that might affect what actions you take in Campium.
       </Step>
-
-      
     </Steps>
   </Tab>
 
@@ -556,4 +578,3 @@ Use these quick answers when something on a profile does not look right.
     - You can suggest that they sign back in, open their cart, and either complete checkout or remove items they no longer want. If problems continue, capture details like time, browser, and device and share them with your system admin.
   </Expandable>
 </ExpandableGroup>
-

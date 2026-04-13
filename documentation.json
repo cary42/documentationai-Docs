@@ -132,6 +132,10 @@
                     "path": "system-report-payment-method-updates-families-with-failed-payments"
                   },
                   {
+                    "title": "Profile Photo Report",
+                    "path": "system-report-profile-photo-report"
+                  },
+                  {
                     "title": "Scheduled Payments Report",
                     "path": "system-report-scheduled-payments"
                   },
@@ -146,10 +150,6 @@
                   {
                     "title": "Waitlist",
                     "path": "waitlist"
-                  },
-                  {
-                    "title": "Profile Photo Report",
-                    "path": "system-report-profile-photo-report"
                   }
                 ]
               },
