@@ -1,0 +1,336 @@
+---
+title: Profile Photo Report
+description: Use the Profile Photo Report to see which campers are missing photos and send automated profile photo reminder emails by season.
+---
+
+## What the Profile Photo Report does
+
+Use the **Profile Photo Report** to see which campers do not have profile photos on file and to send automated email reminders to families to upload a photo.
+
+This report is designed for camp administrators, office staff, and season coordinators who manage camper records, session readiness, and [Photo Hosting](/photo-hosting) galleries.
+
+<Callout kind="info">
+
+Profile Photo Report is a **system report** that works per season. Settings you configure apply only to the season you select.
+
+</Callout>
+
+## Open the Profile Photo Report
+
+Use these steps to find the report in the admin portal.
+
+<Steps>
+
+<Step title="Go to Reports" icon="folder">
+
+- From the admin portal, open **Reports** in the main navigation.
+- Select **System Reports**.
+
+You will see a list of system reports grouped by function, including the **Data Check** group.
+
+</Step>
+
+<Step title="Choose the season" icon="calendar">
+
+- In the **Data Check** group, select **Profile Photo Report**.
+- Use the **Season** selector at the top of the page to choose the season you want to review.
+
+The report refreshes to show campers for the selected season only.
+
+</Step>
+
+</Steps>
+
+## Read the report table
+
+The report table shows one row per camper for the selected season.
+
+Key behaviors:
+
+- **Camper name** appears as a link. Select it to open the camper profile in a new tab.
+- A **camera icon** appears when a profile photo exists; select it to preview the photo.
+- The **Profile Photo** column shows **Yes** when a photo is on file and **No** when it is missing.
+- Rows for campers **missing** a profile photo are highlighted in **yellow**.
+- Use the column headers to **sort** and the search box to **filter** by name or other visible fields.
+
+<Callout kind="tip">
+
+Use the search box to find all campers in a cabin or session, then scan the yellow-highlighted rows to see who still needs a photo.
+
+</Callout>
+
+## Choose and save display columns
+
+Adjust which camper fields show in the table to match how you work.
+
+<Steps>
+
+<Step title="Open Display Columns" icon="settings">
+
+- In the top-right of the report, select **Display Columns**.
+- Check or uncheck profile fields to include or hide them in the report table.
+
+The table updates to show your selected fields.
+
+</Step>
+
+<Step title="Save your field layout" icon="check-circle">
+
+- After choosing your fields, select **Save Profile Field Settings**.
+
+CampiumDB remembers these display settings the next time you open the **Profile Photo Report**, so you do not need to reconfigure them for that user.
+
+</Step>
+
+</Steps>
+
+## Show or print all profile photos
+
+Use the quick actions to review photos in bulk.
+
+- **Show All Photos**: Opens a page view of all current profile photos for campers in the report.
+- **Print All Photos**: Generates a printable layout of all profile photos.
+
+These actions use the **current season and filters** shown in the report table.
+
+<Callout kind="info">
+
+Printed photo sheets are useful for staff binders, cabin lists, or bus rosters, especially when combined with the **Profile Photo Report** to confirm no campers are missing photos.
+
+</Callout>
+
+## Set up profile photo reminders
+
+Use **Profile Photo Reminder Settings** to send automated reminder emails to families who have not yet uploaded a camper photo.
+
+<Callout kind="info">
+
+Reminder emails only go to families of campers who **do not** have a profile photo for the selected season and who are in an **active session**.
+
+</Callout>
+
+### Open Profile Photo Reminder Settings
+
+<Steps>
+
+<Step title="Locate the settings card" icon="settings">
+
+- On the **Profile Photo Report** page, scroll to the **Profile Photo Reminder Settings** card.
+- Confirm the **Season** selector at the top of the page is set to the season you want to configure.
+
+All reminder settings you change apply to the currently selected season.
+
+</Step>
+
+<Step title="Enable reminders for this season" icon="check-circle">
+
+- In the settings card, turn on **Enable Profile Photo Reminders for this Season**.
+
+When enabled, CampiumDB starts checking daily for campers in this season who are missing profile photos and schedules reminder emails based on the timing options you choose.
+
+</Step>
+
+</Steps>
+
+### Choose when reminders send
+
+You can send reminders based on how close the camper is to the session start date or how long it has been since registration.
+
+<Steps>
+
+<Step title="Set days prior to session start" icon="calendar">
+
+- In **Days Prior to Session Start**, select one or more day values.
+- Each value represents how many days before the camper's **first session start date** to send a reminder.
+
+For example, choosing **14** and **3** sends one reminder 14 days before and another 3 days before the session start, if the camper still has no profile photo.
+
+</Step>
+
+<Step title="Set days after initial registration" icon="clock">
+
+- In **Days After Initial Registration**, select one or more day values.
+- Each value represents how many days after the camper's **initial registration date** to send a reminder.
+
+For example, selecting **2** sends a reminder 2 days after registration if no profile photo is on file yet.
+
+</Step>
+
+</Steps>
+
+<Callout kind="info">
+
+CampiumDB checks **once per day** for campers who match your timing rules and are still missing photos. It does **not** send more than one reminder to the same family within 24 hours.
+
+</Callout>
+
+### Write the reminder email
+
+Customize the subject and body of the reminder email families receive.
+
+<Steps>
+
+<Step title="Edit email subject and body" icon="edit">
+
+- In the **Profile Photo Reminder Settings** card, update the email subject line field.
+- Use the rich text editor for the email body to add your message, links, and formatting.
+
+You can use merge variables in both the subject and body to personalize each email.
+
+</Step>
+
+<Step title="Preview the email" icon="play-circle">
+
+- Select **Preview Email** to see how your email will look when sent.
+- Confirm that merge variables show as placeholders and that links and formatting appear as expected.
+
+Use the preview to double-check dates, tone, and instructions before you save.
+
+</Step>
+
+<Step title="Save your settings" icon="check-circle">
+
+- After reviewing your timing options and email content, select **Save Settings** in the **Profile Photo Reminder Settings** card.
+
+Saved settings remain active for the current season until you change or disable them.
+
+</Step>
+
+</Steps>
+
+## Reminder behavior and timing
+
+Understanding how reminders send helps you avoid over-messaging families.
+
+- The reminder process runs **daily** and evaluates all campers in the selected season.
+- Reminders send only to families whose campers:
+  - Are enrolled in an **active session** in that season.
+  - Do **not** have a profile photo on file for that camper.
+  - Match one of the timing rules in **Days Prior to Session Start** or **Days After Initial Registration**.
+- Each family receives at most **one reminder every 24 hours**, even if multiple timing rules match on the same day.
+- Reminder emails include a secure **upload link** that takes families to the camper's portal account where they can add the photo.
+
+<Callout kind="tip">
+
+Many camps start with 1–2 reminders after registration and 1 reminder in the week before session start, then adjust based on response rates.
+
+</Callout>
+
+## Merge variables for reminder emails
+
+Use these merge variables in the reminder email subject and body to personalize the message. CampiumDB replaces each variable with the correct value for that camper when the email sends.
+
+<ParamField body="first_name" param-type="string" show-location="false">
+
+Camper's first name, such as `Jordan`.
+
+</ParamField>
+
+<ParamField body="last_name" param-type="string" show-location="false">
+
+Camper's last name, such as `Rivera`.
+
+</ParamField>
+
+<ParamField body="reminder_days" param-type="integer" show-location="false">
+
+Number of days related to the reminder timing, such as `3` for a reminder 3 days before session start or 2 days after registration.
+
+</ParamField>
+
+<ParamField body="days_text" param-type="string" show-location="false">
+
+Readable text for the reminder timing, such as `in 3 days` or `2 days after registration`, to use inside sentences.
+
+</ParamField>
+
+<ParamField body="session_start" param-type="date" show-location="false">
+
+The camper's next session start date for the current season, such as `2024-07-15`.
+
+</ParamField>
+
+<ParamField body="registration_date" param-type="date" show-location="false">
+
+The date of the camper's initial registration for the season, such as `2024-03-02`.
+
+</ParamField>
+
+<ParamField body="upload_link" param-type="string" show-location="false">
+
+A secure URL that logs the family into the camper portal and opens the page to upload a profile photo.
+
+</ParamField>
+
+<ParamField body="season_name" param-type="string" show-location="false">
+
+The name of the current season, such as `Summer 2024`.
+
+</ParamField>
+
+## How this relates to Photo Hosting
+
+If your camp uses [Photo Hosting](/photo-hosting), profile photos help facial recognition match campers correctly in uploaded photos.
+
+<Callout kind="tip">
+
+A **complete set of profile photos** improves facial recognition accuracy in Photo Hosting and makes it easier for families to find their campers in daily photo galleries.
+
+</Callout>
+
+You can use the **Profile Photo Report** to reach a high completion rate before the season starts, which reduces mismatches and missing tags in your photo galleries.
+
+## Troubleshooting
+
+<ExpandableGroup>
+
+<Expandable title="Why are some campers missing from the report?">
+
+- Confirm the **Season** selector at the top of the report matches the camper's season.
+- Check that the camper is **enrolled in a session** in that season, not only created as a profile.
+- Verify that any filters or search terms are cleared so you see all rows.
+
+If the camper still does not appear, check their profile enrollment details to confirm they belong to the season you selected.
+
+</Expandable>
+
+<Expandable title="Why did a family not receive a reminder email?">
+
+- Make sure **Enable Profile Photo Reminders for this Season** is turned on for the correct season.
+- Confirm the family has a **valid email address** on file and is not unsubscribed or blocked.
+- Check that the camper is **missing a profile photo**; reminders do not send once a photo is added.
+- Review your **Days Prior to Session Start** and **Days After Initial Registration** settings to see whether any rule should have matched yet.
+- Remember CampiumDB sends at most **one reminder every 24 hours** per family.
+
+If all of these look correct, check your general email logs or contact support to review recent sends.
+
+</Expandable>
+
+<Expandable title="Why do some rows show Yes for Profile Photo but still look incorrect?">
+
+- Select the **camera icon** in the row to preview the current profile photo.
+- If the wrong camper appears, edit the profile photo directly from the camper's profile page.
+- Ask families to upload a **clear, recent headshot** if the current image is too old or blurry.
+
+Updating the profile photo immediately updates what staff see in the **Profile Photo Report** and can improve Photo Hosting matching.
+
+</Expandable>
+
+<Expandable title="How do I turn off reminders for a season that has ended?">
+
+- Open **Profile Photo Report** and choose the season that has ended in the **Season** selector.
+- In **Profile Photo Reminder Settings**, clear **Enable Profile Photo Reminders for this Season**.
+- Select **Save Settings**.
+
+Reminders stop for that season, but you can re-enable them for future seasons without affecting past data.
+
+</Expandable>
+
+</ExpandableGroup>
+
+## Glossary
+
+- **Profile Photo**: The main face photo stored on a camper's profile and used across reports and Photo Hosting.
+- **Season**: A time period like `Summer 2024` that groups sessions, enrollments, and related settings.
+- **Session Start**: The first day of a camper's scheduled program or activity within a season.
+- **Profile Photo Reminder Settings**: The section on the Profile Photo Report where you control reminder timing, email content, and enable or disable reminders for a season.

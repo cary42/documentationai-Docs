@@ -84,8 +84,6 @@ Link patterns from the templates:
 
 - Session waitlist link from the session list: a waitlist report URL that is shown when the Session/Product is configured to show waitlists.
 
-- Subproduct/option waitlist link from the options list: `/report/wait-list.php?pgcryid=<pgcryid>&product_id=<product_id>`.
-
 <Callout kind="info" collapsed="false">
   The templates confirm where waitlist links appear and which URLs they use. They do not expose deeper business logic such as how families are added to the waitlist or when they move off the waitlist. Work with your Campium support contact if you need details on waitlist behavior beyond these confirmed links.
 </Callout>
@@ -400,15 +398,11 @@ From the main Sessions/Products list:
 
 - **Registered** link:
 
-  - Uses the pattern `/report/product-user.php?id=<id>`.
-
   - Opens a report showing users registered for that Session/Product.
 
 - **Wait Listed** link:
 
   - Uses a waitlist report URL generated from your configuration.
-
-  - Is displayed when `show_wait` is true for the Session/Product.
 
   - Opens the waitlist report associated with that Session/Product.
 
@@ -422,13 +416,13 @@ From the Subproducts/options list (`product-options.html`):
 
 - **Wait** column:
 
-  - Each option row links to `/report/wait-list.php?pgcryid=<pgcryid>&product_id=<product_id>`.
+  - Each option row links to the waitlist report for these users.
 
-  - Opens the waitlist list for that Session/Product and context represented by `pgcryid`.
+  - Opens the waitlist list for that Session/Product.
 
 - **# Reg.** column:
 
-  - Each option row links to `/report/product-user.php?id=<product_id>&key=<key>&pp_id=<id>`.
+  - Each option row links to an enrollment report for these users.
 
   - Opens a registration report for that specific Subproduct/option under the Session/Product.
 
