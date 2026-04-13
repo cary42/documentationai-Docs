@@ -1,0 +1,222 @@
+---
+title: Form Status Summary report
+description: >-
+  Track participant form completion by season, filter by session and
+  sub-session, understand status colors, and export a summary of all live forms.
+---
+## What the report shows
+
+Use the Form Status Summary report to see, at a glance, which participants have completed required forms for a given season, and which forms are still pending or not started.
+
+The report lists one row per participant and adds one column for each live form in the selected season, with a color-coded status in each cell.
+
+## Permissions and access
+
+The Form Status Summary report is part of the general reports module.
+
+- You must have **report access**  enabled on your staff account.
+
+- The report does **not** require financial permissions.
+
+- Inactive participants do not appear in the report.
+
+<Callout kind="tip" collapsed="false">
+  If a staff user cannot see the report in the Reports menu, review their permissions using the steps in [Allow a staff user to see a report](/allow-a-staff-user-to-see-a-report).
+</Callout>
+
+## Run the report
+
+Use these steps to open the report and set the filters.
+
+
+
+<Steps>
+  <Step title="Open the Form Status Summary report" icon="play-circle" title-type="p">
+    - Under **System** reports, choose **Form Status Summary**.
+
+    You should now see the report page with filter controls at the top and an empty or partially loaded table below.
+  </Step>
+
+  <Step title="Choose the season (required)" icon="calendar" title-type="p">
+    - Use the **Season** dropdown to pick the season you want to review.
+
+    - The report uses this season to find all participants and forms associated with that season.
+
+    After you select a season, the table will refresh with one row per active participant in that season and one column for each live form tied to that season.
+  </Step>
+
+  <Step title="Filter by session (optional)" icon="filter" title-type="p">
+    - Use the **Session** dropdown to narrow the report to participants enrolled in a specific session (product).
+
+    - Leave this blank to include all sessions for the selected season.
+
+    When you choose a session, the participant list and available sub-session filter update to reflect that session.
+  </Step>
+
+  <Step title="Filter by sub-session (optional)" icon="filter" title-type="p">
+    - First select a **Session**.
+
+    - After a session is chosen, use the **Sub-session** dropdown to further narrow to a specific sub-session (product price) for that session.
+
+    If you do not select a sub-session, the report shows participants for all sub-sessions within the chosen session.
+  </Step>
+</Steps>
+
+## Filters
+
+These filters control which participants and forms appear in the table.
+
+### Season (required)
+
+- **What it does:** Chooses the product group (season) whose forms and participants you want to view.
+
+- **Behavior:**
+
+  - The report only loads once you select a season.
+
+  - The list of form columns is based on live forms attached to the selected season.
+
+  - Participant rows include only active users in that season.
+
+### Session (optional)
+
+- **What it does:** Limits results to participants in a specific session (product) within the season.
+
+- **Behavior:**
+
+  - When blank, shows all sessions for the season.
+
+  - When set, filters participants and sub-session options to that session.
+
+### Sub-session (optional)
+
+- **What it does:** Narrows results to a particular sub-session (product price) within the selected session.
+
+- **Behavior:**
+
+  - This dropdown appears and populates only after you choose a session.
+
+  - When selected, the report shows only participants tied to that sub-session.
+
+<Callout kind="info" collapsed="false">
+  If you do not see any options in the **Sub-session** dropdown, make sure you selected a **Session** first. Sub-session choices come directly from the selected session.
+</Callout>
+
+## What you see in the table
+
+Once filters are set, the main table shows one row per active participant and one column per live form for the season.
+
+### Participant column
+
+- **Name:** Displays as `Last name, First name`.
+
+- **Profile link:** Click the name to open the participant’s profile at `/profile/?an=...` in a new or current tab, depending on your browser settings.
+
+### Form columns
+
+For the selected season, the report adds:
+
+- One column for each **live form** (`live_flag='Y'`) associated with that season.
+
+- Each column header uses the form’s title.
+
+- Each cell in the column shows the participant’s status for that form, using a short code and background color.
+
+If you add or archive forms for the season, the set of columns will update the next time you run the report.
+
+## Status colors and codes
+
+Each form cell shows the participant’s current form status using a two-letter code and color.
+
+- **AP – Approved**
+
+  - Color: **green**
+
+  - Meaning: Staff have reviewed and approved the form.
+
+- **PE – Pending**
+
+  - Color: **purple**
+
+  - Meaning: The participant submitted the form and it is waiting for staff review or approval.
+
+- **IP – In Progress / Progress**
+
+  - Color: **orange**
+
+  - Meaning: The participant has started the form but has not submitted it yet.
+
+- **Not Started – expected but no submission yet**
+
+  - Color: **white background** with an empty or plain cell
+
+  - Meaning: The participant is expected to complete this form for the season, but has not started or saved anything.
+
+- **Not applicable – form does not apply**
+
+  - Color: **plain blank cell**, no status code
+
+  - Meaning: The form is not required for this participant based on your form assignment rules.
+
+<Callout kind="info" collapsed="false">
+  A blank-looking cell can mean either that the participant has **not started** a required form or that the form is **not applicable** to that participant. Check the participant’s profile and form assignment rules if you are unsure.
+</Callout>
+
+## Exporting and working with columns
+
+Use the buttons above the table to export or adjust what you see.
+
+- **PDF export:** Download a PDF snapshot of the current table, using the filters you selected.
+
+- **CSV/Excel export:** Export the current table as CSV or Excel for further analysis or sharing.
+
+- **Column visibility:** Show or hide specific form columns to focus on the forms you care about most.
+
+Exports and column visibility respect your current filters (season, session, sub-session) and which columns are visible.
+
+## Common uses
+
+Administrators and staff use the Form Status Summary to:
+
+- Identify families or participants who have not started or finished required forms.
+
+- Follow up on forms that are **Pending** approval and need staff review.
+
+- Confirm that all approved forms are in place before the start of a session.
+
+- Track form completion across multiple forms without opening each participant profile.
+
+- Export a list of participants missing a particular form for targeted reminders or outreach.
+
+## Troubleshooting and common questions
+
+<ExpandableGroup>
+  <Expandable title="Why do some participants not appear in the report?" default-open="false">
+    - The report only includes **active** participants. If a user’s status is set to **Inactive**, they are excluded.
+
+    - Check that the participant is enrolled in the **season** you selected.
+
+    - If you filtered by **Session** or **Sub-session**, confirm the participant is actually enrolled in that session or sub-session.
+  </Expandable>
+
+  <Expandable title="Why is a form column missing?" default-open="false">
+    - The report only shows **live forms** for the selected season. If a form is not marked as live, it will not appear.
+
+    - Confirm the form is assigned to the same **season** you chose in the filter.
+
+    - If you recently created or changed a form, reload the report after saving those changes.
+  </Expandable>
+
+  <Expandable title="How do I tell if a blank cell means not started or not applicable?" default-open="false">
+    - If a participant should complete the form based on your assignment rules, a blank cell usually means **Not Started**.
+
+    - If the form is only required for certain groups or sessions, and the participant does not match those conditions, the cell may be blank because the form is **not applicable**.
+
+    - Open the participant’s profile and check the **Forms** section to confirm whether the form is assigned.
+  </Expandable>
+
+  <Expandable title="Can I email families who have not completed a specific form?" default-open="false">
+    Yes. Use this report to identify which participants have not started or are in progress on a form, then use the emailing tools described in [Email users that have not completed a form](/email-users-who-have-not-completed-a-form) to send a reminder.
+  </Expandable>
+</ExpandableGroup>
+
