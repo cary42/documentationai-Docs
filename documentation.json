@@ -112,6 +112,10 @@
                     "path": "system-report-charts"
                   },
                   {
+                    "title": "Chronological User Registration Report",
+                    "path": "system-report-chronological-user-registration"
+                  },
+                  {
                     "title": "Average Family Spend",
                     "path": "average-family-spend"
                   },
@@ -136,7 +140,7 @@
                     "path": "form-status-summary"
                   },
                   {
-                    "title": "Payment Method Updates \u0015 Families with Failed Payments",
+                    "title": "Payment Method Updates - Families with Failed Payments",
                     "path": "system-report-payment-method-updates-families-with-failed-payments"
                   },
                   {
@@ -273,6 +277,11 @@
                 "icon": "file-text"
               },
               {
+                "title": "Campaigns",
+                "path": "campaigns",
+                "icon": "file-text"
+              },
+              {
                 "title": "Payment Plans",
                 "path": "payment-plans",
                 "icon": "file-text"
@@ -346,6 +355,10 @@
               {
                 "title": "What is a chargeback?",
                 "path": "what-is-a-chargeback"
+              },
+              {
+                "title": "What is an ACH return?",
+                "path": "what-is-an-ach-return"
               }
             ]
           },

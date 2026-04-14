@@ -1,0 +1,225 @@
+---
+title: Chronological User Registration report
+description: Track new registrations in date order, filter by season or all seasons, customize columns, and export the Chronological User Registration report.
+---
+
+## What this report shows
+
+Use the Chronological User Registration report to see registrations in the order they were created. This helps you track new sign-ups and spot busy registration periods.
+
+Each row represents a single registration. You see who registered, what they signed up for, and when the registration was created, all in one place.
+
+<Callout kind="info">
+
+Use this report when you want a timeline view of activity, such as watching registrations on opening day or reviewing who registered during a specific week.
+
+</Callout>
+
+## Where to find it
+
+<Steps>
+
+<Step title="Open the Reports area" icon="folder">
+
+- Sign in to your Campium admin site.
+- In the main navigation, go to **Reports**.
+
+</Step>
+
+<Step title="Go to System reports" icon="settings">
+
+- In the Reports section, look for the **System** group.
+- Open the **System** reports list to see system-level reports.
+
+</Step>
+
+<Step title="Open Chronological User Registration" icon="list">
+
+- In the System reports list, select **Chronological User Registration**.
+- The report page at `www/prod/report/chron.php` opens and shows registrations based on your current filters.
+
+</Step>
+
+</Steps>
+
+## Choose a season or all seasons
+
+The Season filter controls which registrations appear in the report.
+
+<Steps>
+
+<Step title="Select a Season" icon="calendar">
+
+- At the top of the report, open the **Season** dropdown.
+- Choose the specific season you want to review, such as a particular year or session series.
+- The table refreshes to show registrations created for that season only.
+
+</Step>
+
+<Step title="View all seasons" icon="layers">
+
+- If you want to see registrations across every season, choose **All Seasons** in the Season dropdown.
+- The table then shows registrations from all seasons, still ordered by registration date and time.
+
+</Step>
+
+<Step title="Confirm the results" icon="check">
+
+- Look at the first few rows to confirm the Season label in the table matches what you expect.
+- Scroll to see how registrations progress over time for that season or for all seasons.
+
+</Step>
+
+</Steps>
+
+<Callout kind="info">
+
+If the report looks empty, check that:
+- The correct Season is selected.
+- Families have actually registered for that season.
+- The registration window for that season has already opened.
+
+</Callout>
+
+## Columns you will see
+
+The report table shows one row per registration, with columns such as:
+
+- **Registrant name** – The person who registered. Click the name to open their profile.
+- **Season** – The season the registration belongs to.
+- **Sessions/products** – A comma-separated list of sessions or products included in that registration.
+- **Email** – The primary email address on the profile.
+- **Status** – The registration status, such as **Approved**, **Pending**, or **Inactive**.
+- **Registration date/time** – When the registration was created, down to the minute.
+
+Some organizations may also see extra columns, such as:
+
+- **Location** – The camp or site associated with the registration.
+- **Second email** – An additional email address stored on the profile.
+
+## Customize which profile fields appear
+
+Use the settings panel on the report to choose which extra profile fields appear as additional columns.
+
+<Steps>
+
+<Step title="Open column settings" icon="settings">
+
+- On the report page, find the **settings** or **column options** area (usually above or beside the table).
+- Open the panel to see a list of available profile fields.
+
+</Step>
+
+<Step title="Pick the profile fields to show" icon="edit">
+
+- Check the profile fields you want to add as columns, such as **Phone number** or **City**.
+- Uncheck any fields you do not need for this view to keep the table easier to scan.
+
+</Step>
+
+<Step title="Save and refresh the table" icon="check-circle">
+
+- Save your column settings.
+- The report updates, and your selected profile fields now appear as additional columns for each registration.
+
+</Step>
+
+</Steps>
+
+<Callout kind="tip">
+
+Keep only the columns you use regularly. A shorter, focused set of columns makes it easier to scan new registrations quickly.
+
+</Callout>
+
+## Sort and review by date
+
+The report is designed to make it easy to follow registrations over time.
+
+- **Sort by registration date/time** – Click the registration date/time column header to sort ascending or descending.
+- **Spot busy periods** – Look for clusters of registrations on the same date or within a short time window.
+- **Track recent activity** – Sort with the newest registrations at the top to keep an eye on who has registered most recently.
+
+## Export, copy, and print
+
+Use the export tools built into the report to share or analyze the data outside Campium.
+
+<Steps>
+
+<Step title="Download a file (Excel, CSV, PDF)" icon="download">
+
+- Above the table, click the **Export** or **Download** controls.
+- Choose the format you need, such as **Excel**, **CSV**, or **PDF**.
+- Save the file, then open it in your spreadsheet or PDF viewer to work with the data.
+
+</Step>
+
+<Step title="Copy to clipboard" icon="copy">
+
+- Select the **Copy** option if available.
+- The current table view is copied to your clipboard.
+- Paste the data into an email, document, or spreadsheet.
+
+</Step>
+
+<Step title="Print the report" icon="printer">
+
+- Choose the **Print** option.
+- Review the print preview and adjust your printer settings if needed.
+- Print a hard copy to use in staff meetings or for quick reference.
+
+</Step>
+
+</Steps>
+
+<Callout kind="tip">
+
+Before exporting or printing, set the Season filter and columns exactly how you want them. The export and printout match your current view of the report.
+
+</Callout>
+
+## Screenshot
+
+Add a screenshot of the Chronological User Registration report table here when available.
+
+## Common questions
+
+<ExpandableGroup>
+
+<Expandable title="Why is the report showing no registrations?" default-open="false">
+
+If the table is empty or has fewer rows than you expect:
+
+- Confirm the **Season** filter is set correctly. Try switching from a specific season to **All Seasons**.
+- Make sure that registrations have already opened and families have registered for that season.
+- Check your column settings only if you think fields are missing; column choices do not hide entire registrations.
+
+If you still do not see expected registrations, contact your Campium support contact with the season name and example families.
+
+</Expandable>
+
+<Expandable title="How do I focus on just today's or this week's registrations?" default-open="false">
+
+To focus on a time period:
+
+- Sort by the **registration date/time** column so the newest registrations appear at the top.
+- Scroll until you reach the start of the day or week you care about.
+- Optionally, export to **Excel** or **CSV** and apply date filters there for more detailed analysis.
+
+</Expandable>
+
+<Expandable title="Can I save my column choices for next time?" default-open="false">
+
+Yes. When you choose profile fields in the settings panel and save your choices, the report remembers your selections. The next time you open the Chronological User Registration report, it uses your saved column setup so you do not need to reconfigure it each time.
+
+</Expandable>
+
+<Expandable title="What is the difference between this report and the Waitlist report?" default-open="false">
+
+The **Chronological User Registration** report shows actual registrations ordered by when they were created. Use it to track everyone who has successfully registered for sessions or products.
+
+The **Waitlist** report focuses on people who requested a spot but are not yet fully enrolled. Use Waitlist to manage pending interest; use the Chronological User Registration report to review completed registrations.
+
+</Expandable>
+
+</ExpandableGroup>

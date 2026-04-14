@@ -1,0 +1,376 @@
+---
+title: Campaigns
+description: Track marketing campaign performance in Campium Admin using campaign links, website tracking code, clear reports, and easy troubleshooting tips.
+---
+
+## Overview
+
+Campaigns (Campaign Tracking) let you create special links for your registration portal and website so you can see how different marketing efforts bring families to register.
+
+Use campaigns to make unique links, add tracking to your website, see engagement numbers, and understand which emails, social posts, and ads lead to registrations.
+
+## Access and permissions
+
+Campaign Tracking lives in the Admin section of Campium.
+
+<Callout kind="info">
+
+To access Campaigns, your staff role must include the Campaigns permission. Without this permission, the Campaigns option does not appear under Admin.
+
+</Callout>
+
+<Steps>
+  <Step title="Open the Admin menu" icon="settings" title-type="p">
+
+  - Sign in to Campium Admin.
+  - Open the left navigation.
+  - Expand **Admin**.
+
+  </Step>
+
+  <Step title="Open Campaigns" icon="settings" title-type="p">
+
+  - Click **Campaigns**.
+  - The Campaign list loads with all campaigns for your organization that you have permission to view.
+
+  </Step>
+</Steps>
+
+## Campaign list
+
+The Campaigns list shows all campaigns for your organization and gives you a quick view of how each one is doing.
+
+You can filter the list by status using the dropdown at the top of the page. Choose **Active**, **Inactive**, or **All** to focus on the campaigns you care about.
+
+### Columns
+
+Use these columns to understand each campaign at a glance:
+
+- **Campaign Name**: The label shown throughout Campaigns and analytics. Click the name to open results and see full details for that campaign.
+- **Description**: Optional internal notes that explain the purpose of the campaign, the audience, or the main channel you are using.
+- **Status**: Whether the campaign is **Active** or **Inactive**. Active campaigns track clicks and registrations; inactive campaigns still send families to the correct destination but stop tracking new activity.
+- **Total Clicks**: The total number of times people clicked any tracking link for this campaign.
+- **Unique Visitors**: An estimate of how many different people clicked the campaign links, so you can focus on people reached instead of raw click volume.
+- **Registrations**: The count of registrations that Campium connects back to this campaign based on tracked clicks and conversion rules.
+- **Created On**: The date the campaign was created, which helps you understand how long it has been running and filter reports by time.
+
+## Create a campaign
+
+Create a campaign whenever you want to track a new marketing effort, such as a specific email, social post, or ad.
+
+<Steps>
+  <Step title="Start a new campaign" icon="plus" title-type="p">
+
+  - From **Admin → Campaigns**, click **Create New Campaign**.
+  - The **Create Campaign** page opens.
+
+  </Step>
+
+  <Step title="Enter basic details" icon="edit" title-type="p">
+
+  - **Campaign Name** (required): Enter a clear, descriptive name such as `Summer 2025 Email - Early Bird`.
+  - **Description** (optional): Add internal details about the audience, channel, or goal.
+  - **Destination URL** (where the link sends families, optional): Enter where families should land after tracking. If you leave this blank, the portal homepage becomes the destination.
+
+  </Step>
+
+  <Step title="Configure advanced options" icon="settings" title-type="p">
+
+  - Expand the **Advanced Options** section.
+  - Fill in any tracking fields you use consistently across campaigns (see **Advanced options** below).
+
+  </Step>
+
+  <Step title="Save the campaign" icon="check-circle" title-type="p">
+
+  - Click **Create Campaign**.
+  - You return to the Campaign list, and your new campaign appears with **Active** status by default.
+
+  </Step>
+</Steps>
+
+## Advanced options
+
+Advanced options help you organize and filter campaigns by channel, type of message, and specific labels. These fields are optional but recommended so your reports stay consistent.
+
+### Advanced option fields
+
+Use these fields to add more detail to your tracking links:
+
+- **Source**: Where the campaign runs, such as `email`, `facebook`, `instagram`, or `google-ads`. Use this to group results by the place traffic starts.
+- **Medium**: The type of marketing, for example `newsletter`, `social`, `cpc`, or `flyer`. This helps you compare how different types of outreach perform across campaigns.
+- **Campaign Tag**: A short tag or label for this campaign, often matching an internal campaign code or naming convention. Use this when you run similar campaigns across multiple sources and want a common identifier.
+- **Content**: A label for different versions of the same campaign, such as `header-image-a` or `subject-line-1`. Use this when you are testing which version works better within the same source and medium.
+- **Term**: An optional keyword or search phrase connected to the campaign, often used for paid search efforts so you can see which terms lead to registrations.
+- **Status**: The starting status for the campaign. Set to **Active** to begin tracking right away, or **Inactive** if you want to prepare links before you launch and start tracking later.
+
+## Edit a campaign
+
+Edit a campaign when you need to adjust names, descriptions, tracking settings, or status.
+
+<Steps>
+  <Step title="Open the campaign" icon="edit" title-type="p">
+
+  - From **Admin → Campaigns**, find the campaign you want to edit.
+  - Either click the **menu icon** (three lines) next to the campaign and choose **Edit Campaign**, or click the **campaign name** to open results and then choose **Edit Campaign** from that page.
+
+  </Step>
+
+  <Step title="Update details and options" icon="edit" title-type="p">
+
+  - Adjust the **Campaign Name**, **Description**, **Destination URL** (where the link sends families), or **Advanced Options** fields as needed.
+  - Review the **Quick Preview** section to see tracking links and key numbers so you understand what you are changing.
+
+  </Step>
+
+  <Step title="Save your changes" icon="check-circle" title-type="p">
+
+  - Click **Save Changes**.
+  - The Campaign list and results views update with the new information.
+
+  </Step>
+</Steps>
+
+## Get tracking codes
+
+Tracking codes turn your campaign setup into real links and website tracking you can use in emails, ads, and on your site.
+
+You can access tracking codes either from the Campaigns list or from a campaign's results page.
+
+<Steps>
+  <Step title="Open tracking codes" icon="code" title-type="p">
+
+  - From **Admin → Campaigns**, locate the campaign.
+  - Click the **menu icon** (three lines) and choose **Get Tracking Codes**, or open the campaign results and click **Get Tracking Codes** there.
+
+  </Step>
+
+  <Step title="Copy the website tracking code" icon="code" title-type="p">
+
+  - In the **Website Tracking Code** section, copy the tracking code provided.
+  - Add this code once in the shared area of your website where you keep other tracking or analytics code so it runs on all pages.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+If you are not comfortable updating your website, send the website tracking code and these instructions to your website manager, IT contact, or outside web designer and ask them to add it in the usual place where they keep your tracking or analytics code.
+
+</Callout>
+
+<Steps>
+  <Step title="Copy portal tracking links" icon="link" title-type="p">
+
+  - For links that send families to your registration portal, copy the **Portal Tracking URL**, which looks like:
+
+    ```text
+    https://portal.campium.com/t.php?cid=123
+    ```
+
+  - Use this link in emails or ads. It passes through the portal to record the click before sending visitors to the final page.
+
+  </Step>
+
+  <Step title="Copy website tracking links" icon="link" title-type="p">
+
+  - For links that send families directly to your website, copy the **Website Tracking URL**, which might look like:
+
+    ```text
+    https://ramaquois.com?cid=123
+    ```
+
+  - The `cid=123` part at the end is the campaign number. Keep that part exactly as shown so the website tracking code can recognize the campaign and record the click.
+
+  </Step>
+
+  <Step title="Use link snippets when needed" icon="code" title-type="p">
+
+  - If you prefer, copy the **HTML Link** snippet, which is a ready-to-paste link format with the correct tracking address.
+  - Paste this into web pages or templates that accept this kind of link snippet.
+
+  </Step>
+</Steps>
+
+### How tracking codes work
+
+Portal tracking links send visitors through the portal first, record the click, and then send visitors to the campaign's destination page.
+
+Website tracking links send visitors directly to your website with the campaign number at the end of the link; the website tracking code reads that campaign number and tracks the click for the correct campaign.
+
+When someone who clicked a tracked link later completes a registration, the system connects that registration back to the campaign based on their earlier click.
+
+## View analytics
+
+Campaign analytics show how many people interacted with your campaign and how many of them registered.
+
+Open analytics by clicking a campaign name from the Campaigns list or choosing **View Analytics** from the menu.
+
+### Engagement metrics
+
+These metrics help you understand traffic volume and interest:
+
+- **Total Clicks**: All clicks recorded for the campaign's tracking links.
+- **Unique Visitors**: Estimated number of different people who clicked, to give a sense of how many individuals you reached.
+- **Mobile Traffic %**: Percentage of visitors using mobile devices.
+- **Countries**: Where visitors are located by country.
+
+### Conversion metrics
+
+Conversion metrics show how many tracked visitors completed registrations:
+
+- **Total Conversions**: Total number of registrations recorded for visitors connected to this campaign.
+- **Conversion Rate**: Conversions divided by unique clicks, multiplied by 100, shown as a percentage.
+- **Attributed Conversions**: Registrations that the system was able to connect back to the campaign based on the visitor's activity.
+
+### Breakdowns and recent activity
+
+Use breakdowns to see how campaign performance changes over time and across different details:
+
+- **Clicks Over Time**: Chart of clicks in your selected date range.
+- **Top Locations**: Locations that generate the most clicks.
+- **Devices and Browsers**: Breakdown of clicks by device type and browser.
+- **Top Referrers**: External sites or sources sending traffic to the campaign.
+- **Recent Clicks**: Latest click events with time and high-level details.
+
+### Date range filter
+
+Use the date picker to narrow analytics to a specific date range.
+
+Changing the date range updates the summary numbers, breakdown charts, and recent clicks to show only activity within that window.
+
+## Conversion tracking
+
+Conversion tracking connects clicks on your campaign links to completed registrations.
+
+### 30-day matching window
+
+The system records a conversion when someone who clicked a campaign link reaches the registration **receipt page**.
+
+To connect the registration to a campaign, the system looks back up to **30 days** at that person's earlier clicks and tries to match them based on their device and app.
+
+### Multiple campaign attribution
+
+If someone clicked links from more than one campaign within the 30-day window and the system can match them, it records a conversion for **each** matching campaign.
+
+This lets you see how overlapping efforts (for example, an email and a remarketing ad) both played a role in the same registration.
+
+### Duplicate conversion protection
+
+To avoid inflated numbers, the system limits duplicate conversions for the same campaign in a short period.
+
+For each campaign and person, only **one** conversion is recorded in any **24-hour** window, even if they complete more than one registration during that time.
+
+<Callout kind="info">
+
+If conversion tracking looks low compared to your total registrations, check whether families return on a different device or app than they used to click the link, or come back more than 30 days later. In these cases, the system may not be able to connect the registration back to the original click, even though the registration itself is successful.
+
+</Callout>
+
+## Activate or deactivate a campaign
+
+Use campaign status to control whether clicks and conversions are tracked without breaking your external links.
+
+- **Active**: Campaign records clicks and conversions for all tracking links.
+- **Inactive**: Campaign still sends visitors to the destination page, but stops tracking new clicks and conversions.
+
+Turn off tracking for campaigns you no longer plan to use so they stop affecting your reports while keeping old links working.
+
+## Delete a campaign
+
+Deleting a campaign is permanent and removes all associated analytics.
+
+<Callout kind="alert">
+
+When you delete a campaign, Campium permanently removes all click and conversion data for that campaign. This action cannot be undone, and deleted data is not recoverable.
+
+</Callout>
+
+To delete a campaign, open the Campaigns list, use the menu next to the campaign, and choose the delete option. Confirm the deletion only after you export or review any data you still need.
+
+## Common use cases
+
+Campaign Tracking supports a variety of everyday marketing workflows:
+
+- **Track email performance**: Use portal or website tracking links in email newsletters and announcements to see how many recipients click and register.
+- **Measure social media impact**: Create separate campaigns for platforms like Facebook and Instagram, each with its own tracking link, to compare engagement.
+- **Evaluate paid ads**: Assign campaigns to online ads and landing pages, then use conversion numbers to understand return on ad spend.
+- **Compare messaging versions**: Use the `Content` advanced option to label different subject lines or images and see which version leads to more registrations.
+- **Monitor seasonal promotions**: Set up campaigns for seasonal offers (for example, early bird registration) and review performance over the full registration period.
+
+## Troubleshooting
+
+Use these checks when campaigns or analytics do not behave as expected.
+
+<ExpandableGroup>
+  <Expandable title="Campaigns do not appear under Admin">
+
+  - Confirm your staff role includes the Campaigns permission.
+  - If you recently updated permissions, sign out and sign back in to refresh access.
+  - Ask an account administrator to verify your role settings if you still do not see Campaigns.
+
+  </Expandable>
+
+  <Expandable title="Clicks are not tracking for portal links">
+
+  - Verify the campaign **Status** is set to **Active**.
+  - Confirm you are using the **Portal Tracking URL** that includes `/t.php?cid=` in the address.
+  - Make sure the link you share matches the tracking link exactly without changes.
+  - Check that the campaign belongs to the same organization as the portal you are linking to.
+
+  </Expandable>
+
+  <Expandable title="Website tracking does not work">
+
+  - Confirm the **Website Tracking Code** is installed on your site in the shared area where other tracking or analytics code is kept so it runs on all relevant pages.
+  - Check that the links you share use the website tracking link with the campaign number at the end, such as `https://ramaquois.com?cid=123`, and that the `cid=123` part is still present.
+  - If you use multiple website addresses, make sure the tracking code is installed on the address receiving traffic.
+
+  </Expandable>
+
+  <Expandable title="Conversions are missing or lower than expected">
+
+  - Confirm that the registration **receipt page** is where conversion tracking happens and that the conversion tracking code is present there.
+  - Check that families return to complete registration within 30 days of their click, using the same device and app.
+  - Remember that only one conversion per campaign per person is counted every 24 hours, which removes duplicates.
+  - If families switch devices (for example, from phone to laptop), use private browsing, or connect through networks that hide their details, attributed conversions can be lower even though registrations succeed.
+
+  </Expandable>
+
+  <Expandable title="Attributed conversion rate is low">
+
+  - Keep in mind that some families may complete registration long after clicking, beyond the 30-day window.
+  - Consider cross-device behavior: a click on one device and registration on another often cannot be connected.
+  - Understand that tools or networks that hide visitor details can make it harder to match registrations back to clicks.
+
+  </Expandable>
+
+  <Expandable title="Location or device data is missing or incomplete">
+
+  - Location relies on the information shared by the visitor's network; some networks or privacy tools hide location details.
+  - Devices and apps that block tracking will reduce the completeness of these breakdowns.
+  - Focus on overall trends rather than exact counts for these fields.
+
+  </Expandable>
+
+  <Expandable title="Analytics do not appear to update">
+
+  - Campaign analytics update in near real time; refresh the page to see the latest data.
+  - Check the **date range** filter to ensure you are viewing the correct window for recent activity.
+  - Confirm that the campaign is **Active** and that you are using the correct tracking links or website tracking code.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Best practices
+
+Follow these guidelines to keep your campaign data clear and useful:
+
+- **Use clear, consistent names**: Include channel, audience, and purpose in the campaign name so you recognize it later in reports.
+- **Separate campaigns by channel**: Create different campaigns for each major channel (email, social, ads) to compare performance accurately.
+- **Install website tracking code once**: Add the tracking code in the shared website area where other tracking or analytics code is kept so all campaign links with `cid` at the end record clicks.
+- **Prefer portal links when you need guaranteed tracking**: For links that naturally go to your registration portal, use the portal tracking link so the click is always recorded.
+- **Use website links for direct site visits**: For marketing that points to your main website, use the website tracking link so the tracking code can recognize the campaign.
+- **Set a meaningful destination URL**: Point campaigns to high-intent pages such as your main website, a landing page, or your registration portal home.
+- **Review analytics regularly**: Check click and conversion numbers during active campaigns to adjust messaging, budgets, or channels as needed.
+- **Turn campaigns inactive before deleting**: Switch old campaigns to **Inactive** instead of deleting them so historical analytics remain available unless you are sure you no longer need the data.
