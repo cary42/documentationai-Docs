@@ -103,7 +103,7 @@ Use the action menu on each row to edit, archive, or delete a discount.
 
 ## Create a new discount
 
-Create a new discount when you want to launch a promotion, offer financial aid, or apply staff-only adjustments.
+Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, or offer a pay in full discount.
 
 <Steps>
   <Step title="Start a new discount" icon="plus" title-type="p">
@@ -135,6 +135,20 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     
     - **Yes**: Apply the discount to the entire cart.  
     - **No**: Allow product-level targeting through **Apply Only To These Products**.
+
+  </Step>
+
+  <Step title="Configure a pay in full discount" icon="check-circle" title-type="p">
+    Use a pay in full discount when you want to reward families who pay the full balance up front instead of choosing installments.
+    
+    Set the discount amount as either a **Fixed Amount** or **Percent**, then make sure the discount is visible where families check out if you want them to apply it themselves.
+    
+    To make the discount work as expected:
+    
+    - Set **Allow On Portal?** to **Yes** if families should apply it in the parent portal.  
+    - Set **Start Date** and **End Date** if the discount should only apply during a specific registration window.  
+    - Set **Limit** if you want to cap how many pay in full discounts can be used.  
+    - Use **Apply To Entire Cart** or **Apply Only To These Products** to control which registrations qualify.
 
   </Step>
 
@@ -466,6 +480,7 @@ Use this section when you see an error while saving a discount or multi-session 
   - The **Limit** has not been reached. If usage equals the limit, the discount no longer applies.  
   - Product restrictions match the items in the cart; the discount applies only to qualifying products.  
   - The discount is not archived and its status indicates it is in use.
+  - For a pay in full discount, confirm the form's new pay in full setting is enabled or overridden correctly, and verify the discount is available for the full-balance checkout path.
 
   After adjusting settings, test again with a sample registration.
 
