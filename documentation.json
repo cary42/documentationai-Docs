@@ -248,6 +248,11 @@
                 "title": "App Chat",
                 "path": "app-chat",
                 "icon": "file-text"
+              },
+              {
+                "title": "Letter Generator",
+                "path": "letter-generator",
+                "icon": "book-open-text"
               }
             ],
             "public": true

@@ -1,0 +1,140 @@
+---
+title: Letter Generator
+description: >-
+  Write personalized letters, generate one PDF per filtered person, and manage
+  saved templates in Communications.
+---
+## Letter Generator
+
+Campium’s Letter Generator is located at **Communications > Letter Generator**. Use it to write one letter template, apply it to a filtered set of people, and generate PDFs for printing or download.
+
+The generator creates one personalized letter for each matching person. It then outputs a PDF with one letter per page.
+
+## What the Letter Generator does
+
+Use the Letter Generator when you need to send the same letter content to many people while still personalizing each copy with merge fields.
+
+It supports the following common tasks:
+
+- Write a single letter template
+
+- Apply the template to people returned by your filter
+
+- Generate PDFs for printing or download
+
+- Save templates for later use
+
+- Insert merge fields into the letter body
+
+- Download a single-person PDF from the Matching Users table
+
+## Who uses it
+
+Campium admins and office staff use the Letter Generator to prepare letters for groups of people without rewriting the same content for each recipient.
+
+Use it when you need a consistent letter body with personalized details such as names or other merge fields.
+
+## How to access it
+
+Open **Communications** and select **Letter Generator**.
+
+After the page loads, you can build or load a template, filter the target people, and generate the PDF output.
+
+## Recommended workflow
+
+Follow this workflow to create and send a letter efficiently.
+
+<Steps>
+  <Step title="Write or load a template" title-type="p">
+    Enter your letter content, or load a saved template if you already have one that matches the message you want to send.
+  </Step>
+
+  <Step title="Insert merge fields and logo tokens" title-type="p">
+    Add the merge fields you need for personalization, and use `[logo]` where you want the current logo to appear.
+  </Step>
+
+  <Step title="Filter the people who should receive the letter" title-type="p">
+    Apply the filters that identify the correct group of people. The generator uses the matching results to create one personalized letter per person.
+  </Step>
+
+  <Step title="Review the matching users" title-type="p">
+    Check the Matching Users table before you generate the PDF. Use the table to confirm the list is correct and to spot any unexpected matches.
+  </Step>
+
+  <Step title="Generate the PDF" title-type="p">
+    Create the output PDF for printing or download. Campium produces one letter per page, with one personalized letter for each matching person.
+  </Step>
+</Steps>
+
+<Callout kind="success" collapsed="false">
+  If the Matching Users table looks right, your generated PDF should contain one page per person in that result set.
+</Callout>
+
+## Merge fields and logo tokens
+
+Merge fields personalize the letter for each recipient. Insert the fields that match the data you want to include, then preview the template against the filtered results to confirm the wording reads correctly.
+
+Use `[logo]` in templates that need the current logo.&#x20;
+
+<Callout kind="tip" collapsed="false">
+  Keep merge fields close to the text they replace so the final letter reads naturally for each person.
+</Callout>
+
+## Saved templates
+
+Saved templates let you reuse standard letter content without rebuilding it each time.
+
+Use the template actions to manage reusable letters:
+
+- **Create** a template after you finish drafting a letter you want to reuse
+
+- **Load** a saved template to start from an existing letter
+
+- **Update** a template after you change the letter content
+
+- **Delete** a template when it is no longer needed
+
+## Download a single person’s letter
+
+Use the single-person PDF button in the **Matching Users** table when you need one letter for one person instead of the full batch.
+
+This is useful when you only need to print or share a specific recipient’s letter without generating the full group PDF.
+
+<Callout kind="info" collapsed="false">
+  The single-person PDF uses the same template and merge field content as the batch output for that person.
+</Callout>
+
+## Best practices
+
+Keep letters focused on one purpose. A short, direct template is easier to maintain and less likely to produce awkward merged text.
+
+Use the Matching Users table to verify your filter before you generate output. That check helps you catch extra matches or missing people before printing.
+
+Prefer `[logo]` in new templates so your letters stay aligned with the current branding behavior.
+
+## Troubleshooting
+
+If the output PDF contains the wrong people, review the filters you applied in the Letter Generator. The PDF reflects the current matching set.
+
+If a merge field does not render as expected, check that the field name matches the data available for the selected people.
+
+<Callout kind="alert" collapsed="false">
+  Do not assume the Matching Users table is correct without reviewing it. A broad filter can generate letters for more people than you intended.
+</Callout>
+
+## Glossary
+
+**Letter template**\
+The reusable text you write once and apply to many people.
+
+**Merge field**\
+A placeholder that inserts person-specific data into the final letter.
+
+**Matching Users table**\
+The list of people returned by your current filters.
+
+**Single-person PDF**\
+A PDF generated for one person from the Matching Users table.
+
+**Batch PDF**\
+The PDF generated for all matching people, with one letter per page.
