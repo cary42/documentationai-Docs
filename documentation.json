@@ -267,6 +267,11 @@
             "icon": "file-text",
             "pages": [
               {
+                "title": "Integrations",
+                "path": "integrations",
+                "icon": "bolt"
+              },
+              {
                 "title": "Contracts",
                 "path": "contracts",
                 "icon": "file-text"

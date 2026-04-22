@@ -1,184 +1,158 @@
 ---
-title: Integrations with Campium
-description: Connect Campium to external tools and services to automate workflows and enhance data sharing across your camp ecosystem.
+title: Integrations
+description: Turn on and manage third-party integrations from Admin > Integrations in Campium.
 ---
 
-## Overview
-
-Campium supports seamless integrations with popular third-party services to streamline your camp operations. You can connect payment processors for billing, email providers for notifications, webhooks for real-time data sync, and access APIs for custom solutions. These integrations help automate registration payments, attendance updates, and report sharing.
+Campium’s Integrations page is located at **Admin > Integrations**. Use it to connect services that sync contacts, notifications, and accounting data.
 
 <Callout kind="info">
-Review your Campium plan to ensure integration features are enabled. Contact support if you need advanced API access.
+Some integrations require API keys, and some require you to sign in and approve access. After setup, use the test connection option before saving.
 </Callout>
 
-## Popular Integrations
+## Supported integrations
 
-Explore key integrations categorized by use case.
+- Mailchimp — send contact updates to a Mailchimp audience.
+- Klaviyo — send contact updates to a Klaviyo list.
+- Constant Contact — connect an account, choose a list, and sync contacts.
+- Slack — send activity alerts to a Slack channel.
+- QuickBooks Online — sync customers, invoices, payments, and items.
 
-<Columns cols={3}>
-  <Card title="Payments" icon="credit-card" href="#payment-gateways">
-    Connect Stripe, PayPal, and more for secure camper billing.
-  </Card>
-  <Card title="Email & SMS" icon="mail" href="#email-notifications">
-    Integrate with SendGrid, Twilio for automated communications.
-  </Card>
-  <Card title="Custom Sync" icon="zap" href="#webhooks">
-    Use webhooks and APIs for real-time data exchange.
-  </Card>
-</Columns>
-
-## Payment Gateways
-
-Set up third-party payment gateways to handle camper registrations and fees securely.
-
-### Stripe Integration
-
-Follow these steps to connect Stripe.
+## Mailchimp
 
 <Steps>
-  <Step title="Get API Keys" icon="key">
-    Log in to your Stripe dashboard and retrieve your publishable and secret keys.
+  <Step title="Open Mailchimp settings">
+    On **Admin > Integrations**, click **Configure** next to Mailchimp.
   </Step>
-  <Step title="Configure in Campium" icon="settings">
-    Navigate to Settings > Payments in Campium. Enter your Stripe keys.
+  <Step title="Enter your API key">
+    Paste the Mailchimp API key, then click **Test Connection**.
   </Step>
-  <Step title="Test Payment" icon="play">
-    Create a test registration and process a payment to verify.
+  <Step title="Save and choose a list">
+    Click **Save Settings**, then pick an audience from the dropdown or enter the audience ID manually.
+  </Step>
+  <Step title="Sync manually when needed">
+    If you want a one-time import, open **Go to Sync Page** for a manual sync.
   </Step>
 </Steps>
 
-<Tabs>
-  <Tab title="Stripe" icon="credit-card">
-    Use your Stripe keys for seamless billing.
-  </Tab>
-  <Tab title="PayPal" icon="dollar-sign">
-    Configure PayPal by entering your client ID and secret.
-  </Tab>
-</Tabs>
+What syncs:
 
-## Email and Notification Services
+- Contacts/users and status updates
+- Existing matching users on the first sync
+- Ongoing updates after that
 
-Configure providers like SendGrid or Mailgun for camp updates, attendance reminders, and billing receipts.
+## Klaviyo
 
 <Steps>
-  <Step title="Select Provider" icon="mail">
-    Choose your email service and obtain API credentials.
+  <Step title="Open Klaviyo settings">
+    On **Admin > Integrations**, click **Configure** next to Klaviyo.
   </Step>
-  <Step title="Add to Campium" icon="plus">
-    Go to Settings > Notifications and input your API key and domain.
+  <Step title="Enter your Private API key">
+    Paste the Klaviyo Private API key, then click **Test Connection**.
   </Step>
-  <Step title="Verify Setup" icon="check-circle">
-    Send a test email from Campium to confirm delivery.
+  <Step title="Save and choose a list">
+    Click **Save Settings**, then pick a list from the dropdown or enter the list ID manually.
+  </Step>
+  <Step title="Use the sync page if needed">
+    Open **Go to Sync Page** for a manual sync.
   </Step>
 </Steps>
 
-## Webhooks for Real-Time Updates
+What syncs:
 
-Webhooks notify external services of events like new registrations or attendance changes.
+- Contacts/users and statuses
+- Initial import plus ongoing status updates
 
-### Webhook Setup
+## Constant Contact
 
-1. Enable webhooks in Settings > Integrations.
-2. Add your endpoint URL, e.g., `https://your-webhook-url.com/webhook`.
-3. Select events like `camper.registered` or `attendance.updated`.
+<Steps>
+  <Step title="Connect Constant Contact">
+    On **Admin > Integrations**, click **Configure** next to Constant Contact, then click **Connect Constant Contact**.
+  </Step>
+  <Step title="Authorize access">
+    Sign in and approve access in Constant Contact.
+  </Step>
+  <Step title="Choose a list">
+    Back in Campium, choose a contact list or paste the list ID, then click **Test connection**.
+  </Step>
+  <Step title="Use sync tools as needed">
+    Open **Go to sync page** if you want to run a manual sync.
+  </Step>
+</Steps>
 
-```mermaid
-sequenceDiagram
-    participant C as Campium
-    participant W as Your Webhook
-    participant DB as Your Database
-    C->>W: POST /webhook (event data)
-    W->>DB: Store/Update data
-    DB-->>W: Confirm
-    W-->>C: 200 OK
-```
+What syncs:
 
-<CodeGroup tabs="Node.js,Python">
-  ```javascript
-  const express = require('express');
-  const app = express();
-  app.use(express.json());
+- Contacts/users to the selected list
+- Status tags mapped to contact tags such as Active, Inactive, Pending, and Lead
+- Ongoing updates after connection
 
-  app.post('/webhook', (req, res) => {
-    const event = req.body;
-    if (event.type === 'camper.registered') {
-      console.log(`New camper: ${event.data.name}`);
-      // Sync to your CRM
-    }
-    res.status(200).send('OK');
-  });
+## Slack
 
-  app.listen(3000);
-  ```
-  ```python
-  from flask import Flask, request, jsonify
+<Steps>
+  <Step title="Open Slack settings">
+    On **Admin > Integrations**, click **Configure** next to Slack.
+  </Step>
+  <Step title="Add your webhook URL">
+    Paste the Slack Incoming Webhook URL and click **Test Connection**.
+  </Step>
+  <Step title="Choose notifications">
+    Turn notification toggles on or off for **New User Created**, **Session Purchase**, and **Payment Received**.
+  </Step>
+  <Step title="Save the integration">
+    Click **Save Settings** when you are done.
+  </Step>
+</Steps>
 
-  app = Flask(__name__)
+What sends to Slack:
 
-  @app.route('/webhook', methods=['POST'])
-  def webhook():
-      event = request.json
-      if event['type'] == 'camper.registered':
-          print(f"New camper: {event['data']['name']}")
-          # Sync to your CRM
-      return jsonify({'status': 'OK'}), 200
+- Real-time notifications for selected events only
 
-  if __name__ == '__main__':
-      app.run(port=3000)
-  ```
-</CodeGroup>
+## QuickBooks Online
 
-## Exporting Reports
+<Steps>
+  <Step title="Open QuickBooks settings">
+    On **Admin > Integrations**, click **Configure** next to QuickBooks.
+  </Step>
+  <Step title="Choose sync options">
+    In settings, choose the auto-sync options for **Customers (users/families)**, **Invoices (sales)**, **Payments**, and **Items (products)**.
+  </Step>
+  <Step title="Save and verify">
+    Click **Save Settings**, then use **Manual Sync** when needed.
+  </Step>
+  <Step title="Check status and logs">
+    Use **Connection Status** to verify the link and **View Logs** to review sync history.
+  </Step>
+</Steps>
 
-Export custom reports to HTML, PDF, XLS, or Avery labels for sharing with staff or parents.
+## API keys
 
-In the Reports section, apply filters and select your export format. Reports include attendance, billing summaries, and camper profiles.
+The bottom table on **Admin > Integrations** shows system API keys.
+
+1. Click **New API Key**.
+2. Enter a label for the key, such as “Mailchimp”.
+3. Click **Save**.
+4. Copy the key immediately. It is shown only once.
+
+The existing keys table shows:
+
+- Label
+- Key
+- Created
+- Last Accessed
+
+Each row includes menu actions to edit or delete the key. Delete is hidden if the key is in use.
+
+## Troubleshooting
 
 <Callout kind="tip">
-Schedule automated exports via webhooks for daily rosters.
+Start with the simplest check first: confirm the key or webhook was pasted in full, then click **Test Connection** again.
 </Callout>
 
-## Custom API Integrations
+If something still is not working:
 
-Access basic endpoints for advanced customizations. Base URL: `https://api.example.com/v1`.
+- Re-select the audience or list if the wrong one was chosen.
+- Run a manual sync once, then check logs or history.
+- Disconnect and reconnect the integration, save again, and retest.
 
-<ParamField path="campers" param-type="GET" required="false">
-  Retrieve camper list.
-</ParamField>
-
-<ParamField header="Authorization" param-type="string" required="true">
-  Bearer `{YOUR_API_TOKEN}`.
-</ParamField>
-
-<Request tabs="cURL,JavaScript">
-  ```bash
-  curl -X GET https://api.example.com/v1/campers \
-    -H "Authorization: Bearer YOUR_API_TOKEN"
-  ```
-  ```javascript
-  const response = await fetch('https://api.example.com/v1/campers', {
-    headers: {
-      'Authorization': 'Bearer YOUR_API_TOKEN'
-    }
-  });
-  const campers = await response.json();
-  ```
-</Request>
-
-<Response tabs="200">
-  ```json
-  {
-    "campers": [
-      {
-        "id": "cmp_123",
-        "name": "Jane Doe",
-        "attendance": "present"
-      }
-    ]
-  }
-  ```
-</Response>
-
-<Expandable title="Advanced API Limits" default-open="false">
-  Rate limits: 100 requests per minute. Use pagination for large datasets with `?page=1&limit=50`.
-</Expandable>
+<Callout kind="alert">
+If you are still blocked after those steps, contact support for help with the integration connection.
+</Callout>
