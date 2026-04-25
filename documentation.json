@@ -363,6 +363,10 @@
             "group": "Payments",
             "pages": [
               {
+                "title": "How do I skip a deposit?",
+                "path": "how-do-i-skip-a-deposit"
+              },
+              {
                 "title": "What is a chargeback?",
                 "path": "what-is-a-chargeback"
               },

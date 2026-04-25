@@ -1,11 +1,11 @@
 ---
 title: Discounts
-description: Manage discount codes and multi-session discount configurations in Campium Admin, including settings, usage, and common troubleshooting.
+description: Manage discount codes and multi-session discount settings in Campium Admin, including checkout behavior, usage, and troubleshooting.
 ---
 
 ## What you can do with Discounts
 
-Use the Discounts page in Campium Admin to manage all discount codes and multi-session discount configurations for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them.
+Use the Discounts page in Campium Admin to manage discount codes and multi-session discount settings for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them at checkout.
 
 Use this page when you want to:
 
@@ -13,6 +13,7 @@ Use this page when you want to:
 - Edit, archive, or delete existing discounts
 - Control when and where a discount can be used
 - Set up multi-session discounts that reward additional registrations
+- Let a discount cover the full checkout amount so families do not need to pay anything at checkout
 
 <Callout kind="info">
 
@@ -36,23 +37,23 @@ When the page loads, you see a list of discounts and any multi-session discount 
 
 ## Discount list: columns and status
 
-Each row in the discount list represents a single discount code. Use the columns to understand how each discount behaves.
+Each row in the discount list represents one discount code. Use the columns to understand how each discount behaves.
 
 <ParamField body="code" param-type="string" show-location="false">
 
-**Code** — The discount code families or staff enter at checkout.
+**Code** — The code families or staff enter at checkout.
 
 </ParamField>
 
 <ParamField body="description" param-type="string" show-location="false">
 
-**Description** — The text that appears on invoices and receipts. Use customer-friendly wording.
+**Description** — The text that appears on invoices and receipts. Use wording that families will recognize.
 
 </ParamField>
 
 <ParamField body="status" param-type="string" show-location="false">
 
-**Status** — Indicates whether the discount can currently be used. Typical values include:
+**Status** — Shows whether the discount can currently be used. Typical values include:
 - **In use**: Discount is active and can be applied when other conditions are met.
 - **Not in use**: Discount is disabled or blocked by another setting.
 - **Expired**: Discount is past its end date.
@@ -61,7 +62,7 @@ Each row in the discount list represents a single discount code. Use the columns
 
 <ParamField body="amount" param-type="number" show-location="false">
 
-**Amount** — Shows either a fixed dollar amount or a percentage discount, depending on how you configured it.
+**Amount** — Shows either a fixed dollar amount or a percentage discount, depending on how the discount was set up.
 
 </ParamField>
 
@@ -75,7 +76,7 @@ Each row in the discount list represents a single discount code. Use the columns
 
 <ParamField body="allowDuplicates" param-type="boolean" show-location="false">
 
-**Allow duplicates?** — Controls whether the same user can receive the discount more than once:
+**Allow duplicates?** — Controls whether the same family can receive the discount more than once:
 - **Yes**: The same user can use this discount multiple times.
 - **No**: The user can only receive this discount once.
 
@@ -83,7 +84,7 @@ Each row in the discount list represents a single discount code. Use the columns
 
 <ParamField body="usage" param-type="integer" show-location="false">
 
-**Usage** — How many times the discount has been successfully used.
+**Usage** — How many times the discount has been used.
 
 </ParamField>
 
@@ -103,7 +104,7 @@ Use the action menu on each row to edit, archive, or delete a discount.
 
 ## Create a new discount
 
-Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, or offer a pay in full discount.
+Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, offer a pay in full discount, or make checkout free for the family.
 
 <Steps>
   <Step title="Start a new discount" icon="plus" title-type="p">
@@ -121,7 +122,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     - **Fixed Amount** (for example, `25.00` for a twenty-five dollar discount), or  
     - **Percent** (for example, `10` for ten percent off)
 
-    Leave the other field at zero. The system only accepts one positive value.
+    Leave the other field at zero. Only one value can be used at a time.
 
   </Step>
 
@@ -139,9 +140,11 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Configure a pay in full discount" icon="check-circle" title-type="p">
-    Use a pay in full discount when you want to reward families who pay the full balance up front instead of choosing installments.
+    Use a pay in full discount when you want to reward families who pay the full balance up front instead of choosing installments, or when you want checkout to be free for the family.
     
     Set the discount amount as either a **Fixed Amount** or **Percent**, then make sure the discount is visible where families check out if you want them to apply it themselves.
+    
+    Some discounts can also be set to bypass payment completely in Admin by turning on **Bypass payment at portal checkout?**. When this setting is turned on, the discount can cover the full checkout amount, so the family does not need to pay anything at checkout.
     
     To make the discount work as expected:
     
@@ -294,13 +297,13 @@ Each multi-session configuration defines a volume-based discount rule.
 
 <ParamField body="form" param-type="string" show-location="false">
 
-**Form (optional)** — Limits the rule to one registration form, or applies it to all forms when left unset.
+**Form (optional)** — Limits the rule to one registration form, or applies it to all forms when left blank.
 
 </ParamField>
 
 <ParamField body="minimumSessions" param-type="integer" show-location="false">
 
-**Minimum Sessions** — Minimum number of qualifying sessions required before the rule can grant any discount.
+**Minimum Sessions** — Minimum number of qualifying sessions required before the rule can apply a discount.
 
 </ParamField>
 
@@ -314,22 +317,22 @@ Each multi-session configuration defines a volume-based discount rule.
 
 **Discount Tiers** — One or more tier rows. Each tier sets:
 - A **Session Count** threshold.
-- A **Discount** (selected from your existing discount codes) that applies when the threshold is met.
+- A **Discount** chosen from your existing discount codes that applies when the threshold is met.
 
 </ParamField>
 
 ### Before you build multi-session rules
 
-Multi-session tiers reference existing discount codes. Create the underlying discount codes first on the main Discounts list, then use those codes in your multi-session configuration tiers.
+Multi-session tiers use discount codes you have already created. Add the discount codes first on the main Discounts list, then choose those codes in your multi-session tiers.
 
-This gives you consistent invoice descriptions and lets you reuse existing discount logic.
+This keeps invoice descriptions consistent and lets you reuse the same discount setup in more than one place.
 
 ### How tiers work
 
-Tiers are threshold-based. The system evaluates how many qualifying sessions a registrant has and finds the best match among your tiers.
+Tiers are based on session counts. The system checks how many qualifying sessions a registrant has and finds the best match among your tiers.
 
-- When the user reaches a tier's **Session Count**, they qualify for that tier's discount.  
-- If multiple tiers qualify, the system uses the best matching tier for that session count, typically the highest threshold they meet.
+- When a registrant reaches a tier's **Session Count**, they qualify for that tier's discount.  
+- If multiple tiers qualify, the system uses the best match for that session count, usually the highest threshold they meet.
 
 **Example**
 
@@ -402,7 +405,7 @@ You can disable a configuration temporarily by setting **Enabled** to **No**, in
 
 <Callout kind="tip">
 
-Use these guidelines to keep discounts understandable for both staff and families.
+Use these guidelines to keep discounts clear for both staff and families.
 
 </Callout>
 
