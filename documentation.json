@@ -108,6 +108,10 @@
                     "path": "system-report-attendance-kiosk"
                   },
                   {
+                    "title": "Attendance Reporting",
+                    "path": "system-report-attendance-reporting"
+                  },
+                  {
                     "title": "Charts",
                     "path": "system-report-charts"
                   },
