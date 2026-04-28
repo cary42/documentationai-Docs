@@ -194,6 +194,11 @@
                 "icon": "users"
               },
               {
+                "title": "Health Report",
+                "path": "health-report",
+                "icon": "briefcase-medical"
+              },
+              {
                 "group": "Payments",
                 "pages": [
                   {
