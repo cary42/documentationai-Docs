@@ -301,6 +301,10 @@
                 "icon": "file-text"
               },
               {
+                "title": "Email Templates",
+                "path": "email-templates"
+              },
+              {
                 "title": "Payment Plans",
                 "path": "payment-plans",
                 "icon": "file-text"
