@@ -321,6 +321,10 @@
             "group": "Seasons & Sessions",
             "pages": [
               {
+                "title": "Manage Seasons",
+                "path": "manage-seasons"
+              },
+              {
                 "title": "Subproducts",
                 "path": "subproducts",
                 "icon": "boxes"

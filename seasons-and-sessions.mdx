@@ -1,8 +1,8 @@
 ---
 title: Seasons and sessions
 description: >-
-  Understand how Seasons group Sessions and Subproducts in Campium, and learn
-  how to create, copy, and manage capacities and waitlists from the admin UI.
+  Understand how Seasons group Sessions, Products, and Subproducts in Campium,
+  and learn how to create, copy, and manage capacities, waitlists, and season status.
 ---
 ## Overview
 
@@ -96,11 +96,11 @@ Cloning a Season lets you reuse all of the Sessions (Products), forms, and payme
 
 <Steps>
   <Step title="Open the Season clone modal" icon="folder" title-type="p">
+
     - Go to the Seasons area in the admin.
-
     - Select the Season you want to copy.
-
     - Use the Season clone action (often labeled `Clone` or similar) to open the Season clone modal.
+
   </Step>
 
   <Step title="Review the clone note" icon="info" title-type="p">
@@ -124,10 +124,9 @@ Cloning a Season lets you reuse all of the Sessions (Products), forms, and payme
   </Step>
 
   <Step title="Start the clone" icon="play-circle" title-type="p">
+
     - Click **Save** to start cloning the Season.
-
     - Leave the window open until the process finishes, as the note indicates.
-
     - Click **Cancel** if you decide not to clone.
 
     When the clone completes, the new Season appears in your Seasons list with copied Sessions/Products, forms, and payment plans that you can then adjust.
@@ -144,9 +143,10 @@ Use the New Session/Product modal to define a session that families can register
 
 <Steps>
   <Step title="Open the new session modal" icon="plus" title-type="p">
-    - Navigate to the Products/Sessions list within the Season.
 
+    - Navigate to the Products/Sessions list within the Season.
     - Click the button that opens the New Session/Product modal (the exact label varies based on **Admin → Site Settings → Basic**).
+
   </Step>
 
   <Step title="Fill required naming and pricing fields" icon="edit" title-type="p">
@@ -222,10 +222,9 @@ Use the New Session/Product modal to define a session that families can register
   </Step>
 
   <Step title="Save the new Session/Product" icon="check-circle" title-type="p">
+
     - Review all fields for accuracy.
-
     - Click **Save** to create the Session/Product.
-
     - Click **Cancel** to close without saving.
 
     After saving, the new Session/Product appears in the list for that Season, and registration and reporting links will be available according to your configuration.
@@ -238,9 +237,10 @@ Copying a Session/Product lets you reuse most settings from an existing session 
 
 <Steps>
   <Step title="Open the copy session modal" icon="copy" title-type="p">
-    - In the Sessions/Products list, locate the item you want to copy.
 
+    - In the Sessions/Products list, locate the item you want to copy.
     - Use the copy action to open the copy modal (often labeled `Copy` or similar).
+
   </Step>
 
   <Step title="Enter copy details" icon="edit" title-type="p">
@@ -256,8 +256,8 @@ Copying a Session/Product lets you reuse most settings from an existing session 
   </Step>
 
   <Step title="Create the copy" icon="play-circle" title-type="p">
-    - Click **Copy** to create the new Session/Product with the provided name in the selected Season.
 
+    - Click **Copy** to create the new Session/Product with the provided name in the selected Season.
     - Click **Close** to exit without copying.
 
     The new Session/Product will then appear in the chosen Season's Sessions/Products list.
@@ -320,9 +320,10 @@ Use the `New Subproduct` button to add an option under a Session/Product.
 
 <Steps>
   <Step title="Open the new Subproduct form" icon="plus" title-type="p">
-    - From the Session/Product row, click into its options/subproducts area.
 
+    - From the Session/Product row, click into its options/subproducts area.
     - Click **New Subproduct** to open the option create modal (fields mirror the edit modal described below).
+
   </Step>
 
   <Step title="Configure core Subproduct fields" icon="edit" title-type="p">
@@ -362,8 +363,8 @@ Use the `New Subproduct` button to add an option under a Session/Product.
   </Step>
 
   <Step title="Save the Subproduct/option" icon="check-circle" title-type="p">
-    - Click **Save** to create or update the Subproduct/option.
 
+    - Click **Save** to create or update the Subproduct/option.
     - Click **Cancel** to abandon changes.
 
     The option appears in the options list with the configured name, description, price, deposit, capacity, and status, and the `Wait` and `# Reg.` columns update according to your registrations and waitlists.
@@ -428,6 +429,20 @@ From the Subproducts/options list (`product-options.html`):
 
 These links let you quickly jump from configuring options to monitoring who is registered or waiting at both the Session and Subproduct levels.
 
+## Season management overview
+
+Admins can create and manage Seasons from the Seasons area, including adding new Seasons for upcoming registration periods and updating older ones after they end.
+
+- **Create a new Season** using the **Add New Season** action in the Seasons area, then enter the Season name and any related settings your setup requires.
+
+- **Set a Season to Inactive** after it has passed so it no longer functions as a current registration period.
+
+- **Use the profile-data snapshot option when needed** to save profile information as it existed when you saved the Season. This process runs in the background and can later support historical filtering in customer reports.
+
+<Callout kind="alert" collapsed="false">
+  Change a Season from Active to Inactive only after that Season has passed. Setting a Season to Inactive can also set users to Inactive unless they are part of another Active Season.
+</Callout>
+
 ## Summary
 
 - **Seasons** group Sessions/Products, forms, and payment plans and can be cloned with the Season clone modal.
@@ -437,4 +452,3 @@ These links let you quickly jump from configuring options to monitoring who is r
 - **Subproducts/options** extend Sessions with variants, managed through the options list and edit modal with inline editing for price, deposit, and capacity.
 
 - **Registrations and waitlists** are accessed through consistent report links from both the Sessions/Products list and the Subproducts/options list.
-
