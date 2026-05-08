@@ -1,0 +1,416 @@
+---
+title: Payment Plans
+description: Set up, manage, and troubleshoot seasonal payment plans so families can pay camp fees over time or choose pay in full.
+---
+
+## Spread fees over time with seasonal payment plans
+
+Payment plans let families spread camp fees over time instead of paying everything at once. When a season has at least one active payment plan, families will still also see an automatic pay-in-full option, so do not create a separate plan named `Pay In Full`.
+
+<Callout kind="info">
+
+Payment plans belong to a **season**. Before you create, edit, or copy a plan, confirm that the season selector is showing the season you want to work in.
+
+</Callout>
+
+<Callout kind="alert">
+
+You cannot use `Pay In Full` as a payment plan name. That option is reserved and the system handles it automatically.
+
+</Callout>
+
+## Open the Payment Plans page
+
+Set up payment plans from the admin area.
+
+<Steps>
+  <Step title="Go to Payment Plans" icon="settings">
+
+  Open **Payment Plans** from the admin area.
+
+  </Step>
+  <Step title="Choose the season" icon="calendar">
+
+  Use the season selector at the top of the page to view the correct season.
+
+  What you see in the list belongs only to the season you selected.
+
+  </Step>
+</Steps>
+
+## Create a new plan
+
+Create a plan after you confirm the correct season.
+
+<Steps>
+  <Step title="Start a new plan" icon="plus">
+
+  Click **Add New Payment Plan**.
+
+  </Step>
+  <Step title="Complete the plan form" icon="edit">
+
+  Enter the plan name, choose the plan type, set the dates, and complete any additional fields for that plan type.
+
+  </Step>
+  <Step title="Save the plan" icon="check-circle">
+
+  Save the plan to add it to the season.
+
+  After saving, the plan appears in the list for that season.
+
+  </Step>
+</Steps>
+
+### Plan fields
+
+Use these fields when creating or editing a plan.
+
+<ParamField body="Plan name" param-type="string" required="true" show-location="false">
+Choose a clear name that families and staff can recognize. You cannot use `Pay In Full` as the plan name.
+</ParamField>
+
+<ParamField body="Type of plan" param-type="string" required="true" show-location="false">
+Choose **Standard** or **Even split**. Standard plans use manually defined charge lines. Even split plans divide the remaining balance across charges between the start and end dates.
+</ParamField>
+
+<ParamField body="Description" param-type="string" show-location="false">
+Optional text for **Standard** plans. Use it to explain the timing in plain language if families will see it.
+</ParamField>
+
+<ParamField body="Charge cadence" param-type="string" show-location="false">
+Available for **Even split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st and 15th**.
+</ParamField>
+
+<ParamField body="Day of month" param-type="integer" show-location="false">
+Used with **Monthly** even split plans. Choose which day of the month charges should run.
+</ParamField>
+
+<ParamField body="Start date" param-type="date" required="true" show-location="false">
+For **Standard** plans, this is the first day the plan can be chosen. For **Even split** plans, this is the first date a charge can happen on or after.
+</ParamField>
+
+<ParamField body="End date" param-type="date" required="true" show-location="false">
+For **Standard** plans, this is the last day the plan can be chosen. For **Even split** plans, this is the last date a charge can happen on or before.
+</ParamField>
+
+<ParamField body="Season" param-type="season" required="true" show-location="false">
+Required when creating a new plan. The selected season determines where the plan belongs.
+</ParamField>
+
+## Choose between Standard and Even split
+
+The plan type changes how charges are created and managed.
+
+| Plan type | How charges are set | What you configure | Best for |
+| --- | --- | --- | --- |
+| Standard | You define each charge manually | Schedule lines with dates and amounts or percentages | Plans with fixed installments or custom timing |
+| Even split | The system divides the remaining balance automatically | Charge cadence, dates, and monthly day if needed | Plans that should spread the balance evenly over time |
+
+### Standard plans
+
+Standard plans give you full control over each charge. You create separate plan detail lines for each installment after the plan itself is saved.
+
+### Even split plans
+
+Even split plans do not use manual schedule lines. The system calculates the charge amounts based on the balance, the date range, and the cadence you choose.
+
+<Callout kind="tip">
+
+For even split plans, use the sample balance preview to check how charges fall between the start and end dates before families use the plan.
+
+</Callout>
+
+## Add schedule details to a Standard plan
+
+Standard plans need plan detail lines before they can work as expected.
+
+<Steps>
+  <Step title="Expand the plan row" icon="chevron-right">
+
+  Find the Standard plan in the list and expand its row.
+
+  </Step>
+  <Step title="Add a plan detail line" icon="plus">
+
+  Use **Add New Plan Detail** to create each installment.
+
+  </Step>
+  <Step title="Set the charge date and amount" icon="edit">
+
+  For each line, choose the charge date. Then decide whether the line should charge the entire remaining balance or only part of it.
+
+  </Step>
+  <Step title="Save additional lines as needed" icon="check-circle">
+
+  Add one line for each installment in the schedule.
+
+  You can edit a line with the pencil icon or remove it with the trash icon.
+
+  </Step>
+</Steps>
+
+### Plan detail line fields
+
+Choose these settings for each payment line:
+
+- **Date** — Pick the day that charge should run.
+- **Charge entire balance** — Turn this on if that payment should collect whatever amount is still unpaid at that point.
+- **Amount or percentage** — Use this when the line should charge only part of the balance. Depending on your setup, you can enter either a fixed dollar amount or a percentage.
+- **Per child or whole registration** — Choose whether the payment applies separately to each child or to the registration as a whole, based on the options shown in your form.
+
+<Callout kind="info">
+
+Even split plans do not use plan detail lines. The system calculates those charges automatically from the balance and dates.
+
+</Callout>
+
+## Turn plans on or off
+
+Each payment plan has a status toggle.
+
+- **Active** plans can be offered on forms when the other requirements are also met.
+- **Inactive** plans are not offered on forms.
+
+If a plan shows **Not showing on forms**, hover the badge to see the reason.
+
+### Why a plan may not show on forms
+
+A plan may show **Not showing on forms** for one of these reasons:
+
+- The plan is inactive.
+- The plan dates do not allow the plan to be chosen.
+- A **Standard** plan has no schedule lines.
+- No registration form in that season has payment plans enabled.
+
+## Edit or delete a plan
+
+Update a plan from its row in the list.
+
+<Steps>
+  <Step title="Open the plan options" icon="edit">
+
+  Use the row menu shown as `⋮`, then choose **Edit Payment Plan**.
+
+  You can also click the underlined plan name to open it.
+
+  </Step>
+  <Step title="Make your changes" icon="settings">
+
+  You can change the name, dates, description, and type. For even split plans, you can also change the cadence and monthly day setting.
+
+  </Step>
+  <Step title="Save the plan" icon="check-circle">
+
+  Save your changes to update the plan for that season.
+
+  </Step>
+</Steps>
+
+### Delete availability
+
+Delete appears only if no family is using that plan yet.
+
+<Callout kind="alert">
+
+If families are already using a plan, the delete option does not appear.
+
+</Callout>
+
+## Copy plans to another season
+
+Copying saves time when the new season should use the same plan structure.
+
+### Copy one plan
+
+<Steps>
+  <Step title="Open the plan menu" icon="copy">
+
+  Find the plan, open the row menu, and choose **Copy Payment Plan**.
+
+  </Step>
+  <Step title="Choose the destination" icon="folder">
+
+  Enter a new plan name, then choose the season to copy into.
+
+  </Step>
+  <Step title="Choose whether to shift dates" icon="calendar">
+
+  If needed, select **Increase dates by one year**.
+
+  </Step>
+  <Step title="Save the copy" icon="check-circle">
+
+  Save to create the copied plan in the selected season.
+
+  </Step>
+</Steps>
+
+### What gets copied
+
+- **Standard** plans copy their schedule lines.
+- **Even split** plans copy the type, cadence, and day-of-month settings.
+
+### Copy all plans for a season
+
+<Steps>
+  <Step title="Start the season copy" icon="folder">
+
+  Use **Copy All To Another Season**.
+
+  </Step>
+  <Step title="Choose the destination season" icon="calendar">
+
+  Pick the season that should receive the copied plans.
+
+  </Step>
+  <Step title="Apply the optional date shift" icon="edit">
+
+  If needed, select the one-year date increase option.
+
+  </Step>
+  <Step title="Complete the copy" icon="check-circle">
+
+  Save to copy all plans from the current season.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+You cannot copy a plan into a season that already has a plan with the same name.
+
+</Callout>
+
+## Change a family's payment plan
+
+Change a family's assigned plan from the Sales area on their profile.
+
+<Steps>
+  <Step title="Open the family profile" icon="users">
+
+  Go to the family's profile and open the **Sales** section.
+
+  </Step>
+  <Step title="Select the season plan link" icon="chevron-right">
+
+  In the left column, find the season you want. If that season has a payment plan assigned, click the payment plan link beside it.
+
+  </Step>
+  <Step title="Choose a different plan" icon="edit">
+
+  In the window that opens, select another plan from the list.
+
+  If needed, choose **Choose Plan** first to clear the current selection before picking a new one.
+
+  </Step>
+  <Step title="Save the change" icon="check-circle">
+
+  Click **Change Payment Plan** to save.
+
+  </Step>
+</Steps>
+
+## Remove a family's payment plan
+
+When you remove a family's plan, you can keep or remove future scheduled payments.
+
+<Steps>
+  <Step title="Open the family's current plan" icon="users">
+
+  From the family profile, open the payment plan link in the **Sales** section for the season you want to change.
+
+  </Step>
+  <Step title="Choose a removal option" icon="minus">
+
+  Select the option that matches what you want to happen to scheduled payments.
+
+  </Step>
+</Steps>
+
+### Removal options
+
+<ParamField body="Remove payment plan and keep scheduled payments" param-type="action" show-location="false">
+Stops treating the family as being on that payment plan, but leaves future charges as already scheduled.
+</ParamField>
+
+<ParamField body="Remove payment plan and delete scheduled payments" param-type="action" show-location="false">
+Clears the payment plan and removes those scheduled charges.
+</ParamField>
+
+## Even split cadence behavior
+
+Even split plans calculate charges based on the cadence and date range.
+
+<ParamField body="Monthly" param-type="cadence" show-location="false">
+Charges on the day of the month you set.
+</ParamField>
+
+<ParamField body="Weekly" param-type="cadence" show-location="false">
+Charges every 7 days. The start date acts as the anchor, and charges continue every 7 days through the end date.
+</ParamField>
+
+<ParamField body="Bi-weekly" param-type="cadence" show-location="false">
+Charges every 14 days. The start date acts as the anchor, and charges continue every 14 days through the end date.
+</ParamField>
+
+<ParamField body="1st and 15th" param-type="cadence" show-location="false">
+Charges on the 1st and 15th of each month when those dates fall within the selected date range.
+</ParamField>
+
+## Recalculate an even split schedule
+
+Some accounts use a **Recalc Even Split** action near the payment controls on the family profile.
+
+Use it when the family's balance or plan assignment has changed and you need the system to rebuild the even split payment schedule so it matches the current balance and dates.
+
+<ExpandableGroup>
+  <Expandable title="When does Recalc Even Split appear?">
+
+  You see **Recalc Even Split** only if your site has the setting enabled. If you do not see that link, your account may not use that option.
+
+  </Expandable>
+  <Expandable title="When should staff use it?">
+
+  Use it after a balance change or a plan assignment change when the even split schedule needs to be rebuilt from the family's current balance and the plan dates.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Quick reference
+
+Use this table when you need to decide which plan type to build.
+
+| Feature | Standard | Even split |
+| --- | --- | --- |
+| Amounts | Defined manually for each charge | Calculated automatically from the remaining balance |
+| Extra setup | Add and manage plan detail lines | Set cadence and, for monthly, the day of month |
+| Charge timing | Based on your schedule lines | Based on start date, end date, and cadence |
+| Copy behavior | Copies all schedule lines | Copies cadence and related settings |
+
+## Clarifications and troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Why do families still see a pay-in-full option when payment plans exist?">
+
+  The system always keeps a pay-in-full option available when at least one active payment plan exists for that season. You do not create a separate pay-in-full plan.
+
+  </Expandable>
+  <Expandable title="Why is my Standard plan not available yet?">
+
+  Check that the plan is active, the plan dates allow selection, the Standard plan has schedule lines, and a registration form in that season has payment plans enabled.
+
+  </Expandable>
+  <Expandable title="Why does my even split schedule not match what I expected?">
+
+  Check the plan's start date, end date, and cadence. Weekly and bi-weekly plans use the start date as the repeating anchor, monthly plans use the selected day of month, and 1st and 15th uses those calendar dates within the range.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Related pages
+
+<Columns cols={2}>
+  <Card title="Discounts" href="/discounts" icon="tag" cta="Open page" />
+  <Card title="Canteen" href="/canteen" icon="book-open" cta="Open page" />
+</Columns>

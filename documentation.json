@@ -207,14 +207,6 @@
                   }
                 ],
                 "icon": "circle-dollar-sign-icon"
-              },
-              {
-                "title": "How to create data views for profiles",
-                "path": "how-to-create-data-views-for-profiles"
-              },
-              {
-                "title": "Managing multiple email addresses",
-                "path": "managing-multiple-email-addresses"
               }
             ]
           },
@@ -235,23 +227,28 @@
             "pages": [
               {
                 "title": "Mass Emails",
-                "path": "mass-emails"
+                "path": "mass-emails",
+                "icon": "lucide-mail"
               },
               {
                 "title": "SMS",
-                "path": "sms"
+                "path": "sms",
+                "icon": "message-square-text-icon"
               },
               {
                 "title": "One-way Messaging",
-                "path": "one-way-messaging"
+                "path": "one-way-messaging",
+                "icon": "arrow-big-right"
               },
               {
                 "title": "Portal News",
-                "path": "portal-news"
+                "path": "portal-news",
+                "icon": "newspaper-icon"
               },
               {
                 "title": "Push Notifications",
-                "path": "push-notifications"
+                "path": "push-notifications",
+                "icon": "alert-circle"
               },
               {
                 "title": "App Chat",
@@ -293,7 +290,12 @@
               {
                 "title": "Discounts",
                 "path": "discounts",
-                "icon": "file-text"
+                "icon": "dollar-sign"
+              },
+              {
+                "title": "Payment Plans",
+                "path": "payment-plans",
+                "icon": "badge-dollar-sign-icon"
               },
               {
                 "title": "Campaigns",
@@ -301,13 +303,14 @@
                 "icon": "file-text"
               },
               {
-                "title": "Email Templates",
-                "path": "email-templates"
+                "title": "Canteen",
+                "path": "canteen",
+                "icon": "lucide-glass-water"
               },
               {
-                "title": "Payment Plans",
-                "path": "payment-plans",
-                "icon": "file-text"
+                "title": "Email Templates",
+                "path": "email-templates",
+                "icon": "lucide-mail"
               },
               {
                 "title": "Staff Scheduling",
@@ -364,6 +367,15 @@
         "tab": "FAQ",
         "pages": [
           {
+            "group": "Profile",
+            "pages": [
+              {
+                "title": "Managing multiple email addresses",
+                "path": "managing-multiple-email-addresses"
+              }
+            ]
+          },
+          {
             "group": "Email",
             "pages": [
               {
@@ -400,6 +412,10 @@
           {
             "group": "General",
             "pages": [
+              {
+                "title": "How to create data views for profiles",
+                "path": "how-to-create-data-views-for-profiles"
+              },
               {
                 "title": "How to change a user's name",
                 "path": "how-to-change-a-users-name"
