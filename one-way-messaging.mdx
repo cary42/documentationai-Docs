@@ -1,15 +1,15 @@
 ---
 title: Use one-way messaging
-description: Enable family-to-family one-way messaging, guide families on sending notes, and review, filter, print, or delete messages in admin.
+description: >-
+  Enable family-to-family one-way messaging, guide families on sending notes,
+  and review, filter, print, or delete messages in admin.
 ---
 ## What one-way messaging is
 
 One-Way Messaging lets people in the same family account send short notes to another person in that same family, such as a parent sending a message to a child or one guardian sending a message to another guardian.
 
-<Callout kind="info">
-
-One-Way Messaging is not a reply thread or chat. Each message is sent as a single note, and Campium does not provide back-and-forth conversation within this feature.
-
+<Callout kind="info" collapsed="false">
+  One-Way Messaging is not a reply thread or chat. Each message is sent as a single note, and Campium does not provide back-and-forth conversation within this feature.
 </Callout>
 
 Campium saves these messages so staff can review them later, search or filter the list, and print messages when needed. Families use the feature from the family site, and staff manage it from the admin site.
@@ -19,28 +19,22 @@ Campium saves these messages so staff can review them later, search or filter th
 Enable the feature before families or staff can use it.
 
 <Steps>
-  <Step title="Enable the module" icon="settings" titleType="p">
+  <Step title="Enable the module" icon="settings" title-type="p">
+    - Turn on the **One-Way Messaging Module** in your Campium by going to **Admin** -> **Site Settings** and enabling the **One-Way Messaging&#x20;**&#x6D;odule
 
-  - Turn on the **One-Way Messaging Module** in your Campium setup.
-
-  - If the module is off, families do not see the link on their account page and staff do not see the admin menu item.
-
+    - If the module is off, families do not see the link on their account page and staff do not see the admin menu item.
   </Step>
 
-  <Step title="Give staff permission" icon="users" titleType="p">
+  <Step title="Give staff permission" icon="users" title-type="p">
+    - Assign the staff permission tied to **One-Way Messaging** to anyone who should review, filter, print, or manage messages. You can manage roles & permissions by going to Admin -> Roles & Permissions.
 
-  - Assign the staff permission tied to **One-Way Messaging** to anyone who should review, filter, print, or manage messages.
-
-  - Staff without that permission cannot access the admin page.
-
+    - Staff without that permission cannot access the admin page.
   </Step>
 
-  <Step title="Set the daily limit if needed" icon="bar-chart" titleType="p">
+  <Step title="Set the daily limit if needed" icon="bar-chart" title-type="p">
+    - Use **One-Way Messages Per Day** to control how many messages a logged-in family user can send in one day.
 
-  - Use **One-Way Messages Per Day** to control how many messages a logged-in family user can send in one day.
-
-  - Set the value to `0` if you do not want to enforce a daily limit.
-
+    - Set the value to `0` if you do not want to enforce a daily limit.
   </Step>
 </Steps>
 
@@ -52,23 +46,19 @@ Families use One-Way Messaging from the family subdomain at `/account/one-way-me
 
 <Tabs>
   <Tab title="Family site" icon="users">
+    Families send and review their own one-way messages from `/account/one-way-messaging/` on the family site.
 
-  Families send and review their own one-way messages from `/account/one-way-messaging/` on the family site.
+    The page shows only eligible recipients from the same family account. The logged-in person never appears as their own recipient.
 
-  The page shows only eligible recipients from the same family account. The logged-in person never appears as their own recipient.
-
-  If the account has only one person, or no other eligible family members, the page shows that there is no one to send to.
-
+    If the account has only one person, or no other eligible family members, the page shows that there is no one to send to.
   </Tab>
 
   <Tab title="Admin" icon="settings">
+    Staff review and manage all one-way messages from `/one-way-messaging/` on the admin site.
 
-  Staff review and manage all one-way messages from `/one-way-messaging/` on the admin site.
+    The admin page shows camp-wide message records, including sender, recipient, message text, send time, and printed or unprinted status.
 
-  The admin page shows camp-wide message records, including sender, recipient, message text, send time, and printed or unprinted status.
-
-  Staff can filter the list, print messages, change printed status, or delete a single message.
-
+    Staff can filter the list, print messages, change printed status, or delete a single message.
   </Tab>
 </Tabs>
 
@@ -77,40 +67,32 @@ Families use One-Way Messaging from the family subdomain at `/account/one-way-me
 Use the family page to send a single note to another person in the same family.
 
 <Steps>
-  <Step title="Open One-Way Messaging" icon="folder" titleType="p">
+  <Step title="Open One-Way Messaging" icon="folder" title-type="p">
+    - Sign in to the family site.
 
-  - Sign in to the family site.
+    - Go to `/account/one-way-messaging/` on your family subdomain.
 
-  - Go to `/account/one-way-messaging/` on your family subdomain.
-
-  - If the feature is enabled, the One-Way Messaging page opens.
-
+    - If the feature is enabled, the One-Way Messaging page opens.
   </Step>
 
-  <Step title="Choose a recipient" icon="users" titleType="p">
+  <Step title="Choose a recipient" icon="users" title-type="p">
+    - Select one eligible person from the same family account.
 
-  - Select one eligible person from the same family account.
+    - The logged-in person does not appear in the recipient list.
 
-  - The logged-in person does not appear in the recipient list.
-
-  - If no eligible family members are available, the page shows that there is no one to send to.
-
+    - If no eligible family members are available, the page shows that there is no one to send to.
   </Step>
 
-  <Step title="Enter the message" icon="edit" titleType="p">
+  <Step title="Enter the message" icon="edit" title-type="p">
+    - Type the short note you want to send.
 
-  - Type the short note you want to send.
-
-  - Review the recipient before sending, since the feature does not create a reply thread after the message is sent.
-
+    - Review the recipient before sending, since the feature does not create a reply thread after the message is sent.
   </Step>
 
-  <Step title="Send the message" icon="play-circle" titleType="p">
+  <Step title="Send the message" icon="play-circle" title-type="p">
+    - Submit the message from the page.
 
-  - Submit the message from the page.
-
-  - After the message sends, it is saved in Campium and becomes available for staff review in admin.
-
+    - After the message sends, it is saved in Campium and becomes available for staff review in admin.
   </Step>
 </Steps>
 
@@ -118,20 +100,16 @@ Use the family page to send a single note to another person in the same family.
 
 The family page also shows message history for the logged-in person. This history includes messages that person has sent, with the **date**, **from**, **to**, and **text** for each message.
 
-<Callout kind="info">
-
-The family history is not an inbox of received messages. It shows only messages sent by the logged-in person.
-
+<Callout kind="info" collapsed="false">
+  The family history is not an inbox of received messages. It shows only messages sent by the logged-in person.
 </Callout>
 
 ### Daily message limits
 
 If your camp sets **One-Way Messages Per Day**, each logged-in family user can send only that many messages per day. When the person reaches the limit, they cannot send another message until the next day.
 
-<Callout kind="alert">
-
-If **One-Way Messages Per Day** is set to a value other than `0`, families may see that they cannot send more messages after reaching the daily limit. Set the value to `0` if you do not want a limit.
-
+<Callout kind="alert" collapsed="false">
+  If **One-Way Messages Per Day** is set to a value other than `0`, families may see that they cannot send more messages after reaching the daily limit. Set the value to `0` if you do not want a limit.
 </Callout>
 
 ## Admin
@@ -143,9 +121,13 @@ Staff manage One-Way Messaging from `/one-way-messaging/` on the admin site. The
 The main table includes these message details:
 
 - **Sender**
+
 - **Recipient**
+
 - **Text**
+
 - **Send time**
+
 - **Printed or unprinted status**
 
 This page is the staff record of one-way messages in Campium. Use it to review activity, narrow the list to the messages you need, and prepare printouts.
@@ -155,55 +137,43 @@ This page is the staff record of one-way messages in Campium. Use it to review a
 Use filters and print options together when you need a specific group of messages.
 
 <Steps>
-  <Step title="Open the admin page" icon="folder" titleType="p">
+  <Step title="Open the admin page" icon="folder" title-type="p">
+    - Sign in to the admin site.
 
-  - Sign in to the admin site.
+    - Go to `/one-way-messaging/`.
 
-  - Go to `/one-way-messaging/`.
-
-  - The page opens with the current message list for your camp instance.
-
+    - The page opens with the current message list for your camp instance.
   </Step>
 
-  <Step title="Set filters" icon="settings" titleType="p">
+  <Step title="Set filters" icon="settings" title-type="p">
+    - Choose a **date range** to narrow the message list.
 
-  - Choose a **date range** to narrow the message list.
+    - If needed, add the optional **profile or custom-field multiple-choice filter** based on the recipient.
 
-  - If needed, add the optional **profile or custom-field multiple-choice filter** based on the recipient.
-
-  - You can choose to include all answers for a field and group the results by that segment.
-
+    - You can choose to include all answers for a field and group the results by that segment.
   </Step>
 
-  <Step title="Refresh or reset the list" icon="arrow-right" titleType="p">
+  <Step title="Refresh or reset the list" icon="arrow-right" title-type="p">
+    - Click **Apply Filter** to refresh the table with the current filter choices.
 
-  - Click **Apply Filter** to refresh the table with the current filter choices.
-
-  - Click **Clear Filter** to return to the unfiltered view.
-
+    - Click **Clear Filter** to return to the unfiltered view.
   </Step>
 
-  <Step title="Choose print layout" icon="bar-chart" titleType="p">
+  <Step title="Choose print layout" icon="bar-chart" title-type="p">
+    - Select whether to print **one message per page** or **all messages together within each group**.
 
-  - Select whether to print **one message per page** or **all messages together within each group**.
-
-  - If you grouped by a field segment, the printout follows that grouping.
-
+    - If you grouped by a field segment, the printout follows that grouping.
   </Step>
 
-  <Step title="Print unprinted messages" icon="play-circle" titleType="p">
+  <Step title="Print unprinted messages" icon="play-circle" title-type="p">
+    - Use **Print Unprinted Messages** to print unprinted messages that match the current filters.
 
-  - Use **Print Unprinted Messages** to print unprinted messages that match the current filters.
-
-  - After printing, Campium treats those matching messages as printed.
-
+    - After printing, Campium treats those matching messages as printed.
   </Step>
 </Steps>
 
-<Callout kind="alert">
-
-`Print Unprinted Messages` changes message status as part of the print action. If staff need to print the same messages again as unprinted, they must unmark them first.
-
+<Callout kind="alert" collapsed="false">
+  `Print Unprinted Messages` changes message status as part of the print action. If staff need to print the same messages again as unprinted, they must unmark them first.
 </Callout>
 
 ### Save your defaults
@@ -218,30 +188,26 @@ Printed status is reversible for selected messages. If a message was already pri
 
 This changes those selected messages back to unprinted so they can be included in a later unprinted print run.
 
-<Callout kind="alert">
-
-Changing printed status affects whether messages appear in later unprinted print jobs. Confirm your selection before using **Unmark Selected as Printed**.
-
+<Callout kind="alert" collapsed="false">
+  Changing printed status affects whether messages appear in later unprinted print jobs. Confirm your selection before using **Unmark Selected as Printed**.
 </Callout>
 
 ### Delete a message
 
 Use **Delete** to remove a single message from the list.
 
-<Callout kind="alert">
-
-Delete removes one message from the admin list. Confirm that you are removing the correct record before deleting it.
-
+<Callout kind="alert" collapsed="false">
+  Delete removes one message from the admin list. Confirm that you are removing the correct record before deleting it.
 </Callout>
 
 ## Family site and Admin at a glance
 
 Use the family site to send messages. Use admin to review and manage the saved record of those messages.
 
-| Area | Path | What it shows | What people can do |
-| --- | --- | --- | --- |
-| Family site | `/account/one-way-messaging/` | The logged-in person's sending screen and sent-message history | Send a message to another person in the same family and view sent history |
-| Admin | `/one-way-messaging/` | All one-way messages for the camp instance | Review, filter, print, save defaults, change printed status, or delete a single message |
+| Area        | Path                          | What it shows                                                  | What people can do                                                                      |
+| ----------- | ----------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Family site | `/account/one-way-messaging/` | The logged-in person's sending screen and sent-message history | Send a message to another person in the same family and view sent history               |
+| Admin       | `/one-way-messaging/`         | All one-way messages for the camp instance                     | Review, filter, print, save defaults, change printed status, or delete a single message |
 
 ## Best practices and policy notes
 
