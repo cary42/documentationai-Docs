@@ -1,187 +1,252 @@
 ---
-title: Send one-way emails
-description: >-
-  Use One-way Messaging to send a single, targeted email to families, with
-  subject, sender, schedule, recipients, and basic delivery logs.
+title: Use one-way messaging
+description: Enable family-to-family one-way messaging, guide families on sending notes, and review, filter, print, or delete messages in admin.
 ---
-## What one-way email messaging is
+## What one-way messaging is
 
-One-way Messaging lets you send a single email from Campium to a selected audience, such as all parents in a session or a specific group. Recipients can read the message in their email inbox but do not reply back through Campium.
+One-Way Messaging lets people in the same family account send short notes to another person in that same family, such as a parent sending a message to a child or one guardian sending a message to another guardian.
 
-Use this when you want to share updates, reminders, or announcements without starting a back-and-forth email conversation.
+<Callout kind="info">
 
-## Open One-way Messaging
+One-Way Messaging is not a reply thread or chat. Each message is sent as a single note, and Campium does not provide back-and-forth conversation within this feature.
 
-Access one-way emails from the Communication menu.
+</Callout>
+
+Campium saves these messages so staff can review them later, search or filter the list, and print messages when needed. Families use the feature from the family site, and staff manage it from the admin site.
+
+## Turn on one-way messaging
+
+Enable the feature before families or staff can use it.
 
 <Steps>
-  <Step title="Go to Communications" icon="folder" title-type="p">
-    - Sign in as an admin or staff user.
+  <Step title="Enable the module" icon="settings" titleType="p">
 
-    - Open the main navigation.
+  - Turn on the **One-Way Messaging Module** in your Campium setup.
 
-    - Select **Communication**.
+  - If the module is off, families do not see the link on their account page and staff do not see the admin menu item.
+
   </Step>
 
-  <Step title="Open One-way Messaging" icon="arrow-right" title-type="p">
-    - Under Communication, choose **One-way Messaging** or **Email**.
+  <Step title="Give staff permission" icon="users" titleType="p">
 
-    - This opens the page where you create and manage individual one-way emails.
+  - Assign the staff permission tied to **One-Way Messaging** to anyone who should review, filter, print, or manage messages.
+
+  - Staff without that permission cannot access the admin page.
+
+  </Step>
+
+  <Step title="Set the daily limit if needed" icon="bar-chart" titleType="p">
+
+  - Use **One-Way Messages Per Day** to control how many messages a logged-in family user can send in one day.
+
+  - Set the value to `0` if you do not want to enforce a daily limit.
+
   </Step>
 </Steps>
 
-You now see the screen where you set up the email details, choose who should receive it, and review logs after it sends.
+Once the module is on, families can access One-Way Messaging from the family site and staff can open the admin page.
 
-## Create and send a one-way email
+## Family site
 
-Use the email editor to fill in your message details, choose timing, test, and then send.
-
-<Steps>
-  <Step title="Set up email details (Settings tab)" icon="settings" title-type="p">
-    - Enter a **Name of Email** so you can recognize this message later in your list.
-
-    - Fill in **From Email Address** using an allowed sender address for your camp.
-
-    - Add a clear **Subject** so families understand what the message is about.
-
-    - In the **Email** field, type or paste your message. Use the rich text tools to format headings, lists, or links as needed.
-
-    - If needed, add addresses in **BCC (separate by commas)** to copy internal staff or additional recipients without showing their addresses to others.
-  </Step>
-
-  <Step title="Add attachments (optional)" icon="upload" title-type="p">
-    - In the **File (pdf or image)** field, attach any documents you want to include, such as a packing list or schedule.
-
-    - Attachments support common **pdf or image** formats.
-
-    - The attached file appears as part of the email your families receive.
-
-    <Callout kind="info" collapsed="false">
-      Large attachments can make emails slower to load. When possible, link out to documents you store elsewhere and keep attachments small.
-    </Callout>
-  </Step>
-
-  <Step title="Choose when to send" icon="clock" title-type="p">
-    - Use **When To Send** to control timing.
-
-    - Set the date and time if you want to schedule the message for later.
-
-    - Leave it as soon as possible if you plan to send right away using **Send Now**.
-  </Step>
-
-  <Step title="Preview and test" icon="info" title-type="p">
-    - Click **Preview Email** to see how the message will look to families, including merge fields.
-
-    - Use **Send Test Email** to send a copy to yourself or a teammate to confirm formatting, links, and attachments.
-
-    <Callout kind="tip" collapsed="false">
-      Always send a test email before sending a large communication. Check that the subject, greeting, and merge variables look correct.
-    </Callout>
-  </Step>
-
-  <Step title="Send the email" icon="play-circle" title-type="p">
-    - After reviewing your preview and test, return to the email editor.
-
-    - Confirm the **When To Send** time and your recipient selection.
-
-    - Click **Send Now** to queue the message to go out.
-
-    <Callout kind="alert" collapsed="false">
-      Once you send an email, you cannot edit that specific send. Use **Send To Updated Recipients** (when available) if you later update the audience and need to send the same message to new recipients.
-    </Callout>
-  </Step>
-</Steps>
-
-When the email sends successfully, you will see status information such as **Sent:&#x20;**&#x20;and basic delivery and open information in the Logs area.
-
-## Settings, Recipients, and Logs
-
-Use the tabs in One-way Messaging to move between your email setup, audience, and delivery history.
+Families use One-Way Messaging from the family subdomain at `/account/one-way-messaging/`. The logged-in person can send messages only to other people in the same family account.
 
 <Tabs>
-  <Tab title="Settings" icon="settings">
-    The **Settings** area controls the content and basic behavior of your one-way email.
+  <Tab title="Family site" icon="users">
 
-    Key fields include:
+  Families send and review their own one-way messages from `/account/one-way-messaging/` on the family site.
 
-    - **Name of Email**: A label for internal use so you and your team can recognize this message in lists and logs.
+  The page shows only eligible recipients from the same family account. The logged-in person never appears as their own recipient.
 
-    - **From Email Address (must be&#x20;****)**: The sender address families see. This must match an allowed domain for your camp.
+  If the account has only one person, or no other eligible family members, the page shows that there is no one to send to.
 
-    - **Subject**: The subject line that appears in the recipient's inbox.
-
-    - **Merge Variables:&#x20;****&#x20;****&#x20;**: Short codes you insert into the subject or body to personalize each email with the recipient's details.
-
-    - **Email**: The main message editor where you write and format the body of the email.
-
-    - **When To Send**: A date and time picker that controls when the email is delivered.
-
-    - **BCC (separate by commas)**: An optional field for extra recipients who should receive the email without being visible to the main audience.
-
-    - **File (pdf or image)**: An upload area for an attachment, such as a pdf or image, that is included with the email.
-
-    Actions available from Settings include:
-
-    - **Preview Email** to view the final layout.
-
-    - **Send Test Email** to send a test copy to yourself or another address.
-
-    - **Send Now** to send the message at the configured time.
-
-    <Callout kind="info" collapsed="false">
-      Some screens also include options like **Save Template**, **Save Filter**, or **Save** so you can reuse content or audience filters later.
-    </Callout>
   </Tab>
 
-  <Tab title="Recipients" icon="users">
-    The **Recipients** area controls who receives this one-way email. Use it to target the right families or participants based on your camp's data.
+  <Tab title="Admin" icon="settings">
 
-    In this area you typically:
+  Staff review and manage all one-way messages from `/one-way-messaging/` on the admin site.
 
-    - Choose filters to narrow down who should receive the message (for example, by session, cabin, or role such as parent or guardian).
+  The admin page shows camp-wide message records, including sender, recipient, message text, send time, and printed or unprinted status.
 
-    - Review the list of matched recipients to confirm the audience before you send.
+  Staff can filter the list, print messages, change printed status, or delete a single message.
 
-    - Adjust filters if the audience is too broad or too narrow.
-
-    After the first send, if your underlying data changes (for example, new families are added or records are updated), you may see a **Send To Updated Recipients** option. Use this action to send the same email to newly matching recipients without resending to everyone who already received it.
-
-    <Callout kind="tip" collapsed="false">
-      Before sending, scan the recipient count shown in this area. Make sure the number of recipients matches your expectations for the announcement you are sending.
-    </Callout>
-  </Tab>
-
-  <Tab title="Logs" icon="bar-chart">
-    The **Logs** area shows basic delivery information for your one-way email. This helps you understand whether the message has gone out and how recipients are engaging with it.
-
-    Common status and activity labels include:
-
-    - **Received** or **Updated**: Indicate that the recipient record or delivery status has refreshed.
-
-    - **Opened**: Shows that the recipient opened the email at least once.
-
-    - **Sent:&#x20;**: Displays the time the email was sent.
-
-    - **Not Sent**: Shows that the email did not send to that recipient, often due to filters or send conditions.
-
-    Use these logs to confirm that the email left Campium and to spot patterns, such as many **Not Sent** entries, that may suggest issues with your audience selection.
-
-    <Callout kind="info" collapsed="false">
-      Logs focus on high-level delivery and open activity. They are not a full reporting tool, and some events (such as exact read time or forwarding) are not tracked.
-    </Callout>
   </Tab>
 </Tabs>
 
-## When to use one-way emails
+### Send a message on the family site
 
-Use One-way Messaging when you need to:
+Use the family page to send a single note to another person in the same family.
 
-- Announce schedule changes or weather updates.
+<Steps>
+  <Step title="Open One-Way Messaging" icon="folder" titleType="p">
 
-- Share arrival or departure instructions.
+  - Sign in to the family site.
 
-- Send reminders about forms, payments, or packing lists.
+  - Go to `/account/one-way-messaging/` on your family subdomain.
 
-- Share general camp news that does not require a direct reply.
+  - If the feature is enabled, the One-Way Messaging page opens.
 
-For back-and-forth conversations or individual support, use your usual email or messaging tools outside of One-way Messaging, and reserve these emails for clear, consistent announcements to your families.
+  </Step>
+
+  <Step title="Choose a recipient" icon="users" titleType="p">
+
+  - Select one eligible person from the same family account.
+
+  - The logged-in person does not appear in the recipient list.
+
+  - If no eligible family members are available, the page shows that there is no one to send to.
+
+  </Step>
+
+  <Step title="Enter the message" icon="edit" titleType="p">
+
+  - Type the short note you want to send.
+
+  - Review the recipient before sending, since the feature does not create a reply thread after the message is sent.
+
+  </Step>
+
+  <Step title="Send the message" icon="play-circle" titleType="p">
+
+  - Submit the message from the page.
+
+  - After the message sends, it is saved in Campium and becomes available for staff review in admin.
+
+  </Step>
+</Steps>
+
+### View message history on the family site
+
+The family page also shows message history for the logged-in person. This history includes messages that person has sent, with the **date**, **from**, **to**, and **text** for each message.
+
+<Callout kind="info">
+
+The family history is not an inbox of received messages. It shows only messages sent by the logged-in person.
+
+</Callout>
+
+### Daily message limits
+
+If your camp sets **One-Way Messages Per Day**, each logged-in family user can send only that many messages per day. When the person reaches the limit, they cannot send another message until the next day.
+
+<Callout kind="alert">
+
+If **One-Way Messages Per Day** is set to a value other than `0`, families may see that they cannot send more messages after reaching the daily limit. Set the value to `0` if you do not want a limit.
+
+</Callout>
+
+## Admin
+
+Staff manage One-Way Messaging from `/one-way-messaging/` on the admin site. The page shows all one-way messages for your camp instance, not only messages from one family.
+
+### What staff see
+
+The main table includes these message details:
+
+- **Sender**
+- **Recipient**
+- **Text**
+- **Send time**
+- **Printed or unprinted status**
+
+This page is the staff record of one-way messages in Campium. Use it to review activity, narrow the list to the messages you need, and prepare printouts.
+
+### Find messages and print them
+
+Use filters and print options together when you need a specific group of messages.
+
+<Steps>
+  <Step title="Open the admin page" icon="folder" titleType="p">
+
+  - Sign in to the admin site.
+
+  - Go to `/one-way-messaging/`.
+
+  - The page opens with the current message list for your camp instance.
+
+  </Step>
+
+  <Step title="Set filters" icon="settings" titleType="p">
+
+  - Choose a **date range** to narrow the message list.
+
+  - If needed, add the optional **profile or custom-field multiple-choice filter** based on the recipient.
+
+  - You can choose to include all answers for a field and group the results by that segment.
+
+  </Step>
+
+  <Step title="Refresh or reset the list" icon="arrow-right" titleType="p">
+
+  - Click **Apply Filter** to refresh the table with the current filter choices.
+
+  - Click **Clear Filter** to return to the unfiltered view.
+
+  </Step>
+
+  <Step title="Choose print layout" icon="bar-chart" titleType="p">
+
+  - Select whether to print **one message per page** or **all messages together within each group**.
+
+  - If you grouped by a field segment, the printout follows that grouping.
+
+  </Step>
+
+  <Step title="Print unprinted messages" icon="play-circle" titleType="p">
+
+  - Use **Print Unprinted Messages** to print unprinted messages that match the current filters.
+
+  - After printing, Campium treats those matching messages as printed.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+`Print Unprinted Messages` changes message status as part of the print action. If staff need to print the same messages again as unprinted, they must unmark them first.
+
+</Callout>
+
+### Save your defaults
+
+Use **Save my defaults** to remember the field and value choice and the print layout you want to reuse next time.
+
+By default, the date range generally starts with **yesterday through today** unless a custom URL filter applies. Saving defaults helps staff return to the same filtering and printing setup without rebuilding it each time.
+
+### Reprint or change printed status
+
+Printed status is reversible for selected messages. If a message was already printed and you need to print it again as unprinted, select it and use **Unmark Selected as Printed**.
+
+This changes those selected messages back to unprinted so they can be included in a later unprinted print run.
+
+<Callout kind="alert">
+
+Changing printed status affects whether messages appear in later unprinted print jobs. Confirm your selection before using **Unmark Selected as Printed**.
+
+</Callout>
+
+### Delete a message
+
+Use **Delete** to remove a single message from the list.
+
+<Callout kind="alert">
+
+Delete removes one message from the admin list. Confirm that you are removing the correct record before deleting it.
+
+</Callout>
+
+## Family site and Admin at a glance
+
+Use the family site to send messages. Use admin to review and manage the saved record of those messages.
+
+| Area | Path | What it shows | What people can do |
+| --- | --- | --- | --- |
+| Family site | `/account/one-way-messaging/` | The logged-in person's sending screen and sent-message history | Send a message to another person in the same family and view sent history |
+| Admin | `/one-way-messaging/` | All one-way messages for the camp instance | Review, filter, print, save defaults, change printed status, or delete a single message |
+
+## Best practices and policy notes
+
+Keep One-Way Messaging focused on short family-to-family notes inside the same account. Because the feature is one-way, it works best for simple communication that does not require a reply in Campium.
+
+Set a daily limit only if your camp needs to control message volume. If you do use a limit, make sure families understand that the limit resets the next day.
+
+Review printed status carefully when staff print messages in batches. Printed and unprinted states affect later print workflows, especially when staff rely on **Print Unprinted Messages** for daily processing.
