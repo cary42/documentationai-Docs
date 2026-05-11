@@ -223,6 +223,18 @@
             "public": true
           },
           {
+            "group": "Bunking",
+            "icon": "bed",
+            "pages": [
+              {
+                "title": "Bunk Assignments",
+                "path": "bunk-assignments",
+                "icon": "bed"
+              }
+            ],
+            "public": true
+          },
+          {
             "group": "Communications",
             "pages": [
               {

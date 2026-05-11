@@ -1,0 +1,282 @@
+---
+title: Bunk Assignments
+description: >-
+  Assign campers to bunks, move placements, review requests, and manage capacity
+  warnings from the Bunk Assignments board.
+---
+## Place campers into bunks from one board
+
+Bunk Assignments helps you see who still needs a bunk, who is already placed, and move people between the unassigned list and named bunks. You will find it in the admin site under `Bunking` → `Bunk Assignments`, at the path `/bunking/bunk-assignments.php`.
+
+<Callout kind="info" collapsed="false">
+  Staff can use this page only if their login includes permission to view users. If you see an access message instead of the board, ask an administrator to confirm your permissions.
+</Callout>
+
+## Before you start
+
+Bunk Assignments depends on your bunk setup. If the setup is incomplete, the board cannot show or save assignments correctly.
+
+<Callout kind="alert" collapsed="false">
+  If the page says bunking is not configured, fix **Bunk Settings** first. Choose the bunk field, make sure the bunk names exist as answer choices on that field, then return to Bunk Assignments.
+</Callout>
+
+### Confirm the bunk field is mapped
+
+Someone on your team must map the correct profile field in **Bunk Settings**. Each answer choice on that field becomes a bunk on the board.
+
+### Optional: show bunk requests on the board
+
+If you collect bunkmate requests or bunk preference notes in other profile fields, link those fields in **Bunk Settings**. Once they are linked, request details can appear next to each person on this page.
+
+## Know the page layout
+
+The page has three main working areas. Once you know what each one does, daily bunking becomes much faster.
+
+| Area            | What it does                                                                 |
+| --------------- | ---------------------------------------------------------------------------- |
+| Filter Users    | Chooses which people load into the unassigned list                           |
+| Available Users | Shows people who match your filter and do not have a bunk yet                |
+| Bunks           | Shows one column per bunk, with already assigned people in the matching bunk |
+
+A reminder at the top of the board tells you to drag users into bunks to assign them.
+
+## Filter the right people into the board
+
+Filters control who appears in **Available Users**. The panel works like other report-style filters, so you can choose fields, operators, and values to narrow the list.
+
+<Callout kind="tip" collapsed="false">
+  The default setup usually favors campers so you are not flooded with staff or parents. If the results look wrong, check the user type filter first.
+</Callout>
+
+### What to expect from filters
+
+- **Apply Filter** loads matching unassigned people from the server.
+
+- **Reset** clears your selections and reloads the page.
+
+- **Add filter** may appear on some templates so you can stack conditions.
+
+- **Available Users** only shows people who do not currently have a bunk value.
+
+- People who already have a bunk appear only in their bunk column unless you remove them from that bunk.
+
+## Assign someone to a bunk
+
+Run your filter first so the left side shows the people you want to place. Then drag each person into the correct bunk column.
+
+<Steps>
+  <Step title="Load the right people" title-type="p">
+    Set your filters, then click **Apply Filter**.
+
+    Success looks like this: the **Available Users** list fills with people who match the filter and still need a bunk.
+  </Step>
+
+  <Step title="Drag a person into a bunk" title-type="p">
+    Drag the person’s card from **Available Users** into the correct bunk column on the right.
+
+    If a bunk is collapsed, dragging over it can expand it so you can drop the card.
+  </Step>
+
+  <Step title="Confirm the assignment saved" title-type="p">
+    The person disappears from **Available Users** and appears inside that bunk.
+
+    The bunk header count updates, and the **Total Assigned** number reflects the change.
+  </Step>
+</Steps>
+
+## Move someone or remove a bunk assignment
+
+You can rebalance bunks at any time by dragging people between columns. You can also clear an assignment by moving someone back to the unassigned list.
+
+<Steps>
+  <Step title="Move someone to a different bunk" title-type="p">
+    Drag the person from their current bunk column into a different bunk column.
+
+    Success looks like this: the person disappears from the original bunk and appears in the new one.
+  </Step>
+
+  <Step title="Remove someone from a bunk" title-type="p">
+    Drag the person from a bunk column back into **Available Users**.
+
+    This clears their bunk assignment. After the move, the person appears in the left list again as unassigned.
+  </Step>
+</Steps>
+
+## Select several people at once
+
+Multi-select works in **Available Users** only. Use it when you want to place several unassigned people into the same bunk at once.
+
+- **Ctrl-click** on Windows or **Command-click** on Mac adds or removes one person from the selection.
+
+- **Shift-click** selects a range between two clicks.
+
+- Drag any selected person to move the full selection together.
+
+- Selected rows stay highlighted so you can see what will move.
+
+<Callout kind="info" collapsed="false">
+  Bulk selection does not apply to people already inside bunk columns. Use it from the **Available Users** list before assignment.
+</Callout>
+
+## Search people and bunks
+
+Search helps you narrow what you see without changing the underlying board setup.
+
+### Search Available Users
+
+Use the **Available Users** search box to narrow the left list by text such as a person's name. This is an on-screen search only. It does not change the server filter.
+
+### Search bunks or assigned names
+
+Use the **Bunks** search box to find a bunk name or a person already assigned to a bunk. As you type:
+
+- bunk columns that do not match are hidden
+
+- matching bunks move to the top
+
+- matching names within a bunk may rise to the top of that list
+
+Clear the search box to show everything again.
+
+## Review bunk requests and suggestions
+
+If request fields are configured in **Bunk Settings**, the board can show extra context while you place campers. This helps you review preferences without leaving the page.
+
+### What you may see on the board
+
+- Extra request detail on a person’s card
+
+- A **Toggle Requests** control that shows or hides request text for everyone
+
+- Request details on hover for people already assigned
+
+- A **Suggested bunk** line when the system can infer a likely placement
+
+- A colored accent on a card to flag a suggestion worth reviewing
+
+### Use a suggested bunk
+
+When a card shows a suggested bunk, the **move** link assigns that person to the suggested bunk in one step. Use it when the suggestion matches the placement you want.
+
+<Callout kind="tip" collapsed="false">
+  Suggestions are a helper, not a rule. Review the camper’s details before accepting a suggested move.
+</Callout>
+
+## Collapse bunks to reduce clutter
+
+Click a bunk header to collapse or expand that bunk’s list. Empty bunks may start collapsed so the board is easier to scan.
+
+Collapsing bunks is useful when you have many bunks and want to focus on only a few during placement.
+
+## Watch for capacity warnings
+
+If your team set capacities in **Bunk Settings**, each bunk can show current occupancy and the maximum allowed. A header may show a value like `8 / 10`.
+
+When a bunk goes over its limit, the bunk can be highlighted and show how many people it is over. Your program may use one of two behaviors:
+
+- **Warn** means you can still assign the camper, but the board alerts you.
+
+- **Block** means the system may stop the assignment until space opens or the limit changes.
+
+<Callout kind="alert" collapsed="false">
+  If the board blocks an assignment, the message explains why. Free a spot in that bunk or ask someone with access to adjust the capacity rule in Bunk Settings.
+</Callout>
+
+## Build a draft with Smart Assignments
+
+Smart Assignments helps you generate a draft layout using rules you define. It does not change live bunk assignments until you apply accepted suggestions.
+
+<Steps>
+  <Step title="Open Smart Assignments" title-type="p">
+    Click **Smart Assignments** from the Bunk Assignments page.
+
+    If the tool says no campers are available, return to the board and click **Apply Filter** first so campers are loaded into scope.
+  </Step>
+
+  <Step title="Choose the session scope" title-type="p">
+    Pick one of these options:
+
+    - **All active campers loaded by the filter** includes everyone in your current filter, including people already in bunks.
+
+    - **Only campers currently unassigned** uses only the people in **Available Users**.
+
+    Use the first option for rebalancing and the second when you only want to place unassigned campers.
+  </Step>
+
+  <Step title="Choose Allowed Bunks" title-type="p">
+    You can limit which bunks are allowed.
+  </Step>
+
+  <Step title="Generate the draft" title-type="p">
+    Click **Generate Draft**.
+
+    Suggestions appear grouped by bunk so you can review each proposed placement before anything is saved.
+  </Step>
+
+  <Step title="Accept only the moves you want" title-type="p">
+    Accept or reject each suggested person.
+
+    When you are ready, click **Apply Accepted Assignments** to write only the accepted moves to the live bunk field.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  An AI draft assignments control exists in the page markup, but it is not shown in the default template. This guide does not cover it.
+</Callout>
+
+## Open a profile without losing your place
+
+Each card includes an open-in-new-tab icon next to the person’s name. Use it to open that profile in a new tab when you need to confirm details before making a placement.
+
+This is helpful when a request, age group, cabin rule, or other profile detail needs a quick check.
+
+## Use Bunk Settings for setup and Bunk Assignments for daily work
+
+**Bunk Settings** controls the structure behind the board. That includes:
+
+- which profile field is the bunk field
+
+- which fields count as bunk requests
+
+- optional capacities
+
+- whether capacity behavior warns or blocks
+
+**Bunk Assignments** is the day-to-day workspace where you filter people, drag assignments, review requests, and use Smart Assignments when needed.
+
+## Troubleshoot common problems
+
+<ExpandableGroup>
+  <Expandable title="The page says the bunk field is not configured" default-open="false">
+    Open **Bunk Settings** and choose the correct bunk field. If the bunk field is already selected, confirm that the field has answer choices for each bunk name. Then reload Bunk Assignments.
+  </Expandable>
+
+  <Expandable title="The page says there are no bunks" default-open="false">
+    Add choices to the bunk profile field. Each choice becomes a bunk on the board.
+  </Expandable>
+
+  <Expandable title="Available Users is empty" default-open="false">
+    Click **Apply Filter** first. If the list still stays empty, loosen your filters and confirm that the people you expect to see do not already have a bunk assigned.
+  </Expandable>
+
+  <Expandable title="I cannot place someone into a bunk" default-open="false">
+    Check whether that bunk is using a **Block** capacity rule. If it is, free a spot in the bunk or update the limit in Bunk Settings.
+  </Expandable>
+
+  <Expandable title="Smart Assignments says there are no campers" default-open="false">
+    Return to the main board and click **Apply Filter** so campers are loaded. Then open Smart Assignments again.
+  </Expandable>
+</ExpandableGroup>
+
+## What to do next
+
+<Columns cols="2">
+  <Card title="Review Bunk Settings" href="#use-bunk-settings-for-setup-and-bunk-assignments-for-daily-work" icon="settings" cta="Check setup" horizontal="false">
+
+  </Card>
+
+  <Card title="Start assigning campers" href="#assign-someone-to-a-bunk" icon="users" cta="Open workflow" horizontal="false">
+
+  </Card>
+</Columns>
+
