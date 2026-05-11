@@ -216,9 +216,17 @@ Use the New Session/Product modal to define a session that families can register
       Checkbox labeled `Hide From Attendance`. Check this when you do not want this Session/Product to appear in attendance screens.
     </ParamField>
 
+    <ParamField body="Non-revenue session" param-type="boolean" required="false" deprecated="false">
+      Checkbox labeled `Non-revenue session`, shown under **Start Date** next to **Hide From Attendance**. Check this when you want the Session/Product excluded from **Net Revenue** calculations in the [Revenue Summary report](/revenue-summary) while leaving pricing and charges unchanged.
+    </ParamField>
+
     <ParamField body="Expiration Date" param-type="date" required="false" deprecated="false">
       Labeled `Expiration Date Can't be purchased after this date`. This date controls the last day families can purchase/register for the Session/Product.
     </ParamField>
+
+    <Callout kind="info" collapsed="false">
+      Marking a Session/Product as **Non-revenue session** does not change what families are charged. It only affects how qualifying registration lines are presented in the Revenue Summary report.
+    </Callout>
   </Step>
 
   <Step title="Save the new Session/Product" icon="check-circle" title-type="p">
