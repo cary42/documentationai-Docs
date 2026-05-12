@@ -325,6 +325,11 @@
                 "icon": "lucide-mail"
               },
               {
+                "title": "Roles & Permissions",
+                "path": "roles-and-permissions",
+                "icon": "align-center"
+              },
+              {
                 "title": "Staff Scheduling",
                 "path": "scheduling",
                 "icon": "calendar"
