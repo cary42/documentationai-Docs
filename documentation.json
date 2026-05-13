@@ -392,6 +392,10 @@
             "group": "Profile",
             "pages": [
               {
+                "title": "How do I mark a camper active?",
+                "path": "how-do-i-mark-a-camper-active"
+              },
+              {
                 "title": "Managing multiple email addresses",
                 "path": "managing-multiple-email-addresses"
               }
