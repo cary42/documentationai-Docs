@@ -186,6 +186,16 @@
             "public": true
           },
           {
+            "group": "Dashboard",
+            "pages": [
+              {
+                "title": "Payment Issues",
+                "path": "payment-issues",
+                "icon": "circle-dollar-sign-icon"
+              }
+            ]
+          },
+          {
             "group": "Profile Management",
             "pages": [
               {
@@ -323,11 +333,6 @@
                 "title": "Email Templates",
                 "path": "email-templates",
                 "icon": "lucide-mail"
-              },
-              {
-                "title": "Roles & Permissions",
-                "path": "roles-and-permissions",
-                "icon": "align-center"
               },
               {
                 "title": "Staff Scheduling",
