@@ -47,45 +47,64 @@ Canteen is controlled in your site settings. Depending on your setup, you may ne
 
 ## Use Canteen in CampiumDB
 
-After you turn on **Canteen Module (Admin)**, a **Canteen** section appears in the left menu. This is the main staff area for running sales, managing items, and checking account activity.
+After you turn on **Canteen Module (Admin)**, a **Canteen** section appears in the left menu. This is the main staff area for running sales, managing items, checking account activity, and supporting families.
+
+Typical roles vary by camp, but these are common patterns:
+
+- **Checkout or front desk staff** ring up purchases on the main Canteen screen.
+- **Store or operations staff** keep products, pricing, and inventory current.
+- **Finance or admin staff** review deposits, purchases, and balances, and update settings when needed.
+
+If a staff member does not see a canteen screen in the menu, an administrator may need to review their permissions.
+
+### Before you open for sales
+
+Before a busy store period, it helps to review a few basics:
+
+- Open **Manage Canteen Products** and confirm the items you plan to sell are active and priced correctly.
+- If you use product images or descriptions, make sure they still match what is available.
+- If **Track inventory** is turned on in **Canteen settings**, verify the available quantities look correct before staff begin selling.
 
 ### Canteen main screen
 
 Use the main **Canteen** screen as your point-of-sale view during the season.
 
-- See a grid of canteen items, including the item name, price, and image if one was added.
+- Use **Search products** to quickly find items in a long list.
 - Add items to the cart to build an order.
+- Review the **Order summary** before submitting the sale.
 - Choose how the purchase is paid:
-  - **User account** — Charges the selected camper or staff canteen balance. The account must have enough money available.
-  - **Cash** — Records a cash sale without using stored account balance.
+  - **User account** — Charges the selected camper or staff canteen balance. Select the user first and confirm the account has enough money available.
+  - **Cash** — Records a cash sale without using stored account balance. This appears only when your canteen settings allow cash.
   - **Credit card** — May appear if your payment setup supports it. Some setups include a link to take payment on your payment page.
-- Select the customer when you are charging a canteen account.
-- Confirm the purchase to complete the sale.
+- When charging a user account, staff can review the current **Balance**, **Order Total**, and remaining amount before confirming.
+- Confirm the purchase to complete the sale. If inventory tracking is enabled, the saved sale also reduces quantity on hand.
 
-### Manage Products
+Depending on permissions, staff may also see links for **Manage Canteen Products**, **Purchases**, and **Canteen settings** at the top of the page.
 
-Use **Manage Products** to control what appears on the main Canteen screen.
+### Add funds and review deposits
 
-- Add new canteen items.
-- Edit item names, prices, or images.
-- Remove items that should no longer be sold.
-- Keep in mind that canteen items are separate from general registration products, unless your camp also uses product settings elsewhere to tie them together.
+Use **Deposits** to review money added to canteen accounts and related activity.
+
+- See deposits made from the portal or from admin tools such as **Add funds**.
+- Check how much was added and who the deposit was for.
+- Use the list alongside purchases when you reconcile canteen activity.
+- Depending on your payment type and camp policy, refunds may also be available here.
+
+When staff need to load funds in the office, use the admin **Add funds** flow:
+
+- Search for the correct user.
+- Choose the payment account, such as cash, card, or bank account, based on your setup.
+- Enter the amount to add.
+- Review the current balance and new balance, then save the deposit.
 
 ### Purchases
 
 Use **Purchases** to review what sold over a date range.
 
 - See items that were bought and when they were purchased.
-- Use your camp's available filters to narrow the report if needed.
-- Review sales trends or look up a specific purchase.
-
-### Deposits
-
-Use **Deposits** to review money added to canteen accounts.
-
-- See deposits made from the portal or from admin tools such as Add Funds.
-- Check how much was added and who it was for.
-- Depending on your payment type, refunds may also be available here. Follow your camp's financial policy when handling refunds.
+- Use available filters such as date range, product, or payment type when needed.
+- Search for a specific purchase or review totals for the filtered results.
+- If **Enable fulfillment status on purchases** is turned on, staff can also mark purchases as fulfilled or pending.
 
 ### Account Balance
 
@@ -95,9 +114,30 @@ Use **Account Balance** when you need to check remaining funds.
 - Answer parent questions about available funds.
 - Troubleshoot declined balance purchases.
 
+### Manage Canteen Products
+
+Use **Manage Canteen Products** to control what appears on the main Canteen screen.
+
+- Add new canteen items.
+- Edit item names, descriptions, prices, status, or images.
+- Mark products inactive when they should no longer be sold.
+- If **Track inventory** is enabled, maintain quantity on hand for each item.
+- If **Enable cost basis and profit** is enabled, enter product cost details so staff can review margin information.
+
+### Canteen settings
+
+Use **Canteen settings** to control how the rest of the team works.
+
+- **Accept cash** — Shows cash as a payment option at checkout and when staff add funds.
+- **Track inventory** — Shows quantity on hand and reduces stored quantity when sales are saved.
+- **Enable cost basis and profit** — Shows cost and profit-related fields for products.
+- **Enable fulfillment status on purchases** — Adds fulfilled and pending controls on purchase records.
+
+Save changes after updating settings.
+
 ## Use Canteen in the parent portal
 
-After you turn on **Canteen Module (Portal)**, families see **Canteen** in the parent portal navigation. This is where they can check balances, add money, and review history for their household.
+After you turn on **Canteen Module (Portal)**, families see **Canteen** in the parent portal navigation or from their **Account** area. This is where they can check balances, add money, and review history for their household.
 
 <Callout kind="info">
 
@@ -105,11 +145,17 @@ The current add-funds form has a **$3.00 minimum**. If your site charges a credi
 
 </Callout>
 
+### Getting to the Canteen page
+
+Families sign in to the same parent portal they use for registration and payments. If the portal canteen module is enabled, they can open **Canteen** from the navigation or from their account area.
+
+If a family does not see Canteen anywhere, your camp may not use the online canteen page.
+
 ### Balances
 
 The **Balances** area shows current canteen balances for the active registration context.
 
-- Families can see each relevant camper or user's current balance.
+- Families can see a separate balance for each relevant camper or user.
 - This helps them decide whether they need to add more funds before camp activities or store time.
 
 ### Add funds to canteen account
@@ -119,6 +165,7 @@ Families can add money to a canteen account from the portal.
 - Choose a saved payment method, such as a card or bank account, based on your camp's setup.
 - Choose which camper or staff member should receive the deposit.
 - Enter the amount to add.
+- If the amount is not accepted, review the rules shown on the page and adjust the amount before submitting.
 - Submit the payment to add funds.
 - After a successful payment, the page refreshes and the new balance appears.
 
@@ -128,6 +175,7 @@ The **Purchase history** area shows canteen purchases.
 
 - Families can review the date of each purchase.
 - They can see the amount, what was bought, and who the purchase was for.
+- This is useful when they want to review store activity during a session.
 
 ### Funding history
 
@@ -137,11 +185,48 @@ The **Funding history** area shows money added to canteen accounts.
 - They can see the payment method used and who the deposit was for.
 - This is often the first place to check when someone asks whether money was successfully added.
 
+### What families cannot do in the portal
+
+The parent portal is for reviewing balances and adding funds. Families do not use it to run in-person checkout, manage products, or change canteen settings.
+
 ## Quick tips
 
 Use these shortcuts when staff or families have questions.
 
 - Turn on **both modules** if families should load funds online and staff should sell from the Canteen screen at camp.
-- Set up **Manage Products** first so the main Canteen grid shows the right items and prices.
+- Set up **Manage Canteen Products** first so the main Canteen grid shows the right items and prices.
+- Prefer marking seasonal items inactive instead of deleting them if you still want older purchase history to make sense.
 - Check **Account Balance** and **Deposits** when a parent asks where their money went or why a balance purchase was declined.
 - Use **Purchases** when you need to confirm what was sold and when.
+
+## Troubleshooting
+
+<Callout kind="info">
+
+If a family does not see **Canteen** in the parent portal, confirm that **Canteen Module (Portal)** is enabled for the site.
+
+</Callout>
+
+<Callout kind="info">
+
+If staff do not see cash as a payment option at checkout or in the add-funds flow, check whether **Accept cash** is turned on in **Canteen settings**.
+
+</Callout>
+
+<Callout kind="info">
+
+If quantities are not decreasing after a sale, confirm that **Track inventory** is turned on.
+
+</Callout>
+
+<Callout kind="info">
+
+If fulfillment controls do not appear in **Purchases**, check whether **Enable fulfillment status on purchases** is enabled.
+
+</Callout>
+
+<Callout kind="info">
+
+If an add-funds payment or purchase fails, try again once, then record the user, amount, items, and time so an administrator can review the issue.
+
+</Callout>
