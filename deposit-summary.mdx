@@ -91,6 +91,128 @@ The **Deposit summary** table shows one row per deposit batch, along with totals
   Use the **grand totals** in the footer to reconcile an entire period against your accounting system, bank deposits, or processor statements.
 </Callout>
 
+## Deposit Summary reconciliation
+
+The Deposit Summary report includes a **Reconciled** column so you can track which deposits you have already reviewed against your bank activity.
+
+With reconciliation, you can:
+
+- Mark a deposit as **Reconciled** after you confirm it.
+- Add an optional note, such as a bank reference or internal reminder.
+- See which deposits still need review.
+- Remove reconciliation if a deposit was marked by mistake.
+
+### What changed in the report
+
+Each row in the **Deposit summary** table includes a **Reconciled** column.
+
+- **Reconcile** button — the deposit has not been reconciled yet.
+- **Reconciled** button — the deposit has already been reconciled.
+- **Note line** — if a note was saved during reconciliation, it appears below the button.
+
+### Recommended workflow
+
+<Steps>
+  <Step title="Open the Deposit Summary" icon="bar-chart" title-type="p">
+    Go to **Financial → Deposit Summary**.
+  </Step>
+
+  <Step title="Set the date range" icon="calendar" title-type="p">
+    Choose the date range for the period you are reconciling.
+  </Step>
+
+  <Step title="Compare each deposit" icon="scale" title-type="p">
+    Review each deposit row against your bank activity.
+  </Step>
+
+  <Step title="Mark confirmed rows" icon="check-circle" title-type="p">
+    When a row is confirmed, click **Reconcile**.
+  </Step>
+
+  <Step title="Add an optional note" icon="file-text" title-type="p">
+    Enter a note if needed, then confirm.
+  </Step>
+
+  <Step title="Finish the review" icon="check-check" title-type="p">
+    Continue until all confirmed rows show **Reconciled**.
+  </Step>
+</Steps>
+
+### Mark a deposit as reconciled
+
+<Steps>
+  <Step title="Find the deposit row" icon="search" title-type="p">
+    Locate the deposit you want to confirm.
+  </Step>
+
+  <Step title="Click Reconcile" icon="check-circle" title-type="p">
+    In the **Reconciled** column, click **Reconcile**.
+  </Step>
+
+  <Step title="Enter a note if needed" icon="file-text" title-type="p">
+    In the pop-up, add a note if you want to save extra context. This is optional.
+  </Step>
+
+  <Step title="Save the reconciliation" icon="save" title-type="p">
+    Click **Reconcile** to save.
+  </Step>
+</Steps>
+
+After saving:
+
+- The button changes to **Reconciled**.
+- The saved note appears under the button.
+
+### Remove reconciliation
+
+If a row was reconciled by mistake:
+
+<Steps>
+  <Step title="Click the reconciled button" icon="rotate-ccw" title-type="p">
+    Click the **Reconciled** button on that row.
+  </Step>
+
+  <Step title="Confirm removal" icon="trash-2" title-type="p">
+    Confirm that you want to remove reconciliation.
+  </Step>
+</Steps>
+
+After removal:
+
+- The button returns to **Reconcile**.
+- The note is cleared.
+
+### Tips for cleaner reconciliation
+
+- Reconcile in date order so review is easier to track.
+- Use short notes for exceptions only, such as timing differences.
+- Reconcile only after matching the amount and batch to your bank activity.
+- If you are unsure, leave the row unreconciled and return later.
+
+### Troubleshooting
+
+#### I clicked Reconcile but nothing changed
+
+- Refresh the page and try again.
+- Confirm you still have access to the report.
+- If it continues, contact your internal admin or support team.
+
+#### I reconciled the wrong row
+
+- Click the **Reconciled** button for that row.
+- Confirm removal, then reconcile the correct row.
+
+#### My note is missing
+
+- Notes are saved only when you confirm the pop-up.
+- Re-open the row by removing reconciliation, then reconcile it again with a note.
+
+### Glossary
+
+- **Reconcile** — mark a deposit as reviewed and matched.
+- **Unreconciled** — a deposit that still needs review.
+- **Batch Number** — the processor identifier for a deposit group.
+
 ## How fees and net are calculated
 
 Campium estimates fees and net amounts for each deposit based on your agency’s configured processing rates and per‑transaction charges.
