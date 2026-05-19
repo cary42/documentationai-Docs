@@ -325,6 +325,11 @@
                 "icon": "file-text"
               },
               {
+                "title": "CampiumDB Users",
+                "path": "campiumdb-users",
+                "icon": "users"
+              },
+              {
                 "title": "Canteen",
                 "path": "canteen",
                 "icon": "lucide-glass-water"
