@@ -1,0 +1,269 @@
+---
+title: CampiumDB Users
+description: Manage staff logins, roles, statuses, and cross-account access from the CampiumDB Users page in Campium Admin.
+---
+
+## Manage staff access from one page
+
+**CampiumDB Users** shows every person in your organization who has a staff-facing role, such as office staff, nurses, or administrators. Use this page to see who can sign in, assign roles, change statuses, and manage access across organization accounts.
+
+Parents and campers do not appear here. This page only lists people who can sign in to the admin side of CampiumDB.
+
+## Access and permissions
+
+CampiumDB Users lives in the Admin section of Campium.
+
+<Callout kind="info">
+
+To access **CampiumDB Users**, your staff role must include the **Create Role** permission. If you do not see **CampiumDB Users** under **Admin**, ask an Administrator to grant access or make the change for you.
+
+</Callout>
+
+## Open CampiumDB Users
+
+<Steps>
+  <Step title="Open the Admin menu" icon="settings" title-type="p">
+
+  - Sign in to CampiumDB.
+  - Open the left navigation.
+  - Expand **Admin**.
+
+  </Step>
+
+  <Step title="Open CampiumDB Users" icon="users" title-type="p">
+
+  - Click **CampiumDB Users**.
+  - The page opens with a table of staff users who have a role in the current organization account.
+
+  </Step>
+</Steps>
+
+## What appears on the page
+
+The main table lists staff members who already have a role. Each row shows what access they have in the account you are currently using.
+
+| Column | What it shows |
+| --- | --- |
+| **Name** | The person's name. Click it to open their full profile. |
+| **Role** | The role assigned in the current organization account. Click it to change the role. |
+| **Status** | The user's current status, such as Active or Inactive. Click it to change the status. |
+| **Last Login** | The last time the person signed in. A blank value means they have never signed in. |
+| **Access** | A button for managing access to other organization accounts. This appears only if your organization has more than one account. |
+
+The top right of the page includes **Add New User With Role**.
+
+## Add a new user with a role
+
+Use this option when the person already exists in CampiumDB as a staff record and now needs a login with a role.
+
+<Steps>
+  <Step title="Start the new user flow" icon="plus" title-type="p">
+
+  - Click **Add New User With Role**.
+
+  </Step>
+
+  <Step title="Choose staff members" icon="users" title-type="p">
+
+  - In **Staff Names**, start typing the person's name.
+  - Select the person from the list.
+  - Add more than one person if needed. Everyone selected in this step receives the same role.
+  - Only staff members with an **Active** staff status appear in the search.
+
+  </Step>
+
+  <Step title="Assign the role" icon="edit" title-type="p">
+
+  - In **Role to Assign**, choose the role to give them, such as **Administrator**, **Office**, or **Camp Nurse**.
+  - Roles come from **Admin → Roles & Permissions**.
+
+  </Step>
+
+  <Step title="Save the change" icon="check-circle" title-type="p">
+
+  - Click **Save**.
+  - The page reloads and the new user appears in the list.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+If the person does not appear in **Staff Names**, either they do not have a staff record yet or their staff status is not Active. Add them as a staff member or reactivate them from their profile, then return to **CampiumDB Users**.
+
+</Callout>
+
+## Change someone's role
+
+A role controls what the person can do after they sign in.
+
+<Steps>
+  <Step title="Open the role editor" icon="edit" title-type="p">
+
+  - Find the person in the list.
+  - Click their **Role**.
+
+  </Step>
+
+  <Step title="Select the new role" icon="users" title-type="p">
+
+  - Choose the new role from the **Role** dropdown.
+
+  </Step>
+
+  <Step title="Save the role" icon="check-circle" title-type="p">
+
+  - Click **Save Role**.
+
+  </Step>
+</Steps>
+
+### Remove a role
+
+If you select a blank role, CampiumDB sets the person's status to **Inactive** so they can no longer sign in.
+
+<Callout kind="info">
+
+If you want to remove the role without changing the person's current status, select **Keep the user status the same** before saving. This matters when the person should remain active in another user type, such as an active camper or parent.
+
+</Callout>
+
+## Change someone's status
+
+Status controls whether the person can sign in and how they appear in reports. Use **Inactive** when someone leaves and should no longer have access.
+
+<Steps>
+  <Step title="Open the status editor" icon="edit" title-type="p">
+
+  - Click the **Status** link in the person's row.
+
+  </Step>
+
+  <Step title="Choose the new status" icon="settings" title-type="p">
+
+  - Select the new **Status**, such as **Active** or **Inactive**.
+  - Optionally choose one or more **User Types**.
+
+  </Step>
+
+  <Step title="Save the update" icon="check-circle" title-type="p">
+
+  - Click **Change Status**.
+
+  </Step>
+</Steps>
+
+Keeping a user inactive preserves their profile and history. You do not need to delete the user to stop sign-in access.
+
+## Open the full profile
+
+Click the person's **Name** in the list to open their full profile. The profile contains contact information, custom fields, history, and other user details.
+
+## Manage account access across organization accounts
+
+If your organization uses more than one CampiumDB organization account, use **Account access** to let a staff member open another account and work there with a specific role.
+
+This setting does not change the person's role in the account you are currently viewing. To change their role in the current account, use the **Role** link on the **CampiumDB Users** page.
+
+<Steps>
+  <Step title="Open account access" icon="users" title-type="p">
+
+  - Click **Account access** on the person's row.
+
+  </Step>
+
+  <Step title="Add the other account" icon="plus" title-type="p">
+
+  - Add a row for each other organization account they should be able to open.
+
+  </Step>
+
+  <Step title="Choose the role for that account" icon="edit" title-type="p">
+
+  - Select the **Role** they should have in each additional account.
+
+  </Step>
+
+  <Step title="Save account access" icon="check-circle" title-type="p">
+
+  - Click **Save**.
+
+  </Step>
+</Steps>
+
+For full instructions, see [Account access across organization accounts](/staff-organization-account-access).
+
+## Common situations
+
+### A new staff member should be able to sign in as an Administrator
+
+Add them as a staff member first. Then use **Add New User With Role**, choose their name, assign **Administrator**, and save.
+
+### Someone is leaving and should no longer be able to sign in
+
+Open their **Status**, change it to **Inactive**, and save. Their login stops working immediately, while their history remains in place.
+
+### Someone needs a different level of access
+
+Open their **Role**, choose the new role, and save. Use this for promotions, reduced access, or changes in job responsibilities.
+
+### Someone works in two organization accounts
+
+Set their role in the current account on **CampiumDB Users**, then use **Account access** to assign a role in the other account.
+
+### A person should be here but does not appear
+
+CampiumDB Users only shows people who already have a role. If they are a staff member without a role, add them with **Add New User With Role**. Parents and campers never appear in this list.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="What is the difference between status and role?" default-open="false">
+
+  **Role** controls what the person can do after signing in, including which menus and tools they can use. **Status** controls whether they can sign in at all.
+
+  </Expandable>
+
+  <Expandable title="If I remove someone's role, is their account deleted?" default-open="false">
+
+  No. CampiumDB does not delete the account. It sets the person to **Inactive** so they can no longer sign in, while keeping their profile, history, and data in place.
+
+  If you do not want the status to change when removing the role, select **Keep the user status the same** before saving.
+
+  </Expandable>
+
+  <Expandable title="Why does the role dropdown not show the role I expect?" default-open="false">
+
+  Roles are managed under **Admin → Roles & Permissions**. If the role is missing, create it there and then return to **CampiumDB Users**.
+
+  </Expandable>
+
+  <Expandable title="Can I add more than one person at once?" default-open="false">
+
+  Yes. The **Staff Names** field lets you select multiple people during **Add New User With Role**. Everyone selected receives the same role.
+
+  </Expandable>
+
+  <Expandable title="What does Last Login show?" default-open="false">
+
+  **Last Login** shows the last time the person signed in to CampiumDB. A blank value means the account exists but has never been used to sign in.
+
+  </Expandable>
+
+  <Expandable title="Who can use this page?" default-open="false">
+
+  Staff members whose role includes the **Create Role** permission can use **CampiumDB Users**. This permission is typically assigned to Administrators.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Quick reference
+
+| Task | How |
+| --- | --- |
+| Open the page | **Admin → CampiumDB Users** |
+| Add a staff login with a role | Click **Add New User With Role** |
+| Change someone's role | Click their **Role** |
+| Turn off someone's sign-in | Click **Status** and set it to **Inactive** |
+| Open the full profile | Click their **Name** |
+| Let someone work in another organization account | Click **Account access** |
