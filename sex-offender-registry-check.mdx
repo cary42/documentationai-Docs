@@ -1,0 +1,214 @@
+---
+title: Sex Offender Registry Check
+description: Run a sex offender registry lookup from a staff profile in CampiumDB, review saved results, and handle matches appropriately.
+---
+
+## Run a registry check from a staff profile
+
+Use the staff profile to search the U.S. Department of Justice National Sex Offender Public Website, or NSOPW, without leaving CampiumDB.
+
+<Callout kind="info" collapsed="false">
+  This tool is available only on **Staff** profiles. You cannot run it for campers, guardians, or alumni.
+
+  You must also have permission to view that person's profile. If you cannot open the profile, you cannot run the check.
+</Callout>
+
+### What the registry check does
+
+Campium searches NSOPW using the staff member's name and, when available, location details such as city, county, or zip code. The search opens from the profile with those fields pre-filled so you can review them before running it.
+
+Campium does not run or maintain the registry. Treat this tool as a quick lookup aid that helps you start a review inside your normal staffing workflow.
+
+<Callout kind="alert" collapsed="false">
+  This is not a full background check and not a final hiring clearance.
+
+  Results may be incomplete, outdated, or incorrect. Always verify important information on NSOPW and follow your own camp's screening and compliance policies.
+</Callout>
+
+### Who can use it
+
+You can use this feature if all of the following are true:
+
+- You are an admin or office staff member.
+- You have permission to view profiles.
+- You are working on a **Staff** profile.
+- You already have access to that person's profile under your normal Campium permissions.
+
+## Find the registry check on a profile
+
+Open the staff member's profile and use the link beneath the profile photo near the bottom of the page.
+
+<Steps>
+  <Step title="Open the staff profile" title-type="p">
+    Go to the staff member's profile in the admin portal.
+  </Step>
+
+  <Step title="Locate the registry check link" title-type="p">
+    Look beneath the profile photo toward the bottom of the profile for **Check Sex Offender Registry**.
+  </Step>
+
+  <Step title="Open the search window" title-type="p">
+    Click **Check Sex Offender Registry** to open the search window.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  If you do not see **Check Sex Offender Registry**, the profile is usually not a Staff profile or your account does not have access to that profile.
+</Callout>
+
+## Run a registry check
+
+The search window opens with profile details already filled in. Review those details before you search so you do not miss a match because of a typo or outdated address.
+
+<Steps>
+  <Step title="Open the check" title-type="p">
+    Click **Check Sex Offender Registry** from the staff profile. A new window opens with the person's name and address fields filled from the profile.
+  </Step>
+
+  <Step title="Confirm the search details" title-type="p">
+    Review the fields before you run the search.
+
+    <ParamField body="First name" param-type="string" required="true" show-location="false">
+      Must match the first name you want to search.
+    </ParamField>
+
+    <ParamField body="Last name" param-type="string" required="true" show-location="false">
+      Must match the last name you want to search.
+    </ParamField>
+
+    <ParamField body="City" param-type="string" required="false" show-location="false">
+      Optional. Use it to narrow results.
+    </ParamField>
+
+    <ParamField body="County" param-type="string" required="false" show-location="false">
+      Optional. Use it to narrow results.
+    </ParamField>
+
+    <ParamField body="Zip" param-type="string" required="false" show-location="false">
+      Optional. Use it to narrow results.
+    </ParamField>
+
+    Use the person's legal name and current address when you have them. Old addresses or misspelled names can hide a real match or return the wrong person.
+  </Step>
+
+  <Step title="Search the registry" title-type="p">
+    Click **Search Registry** and wait a few seconds for the results to load.
+  </Step>
+
+  <Step title="Review the outcome" title-type="p">
+    Read the result summary and follow any links provided for record details or a manual search on NSOPW.
+  </Step>
+</Steps>
+
+## Interpret the results
+
+The result banner tells you whether Campium found possible records or whether the search could not complete.
+
+### No matches found
+
+A green result means the search returned no records for the entered name and search details. That result can help document your review, but it does not replace verification when the hiring decision matters.
+
+### Potential matches found
+
+A red result means one or more registry records may match the person you searched. Campium shows links to individual records and a link to **View full results on NSOPW**.
+
+A name match alone does not confirm identity. Review each record carefully and compare details such as photo, age, address, and offense information before making any decision.
+
+### Registry unavailable
+
+A yellow result means the automatic search did not complete. Use the link in the search window to search manually on NSOPW.
+
+## View a past check
+
+After you run at least one search, the profile sidebar shows the latest check summary. You may see a message such as `Last checked Mar 15, 2026: No match (Jane Smith)` or `Last checked Mar 15, 2026: 2 matches — View (Jane Smith)`.
+
+Click **View** to reopen details from the most recent search. If the person's name or address changes, click **Check Sex Offender Registry** again to run a new search.
+
+<Callout kind="info" collapsed="false">
+  The profile shows only the most recent summary, but each check is stored in the system.
+</Callout>
+
+## Important limitations
+
+Use registry results as a starting point, not as a final answer.
+
+<Callout kind="alert" collapsed="false">
+  Read the notice in the search window each time you run a check.
+
+  - Results may be outdated, incomplete, or wrong.
+  - Similar names can create false matches.
+  - This is not an FCRA background check and must not be used by itself for employment, housing, credit, or other regulated decisions.
+  - You must confirm relevant information on NSOPW and follow federal, state, and local screening rules.
+</Callout>
+
+## Follow a consistent workflow for new staff
+
+A repeatable process reduces missed details and makes your records easier to review later.
+
+<Steps>
+  <Step title="Confirm the profile details" title-type="p">
+    Check that the staff profile has the correct first name, last name, city, and zip code before you search.
+  </Step>
+
+  <Step title="Run the registry check during onboarding" title-type="p">
+    Use **Check Sex Offender Registry** as part of your normal onboarding process for new staff.
+  </Step>
+
+  <Step title="Review any matches on NSOPW" title-type="p">
+    If results show possible matches, open each NSOPW record and compare the photo, age, address, and offense details to the applicant.
+  </Step>
+
+  <Step title="Document your decision outside Campium" title-type="p">
+    Record your hiring or review decision according to your camp's HR policy.
+  </Step>
+
+  <Step title="Run the check again when details change" title-type="p">
+    Re-run the search if the person's name or address changes in a meaningful way.
+  </Step>
+</Steps>
+
+## Troubleshoot common issues
+
+<ExpandableGroup>
+  <Expandable title="The link is missing" default-open="false">
+
+    Confirm that you are viewing a **Staff** profile and that your account can view that profile. The registry check does not appear on camper, guardian, or alumni profiles.
+
+  </Expandable>
+
+  <Expandable title="The search says first and last name are required" default-open="false">
+
+    Fill in both the **First name** and **Last name** fields before you click **Search Registry**.
+
+  </Expandable>
+
+  <Expandable title="The registry is unavailable" default-open="false">
+
+    The automatic lookup could not complete. Use the manual search link to continue on NSOPW.
+
+  </Expandable>
+
+  <Expandable title="The search returns unexpected matches" default-open="false">
+
+    Refine the search with city or zip code and review the records on NSOPW carefully. Common names often return multiple people.
+
+  </Expandable>
+
+  <Expandable title="The request failed" default-open="false">
+
+    Refresh the page and try the search again.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Understand what gets recorded
+
+Each registry check saves key audit details on the profile record.
+
+- Who ran the check
+- When the check ran
+- The names searched
+- The result count
+- Match details when available
+
+Handle this information according to your camp's confidentiality and HR policies. Share results only with staff members who need them for hiring or compliance decisions.

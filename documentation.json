@@ -204,6 +204,10 @@
                 "icon": "users"
               },
               {
+                "title": "Sex Offender Registry Check",
+                "path": "sex-offender-registry-check"
+              },
+              {
                 "title": "Health Report",
                 "path": "health-report",
                 "icon": "briefcase-medical"
@@ -213,7 +217,8 @@
                 "pages": [
                   {
                     "title": "Processing Refunds and Voids",
-                    "path": "processing-refunds-and-voids"
+                    "path": "processing-refunds-and-voids",
+                    "icon": "circle-dollar-sign-icon"
                   }
                 ],
                 "icon": "circle-dollar-sign-icon"
