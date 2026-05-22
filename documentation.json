@@ -296,6 +296,10 @@
               {
                 "title": "Forms",
                 "path": "forms"
+              },
+              {
+                "title": "Recipients",
+                "path": "recipients"
               }
             ],
             "public": true
