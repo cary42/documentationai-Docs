@@ -97,11 +97,11 @@
                 ]
               },
               {
-                "group": "System",
+                "group": "Attendance",
                 "pages": [
                   {
-                    "title": "Active Cart Report",
-                    "path": "system-report-active-cart"
+                    "title": "Attendance",
+                    "path": "attendance"
                   },
                   {
                     "title": "Attendance Kiosk",
@@ -110,6 +110,15 @@
                   {
                     "title": "Attendance Reporting",
                     "path": "system-report-attendance-reporting"
+                  }
+                ]
+              },
+              {
+                "group": "System",
+                "pages": [
+                  {
+                    "title": "Active Cart Report",
+                    "path": "system-report-active-cart"
                   },
                   {
                     "title": "Charts",
@@ -296,10 +305,6 @@
               {
                 "title": "Forms",
                 "path": "forms"
-              },
-              {
-                "title": "Recipients",
-                "path": "recipients"
               }
             ],
             "public": true
@@ -378,6 +383,11 @@
           {
             "group": "Portal",
             "pages": [
+              {
+                "title": "FAQ",
+                "path": "faq",
+                "icon": "align-center-icon"
+              },
               {
                 "title": "Photo Hosting",
                 "path": "photo-hosting",

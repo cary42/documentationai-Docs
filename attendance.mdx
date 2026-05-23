@@ -1,0 +1,453 @@
+---
+title: Attendance
+description: Use Attendance in CampiumDB to check campers in and out, track absences, run reports, manage pickup workflows, and troubleshoot daily roster issues.
+---
+
+## Overview
+
+Use Attendance in CampiumDB to manage daily check-in and check-out, track absences, review attendance history, and support pickup workflows from the dashboard and system reports.
+
+<Callout kind="info">
+
+Attendance appears only when both of these are true:
+
+- **Attendance Module** is enabled in **Admin → Site Settings → Modules**.
+- Your user role includes the **Attendance** permission.
+
+</Callout>
+
+## Who uses this
+
+<Callout kind="info">
+
+Attendance typically involves three groups:
+
+- **Front desk / check-in staff**: mark campers in and out during arrival and dismissal.
+- **Program directors / office staff**: review daily counts, run reports, and spot trends.
+- **Administrators**: turn modules on, configure sessions for attendance, and assign staff permissions.
+
+Families use the parent portal to manage authorized pickup people and, when enabled, view kiosk PIN or QR details for self-service check-in.
+
+</Callout>
+
+## Before you start
+
+Optional settings in **Admin → Site Settings → Modules** affect which attendance tools are available.
+
+| Setting | What it does |
+|---|---|
+| **Pickup Module** | Lets families add authorized pickup people on the parent portal. Required for pickup lists and the Pickup Report. |
+| **Pickup Popup** | Prompts staff to choose who is picking up a camper during check-out. |
+| **Enable Kiosk Mode** | Adds the Attendance Kiosk report and shows camper PIN or QR details on the parent portal. |
+| **Staff Time Tracking On CampiumDB** | Adds a **Staff** tab on attendance and reporting screens so you can clock staff in and out from admin. |
+| **Staff Time Tracking On Portal** | Lets staff clock themselves in and out from the parent portal. |
+
+## Where to find attendance
+
+### Dashboard
+
+When attendance is active and campers are enrolled for today, the dashboard shows an **Attendance Stats** card.
+
+| Item | What it means |
+|---|---|
+| **Total Enrollment For Today** | Active campers enrolled in sessions that run today. |
+| **Absent** | Campers marked absent today. |
+| **Checked in** | Campers with a check-in recorded today. |
+| **Checked out** | Campers with a check-out recorded today. |
+| **Online Attendance** | Opens the main live attendance screen for today. |
+
+Progress bars show each count as a share of total enrollment. Numbers update as staff record attendance.
+
+The card stays hidden when no sessions are scheduled for today.
+
+### System reports
+
+Attendance reports also appear in the **System Reports** card on the dashboard under the **Attendance** group when the module is on.
+
+Open the full report list at **Reports → System Reports**. Use the filter box to search for attendance or pickup reports.
+
+## Attendance reports at a glance
+
+| Report | Best for |
+|---|---|
+| **Online Attendance – By Session** | Pick one session, then open today's roster. |
+| **Online Attendance – All Sessions** | See every camper enrolled today across sessions, or filter to one session. |
+| **[Attendance Reporting](/system-report-attendance-reporting)** | Review check-ins, check-outs, and absences across a season or date range. |
+| **Pickup Report** | Print or review authorized pickup people for each camper. |
+| **Attendance Check in/out PDF** | Generate a PDF of check-ins and check-outs for one calendar day. |
+| **[Attendance Kiosk](/system-report-attendance-kiosk)** | Check campers in or out with a PIN or QR code when kiosk mode is enabled. |
+
+Report names may use your site's labels for session or product instead of those exact words.
+
+## Daily attendance workflow
+
+Use the live roster for today's arrival, dismissal, and absence tracking.
+
+<Steps>
+
+<Step title="Open the roster" icon="folder">
+
+Open attendance in one of these ways:
+
+- On the dashboard, click **Online Attendance** in the Attendance Stats card.
+- Go to **Reports → System Reports → Online Attendance – By Session**, then click a session name.
+- Go to **Reports → System Reports → Online Attendance – All Sessions** to work across all sessions.
+
+</Step>
+
+<Step title="Choose season and date" icon="settings">
+
+At the top of the attendance screen, choose the **Season** and **Date** you want to view.
+
+On **Online Attendance – All Sessions**, use the **Session** dropdown to narrow the roster or leave **All Sessions** selected.
+
+</Step>
+
+<Step title="Record check-in, check-out, or absence" icon="check-circle">
+
+Use the action buttons in each camper row.
+
+| Action | How it works |
+|---|---|
+| **Check-in** | Click **Check-in** to record arrival. The system adds a timestamp immediately. |
+| **Check-out** | Click **Check-out** to record departure. If **Pickup Popup** is on, select who is picking up the camper. |
+| **Absent** | Click **Mark Absent** when the camper is not coming that day. |
+| **Undo** | Use **undo** beside the recorded action to reverse a mistake. |
+
+A summary line at the top shows totals for checked in, checked out, absent, and total enrollment.
+
+</Step>
+
+<Step title="Add notes if needed" icon="edit">
+
+Click in the **Notes** column to add or edit a note for that camper on that day, then click **Save**.
+
+Use notes for front-desk details that staff may need later the same day, such as arrival context or dismissal reminders.
+
+</Step>
+
+<Step title="Adjust roster display" icon="monitor">
+
+Click **Display Columns** to choose which profile fields appear on the roster, such as bunk, grade, or allergies.
+
+Your organization's selection is saved for future attendance views. On some rosters, you can also use **Show Photos** or **Hide Photos** for faster visual identification.
+
+</Step>
+
+</Steps>
+
+## Staff view
+
+If **Staff Time Tracking On CampiumDB** is enabled, attendance screens may show a **Staff** and **Campers** toggle.
+
+Staff rows use the same workflow as camper rows:
+
+- **Check-in**
+- **Check-out**
+- **Mark Absent**
+- **undo**
+
+Historical reporting may also include a **Campers / Staff** toggle for staff attendance totals.
+
+## Attendance reporting
+
+Use [Attendance Reporting](/system-report-attendance-reporting) to review attendance across a season or date range.
+
+### Summary view
+
+The summary page shows attendance totals by session.
+
+<Steps>
+
+<Step title="Open Attendance Reporting" icon="folder">
+
+- Go to **Reports**.
+- Open the **System Reports** group.
+- Select **Attendance Reporting**.
+
+</Step>
+
+<Step title="Choose a season and date range" icon="settings">
+
+Select the **season** and **date range** you want to review. The default range often covers the last 30 days.
+
+</Step>
+
+<Step title="Review totals by session" icon="bar-chart">
+
+The table typically includes:
+
+- **Session name** — click the session name to drill into daily detail.
+- **Unique Check-Ins** — distinct campers who checked in at least once during the selected range.
+- **Total Absences** — absence records during the selected range.
+
+Footer totals summarize all listed sessions.
+
+</Step>
+
+</Steps>
+
+If staff time tracking is enabled, the report may show a **Campers / Staff** toggle for staff attendance, absences, and estimated hours.
+
+### Session detail by day
+
+Click a session name from Attendance Reporting to open the day-by-day view.
+
+| Item | What it shows |
+|---|---|
+| **Check-ins** | Total arrivals recorded for that date. |
+| **Check-outs** | Total departures recorded for that date. |
+| **Absences** | Campers marked absent for that date. |
+| **Check-Ins and Absences Over Time** | A chart that helps you spot trends across the selected range. |
+| **Go To Attendance** | Opens the live roster for that session and date. |
+
+Click any count to open the list of campers included in that number.
+
+### User detail list
+
+When you open a daily count, the detail list may show:
+
+- Camper name, with a link to the profile
+- Check-in and check-out times
+- **Dropped Off By**
+- **Picked Up By**
+- Notes
+
+Use the table tools where available to print or export the results.
+
+## Pickup privileges
+
+Pickup features help staff confirm who is allowed to pick up a camper.
+
+### On the parent portal
+
+When **Pickup Module** is enabled, families see **Pickup** for each camper in the parent portal.
+
+They can add authorized pickup people, such as grandparents or caregivers, with name, relationship, and phone details. Parents and guardians already on the account are authorized automatically and do not need to be added again.
+
+<Callout kind="info">
+
+Authorized pickup people should be age 18 or older and bring valid ID at dismissal.
+
+</Callout>
+
+### Pickup Report
+
+Open **Reports → System Reports → Pickup Report** to review authorized pickup lists.
+
+| Option | Purpose |
+|---|---|
+| **Season filter** | Limits results to one season. |
+| **Session filter** | Limits results to one session when needed. |
+| **Profile Fields Display Settings** | Adds extra profile columns to the report. |
+
+Use this report for front-desk binders, dismissal review, or exports before trips.
+
+### Pickup selection at check-out
+
+When **Pickup Popup** is enabled, staff choose the pickup person during check-out. That selection appears on the roster and in related reporting.
+
+## Attendance Check in/out PDF
+
+Use **Reports → System Reports → Attendance Check in/out PDF** when you need a printable record for one day.
+
+<Steps>
+
+<Step title="Open the PDF report" icon="folder">
+
+Go to **Reports → System Reports → Attendance Check in/out PDF**.
+
+</Step>
+
+<Step title="Choose a date from the calendar" icon="calendar">
+
+Click the day you want on the calendar.
+
+</Step>
+
+<Step title="Download the PDF" icon="download">
+
+The system generates a PDF showing check-ins and check-outs for that date.
+
+Use it for records, audits, or sharing attendance details without giving full system access.
+
+</Step>
+
+</Steps>
+
+## Attendance Kiosk
+
+Use [Attendance Kiosk](/system-report-attendance-kiosk) for fast self-service or front-desk check-in and check-out with a tablet or computer.
+
+<Callout kind="info">
+
+Turn on **Enable Kiosk Mode** in **Admin → Site Settings** before the kiosk report appears.
+
+Optional: enable **Pickup Module** and **Pickup Popup** for pickup selection during check-out.
+
+</Callout>
+
+<Steps>
+
+<Step title="Open the kiosk" icon="monitor">
+
+Go to **Reports → System Reports → Attendance Kiosk**.
+
+</Step>
+
+<Step title="Choose check-in or check-out mode" icon="settings">
+
+Set the kiosk to **Check In** or **Check Out** based on the current flow at your entrance or dismissal area.
+
+</Step>
+
+<Step title="Scan a QR code or enter a PIN" icon="check-circle">
+
+Families can use the camper's QR code or PIN from the parent portal when kiosk mode is enabled.
+
+If the camper is active in more than one session that day, the kiosk prompts you to choose the correct session.
+
+</Step>
+
+<Step title="Confirm the result" icon="info">
+
+Review the **Result** panel after each action.
+
+If you need to reverse a mistake, use **Undo**.
+
+</Step>
+
+</Steps>
+
+When **Pickup Popup** is enabled, check-out also prompts staff to select who is picking up the camper.
+
+## Session setup for attendance
+
+Attendance rosters pull from active campers enrolled in sessions that are set up to run on the selected date.
+
+In **Admin → Products**, edit the session and review these fields:
+
+| Field | Purpose |
+|---|---|
+| **Start Date / End Date** | The selected attendance date must fall within the session date range. |
+| **Days of week** | The session appears only on the weekdays it is scheduled to run. |
+| **Hide From Attendance** | Excludes the session from attendance lists and dashboard counts. |
+
+A camper must also have an active registration in the session to appear on the roster.
+
+## Parent portal summary
+
+| Feature | When visible | Purpose |
+|---|---|---|
+| **Pickup** | Pickup Module on | Manage authorized pickup people. |
+| **Kiosk PIN / QR** | Kiosk Mode on | Speed up kiosk check-in and check-out. |
+| **Staff clock** | Staff Time Tracking On Portal and user is staff | Let staff clock themselves in and out. |
+
+## Dashboard cards vs. full reports
+
+| Location | What you get |
+|---|---|
+| **Attendance Stats** | Live snapshot for today only, with a link to Online Attendance. |
+| **System Reports → Attendance** | Rosters, kiosk, PDF output, pickup lists, and historical reports. |
+| **Attendance Reporting** | Trends and drill-down reporting across any selected date range. |
+
+Payment-related reports live in separate dashboard cards and are not part of attendance.
+
+## Troubleshooting
+
+<ExpandableGroup>
+
+<Expandable title="Attendance Stats card is missing">
+
+Check these items:
+
+- Confirm **Attendance Module** is enabled.
+- Confirm at least one session runs today.
+- Confirm campers are actively enrolled in sessions scheduled for today.
+
+If no sessions are active for the current day, the dashboard does not show Attendance Stats.
+
+</Expandable>
+
+<Expandable title="A camper is missing from the roster">
+
+Review the camper's registration and session setup:
+
+- Confirm the registration is **active**.
+- Confirm the session dates include the selected day.
+- Confirm the session's scheduled weekday includes the selected day.
+- Confirm **Hide From Attendance** is not selected on the session.
+
+</Expandable>
+
+<Expandable title="You cannot check a camper in or out">
+
+Check your access and the current record state:
+
+- Verify your user role includes the **Attendance** permission.
+- Refresh the page and try again.
+- If a partial record appears, use **undo** and then retry the action.
+
+</Expandable>
+
+<Expandable title="Pickup names are not showing">
+
+Pickup names depend on two settings:
+
+- Enable **Pickup Module** so families can add pickup people.
+- Enable **Pickup Popup** to capture pickup selection during check-out.
+
+Without those settings, the system cannot show recorded pickup names in the same way.
+
+</Expandable>
+
+<Expandable title="Attendance Kiosk is not available">
+
+Enable **Enable Kiosk Mode** in **Admin → Site Settings**.
+
+After you turn it on, open **Reports → System Reports** and look for **Attendance Kiosk**.
+
+</Expandable>
+
+<Expandable title="A report shows the wrong season">
+
+Change the **season** dropdown at the top of the report.
+
+Some attendance links default to your organization's default season, so the first result may not match the range you expected.
+
+</Expandable>
+
+</ExpandableGroup>
+
+## Related features
+
+<Columns cols={2}>
+
+<Card title="Transportation" href="/transportation" icon="bus">
+
+Use Transportation for bus rosters, route attendance, and rider management. Transportation is a separate module from daily attendance.
+
+</Card>
+
+<Card title="Attendance Reporting" href="/system-report-attendance-reporting" icon="bar-chart">
+
+Review attendance summaries and drill down into check-ins, check-outs, and absences across a season or date range.
+
+</Card>
+
+</Columns>
+
+Medication workflows are separate from daily attendance.
+
+## Quick reference paths
+
+| Task | Path |
+|---|---|
+| Today's live roster | Dashboard → **Online Attendance** or **Reports → System Reports → Online Attendance – All Sessions** |
+| One session roster | **Reports → System Reports → Online Attendance – By Session** → click session |
+| Historical summary | **Reports → System Reports → Attendance Reporting** |
+| Pickup list | **Reports → System Reports → Pickup Report** |
+| PDF for one day | **Reports → System Reports → Attendance Check in/out PDF** → click date |
+| Kiosk | **Reports → System Reports → Attendance Kiosk** |
+| Enable modules | **Admin → Site Settings → Modules** |
+| Session dates and attendance visibility | **Admin → Products** → edit session |
