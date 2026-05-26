@@ -357,6 +357,11 @@
                 "title": "Staff Scheduling",
                 "path": "scheduling",
                 "icon": "calendar"
+              },
+              {
+                "title": "Todo List",
+                "path": "todo-list",
+                "icon": "list-todo"
               }
             ],
             "public": true
