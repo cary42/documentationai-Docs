@@ -110,6 +110,10 @@
                   {
                     "title": "Attendance Reporting",
                     "path": "system-report-attendance-reporting"
+                  },
+                  {
+                    "title": "My Groups",
+                    "path": "my-groups"
                   }
                 ]
               },
