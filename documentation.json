@@ -382,6 +382,11 @@
                 "title": "Tiered pricing",
                 "path": "tiered-pricing",
                 "icon": "badge-dollar-sign"
+              },
+              {
+                "title": "Cancellation Fees",
+                "path": "cancellation-fees",
+                "icon": "ban"
               }
             ]
           },
