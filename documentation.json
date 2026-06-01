@@ -401,6 +401,11 @@
                 "title": "Memberships",
                 "path": "memberships",
                 "icon": "repeat"
+              },
+              {
+                "title": "Special Weeks",
+                "path": "special-weeks",
+                "icon": "calendar-days"
               }
             ]
           },

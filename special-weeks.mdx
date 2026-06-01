@@ -1,0 +1,318 @@
+---
+title: Special Weeks
+description: Set week dates for a season so attendance rosters match the weeks families selected on camper profiles.
+---
+
+## Special Weeks at a glance
+
+Special Weeks defines when each week option runs for a season, such as **Week 1 = June 9–13**. Families choose their weeks on the camper profile using the `weeks` field, and attendance rosters show campers only on the dates that match those selected weeks.
+
+You set up Special Weeks once per season on the Special Weeks page. Special Weeks helps attendance reflect partial-season choices, but it does **not** replace your regular session products.
+
+<Callout kind="info">
+
+Use Special Weeks only if your camp lets families attend selected weeks within a season. If your camp enrolls campers for the full season without week-by-week choices, you may not need this feature.
+
+</Callout>
+
+## What problem does this solve?
+
+Special Weeks helps camps that let families register for part of a season, such as **Week 3 and Week 5 only**. Without Special Weeks, attendance can treat a camper as present for the full season because the enrollment exists for the season, not for specific calendar weeks.
+
+Special Weeks connects two things:
+
+- what the family selected on the camper profile
+- when those week options actually run on the calendar
+
+That connection lets attendance decide whether a camper should appear on a roster for a given day. You define the start and end date for each week option, and you can also limit a week to specific days when needed.
+
+## What Special Weeks is and is not
+
+| Special Weeks **is** | Special Weeks **is not** |
+| --- | --- |
+| A season-level calendar for the `weeks` profile field options | A replacement for session products |
+| Used by attendance to decide whether a camper appears on a roster | Something families configure in staff admin |
+| Set separately for each season | The same thing as session start and end dates |
+| Optional for camps that use week-based enrollment | Required for every customer |
+
+## Who uses this
+
+| Role | How they use Special Weeks |
+| --- | --- |
+| Registration or office staff | Set week dates for each season and keep the calendar accurate |
+| Program or unit leaders | Understand why a camper may appear on some days and not others |
+| Check-in staff | Rely on rosters that match the camper's selected weeks |
+| Administrators | Enable the module and maintain the `weeks` profile field |
+| Families | Select week choices during registration or on the camper profile, not in Special Weeks |
+
+## Who this feature is for
+
+Special Weeks is for camps that meet all of these conditions:
+
+- Offer partial-week, selected-week, or multi-week attendance within a season
+- Use a profile field with the internal key `weeks`
+- Have the Special Weeks module enabled
+
+If your camp does not use week choices on camper profiles, Special Weeks will not affect attendance.
+
+## Before you start
+
+You need a few pieces in place before Special Weeks can work correctly.
+
+| Requirement | Where to check | Why it matters |
+| --- | --- | --- |
+| Special Weeks module is turned on | Admin → Site Settings → Modules | The page and attendance logic depend on the module being enabled |
+| A `weeks` profile field exists with week options | Admin → Site Settings → Profile Fields | Attendance reads the camper's selected week options from this field |
+| Week dates are configured for the season | Special Weeks page for that season | Attendance needs date ranges for each week option |
+| Campers have week choices saved | Registration form or camper profile | A camper needs at least one selected week to appear by Special Weeks rules |
+| Camper has active enrollment in the season | Enrollment records for the season | Attendance still requires a valid season enrollment |
+
+<Callout kind="info">
+
+If week dates are missing, campers may not appear on attendance rosters even when they are enrolled. Missing dates are one of the most common causes of roster gaps.
+
+</Callout>
+
+## Where to find Special Weeks
+
+You must be signed in to staff admin and working in a specific season. Special Weeks is set up per season, so make sure you open the correct season before making changes.
+
+<Steps>
+  <Step title="Open Special Weeks from the season sessions page" icon="calendar">
+
+  Go to the season you want to edit, then open the sessions page for that season. Look near **Add New Session** and select **Special Weeks**.
+
+  Use this option when you are already working inside the season setup area.
+
+  </Step>
+  <Step title="Open Special Weeks from the Seasons list" icon="folder">
+
+  Go to the Seasons list in staff admin. Find the correct season, open the row menu, and select **Special Weeks**.
+
+  Use this option when you want to jump directly to week-date setup without opening sessions first.
+
+  </Step>
+  <Step title="Use the direct admin path when needed" icon="external-link">
+
+  Open the Special Weeks page directly at ` /admin/season-week-calendar.php?pgcryid=season id `.
+
+  The `pgcryid` value must be the season ID for the season you want to edit.
+
+  </Step>
+</Steps>
+
+### If Special Weeks is not visible
+
+Check these items first:
+
+- You are signed into the staff admin, not the family portal
+- The Special Weeks module is enabled in **Site Settings → Modules**
+- You opened a specific season
+- Your site has a profile field with the internal key `weeks`
+
+If the module is enabled but the page still says a weeks field is required, verify that the profile field's internal key is exactly `weeks`.
+
+## How to set up week dates for a season
+
+Set up each week row so the calendar matches the options families select on the camper profile.
+
+<Steps>
+  <Step title="Open the Special Weeks page for the season" icon="calendar">
+
+  Start from the season you want to configure. Open **Special Weeks** from the season sessions page or the Seasons list row menu.
+
+  Confirm you are editing the correct season before you save changes.
+
+  </Step>
+  <Step title="Enter start and end dates for each week" icon="edit">
+
+  Find each week row, such as **Week 1**, **Week 2**, or other week labels from your `weeks` profile field. Enter the correct **Start** and **End** date for every week your camp uses in that season.
+
+  A complete row defines when that week option is active for attendance.
+
+  </Step>
+  <Step title="Optionally limit the week to specific days" icon="settings">
+
+  Use **Days** if a week should apply only on certain weekdays. This is helpful when a week option should count only for selected days rather than the full date range.
+
+  If you do not need this level of control, leave the week to follow the full start and end date range.
+
+  </Step>
+  <Step title="Save special weeks" icon="check-circle">
+
+  Select **Save special weeks** to store your changes. After saving, attendance can use those dates to decide whether enrolled campers appear on daily rosters.
+
+  If a row is still missing dates, that week may continue to cause roster gaps.
+
+  </Step>
+</Steps>
+
+### Copy dates from another season
+
+If your week structure is similar to another season, use **Copy from season** to save time. Copy the dates into the current season, then review every row before saving.
+
+This is especially useful when your camp repeats the same week pattern year to year. Always confirm the copied dates match the current season's calendar before you rely on attendance rosters.
+
+## How attendance uses Special Weeks
+
+Attendance shows a camper on the roster only when all required conditions are true.
+
+| Condition | What attendance checks |
+| --- | --- |
+| Active enrollment | The camper must be actively enrolled in the season |
+| Selected week | The camper must have at least one option selected in the `weeks` profile field |
+| Date match | The current day must fall inside the selected week's start and end dates |
+| Day match | If **Days** is set, the current day must also match the allowed weekday settings |
+
+If any of these pieces are missing, the camper may not appear on the roster for that day. Missing week dates are a common cause, especially when a camper has the correct week selected but the season's Special Weeks rows have not been filled in.
+
+<Callout kind="info">
+
+Special Weeks does not replace enrollment. A camper still needs active enrollment in the season, even if the camper has week selections on the profile.
+
+</Callout>
+
+## Understanding the Special Weeks screen
+
+| Screen area | What it does |
+| --- | --- |
+| Season dropdown | Shows which season you are editing |
+| Week, Start, End table | Lists each week option and the dates assigned to it |
+| Days (Advanced) | Limits a week option to specific weekdays when needed |
+| Copy from season | Pulls week setup from another season into the current one |
+| Save special weeks | Saves all changes for the current season |
+| Calendar preview | Shows the configured dates in calendar form |
+| Yellow rows | Indicate missing dates that still need to be filled in |
+
+Yellow rows usually mean the week option exists but does not yet have complete dates. Until you fill in those dates, attendance may not know when that week should count.
+
+## Rules and tips
+
+| Rule or tip | Details |
+| --- | --- |
+| One setup per season | Configure Special Weeks separately for each season |
+| Clear dates to remove a week schedule | Removing the dates stops that row from defining attendance dates |
+| Overlapping weeks are allowed | Use overlap when your camp's scheduling model requires it |
+| Week options come from Profile Fields | The rows are based on the `weeks` profile field options |
+| Module name | The feature depends on the **Special Weeks** module being enabled |
+
+## Common messages
+
+| Message or situation | Meaning |
+| --- | --- |
+| Special Weeks option is missing | The module may be turned off, or you may not be in the correct admin area or season |
+| Page says a weeks field is required | Your site does not have a profile field with the internal key `weeks`, or the key does not match exactly |
+| Camper is enrolled but not on today's roster | Check active enrollment, selected week options, week date ranges, and optional day settings |
+| Yellow row on the Special Weeks page | That week option is missing dates |
+| Changes do not affect another season | Special Weeks is saved separately for each season |
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="What is the difference between Special Weeks and session start and end dates?" default-open="false">
+
+  Session dates describe the session itself. Special Weeks defines when each selected week option from the `weeks` profile field should count for attendance inside the season.
+
+  Use session dates for the overall session structure. Use Special Weeks when families choose specific weeks within that season.
+
+  </Expandable>
+  <Expandable title="Do families set the dates?" default-open="false">
+
+  No. Families select week options such as **Week 1** or **Week 3** on the registration form or camper profile.
+
+  Staff set the actual calendar dates for those week options on the Special Weeks page.
+
+  </Expandable>
+  <Expandable title="The module is enabled, but the page says we need a weeks field. Why?" default-open="false">
+
+  The site must have a profile field with the internal key `weeks`. If the field exists under a different internal key, Special Weeks cannot use it.
+
+  Check **Site Settings → Profile Fields** and confirm the internal key is exactly `weeks`.
+
+  </Expandable>
+  <Expandable title="A camper is enrolled but not on the attendance list. What should we check?" default-open="false">
+
+  Check these items in order:
+
+  - The camper has active enrollment in the season
+  - The camper has at least one selected option in the `weeks` profile field
+  - The selected week's start and end dates include today
+  - The **Days** setting, if used, includes today
+
+  If any of these do not match, the camper may be left off the roster.
+
+  </Expandable>
+  <Expandable title="Can we use Special Weeks without the parent portal?" default-open="false">
+
+  Yes, as long as camper week choices are stored on the profile in the `weeks` field. Those choices can come from registration workflows or staff updates to the camper profile.
+
+  The key requirement is that the week selections exist on the camper profile.
+
+  </Expandable>
+  <Expandable title="Does every camper have to select weeks?" default-open="false">
+
+  No. Special Weeks is optional and is mainly for camps that use week-based enrollment choices.
+
+  If your attendance process depends on Special Weeks, a camper without selected weeks may not appear on rosters under Special Weeks rules.
+
+  </Expandable>
+  <Expandable title="Can we change dates mid-season?" default-open="false">
+
+  Yes. Staff can update Special Weeks for the season.
+
+  Review the impact carefully before saving because attendance rosters will use the updated dates going forward. If staff already relied on previous rosters, communicate the change to the affected teams.
+
+  </Expandable>
+  <Expandable title="Is there a report for Special Weeks?" default-open="false">
+
+  Special Weeks is primarily used to control attendance roster appearance. This article does not define a separate Special Weeks report.
+
+  If you need reporting, review attendance and season enrollment tools in your site.
+
+  </Expandable>
+  <Expandable title="Who can open Special Weeks?" default-open="false">
+
+  Staff with access to the admin side of the site and the relevant season setup area can open it. Families do not use the Special Weeks page.
+
+  If staff cannot find it, first confirm the module is enabled and the user is in staff admin.
+
+  </Expandable>
+  <Expandable title="What happens if the module is turned off?" default-open="false">
+
+  If the Special Weeks module is turned off, the feature is no longer available for use in the admin area. Attendance behavior tied to Special Weeks setup may no longer work as expected.
+
+  If your camp depends on week-based attendance filtering, leave the module enabled.
+
+  </Expandable>
+  <Expandable title="Can we rename Week 1?" default-open="false">
+
+  Yes, if you update the option labels in the `weeks` profile field. Special Weeks uses the week options from that field.
+
+  After renaming options, review the Special Weeks page to make sure the rows still match the intended schedule.
+
+  </Expandable>
+  <Expandable title="Does copy from season copy camper profiles?" default-open="false">
+
+  No. **Copy from season** copies Special Weeks date setup from another season.
+
+  It does not copy camper profile values, enrollments, or other season data.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Related topics
+
+<Columns cols={2}>
+  <Card title="Attendance" href="/attendance" icon="check-circle" cta="Open topic">
+    Daily rosters depend on enrollment, selected weeks, and matching Special Weeks dates.
+  </Card>
+  <Card title="Profile Fields" href="/profile-fields" icon="edit" cta="Open topic">
+    Manage the `weeks` field and the week options families can select.
+  </Card>
+  <Card title="Site Settings and Modules" href="/site-settings/modules" icon="settings" cta="Open topic">
+    Turn the Special Weeks module on before staff try to configure season week dates.
+  </Card>
+  <Card title="Seasons and sessions" href="/seasons-and-sessions" icon="calendar" cta="Open topic">
+    Work in the correct season before opening Special Weeks or reviewing attendance behavior.
+  </Card>
+</Columns>

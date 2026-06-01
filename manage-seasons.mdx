@@ -102,6 +102,81 @@ Use this workflow when a season has ended and you are ready to mark it inactive.
   </Step>
 </Steps>
 
+## Deactivate live forms when a season goes inactive
+
+When you change a season from **Active** to **Inactive**, you can also take that season's live registration forms offline in one step. Live forms are ones currently open on the parent portal — within their date range, visible, and active.
+
+### Where to find it
+
+Go to **Admin → Seasons → Edit Season** using the icon or status link on the season row.
+
+Set **Status** to **Inactive**. If the season was previously **Active**, extra options appear below the status field in the same area as **Take a snapshot of the profile data**.
+
+### The checkbox
+
+The option is labeled: **Take live forms in this season offline (sets them to Hidden).**
+
+| Behavior | Detail |
+| --- | --- |
+| Default | Checked when at least one live form exists for that season |
+| Optional | Uncheck to leave forms as-is |
+| Preview | Label shows count, such as **Take 3 live forms...**. Form names are listed below the checkbox |
+| No live forms | Checkbox is hidden — nothing to deactivate |
+
+### What happens on save
+
+If the checkbox is checked when you save an **Active** to **Inactive** status change:
+
+- Every live form tied to that season is updated
+- Visibility is set to **Hidden**
+- Live status is turned off
+
+This is the same outcome as opening each form individually and setting **Visibility** to **Hidden**. Families stop seeing those forms on the portal, and they no longer appear as live on the dashboard or forms list.
+
+<Callout kind="info">
+
+Forms in other seasons are untouched. Non-live forms in this season, including forms already hidden or outside their date window, are not changed.
+
+</Callout>
+
+### When to use it
+
+Use this at season close when registration should stop but forms are still live. Typical flow:
+
+<Steps>
+  <Step title="Confirm the season has ended" icon="check" title-type="p">
+
+  Verify the season has truly ended and registration should stop.
+
+  </Step>
+  <Step title="Set season to Inactive" icon="edit" title-type="p">
+
+  Change the season status from **Active** to **Inactive**.
+
+  </Step>
+  <Step title="Leave the live forms checkbox checked" icon="check-circle" title-type="p">
+
+  The **Take live forms offline** checkbox is checked by default. Leave it checked to deactivate all live forms in one step.
+
+  </Step>
+  <Step title="Optionally keep the snapshot checkbox checked" icon="settings" title-type="p">
+
+  Leave **Take a snapshot of the profile data** checked if you want to preserve profile data for reporting.
+
+  </Step>
+  <Step title="Save" icon="check-circle" title-type="p">
+
+  Save the season. All live forms are set to **Hidden** and families can no longer see them.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+Uncheck **Take live forms offline** only if you need a form to stay open after the season is marked **Inactive**. This is unusual and should be done intentionally.
+
+</Callout>
+
 ## Use profile-data snapshots for historical reporting
 
 The checkbox is labeled **Take a snapshot of the profile data. Runs in the background after you save.**
