@@ -387,6 +387,11 @@
                 "title": "Cancellation Fees",
                 "path": "cancellation-fees",
                 "icon": "ban"
+              },
+              {
+                "title": "Memberships",
+                "path": "memberships",
+                "icon": "repeat"
               }
             ]
           },

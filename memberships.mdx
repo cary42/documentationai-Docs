@@ -1,0 +1,208 @@
+---
+title: Memberships
+description: Learn how membership seasons enable recurring billing, ongoing dues, and membership-style checkout in Campium.
+---
+
+## Set up ongoing membership billing with membership seasons
+
+Membership seasons let you sell dues-based or ongoing programs that keep charging on a schedule after signup. They use the same season structure you already know, but with membership-specific billing and checkout behavior for products in that season.
+
+If you already use regular seasons for camps or fixed program windows, the main difference is what happens after enrollment. A regular season is built around one registration and its payment terms, while a membership season is built around one enrollment that keeps billing until canceled.
+
+<Callout kind="info">
+
+You create a membership season by marking a season as **Membership season = Yes** when you add or edit the season. The season still supports sessions, forms, pricing, reporting, and other standard season tools.
+
+</Callout>
+
+## Understand what changes in a membership season
+
+A membership season is still a season container. You can add sessions, forms, capacity, discounts where allowed, and season-level settings much like you would in a regular season.
+
+The important change is billing behavior. When a session in a membership season has recurring membership billing enabled, Campium switches from standard registration payment handling to membership-style checkout and scheduled recurring charges.
+
+### Regular seasons vs membership seasons
+
+| Capability | Regular season | Membership season |
+| --- | --- | --- |
+| Recurring billing on a session | No — billing is tied to cart total, deposits, and payment plans for that enrollment | Yes — each session can have recurring membership billing with an amount and schedule |
+| Billing cadence | Payment plans or charge dates for that sale only | Monthly or weekly recurring billing |
+| Checkout experience | Full amount, minimum deposit, pay later, or custom amount as allowed by your form | Membership checkout shows what is due today plus the ongoing recurring cost |
+| Charges after signup | Follows the payment setup for that registration | Charges run automatically on the saved card or bank account on the configured schedule |
+| Product list in admin | Sessions show start and end dates | Sessions can show a cadence column such as `$100 / Month on the 15th` when recurring is enabled |
+| Canceling enrollment | Standard removal or cancel behavior | Canceling an active recurring membership also stops scheduled membership charges and adds a cancellation note on the profile |
+
+### What stays the same
+
+Many season tools do not change when you use a membership season.
+
+- Season name, active or inactive status, and end date
+- Sessions, capacity, forms, and discounts where allowed
+- Invoices, reporting, and season-scoped data
+- Season deactivation and optional profile snapshot behavior
+
+<Callout kind="tip">
+
+If recurring billing is **not** enabled on a session inside a membership season, that session behaves much like a normal product at checkout. The membership-specific checkout and automatic ongoing charges only apply when recurring membership billing is turned on for that session.
+
+</Callout>
+
+## Know when to use a membership season
+
+Choose a membership season when you need billing to continue automatically after the initial signup. This is the right fit for dues, club enrollment, or year-round programs that do not have a single fixed registration payment lifecycle.
+
+Use a regular season when enrollment is tied to a defined camp or program window and payment ends once that registration is paid according to its plan.
+
+### Choose the right season type
+
+| Use this when... | Regular season | Membership season |
+| --- | --- | --- |
+| Enrollment is for a defined time period | Yes | No |
+| You rely on deposits or standard payment plans | Yes | No |
+| You need one-time or registration-based payment collection | Yes | No |
+| You need automatic repeating charges on a calendar | No | Yes |
+| You sell ongoing dues or club membership | No | Yes |
+| Families need to see today’s payment separately from ongoing cost | No | Yes |
+
+## Configure recurring membership billing end to end
+
+Once you decide to use a membership season, the setup flow is straightforward. You mark the season, configure recurring billing on the session, let families complete membership checkout, and then Campium handles scheduled recurring charges until the membership is canceled.
+
+<Steps>
+  <Step title="Mark the season as a membership season" icon="settings">
+
+  Create a new season or edit an existing one, then set **Membership season** to **Yes**. This tells Campium to apply membership billing behavior to eligible products in that season.
+
+  After you save the season, it remains a normal season container for catalog and operational setup. You can still add sessions, forms, pricing, and other season details as usual.
+
+  </Step>
+  <Step title="Configure recurring billing on the membership session" icon="edit">
+
+  Open the session in that season and turn on **Recurring membership billing**. Then set the recurring charge amount and the billing cadence for that specific membership product.
+
+  Configure these billing details for each recurring membership session:
+
+  - **Recurring amount** — the amount charged each billing cycle
+  - **Cadence** — monthly or weekly
+  - **Monthly cadence** — choose a day of the month from `1` to `31`
+  - **Weekly cadence** — choose a weekday or bill every `7` days from a selected start date
+
+  When recurring billing is enabled, families see the billing schedule in the portal instead of only a one-time session price.
+
+  </Step>
+  <Step title="Have the family complete membership checkout" icon="credit-card">
+
+  When the cart includes a membership session with recurring billing enabled, Campium uses membership checkout. The layout and wording differ from standard checkout so the family can clearly see what they owe now and what will keep charging later.
+
+  During checkout, families see:
+
+  - **Total paying today**
+  - **Ongoing cost**
+  - A note that the recurring amount will continue until the membership is canceled
+
+  Families complete checkout with a saved card or ACH payment method so future dues can run automatically. Standard options such as minimum-only or pay-later are not offered the same way as they are in a regular season checkout.
+
+  </Step>
+  <Step title="Let Campium run ongoing scheduled charges" icon="refresh-cw">
+
+  After checkout, Campium processes active memberships on each due date using the saved payment method tied to that membership sale or account. Each successful charge is recorded automatically.
+
+  Campium also avoids charging the same membership twice on the same day. In the admin product list, recurring memberships can show their cadence instead of only date-based session timing.
+
+  </Step>
+  <Step title="Cancel the membership when enrollment ends" icon="x-circle">
+
+  When you cancel a recurring membership enrollment through the same removal or cancel flows supported by your setup, Campium stops the recurring billing schedule for that membership.
+
+  Canceling an active recurring membership does three things:
+
+  - Marks the enrollment as canceled
+  - Removes pending recurring membership charges
+  - Adds a profile note that records the membership cancellation with the product and season name
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+Membership checkout requires a saved payment method for future automatic charges. If the family does not complete checkout with a card or ACH on file, recurring dues cannot run on schedule.
+
+</Callout>
+
+## Review the recurring billing options
+
+Recurring membership billing is configured at the session level inside a membership season. That lets you run one membership season with different products and billing schedules when needed.
+
+### Session billing fields
+
+<ParamField body="Recurring membership billing" param-type="boolean" required="true" show-location="false">
+Turn this on for a session to enable membership-style recurring charges. If this setting is off, the session behaves much like a standard product even inside a membership season.
+</ParamField>
+
+<ParamField body="Recurring amount" param-type="currency" required="true" show-location="false">
+The amount Campium charges each cycle after signup.
+</ParamField>
+
+<ParamField body="Cadence" param-type="string" required="true" show-location="false" enum="monthly,weekly">
+Defines how often Campium charges the membership.
+</ParamField>
+
+<ParamField body="Day of month" param-type="integer" required="false" show-location="false">
+Used for monthly billing. Set a value from `1` to `31` to choose the charge day each month.
+</ParamField>
+
+<ParamField body="Weekly schedule" param-type="string" required="false" show-location="false">
+Used for weekly billing. Charge on a fixed weekday or every `7` days from a chosen start date.
+</ParamField>
+
+## Understand how checkout changes for families
+
+Membership checkout is designed to make recurring cost explicit before the family pays. Instead of presenting only a registration balance, Campium separates what is due now from what will continue charging over time.
+
+That change matters operationally as well as financially. Families save a payment method during signup, and Campium uses that stored payment method for future scheduled charges.
+
+<Callout kind="info">
+
+For some payment processors, Campium may route the family through a dedicated membership checkout path. The goal is the same: collect the current payment and store a payment method for future dues.
+
+</Callout>
+
+## Visibility and access notes for staff
+
+Membership seasons and recurring membership setup are not always visible to every admin user in the same way. This helps teams limit advanced recurring billing changes to users with broader access.
+
+Keep these visibility rules in mind:
+
+- You can set **Membership season** when creating or editing a season
+- Recurring billing fields on a session are part of advanced membership setup
+- Recurring session billing fields are currently restricted to super-user access in the admin product editor
+- Membership seasons may be hidden from season dropdowns for users who are not super users
+
+<Callout kind="info">
+
+In many organizations, regular staff continue working in standard seasons while super users configure and test membership seasons before broader use.
+
+</Callout>
+
+## Plan your rollout
+
+If you are moving from fixed registration billing to recurring dues, start with one membership season and one test session. That gives you a controlled way to verify checkout wording, billing cadence, saved payment behavior, and cancellation handling before you expand the setup.
+
+A successful test usually looks like this:
+
+- The season is marked as a membership season
+- The session shows recurring billing details
+- Checkout shows both today’s payment and ongoing cost
+- The family saves a card or ACH payment method
+- The membership can be canceled cleanly and stops future charges
+
+## Next steps
+
+<Columns cols={2}>
+  <Card title="Set up seasons" href="/seasons" icon="calendar" cta="Review season setup">
+    Confirm your base season structure before you add membership billing.
+  </Card>
+  <Card title="Manage sessions" href="/sessions" icon="settings" cta="Configure session details">
+    Add products, pricing, and recurring membership settings to the season.
+  </Card>
+</Columns>
