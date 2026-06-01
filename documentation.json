@@ -175,6 +175,10 @@
                   {
                     "title": "Waitlist",
                     "path": "waitlist"
+                  },
+                  {
+                    "title": "Combined Season Invoices",
+                    "path": "combined-season-invoices"
                   }
                 ]
               },

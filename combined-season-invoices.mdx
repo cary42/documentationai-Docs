@@ -1,0 +1,193 @@
+---
+title: Combined Season Invoices
+description: Generate one PDF that combines season invoices for multiple families, then receive a 24-hour download link by email.
+---
+
+## Overview
+
+Use Combined Season Invoices to build one PDF file that includes season invoices for many families at once. This report is useful when staff need a single document for internal review, reconciliation, or follow-up across a season.
+
+The report uses the same invoice layout as the standard family season invoice. Each selected family is included in the combined PDF on its own page or pages.
+
+<Callout kind="info">
+
+Combined Season Invoices creates a PDF for staff use. It does not email invoices to families.
+
+</Callout>
+
+## Who can use it
+
+Use Combined Season Invoices only if your account has the right permissions and your organization has the required features enabled.
+
+- You need **Reports** access.
+- You need **Financial** access.
+- Your site must have the **financial module** enabled.
+- Combined Season Invoices is **not available on the free plan**.
+
+## Where to find it
+
+<Steps>
+  <Step title="Sign in to the admin portal" icon="users" title-type="p">
+
+    Sign in to CampiumDB with an admin or staff account that has reports and financial access.
+
+  </Step>
+  <Step title="Open System Reports" icon="folder" title-type="p">
+
+    Go to **Reports** and open the **System Reports** area.
+
+  </Step>
+  <Step title="Choose Combined Season Invoices from the Money group" icon="file-text" title-type="p">
+
+    In the **Money** group, select **Combined Season Invoices**.
+
+  </Step>
+</Steps>
+
+## Choose a season
+
+Choose a season from the dropdown at the top of the page before anything else. The family list loads only after you select a season.
+
+Once the season is selected, CampiumDB shows the families that qualify for that season. If the page looks empty at first, confirm that you have picked the correct season.
+
+## Which families appear
+
+The report shows families that have at least one qualifying financial or registration record in the selected season.
+
+A family appears in the list if they have either of these:
+
+- At least one **active session** in the selected season
+- At least one **successful payment** in the selected season
+
+All families in the list are checked by default. The **Generate One Invoice** button shows a badge with the number of currently selected families.
+
+## Understanding the table
+
+Review the family list before you generate the PDF so you include only the families you need.
+
+| Column | Description |
+| --- | --- |
+| Checkbox | Selects or clears the family from the combined PDF. All families are selected by default. |
+| Primary Contact | Shows the family primary contact. If an account number is on file, clicking the name opens that contact's profile. |
+| Email | Shows the primary contact email address for quick reference. |
+| Sessions | Shows the family's session activity for the selected season. |
+| Payments | Shows successful payments tied to the selected season. |
+| Balance | Shows the current balance for that family's season invoice. |
+
+## Generate the combined PDF
+
+<Steps>
+  <Step title="Select the season" icon="settings" title-type="p">
+
+    Choose the season you want to work with from the dropdown at the top of the report.
+
+    Wait for the list to load. When the list appears, you are ready to review the included families.
+
+  </Step>
+  <Step title="Review the selected families" icon="check-circle" title-type="p">
+
+    Check the family table and clear any families you do not want to include.
+
+    All families are selected by default, so the button count should match the number of checked rows.
+
+  </Step>
+  <Step title="Click Generate One Invoice" icon="play-circle" title-type="p">
+
+    Select **Generate One Invoice** when your list is ready.
+
+    The button badge shows how many families will be included in the PDF.
+
+  </Step>
+  <Step title="Enter your email address" icon="mail" title-type="p">
+
+    Enter the email address that should receive the download link. CampiumDB fills this field with your login email by default.
+
+  </Step>
+  <Step title="Confirm and let processing run in the background" icon="clock" title-type="p">
+
+    Confirm the request to start generation.
+
+    CampiumDB processes the PDF in the background, so you do not need to stay on the page while it runs.
+
+  </Step>
+</Steps>
+
+## When the PDF is ready
+
+CampiumDB sends an email with a download link when the file is ready. The download link stays active for **24 hours**.
+
+If generation fails, CampiumDB sends a failure email instead. When the PDF succeeds, each selected family appears with its own invoice page or pages inside the combined file.
+
+## Tips
+
+- **Batch large lists** if you are working with many families and want smaller PDFs that are easier to review or share internally.
+- **Confirm the season first** before you review balances or invoice lines.
+- **Check your email regularly** after starting generation, especially if you are preparing documents on a deadline.
+- **Uncheck unneeded families** before generating so the final PDF includes only the records you need.
+
+## Troubleshooting
+
+### I do not see Combined Season Invoices
+
+Combined Season Invoices appears only if your site has the financial module enabled and your account has both **Reports** and **Financial** access. The report is also not available on the free plan.
+
+If your access looks correct and the report is still missing, ask a CampiumDB administrator to review your permissions and subscription level.
+
+### The list is empty after I pick a season
+
+The report only shows families with at least one active session or one successful payment in the selected season. If no families meet that requirement, the table stays empty.
+
+Check that you selected the correct season. If you expected a family to appear, confirm that the family has qualifying session or payment activity in that season.
+
+### Generate One Invoice does not appear
+
+The button count depends on selected families. If the list did not load, or if no qualifying families appear for the selected season, you may not have anything available to generate.
+
+Start by confirming the season and checking that the family list contains rows. If families appear, make sure at least one family remains checked.
+
+### I never got the email
+
+Generation runs in the background, so delivery may take some time depending on the size of the request. Start by checking the inbox for the email address you entered, then check spam or junk folders.
+
+The email field defaults to your login email, but you can change it before confirming. If the message still does not arrive, run the report again and confirm the email address carefully.
+
+### The email says some families were skipped
+
+A skipped family usually means the record could not be included during generation. Review the families you selected and compare them with the final PDF to see which ones are missing.
+
+If you need to isolate the problem, try generating a smaller batch. That makes it easier to identify the affected family or families.
+
+### The PDF balance or lines look wrong for one family
+
+The combined PDF uses the same layout and invoice data as the standard family season invoice. If one family's balance or line items do not look right, open that family's regular season invoice and compare it with the combined output.
+
+If the primary contact name is clickable, open the contact profile and review the family's season activity, payments, and account details. In most cases, the invoice content reflects the underlying family record rather than a separate report-only calculation.
+
+## Frequently asked questions
+
+<ExpandableGroup>
+  <Expandable title="Can I print all invoices at once?">
+    Yes. Use Combined Season Invoices to generate one PDF containing every family's invoice for a season, then print the entire file at once.
+  </Expandable>
+  <Expandable title="How can I print lots of invoices?">
+    Select the families you need (or leave all checked), generate the combined PDF, download it from the email link, and send the file to your printer. Each family gets its own page.
+  </Expandable>
+  <Expandable title="Is there a bulk invoice download?">
+    Yes. Combined Season Invoices produces a single downloadable PDF with all selected family invoices. You receive the download link by email within minutes.
+  </Expandable>
+  <Expandable title="Can I export invoices to PDF?">
+    Yes. This report exports a combined PDF file with one invoice per family for the chosen season. The link is emailed to you and stays active for 24 hours.
+  </Expandable>
+  <Expandable title="How do I get invoices for all families in a season?">
+    Open System Reports → Money → Combined Season Invoices, pick the season, confirm the family list, and click Generate One Invoice. You will receive an email with the PDF.
+  </Expandable>
+  <Expandable title="Can I batch print family invoices?">
+    Yes. You can select all families or a subset, generate the PDF, and print them in one batch. For very large lists, consider generating in smaller groups.
+  </Expandable>
+  <Expandable title="How do I download multiple invoices at once?">
+    Use this report to combine them into one PDF. After generation completes, click the download link in your email to save the file.
+  </Expandable>
+  <Expandable title="Does this email invoices to parents?">
+    No. Combined Season Invoices creates a PDF for staff use only. It does not send anything to families.
+  </Expandable>
+</ExpandableGroup>
