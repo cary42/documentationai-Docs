@@ -371,7 +371,8 @@
             "pages": [
               {
                 "title": "Manage Seasons",
-                "path": "manage-seasons"
+                "path": "manage-seasons",
+                "icon": "lucide-settings2"
               },
               {
                 "title": "Subproducts",

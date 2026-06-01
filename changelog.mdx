@@ -12,6 +12,278 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-01" description="Canteen cash withdrawals, My Groups for staff, DKIM email authentication, attendance improvements, and critical bug fixes" tags={["feature","improvement","security","bugfix"]}>
+  ## New
+
+  - Added canteen cash withdrawal so administrators can pay out remaining balances directly from a camper's canteen account, with real-time balance preview and automatic product provisioning.
+
+  - Introduced "My Groups" for group-leader staff — staff members with only group assignments (no admin role) can now log in and access their rosters directly, with attendance and assigned roster mode toggle.
+
+  - Added staff season management to user profiles, allowing admins to manually associate staff members with specific seasons from their profile page.
+
+  - Added season dropdown in the roster navigation header for faster switching between seasons without navigating away.
+
+  ## Improvements
+
+  - Overhauled the Business Info & Logo page with a responsive grid layout, grouped address fields, and HTTPS input formatting for a cleaner editing experience.
+
+  - Improved attendance reporting with reusable helper functions for more accurate and consistent check-in/check-out statistics across dashboard and reports.
+
+  - Enhanced SMS editing with better title logic, improved page layout, and a clear indicator that SMS messages are one-way.
+
+  - Added email deduplication logic to prevent the same system template email from being sent to a user within a configurable time window.
+
+  - Improved email log viewer with enhanced search and pagination.
+
+  - Staff profile sidebar now truncates long season lists with a "+N more" indicator for cleaner display.
+
+  - Added export buttons (Copy, Excel, CSV, PDF, Print) to canteen account balances.
+
+  ## Security
+
+  - Added DKIM email authentication setup with DNS record guidance, copy-to-clipboard instructions, and verification status indicators — helps prevent emails from landing in spam.
+
+  - Introduced void windows for canteen payments — credit card payments can be voided until end of day (Eastern), ACH until 6:00 PM Eastern same day, and settled payments can no longer be voided.
+
+  ## Bug Fixes
+
+  - Fixed todo list permission check so the Todo menu only appears when both the todo module is enabled and the user has the correct permission.
+
+  - Fixed a critical bug where paying an account balance could incorrectly auto-approve unrelated pending form summaries.
+
+  - Corrected timezone handling in form payment handlers that caused a +2 hour datetime skew on historical records.
+
+  - Added server-side validation preventing SMS messages from being scheduled for past dates.
+</Update>
+
+<Update label="2026-05-28" description="Canteen categories, bunk filters, admin redesign, future payment reliability, and cron fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added canteen product categories so admins can organize products and families can filter by category at the point of sale.
+
+  - Added bunk visibility filters with multi-select controls and saved user preferences.
+
+  - Redesigned the admin page header with a stacked layout, toolbar filters, and inline report descriptions.
+
+  - Added a spotlight catalog for favorite custom reports, saved filters, and beta search.
+
+  ## Improvements
+
+  - Added a revenue column to user group exports and on-screen group displays for better financial tracking.
+
+  - Enhanced future payment processing with a daily cap per sale and season to reduce duplicate charges and show alerts when limits are reached.
+
+  - Improved parent portal content sanitization for rich text and news content.
+
+  - Updated imported users to default to Inactive status so admins can review access before activation.
+
+  - Improved attendance report date resolution with more consistent cross-timezone handling.
+
+  ## Bug Fixes
+
+  - Fixed UTF-8 text normalization across comments and custom answers to prevent garbled characters.
+
+  - Fixed future payments that could be over-scheduled after partial portal account payments.
+
+  - Fixed future payment recalculation when removing sessions from manual schedules.
+
+  - Payments now clean up automatically when a season balance reaches zero after a charge.
+
+  - Fixed the Constant Contact email sync cron to exit after one pass instead of looping indefinitely.
+
+  - Fixed the form notification cron that was locking all rows but only sending one email per run.
+</Update>
+
+<Update label="2026-05-17" description="Rich text tickets, ACH void warnings, calendar improvements, volunteer type, payment nicknames, QuickBooks refunds, and encrypted portal tokens" tags={["feature","security","improvement","bugfix"]}>
+  ## New
+
+  - Added a rich-text editor to support ticket replies.
+
+  - Added ACH void warning modals for USIO and Finix payments, including risk levels and type-to-confirm for high-risk voids.
+
+  - Added the Volunteer user type to the dashboard and new-person form.
+
+  - Added payment method nicknames so users can identify saved payment methods more easily.
+
+  - Added QuickBooks refund receipt creation that distinguishes voids from refunds during sync.
+
+  - Added todo assignment email notifications for staff.
+
+  - Added canteen payment void actions for unsettled transactions directly in the UI.
+
+  ## Improvements
+
+  - Parent calendar now always shows weekends with a responsive full-width layout, and all-day events no longer display midnight times.
+
+  - Simplified password requirements by removing the special character mandate and adding password visibility toggles on registration and admin login.
+
+  - Improved form logic so hidden conditional questions are removed from required validation and stale answers are excluded from submissions.
+
+  - Added camper support to tipping so staff can associate tips with campers and report on camper-linked tips.
+
+  - Improved payment issue digest subscriptions with immediate UI feedback and better payment ID handling for canteen transactions.
+
+  - Renamed the Meds profile tab to Health and added the latest medical notes to health report PDFs.
+
+  ## Security
+
+  - Replaced insecure parent portal serialized URL tokens with encrypted JSON tokens while preserving support for legacy links.
+
+  - Centralized portal hash verification with a dedicated verification function for more consistent link validation.
+
+  ## Bug Fixes
+
+  - Fixed duplicate USIO checkout charges after server crashes by adding idempotency guards, cache locks, and shutdown handlers.
+
+  - Fixed the dashboard staff count to use the correct data source.
+
+  - Fixed parent portal USIO checkout failures on iOS Safari with script load polling and fallback messaging.
+
+  - Fixed form response bulk actions that could show Invalid security key errors.
+
+  - Fixed parent profile photo delete and crop flows, including a fallback when Imagick is unavailable.
+
+  - Fixed guardian field auto-mapping in user import that could create duplicate prefixes.
+</Update>
+
+<Update label="2026-05-09" description="Finix merchant onboarding, canteen enhancements, role preview, bunk reports, email templates, season end dates, read-access audit, and family registration report" tags={["feature","security","improvement","bugfix"]}>
+  ## New
+
+  - Added Finix merchant self-service onboarding with dashboard status banners that track progress through approval.
+
+  - Added role preview so admins can view the app as another role without logging out.
+
+  - Added the Family Registration report with one row per family, including parent contacts, camper count, earliest registration, and revenue totals.
+
+  - Added season end dates with daily reminders when a season is missing one.
+
+  - Added email template categories, template visibility controls, and system email template management with active status and recipient logs.
+
+  - Added admin CSV exports for purchased sessions by season and payment transactions under Import & Export.
+
+  - Added canteen cost basis, fulfillment tracking, and profit reporting across configurable date ranges.
+
+  - Added a read-access audit log for staff views of camper profiles, custom tabs, and health PDF exports.
+
+  ## Improvements
+
+  - Improved QuickBooks invoice line descriptions so synced records reflect the latest camper names and earliest purchase dates.
+
+  - Improved parent checkout recovery by auto-reloading on rare session or authentication mismatches.
+
+  - Updated profile tabs to show clearer empty states with action buttons when no files, forms, or meds exist.
+
+  - Added bunk report roster mode toggles and customizable bunk label profile fields for more flexible reporting.
+
+  - Improved reminder dashboards and form reminder warnings with cached recipient counts, refresh actions, and better volume alerts.
+
+  - Updated canteen settings to support Accept Cash and Track Inventory toggles.
+
+  - Improved invoice reconciliation with clearer user feedback and more reliable QuickBooks line updates.
+
+  ## Security
+
+  - Added security headers to parent and production directories.
+
+  - Redirected users who attempt to log in through the wrong camp portal.
+
+  - Enforced family matching in the parent portal so URLs, cart actions, and form submissions validate against the logged-in family.
+
+  - Hardened parent portal uploads by rejecting crafted filenames, validating uploads, and using random temporary paths.
+
+  ## Bug Fixes
+
+  - Fixed the VOIDED badge showing on transactions that were not voided.
+
+  - Fixed checkout loading overlays that could remain stuck after payment-plan validation errors.
+</Update>
+
+<Update label="2026-04-27" description="AI Chatbot, Terms of Service, IP blocking, email subscriptions, payment digests, QuickBooks sync, legal documents, and faster search" tags={["feature","security","improvement"]}>
+  ## New
+
+  - Added an AI Chatbot to the parent portal footer, with interaction logging and portal-level controls.
+
+  - Added acknowledgment requirements for Terms of Service and EULA during registration, login, and password reset.
+
+  - Added a legal document editor for superusers to manage Terms of Service, EULA, and BAA documents.
+
+  - Added email subscription management so users can manage mass and transactional email preferences with unsubscribe links.
+
+  - Added ACH returns tools, including a Payment Since column, archive actions, and weekly digest emails for staff.
+
+  - Added scheduled payment issue digests that notify subscribed admins before upcoming charges when families have unresolved payment issues.
+
+  - Added coupon codes that waive deposit requirements at checkout.
+
+  ## Improvements
+
+  - Improved QuickBooks sync with duplicate invoice handling, customer name deduplication, rate-limit retries, and historical bulk sync.
+
+  - Improved master search speed with prefetched templates, debounce tuning, and faster first-keystroke results.
+
+  - Improved Google Places address autocomplete across billing and checkout with better hidden field syncing.
+
+  - Synchronized guardian statuses automatically when a camper's status changes.
+
+  - Defaulted custom reports to the active season selected in the header.
+
+  ## Security
+
+  - Added global IP blocking across parent portals with hit logging and an admin management interface.
+
+  - Logged all discount create, update, and delete operations for audit visibility.
+</Update>
+
+<Update label="2026-04-01" description="AI Reports, Finix payment processor, Pay In Full discounts, HIPAA encryption, S3 encryption, contract management, season comparison, and parent portal calendar" tags={["feature","security","improvement","bugfix"]}>
+  ## New
+
+  - Added AI Reports so admins can generate SQL reports from natural language prompts.
+
+  - Added dashboard season comparison with pace tracking based on earliest registration dates and customizable start dates.
+
+  - Added the Campium Updates feed with infinite scroll, unread badges, and mark-as-read support.
+
+  - Added contract management updates including signature parsing, signed PDF downloads, unsigned contract deletion, and season selection during generation.
+
+  - Added Pay In Full discounts so families can skip deposits when paying the full balance at checkout.
+
+  - Added payment coming-due notification previews and send controls for staff.
+
+  - Added parent portal table and calendar views for available sessions.
+
+  - Added SEO-friendly URLs for seasons and products.
+
+  ## Improvements
+
+  - Redesigned the admin header with a responsive layout, hamburger navigation, collapsible sidebar, and camp selector support.
+
+  - Improved staff hub workflows with application status tracking, custom fields, staff-name filtering, and inline updates.
+
+  - Added profile photo toggles to attendance reports.
+
+  - Displayed last four digits of saved payment methods on user profiles for quicker reference.
+
+  - Improved medication dispensing by showing medication names and notes in the dispensing modal.
+
+  - Sent ACH return notifications to the configured camp contact email.
+
+  - Added agency merge fields for contracts and emails, along with configurable required-field indicators in forms.
+
+  - Allowed staff to use a custom email address when testing mass emails.
+
+  ## Security
+
+  - Encrypted medication names, dosages, and notes at rest for HIPAA-sensitive records.
+
+  - Encrypted all file uploads on S3 with AES-256 server-side encryption.
+
+  - Added CSRF token validation to profile welcome sequence actions.
+
+  ## Bug Fixes
+
+  - Fixed discount calculations so apply-after discounts use the already-discounted price instead of the original price.
+</Update>
+
 <Update label="2026-03-30" description="Encrypted URLs and CRM follow-ups" tags={["security"]}>
   ## Security
 

@@ -22,6 +22,8 @@ tags:
     description: Authentication (ported from api1 validate / token model)
   - name: AppShell
     description: Mobile app shell (menu, flags)
+  - name: Forms
+    description: Form submission status syncing (FormSummary records)
   - name: News
     description: In-app news (basic.Announcement, type SI for parent feed; staff CRUD)
 paths:
@@ -63,6 +65,79 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiSuccessMenu'
+        '401':
+          description: Missing or invalid API key / token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+  /form/list:
+    get:
+      tags:
+        - Forms
+      summary: List form submission updates
+      description: |
+        Returns form summary submission records updated on or after a given datetime.
+        Only returns rows in **Approved** or **Pending** workflow states. Used for syncing
+        form submission status changes with external systems.
+
+        Requires `X-API-KEY` (organization key) header. A user `Token` is optional — when
+        provided, the organization is derived from the signed-in user; otherwise the org
+        key alone is sufficient.
+      operationId: listFormUpdates
+      parameters:
+        - $ref: '#/components/parameters/XRequestId'
+        - name: since
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >
+            Inclusive floor on each form submission's server `updated_datetime`
+            (e.g. `2026-04-30 15:30:00`). One of `since` or `updated_since` is required.
+          example: '2026-04-30 15:30:00'
+        - name: updated_since
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >
+            Alias for `since` — same behavior. One of `since` or `updated_since` is required.
+      responses:
+        '200':
+          description: Form summary results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiSuccessFormList'
+              examples:
+                withRecords:
+                  summary: Matching records found
+                  value:
+                    data:
+                      success: true
+                      records:
+                        - account_number: 10001
+                          form_id: 42
+                          form_status: Approved
+                        - account_number: 20002
+                          form_id: 99
+                          form_status: Pending
+                noRecords:
+                  summary: No matching records
+                  value:
+                    data:
+                      success: false
+        '400':
+          description: Missing `since` / `updated_since` parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorBody'
+              example:
+                error:
+                  code: validation_error
+                  message: since or updated_since is required
         '401':
           description: Missing or invalid API key / token
           content:
@@ -455,6 +530,43 @@ components:
             description: Staff rows match NewsItemStaff; non-staff rows match NewsItemParent.
             type: object
             additionalProperties: true
+    FormListRecord:
+      type: object
+      properties:
+        account_number:
+          type: integer
+          description: The camper/guardian account number
+          example: 10001
+        form_id:
+          type: integer
+          description: The form identifier
+          example: 42
+        form_status:
+          type: string
+          enum:
+            - Approved
+            - Pending
+          description: Always "Approved" or "Pending" — other states are never returned.
+    FormListPayload:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+          description: true if there are qualifying records, false if none matched.
+        records:
+          type: array
+          description: Present only when success is true.
+          items:
+            $ref: '#/components/schemas/FormListRecord'
+    ApiSuccessFormList:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          $ref: '#/components/schemas/FormListPayload'
     ApiSuccessNewsList:
       type: object
       required:
