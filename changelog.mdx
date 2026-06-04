@@ -12,6 +12,32 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-04" description="Portal registration settings, payment capture, uploads, discounts, food ordering, and status fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added [Portal Settings](/settings) controls for choosing which parent portal registration user types families can create.
+
+  - Added card authorization with delayed capture for registrations, including an Auth badge on the Sales tab and a Capture action for approved payments. See [Processing Refunds and Voids](/processing-refunds-and-voids) for related payment actions.
+
+  - Added time-of-day support to [Canteen](/canteen) food service ordering cutoffs so ordering windows can close at a specific time.
+
+  - Added TIFF upload support on parent [Forms](/forms).
+
+  ## Updates
+
+  - Compressed PNG and rich-text images during upload to reduce file size and improve page load performance.
+
+  - Clarified tipping copy so families better understand optional tip amounts during checkout.
+
+  ## Bug Fixes
+
+  - Fixed [Discounts](/discounts) without date ranges so they appear correctly for staff.
+
+  - Corrected the Pending badge color in search results.
+
+  - Fixed food service week save and remove actions so [Canteen](/canteen) ordering weeks update reliably.
+</Update>
+
 <Update label="2026-06-01" description="Canteen cash withdrawals, My Groups for staff, DKIM email authentication, attendance improvements, and critical bug fixes" tags={["feature","improvement","security","bugfix"]}>
   ## New
 
@@ -479,4 +505,3 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
     ```
   </Tab>
 </Tabs>
-
