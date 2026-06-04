@@ -12,6 +12,102 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-04" description="Portal registration settings, site text live previews, discount visibility fix, and Pending badge color correction" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added [Portal Settings](/settings) controls for choosing which parent portal registration user types families can create, including custom labels and ordering. The registration dropdown now reads "I am" instead of "Register As."
+
+  - Added live inline previews on the Site Text admin page — as you type, a small mock of where the text appears on the portal updates in real time.
+
+  ## Updates
+
+  - TIFF image uploads on parent [Forms](/forms) are now accepted and auto-converted to JPEG (common for scanned insurance cards).
+
+  - Simplified Finix onboarding by removing MCC selection and fixing the daily capture window to 7–8 PM Eastern for all merchants.
+
+  ## Bug Fixes
+
+  - Fixed [Discounts](/discounts) with no date range so they appear correctly in the Live dropdown for staff.
+
+  - Corrected the Pending badge color in search results to use the consistent purple styling.
+</Update>
+
+<Update label="2026-06-03" description="Card authorization with delayed capture, food ordering per-week controls, image compression, file upload progress, and attendance check-out toggle" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added **card authorization with delayed capture** — credit card payments are now authorized at checkout and captured automatically before settlement each evening. Staff see an Auth badge on the Sales tab and can manually trigger capture. See [Processing Refunds and Voids](/processing-refunds-and-voids).
+
+  - Added **per-week day-of-week selection** and **per-week ordering windows** for [Canteen](/canteen) food service — each week can specify which days it runs and when ordering opens/closes, with time-of-day support.
+
+  - Added a **fulfillment report "Break down by" dropdown** to group food service results by any camper profile field (e.g., grade).
+
+  - Added **quantity and day breakdown on invoices and the Sales tab** for food orders (e.g., "Week 1 - $3.00 each - Mon Jun 22 (2), Tue Jun 23 (1)").
+
+  - Added a **file upload progress bar** on parent [Forms](/forms) with persistence across page reload.
+
+  - Added a **non-drag reordering option** for the sessions layout — search filter plus per-row "Move" dropdown for large session lists where drag-and-drop is impractical.
+
+  ## Updates
+
+  - Added **PNG → WebP compression** and rich-text editor image compression — all image uploads (JPEG, PNG) are now compressed client-side before upload, reducing file sizes and improving page load.
+
+  - Clarified tipping copy so the tip name field now reads "Who do you want to tip?"
+
+  - Added a **Paysafe ACH pre-void settlement warning** so staff see a caution before voiding an ACH payment that may have already settled.
+
+  - Compact "Manage Weeks" editor with inline day checkboxes for [Canteen](/canteen).
+
+  - [Attendance](/attendance) check-out now works **without a prior check-in** and supports toggle-undo behavior on mobile.
+
+  ## Bug Fixes
+
+  - Fixed food service week save and remove actions so [Canteen](/canteen) ordering weeks update reliably.
+
+  - Fixed cart totals calculating food products incorrectly at checkout.
+
+  - Fixed canteen date-range navigation and collapsed categories card by default.
+
+  - Fixed image compression encoder error handling so retries work after a failure.
+
+  - Fixed upload recovery to prevent duplicate file uploads when the server response fails but the file was saved.
+</Update>
+
+<Update label="2026-06-02" description="Finix default processor, user merging, canteen cash withdrawals fix, ACH void messaging, attendance reports, and upload size increase" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - New client accounts now default to the **Finix payment processor** with onboarding enabled automatically at signup.
+
+  - Added a **canteen balance breakdown modal** showing all deposits and purchases behind a balance, plus "Cash Withdrawal" as a filterable payment type.
+
+  - Added a **"Merge into another user"** option in the Delete User modal, routing directly to the merge tool with the user pre-selected.
+
+  ## Updates
+
+  - Enhanced [user merging](/profiles) with independent A/B selection, account number display, deep-linking support, and coverage of additional data (contracts, form sends, bus assignments, seasons).
+
+  - Refund modal now shows a **live surcharge breakdown** (amount + surcharge + total) that updates in real time.
+
+  - [Attendance](/attendance) check-in/out report PDF now includes agency name, season name, timezone-aware footer, and a "No campers scheduled" message.
+
+  - Attendance report now honors the **selected season** from the header dropdown.
+
+  - Improved the switch-product form layout with clearer price-difference display.
+
+  - Increased form notification **attachment size limit** from 8 MB to 18 MB.
+
+  - Staff can no longer delete [SMS](/sms) messages that have already been sent (with a clear warning).
+
+  ## Bug Fixes
+
+  - Fixed ACH void errors so staff see a clear message that the payment must be **refunded** instead of voided when it has already been submitted to the bank.
+
+  - Fixed parent portal form file uploads that silently failed (file saved but the UI showed an error).
+
+  - Fixed waitlist activation showing incorrect before/after pricing.
+
+  - Fixed canteen cash withdrawal race condition that could overdraw balances on simultaneous requests.
+</Update>
+
 <Update label="2026-06-01" description="Canteen cash withdrawals, My Groups for staff, DKIM email authentication, attendance improvements, and critical bug fixes" tags={["feature","improvement","security","bugfix"]}>
   ## New
 
@@ -479,4 +575,3 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
     ```
   </Tab>
 </Tabs>
-
