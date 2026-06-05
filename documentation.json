@@ -491,7 +491,12 @@
           },
           {
             "group": "Portal",
-            "pages": []
+            "pages": [
+              {
+                "title": "Where can I find a link for the Portal / parent site?",
+                "path": "where-can-i-find-a-link-for-the-portal-/-parent-site"
+              }
+            ]
           },
           {
             "group": "General",
