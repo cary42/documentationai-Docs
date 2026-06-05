@@ -1,0 +1,269 @@
+---
+title: Food & Per-Day Ordering
+description: Let families buy food and per-day items by calendar day with daily quantities, flexible order windows, and fulfillment reporting for staff.
+---
+
+## Overview
+
+Food & per-day ordering lets families buy a menu item one day at a time instead of registering for a full fixed week. Staff set up a session product in food mode, define which calendar days can be ordered, and families choose quantities for each open day in the parent portal.
+
+<Callout kind="info">
+
+Food & per-day ordering is a toggle on a session product. You do not create a separate product type outside the session product workflow.
+
+</Callout>
+
+## What problem does this solve
+
+Use food & per-day ordering when families need to choose items by day, not by full session enrollment. It works well for operational add-ons that follow a calendar and need quantity-based ordering.
+
+Common examples include:
+
+- **Hot lunch on selected weekdays** when lunch is available only on certain days
+- **A la carte snack bars** where families order one or more items for specific dates
+- **Pizza days or special meal days** that happen once a week or only during part of the season
+- **Bus tickets, extended care, or other per-day extras** when you want families to select individual dates
+- **Camp store or activity add-ons** sold by day and quantity instead of as one flat fee
+
+This setup also helps when one child may need different quantities on different days. Instead of forcing a single registration choice, the parent portal shows a date-based ordering grid.
+
+## What this feature is and is not
+
+Food & per-day ordering is designed for date-based item ordering. It is not the same as a special session structure or attendance-driven registration.
+
+**What it is:**
+
+- **A session product with food mode turned on**
+- **A day-by-day ordering grid** where families enter quantities for each open date
+- **A quantity-based purchase flow** where the total is based on item price multiplied by quantity ordered
+- **A flexible ordering setup** that can stay open across multiple weeks for the same child
+- **A fulfillment workflow** supported by the Food Fulfillment report
+
+**What it is not:**
+
+- **Not a waitlist workflow** for sold-out days
+- **Not an attendance product** that staff use to track presence
+- **Not the same as Special Weeks** used to structure program registration
+- **Not limited to one registration per child** in the same way many standard session products are
+- **Not automatically discounted by default** when food mode is enabled
+
+<Callout kind="info">
+
+When food mode is on, the product is hidden from attendance, allows the same child to purchase across multiple weeks, turns discounts off by default, and uses unlimited capacity unless you set a limit.
+
+</Callout>
+
+## Who uses this
+
+Several staff groups usually touch this workflow, each for a different reason.
+
+- **Registration staff** set up the product, attach it to forms, define ordering windows, and help families who need changes.
+- **Food service staff** use fulfillment reporting to see what must be prepared on each calendar day and for which campers.
+- **Office staff** answer parent questions, place or adjust orders when needed, and verify what was purchased.
+- **Program or operations managers** review naming, dates, order cutoffs, and seasonal setup so ordering stays clear for families.
+
+## Setting up a food item
+
+Set up food & per-day ordering on the session product first, then define the weeks and make the product available on the correct registration form.
+
+<Steps>
+  <Step title="Create or edit the session product" icon="settings">
+
+Open the session product you want families to order, or create a new one if the item does not exist yet.
+
+Turn on the food or per-day ordering mode for that product. Once food mode is enabled, the product behaves differently from a standard attendance-based session product.
+
+  </Step>
+
+  <Step title="Review how food mode changes the product" icon="info">
+
+Before you continue, confirm that the product should use food behavior rather than standard session behavior.
+
+Key changes to expect:
+
+- The product is **hidden from attendance**
+- The same child can be ordered into **multiple weeks**
+- **Discounts are off by default**
+- Capacity is **unlimited unless you set one**
+
+These defaults are usually correct for lunch and per-day item ordering, but they can affect downstream workflows if staff expect standard session behavior.
+
+  </Step>
+
+  <Step title="Define the orderable weeks" icon="calendar">
+
+Add one or more weeks to control which days families can order.
+
+Each week includes these fields:
+
+- **Name** — the label families and staff will see
+- **Start date** and **End date** — the calendar range for that week
+- **Days** — which weekdays are orderable
+- **Orderable from** and **Orderable until** — when families can place or edit orders
+- **Order** — the sort position when multiple weeks appear
+
+Use these week settings to shape the ordering grid in the portal. If lunch is available Monday, Wednesday, and Friday only, select only those weekdays for that week.
+
+  </Step>
+
+  <Step title="Set the order cutoff rules" icon="lock">
+
+Configure the cutoff based on how much lead time your team needs.
+
+The cutoff is measured in days before the order date:
+
+- **0** means families can order on the same day
+- **1** means families must order by the day before
+- **2** means families must order two days ahead
+
+Choose the smallest cutoff your staff can reliably fulfill. A shorter window gives families flexibility, but it also increases same-week changes for your team.
+
+  </Step>
+
+  <Step title="Add the product to the registration form" icon="plus">
+
+After the product and weeks are ready, add the item to the registration form families use.
+
+If the product is not attached to the correct form, families will not see it in the parent portal even if the product itself is active. After you publish the form, test with a staff account so you can confirm the item displays with the expected week and date grid.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+
+Removing a week does not delete existing orders tied to that week. Review existing purchases before removing or replacing weeks mid-season.
+
+</Callout>
+
+## How families order on the parent portal
+
+Families see food & per-day items differently from standard registrations. The portal presents the item as a date-based ordering experience instead of a single enroll-once option.
+
+When the item is available, parents see a **Food** tag on the product. Opening the item shows a grid grouped by week, with individual days listed inside each week and a quantity input for each orderable day.
+
+As parents enter quantities, the portal updates the running total. This gives families immediate feedback before checkout and helps them compare one-day, one-week, or mixed ordering choices.
+
+Important portal behaviors include:
+
+- **Closed days cannot be edited** once they are outside the allowed ordering window
+- **No weeks open** appears when no defined weeks are currently orderable
+- **Previously purchased quantities pre-fill** when a family returns to adjust unlocked future dates
+- **No waitlist appears** for food ordering in the usual session sense
+
+That last point matters for staff communication. If a family cannot order a day, the reason is usually the order window, availability setup, or form access—not a food waitlist.
+
+## Checkout, billing, and changes
+
+Charges are calculated from the unit price multiplied by the quantity ordered for each day. If a lunch item costs one amount per meal, and a family orders it across several dates, the total reflects the full count of meals selected.
+
+At checkout, Campium records the purchase by week per child, with the day-by-day breakdown attached to that purchase line. Staff can review the order history to see not only that the item was purchased, but also which dates and quantities were selected.
+
+Families can return later and order again or adjust future selections if those dates are still unlocked. This works well for rolling meal planning because parents do not need to complete the entire season in one transaction.
+
+Locked dates behave differently from unlocked ones:
+
+- **Unlocked future days** can still be updated by the family
+- **Locked days** can no longer be changed through the portal
+- **Past cutoff days** stay visible for reference but are not editable
+
+<Callout kind="info">
+
+If a family updates an unlocked order later, staff should expect the latest saved quantities to drive fulfillment. Review the current order state rather than relying only on an earlier confirmation.
+
+</Callout>
+
+## Reporting: Food Fulfillment
+
+Use the Food Fulfillment report when your team needs the actual prep list by date. This report is designed for operational use, not just billing review.
+
+Find the report in the reporting area where food fulfillment data is available for staff. Once opened, set the date range and product context so the report matches the service period your team is preparing for.
+
+Common filters include:
+
+- **From** and **To** for the calendar range
+- **Season** to limit the report to a specific registration season
+- **Break down by** to group output by a profile field when needed
+- **Per-camper pick list** when staff need a more detailed pickup or preparation view
+
+The report displays one card per calendar day. Inside each day, staff can review the key fulfillment columns:
+
+- **Item**
+- **Camper**
+- **Quantity**
+
+If you use the **Break down by** option, the report can separate results by the selected profile field so teams can sort by a useful operational grouping. If you enable the **Per-camper pick list**, the output becomes easier to use at handoff or distribution time.
+
+Read the report day by day. Each card answers a simple operational question: what item does each camper need on this date, and in what quantity?
+
+## Tips for a smooth season
+
+A few setup habits prevent most in-season confusion.
+
+- **Name items clearly.** Use names parents recognize, such as "Hot Lunch" or "Pizza Friday Lunch," not internal shorthand.
+- **Open ordering early enough.** Families are more likely to use the feature when they can place several weeks of orders at once.
+- **Choose realistic cutoff days.** A cutoff of `0` allows same-day orders, while `1` requires ordering the day before. Match the setting to kitchen or office capacity.
+- **Separate items when the workflow is different.** If one item has a different schedule, cutoff, or fulfillment process, create a separate product.
+- **Review copied seasons carefully.** If you copy a season, confirm the week dates, order windows, and sort order before opening registration.
+- **Decide how discounts should work.** Discounts are off by default in food mode, so confirm whether that is correct for your program before families start ordering.
+- **Do not rely on attendance tools.** Food mode products are hidden from attendance, so use ordering and fulfillment reports for operations.
+- **Use one product across the season when the rules stay consistent.** This reduces clutter for families and keeps ordering in one place.
+
+## Common questions
+
+<ExpandableGroup>
+  <Expandable title="How is this different from Special Weeks?">
+
+Special Weeks organize registration structure for programs. Food & per-day ordering is for quantity-based ordering by calendar day.
+
+If a family is choosing meals or other daily add-ons, use food mode. If staff are organizing program offerings or registration periods, use the regular season and session structure instead.
+
+  </Expandable>
+
+  <Expandable title="Can one food product cover the whole summer?">
+
+Yes, if the item follows the same general setup and you define the needed weeks and dates correctly.
+
+Many organizations use one product for the full summer and create multiple weeks underneath it. That keeps the parent portal cleaner and makes reporting easier, as long as the naming and order windows stay clear.
+
+  </Expandable>
+
+  <Expandable title="What if I forgot to add weeks before opening registration?">
+
+Add the missing weeks to the product, then confirm the orderable dates and registration form placement.
+
+If families already visited the portal, tell them to return after the update is published. If you remove and rebuild weeks later, remember that removing a week does not delete existing orders.
+
+  </Expandable>
+
+  <Expandable title="Can families enter zero for a day?">
+
+Yes. A quantity of zero means the family is not ordering that item for that date.
+
+In practice, families usually leave unwanted days blank or at zero and enter positive quantities only on the dates they want.
+
+  </Expandable>
+
+  <Expandable title="How do payment plans affect food orders?">
+
+Food orders follow the normal billing behavior attached to the purchase and checkout flow in your Campium setup.
+
+Because charges are based on unit price multiplied by quantity, the total ordered amount feeds into the purchase line. If your organization uses payment plans, review the purchase in the family account to confirm how that charge is scheduled or collected in your environment.
+
+  </Expandable>
+
+  <Expandable title="Where can staff see what a family ordered?">
+
+Staff can review the family purchase records and use the Food Fulfillment report for date-by-date operational detail.
+
+The purchase view shows the child, week-level purchase line, and the day breakdown. The fulfillment report is the better tool when kitchen or front-desk staff need the working list for a specific day.
+
+  </Expandable>
+
+  <Expandable title="Can staff place food orders on behalf of families?">
+
+Yes, if staff have the usual access to work in the account and complete the order workflow for the family.
+
+This is useful for phone requests, walk-in support, or late corrections. Before placing the order, confirm whether the requested dates are still unlocked, because locked dates cannot be changed through the normal portal workflow.
+
+  </Expandable>
+</ExpandableGroup>

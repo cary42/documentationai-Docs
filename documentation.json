@@ -406,6 +406,11 @@
                 "title": "Special Weeks",
                 "path": "special-weeks",
                 "icon": "calendar-days"
+              },
+              {
+                "title": "Food & Per-Day Ordering",
+                "path": "food-and-per-day-ordering",
+                "icon": "utensils"
               }
             ]
           },
