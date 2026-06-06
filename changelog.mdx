@@ -12,6 +12,44 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-05" description="Finix payout settings, role member management, profile email filters, HEIC uploads, dashboard speed, and checkout fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added a Finix payout type setting in [Site Settings](/settings) so agencies can choose net or gross payout handling.
+
+  - Added trial-ending reminder emails for agencies nearing the end of a trial.
+
+  - Added role member counts, member removal, and empty-role deletion in role management.
+
+  - Added Direct, Mass Email, and System category filters with counts on the [Profiles](/profiles) email tab.
+
+  - Added HEIC and HEIF image upload support for form-question files, with automatic JPEG conversion for iPhone and iPad photos.
+
+  ## Updates
+
+  - Improved dashboard load time by lazy-loading the heaviest dashboard cards after the first page render.
+
+  - Added individual Site Settings fields to Spotlight search so staff can jump directly to specific settings.
+
+  - Updated authorized card payment capture timing to match the latest settlement flow.
+
+  - Updated [My Groups](/my-groups) to show active-season rosters and sort roster names case-insensitively.
+
+  - Improved [Attendance](/attendance) check-in toggle reliability with a cleaner check-in response flow.
+
+  - Improved parent portal logo sizing so uploaded logos keep the correct aspect ratio. See [Business Info & Logo](/business-info-and-logo).
+
+  - Added automatic retry handling for transient staff AJAX session errors.
+
+  ## Bug Fixes
+
+  - Fixed [Discounts](/discounts) balance calculations during authorized card checkout so discount credits are not double-subtracted.
+
+  - Added the Portal Settings card to the live admin console.
+
+  - Corrected production links in system-generated emails and account flows.
+</Update>
+
 <Update label="2026-06-04" description="Portal registration settings, site text live previews, discount visibility fix, and Pending badge color correction" tags={["feature","improvement","bugfix"]}>
   ## New
 
