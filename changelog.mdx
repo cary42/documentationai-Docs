@@ -12,6 +12,44 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-05" description="Finix payout settings, role member management, profile email filters, HEIC uploads, dashboard speed, and checkout fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added a Finix payout type setting in [Site Settings](/settings) so agencies can choose net or gross payout handling.
+
+  - Added trial-ending reminder emails for agencies nearing the end of a trial.
+
+  - Added role member counts, member removal, and empty-role deletion in role management.
+
+  - Added Direct, Mass Email, and System category filters with counts on the [Profiles](/profiles) email tab.
+
+  - Added HEIC and HEIF image upload support for form-question files, with automatic JPEG conversion for iPhone and iPad photos.
+
+  ## Updates
+
+  - Improved dashboard load time by lazy-loading the heaviest dashboard cards after the first page render.
+
+  - Added individual Site Settings fields to Spotlight search so staff can jump directly to specific settings.
+
+  - Updated authorized card payment capture timing to match the latest settlement flow.
+
+  - Updated [My Groups](/my-groups) to show active-season rosters and sort roster names case-insensitively.
+
+  - Improved [Attendance](/attendance) check-in toggle reliability with a cleaner check-in response flow.
+
+  - Improved parent portal logo sizing so uploaded logos keep the correct aspect ratio. See [Business Info & Logo](/business-info-and-logo).
+
+  - Added automatic retry handling for transient staff AJAX session errors.
+
+  ## Bug Fixes
+
+  - Fixed [Discounts](/discounts) balance calculations during authorized card checkout so discount credits are not double-subtracted.
+
+  - Added the Portal Settings card to the live admin console.
+
+  - Corrected production links in system-generated emails and account flows.
+</Update>
+
 <Update label="2026-06-04" description="Portal registration settings, site text live previews, discount visibility fix, and Pending badge color correction" tags={["feature","improvement","bugfix"]}>
   ## New
 
@@ -384,8 +422,6 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Security
 
   - Implemented URL-safe encryption for data passed in links to reduce the risk of tampering and exposure of sensitive identifiers.
-
-  ##
 </Update>
 
 <Update label="2026-03-29" description="Email notifications and duplicate prevention" tags={["improvement","bugfix"]}>
@@ -420,8 +456,6 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Improved PDF generation for invoices and receipts to align columns, totals, and headers consistently across devices.
 
   - Enhanced email template field retrieval so notifications show the right family, session, and balance details every time.
-
-  ##
 </Update>
 
 <Update label="2026-03-26" description="Matrix reports, proposals, and ticket email accuracy" tags={["feature","improvement","bugfix"]}>
@@ -544,34 +578,4 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
 
-<Columns cols="3">
-  <Card title="Encrypted URLs and CRM follow-ups" href="#2026-03-30" icon="shield" horizontal="false">
-    URL-safe encrypted links and improved proposal follow-up tracking.
-  </Card>
 
-  <Card title="Email notifications and duplicates" href="#2026-03-29" icon="zap" horizontal="false">
-    Smarter notification logic and safeguards against duplicate sends.
-  </Card>
-
-  <Card title="Admin forms, sessions, donations" href="#2026-03-28" icon="truck" horizontal="false">
-    Richer form editor, clearer session views, and better donation pages.
-  </Card>
-</Columns>
-
-<Tabs>
-  <Tab title="No Breaking Changes" icon="check">
-    Updates like v2.1.0 and v1.9.0 require no schema changes. Apply the release and verify your key workflows.
-  </Tab>
-
-  <Tab title="With Breaking Changes" icon="alert-triangle">
-    For v2.0.0, update profile fields:
-
-    ```javascript
-    // Old schema
-    { "fields": ["name", "age"] }
-
-    // New schema
-    { "profileFields": ["name", "age", "allergies"] }
-    ```
-  </Tab>
-</Tabs>
