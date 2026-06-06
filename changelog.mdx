@@ -422,8 +422,6 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Security
 
   - Implemented URL-safe encryption for data passed in links to reduce the risk of tampering and exposure of sensitive identifiers.
-
-  ##
 </Update>
 
 <Update label="2026-03-29" description="Email notifications and duplicate prevention" tags={["improvement","bugfix"]}>
@@ -458,8 +456,6 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Improved PDF generation for invoices and receipts to align columns, totals, and headers consistently across devices.
 
   - Enhanced email template field retrieval so notifications show the right family, session, and balance details every time.
-
-  ##
 </Update>
 
 <Update label="2026-03-26" description="Matrix reports, proposals, and ticket email accuracy" tags={["feature","improvement","bugfix"]}>
@@ -582,34 +578,4 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
 
-<Columns cols="3">
-  <Card title="Encrypted URLs and CRM follow-ups" href="#2026-03-30" icon="shield" horizontal="false">
-    URL-safe encrypted links and improved proposal follow-up tracking.
-  </Card>
 
-  <Card title="Email notifications and duplicates" href="#2026-03-29" icon="zap" horizontal="false">
-    Smarter notification logic and safeguards against duplicate sends.
-  </Card>
-
-  <Card title="Admin forms, sessions, donations" href="#2026-03-28" icon="truck" horizontal="false">
-    Richer form editor, clearer session views, and better donation pages.
-  </Card>
-</Columns>
-
-<Tabs>
-  <Tab title="No Breaking Changes" icon="check">
-    Updates like v2.1.0 and v1.9.0 require no schema changes. Apply the release and verify your key workflows.
-  </Tab>
-
-  <Tab title="With Breaking Changes" icon="alert-triangle">
-    For v2.0.0, update profile fields:
-
-    ```javascript
-    // Old schema
-    { "fields": ["name", "age"] }
-
-    // New schema
-    { "profileFields": ["name", "age", "allergies"] }
-    ```
-  </Tab>
-</Tabs>
