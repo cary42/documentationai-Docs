@@ -1,0 +1,248 @@
+---
+title: Profile Fields
+description: >-
+  Create and manage custom data fields for campers, parents, and staff, then
+  control where those answers appear across Campium.
+---
+## Create and manage profile fields
+
+Profile fields store the custom details your camp tracks about people in Campium, such as school, grade, allergies, bus route, or staff department. Each field has a name, a field type, and answers saved per person.
+
+Built-in fields such as name, email, user type, and status are separate from profile fields. Use Profile Fields for the data your organization defines and maintains.
+
+<Callout kind="info" collapsed="false">
+  Think of Profile Fields as your camp's data dictionary. You define the field once, then Campium can use that same field across profiles, forms, reports, the health report, and Staff Hub.
+</Callout>
+
+### Field types
+
+Profile fields support these field types:
+
+- **Text** — freeform answers such as classroom name, physician, or notes
+
+- **Date** — date-based answers such as graduation date or last physical
+
+- **Choose One** — a single selection from a list, such as grade or bus route
+
+- **Choose Many** — multiple selections from a list, such as allergies or activity interests
+
+## Find Profile Fields in Admin
+
+Open **Admin → Profile Fields** at `/admin/profile-fields.php`. You need the **Profile Fields** permission, listed as `custom_module`, to access the page.
+
+The page opens to a searchable table of all profile fields in your database. From there, you can add fields, edit existing ones, manage options, review usage, and control access.
+
+## Understand the main screen
+
+The main Profile Fields screen gives you a high-level view of every field and how it is configured.
+
+| Column            | What it shows                                                            |
+| ----------------- | ------------------------------------------------------------------------ |
+| **Field Name**    | The label staff see for the field                                        |
+| **User Type**     | Which people the field applies to: Campers, Parents, Staff, or All Users |
+| **Field Type**    | Text, Date, Choose One, or Choose Many                                   |
+| **Health report** | A checkmark if the field appears on health reports                       |
+| **Description**   | An internal note about the field - not seen by families                  |
+| **Status**        | Whether the field is Active or Inactive                                  |
+
+Each row also includes a dropdown menu (⋮) with actions for that field. Not every action appears on every row — visibility depends on the field type and whether it is a system field.
+
+| Action | What it does | When it appears |
+| --- | --- | --- |
+| **Edit Profile Field** | Open the field settings to make changes | Editable fields only |
+| **Options** | Add, reorder, or manage answer choices | Choose One and Choose Many fields only |
+| **View Usage in Forms/Reports** | See everywhere the field is referenced | Always visible |
+| **Remove Everyone's Response** | Clear all saved answers while keeping the field | When removal is allowed for the field |
+| **Delete Profile Field** | Permanently remove the field definition | Deletable fields only (blocked if in use) |
+| **Copy Field** | Duplicate the field setup without copying answers | Non-primary fields only |
+| **Access Rights** | Control which staff roles can see this field's data | When access rights are enabled for the field |
+
+## Add a new field
+
+Create a new field when you need to track information that Campium does not provide as a built-in field.
+
+### Field settings
+
+Use the Add New Field form to define the field.
+
+<ParamField body="Field name" param-type="string" required="true" deprecated="false" show-location="false">
+  The label staff see. Keep it under 50 characters, do not use commas, and do not prefix the user type in the name.
+</ParamField>
+
+<ParamField body="Signature field" param-type="boolean" required="false" deprecated="false" show-location="false">
+  Turns the field into a signature-style field when that option is available in your setup.
+</ParamField>
+
+<ParamField body="Type" param-type="string" required="true" deprecated="false" show-location="false" enum="Choose One,Choose Many,Text,Date">
+  Sets the answer format for the field.
+</ParamField>
+
+<ParamField body="Used for" param-type="string" required="true" deprecated="false" show-location="false">
+  Chooses which user types the field applies to. Use a specific type or make the field available to all users.
+</ParamField>
+
+<ParamField body="Field size" param-type="string" required="false" deprecated="false" show-location="false" enum="Regular,Large">
+  Controls the display size for text fields.
+</ParamField>
+
+<ParamField body="Default question text" param-type="string" required="false" deprecated="false" show-location="false">
+  Sets the prompt shown when the field appears on forms or other entry screens.
+</ParamField>
+
+<ParamField body="Default formatting" param-type="string" required="false" deprecated="false" show-location="false">
+  Applies formatting expectations such as phone or email when supported.
+</ParamField>
+
+<ParamField body="Include on health report" param-type="boolean" required="false" deprecated="false" show-location="false">
+  Adds the field to the health report when selected.
+</ParamField>
+
+<ParamField body="Who has access" param-type="string" required="false" deprecated="false" show-location="false">
+  Limits field visibility by role. If left empty, all CampiumDB users can see the field data.
+</ParamField>
+
+<ParamField body="Description" param-type="string" required="false" deprecated="false" show-location="false">
+  An internal-only note that helps staff understand the field's purpose.
+</ParamField>
+
+After you save, the field appears in the Profile Fields table.
+
+<Callout kind="info" collapsed="false">
+  If you create a **Choose One** or **Choose Many** field, the field is not ready for use until you add options.
+</Callout>
+
+## Manage options for choice fields
+
+Choose One and Choose Many fields depend on an option list. After creating the field, open **Options** from the row menu to define the choices people can select.
+
+### What you can do in Options
+
+- **Add options** by entering a value and pressing Enter after each one
+
+- **Reorder options** by dragging them into the order you want
+
+- **Sort options** alphabetically or numerically with the available sort tools
+
+- **Edit options** when a label needs to change
+
+- **Merge options** when two choices should become one
+
+- **Delete options** that you no longer need
+
+Campium shows a badge count for each option so you can see how many records currently use it. That count helps you judge the impact before editing, merging, or deleting an option.
+
+<Callout kind="info" collapsed="false">
+  Primary and system fields can include locked options. Locked options cannot be edited the same way as custom field options.
+</Callout>
+
+## Edit a field without losing data
+
+Use **Edit** from the row menu to update an existing field's settings. You can rename the field, change user types, adjust size, update question text, change formatting, toggle the health report setting, and revise role access.
+
+You can also change the field status between **Active** and **Inactive**. Inactive fields are hidden from normal use, but Campium keeps the existing answers.
+
+### Active vs. inactive
+
+Set a field to inactive when you want to stop using it without removing historical data. This is the safest option when the field has been used on profiles, forms, or reports and you may need those answers later.
+
+Some core or system-managed fields are more restricted. Depending on the field, Campium may prevent renaming or deleting it.
+
+## Know where answers appear
+
+A single profile field can appear in several places across Campium. You define the field once, and answers can be collected, displayed, or reported in multiple workflows.
+
+Profile field answers can appear in:
+
+- **Admin profiles** on tabs and layouts
+
+- **Registration forms**
+
+- **Parent Portal**
+
+- **Reports** as optional extra columns
+
+- **Health report**
+
+- **Staff Hub**
+
+This shared behavior is why the **Usage** action matters. Use **View Usage** before you edit or remove a field so you can see where that field is currently referenced.
+
+## Control access and visibility
+
+Field access is controlled on the field itself. This role-based access is separate from the broader page permissions configured in Roles and Permissions.
+
+By default, all CampiumDB users can see all profile field data. Restrict access on sensitive fields when only certain roles should view or work with that information.
+
+<Callout kind="info" collapsed="false">
+  Page access controls whether someone can open Profile Fields. Field access controls whether they can see the data in a specific field.
+</Callout>
+
+## Copy, delete, or clear answers
+
+The row menu includes several maintenance actions for existing fields.
+
+| Action                         | What it does               | Important detail                                       |
+| ------------------------------ | -------------------------- | ------------------------------------------------------ |
+| **Copy Field**                 | Duplicates the field setup | Copies the field configuration only, not saved answers |
+| **Delete Profile Field**       | Removes the field          | Campium blocks deletion if the field is in use         |
+| **Remove Everyone's Response** | Clears all saved answers   | The field remains in place and can still be used again |
+
+System and primary fields cannot be deleted. If you need to stop using one of these fields, set it to inactive instead when that option is available.
+
+## Use Profile Layouts to place fields on profiles
+
+Creating a field does not automatically place it on every profile tab. **Profile Layouts** is a separate Admin area that controls where fields appear on profiles, how tabs are organized, and what order fields use for each user type.
+
+The usual flow is:
+
+**Profile Fields** → **Profile Layouts** → **Forms and reports**
+
+Create the field first, then place it where staff should see it.
+
+## Practical tips for managing fields
+
+<Callout kind="tip" collapsed="false">
+  - Use **Description** for internal notes so staff know why a field exists.
+
+  - Mark medical or safety-related fields for the **health report** when staff need quick access.
+
+  - Use **Inactive** instead of delete when you want to preserve history.
+
+  - Check **View Usage** before editing or removing a field that may appear in multiple places.
+
+  - Add options immediately after creating **Choose One** or **Choose Many** fields so the field is usable.
+</Callout>
+
+## Follow the full setup flow
+
+<Steps>
+  <Step title="Define the field" icon="plus" title-type="p">
+    Create the field in **Admin → Profile Fields** and choose its name, type, and user type. After you save, the field appears in the searchable table.
+  </Step>
+
+  <Step title="Add options if the field uses choices" icon="edit" title-type="p">
+    If the field type is **Choose One** or **Choose Many**, open **Options** and add the answer choices. When options are in place, the field is ready to collect valid answers.
+  </Step>
+
+  <Step title="Set access and reporting behavior" icon="shield" title-type="p">
+    Review who can see the field, whether it belongs on the health report, and any default question text or formatting. This is the point where you decide who uses the field and how sensitive it is.
+  </Step>
+
+  <Step title="Place the field on profile layouts" icon="settings" title-type="p">
+    Open **Profile Layouts** and add the field to the right profile tab and position for the relevant user type. Once it is placed, staff can find it where they expect it on the profile.
+  </Step>
+
+  <Step title="Use the field in forms, reports, and Staff Hub" icon="book-open" title-type="p">
+    After setup, the same field can be reused across registration forms, the parent portal, reports, the health report, and Staff Hub. One field definition supports many workflows.
+  </Step>
+
+  <Step title="Collect and update answers per person" icon="check-circle" title-type="p">
+    Answers save on each person's record. Staff can update those answers later from the profile or through forms, depending on where the field is exposed.
+  </Step>
+</Steps>
+
+## Keep your field setup maintainable
+
+Profile fields work best when names are clear, access is intentional, and layouts match how staff actually use the data. Review field usage before making major changes, especially for fields tied to reports, forms, or health workflows.
+
+When you need to retire a field, inactivating it usually gives you a cleaner result than deleting it. You keep historical answers, avoid breaking downstream usage, and leave yourself a clear record of how the field was used.

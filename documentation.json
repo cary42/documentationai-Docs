@@ -322,6 +322,11 @@
             "icon": "file-text",
             "pages": [
               {
+                "title": "Profile Fields",
+                "path": "profile-fields",
+                "icon": "list"
+              },
+              {
                 "title": "Integrations",
                 "path": "integrations",
                 "icon": "bolt"
