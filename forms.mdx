@@ -218,3 +218,548 @@ Use the **Responses** tab to track progress and work with submitted data.
 
 - Provides a central place to review who has completed the form, who still needs to respond, and which submissions you have approved.
 
+## Form settings reference
+
+Use the **Settings** tab to control how the form appears, who can complete it, what happens after submission, and how Campium handles payments, reminders, and follow-up workflows.
+
+<Callout kind="info" collapsed="false">
+
+Some settings appear only for specific **Form Type** values. Registration forms show product, payment, discount, and deposit settings that do not appear on Standard or Upload a File forms.
+
+</Callout>
+
+### Basic information
+
+The top of the Settings tab defines what the form is, who it applies to, and which seasonal setup Campium should use behind the scenes.
+
+#### Form Name
+
+Use **Form Name** for the internal and Portal-facing name of the form. Pick a name that families and staff can recognize without opening it, especially if you publish multiple forms for the same season.
+
+Clear names also make the **Responses** tab easier to use because staff can quickly tell which workflow a submission belongs to.
+
+#### Form Type
+
+**Form Type** controls the overall behavior of the form and which tabs or settings appear in the editor.
+
+| Form Type | Best used for | Questions tab | Products Layout tab | Payment-related settings |
+| --- | --- | --- | --- | --- |
+| **Registration (With Products)** | Enrollments, session signups, registrations with checkout | Shown | Shown | Shown |
+| **Standard (No Products for Purchase)** | Surveys, waivers, contracts, acknowledgments, preference forms | Shown | Hidden | Hidden |
+| **Upload a File** | Document collection where the main action is file submission | Hidden | Hidden | Hidden |
+
+If you change **Form Type** after starting configuration, Campium changes which tabs and fields are available. Review the Settings tab again after any type change so you do not miss required fields.
+
+#### Season
+
+**Season** connects the form to the seasonal setup used elsewhere in Campium. For registration forms, the selected season determines which products, fees, discounts, and payment plans are available to the form.
+
+If a product or fee is missing from a registration form, confirm that the item exists in the same season selected on the form.
+
+#### Staff season assignment
+
+If your team uses forms for staff workflows, **Staff season assignment** controls whether the form is tied to staff in a specific season.
+
+| Setting | Behavior |
+| --- | --- |
+| **Yes** | Campium treats the form as tied to a season-based staff workflow. Use this when staff records and assignments are managed by season. |
+| **No** | Campium does not apply season-based staff assignment behavior. Use this for forms that should stay more general. |
+
+Choose the option that matches how your staff records are organized. If your organization hires or tracks staff by season, use **Yes** so the form stays aligned with that structure.
+
+#### Description
+
+**Description** appears beneath the form name on the Portal. Use it to tell recipients what the form is for, when they need to complete it, or what will happen after they submit.
+
+Keep the description short and specific. One or two sentences usually works better than a long paragraph.
+
+### Scheduling
+
+Scheduling settings control when the form is visible, when reminders can talk about it as due, and when business rules such as age cutoffs apply.
+
+#### Start Date
+
+**Start Date** is the first date the form becomes available on the Portal, assuming the form is also set to **Visible** and recipients are configured.
+
+If families say they cannot see a form yet, check whether the current date is before **Start Date**.
+
+#### End Date
+
+**End Date** is the date Campium stops showing the form on the Portal. This is the setting that actually hides the form when the availability window ends.
+
+Use **End Date** when you want a form to disappear completely after a deadline or event window passes.
+
+#### Due Date
+
+**Due Date** tells recipients when the form should be completed, but it does **not** hide the form. A form can stay visible after the due date as long as the current date is still on or before **End Date**.
+
+Campium also uses **Due Date** for reminder emails. If you want automated reminders to send, you must set a due date.
+
+| Configuration | What recipients see | Reminder email behavior |
+| --- | --- | --- |
+| **End Date only** | Form stays available until End Date, with no due-date messaging | No due-date reminders |
+| **Due Date and End Date** | Form can show as due or past due while still remaining available until End Date | Reminder emails can reference due and past-due status |
+| **Due Date only** | Due messaging exists, but form availability still depends on other visibility rules in your setup | Reminder logic can use the due date |
+
+<Callout kind="tip" collapsed="false">
+
+Use **Due Date** when you want accountability and reminders. Use **End Date** when you want the form to disappear.
+
+</Callout>
+
+### Visibility and editing rules
+
+These settings control whether recipients can see the form at all and whether they can change it after submission.
+
+#### Visibility
+
+**Visibility** is the manual on or off switch for the form.
+
+| Visibility | Behavior |
+| --- | --- |
+| **Visible** | Eligible recipients can see the form when the current date is within the form's availability window. |
+| **Hidden** | No recipients can see the form on the Portal, even if dates and recipients are configured correctly. |
+
+Use **Hidden** while building or testing a form. Switch to **Visible** only when content, recipients, and dates are ready.
+
+#### Lock Form After Completion
+
+**Lock Form After Completion** controls whether recipients can edit a form after they submit it.
+
+| Setting | Behavior | Best use |
+| --- | --- | --- |
+| **Yes** | Recipients cannot reopen and change answers after submission. | Registration forms, contracts, waivers, and any form that should become a fixed record |
+| **No** | Recipients can return and update answers after submitting, subject to the form still being available. | Surveys, preference forms, and forms where answers may change over time |
+
+For registrations, **Yes** is usually the safer choice because families should not be able to change key enrollment details after checkout without staff review. For lightweight surveys or preference collection, **No** may be more practical.
+
+### What happens when someone finishes
+
+These settings determine how Campium classifies the submission itself and, if you choose, how it updates the user record.
+
+#### Form Status After Completion
+
+**Form Status After Completion** sets the workflow state of the form response after the recipient submits it.
+
+| Status | What it means | Common use |
+| --- | --- | --- |
+| **Pending Approval** | Submission is complete, but staff must review it before treating it as finalized. | Staff-reviewed registrations, contracts, or approvals |
+| **Approved** | Submission is treated as completed and approved immediately. | Self-service forms that do not need review |
+| **In Progress** | Submission remains open or unfinished from a workflow perspective after save or completion. | Special internal workflows that need additional staff action |
+
+If staff approval is part of your process, set **Form Status After Completion** to **Pending Approval** so submissions do not count as fully approved the moment a family clicks submit.
+
+#### User Status After Completion
+
+**User Status After Completion** updates the person's user record after they finish the form.
+
+| Status | Effect |
+| --- | --- |
+| **No Change** | Leaves the user's current status unchanged. |
+| **Pending** | Moves the user into a pending state after completion. |
+| **Active** | Marks the user as active after completion. |
+| **Inactive** | Marks the user as inactive after completion. |
+| **Lead** | Marks the user as a lead after completion. |
+
+Use this setting carefully. Automatic status changes are helpful for structured enrollment workflows, but they can create confusion if staff are not expecting the update.
+
+### Registration and payment settings
+
+These settings appear only when **Form Type** is **Registration (With Products)**.
+
+<Callout kind="info" collapsed="false">
+
+If you do not see the payment and registration settings described below, confirm that **Form Type** is set to **Registration (With Products)**.
+
+</Callout>
+
+#### Application Fee
+
+Use **Application Fee** when you want to charge an upfront fee as part of the registration workflow.
+
+Set it up in this order:
+
+1. Create or confirm the fee item in the correct season.
+2. Select that fee in **Application Fee**.
+3. Review any related settings in **Manage Fees**.
+4. Save the form and test the checkout flow with a sample user.
+
+When configured correctly, the fee appears as part of the registration cost structure for the form.
+
+#### Show number of spots left
+
+**Show # of spots left** displays remaining capacity information on the form. Use it when you want families to see how many spaces remain before they register.
+
+Only turn this on when your capacity data is current. Outdated capacity settings create confusion faster than not showing counts at all.
+
+#### Enable Payment Plan
+
+**Enable Payment Plan** allows families to pay over time instead of paying the full balance immediately.
+
+This setting works with the selected season, available payment plan setup, and any **Due Date** or deposit rules that apply to the registration.
+
+#### Require User To Add A Payment Method
+
+**Require User To Add A Payment Method** is available only for organizations using Finix. It requires the payer to save a payment method during registration.
+
+Use this when your payment workflow depends on keeping a card or bank method on file for future scheduled payments.
+
+#### Allow User To Pay Later
+
+**Allow User To Pay Later** lets the user complete registration without paying at the time of checkout.
+
+<Callout kind="alert" collapsed="false">
+
+Use **Allow User To Pay Later** carefully. This setting is generally best for testing or tightly controlled workflows because it lets users finish registration without collecting payment immediately.
+
+</Callout>
+
+#### Pay In Full Upon Registration
+
+**Pay In Full Upon Registration** requires the full amount due at checkout instead of allowing installment behavior.
+
+Use this when you want registration to count only after the full amount is paid.
+
+#### Default Payment To
+
+**Default Payment To** sets the default account, category, or destination that receives payments collected through the form.
+
+Pick the correct destination before you publish the form. Correcting misapplied payment routing after families have paid is much harder than confirming it upfront.
+
+#### Cutoff Date
+
+**Cutoff Date** acts as an age gate for registration logic. Campium uses the cutoff date when calculating age-based eligibility tied to the form.
+
+For example, if a program requires campers to be a certain age by a specific date, set that date in **Cutoff Date** so age validation uses the correct rule.
+
+### Discount settings
+
+Discount settings control whether families can use discounts during registration and how Campium applies those discounts.
+
+#### Allow For Discounts To Be Applied
+
+Turn on **Allow For Discounts To Be Applied** to let the registration form accept discount rules that exist for the selected season.
+
+Leave it off when the form should always charge the standard rate.
+
+#### Allow Multiple Discounts
+
+**Allow Multiple Discounts** lets more than one discount apply in the same checkout when your pricing rules allow it.
+
+Use this carefully. Stacked discounts can create totals that staff did not expect if the discount strategy is not documented.
+
+#### Auto Apply These Discounts
+
+**Auto Apply These Discounts** applies eligible discounts automatically instead of requiring the payer or staff to add them manually.
+
+Automatic discounts work best when eligibility is unambiguous and you want a consistent checkout experience.
+
+#### Enable Pay In Full Discount
+
+**Enable Pay In Full Discount** adds a discount incentive when the payer chooses to pay in full.
+
+| Setting | What it does |
+| --- | --- |
+| **Pay In Full Upon Registration** | Requires full payment at checkout. |
+| **Pay In Full Discount** | Rewards the payer for choosing full payment by reducing the price. |
+
+These settings solve different problems. One is a payment requirement, and the other is a pricing incentive.
+
+### Minimum deposit settings
+
+Minimum deposit settings control how much a payer must submit when full payment is not required.
+
+#### Minimum Deposit Override
+
+**Minimum Deposit Override** lets you replace the standard deposit amount for this specific form.
+
+Use it when a form needs a different minimum than the season default.
+
+#### Minimum Deposit Scope
+
+**Minimum Deposit Scope** controls how Campium applies the minimum deposit amount.
+
+| Scope | Behavior |
+| --- | --- |
+| **Entire checkout** | Campium applies one minimum deposit requirement across the whole order total. |
+| **Per user** | Campium applies the minimum deposit separately for each user in the checkout. |
+
+Use **Per user** when each registrant should meet a minimum commitment individually. Use **Entire checkout** when one combined deposit is enough for the transaction.
+
+### Send reminder emails
+
+Reminder emails help you follow up with recipients who still need to complete a form before or after its due date.
+
+Campium sends reminder emails based on the form's progress tracking, not just whether the form exists.
+
+| Form progress status | Included in reminder audience |
+| --- | --- |
+| **Not Started** | Yes |
+| **In Progress** | Yes |
+| **Pending** | Yes, if the workflow still treats the form as incomplete for follow-up purposes |
+| **Approved** | No |
+
+Reminder emails are most useful for deadline-driven forms that people must complete after registration or onboarding, such as medical forms, waivers, contracts, and staff paperwork.
+
+<Steps>
+  <Step title="How to turn on form reminder emails" icon="mail" title-type="p">
+
+  1. Open **Forms** and select the form you want to manage.
+  2. Go to the **Settings** tab.
+  3. Confirm the form has a recipient list configured in the **Recipients** tab.
+  4. Enter a **Due Date**.
+  5. Turn on the reminder email option in the Settings area where reminder emails are configured.
+  6. Save the form using **Save Settings**.
+  7. Wait for the daily reminder job to process eligible recipients, then review completions in **Responses**.
+
+  </Step>
+</Steps>
+
+The reminder message changes depending on timing. Before the due date, the email tells recipients the form is due soon. After the due date passes, the email tells recipients the form is overdue or past due.
+
+Campium sends reminder emails through a daily automated job. That means reminders are not always immediate after you save the form. Plan for the next automated run when testing.
+
+<Callout kind="alert" collapsed="false">
+
+Important limitations for reminder emails:
+
+- **Due Date is required**. Without a due date, Campium has no date to reference in the reminder logic.
+- **Registration forms are skipped** by the automated reminder job, even if reminder settings are configured.
+- **Large recipient audiences** can create heavy outbound email volume. Use caution before turning reminders on for very large groups.
+- **Recipients still matter**. Campium can only remind users who are actually assigned to the form.
+- **Unsubscribe rules apply**. Recipients can opt out of reminder emails.
+
+</Callout>
+
+Use reminder emails for:
+
+- **Medical forms**
+- **Waivers**
+- **Contracts**
+- **Staff paperwork**
+
+Avoid reminder emails for:
+
+- **Main registration** forms
+- Forms with **thousands of recipients** unless you have confirmed the volume is appropriate
+
+### Email settings
+
+Email settings control who gets notified internally and which templates Campium sends when the form workflow changes state.
+
+#### Send Admin Email Notification To
+
+Use **Send Admin Email Notification To** to enter the staff email address or addresses that should receive an internal notification when someone submits the form.
+
+This notification is for administrators, not for families. Use it when staff need to know right away that a submission arrived.
+
+#### Email Template When Approved, Pending, or Rejected
+
+Use **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** to choose which message Campium sends to the recipient when staff update the submission status.
+
+These templates are especially useful when your form includes a review process and the recipient needs a clear outcome message.
+
+<Callout kind="alert" collapsed="false">
+
+Be careful with health-related or highly sensitive forms. If the form may contain medical or other private information, make sure your notification and status email templates do not include protected details that should not be sent by email.
+
+</Callout>
+
+### Custom text
+
+Custom text settings let you change labels and instructional content on the Portal form experience.
+
+#### Payment Button Text
+
+**Payment Button Text** changes the label on the action button used to complete payment or checkout.
+
+Use a short action phrase that matches your workflow, such as confirming registration or submitting payment.
+
+#### Thank You Message
+
+**Thank You Message** appears after successful submission. Use it to confirm what happened and tell the user what comes next.
+
+A good thank-you message answers two questions: was the submission successful, and should the user expect any follow-up.
+
+#### Form Header Text
+
+**Form Header Text** adds instructional or contextual text at the top of the form.
+
+Use it for deadline notes, brief instructions, or reminders about required documents.
+
+#### Session Selection Header Text
+
+**Session Selection Header Text** customizes the heading shown above session or product selection areas in registration flows.
+
+Use it when the default heading is too generic for your enrollment process.
+
+#### Cart Header Text
+
+**Cart Header Text** customizes the heading shown above the cart or summary area during checkout.
+
+This is useful when you want to reinforce what the payer is reviewing before submission.
+
+### Question display
+
+#### Show Question Numbers
+
+Turn on **Show Question Numbers** when numbered questions make the form easier to follow. This is often helpful for long compliance forms, contracts, and multi-part questionnaires.
+
+Leave it off when the form is short or conversational and numbering would add visual noise.
+
+## Saving and warnings
+
+Saving a form does more than store text on the page. **Save Settings** updates the current Settings values and can change which tabs, warnings, and workflows are available in the editor.
+
+After you click **Save Settings**, Campium keeps you in the form editor. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
+
+### Save Settings behavior
+
+- **Creates the form record** the first time you save.
+- **Updates conditional fields and tabs** based on **Form Type**.
+- **Keeps you in the editor** so you can continue with Recipients, Questions, Products Layout, or Responses.
+- **Preserves the current workflow** without sending the form automatically.
+
+### Yellow warning banners
+
+Campium may show yellow warning banners when a form is not currently visible on the Portal.
+
+| Banner or warning state | Likely cause | What to fix |
+| --- | --- | --- |
+| **Hidden** warning | **Visibility** is set to **Hidden** | Change **Visibility** to **Visible** and save settings |
+| **Outside dates** warning | Current date is before **Start Date** or after **End Date** | Review the form's availability window and update the dates if needed |
+
+These warnings are useful because they explain why a correctly configured form may still not be visible to recipients.
+
+### Form Type controls which fields appear
+
+Changing **Form Type** changes more than the label on the form. It changes which tabs and field groups Campium shows in the editor.
+
+| Form Type | Fields and tabs you should expect |
+| --- | --- |
+| **Registration (With Products)** | Settings, Recipients, Questions, Responses, **Products Layout**, payment settings, discount settings, deposit settings |
+| **Standard (No Products for Purchase)** | Settings, Recipients, Questions, Responses, no product checkout settings |
+| **Upload a File** | Settings, Recipients, Responses, upload-focused behavior, no Questions tab |
+
+If a field seems to be missing, check **Form Type** first.
+
+## Quick setup checklists
+
+Use the checklist that matches the kind of form you are building.
+
+### Registration form (camper)
+
+1. Set **Form Type** to **Registration (With Products)**.
+2. Choose the correct **Season**.
+3. Enter a clear **Form Name** and optional **Description**.
+4. Set **Start Date** and **End Date**.
+5. Set **Visibility** to **Hidden** while building.
+6. Configure **Application Fee**, payment plan, deposit, and discount settings as needed.
+7. Confirm **Default Payment To** is correct.
+8. Set **Form Status After Completion** and **User Status After Completion**.
+9. Add recipients in the **Recipients** tab.
+10. Add questions and product layout details.
+11. Save, test, then switch **Visibility** to **Visible**.
+
+### Deadline-driven form with reminders (medical, waiver, contract)
+
+1. Set **Form Type** to **Standard (No Products for Purchase)** unless file upload is the primary action.
+2. Enter a clear **Form Name** and a short **Description** explaining the deadline.
+3. Set **Start Date**, **Due Date**, and **End Date**.
+4. Turn on reminder emails.
+5. Add the correct recipients.
+6. Set **Lock Form After Completion** to **Yes** if responses should not change after submission.
+7. Choose the right admin notification and approval templates.
+8. Save the form and confirm reminder settings are still present.
+9. Make the form **Visible** when you are ready to publish it.
+
+### Simple survey (no payment)
+
+1. Set **Form Type** to **Standard (No Products for Purchase)**.
+2. Enter **Form Name**, **Description**, **Start Date**, and **End Date**.
+3. Leave payment, discount, and deposit settings out of scope.
+4. Decide whether **Lock Form After Completion** should be **Yes** or **No**.
+5. Set **Form Status After Completion** to match whether staff review is needed.
+6. Add survey questions in the **Questions** tab.
+7. Assign recipients.
+8. Save, review visibility, and publish.
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Why can't families see my form on the Portal?" default-open="false">
+
+  Check the four most common causes first:
+
+  - **Visibility** is set to **Hidden**.
+  - Today's date is before **Start Date** or after **End Date**.
+  - The family was not added through the **Recipients** tab.
+  - The family is using the wrong Portal URL or account context.
+
+  If all four are correct, open the form again and review any warning banners shown in the editor.
+
+  </Expandable>
+  <Expandable title="What's the difference between Hidden and End Date?" default-open="false">
+
+  | Setting | Effect |
+  | --- | --- |
+  | **Hidden** | Manually turns the form off regardless of dates |
+  | **End Date** | Automatically stops showing the form after the availability window ends |
+
+  Use **Hidden** for manual control. Use **End Date** for schedule-based availability.
+
+  </Expandable>
+  <Expandable title="Does Due Date hide the form?" default-open="false">
+
+  No. **Due Date** does not hide the form. It supports deadline messaging and reminder logic, but **End Date** is the setting that removes the form from availability.
+
+  If the form should disappear after the deadline, set **End Date** accordingly.
+
+  </Expandable>
+  <Expandable title="Will reminders go out for my main registration form?" default-open="false">
+
+  You can configure reminder settings on some forms, but the automated reminder job skips **Registration (With Products)** forms. Use reminders for follow-up forms such as medical forms, waivers, contracts, and staff paperwork instead.
+
+  </Expandable>
+  <Expandable title="What's the difference between reminder emails and admin notification emails?" default-open="false">
+
+  | Email type | Audience | Trigger |
+  | --- | --- | --- |
+  | **Reminder emails** | Recipients who still need to complete the form | Daily automated reminder process |
+  | **Admin notification emails** | Staff administrators | Form submission activity |
+
+  Reminder emails prompt incomplete recipients. Admin notification emails tell staff that something happened.
+
+  </Expandable>
+  <Expandable title="What's the difference between Pay In Full Upon Registration and Pay In Full Discount?" default-open="false">
+
+  | Setting | Purpose |
+  | --- | --- |
+  | **Pay In Full Upon Registration** | Requires full payment |
+  | **Pay In Full Discount** | Offers a discount for choosing full payment |
+
+  One setting enforces payment timing. The other changes pricing.
+
+  </Expandable>
+  <Expandable title="How do I require staff approval before a registration counts?" default-open="false">
+
+  Set **Form Status After Completion** to **Pending Approval**. That keeps the submission from being treated as approved immediately after the family submits it.
+
+  </Expandable>
+  <Expandable title="How do I automatically activate campers when they register?" default-open="false">
+
+  Set **User Status After Completion** to **Active** if your workflow should mark the user active automatically after form completion.
+
+  </Expandable>
+  <Expandable title="How do I prevent families from editing after they submit?" default-open="false">
+
+  Set **Lock Form After Completion** to **Yes**. This is usually the right choice for registrations, contracts, and other forms that should become a fixed record after submission.
+
+  </Expandable>
+  <Expandable title="Can families opt out of form reminders?" default-open="false">
+
+  Yes. Recipients can unsubscribe from reminder emails, so do not assume every assigned recipient will continue receiving those messages indefinitely.
+
+  </Expandable>
+</ExpandableGroup>
+

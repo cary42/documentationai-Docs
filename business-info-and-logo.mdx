@@ -1,8 +1,10 @@
 ---
 title: Business Info & Logo
-description: Update your camp business details, logo, and optional DKIM email authentication so families see the right name, contact info, and branding across Campium.
+description: >-
+  Update your camp business details, logo, and optional DKIM email
+  authentication so families see the right name, contact info, and branding
+  across Campium.
 ---
-
 ## What Business Info & Logo controls
 
 Business Info & Logo settings control the basic details and branding families see when they interact with your camp through Campium.
@@ -10,15 +12,15 @@ Business Info & Logo settings control the basic details and branding families se
 These details can appear in places like:
 
 - The family portal header or footer
+
 - Automated emails and confirmations
+
 - Printed or exported reports and documents
 
 Keeping this information accurate helps families recognize your camp and know how to contact you.
 
-<Callout kind="info">
-
-Changes to Business Info & Logo may not update every screen or document instantly. If something still looks out of date, refresh your browser and re-check a few minutes later.
-
+<Callout kind="info" collapsed="false">
+  Changes to Business Info & Logo may not update every screen or document instantly. If something still looks out of date, refresh your browser and re-check a few minutes later.
 </Callout>
 
 ## Open Business Info & Logo from the dashboard
@@ -26,16 +28,12 @@ Changes to Business Info & Logo may not update every screen or document instantl
 Use the main dashboard navigation to reach the Business Info & Logo section.
 
 <Steps>
-  <Step title="Go to Site Settings" icon="settings" titleType="p">
-
+  <Step title="Go to Site Settings" icon="settings" title-type="p">
     From the dashboard, click **Admin -> Site Settings** in the left sidebar.
-
   </Step>
 
-  <Step title="Find Business Info & Logo" titleType="p">
-
+  <Step title="Find Business Info & Logo" title-type="p">
     In Site Settings, look for the **Business Info & Logo** area or tab. This section groups your camp contact details and logo together.
-
   </Step>
 </Steps>
 
@@ -48,27 +46,24 @@ Use this section to make sure families see the correct camp name and contact det
 Typical fields include:
 
 - Camp or organization name
+
 - Main contact email
+
 - Office phone number
+
 - Mailing or physical address
 
 <Steps>
-  <Step title="Review current details" titleType="p">
-
+  <Step title="Review current details" title-type="p">
     Check the **camp name**, **email**, **phone number**, and **address** fields. Make a note of anything that is outdated or incorrect.
-
   </Step>
 
-  <Step title="Edit each field" titleType="p">
-
+  <Step title="Edit each field" title-type="p">
     Click into a field to edit it, then type the correct information. Use the main camp email and phone number families should use to reach your office.
-
   </Step>
 
-  <Step title="Check formatting" titleType="p">
-
+  <Step title="Check formatting" title-type="p">
     For the address, include street, city, state or province, and postal code on the appropriate lines. For phone numbers, include the area code so families can dial you without confusion.
-
   </Step>
 </Steps>
 
@@ -82,10 +77,8 @@ When you enter your camp email domain in the Business Info or contact settings, 
 
 Publishing these records is optional, but strongly recommended to improve email deliverability and reduce the chance of messages going to Spam.
 
-<Callout kind="info">
-
-If someone else manages your website or email hosting, share the DKIM records with that person or team. They must add the records at the domain host or DNS provider to complete verification.
-
+<Callout kind="info" collapsed="false">
+  If someone else manages your website or email hosting, share the DKIM records with that person or team. They must add the records at the domain host or DNS provider to complete verification.
 </Callout>
 
 ### How DKIM with CNAME records works
@@ -96,18 +89,16 @@ Detection of the records can take time. DNS changes may take **up to 72 hours** 
 
 A typical set of generated DKIM records looks like this:
 
-| Type  | Name                | Value                                   |
-| ----- | ------------------- | --------------------------------------- |
-| CNAME | xxxxxxxxxx._domainkey | xxxxxxx.dkim.amazonses.com             |
-| CNAME | xxxxxxxx._domainkey | xxxxxxxx.dkim.amazonses.com            |
-| CNAME | xxxxxxx._domainkey  | xxxxxxx.dkim.amazonses.com             |
+| Type  | Name                   | Value                       |
+| ----- | ---------------------- | --------------------------- |
+| CNAME | xxxxxxxxxx.\_domainkey | xxxxxxx.dkim.amazonses.com  |
+| CNAME | xxxxxxxx.\_domainkey   | xxxxxxxx.dkim.amazonses.com |
+| CNAME | xxxxxxx.\_domainkey    | xxxxxxx.dkim.amazonses.com  |
 
 Your actual values will be different. Always copy the **Type**, **Name**, and **Value** exactly as shown in your own DKIM section.
 
-<Callout kind="tip">
-
-The page includes links to instructions for common DNS and hosting providers, including GoDaddy, DreamHost, Cloudflare, HostGator, Namecheap, Names.co.uk, and Wix. Use those links if you are not sure where to add CNAME records for your domain.
-
+<Callout kind="tip" collapsed="false">
+  The page includes links to instructions for common DNS and hosting providers, including GoDaddy, DreamHost, Cloudflare, HostGator, Namecheap, Names.co.uk, and Wix. Use those links if you are not sure where to add CNAME records for your domain.
 </Callout>
 
 ### Set up DKIM for your domain
@@ -115,34 +106,24 @@ The page includes links to instructions for common DNS and hosting providers, in
 Use these steps after you have confirmed the main email domain you want Campium emails to come from.
 
 <Steps>
-  <Step title="Choose the correct email domain" titleType="p">
-
+  <Step title="Choose the correct email domain" title-type="p">
     Look at the main email address you use for outgoing communications, such as `info@campbluehills.org`. The email domain is the part **after** the `@` symbol (`campbluehills.org` in this example). Enter or confirm that domain in the Business Info or contact settings so the generated DKIM records match the domain families see in their inbox.
-
   </Step>
 
-  <Step title="Open the DKIM section and review status" titleType="p">
-
+  <Step title="Open the DKIM section and review status" title-type="p">
     In the Business Info & Logo area, find the DKIM or email authentication section. Check the status line. If it shows **Not verified**, Campium will generate a list of DKIM CNAME records that you need to publish at your DNS provider.
-
   </Step>
 
-  <Step title="Copy the generated CNAME records" titleType="p">
-
+  <Step title="Copy the generated CNAME records" title-type="p">
     For each DKIM record shown, copy the **Type**, **Name**, and **Value** exactly as displayed. Avoid adding extra spaces or changing the capitalization. Keep the records handy to paste into your DNS provider.
-
   </Step>
 
-  <Step title="Add CNAME records at your DNS or hosting provider" titleType="p">
-
+  <Step title="Add CNAME records at your DNS or hosting provider" title-type="p">
     Sign in to the provider that manages DNS for your domain (for example, GoDaddy, DreamHost, Cloudflare, HostGator, Namecheap, Names.co.uk, or Wix). In the DNS management area, add a new **CNAME** record for each DKIM entry, using the copied **Name** and **Value** fields. Save or apply changes for all records.
-
   </Step>
 
-  <Step title="Wait for DNS propagation and confirm verification" titleType="p">
-
+  <Step title="Wait for DNS propagation and confirm verification" title-type="p">
     After you add the CNAME records, return to the DKIM section in Campium. The status may remain **Not verified** for some time while DNS updates propagate. Check back periodically over the next few hours or days. Once the records are detected, the status will change to show that your domain is verified.
-
   </Step>
 </Steps>
 
@@ -151,9 +132,13 @@ Use these steps after you have confirmed the main email domain you want Campium 
 If the DKIM status still shows **Not verified** after 72 hours:
 
 - Confirm that each record uses **Type CNAME**, not TXT or another type.
+
 - Compare the **Name** and **Value** fields at your DNS provider to the generated records in Campium and fix any typos.
+
 - Make sure you added the records under the correct domain (for example, `campbluehills.org`, not a different domain or subdomain).
+
 - If your DNS provider adds the domain automatically, check whether you need to use the full name (`xxxxxxxxxx._domainkey.campbluehills.org`) or only the prefix (`xxxxxxxxxx._domainkey`), based on their instructions.
+
 - Ask whoever manages your domain or DNS to confirm that the records are present and not overridden by other entries.
 
 If everything looks correct and the domain still does not verify, contact your internal Campium administrator or support with screenshots of your DNS records so they can help review the configuration.
@@ -163,42 +148,35 @@ If everything looks correct and the domain still does not verify, contact your i
 Your logo helps families recognize your camp in the family portal, emails, and reports.
 
 <Steps>
-  <Step title="Open the logo area" titleType="p">
-
+  <Step title="Open the logo area" title-type="p">
     In the Business Info & Logo section, find the **Logo** area. You should see your current logo (if you have one) or an empty placeholder.
-
   </Step>
 
-  <Step title="Upload a new logo" titleType="p">
-
+  <Step title="Upload a new logo" title-type="p">
     Click **Upload**, **Change logo**, or a similar button. In the file picker that opens, select the image file from your computer and confirm.
-
   </Step>
 
-  <Step title="Replace an existing logo" titleType="p">
-
+  <Step title="Replace an existing logo" title-type="p">
     If a logo is already set, use the same button (for example, **Replace**, **Change**, or **Upload new**) to choose a different image. Confirm the upload, then wait for the new logo preview to appear.
-
   </Step>
 
-  <Step title="Adjust if needed" titleType="p">
-
+  <Step title="Adjust if needed" title-type="p">
     If the preview looks cut off or stretched, try uploading a different version of your logo with more padding around the edges or closer to a square shape.
-
   </Step>
 </Steps>
 
-<Callout kind="tip">
+<Callout kind="tip" collapsed="false">
+  For the clearest logo:
 
-For the clearest logo:
+  - Use a **simple version** of your logo without tiny text or complex details.
 
-- Use a **simple version** of your logo without tiny text or complex details.
-- Choose an image that works well at **small sizes** (for example, in an email header).
-- Prefer a **square or nearly square** image so it fits most layouts cleanly.
-- Use a modern image format like **PNG** with a transparent background if available.
+  - Choose an image that works well at **small sizes** (for example, in an email header).
 
-If your logo looks fuzzy, try uploading a higher-quality image rather than a screenshot or photo of your logo.
+  - Prefer a **square or nearly square** image so it fits most layouts cleanly.
 
+  - Use a modern image format like **PNG** with a transparent background if available.
+
+  If your logo looks fuzzy, try uploading a higher-quality image rather than a screenshot or photo of your logo.
 </Callout>
 
 ## Verify how your changes look
@@ -206,22 +184,16 @@ If your logo looks fuzzy, try uploading a higher-quality image rather than a scr
 After you update your business details and logo, confirm what families will see.
 
 <Steps>
-  <Step title="Check the on-screen preview" titleType="p">
-
+  <Step title="Check the on-screen preview" title-type="p">
     Look for a preview of your logo and contact information directly in the Business Info & Logo section. Confirm that the camp name, email, phone, and address look correct.
-
   </Step>
 
-  <Step title="Open the family portal" titleType="p">
-
+  <Step title="Open the family portal" title-type="p">
     In a new browser tab, open your family portal link. Check the header or footer for the updated camp name and logo, and confirm the logo looks sharp and not cut off.
-
   </Step>
 
-  <Step title="Review outgoing communications or reports" titleType="p">
-
+  <Step title="Review outgoing communications or reports" title-type="p">
     If your site uses automated emails or downloaded reports, send a test message or export a sample report. Check that the name and logo appear as expected where branding is shown.
-
   </Step>
 </Steps>
 
@@ -234,23 +206,17 @@ Always save your changes and compare what you see on the screen to what families
 ### Save your changes
 
 <Steps>
-  <Step title="Save before leaving the page" titleType="p">
-
+  <Step title="Save before leaving the page" title-type="p">
     Scroll to the bottom (or top, depending on the layout) of the Business Info & Logo section and click **Save**, **Save changes**, or a similar button. Wait for a confirmation message or check that the button is no longer highlighted.
-
   </Step>
 
-  <Step title="Refresh other tabs" titleType="p">
-
+  <Step title="Refresh other tabs" title-type="p">
     If you had the family portal, email previews, or reports open in another tab, refresh those pages so they load your new settings.
-
   </Step>
 </Steps>
 
-<Callout kind="alert">
-
-If you close your browser tab or navigate away from Site Settings before clicking **Save**, your new business details and logo will not be applied.
-
+<Callout kind="alert" collapsed="false">
+  If you close your browser tab or navigate away from Site Settings before clicking **Save**, your new business details and logo will not be applied.
 </Callout>
 
 ### Common issues and how to fix them
@@ -258,39 +224,42 @@ If you close your browser tab or navigate away from Site Settings before clickin
 #### Logo looks blurry or stretched
 
 - Try uploading a **higher-quality image** of your logo instead of a screenshot.
+
 - Use a logo that is closer to a **square shape** so it does not get stretched.
+
 - Avoid logos with very thin lines or tiny text that disappear at small sizes.
 
 #### Wrong contact email or phone showing
 
 - Return to **Admin -> Site Settings** and open **Business Info & Logo** again.
+
 - Check if you have multiple email or phone fields (for example, a billing email and a main office email).
+
 - Update the field that is actually being used as the main contact and **Save**.
+
 - Refresh the family portal or email preview to confirm the correct contact details appear.
 
 #### Changes are not showing for families
 
 - Confirm you clicked **Save** in the Business Info & Logo section.
+
 - Refresh your browser and sign out then sign back in to the dashboard if needed.
+
 - Open the family portal in a private or incognito window to rule out browser caching.
+
 - If the old information still appears after a short time, contact your internal Campium administrator or support for help reviewing your settings.
 
 ## Related guides
 
 Use these guides to learn more about overall configuration and getting started.
 
-<Columns cols={2}>
-
+<Columns cols="2">
   <Card title="Settings overview" href="/settings" icon="settings" horizontal="false">
-
     Learn how Site Settings work across Campium, including other configuration areas beyond Business Info & Logo.
-
   </Card>
 
   <Card title="Quickstart" href="/quickstart" icon="rocket" horizontal="false">
-
     Walk through the key steps to get your camp up and running so families can start using the portal and communications.
-
   </Card>
-
 </Columns>
+

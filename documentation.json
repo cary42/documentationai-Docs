@@ -43,11 +43,6 @@
                 "icon": "user"
               },
               {
-                "title": "Business Info & Logo",
-                "path": "business-info-and-logo",
-                "icon": "file-text"
-              },
-              {
                 "title": "Import Users",
                 "path": "import-users",
                 "icon": "upload"
@@ -322,6 +317,11 @@
             "icon": "file-text",
             "pages": [
               {
+                "title": "Business Info & Logo",
+                "path": "business-info-and-logo",
+                "icon": "file-text"
+              },
+              {
                 "title": "Profile Fields",
                 "path": "profile-fields",
                 "icon": "list"
@@ -355,6 +355,11 @@
                 "title": "CampiumDB Users",
                 "path": "campiumdb-users",
                 "icon": "users"
+              },
+              {
+                "title": "Roles & Permissions",
+                "path": "roles-and-permissions",
+                "icon": "shield-check"
               },
               {
                 "title": "Canteen",
