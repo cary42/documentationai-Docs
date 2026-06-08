@@ -231,6 +231,11 @@
                     "title": "Processing Refunds and Voids",
                     "path": "processing-refunds-and-voids",
                     "icon": "circle-dollar-sign-icon"
+                  },
+                  {
+                    "title": "Retry Failed Scheduled Payment",
+                    "path": "retry-failed-scheduled-payment",
+                    "icon": "refresh-cw"
                   }
                 ],
                 "icon": "circle-dollar-sign-icon"
@@ -307,7 +312,13 @@
             "pages": [
               {
                 "title": "Forms",
-                "path": "forms"
+                "path": "forms",
+                "icon": "lucide-newspaper"
+              },
+              {
+                "title": "Test Mode",
+                "path": "test-mode",
+                "icon": "flask-conical"
               }
             ],
             "public": true

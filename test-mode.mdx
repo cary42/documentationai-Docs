@@ -1,0 +1,213 @@
+---
+title: Test Mode
+description: Preview forms on the parent portal before launch using Test Mode, including who can access it, what it bypasses, and how to test safely.
+---
+
+## Preview a form before families can access it
+
+Test Mode lets staff and admin users open a form on the parent portal before the form is available to families. Use it to check the form experience, confirm the right account or camper can see it, and catch issues before launch.
+
+You can turn on Test Mode from **Communication → Forms**, then open the form and use the **Test Mode** toggle in the toolbar.
+
+<Callout kind="info">
+
+Test Mode does **not** send the form to everyone. It only gives staff and admin users with parent portal access a way to view the form even when normal visibility rules would hide it.
+
+</Callout>
+
+## Who can use Test Mode
+
+Only people who are signed into the **parent portal** and also have a staff or admin role in Campium can use the Test Mode bypass. Regular family accounts still follow the form's normal visibility rules.
+
+| Person | Can use Test Mode? | What happens |
+| --- | --- | --- |
+| Staff or admin user signed into the parent portal | Yes | Can view the form on the portal even if dates or recipient rules would normally hide it |
+| Family account | No | Sees the form only when normal visibility, date, and recipient rules allow it |
+| Staff or admin user not signed into the parent portal | No | Cannot preview the form on the portal until they log in there |
+
+A red **Test Mode** badge appears on the admin Forms list and next to the form on the portal while Test Mode is active.
+
+## Where to find Test Mode
+
+Follow this path to reach the toggle.
+
+<Steps>
+  <Step title="Open Forms" icon="folder">
+
+  In Campium, go to **Communication → Forms**.
+
+  </Step>
+  <Step title="Open the form you want to test" icon="edit">
+
+  Select the form you want to preview before launch.
+
+  </Step>
+  <Step title="Turn on Test Mode" icon="play-circle">
+
+  Use the **Test Mode** toggle in the form toolbar.
+
+  After you turn it on, look for the red **Test Mode** badge on the Forms list and on the parent portal next to the form.
+
+  </Step>
+</Steps>
+
+## What Test Mode changes
+
+Test Mode changes who on staff can preview the form. It does not change every form setting.
+
+### What Test Mode bypasses
+
+For staff and admin users on the parent portal only, Test Mode can bypass these restrictions:
+
+| Setting or rule | Bypassed in Test Mode? | Notes |
+| --- | --- | --- |
+| Before the Start Date | Yes | Staff admins can still open the form |
+| After the End Date | Yes | Staff admins can still open the form |
+| Not on the Recipients list | Yes | Staff admins can still preview the form |
+| All access user type mismatch | Yes | Staff admins can still preview the form |
+
+### What Test Mode does not bypass
+
+These settings still apply even when Test Mode is on:
+
+| Setting or rule | Bypassed in Test Mode? | Notes |
+| --- | --- | --- |
+| Visibility set to Hidden | No | Hidden forms stay hidden |
+| Family access rules | No | Families do not get Test Mode access |
+| Payment processing | No | Charges are real unless your payment processor is in sandbox mode |
+| Form content | No | Test Mode does not change fields, logic, or form behavior |
+
+<Callout kind="alert">
+
+Submissions made during testing are **real submissions**. They appear in **Responses** and can trigger real emails, status changes, and payments. Payments are real unless your payment processor is in sandbox mode.
+
+</Callout>
+
+## How to test a form
+
+Use this workflow to preview safely and avoid accidental family access.
+
+<Steps>
+  <Step title="Confirm the form is limited to staff testing" icon="shield">
+
+  Before you test, make sure families cannot see the form unless you want them to.
+
+  Good ways to keep testing staff-only include:
+
+  - Set the form to start in the future
+  - Narrow the Recipients list
+  - Set visibility carefully based on your testing plan
+
+  If you set **Visibility** to **Hidden**, staff also will not be able to open it through Test Mode.
+
+  </Step>
+  <Step title="Turn on Test Mode in the form toolbar" icon="settings">
+
+  Go to **Communication → Forms**, open the form, and switch on **Test Mode**.
+
+  Check for the red **Test Mode** badge so you know the bypass is active.
+
+  </Step>
+  <Step title="Sign into the parent portal with a staff or admin account" icon="users">
+
+  Open the parent portal using a login that has both:
+
+  - access to the parent portal
+  - a staff or admin role in Campium
+
+  A regular family login will not show the form unless the normal rules already allow it.
+
+  </Step>
+  <Step title="Open the correct account or camper view" icon="check-circle">
+
+  Make sure you are viewing the same camper or account context the form is meant for.
+
+  If the form is tied to a different recipient, account, or organization context, the portal view can still be different from what you expect.
+
+  </Step>
+  <Step title="Submit only if you want to test the full workflow" icon="alert-triangle">
+
+  Submit the form only when you are ready to create a real response.
+
+  A successful test submission appears in **Responses** and may send emails, change statuses, or process payment.
+
+  </Step>
+</Steps>
+
+## What families see vs. what staff see
+
+Test Mode creates a different experience for staff admins than for families.
+
+| Viewer | If Test Mode is on | What they see |
+| --- | --- | --- |
+| Staff or admin on the parent portal | Gets the Test Mode bypass | Can preview the form even if dates or recipient rules would normally hide it |
+| Family user | Follows normal form rules | Sees the form only if it is visible, active, in date range, and matches recipients |
+| Staff or admin outside the parent portal | No portal preview access | Must sign into the parent portal to test the form there |
+
+If a form is already visible, active, within its dates, and matches the right recipients, families can still see it during your testing period. Test Mode does not block family access by itself.
+
+## Automatic turn-off
+
+Test Mode turns off automatically when the form goes live. This happens when the form is visible, active, and the current date falls between the Start Date and End Date.
+
+If Test Mode switches off on its own, that usually means the form has entered its live window. This is expected behavior, not an error.
+
+## Troubleshooting
+
+### Form is not visible on the portal
+
+Check these items first:
+
+- Make sure you are signed into the **parent portal**, not only the admin side
+- Confirm your login has a **staff or admin role**
+- Make sure you are viewing the correct camper or account
+- Confirm the form belongs to the same organization or subdomain you are testing
+- Check that **Test Mode** is still turned on
+
+### Families can see the form during testing
+
+Families can see the form if the form is already:
+
+- visible
+- inside its start and end dates
+- available to matching recipients
+
+If you want staff-only testing, use one of these options:
+
+- set the Start Date in the future
+- narrow the Recipients list
+- keep the form out of its normal live conditions
+
+### Test Mode switched off by itself
+
+This usually means the form became live. When the form is visible, active, and in its date range, Test Mode turns off automatically.
+
+### Test Mode switch is not visible
+
+Try these steps:
+
+- refresh the page
+- reopen the form from **Communication → Forms**
+- confirm you have permission to edit the form
+
+## Test Mode vs. other settings
+
+Use this table to understand what each setting controls.
+
+| Setting | What it controls | Affects staff testing? | Affects families? |
+| --- | --- | --- | --- |
+| Test Mode | Staff preview access on the parent portal | Yes | No |
+| Visibility | Whether the form is shown at all | Yes, because Hidden is not bypassed | Yes |
+| Start Date and End Date | When the form is live | Yes, for staff in Test Mode | Yes |
+| Recipients | Which users the form is assigned to | Yes, for staff in Test Mode | Yes |
+| Payment processor mode | Whether charges are test or live | Yes | Yes |
+
+## Quick checklist before going live
+
+1. Turn off any staff-only testing setup you added for previewing.
+2. Confirm the form is **Visible** if families should be able to access it.
+3. Check the **Start Date** and **End Date**.
+4. Review the **Recipients** list.
+5. Submit a final test only if you are comfortable creating a real response.
+6. Verify any payment settings, especially if you do not want live charges.
+7. Confirm the red **Test Mode** badge is gone once the form is live.

@@ -1,0 +1,286 @@
+---
+title: Retry a failed scheduled payment
+description: Retry a failed scheduled payment from the parent portal or admin portal, including family steps, staff workflows, results, and troubleshooting.
+---
+
+## Retry a failed scheduled payment
+
+Retry a failed scheduled payment when a payment-plan installment or other automatic charge did not go through. Families can retry from the parent portal. Staff can retry from a family profile or from the Scheduled Payments report.
+
+A retry runs the same scheduled charge again immediately using the payment method you choose. It does not create a new installment and it does not change the payment plan schedule.
+
+## What this is
+
+Campium runs scheduled payments on the dates in a payment plan. If a charge fails because of a declined card, insufficient funds, an expired card, a missing payment method, an ACH return, or a similar processor error, Campium marks the scheduled payment as failed and shows an error message.
+
+When you retry, Campium submits that failed scheduled charge again right away. You can retry with the same payment method or choose a different saved card or bank account.
+
+| Term | Meaning |
+| --- | --- |
+| **Scheduled payment** | An upcoming or due automatic charge on a family account |
+| **Failed scheduled payment** | A charge that was attempted and did not succeed and shows an error |
+| **Retry** | Run that failed installment again now with a selected card or bank account |
+
+<Callout kind="info">
+
+Retry applies to the existing failed scheduled payment only. Retry does not add a new payment, move the due date, or rewrite the payment plan.
+
+</Callout>
+
+## Who can retry
+
+Families only see and retry their own failed payments. Staff can retry for any family they can open in the admin portal.
+
+| Where | Who |
+| --- | --- |
+| **Parent portal** → **Payment Methods** | Logged-in family member on the account, including a primary or authorized guardian |
+| **Admin portal** → family **Profile** → **Sales** tab | Staff with profile and financial access |
+| **Admin portal** → **Scheduled Payments** report | Staff with report access |
+
+## Families: retry from the parent portal
+
+Open the parent portal when a family needs to fix a declined or returned scheduled payment on their own account.
+
+### Find failed payments
+
+<Steps>
+  <Step title="Open Payment Methods" icon="users">
+
+  Sign in to your parent portal on your organization's Campium subdomain.
+
+  Open **Account** or **My Account**, then go to **Payment Methods**.
+
+  </Step>
+  <Step title="Check the Failed Payments section" icon="alert-triangle">
+
+  If your account has failed scheduled payments, a **Failed Payments** section appears below your saved payment methods.
+
+  Each row shows the scheduled date, amount, processor error message, and the payment method that was used if one was attached to the original attempt.
+
+  </Step>
+</Steps>
+
+### Before you retry
+
+You need at least one valid payment method on file before you can retry. That can be a credit card or bank account, depending on your organization's setup.
+
+<Callout kind="tip">
+
+If the **Retry** button is disabled, add a payment method in **Payment Methods** first. Then return to the **Failed Payments** section and refresh the page if needed.
+
+</Callout>
+
+If the saved card is expired or was declined, add a new method or update the existing one before you retry. Retrying with the same invalid method usually fails again.
+
+### Retry the payment
+
+<Steps>
+  <Step title="Choose a payment method" icon="credit-card">
+
+  In the failed payment row, use the **with** dropdown to pick the payment method to charge.
+
+  </Step>
+  <Step title="Submit the retry" icon="play-circle">
+
+  Click **Retry**, then confirm when prompted.
+
+  </Step>
+  <Step title="Review the result" icon="check-circle">
+
+  Wait for the result message.
+
+  - **Success** — the charge went through, and the row should disappear after the page refreshes.
+  - **Failure** — the processor declined the charge again. Read the error, update the payment method if needed, and retry again or contact your camp office.
+
+  </Step>
+</Steps>
+
+You can retry with a different method than the one that originally failed. For example, you can switch from a declined card to a bank account.
+
+## Staff: retry from a family profile
+
+Use the family profile when you are already working with one account and want to retry a specific failed scheduled charge.
+
+### Find the failed charge
+
+<Steps>
+  <Step title="Open the family profile" icon="users">
+
+  Sign in to the admin portal, then open the family's **Profile**.
+
+  </Step>
+  <Step title="Go to the Sales tab" icon="folder">
+
+  Open the **Sales** tab to view payments and scheduled charges.
+
+  Failed scheduled charges show a **Failed:** message next to the line item and include a **retry** link.
+
+  </Step>
+</Steps>
+
+### Retry from the profile
+
+<Steps>
+  <Step title="Open the retry modal" icon="refresh-cw">
+
+  Click **retry** on the failed scheduled charge.
+
+  </Step>
+  <Step title="Select a payment method" icon="credit-card">
+
+  In the modal, choose a payment method on file for that family.
+
+  If no payment methods are available, add one first or ask the family to add one through the parent portal.
+
+  </Step>
+  <Step title="Process the payment" icon="play-circle">
+
+  Click **Retry Payment**.
+
+  </Step>
+  <Step title="Check the outcome" icon="check-circle">
+
+  Review the result in the modal or refreshed sales list.
+
+  - **Success** — the payment processes and the sales list refreshes.
+  - **Declined** — the modal shows the processor message. Choose another method or ask the family to update their card or bank account.
+
+  </Step>
+</Steps>
+
+### Related profile tools
+
+These tools help you troubleshoot, but they are separate from the retry action itself.
+
+| Tool | Use |
+| --- | --- |
+| **Recent failed payment attempts** | Shows recent decline or return records in the profile sidebar for troubleshooting context |
+| **Send payment notification** | Emails the family about the issue from the failed line item or related tools |
+
+<Callout kind="info">
+
+If the family has no payment methods on file, the retry modal prompts you to add one first. Use **Payment Methods on Portal** when that link is available, or walk the family through adding a method in the parent portal.
+
+</Callout>
+
+## Staff: retry from the Scheduled Payments report
+
+Use the Scheduled Payments report when you need to work through failed charges across many families.
+
+<Steps>
+  <Step title="Open the report" icon="bar-chart">
+
+  In the admin portal, open **System Reports**.
+
+  Under **Money**, choose **Scheduled Payments**.
+
+  </Step>
+  <Step title="Find failed rows" icon="alert-triangle">
+
+  Look for rows with failed payment styling.
+
+  The **Actions** column shows a retry icon when the scheduled payment is in failed status.
+
+  </Step>
+  <Step title="Retry the payment" icon="play-circle">
+
+  Click the retry icon, select a payment method, and confirm.
+
+  The modal flow matches the retry flow from the family profile.
+
+  </Step>
+</Steps>
+
+You can also delete a failed scheduled payment record from this report when the family will not retry that charge and will pay another way. Deleting removes the scheduled row only. Deleting does not charge the family.
+
+| Related report | Use |
+| --- | --- |
+| **Scheduled Payments Potential Issues** | Find scheduled charges that may need attention |
+| **Payment Method Updates – Families with Failed Payments** | Find families who updated payment methods after failures |
+
+## What happens when you retry
+
+Retry submits the selected payment method to the processor right away for the same amount as the original scheduled payment.
+
+<Steps>
+  <Step title="Campium attaches the selected method">
+
+  Campium attaches the payment method you selected to the failed scheduled payment.
+
+  </Step>
+  <Step title="Campium submits the charge immediately">
+
+  The charge is sent to your payment processor right away for the original scheduled amount.
+
+  </Step>
+  <Step title="Campium updates the result">
+
+  - **If approved**, the payment posts to the family balance like a normal successful charge and the item moves off the failed list.
+  - **If declined**, the scheduled payment stays failed and shows the new error message.
+
+  </Step>
+</Steps>
+
+<Callout kind="info">
+
+Retry charges immediately. Campium does not wait for the original scheduled date before submitting the payment again.
+
+</Callout>
+
+Additional notes:
+
+- Families do not get a second automatic payment-declined email only because someone clicked retry. Decline emails are tied to the automatic nightly processing run.
+- Credit card surcharges follow your normal rules for scheduled charges.
+
+## Troubleshooting
+
+Use these checks when the retry action is unavailable or the result is not what you expect.
+
+### Retry button disabled in the parent portal
+
+- Add at least one payment method on file.
+- Refresh **Payment Methods** and return to the **Failed Payments** section.
+
+### Message says to select a payment method
+
+- In the parent portal, choose a method from the **with** dropdown before clicking **Retry**.
+- In the admin portal, select a payment method in the retry modal before clicking **Retry Payment**.
+
+### Payment declined again
+
+- Read the processor error text, such as insufficient funds, expired card, or do not honor.
+- Ask the family to update or replace the payment method.
+- Retry with the new method after the update.
+- For ACH returns, use a different bank account if needed.
+
+### Failed payment is not listed
+
+- Check whether the scheduled payment is still pending and has not reached its processing date yet.
+- Review the Scheduled Payments area in admin for the current status.
+- Confirm that the issue is actually a failed scheduled payment and not a returned completed payment. ACH returns on already-posted payments appear differently on the profile, and retry does not apply to that case.
+
+### Retry succeeded but the balance looks wrong
+
+- Refresh the profile **Sales** tab.
+- Confirm that the successful payment line appears and that the balance updated.
+- Check the season filter if your account uses multiple seasons.
+
+### Repeated declines on the same card
+
+Campium may temporarily block repeated charge attempts on a vault card after multiple declines. Campium support can use **Clear lock** on recent failed attempts in the profile to remove that cache lock so retry can run again.
+
+<Callout kind="alert">
+
+Most camp office staff do not need to use this workflow. If retries keep failing without a clear processor message, contact Campium support.
+
+</Callout>
+
+## Quick reference
+
+| Goal | Where to go |
+| --- | --- |
+| Family retries their own failed charge | Parent portal → **Account** or **My Account** → **Payment Methods** → **Failed Payments** |
+| Staff retries one family's failed charge | Admin portal → **Profile** → **Sales** → **retry** on the failed line |
+| Staff retries from a list of failed charges | Admin portal → **System Reports** → **Scheduled Payments** → retry icon |
+| Staff reviews families who updated cards after failures | **Payment Method Updates – Families with Failed Payments** |
+| Staff emails a family about a failed charge | Profile or **Scheduled Payments** → send email icon |
