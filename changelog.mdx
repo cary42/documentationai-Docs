@@ -12,6 +12,30 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-10" description="Form response PDFs, payment plan reporting, push notifications, canteen validation, imports, discounts, and email fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added an **Include uploaded files** option to [Forms](/forms) Print All Responses PDFs so staff can combine submitted images and PDFs into one export.
+
+  - Added an enrollee view to the [Family Payment Plans Report](/system-report-payment-plans), showing one row per camper with their current user status.
+
+  - Added notification titles to the mobile [Push Notifications](/push-notifications) feed so messages can display a clearer headline.
+
+  ## Updates
+
+  - Improved [Canteen](/canteen) product creation with clearer price validation and support for products that do not track cost basis.
+
+  - Improved [Discounts](/discounts) that skip deposits and also include a dollar or percent credit, so the credit is recorded correctly.
+
+  ## Bug Fixes
+
+  - Fixed [Mass Emails](/mass-emails) view-email links that could fail when subjects included special characters.
+
+  - Fixed [Push Notifications](/push-notifications) message formatting so line breaks and links display correctly in the app.
+
+  - Fixed [Discounts](/discounts) with open-ended date ranges so valid codes are recognized at checkout.
+</Update>
+
 <Update label="2026-06-09" description="Photo gallery season selection, payment onboarding, tipping, chargebacks, refunds, reports, performance, and fixes" tags={["feature","improvement","bugfix"]}>
   ## New
 
@@ -623,5 +647,4 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
-
 
