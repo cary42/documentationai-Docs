@@ -466,7 +466,17 @@
       },
       {
         "tab": "FAQ",
-        "pages": [
+        "icon": "circle-question-mark-icon",
+        "groups": [
+          {
+            "group": "Forms",
+            "pages": [
+              {
+                "title": "User can't see the form on their portal",
+                "path": "user-cant-see-the-form-on-their-portal"
+              }
+            ]
+          },
           {
             "group": "Profile",
             "pages": [
@@ -536,8 +546,7 @@
               }
             ]
           }
-        ],
-        "icon": "circle-question-mark-icon"
+        ]
       }
     ]
   },

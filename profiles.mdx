@@ -203,6 +203,54 @@ Use the Actions menu when you need to do something specific for this person or f
   </Expandable>
 </ExpandableGroup>
 
+## Check Permissions
+
+**Check Permissions** is a staff troubleshooting tool in the profile action row, next to **Login**. Use it to test whether a specific person should see a specific form on the parent portal and, if not, which profile field is blocking access.
+
+Use this when a family says a form is missing even though you expect it to appear.
+
+<Steps>
+  <Step title="Open Check Permissions from any household profile" icon="search" title-type="p">
+    Open any profile in the household. In the action row near **Login**, click **Check Permissions** to open the checker.
+  </Step>
+
+  <Step title="Choose the person and form to test" icon="play-circle" title-type="p">
+    In the modal, select the household member under **Check this user's access** and the form under **To this form**. Then click the **Check Permissions** button with the play icon to run the test.
+  </Step>
+
+  <Step title="Review the result" icon="check-circle" title-type="p">
+    Read the result shown in the modal. Campium tells you whether the form should be visible and, when there is a problem, shows which rule failed.
+  </Step>
+</Steps>
+
+### Reading the results
+
+Check Permissions returns either a pass or a specific mismatch.
+
+#### Form should be visible
+
+A passing result means the date checks and recipient checks passed for that person and form. If the family still cannot see the form, move to the items in **What Check Permissions does not check** below.
+
+#### Problem found
+
+A failing result shows a comparison table with columns such as **Field**, **Recipient Values Allowed**, **User Values**, and pass or fail. It also includes a **Why this form is hidden** section that explains which value does not match.
+
+Use the result to fix the specific rule that is blocking the form:
+
+- Update the profile field so the person’s value matches one of the allowed recipient values.
+
+- Or add the missing value to the form’s **Recipients** tab if the form should be available to that person.
+
+### What Check Permissions checks
+
+Check Permissions verifies the most common reasons a form appears or stays hidden:
+
+- The form is **Active** and its visibility is set to **Visible**.
+
+- Today falls between the form’s **Start Date** and **End Date**.
+
+- The person’s profile field values match the form’s **Recipients** rules, such as season, grade, status, or other recipient filters.
+
 ## Quick View
 
 The profile includes a **My Quick View** card that shows an at-a-glance summary of selected custom fields for that person. It appears near the top of the profile content area and lists each configured field on its own line as `Field Name: Value` so staff can scan key details without opening other tabs.
@@ -586,3 +634,4 @@ Use these quick answers when something on a profile does not look right.
     - You can suggest that they sign back in, open their cart, and either complete checkout or remove items they no longer want. If problems continue, capture details like time, browser, and device and share them with your system admin.
   </Expandable>
 </ExpandableGroup>
+

@@ -1,0 +1,159 @@
+---
+title: User can't see the form on their portal
+description: >-
+  Use Check Permissions on a profile to find out why a form is missing from the
+  parent portal and identify the exact rule blocking it.
+---
+## Check Permissions shows why a form is or is not visible on the parent portal for one specific person. Find it in the **Admin site** by opening a **profile** and clicking **Check Permissions** in the top action row next to **Login**.
+
+Use this tool when a family says a form should be on the portal but is missing. **Check Permissions** does not fix the problem for you. It shows whether the issue is the form's **date window** or a **Recipients** mismatch on the person's profile.
+
+## Who should use Check Permissions?
+
+| Who                                                                        | Should use it? |
+| -------------------------------------------------------------------------- | -------------- |
+| **Office staff, registrars, directors** troubleshooting portal form issues | **Yes**        |
+| **Anyone with profile access** in CampiumDB                                | **Yes**        |
+| **Families or parents** on the portal                                      | **No**         |
+| **Staff setting up a new form** before launch                              | **Sometimes**  |
+
+You do not need billing, IT, or super-user access specifically. You only need access to open profiles and forms.
+
+## Why use Check Permissions?
+
+Use **Check Permissions** when you need a clear answer for one person and one form. Instead of guessing between dates, Recipients, and profile fields, you can see exactly what passed and what failed.
+
+It tells you two things:
+
+1. Whether the form is **Active** and within its **Start Date** and **End Date**
+
+2. Whether the person's profile matches every **Recipients** filter on that form
+
+If something does not match, the result shows a field-by-field table and a **Why this form is hidden** explanation. That makes it easier to answer the family with something specific, such as **Season is blank** or **Grade does not match**.
+
+<Callout kind="info" collapsed="false">
+  **Check Permissions does not** change settings, send emails, or verify every possible portal issue. It does not check guardian **Allowed access to financials**, **user type** on the form's Recipients tab, the correct **portal URL**, or whether the family logged into the correct account.
+</Callout>
+
+If **Check Permissions** says the form should be visible and the family still cannot see it, move to those other checks next.
+
+## Questions that should lead you to Check Permissions
+
+### 1. Why can't this family see the registration form on the portal?
+
+- **Use Check Permissions when:** The form is **Visible**, you believe dates and Recipients are set correctly, and one household still does not see it.
+
+- **What you'll learn:** Whether the problem is the date window or a **Recipients** mismatch caused by a missing or incorrect profile field.
+
+### 2. There is nothing on the portal, or the forms area is empty
+
+- **Use Check Permissions when:** The portal loads, but the forms section is empty or says `There are currently no active forms for this person.`
+
+- **What you'll learn:** Whether any form should appear for that camper under the current rules.
+
+If **Check Permissions** passes but they still see nothing, check the logging-in guardian's **Allowed access to financials** setting. That setting can hide the entire forms area, and **Check Permissions** does not test it.
+
+### 3. We added them to the form. Why is it still not showing up?
+
+- **Use Check Permissions when:** You changed **Recipients** or updated the camper's profile and expected the form to appear right away.
+
+- **What you'll learn:** Which profile field still does not match.
+
+This is common after imports or bulk updates when fields like **Season** or **Program** were left blank.
+
+### 4. The form works for other campers, but not this one
+
+- **Use Check Permissions when:** Siblings or other campers can see the form, but one camper cannot.
+
+- **What you'll learn:** The exact difference between that camper's **User Values** and the form's **Recipient Values Allowed**.
+
+Most of the time, one profile value is different or missing.
+
+### 5. Is this camper actually eligible for this form?
+
+- **Use Check Permissions when:** You are preparing for registration, moving a camper to a new session, or staff disagree about whether a camper should receive a form.
+
+- **What you'll learn:** A clear yes or no for that camper, plus the exact field blocking visibility if the answer is no.
+
+Use that result before changing Recipients for everyone.
+
+### 6. The family says the form ended or never started. Is that true?
+
+- **Use Check Permissions when:** You need to confirm whether the form is currently available on the portal for that person.
+
+- **What you'll learn:** Whether today's date falls outside the form's active window.
+
+This helps you confirm the portal view, not just what the form list shows in admin.
+
+### 7. Check Permissions says visible, but they still do not see it
+
+Use **Check Permissions** first to rule out date and Recipients issues. Then check the items below.
+
+| Check                                                   | Where                      |
+| ------------------------------------------------------- | -------------------------- |
+| Guardian **Allowed access to financials**               | Parent profile → meta link |
+| Form **Visibility** is set to **Visible**               | Form → Settings            |
+| Correct **user type** on the form                       | Form → Recipients          |
+| Correct **portal URL** and correct login                | Profile → **Login**        |
+| Camper is not **Deleted**, **Removed**, or **Archived** | Profile status             |
+
+## How to run it
+
+<Steps>
+  <Step title="Open a profile" icon="users" title-type="p">
+    Open any profile in the household.
+  </Step>
+
+  <Step title="Click Check Permissions" icon="search" title-type="p">
+    In the top action row, click **Check Permissions** next to **Login**.
+  </Step>
+
+  <Step title="Choose the person to check" icon="user-check" title-type="p">
+    Select **Check this user's access**. In most cases, choose the **camper**, not the parent.
+  </Step>
+
+  <Step title="Choose the form" icon="file-search" title-type="p">
+    Select **To this form**, then choose the form the family expects to see.
+  </Step>
+
+  <Step title="Run the check" icon="play-circle" title-type="p">
+    Click **Check Permissions** in the modal.
+  </Step>
+</Steps>
+
+**Success:** You see **Form should be visible**.
+
+**Problem:** You see a comparison table and a **Why this form is hidden** explanation. Fix the profile field, Recipients setting, or date setting, then run the check again.
+
+## FAQ — Basics
+
+<ExpandableGroup>
+  <Expandable title="What does Check Permissions do?" default-open="false">
+    It compares one person's profile against one form's **date window** and **Recipients** rules. If something does not match, it explains the mismatch in plain language.
+  </Expandable>
+
+  <Expandable title="Does it fix anything?" default-open="false">
+    No. **Check Permissions** only explains why the form is visible or hidden. Update the profile, the form's **Recipients** tab, or the form settings, then run it again to confirm the result.
+  </Expandable>
+
+  <Expandable title="Can families use it?" default-open="false">
+    No. **Check Permissions** is a staff-only tool on the admin profile page.
+  </Expandable>
+</ExpandableGroup>
+
+## Related docs
+
+<Columns cols="3">
+  <Card title="Forms" href="/forms" icon="book-open" cta="Open doc" horizontal="false">
+
+  </Card>
+
+  <Card title="Test Mode" href="/test-mode" icon="check-circle" cta="Open doc" horizontal="false">
+
+  </Card>
+
+  <Card title="Permissions and Recipients" href="/permissions-and-recipients" icon="settings" cta="Open doc" horizontal="false">
+
+  </Card>
+</Columns>
+
