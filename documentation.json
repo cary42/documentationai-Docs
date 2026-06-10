@@ -63,6 +63,11 @@
                 "title": "Authentication",
                 "path": "authentication",
                 "icon": "shield"
+              },
+              {
+                "title": "Payment Processors",
+                "path": "payment-processors",
+                "icon": "credit-card"
               }
             ],
             "public": true

@@ -1,0 +1,29 @@
+---
+title: Payment Processors
+description: Understand how Campium works with payment processors and review Finix settlement windows, timing, and approval behavior.
+---
+
+## What a payment processor does
+
+A payment processor is a third-party service that handles the actual movement of money when families pay your organization. Payment processors handle actions such as credit card charges, ACH debits, refunds, and related fund transfers on your behalf.
+
+Campium integrates with payment processors, but processor-specific details such as settlement timing, fees, and transaction behavior depend on the provider you use. For those details, refer to the documentation for your specific payment processor.
+
+## Finix
+
+Finix uses accruing settlements that run on a 24-hour cycle. The settlement window and default settlement timing differ by payment method.
+
+### Settlement windows
+
+- **Credit cards** — 10:00 PM ET to 10:00 PM ET, with a default settlement of **T+2**
+- **ACH** — 8:00 PM ET to 8:00 PM ET, with a default settlement of **T+5**
+
+<Callout kind="info">
+
+Finix settlement windows cannot be adjusted.
+
+</Callout>
+
+### Settlement approval timing
+
+Finix settlements are typically approved Monday through Friday, excluding holidays, between **1:15 PM ET and 2:15 PM ET**. If a settlement falls on a weekend or holiday, approval timing may shift to the next business day.
