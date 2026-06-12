@@ -46,6 +46,11 @@
                 "title": "Import Users",
                 "path": "import-users",
                 "icon": "upload"
+              },
+              {
+                "title": "Staff Applications",
+                "path": "staff",
+                "icon": "briefcase"
               }
             ],
             "public": true
