@@ -12,6 +12,48 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-12" description="Donation links, profile fields, forms, email delivery, refunds, canteen, photos, payments, security, reports, and admin fixes" tags={["feature","improvement","security","bugfix"]}>
+  ## New
+
+  - Added **prefilled donation links** so camps can send families directly to donation pages with suggested details already filled in.
+
+  - Added a **Link to a User** field type in [Profile Fields](/profile-fields) for connecting related people on a profile.
+
+  - Added **direct form access links** in [Forms](/forms) so staff can share a specific form with eligible families more easily.
+
+  - Added **partial tip refunds** in [Processing Refunds and Voids](/processing-refunds-and-voids), allowing staff to refund part of a tip without refunding the full payment.
+
+  ## Updates
+
+  - Improved [Mass Emails](/mass-emails) delivery so messages sent to linked staff are routed to the correct staff email address.
+
+  - Improved [Canteen](/canteen) history loading so account activity opens more reliably for larger histories.
+
+  - Improved staff access to mobile [Photo Hosting](/photo-hosting) seasons so authorized staff can view the right season photos.
+
+  - Added recipient filter guardrails to help prevent unintended [Mass Emails](/mass-emails) recipient changes.
+
+  - Improved saved-card verification in [Account](/account) flows before families use stored payment methods.
+
+  - Improved stored-card surcharge accuracy so checkout totals and saved-card charges match more consistently.
+
+  - Strengthened **2FA protections** around account access and authentication-sensitive actions.
+
+  - Improved ticket email notifications so staff and families receive the right updates when ticket activity changes.
+
+  - Improved [Memberships](/memberships) recurring payment totals so service fees are included correctly.
+
+  ## Bug Fixes
+
+  - Fixed [Custom Reports](/custom-reports) AI Reports loading states so report generation feedback appears consistently.
+
+  - Fixed [Photo Hosting](/photo-hosting) photo-count reporting so season and gallery counts stay accurate.
+
+  - Fixed profile-photo opt-out handling so excluded profiles are respected in photo-related workflows.
+
+  - Fixed admin search resilience so staff searches continue working when individual records contain unexpected data.
+</Update>
+
 <Update label="2026-06-10" description="Form response PDFs, payment plan reporting, push notifications, canteen validation, imports, discounts, and email fixes" tags={["feature","improvement","bugfix"]}>
   ## New
 
@@ -647,4 +689,3 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
-
