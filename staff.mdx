@@ -1,102 +1,80 @@
 ---
 title: Staff Applications
-description: Set up a staff application form, manage applicants in Staff Hub, and understand how staff interact with your portal.
+description: >-
+  Set up a staff application form, manage applicants in Staff Hub, and
+  understand how staff interact with your portal.
 ---
-
 ## Set up staff applications in the same portal families use
 
 Staff apply through your normal portal website, not a separate staff-only site. After applicants log in as **Staff**, they see forms and tasks meant for staff, while your team uses CampiumDB to build forms, review applications, and manage hiring.
 
 <Callout kind="info" collapsed="false">
+  Campium has two login destinations:
 
-Campium has two login destinations:
+  - **CampiumDB** is your admin site for directors, HR, and office staff.
 
-- **CampiumDB** is your admin site for directors, HR, and office staff.
-- **Your portal** is the website applicants and families use.
+  - **Your portal** is the website applicants and families use.
 
-Send staff applicants to the same portal URL families use, such as `https://yourcamp.campium.com`.
-
+  Send staff applicants to the same portal URL families use, such as `https://yourcamp.campium.com`.
 </Callout>
 
 ## Build your staff application
 
 <Steps>
   <Step title="Create the form" icon="plus" title-type="p">
+    In CampiumDB, go to **Communication → Forms** and add a new form. If you already have a staff application from a previous season, copying it is often the fastest starting point.
 
-  In CampiumDB, go to **Communication → Forms** and add a new form. If you already have a staff application from a previous season, copying it is often the fastest starting point.
+    Choose the form type that matches your hiring flow:
 
-  Choose the form type that matches your hiring flow:
+    - **Standard (No Products)** — best for most staff applications that only collect answers.
 
-  - **Standard (No Products)** — best for most staff applications that only collect answers.
-  - **Registration (With Products)** — use this only when applicants must choose sessions or pay a fee as part of applying.
-  - **Upload a File** — use this when you only need a document upload.
+    - **Registration (With Products)** — use this only when applicants must choose sessions or pay a fee as part of applying.
 
-  When this step is complete, you have a form shell ready for recipients, settings, and questions.
+    - **Upload a File** — use this when you only need a document upload.
 
+    When this step is complete, you have a form shell ready for recipients, settings, and questions.
   </Step>
 
   <Step title="Target the form to staff" icon="users" title-type="p">
+    Open the form and go to the **Recipients** tab. Under **User types**, select **Staff**.
 
-  Open the form and go to the **Recipients** tab. Under **User types**, select **Staff**.
+    Then choose who should receive the form:
 
-  Then choose who should receive the form:
+    - **All Active/Inactive/Pending staff** — the usual choice for open hiring.
 
-  - **All Active/Inactive/Pending staff** — the usual choice for open hiring.
-  - **Only people who match the filters below** — use this when you want to limit access to a specific group, such as invited applicants.
+    - **Only people who match the filters below** — use this when you want to limit access to a specific group, such as invited applicants.
 
-  <Callout kind="alert" collapsed="false">
+    <Callout kind="alert" collapsed="false">
+      If **Staff** is not selected on the Recipients tab, the form will not appear for staff on the portal.
+    </Callout>
 
-  If **Staff** is not selected on the Recipients tab, the form will not appear for staff on the portal.
-
-  </Callout>
-
-  Save your changes before moving on.
-
+    Save your changes before moving on.
   </Step>
 
-  <Step title="Configure form settings" icon="settings" title-type="p">
+  <Step title="Add application questions as you normally would" icon="edit" title-type="p">
+    Go to the **Questions** tab and add the information you need to evaluate applicants.
 
-  Open the **Settings** tab and configure when the form is available, what happens after submission, and how the applicant record should be handled.
+    Common staff application questions include:
 
-  | Setting | What to do |
-  | --- | --- |
-  | **Form name** | Use a clear name such as **Summer 2026 Staff Application**. |
-  | **Season** | Select the hiring season this form belongs to. |
-  | **Start / End dates** | Set the dates when staff can open and submit the form. |
-  | **Visibility** | Keep the form **Hidden** while building it, then switch to **Visible** when ready. |
-  | **Form Status After Completion** | Use **Pending Approval** when your team reviews applications before accepting them. |
-  | **User Status After Completion** | **Pending** is common for new applicants. Use **Active** only when you want to auto-accept. |
-  | **Staff season assignment** | Set to **Yes** on your main hiring form only. This adds the season to the staff profile when the application is completed. Set to **No** on extra forms such as references, background checks, or handbook acknowledgments. |
-  | **Send Admin Email Notification To** | Choose who on your team should receive a submission email. |
-  | **Thank You Message** | Enter the message applicants should see immediately after submitting. |
+    - Experience working with children
 
-  Save the settings after you finish.
+    - Certifications and licenses
 
-  </Step>
+    - Availability
 
-  <Step title="Add application questions" icon="edit" title-type="p">
+    - References
 
-  Go to the **Questions** tab and add the information you need to evaluate applicants.
+    - Position preferences
 
-  Common staff application questions include:
+    - Housing or scheduling needs
 
-  - Experience working with children
-  - Certifications and licenses
-  - Availability
-  - References
-  - Position preferences
-  - Housing or scheduling needs
-
-  A completed Questions tab gives applicants everything they need to submit one clear application.
-
+    A completed Questions tab gives applicants everything they need to submit one clear application.
   </Step>
 
   <Step title="Connect the form to Staff Hub" icon="folder" title-type="p">
+    Go to **Admin → Staff Hub** and open **Staff Hub Settings**. Under **Staff form by season**, select the staff application form for each season you are hiring for.
 
-  Go to **Admin → Staff Hub** and open **Staff Hub Settings**. Under **Staff form by season**, select the staff application form for each season you are hiring for.
-
-  You can also choose which profile fields appear as columns in the Staff Hub list. Save after you finish so your hiring team can track applicants in one place.
-
+    You can also choose which profile fields appear as columns in the Staff Hub list. Save after you finish so your hiring team can track applicants in one place.
   </Step>
 </Steps>
 
@@ -106,9 +84,9 @@ Staff usually apply in one of two ways. The best option depends on whether appli
 
 ### Path A: Applicants create their own account
 
-Turn on **Register Module For Portal** in **Admin → Site Settings → Modules** if registration is not already enabled. On the portal login page, applicants click **Create Your Account**, choose **Staff**, and then log in to complete the application.
+On the portal login page, applicants go to **Create Your Account**, choose **Staff** from the **I am** dropdown, and then log in to complete the application.
 
-You can change the label applicants see for that choice under **Site Text → Register as Staff**. Once they are logged in, the staff application appears if the form is visible and the Recipients rules include them.
+You can change the label applicants see for that dropdown choice under **Portal → Settings**. Once they are logged in, the staff application appears if the form is visible and the Recipients rules include them.
 
 ### Path B: Your team creates the account first
 
@@ -120,16 +98,14 @@ This path works well when you want tighter control over who can apply. The form 
 
 After staff log in to the portal, they see the items you have enabled and targeted to them.
 
-| Portal feature | What staff can do |
-| --- | --- |
-| **Forms** | Complete the staff application and any other forms sent to Staff. |
-| **Contracts** | Review and sign employment paperwork you sent them. |
+| Portal feature     | What staff can do                                                             |
+| ------------------ | ----------------------------------------------------------------------------- |
+| **Forms**          | Complete the staff application and any other forms sent to Staff.             |
+| **Contracts**      | Review and sign employment paperwork you sent them.                           |
 | **Clock in / out** | Punch in and out for the day if staff time tracking is enabled on the portal. |
 
 <Callout kind="tip" collapsed="false">
-
-Staff do not see camper registration forms unless you also targeted those forms to **Staff**.
-
+  Staff do not see camper registration forms unless you also targeted those forms to **Staff**.
 </Callout>
 
 ## Manage applicants and staff records in CampiumDB
@@ -143,9 +119,13 @@ Go to **Admin → Staff Hub** to track everyone who started your staff applicati
 Use Staff Hub to:
 
 - Update application statuses such as **Hired**, **Interview**, or **Declined**
+
 - Edit profile fields from the list
+
 - See which forms each person started or finished
+
 - Review contract status, including whether a contract was sent or signed
+
 - Send contracts from the list
 
 ### Staff profiles
@@ -170,10 +150,10 @@ This is separate from applying, but it becomes part of the same staff record aft
 
 Campium supports two staff time tracking workflows:
 
-| Setting | How it works |
-| --- | --- |
+| Setting                              | How it works                                                        |
+| ------------------------------------ | ------------------------------------------------------------------- |
 | **Staff Time Tracking On CampiumDB** | Your team clocks staff in and out from the admin attendance screen. |
-| **Staff Time Tracking On Portal** | Staff clock themselves in and out on the portal. |
+| **Staff Time Tracking On Portal**    | Staff clock themselves in and out on the portal.                    |
 
 ### Give hired staff access to CampiumDB
 
@@ -182,73 +162,80 @@ Applying on the portal does not give someone access to CampiumDB. CampiumDB is y
 To give a hired staff member admin access, go to **Admin → CampiumDB Users** and click **Add New User With Role**. Find the staff member's name and assign the appropriate role, such as **Office**, **Nurse**, or **Administrator**.
 
 <Callout kind="info" collapsed="false">
-
-Parents and campers never appear in **CampiumDB Users**. Only people with an assigned admin role can log in to CampiumDB.
-
+  Parents and campers never appear in **CampiumDB Users**. Only people with an assigned admin role can log in to CampiumDB.
 </Callout>
 
 ## Quick checklist
 
 1. Create the form, usually as **Standard (No Products)**.
+
 2. On **Recipients**, set **User types** to **Staff**.
+
 3. Set the season, start and end dates, and switch visibility to **Visible** when ready.
+
 4. Set **Staff season assignment** to **Yes** on the main hiring form only.
+
 5. Add your application questions.
+
 6. Map the form in **Staff Hub Settings**.
+
 7. Turn on portal registration if applicants will create their own accounts.
+
 8. Test the process by logging in as Staff or by using Test Mode while building.
+
 9. Use Staff Hub to track submissions and update statuses.
 
 ## Common questions
 
 <ExpandableGroup>
   <Expandable title="Where is the staff portal?" default-open="false">
-
-  There is no separate staff portal. Send applicants to the same portal website families use, and have them log in as **Staff**.
-
+    There is no separate staff portal. Send applicants to the same portal website families use, and have them log in as **Staff**.
   </Expandable>
 
   <Expandable title="The form does not show for someone" default-open="false">
+    Check each of these items:
 
-  Check each of these items:
+    - The form's **Recipients** tab includes **Staff**
 
-  - The form's **Recipients** tab includes **Staff**
-  - The applicant matches any filters you set
-  - The form is **Visible**
-  - Today's date is between the form's start and end dates
-  - The account is set up as **Staff**
-  - **Check Permissions** on the person's profile confirms they can see the form
+    - The applicant matches any filters you set
 
+    - The form is **Visible**
+
+    - Today's date is between the form's start and end dates
+
+    - The account is set up as **Staff**
+
+    - **Check Permissions** on the person's profile confirms they can see the form
   </Expandable>
 
   <Expandable title="What is the difference between the main application and extra forms?" default-open="false">
+    Use **Staff season assignment = Yes** on the main application only. That form represents applying for the season and adds the season to the staff profile.
 
-  Use **Staff season assignment = Yes** on the main application only. That form represents applying for the season and adds the season to the staff profile.
-
-  Use separate forms for references, background checks, handbooks, and similar follow-up tasks. On those forms, keep **Staff** on the Recipients tab and set **Staff season assignment = No**.
-
+    Use separate forms for references, background checks, handbooks, and similar follow-up tasks. On those forms, keep **Staff** on the Recipients tab and set **Staff season assignment = No**.
   </Expandable>
 
   <Expandable title="Can staff see CampiumDB?" default-open="false">
-
-  Staff can only access CampiumDB if you add them in **CampiumDB Users** and assign a role. Completing a staff application on the portal does not create admin access.
-
+    Staff can only access CampiumDB if you add them in **CampiumDB Users** and assign a role. Completing a staff application on the portal does not create admin access.
   </Expandable>
 </ExpandableGroup>
 
 ## Related guides
 
-<Columns cols={2}>
-  <Card title="Forms" href="/forms" icon="edit">
+<Columns cols="2">
+  <Card title="Forms" href="/forms" icon="edit" horizontal="false">
     Build and manage the forms you send to families and staff.
   </Card>
-  <Card title="Test Mode" href="/test-mode" icon="check-circle">
+
+  <Card title="Test Mode" href="/test-mode" icon="check-circle" horizontal="false">
     Verify form behavior before you make a staff application visible.
   </Card>
-  <Card title="CampiumDB Users" href="/campiumdb-users" icon="users">
+
+  <Card title="CampiumDB Users" href="/campiumdb-users" icon="users" horizontal="false">
     Add internal users and assign the right admin roles after hiring.
   </Card>
-  <Card title="Roles and Permissions" href="/roles-and-permissions" icon="shield">
+
+  <Card title="Roles and Permissions" href="/roles-and-permissions" icon="shield" horizontal="false">
     Control what office staff and other admin users can access in CampiumDB.
   </Card>
 </Columns>
+
