@@ -575,6 +575,120 @@ Each tab focuses on a different part of the person’s record. Use these section
       When you spot a confusing value on another tab, check the Audit tab to see when it changed and which staff member updated it before you reach out with questions.
     </Callout>
   </Tab>
+
+  <Tab title="Contracts" icon="file-signature">
+    The **Contracts** tab shows every contract tied to the family linked to the profile you opened, including draft, sent, in-progress, completed, and signed contracts.
+
+    Open this tab when you need to confirm whether a required agreement was signed, check which family member a contract belongs to, or pull a signed PDF without leaving the profile.
+
+    <Callout kind="info" collapsed="false">
+      The **Contracts** tab only appears when the Contracts module is enabled for your organization and your staff role includes permission to view and manage contracts. If you do not see **Contracts** under **More**, ask an administrator to confirm both the module setting and your role access.
+    </Callout>
+
+    ### Where to find it
+
+    The Contracts tab sits under the **More** dropdown in the profile tab bar alongside items such as **Pickup Info**, **Signatures**, **Logins**, and **Audit**.
+
+    <Steps>
+      <Step title="Open a person’s profile in the admin portal" icon="search" title-type="p">
+        Go to any camper, parent or guardian, or staff profile. You can start from any family member because the Contracts tab shows contracts for the full family account.
+      </Step>
+
+      <Step title="Open the More dropdown in the tab bar" icon="arrow-right" title-type="p">
+        In the row of profile tabs, click **More** to open the overflow menu that includes less-used tabs.
+      </Step>
+
+      <Step title="Select Contracts" icon="file-signature" title-type="p">
+        Click **Contracts**. The tab loads when you open it and displays a sortable contracts table for that family.
+      </Step>
+    </Steps>
+
+    ### What you see in the table
+
+    The table lists contracts newest first by created date, so recent activity appears at the top. You can sort and search the list the same way you do in other profile tables.
+
+    Each row shows these columns:
+
+    - **Contract**: The name of the contract template, such as `Staff Agreement 2026` or `Photo Release`.
+
+    - **For**: The family member the contract belongs to.
+
+    - **Status**: The current stage of the contract workflow, shown as a colored badge.
+
+    - **Created**: When the contract was created or sent.
+
+    - **Signed**: When the contract was signed, if it has been signed.
+
+    - **Actions**: Available actions such as **Preview** and, for signed contracts, **Download**.
+
+    If the family has no contracts yet, the table shows `No contracts for this family yet.`
+
+    ### What profile you opened versus what contracts appear
+
+    The Contracts tab opens from one person’s profile, but the results cover the entire linked family account. If you open a parent’s profile, you may see contracts for that parent, their campers, and other linked family members. If you open a camper’s profile, you still see the same household-wide contract list.
+
+    Use the **For** column to confirm which person each contract belongs to before you preview or download anything.
+
+    ### Contract statuses
+
+    Status badges help you see where each contract stands without opening it.
+
+    - **Signed**: The contract has been signed and shows a signed date.
+
+    - **Sent**: The contract was sent and is waiting for a signature.
+
+    - **Signing**: The signing process is currently in progress.
+
+    - **Completed**: The contract workflow is finished.
+
+    - **Draft**: The contract was created but has not been sent yet.
+
+    ### What you can do from this tab
+
+    Use **Preview** on any contract to open it in a new browser tab. Signed contracts open the signed PDF, while unsigned contracts open the document with a note that it has not been signed yet.
+
+    Use **Download** when you need a copy of a signed contract for records or review. Download is only available for signed contracts, so you cannot download unsigned contracts from this tab.
+
+    ### How this relates to other areas
+
+    The Contracts tab is the quickest profile-level view for contract history, but it is not the only place contracts appear.
+
+    - **Admin → Contracts**: Create templates, send contracts, and manage contract activity across your organization.
+
+    - **Profile → Files**: Signed contracts may also appear in the family file list if you have contract access.
+
+    - **Parent portal → Contracts**: Guardians and staff sign assigned contracts there, not in the admin profile tab.
+
+    ### Typical uses
+
+    - Check whether a family signed required agreements before camp starts.
+
+    - Review pending contracts for a guardian, camper, or staff member from their profile.
+
+    - Download a signed PDF without searching email history or the **Files** tab.
+
+    - Review contract activity for the whole household from any one family member’s profile.
+
+    ### Quick reference
+
+    <ExpandableGroup>
+      <Expandable title="Who sees the Contracts tab?" default-open="false">
+        Staff see the **Contracts** tab only when their role includes Contracts permission and the Contracts module is enabled for the organization.
+      </Expandable>
+
+      <Expandable title="Whose contracts appear in the list?" default-open="false">
+        The list shows contracts for everyone in the family linked to the profile you opened, not only the specific person whose profile is on screen.
+      </Expandable>
+
+      <Expandable title="Can I download an unsigned contract?" default-open="false">
+        No. Use **Preview** to open unsigned contracts. **Download** is only available for signed contracts.
+      </Expandable>
+
+      <Expandable title="Where do families sign contracts?" default-open="false">
+        Families and staff sign assigned contracts in the parent portal under **Contracts**, not in this admin tab.
+      </Expandable>
+    </ExpandableGroup>
+  </Tab>
 </Tabs>
 
 ## Troubleshooting
@@ -634,4 +748,3 @@ Use these quick answers when something on a profile does not look right.
     - You can suggest that they sign back in, open their cart, and either complete checkout or remove items they no longer want. If problems continue, capture details like time, browser, and device and share them with your system admin.
   </Expandable>
 </ExpandableGroup>
-
