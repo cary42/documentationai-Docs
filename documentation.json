@@ -51,6 +51,11 @@
                 "title": "Staff Applications",
                 "path": "staff",
                 "icon": "briefcase"
+              },
+              {
+                "title": "Mobile App",
+                "path": "mobile-app",
+                "icon": "smartphone"
               }
             ],
             "public": true
@@ -99,7 +104,8 @@
                     "title": "Revenue Summary",
                     "path": "revenue-summary"
                   }
-                ]
+                ],
+                "icon": "circle-dollar-sign"
               },
               {
                 "group": "Attendance",
@@ -120,7 +126,8 @@
                     "title": "My Groups",
                     "path": "my-groups"
                   }
-                ]
+                ],
+                "icon": "calendar-check-icon"
               },
               {
                 "group": "System",
@@ -189,7 +196,8 @@
                     "title": "Combined Season Invoices",
                     "path": "combined-season-invoices"
                   }
-                ]
+                ],
+                "icon": "clipboard-list-icon"
               },
               {
                 "group": "Custom",
@@ -202,7 +210,8 @@
                     "title": "Allow a staff user to see a report",
                     "path": "allow-a-staff-user-to-see-a-report"
                   }
-                ]
+                ],
+                "icon": "calendar-fold-icon"
               }
             ],
             "public": true
