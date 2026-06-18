@@ -11,11 +11,12 @@ Some integrations require API keys, and some require you to sign in and approve 
 
 ## Supported integrations
 
-- Mailchimp — send contact updates to a Mailchimp audience.
-- Klaviyo — send contact updates to a Klaviyo list.
-- Constant Contact — connect an account, choose a list, and sync contacts.
-- Slack — send activity alerts to a Slack channel.
-- QuickBooks Online — sync customers, invoices, payments, and items.
+- Mailchimp - send contact updates to a Mailchimp audience.
+- Klaviyo - send contact updates to a Klaviyo list.
+- Constant Contact - connect an account, choose a list, and sync contacts.
+- Slack - send activity alerts to a Slack channel.
+- QuickBooks Online - sync customers, invoices, payments, and items.
+- Salesforce - two-way sync of family and parent contact information.
 
 ## Mailchimp
 
@@ -122,6 +123,92 @@ What sends to Slack:
     Use **Connection Status** to verify the link and **View Logs** to review sync history.
   </Step>
 </Steps>
+
+## Salesforce
+
+Campium can connect to your Salesforce account so family and parent contact information stays up to date in both places.
+
+### What gets synced
+
+| In Campium | In Salesforce |
+| -- | -- |
+| Family | Account (e.g. "Smith Family") |
+| Parent / guardian | Contact (linked to that family's Account) |
+
+Included for each parent:
+
+- First and last name
+- Email
+- Cell phone
+- Mailing address (street, city, state, zip, country)
+
+Not included:
+
+- Campers or staff
+- Registrations or enrollments
+- Payments or invoices
+- Opportunities, leads, or other Salesforce objects
+
+### How syncing works
+
+Two-way sync - changes in Campium can flow to Salesforce, and changes in Salesforce can flow back to Campium.
+
+When it runs:
+
+- You can click **Sync now** anytime
+- It also runs automatically about every 15 minutes once connected
+
+If the same record was edited in both places, the most recent change wins.
+
+**First-time setup:**
+
+- Parents in Campium are sent to Salesforce as Contacts
+- Their family is created as an Account in Salesforce
+- If a Contact with the same email already exists in Salesforce, Campium links to it instead of creating a duplicate
+
+**From Salesforce into Campium:**
+
+- Updates apply to parents who are already in Campium
+- Campium can match by email and link an existing Salesforce Contact
+- Campium does not create new parent accounts from Salesforce-only contacts
+
+### Who is included
+
+Only active parents/guardians. Inactive parents and campers are not synced.
+
+### Getting started
+
+<Steps>
+  <Step title="Open Salesforce settings">
+    Go to **Admin > Integrations > Salesforce**.
+  </Step>
+  <Step title="Connect your account">
+    Click **Connect Salesforce** and sign in when prompted.
+  </Step>
+  <Step title="Run a sync">
+    Click **Sync now**, or wait for the next automatic sync (about every 15 minutes).
+  </Step>
+</Steps>
+
+On the settings page you will see:
+
+- Whether you are connected
+- When you connected and last synced
+- A summary of the last sync (how many records were sent, brought in, conflicts resolved, errors)
+
+**Disconnect** stops syncing and removes the connection. You can reconnect later.
+
+If the connection expires, you will see a prompt to reconnect.
+
+### What you don't need to do in Salesforce
+
+You don't need to add custom fields or special IDs in Salesforce. Campium tracks which Campium family/parent matches which Salesforce record.
+
+### Good to know
+
+- Sync is incremental - only records that changed since the last run are processed
+- A problem with one record doesn't stop the rest from syncing
+- Very large batches may take more than one sync run to finish
 
 ## API keys
 
