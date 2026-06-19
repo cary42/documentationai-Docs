@@ -12,6 +12,36 @@ description: >-
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
+<Update label="2026-06-19" description="Parent account redesign, waitlist invite cancellation, balance transfer reporting, Finix fee visibility, payment safeguards, and admin fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - Added a cancel flow for [Waitlist](/waitlist) invites so staff can withdraw an invite before a family registers.
+
+  - Added a balance transfer utilization report to [Accounts Receivable](/account-balance) workflows, making it easier to review how transferred balances are being used.
+
+  - Added a per-agency scheduled-payment-with-pending setting in [Site Settings](/settings) so camps can control how pending payments are handled before new scheduled charges run.
+
+  - Added a [Canteen](/canteen) filter in payments reporting so staff can separate canteen activity from other payment records faster.
+
+  - Redesigned the parent [Account](/account) My Account experience with a cleaner layout and clearer account-management actions for families.
+
+  ## Updates
+
+  - Improved [One-way Messaging](/one-way-messaging) by preventing duplicate sends and showing instant messages more clearly in the conversation view.
+
+  - Updated [Payment Processors](/payment-processors) deposit details for Finix so each transaction now shows real fees and net amounts instead of estimated values.
+
+  - Increased the admin [Profiles](/profiles) photo upload limit to 15 MB.
+
+  ## Bug Fixes
+
+  - Fixed duplicate same-day payment retries so staff now see a clear warning and an override option before retrying in [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
+
+  - Fixed closed-card refund failures in [Processing Refunds and Voids](/processing-refunds-and-voids) by automatically removing unusable cards and alerting staff.
+
+  - Fixed manual keyed card entry so it no longer appears for processors that do not support it in [Payment Processors](/payment-processors).
+</Update>
+
 <Update label="2026-06-12" description="Donation links, profile fields, forms, email delivery, refunds, canteen, photos, payments, security, reports, and admin fixes" tags={["feature","improvement","security","bugfix"]}>
   ## New
 
