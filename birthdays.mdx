@@ -1,0 +1,280 @@
+---
+title: Birthday Report
+description: Use the Birthday Report to see upcoming birthdays for active campers and staff, and configure automated birthday emails.
+---
+
+## Who uses this
+
+Use the **Birthday Report** to see upcoming birthdays across your active roster and manage birthday email communication from one place.
+
+- **Camp administrators and office staff** — review upcoming birthdays and export the list for planning.
+- **Program directors** — spot birthdays during the camp season for celebrations and shout-outs.
+- **Family communication staff** — turn on automated birthday emails so families receive a message on a camper's birthday.
+
+## Getting to the report
+
+Open the report from **Reports** → **System Reports** → **Misc** → **Birthdays**.
+
+<Callout kind="info">
+
+You need the **Reports** permission, `report_module`, to see Birthday Report in System Reports.
+
+</Callout>
+
+The direct URL is `/report/birthday.php`.
+
+## What the report shows
+
+Birthday Report lists every **active camper** and **active staff member** with a birthday on file. The report is **not season-specific**, so it covers your full active roster regardless of enrollment.
+
+| Column | Description |
+|--------|-------------|
+| **Name** | Links to the person's profile and opens a mini-profile when clicked. |
+| **Birthday** | Month and day, such as `Jun 24`. |
+| **Age** | Age the person will turn on their next birthday. |
+| **Type** | Shows whether the person is a Camper or Staff member. |
+
+### How the report sorts birthdays
+
+Rows are sorted by the **next upcoming birthday**, starting with today. If someone has a birthday today, that person appears first.
+
+After December 31, January birthdays move to the top for the new calendar year. If two people share the same upcoming birthday, the report sorts those names alphabetically.
+
+### Where birthday data comes from
+
+Campium first checks the **Birthday** profile field, `birth_date`. If that field is empty, Campium falls back to the birth date stored on the user record.
+
+People without a usable birth date do not appear. The report only includes users with **Active** status, so inactive, cancelled, and archived users are excluded.
+
+### Empty report
+
+If no one qualifies for the report, the page shows **No campers or staff have a birthday on file.**
+
+Update the **Birthday** profile field on camper or staff profiles, then refresh the report.
+
+## Using the report table
+
+Use the table to search, sort, and move through pages the same way you do in other Campium system reports.
+
+Export options include:
+
+- Copy
+- Excel
+- CSV
+- PDF
+- Print
+
+## Automated birthday emails
+
+Use the **Automated Birthday Emails** card above the report table to turn birthday messages on and customize the email content.
+
+### Set up automated birthday emails
+
+<Steps>
+<Step title="Open birthday email settings" icon="settings">
+
+- On the Birthday Report page, find the **Automated Birthday Emails** card.
+- Click **Settings**.
+
+</Step>
+<Step title="Enable automated emails" icon="check-circle">
+
+- Turn on **Send an automated happy birthday email to each camper and staff member on their birthday**.
+
+</Step>
+<Step title="Add the required email content" icon="edit">
+
+- Enter a **Subject** line.
+- Customize the **Email** body in the rich text editor.
+
+</Step>
+<Step title="Preview and save" icon="play-circle">
+
+- Click **Preview** to review the email with sample merge-field values.
+- Click **Save settings**.
+
+</Step>
+</Steps>
+
+### Email merge fields
+
+Use these merge fields in the birthday email subject or body.
+
+<ParamField body="first_name" param-type="string" show-location="false">
+Birthday person's first name.
+</ParamField>
+
+<ParamField body="age" param-type="string" show-location="false">
+Ordinal age the person is turning, such as `7th`.
+</ParamField>
+
+<ParamField body="age_num" param-type="integer" show-location="false">
+Numeric age the person is turning, such as `7`.
+</ParamField>
+
+<ParamField body="agency_name" param-type="string" show-location="false">
+Your camp name.
+</ParamField>
+
+<ParamField body="agency_logo" param-type="string" show-location="false">
+Your logo URL from portal settings.
+</ParamField>
+
+<ParamField body="agency_url" param-type="string" show-location="false">
+Your website or portal URL.
+</ParamField>
+
+<ParamField body="agency_id" param-type="string" show-location="false">
+Your Campium account ID.
+</ParamField>
+
+| Variable | Description |
+|----------|-------------|
+| `first_name` | Birthday person's first name |
+| `age` | Ordinal age they are turning, such as `7th` |
+| `age_num` | Numeric age, such as `7` |
+| `agency_name` | Your camp name |
+| `agency_logo` | Your logo URL from portal settings |
+| `agency_url` | Your website or portal URL |
+| `agency_id` | Your Campium account ID |
+
+### Who receives the email
+
+| Birthday person | Email goes to |
+|-----------------|---------------|
+| **Camper** | The camper's **primary account holder** |
+| **Staff** | The **staff member** directly |
+
+### When emails are sent
+
+A daily job checks for birthdays each morning in Eastern Time. Campium sends birthday emails from your **parent contact email** address.
+
+<Callout kind="info">
+
+Automated birthday emails only match the **Birthday** profile field, `birth_date`. A person can appear on the report from the fallback user record birth date and still not receive an automated birthday email.
+
+</Callout>
+
+## Typical workflows
+
+### Plan celebrations for the month
+
+<Steps>
+<Step title="Open the Birthday Report" icon="folder">
+
+- Go to **Reports** → **System Reports** → **Birthdays**.
+
+</Step>
+<Step title="Review upcoming birthdays" icon="users">
+
+- Scan the top of the list for birthdays in the next few weeks.
+
+</Step>
+<Step title="Share the report" icon="download">
+
+- Export the report to **PDF** or use **Print** for your team.
+
+</Step>
+</Steps>
+
+### Turn on birthday emails for the season
+
+<Steps>
+<Step title="Open settings" icon="settings">
+
+- Open Birthday Report.
+- Click **Settings** on the **Automated Birthday Emails** card.
+
+</Step>
+<Step title="Enable and customize the email" icon="edit">
+
+- Turn on automated birthday emails.
+- Add the subject and email body.
+
+</Step>
+<Step title="Confirm the message" icon="play-circle">
+
+- Click **Preview** to check the layout and merge fields.
+
+</Step>
+<Step title="Save settings" icon="check-circle">
+
+- Click **Save settings**.
+
+</Step>
+</Steps>
+
+### Fix missing birthdays
+
+<Steps>
+<Step title="Open the profile" icon="users">
+
+- Open the camper or staff profile that is missing from the report.
+
+</Step>
+<Step title="Add the birthday field value" icon="edit">
+
+- Enter the correct date in the **Birthday** profile field.
+
+</Step>
+<Step title="Refresh the report" icon="check-circle">
+
+- Return to Birthday Report and refresh the page.
+- The person should appear after the update if they are active and have a valid birth date.
+
+</Step>
+</Steps>
+
+<Callout kind="tip">
+
+For bulk cleanup, use **Reports** → **System Reports** → **Incorrect Age** in the **Data Check** group.
+
+</Callout>
+
+## Troubleshooting
+
+<ExpandableGroup>
+<Expandable title="I do not see the Birthday Report">
+
+- Confirm your role includes the **Reports** permission.
+- Go to **Reports** → **System Reports** and look under **Misc** for **Birthdays**.
+
+</Expandable>
+<Expandable title="Someone is missing from the report">
+
+- Confirm the person's status is **Active**.
+- Confirm the person is a camper or staff user type.
+- Confirm a birth date exists in the **Birthday** profile field or on the user record.
+- If the birth date is invalid or age cannot be calculated, Campium skips that person.
+
+</Expandable>
+<Expandable title="Automated emails are enabled but nothing was sent">
+
+- Confirm the person's **Birthday** profile field matches today's date.
+- Confirm the primary parent for campers, or the staff member for staff birthdays, has a valid email address.
+- Confirm the recipient has not unsubscribed from mass or marketing emails.
+- Confirm the **Subject** and **Email** body were saved and are not empty.
+- Check **Reports** → **System Reports** → **Email Log** for delivery details.
+
+</Expandable>
+<Expandable title="The preview looks right but the sent email differs">
+
+- Merge fields such as `first_name` and `age` use the birthday person, even when the email is delivered to a parent for campers.
+- `agency_logo` and `agency_url` use your portal or agency settings at send time.
+
+</Expandable>
+<Expandable title="Export buttons are missing">
+
+- Refresh the page.
+- Export buttons load with the table toolbar after the table initializes.
+- If the table is empty, there is nothing to export.
+
+</Expandable>
+</ExpandableGroup>
+
+## Glossary
+
+- **Birthday profile field (`birth_date`)** — standard profile field where birth dates are stored. Automated birthday emails require this field.
+- **Next upcoming birthday** — sort logic that puts today's birthdays first, then the rest of the year in order.
+- **Primary account holder** — parent or guardian marked as primary on a camper's family account. This person receives camper birthday emails.
+- **Mass email preference** — subscription setting that controls whether a user receives marketing-style automated messages, including birthday emails.

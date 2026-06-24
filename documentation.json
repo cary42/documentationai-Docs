@@ -177,6 +177,10 @@
                     "path": "system-report-profile-photo-report"
                   },
                   {
+                    "title": "Birthdays",
+                    "path": "birthdays"
+                  },
+                  {
                     "title": "Scheduled Payments Report",
                     "path": "system-report-scheduled-payments"
                   },
