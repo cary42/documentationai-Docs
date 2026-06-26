@@ -10,6 +10,50 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-06-26" description="Forms, canteen, transportation, messaging, QuickBooks, and admin workflow improvements with key bug fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - [Forms](/forms) can now target staff and campers at the same time.
+
+  - [Canteen](/canteen) point of sale now accepts credit cards through supported processors, including Finix and Payabli.
+
+  - [Photo Hosting](/photo-hosting) now supports bulk moderation approval for faster photo review.
+
+  - [One-way Messaging](/one-way-messaging) now shows daily sending limits, sends messages without a page reload, adds a toggle for older messages, and guards against double submissions.
+
+  - [Forms](/forms) now surface volunteer forms in the portal header for easier access.
+
+  - [Forms](/forms) individual response Print now includes options for embedding uploaded files in the output.
+
+  ## Updates
+
+  - [Canteen](/canteen) now supports product archiving and an inactive-product filter.
+
+  - [Canteen](/canteen) balances now show all active family members, even when some have no canteen activity.
+
+  - [Transportation](/transportation) settings now separate staff visibility from parent visibility.
+
+  - [Tiered pricing](/tiered-pricing) is now visible to all authorized admins.
+
+  - [Discounts](/discounts) checker now supports multi-product cart simulation.
+
+  - [SMS](/sms) logs now show per-recipient status badges and detailed delivery text.
+
+  - Birthday emails now use the camp's actual logo from [Business Info & Logo](/business-info-and-logo).
+
+  - [Integrations](/integrations) now auto-sync canteen deposits and purchases to QuickBooks.
+
+  - [Forms](/forms) list pages now load significantly faster.
+
+  ## Bug Fixes
+
+  - Fixed Finix onboarding for corporations and LLCs in [Payment Processors](/payment-processors).
+
+  - Fixed the display-fields modal on new [Custom Reports](/custom-reports).
+
+  - Fixed missing response export actions in [Forms](/forms) so Copy, Excel, CSV, PDF, and Print appear reliably on the Responses tab.
+</Update>
+
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
 <Update label="2026-06-19" description="Parent account redesign, waitlist invite cancellation, balance transfer reporting, Finix fee visibility, payment safeguards, and admin fixes" tags={["feature","improvement","bugfix"]}>
@@ -719,4 +763,3 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
 </Update>
-
