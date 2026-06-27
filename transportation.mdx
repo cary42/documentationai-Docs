@@ -63,13 +63,37 @@ On the Bus list you typically see:
 
 Use the Bus list to confirm buses exist, review rider counts, and jump into Riders or Map views.
 
+The map refreshes every 30 seconds, so location updates may lag slightly behind the bus's exact position.
+
+<Callout kind="info">
+
+When tracking is on, families can view their child's assigned bus in the Campium mobile app or parent portal.
+
+</Callout>
+
+### The Riders page
+
+The Riders page is where staff manage the riders assigned to one bus for a selected date.
+
+On the Riders page, staff can typically:
+
+- Review the rider list for that bus.
+- Check riders in as they board.
+- Mark a rider as **Passed** when the bus has already gone by that rider's stop.
+- Mark a rider as **Absent** when that rider is not present for that bus run.
+- Reorder riders.
+- Add stop times and addresses.
+- Send bus-specific messages with **Email Riders** when that option is enabled.
+
+Use these rider statuses for different purposes: **Check-in** confirms the rider boarded, **Passed** shows the bus has gone past that stop, and **Absent** shows the rider was not present for that run.
+
 ## Day-to-day workflow
 
 Use this workflow on a typical season and bus day, from setup through communication.
 
 <Steps>
 
-  <Step title="Set up buses for the season" icon="settings" titleType="p">
+  <Step title="Set up buses for the season" icon="settings" title-type="p">
 
   Open the **Bus list** to confirm your buses for the season.
 
@@ -83,7 +107,7 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   </Step>
 
-  <Step title="Add riders to a bus" icon="users" titleType="p">
+  <Step title="Add riders to a bus" icon="users" title-type="p">
 
   From the **Bus list**, click a bus to manage its riders on the **Riders** page.
 
@@ -95,7 +119,7 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   </Step>
 
-  <Step title="Order riders by pickup or dropoff sequence" icon="list-ordered" titleType="p">
+  <Step title="Order riders by pickup or dropoff sequence" icon="users" title-type="p">
 
   Use the **Riders** page to put riders in the order the bus will serve them.
 
@@ -106,7 +130,7 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   </Step>
 
-  <Step title="Add stop times and addresses (recommended)" icon="map" titleType="p">
+  <Step title="Add stop times and addresses (recommended)" icon="map" title-type="p">
 
   Still on the **Riders** page, click into fields to fill out per-rider details.
 
@@ -120,30 +144,44 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   </Step>
 
-  <Step title="Check riders in on bus day" icon="check-circle" titleType="p">
+  <Step title="Turn tracking on before the route starts" icon="monitor" title-type="p">
+
+  Turn tracking on when the bus is ready to begin the route.
+
+  - Confirm you are working with the correct bus.
+  - Turn **Tracking On**.
+  - Open the **Map** tab to watch location updates.
+
+  Once tracking is on, the map updates every 30 seconds with the bus's current location.
+
+  </Step>
+
+  <Step title="Check riders in and update rider status on bus day" icon="check-circle" title-type="p">
 
   On the day of transportation, open the **Riders** page with the correct date selected.
 
   - Find each camper as they arrive or board.
   - Click **Check-in** for each rider as they get on the bus.
+  - Mark **Absent** for riders who are not present for that bus run.
+  - Mark **Passed** when the bus has already gone by a rider's stop.
   - If you select the wrong rider by mistake, use **undo** when available to reverse the check-in.
 
-  The Riders page then reflects who is on the bus for that date.
+  The Riders page then reflects who is on the bus for that date and which riders were absent or already passed.
 
   </Step>
 
-  <Step title="View the map for live tracking" icon="monitor" titleType="p">
+  <Step title="View the map for live tracking" icon="monitor" title-type="p">
 
   Use the **Map** tab to see live location for buses with tracking enabled.
 
   - From the Bus list, open the bus and switch to the **Map** tab, or open the Map tab directly from Bus list if available.
   - Confirm that tracking is on for the bus you want to monitor.
 
-  When tracking is enabled, the map shows the bus location and updates periodically rather than instantly. Only buses with tracking enabled show as live on the map.
+  When tracking is enabled, the map shows the bus location and refreshes every 30 seconds. Only buses with tracking enabled show as live on the map.
 
   </Step>
 
-  <Step title="Email riders for a bus (optional)" icon="mail" titleType="p">
+  <Step title="Email riders for a bus (optional)" icon="mail" title-type="p">
 
   Use **Email Riders** to send optional updates or reminders to riders and their families for a specific bus.
 
@@ -186,6 +224,8 @@ When you add or update a pickup person, you normally enter:
 - **Phone** number
 
 Keep these fields accurate so staff can quickly confirm identity and contact information during dismissal.
+
+When you remove a pickup person, CampiumDB keeps or deletes that record based on whether it has been used before. If the person is tied to past attendance activity, the system hides them from normal use but keeps the record for history. If the person has never been used in that way, the system removes them completely.
 
 ### Pickup Privileges report
 
@@ -270,4 +310,7 @@ Use printed or exported copies at dismissal points where live access to the admi
 - **Rider**: a camper assigned to a bus.
 - **Stop time**: the planned pickup or dropoff time for a rider.
 - **Tracking**: live location sharing for a bus, displayed on the Map tab.
+- **ETA**: estimated time of arrival for a bus at a stop, calculated when tracking is on.
+- **Passed**: a per-rider status showing the bus has already gone by that rider's stop.
+- **Absent**: a per-rider bus status showing the rider is not present for that bus run.
 - **Pickup privileges**: the list of authorized pickup people for a camper.
