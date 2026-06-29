@@ -1,0 +1,331 @@
+---
+title: Digital Signatures
+description: Collect typed e-signatures on waivers and policy forms, with full audit trails including legal text snapshots, timestamps, and IP addresses.
+---
+
+## What digital signatures are
+
+Digital signatures in Campium let someone type their name on a form question to acknowledge legal or policy text. The signature question is powered by a signature profile field, and Campium stores the typed name, the legal text shown at signing time, the date and time, the IP address, and browser and operating system details.
+
+Use digital signatures on forms when you need a clear record of agreement for common camp workflows:
+
+- liability and activity waivers
+- photo and media releases
+- medical or allergy acknowledgments
+- behavior or code-of-conduct agreements
+- permission for off-site trips
+- handbook or policy acknowledgments
+
+<Callout kind="info" collapsed="false">
+
+This page covers signature profile fields used on forms. If you need drawn signatures or formal agreement workflows for staff employment documents, use **Contracts** in **Admin → Contracts** instead.
+
+</Callout>
+
+## How it works
+
+The setup has five parts: create a signature field, place it on a form, add the legal text, collect the typed name on the Portal, and review the signed record later.
+
+<Steps>
+  <Step title="Create a signature profile field" icon="plus" title-type="p">
+
+  An admin creates a profile field in **Admin → Profile Fields** and marks it as a signature field for the correct user type.
+
+  </Step>
+  <Step title="Add the field to a form" icon="folder" title-type="p">
+
+  A staff member opens the form in **Communication → Forms**, goes to the **Questions** tab, and adds that signature field as a question.
+
+  </Step>
+  <Step title="Add legal text to the form question" icon="edit" title-type="p">
+
+  On the signature question, staff enter the waiver, release, or policy text the signer must agree to before submitting the form.
+
+  </Step>
+  <Step title="Family types their name on the Portal" icon="users" title-type="p">
+
+  On the Portal, the signer reads the legal text in a scrollable area and types their full name in the signature field.
+
+  </Step>
+  <Step title="Review the signed record" icon="check-circle" title-type="p">
+
+  Staff review signatures later from the profile **Signatures** tab or from form response PDFs and exports.
+
+  </Step>
+</Steps>
+
+## Create a signature profile field
+
+Create the profile field first so it is available in form questions.
+
+<Steps>
+  <Step title="Open Profile Fields" icon="settings" title-type="p">
+
+  Go to **Admin → Profile Fields**.
+
+  </Step>
+  <Step title="Create a new field" icon="plus" title-type="p">
+
+  Click **Add New Field**.
+
+  </Step>
+  <Step title="Configure the field" icon="edit" title-type="p">
+
+  Enter a clear **Field Name**, such as **Liability Waiver Signature**.
+
+  Set **Is this a signature field?** to **Yes**, then choose the correct user type such as **Camper**, **Guardian**, or **Staff**.
+
+  </Step>
+  <Step title="Save the field" icon="check-circle" title-type="p">
+
+  Save the field so it can be selected from the form question picker.
+
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+
+When you set **Is this a signature field?** to **Yes**, Campium stores the field as text automatically. Signature fields are labeled **SIGNATURE** in field pickers. You can also create a new signature field from inside a form on **Questions → New Question → Add New Profile Field**.
+
+</Callout>
+
+## Add the field to a form
+
+After the field exists, add it to the form that needs the signature.
+
+<Steps>
+  <Step title="Open the form" icon="folder" title-type="p">
+
+  Go to **Communication → Forms** and open the form you want to update.
+
+  </Step>
+  <Step title="Open the Questions tab" icon="edit" title-type="p">
+
+  Select the **Questions** tab and click **New Question**.
+
+  </Step>
+  <Step title="Choose the signature field" icon="check" title-type="p">
+
+  Find the signature profile field in the list. Look for the **SIGNATURE** label to confirm you picked the correct field.
+
+  </Step>
+  <Step title="Add it to the form" icon="plus" title-type="p">
+
+  Click **Add To Form** to create the signature question on the form.
+
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+
+Signature questions appear with an orange highlight. Campium treats them as required, so families cannot submit the form without typing a name. The **do not auto-populate** option does not appear for signature fields because each submission creates a new audit record.
+
+</Callout>
+
+## Add legal text
+
+The signature is only complete when the question includes the legal text the user is agreeing to.
+
+<Steps>
+  <Step title="Open the signature question" icon="edit" title-type="p">
+
+  On the form **Questions** tab, click the signature question you added.
+
+  </Step>
+  <Step title="Find the Legal Terms editor" icon="book-open" title-type="p">
+
+  Locate **Legal Terms that user is agreeing to**.
+
+  </Step>
+  <Step title="Enter the legal text" icon="edit" title-type="p">
+
+  Paste or write the waiver, release, or policy text in the rich text editor.
+
+  </Step>
+  <Step title="Adjust the question label if needed" icon="settings" title-type="p">
+
+  Optionally update **Question Text**. This label appears above the legal text block and helps families understand what they are signing.
+
+  </Step>
+  <Step title="Save the question" icon="check-circle" title-type="p">
+
+  Save the question after reviewing the wording.
+
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+
+Campium requires legal terms before you can save the question. If the editor is empty, the question will not save. Campium also sanitizes HTML when you save the legal text.
+
+</Callout>
+
+## Merge fields in legal text
+
+Legal text can include merge variables that fill in names from the related camper or profile data.
+
+| Variable | Typical use |
+| --- | --- |
+| `[first_name]`, `[last_name]` | Camper or signing user name |
+| `[camper_first_name]` | Camper-specific prefix |
+| `[guardian_1_first_name]` | Primary guardian |
+| `[guardian_2_first_name]` | Secondary guardian |
+
+If a merge variable is not recognized, Campium removes it when the form renders.
+
+## What families see on the Portal
+
+On the Portal, families see the legal text inside a scrollable box with a maximum height of about 250 pixels. Below that, they see a single-line field where they type their name in a signature-style font.
+
+After they type their name, they submit the form the same way they submit any other form. If the signature field is blank, the form cannot be submitted.
+
+<Callout kind="info" collapsed="false">
+
+Families type their name for form signature fields. They do not draw a signature on screen.
+
+</Callout>
+
+## What Campium stores
+
+Each signature submission creates an audit record and also saves the typed value on the related profile field.
+
+| Stored item | Purpose |
+| --- | --- |
+| Typed signature | The name they entered |
+| Legal text snapshot | Exact HTML or text they agreed to at that moment |
+| Question label | Custom question text on the form |
+| Form | Which form was submitted |
+| Date/time | When they signed |
+| IP address | Visitor IP |
+| Browser / OS | Client info from the user agent |
+| Profile field answer | Same typed value on the signature profile field |
+
+<Callout kind="info" collapsed="false">
+
+If you change the legal text later, older signature records still show the text that was on the form when the user signed.
+
+</Callout>
+
+## Viewing signatures
+
+Review signatures from the profile record when you need the full audit trail, or from the form response PDF when you need a submission copy.
+
+### Profile Signatures tab
+
+Open the profile when you need to see the signature record, legal text, and signer details in one place.
+
+<Steps>
+  <Step title="Open the profile" icon="users" title-type="p">
+
+  Open a **camper**, **guardian**, or **staff** profile.
+
+  </Step>
+  <Step title="Go to Signatures" icon="folder" title-type="p">
+
+  Click **More → Signatures**.
+
+  </Step>
+  <Step title="Review the signature table" icon="check-circle" title-type="p">
+
+  Review the table for the signer, signed text, date, form, and audit details.
+
+  </Step>
+</Steps>
+
+| Column | What it shows |
+| --- | --- |
+| Name | Who signed |
+| Signature | Typed name |
+| Date | When the form was signed |
+| Form Name | Source form |
+| Question Text | Signature question label |
+| Legal Text | Full legal text, expandable with **Show More** |
+| IP Address | Signer IP |
+| Browser/OS Info | Browser and operating system details |
+
+Use the export buttons on this tab to download the records as PDF or Excel. The Signatures tab shows signatures for all family members tied to that profile context.
+
+### Form responses and PDFs
+
+Form response PDFs include the signature legal text as its own section above the question and answer table. Campium resolves merge variables in that PDF output, so the rendered document reflects what the signer saw.
+
+The typed signature also appears in the responses table like any other field answer. That makes it easy to filter, review, or export alongside the rest of the form submission.
+
+## Tips and best practices
+
+### Writing legal text
+
+Keep paragraphs short so the text is easier to review in the Portal scroll area. Put the most important terms first, use merge fields where a name helps clarify the agreement, and have your legal counsel review the final wording.
+
+### One field, many forms
+
+Create one signature field for each purpose, such as a liability waiver or photo release, then reuse that field across forms. You can still customize the legal text on each form question to match the event, season, or program.
+
+### Cloning forms
+
+When you clone a form, Campium copies the signature questions and their legal text with it. Review each copied question before publishing the new form so season-specific dates, terms, or program names stay accurate.
+
+### User types
+
+Choose the correct user type when you create the signature field. Use **Guardian** for parent-signed waivers and **Camper** for camper-specific acknowledgments or releases.
+
+## Digital signatures vs Contracts
+
+Use form signatures for waiver-style acknowledgments on forms, and use Contracts for formal agreement workflows that need contract-specific tools.
+
+|  | Form signature | Contracts |
+| --- | --- | --- |
+| Setup | Signature profile field + form question + legal text | Contract template + instance |
+| Portal UX | Scroll legal text and type name | Read contract and type or draw signature |
+| Typical use | Waivers, releases, policies on forms | Employment agreements, staff contracts |
+| Staff review | Profile Signatures tab; form PDF | Profile Contracts tab; Admin → Contracts |
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="No Legal Terms editor on the question" default-open="false">
+
+  The profile field must have **Is this a signature field?** set to **Yes**. Re-edit the field or choose a different field that is already marked as a signature field.
+
+  </Expandable>
+  <Expandable title="Cannot save question — You must enter Legal Terms" default-open="false">
+
+  Add content in the **Legal Terms that user is agreeing to** editor, then save again.
+
+  </Expandable>
+  <Expandable title="Signature field not in the add-question list" default-open="false">
+
+  Check these items first:
+
+  - Confirm the field user type matches the form context
+  - Make sure the field is not hidden
+  - Refresh the **Questions** tab and try again
+
+  </Expandable>
+  <Expandable title="Empty Signatures tab" default-open="false">
+
+  No signature form has been submitted yet, or the signature was collected in test mode.
+
+  </Expandable>
+  <Expandable title="Legal text on PDF does not match the current form" default-open="false">
+
+  The PDF shows the legal text snapshot stored at signing time. That is expected behavior and preserves the exact text the signer agreed to.
+
+  </Expandable>
+  <Expandable title="Need drawn signatures" default-open="false">
+
+  Use **Contracts** in **Admin → Contracts**. Form signature fields collect typed names only.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Quick setup checklist
+
+Use this checklist before publishing a form that requires signatures:
+
+- Create a profile field with **Is this a signature field?** set to **Yes**
+- Add the field to the form from **Questions → New Question**
+- Open the question editor and enter the **Legal Terms**
+- Confirm the question is **Required**
+- Test on the Portal to confirm the legal text displays, the name is required, and the form submits
+- Confirm the signature appears on **More → Signatures** and on the form response PDF

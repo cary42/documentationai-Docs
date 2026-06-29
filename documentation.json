@@ -342,6 +342,11 @@
                 "title": "Test Mode",
                 "path": "test-mode",
                 "icon": "flask-conical"
+              },
+              {
+                "title": "Digital Signatures",
+                "path": "digital-signatures",
+                "icon": "pen-line"
               }
             ],
             "public": true
