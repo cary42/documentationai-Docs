@@ -460,6 +460,11 @@
                 "title": "Food & Per-Day Ordering",
                 "path": "food-and-per-day-ordering",
                 "icon": "utensils"
+              },
+              {
+                "title": "Product Quantities",
+                "path": "product-quantities",
+                "icon": "package"
               }
             ]
           },
