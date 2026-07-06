@@ -1,0 +1,97 @@
+---
+title: Adding canteen funds for a user
+description: Load money onto a camper or staff member's canteen balance when payment is taken at the office, using the admin Canteen Deposits screen.
+---
+
+## Add funds from the admin site
+
+Add money to a camper or staff member's canteen account from the admin site when someone pays in person at the office. Use the **Canteen Deposits** screen to record the deposit and update their balance right away.
+
+## Where to go
+
+1. Sign in to the admin site.
+2. Open **Canteen** in the main menu.
+3. Select **Deposits**.
+4. Click **Add Funds** in the page header.
+
+## Who can do this
+
+You need access to **Canteen Deposits** to add money to a user's balance. This access is controlled by the `canteen_purchases` permission.
+
+<Callout kind="info">
+
+If you do not see **Canteen** or **Deposits**, ask an administrator to check your role permissions. Your account also needs the canteen module enabled before these screens appear.
+
+</Callout>
+
+## Step-by-step
+
+<Steps>
+  <Step title="Click Add Funds" icon="plus">
+
+  From **Canteen Deposits**, click **Add Funds**. The **Add funds** modal opens.
+
+  </Step>
+  <Step title="Choose the user" icon="users">
+
+  In **User**, start typing the person's name in the search box, then select them from the list. Their current canteen balance appears below the user field.
+
+  </Step>
+  <Step title="Choose the payment account" icon="settings">
+
+  In **Account**, choose how the payment was received:
+
+  - **Cash** if **Accept cash** is turned on in Canteen settings
+  - **Zelle**
+  - A saved **card** or **bank account** on the family's file
+
+  Saved card and bank account options load after you select the user.
+
+  </Step>
+  <Step title="Enter the amount" icon="edit">
+
+  Enter the deposit amount. As you type, the modal updates both **Current balance** and **New balance** so you can confirm the change before saving.
+
+  </Step>
+  <Step title="Save the deposit" icon="check-circle">
+
+  Click **Add funds** to save the deposit. Click **Cancel** to close the modal without saving.
+
+  If your camp charges a credit card surcharge, the modal shows a note at the top with the surcharge percentage.
+
+  </Step>
+</Steps>
+
+## What happens after
+
+- The deposit is recorded on **Canteen Deposits**.
+- The user's canteen balance increases and can be used for **User Account** purchases at the canteen register.
+- Confirm the deposit on **Canteen Deposits** or check the balance on **Canteen Account Balances**.
+
+## Related screens
+
+| Screen | Use for |
+| --- | --- |
+| Canteen Deposits | Add funds and review deposit history |
+| Canteen Account Balances | See who has money left; View activity for deposit vs. purchase breakdown |
+| Canteen (main POS) | Ring up purchases charged to a user's balance, not for adding funds |
+
+## Families adding funds online
+
+Families can also add canteen funds in the parent portal from **Canteen** in the menu or from **Account**, using a saved payment method. Office staff should use the admin **Add Funds** flow above when payment is taken in person.
+
+<Callout kind="info">
+
+The parent portal minimum deposit is typically **$3**.
+
+</Callout>
+
+## Troubleshooting
+
+| Issue | Likely cause |
+| --- | --- |
+| No Canteen menu | Module off or your login lacks canteen permissions |
+| No Cash in Account dropdown | Accept cash is off in Canteen settings |
+| No cards or bank accounts listed | Family has nothing on file; use Cash or Zelle, or have them add a payment method first |
+| Add funds fails | Note the user, amount, and time; check the error in the modal and retry once, then escalate |
+| Balance looks wrong | On Account Balances, use View activity. Balance equals deposits minus purchases, with deposits shown net of fees when applicable |

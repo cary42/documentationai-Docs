@@ -554,7 +554,16 @@
             ]
           },
           {
-            "group": "Portal",
+            "group": "Canteen",
+            "pages": [
+              {
+                "title": "Adding canteen funds for a user",
+                "path": "adding-canteen-funds"
+              }
+            ]
+          },
+          {
+            "group": "Portal", 
             "pages": [
               {
                 "title": "Where can I find a link for the Portal / parent site?",
