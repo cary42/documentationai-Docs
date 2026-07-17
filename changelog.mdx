@@ -10,6 +10,35 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-07-17" description="Form approval deposits, manual tip recording, bunk management, canteen overspend, bus ETA improvements, Finix decline messaging, and bug fixes" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Form approval deposits** — When approving a form response, admins can charge a deposit to the family's on-file payment method before the approval goes through. A declined charge blocks approval and notifies the parent. Admins can also skip the charge and approve anyway. See [Forms](/forms).
+  - **Manual tip recording** — Admins can now record offline tips (cash, check, or other) with date, payment method, camper, split recipients, and optional receipt email. Recorded tips appear in tipping reports with a method badge. The tipping portal can also be toggled on or off per camp.
+  - **Bunk management** — Add, rename, delete, and drag-to-reorder bunks directly in the Bunk Settings UI — no longer requires editing profile fields. Bunks with assigned campers cannot be deleted. See [Bunk Assignments](/bunk-assignments).
+  - **Saved bunk print presets & multi-sheet Excel** — Save bunk print configurations and export all bunks as a multi-sheet Excel file with one sheet per bunk.
+  - **Canteen overspend toggle** — When enabled, a POS sale can slightly exceed a camper's balance, with the shortfall written off automatically — no end-of-session refund needed. See [Canteen](/canteen).
+  - **Close tickets without replying** — Staff can close a support ticket without writing a reply, with a confirmation prompt. Replying later re-opens the ticket.
+  - **"Approved By" column** — The profile forms table now shows which staff member approved each form response. See [Forms](/forms).
+  - **Additional sessions form notification** — New form setting that notifies staff when a response includes additional sessions.
+  - **Name badge label format** — New 3"×2.5" name badge format with an auto-shrinking name header is available in the label printing system.
+  - **Business description in Finix onboarding** — A Business Description field is now part of the Finix merchant onboarding form. See [Payment Processors](/payment-processors).
+
+  ## Updates
+
+  - **Bus ETA improvements** — ETA now refreshes the moment the first rider is picked up or dropped off, instead of waiting up to 5 minutes. Smarter auto-pass logic handles express buses and dense pickup clusters more accurately. See [Transportation](/transportation).
+  - **Finix decline messaging** — Parents now see specific, actionable decline messages (e.g., invalid routing number, card issuer policy) instead of generic errors. See [Payment Processors](/payment-processors).
+  - **Finix onboarding document uploads** — Voided checks and monthly bank statements are now supported during merchant onboarding, instead of being silently rejected. See [Payment Processors](/payment-processors).
+  - **PCI compliance reminders** — Attestation reminder emails now mention the $35/month non-compliance fee with due dates, and are routed to the camp's primary contact first. See [Payment Processors](/payment-processors).
+  - **Payment plan session restrictions** — Payment plans can now be restricted to specific sessions, with cart validation on both client and server. See [Payment Plans](/payment-plans).
+
+  ## Bug Fixes
+
+  - Fixed bus ETA skipping riders and auto-pass wiping entire routes when multiple stops share the same coordinates (e.g., dense urban pickup clusters). See [Transportation](/transportation).
+  - Fixed bunk label printing for campers not assigned to any bunk — now prints a fallback label instead of a blank PDF.
+  - Fixed tipping report date filtering so the label defaults to "All dates" when no start date is selected, and filters apply only when both dates are present.
+</Update>
+
 <Update label="2026-07-10" description="Live bus tracking with ETA, tipping reminder emails, medication certification, new payment detail report, security hardening, and critical Payabli charge fix" tags={["feature","improvement","security","bugfix"]}>
   ## New
 
