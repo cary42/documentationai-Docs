@@ -7,10 +7,44 @@ description: >-
 ## Recent Releases
 
 <Callout kind="info" collapsed="false">
+
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
+
 </Callout>
 
+<Update label="2026-07-17" description="Form approval deposits, manual tip recording, bunk management, canteen overspend, bus ETA improvements, Finix decline messaging, and bug fixes" tags={["feature","improvement","bugfix"]}>
+
+  ## New
+
+  - **Form approval deposits** — When approving a form response, admins can charge a deposit to the family's on-file payment method before the approval goes through. A declined charge blocks approval and notifies the parent. Admins can also skip the charge and approve anyway. See [Forms](/forms).
+  - **Manual tip recording** — Admins can now record offline tips (cash, check, or other) with date, payment method, camper, split recipients, and optional receipt email. Recorded tips appear in tipping reports with a method badge. The tipping portal can also be toggled on or off per camp.
+  - **Bunk management** — Add, rename, delete, and drag-to-reorder bunks directly in the Bunk Settings UI — no longer requires editing profile fields. Bunks with assigned campers cannot be deleted. See [Bunk Assignments](/bunk-assignments).
+  - **Saved bunk print presets & multi-sheet Excel** — Save bunk print configurations and export all bunks as a multi-sheet Excel file with one sheet per bunk.
+  - **Canteen overspend toggle** — When enabled, a POS sale can slightly exceed a camper's balance, with the shortfall written off automatically — no end-of-session refund needed. See [Canteen](/canteen).
+  - **Close tickets without replying** — Staff can close a support ticket without writing a reply, with a confirmation prompt. Replying later re-opens the ticket.
+  - **"Approved By" column** — The profile forms table now shows which staff member approved each form response. See [Forms](/forms).
+  - **Additional sessions form notification** — New form setting that notifies staff when a response includes additional sessions.
+  - **Name badge label format** — New 3"×2.5" name badge format with an auto-shrinking name header is available in the label printing system.
+  - **Business description in Finix onboarding** — A Business Description field is now part of the Finix merchant onboarding form. See [Payment Processors](/payment-processors).
+
+  ## Updates
+
+  - **Bus ETA improvements** — ETA now refreshes the moment the first rider is picked up or dropped off, instead of waiting up to 5 minutes. Smarter auto-pass logic handles express buses and dense pickup clusters more accurately. See [Transportation](/transportation).
+  - **Finix decline messaging** — Parents now see specific, actionable decline messages (e.g., invalid routing number, card issuer policy) instead of generic errors. See [Payment Processors](/payment-processors).
+  - **Finix onboarding document uploads** — Voided checks and monthly bank statements are now supported during merchant onboarding, instead of being silently rejected. See [Payment Processors](/payment-processors).
+  - **PCI compliance reminders** — Attestation reminder emails now mention the $35/month non-compliance fee with due dates, and are routed to the camp's primary contact first. See [Payment Processors](/payment-processors).
+  - **Payment plan session restrictions** — Payment plans can now be restricted to specific sessions, with cart validation on both client and server. See [Payment Plans](/payment-plans).
+
+  ## Bug Fixes
+
+  - Fixed bus ETA skipping riders and auto-pass wiping entire routes when multiple stops share the same coordinates (e.g., dense urban pickup clusters). See [Transportation](/transportation).
+  - Fixed bunk label printing for campers not assigned to any bunk — now prints a fallback label instead of a blank PDF.
+  - Fixed tipping report date filtering so the label defaults to "All dates" when no start date is selected, and filters apply only when both dates are present.
+
+</Update>
+
 <Update label="2026-07-10" description="Live bus tracking with ETA, tipping reminder emails, medication certification, new payment detail report, security hardening, and critical Payabli charge fix" tags={["feature","improvement","security","bugfix"]}>
+
   ## New
 
   - **Live bus tracking with ETA** — Real-time bus tracking with estimated arrival times on a map. Color-coded markers show on-time and late status, parents and staff receive arrival notifications, and admins can manage bus destinations and set default drop-off locations. See [Transportation](/transportation).
@@ -34,9 +68,11 @@ description: >-
   - Fixed colored and highlighted text in [Mass Emails](/mass-emails) announcements so formatting is preserved in sent emails.
   - Fixed oversized inline images in support ticket replies so they fit within chat bubbles and email layouts.
   - Fixed photo download access checks to validate against the photo's own season. See [Photo Hosting](/photo-hosting).
+
 </Update>
 
 <Update label="2026-07-03" description="Per-item product quantities, native mobile forms, waitlist staff alerts, multi-session health report filter, faster financial reports, and payment plan fix" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - [Product Quantities](/product-quantities) can now be enabled per product so families can buy more than one of the same item — like t-shirts or add-ons — in a single purchase, with an optional maximum per order.
@@ -53,9 +89,11 @@ description: >-
   ## Bug Fixes
 
   - Fixed percentage-based Standard [Payment Plans](/payment-plans) so installment amounts no longer shrink incorrectly after each scheduled charge.
+
 </Update>
 
 <Update label="2026-06-26" description="Forms, canteen, transportation, messaging, QuickBooks, and admin workflow improvements with key bug fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - [Forms](/forms) can now target staff and campers at the same time.
@@ -82,11 +120,13 @@ description: >-
   - Fixed Finix onboarding for corporations and LLCs in [Payment Processors](/payment-processors).
   - Fixed the display-fields modal on new [Custom Reports](/custom-reports).
   - Fixed missing response export actions in [Forms](/forms) so Copy, Excel, CSV, PDF, and Print appear reliably on the Responses tab.
+
 </Update>
 
 Stay informed about new features, improvements, bug fixes, and any breaking changes. We recommend testing updates in a staging environment before applying them to production.
 
 <Update label="2026-06-19" description="Parent account redesign, waitlist invite cancellation, balance transfer reporting, Finix fee visibility, payment safeguards, and admin fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added a cancel flow for [Waitlist](/waitlist) invites so staff can withdraw an invite before a family registers.
@@ -106,9 +146,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed duplicate same-day payment retries so staff now see a clear warning and an override option before retrying in [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
   - Fixed closed-card refund failures in [Processing Refunds and Voids](/processing-refunds-and-voids) by automatically removing unusable cards and alerting staff.
   - Fixed manual keyed card entry so it no longer appears for processors that do not support it in [Payment Processors](/payment-processors).
+
 </Update>
 
 <Update label="2026-06-12" description="Donation links, profile fields, forms, email delivery, refunds, canteen, photos, payments, security, reports, and admin fixes" tags={["feature","improvement","security","bugfix"]}>
+
   ## New
 
   - Added **prefilled donation links** so camps can send families directly to donation pages with suggested details already filled in.
@@ -134,9 +176,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed [Photo Hosting](/photo-hosting) photo-count reporting so season and gallery counts stay accurate.
   - Fixed profile-photo opt-out handling so excluded profiles are respected in photo-related workflows.
   - Fixed admin search resilience so staff searches continue working when individual records contain unexpected data.
+
 </Update>
 
 <Update label="2026-06-10" description="Form response PDFs, payment plan reporting, push notifications, canteen validation, imports, discounts, and email fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added an **Include uploaded files** option to [Forms](/forms) Print All Responses PDFs so staff can combine submitted images and PDFs into one export.
@@ -153,9 +197,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed [Mass Emails](/mass-emails) view-email links that could fail when subjects included special characters.
   - Fixed [Push Notifications](/push-notifications) message formatting so line breaks and links display correctly in the app.
   - Fixed [Discounts](/discounts) with open-ended date ranges so valid codes are recognized at checkout.
+
 </Update>
 
 <Update label="2026-06-09" description="Photo gallery season selection, payment onboarding, tipping, chargebacks, refunds, reports, performance, and fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added season selection to the mobile [Photo Hosting](/photo-hosting) gallery so families with activity in more than one season can switch the photo set, camper face counts, and date filters.
@@ -175,9 +221,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed photo gallery edge cases for empty galleries, count formatting, and unavailable face-recognition data.
   - Fixed saved blank settings so they stay blank instead of reverting to older values.
   - Fixed the support ticket sidebar so ticket details and attachments remain visible on small screens.
+
 </Update>
 
 <Update label="2026-06-07" description="Tipping staff lists, season cloning dates, Copilot reporting, guardian profile data, and clearer tipping payment-method guidance" tags={["feature","improvement"]}>
+
   ## New
 
   - Added configurable staff-name lists for tipping in [Site Settings](/settings). Admins can manage the names families choose from, and families can still select **Other** when the person they want to tip is not listed.
@@ -188,9 +236,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Updates
 
   - Improved the tipping flow so families see a clearer path to manage saved payment methods while adding a tip.
+
 </Update>
 
 <Update label="2026-06-05" description="Finix payout settings, role member management, profile email filters, HEIC uploads, dashboard speed, and checkout fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added a Finix payout type setting in [Site Settings](/settings) so organizations can choose net or gross payout handling.
@@ -214,9 +264,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed [Discounts](/discounts) balance calculations during authorized card checkout so discount credits are not double-subtracted.
   - Added the Portal Settings card to the live admin console.
   - Corrected production links in system-generated emails and account flows.
+
 </Update>
 
 <Update label="2026-06-04" description="Portal registration settings, site text live previews, discount visibility fix, and Pending badge color correction" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added [Portal Settings](/settings) controls for choosing which parent portal registration user types families can create, including custom labels and ordering. The registration dropdown now reads "I am" instead of "Register As."
@@ -231,9 +283,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Fixed [Discounts](/discounts) with no date range so they appear correctly in the Live dropdown for staff.
   - Corrected the Pending badge color in search results to use the consistent purple styling.
+
 </Update>
 
 <Update label="2026-06-03" description="Card authorization with delayed capture, food ordering per-week controls, image compression, file upload progress, and attendance check-out toggle" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added **card authorization with delayed capture** — credit card payments are now authorized at checkout and captured automatically before settlement each evening. Staff see an Auth badge on the Sales tab and can manually trigger capture. See [Processing Refunds and Voids](/processing-refunds-and-voids).
@@ -258,9 +312,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed canteen date-range navigation and collapsed categories card by default.
   - Fixed image compression encoder error handling so retries work after a failure.
   - Fixed upload recovery to prevent duplicate file uploads when the server response fails but the file was saved.
+
 </Update>
 
 <Update label="2026-06-02" description="Finix default processor, user merging, canteen cash withdrawals fix, ACH void messaging, attendance reports, and upload size increase" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - New client accounts now default to the **Finix payment processor** with onboarding enabled automatically at signup.
@@ -283,9 +339,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed parent portal form file uploads that silently failed (file saved but the UI showed an error).
   - Fixed waitlist activation showing incorrect before/after pricing.
   - Fixed canteen cash withdrawal race condition that could overdraw balances on simultaneous requests.
+
 </Update>
 
 <Update label="2026-06-01" description="Canteen cash withdrawals, My Groups for staff, DKIM email authentication, attendance improvements, and critical bug fixes" tags={["feature","improvement","security","bugfix"]}>
+
   ## New
 
   - Added canteen cash withdrawal so administrators can pay out remaining balances directly from a camper's canteen account, with real-time balance preview and automatic product provisioning.
@@ -314,9 +372,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed a critical bug where paying an account balance could incorrectly auto-approve unrelated pending form summaries.
   - Corrected timezone handling in form payment handlers that caused a +2 hour datetime skew on historical records.
   - Added server-side validation preventing SMS messages from being scheduled for past dates.
+
 </Update>
 
 <Update label="2026-05-28" description="Canteen categories, bunk filters, admin redesign, future payment reliability, and cron fixes" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added canteen product categories so admins can organize products and families can filter by category at the point of sale.
@@ -340,9 +400,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Payments now clean up automatically when a season balance reaches zero after a charge.
   - Fixed the Constant Contact email sync cron to exit after one pass instead of looping indefinitely.
   - Fixed the form notification cron that was locking all rows but only sending one email per run.
+
 </Update>
 
 <Update label="2026-05-17" description="Rich text tickets, ACH void warnings, calendar improvements, volunteer type, payment nicknames, QuickBooks refunds, and encrypted portal tokens" tags={["feature","security","improvement","bugfix"]}>
+
   ## New
 
   - Added a rich-text editor to support ticket replies.
@@ -375,9 +437,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Fixed form response bulk actions that could show Invalid security key errors.
   - Fixed parent profile photo delete and crop flows, including a fallback when Imagick is unavailable.
   - Fixed guardian field auto-mapping in user import that could create duplicate prefixes.
+
 </Update>
 
 <Update label="2026-05-09" description="Finix merchant onboarding, canteen enhancements, role preview, bunk reports, email templates, season end dates, read-access audit, and family registration report" tags={["feature","security","improvement","bugfix"]}>
+
   ## New
 
   - Added Finix merchant self-service onboarding with dashboard status banners that track progress through approval.
@@ -410,9 +474,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Fixed the VOIDED badge showing on transactions that were not voided.
   - Fixed checkout loading overlays that could remain stuck after payment-plan validation errors.
+
 </Update>
 
 <Update label="2026-04-27" description="AI Chatbot, Terms of Service, IP blocking, email subscriptions, payment digests, QuickBooks sync, legal documents, and faster search" tags={["feature","security","improvement"]}>
+
   ## New
 
   - Added an AI Chatbot to the parent portal footer, with interaction logging and portal-level controls.
@@ -435,9 +501,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Added global IP blocking across parent portals with hit logging and an admin management interface.
   - Logged all discount create, update, and delete operations for audit visibility.
+
 </Update>
 
 <Update label="2026-04-01" description="AI Reports, Finix payment processor, Pay In Full discounts, HIPAA encryption, S3 encryption, contract management, season comparison, and parent portal calendar" tags={["feature","security","improvement","bugfix"]}>
+
   ## New
 
   - Added AI Reports so admins can generate SQL reports from natural language prompts.
@@ -469,15 +537,19 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Bug Fixes
 
   - Fixed discount calculations so apply-after discounts use the already-discounted price instead of the original price.
+
 </Update>
 
 <Update label="2026-03-30" description="Encrypted URLs and CRM follow-ups" tags={["security"]}>
+
   ## Security
 
   - Implemented URL-safe encryption for data passed in links to reduce the risk of tampering and exposure of sensitive identifiers.
+
 </Update>
 
 <Update label="2026-03-29" description="Email notifications and duplicate prevention" tags={["improvement","bugfix"]}>
+
   ## Improvements
 
   - Refined email notification logic so families and staff receive updates only when relevant fields change.
@@ -485,9 +557,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Bug Fixes
 
   - Prevented duplicate email sends in edge cases where forms or tickets were saved multiple times in quick succession.
+
 </Update>
 
 <Update label="2026-03-28" description="Admin forms, sessions, and donations" tags={["feature","improvement"]}>
+
   ## New
 
   - Expanded the admin form editor so staff can configure more advanced questions and layout options without custom development.
@@ -496,18 +570,22 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Updated the sessions layout to make capacity, dates, and age groups easier to scan for both staff and families.
   - Improved donation page layout and behavior to highlight suggested amounts, recurring options, and donor contact details more clearly.
+
 </Update>
 
 <Update label="2026-03-27" description="Invoices, PDFs, and ticket notifications" tags={["improvement"]}>
+
   ## Improvements
 
   - Refined family invoice templates for a cleaner, more readable PDF layout that highlights balances, discounts, and due dates.
   - Added template-aware invoice links so admins can switch between alternative layouts without regenerating underlying billing data.
   - Improved PDF generation for invoices and receipts to align columns, totals, and headers consistently across devices.
   - Enhanced email template field retrieval so notifications show the right family, session, and balance details every time.
+
 </Update>
 
 <Update label="2026-03-26" description="Matrix reports, proposals, and ticket email accuracy" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added session selection controls to matrix-style reports so staff can include or exclude specific sessions before generating results.
@@ -521,9 +599,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Fixed several SQL query edge cases in matrix reports to avoid incomplete or inconsistent results.
   - Corrected email retrieval in new ticket flows so replies always use the correct family or contact email address.
+
 </Update>
 
 <Update label="2026-03-25" description="Email, forms, scheduler, and checkout updates" tags={["feature","improvement","bugfix"]}>
+
   ## New
 
   - Added file upload support to the email sending form, allowing staff to attach PDFs, forms, and other documents directly to outgoing messages.
@@ -540,9 +620,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
 
   - Reduced unnecessary form record updates during saves, which helps avoid conflicting edits and improves performance.
   - Fixed several email handling edge cases so previews, logs, and sends stay in sync, even when user IDs or addresses change.
+
 </Update>
 
 <Update label="2026-03-24" description="Email logging, payments, and PDF handling" tags={["improvement","bugfix"]}>
+
   ## Improvements
 
   - Refactored email logging so admins have clearer visibility into when messages were queued, sent, and delivered.
@@ -553,9 +635,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   - Corrected payment authorization updates so successful card charges store the correct authorization code for future reference.
   - Removed redundant SQL conditions in form-notification scripts to eliminate rare cases of missed notifications.
   - Normalized how display values are rendered in results pages to protect against malformed data and ensure consistent formatting.
+
 </Update>
 
 <Update label="2026-03-23" description="PDF generation and scheduler filters" tags={["improvement","bugfix"]}>
+
   ## Improvements
 
   - Improved PDF generation stability and styling for exported notifications and results so long reports render consistently.
@@ -564,9 +648,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Bug Fixes
 
   - Resolved several PDF error-handling paths to avoid blank or partially rendered documents when underlying data is incomplete.
+
 </Update>
 
 <Update label="2026-02-26" description="Authentication updates" tags={["security","improvement"]}>
+
   ## Security
 
   - Enforced a stronger password policy across registration, password reset, and password change flows.
@@ -575,9 +661,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Improvements
 
   - Added Google and Apple sign-in buttons on the login page to reduce password entry friction for families and staff.
+
 </Update>
 
 <Update label="2026-02-25" description="Portal, reports, and payments" tags={["feature","improvement","bugfix"]}>
+
   ## Improvements
 
   - Updated product and session purchase flows to show clearer messaging when no sessions are available.
@@ -590,9 +678,11 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Bug Fixes
 
   - Improved credit card payment cancellations by using voiding where appropriate to reduce transaction errors.
+
 </Update>
 
 <Update label="2026-02-24" description="Login security, billing dashboard" tags={["security","feature","improvement","bugfix"]}>
+
   ## Security and Improvements
 
   - Restricted logins to the correct agency-specific subdomain and now show an explicit error when a user attempts to sign in from the wrong domain.
@@ -605,11 +695,14 @@ Stay informed about new features, improvements, bug fixes, and any breaking chan
   ## Bug Fixes
 
   - Fixed future-date validation for scheduled communications (announcements and SMS) using timezone-aware date handling.
+
 </Update>
 
 <Update label="2026-02-23" description="Billing fix" tags={["bugfix"]}>
+
   ## Bug Fixes
 
   - Prevented duplicate discounts from being applied in the cart to ensure accurate totals at checkout.
+
 </Update>
 
