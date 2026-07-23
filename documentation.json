@@ -563,7 +563,7 @@
             ]
           },
           {
-            "group": "Portal", 
+            "group": "Portal",
             "pages": [
               {
                 "title": "Where can I find a link for the Portal / parent site?",
@@ -572,7 +572,16 @@
             ]
           },
           {
-            "group": "General",
+            "group": "Photo Hosting",
+            "pages": [
+              {
+                "title": "Do staff have access to high resolution downloads?",
+                "path": "do-staff-have-access-to-high-resolution-downloads"
+              }
+            ]
+          },
+          {
+            "group": "General", 
             "pages": [
               {
                 "title": "How to create data views for profiles",
