@@ -10,6 +10,36 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-07-24" description="Multi-camp login chooser, batch photo tagging, Even Split payment recalculation, payments report overhaul, session security, Finix deposit and PCI improvements, and financial report fixes" tags={["feature","improvement","security","bugfix"]}>
+  ## New
+
+  - **Multi-camp login chooser** — Parents and staff with accounts at multiple camps can now select which camp to log into from the mobile app, instead of being automatically placed in the first matching camp.
+  - **Batch photo tagging** — Admins can select multiple photos at once and add, remove, or replace tags in a single action. A live action bar shows the selection count, with "Select all loaded" and "Clear" controls. See [Photo Hosting](/photo-hosting).
+
+  ## Updates
+
+  - **Even Split payment plan auto-recalculation** — Future installments on Even Split plans now automatically recalculate after discounts or payments are applied, so upcoming charges always reflect the true remaining balance. See [Payment Plans](/payment-plans).
+  - **Payments report overhaul** — The payments report now loads via background paging for faster display, includes a live search across payer name, card last four, transaction ID, and amount, supports sorting by date or amount, and adds direct PDF, Excel, and HTML export buttons.
+  - **Finix deposit summary improvements** — The deposit summary now includes a payment type column (ACH, credit card, etc.), shows clear messaging when processor fees aren't yet available, and correctly links to ACH return batch details. See [Payment Processors](/payment-processors).
+  - **Session security** — Admin sessions now expire after 24 hours regardless of activity. Idle timeout is 90 minutes for password-only logins and 12 hours when using 2FA or a passkey. A bug causing premature logouts has also been fixed.
+  - **Pay-in-full discount labels** — Pay-in-full discount credits now display the discount name and amount in the family ledger instead of appearing as unlabeled credits.
+  - **PCI attestation button** — A persistent "Sign PCI Attestation" button now appears in the admin header whenever a Finix PCI compliance form needs a signature, with a red dot indicator when overdue. See [Payment Processors](/payment-processors).
+  - **Camper Info link visibility** — The "Camper Info" navigation link now only appears for families with at least one active, enrolled camper.
+  - **End-of-season email footer** — End-of-season system emails to admins now include the specific camp name, making it clear which camp the message refers to — especially for multi-camp administrators.
+
+  ## Bug Fixes
+
+  - Fixed the Family Ledger report showing full balances even when families had already made payments.
+  - Fixed the [Accounts Receivable](/account-balance) (Account Balance Aging) report not subtracting received payments from outstanding balances when date or product filters were applied.
+  - Fixed sibling discounts being applied to the wrong camper — the discount now goes to the lower-spending camper, matching what the checkout page displayed.
+  - Fixed social login users with accounts at multiple camps being rejected if the first-matching camp didn't have the mobile app enabled.
+  - Fixed Payabli payment webhooks creating orphaned payment records when a customer couldn't be resolved.
+  - Fixed Finix PCI compliance forms potentially showing another camp's form due to a cross-tenant data issue. See [Payment Processors](/payment-processors).
+  - Fixed Finix PCI attestation submissions failing due to a timestamp formatting error.
+  - Fixed the ACH checkout form showing pre-filled test routing and account numbers instead of blank fields.
+  - Strengthened Apple Sign In by verifying token signatures against Apple's published keys, preventing forged tokens from being accepted.
+</Update>
+
 <Update label="2026-07-17" description="Form approval deposits, manual tip recording, bunk management, canteen overspend, bus ETA improvements, Finix decline messaging, and bug fixes" tags={["feature","improvement","bugfix"]}>
   ## New
 
