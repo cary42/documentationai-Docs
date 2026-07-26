@@ -1,0 +1,163 @@
+---
+title: Email Sequences
+description: >-
+  Build automated drip email sequences that send a series of timed messages to
+  families after they register, and control when each step goes out.
+---
+## What email sequences are for
+
+Email sequences let you set up a series of automated emails that go out on a schedule after a family registers, without you sending each one by hand. Use them for welcome series, pre-camp reminders, packing lists, countdowns, or any set of messages you want everyone to receive in the same order and timing.
+
+Each sequence is made up of ordered **steps**. A step is a single email with its own subject and content, and it sends a set number of days after the family registers. Campium queues the emails automatically and sends them when the timing is reached.
+
+<Callout kind="info" collapsed="false">
+  Email sequences are automated. Once a sequence is active and its steps are active, Campium queues and sends messages to matching families on its own. Review your steps carefully before you turn a sequence on.
+</Callout>
+
+## How a sequence is structured
+
+A sequence has two layers:
+
+- **Sequence** — The overall container. It has a name, a description, and an Active or Inactive status. You can see how many steps it holds and how many subscribers it has.
+
+- **Steps** — The individual emails inside the sequence. Each step has a subject, a description, a status, and a timing value that decides how many days after registration it sends. Steps run in the order you arrange them.
+
+<Callout kind="tip" collapsed="false">
+  Plan your sequence on paper first. List each email, what it says, and how many days after registration it should send. That makes building the steps much faster.
+</Callout>
+
+## Create a new sequence
+
+Start by creating the sequence container, then add steps to it.
+
+<Steps>
+  <Step title="Open Email Sequences" icon="mail" title-type="p">
+    From the admin navigation, go to the **Communication** area and open **Email Sequences**. You see a list of any existing sequences with their name, description, status, number of steps, and subscriber count.
+  </Step>
+
+  <Step title="Start a new sequence" icon="plus" title-type="p">
+    Click **New Email Sequence** in the top right of the page. Campium creates a new sequence for you to name.
+  </Step>
+
+  <Step title="Name and describe the sequence" icon="edit" title-type="p">
+    Give the sequence a clear **Name** (for example, "Welcome Series" or "Pre-Camp Countdown") and a short **Description** so you and your team recognize its purpose later. Save your changes.
+  </Step>
+
+  <Step title="Open the sequence to add steps" icon="folder" title-type="p">
+    Back on the Email Sequences list, click the sequence **Name** to open its steps. You can rename the sequence at any time using the menu icon on its row and choosing **Edit Sequence Name**.
+  </Step>
+</Steps>
+
+A new sequence starts with no steps and stays **Inactive** until you are ready to turn it on.
+
+## Add timed steps
+
+Steps are the emails inside your sequence. Each one sends a set number of days after a family registers.
+
+<Steps>
+  <Step title="Open the sequence steps" icon="folder" title-type="p">
+    From the Email Sequences list, click the sequence name to open the **Email Sequence Steps** page. The page title shows the sequence you are editing.
+  </Step>
+
+  <Step title="Add a step" icon="plus" title-type="p">
+    Click **Add Step** in the top right. A form opens where you build the email for this step.
+  </Step>
+
+  <Step title="Write the email" icon="edit" title-type="p">
+    Enter the **Subject** and the email content, and add a short **Description** so the step is easy to recognize in the list. The subject and content are what families receive.
+  </Step>
+
+  <Step title="Set the timing" icon="clock" title-type="p">
+    Choose how many **days after registration** this step should send. For example, a value of `0` sends right away, `1` sends the next day, and `7` sends a week after the family registers. This timing is what makes the sequence a drip.
+  </Step>
+
+  <Step title="Save the step" icon="check-circle" title-type="p">
+    Save the step. It appears in the steps table with its subject, description, status, and the number of emails queued for it.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The **# of Emails Queued** column shows how many messages are lined up to send for that step. Use it to confirm that active families are being picked up by the sequence.
+</Callout>
+
+### Reorder steps
+
+The order of steps controls the sequence flow. You can rearrange them directly in the list.
+
+<Steps>
+  <Step title="Drag a step to a new position" icon="arrow-right" title-type="p">
+    On the Email Sequence Steps page, use the sort handle on the left of a step row to drag it up or down. Release it in the position you want.
+  </Step>
+
+  <Step title="Confirm the new order" icon="check-circle" title-type="p">
+    Campium saves the new order automatically as soon as you drop the row. Double-check that the sequence now reads in the order families should receive the emails, based on each step's timing.
+  </Step>
+</Steps>
+
+### Edit a step
+
+<Steps>
+  <Step title="Open the step" icon="edit" title-type="p">
+    On the Email Sequence Steps page, click the step's subject, or use the menu icon on its row and choose **Edit Step**.
+  </Step>
+
+  <Step title="Update and save" icon="check-circle" title-type="p">
+    Adjust the subject, content, description, timing, or status, then save. Changes apply to future sends from this step.
+  </Step>
+</Steps>
+
+## Turn steps and the sequence on
+
+A sequence only sends when both the sequence itself and the individual steps are **Active**.
+
+<Steps>
+  <Step title="Activate the steps you want to send" icon="check-circle" title-type="p">
+    On the Email Sequence Steps page, confirm each step you want live shows a green **Active** badge. Steps marked **Inactive** stay in the sequence but do not send. Set a step's status to Active when its content and timing are final.
+  </Step>
+
+  <Step title="Activate the sequence" icon="play-circle" title-type="p">
+    Return to the Email Sequences list and set the sequence status to **Active**. An active sequence with active steps begins queuing emails for families based on each step's days-after-registration timing.
+  </Step>
+
+  <Step title="Verify subscribers and queued emails" icon="monitor" title-type="p">
+    Check the **Subscribers** count on the sequence and the **# of Emails Queued** on each step to confirm families are being enrolled and messages are lined up.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Test a new sequence with a small or internal registration first. Confirm the emails arrive with the right content and timing before you leave it running for everyone.
+</Callout>
+
+## Statuses at a glance
+
+- **Active** — The sequence or step is live. Active steps inside an active sequence send on schedule.
+
+- **Inactive** — The sequence or step is paused. It stays saved with all its content but does not send. Use Inactive to draft a sequence, pause one for the off-season, or hold a single step you are not ready to release.
+
+## Tips for reliable sequences
+
+<Callout kind="tip" collapsed="false">
+  - **Keep timing intentional**: Space steps so families are not flooded. Decide the day-after-registration value for each step up front.
+
+  - **Use clear descriptions**: The description helps you scan the steps list and know what each email does without opening it.
+
+  - **Deactivate instead of deleting**: If you want to pause a message, set the step to Inactive so you keep its content and history.
+
+  - **Review before activating**: Turning a sequence Active begins automated sending. Confirm subjects, content, and timing first.
+</Callout>
+
+## Related pages
+
+<Columns cols="3">
+  <Card title="Email Templates" href="/email-templates" icon="mail" cta="Reuse email content" horizontal="false">
+    Build reusable email content you can draw on when writing sequence steps.
+  </Card>
+
+  <Card title="Mass Emails" href="/mass-emails" icon="send" cta="Send one-time emails" horizontal="false">
+    Send a single email to a group when you do not need automated timing.
+  </Card>
+
+  <Card title="Site Settings" href="/settings" icon="settings" cta="Configure account options" horizontal="false">
+    Review account-wide settings that affect how your emails and modules behave.
+  </Card>
+</Columns>

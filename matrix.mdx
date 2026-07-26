@@ -1,0 +1,45 @@
+---
+title: Matrix Report
+description: Build a cross-tab that counts people by two profile fields at once, with row, column, and grand totals.
+---
+
+## Overview
+
+Use the Matrix Report to build a cross-tab that counts your people by two fields at once. For example, if you set the vertical field to Camper Age Group and the horizontal field to Camper Shirt Size, the grid shows age groups as rows and shirt sizes as columns, with each cell counting how many campers in that age group have that shirt size.
+
+## Build the cross-tab
+
+<Steps>
+  <Step title="Choose the vertical field" icon="rows" titleType="p">
+    Pick the field whose values become the rows of the grid.
+  </Step>
+
+  <Step title="Choose the horizontal field" icon="columns" titleType="p">
+    Pick the field whose values become the columns of the grid.
+  </Step>
+
+  <Step title="Choose a season and sessions if prompted" icon="folder" titleType="p">
+    When either field is season- or session-based, a Season selector and a Sessions dropdown appear. Choose the season, then pick which sessions to include (all are selected by default).
+  </Step>
+
+  <Step title="Submit" icon="play" titleType="p">
+    Select **Submit** to generate the grid.
+  </Step>
+</Steps>
+
+## Reading the grid
+
+Each cell holds the count of people who match that row value and column value. A **Totals** column sums each row, a totals row at the bottom sums each column, and the bottom-right cell shows the grand total.
+
+## Saved filters
+
+Use the **Saved filters** controls to save a vertical field, horizontal field, and season/session combination you use often. Save, rename, or delete a saved filter and reload it later instead of rebuilding it.
+
+## Where to find it
+
+In Campium, go to **Reports** &gt; **System** and select the Matrix Report.
+
+## Troubleshooting
+
+- **The grid says there are no users**: No people match the two fields you chose for the selected season and sessions.
+- **Season and Sessions options do not show**: They appear only when the vertical or horizontal field is season- or session-based.

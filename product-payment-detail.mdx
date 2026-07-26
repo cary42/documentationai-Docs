@@ -1,0 +1,89 @@
+---
+title: Payment Detail by Camper and Session
+description: See how much each camper has paid toward each session, with charges, payments, discounts and credits, and the remaining balance.
+---
+
+## Overview
+
+Use Payment Detail to see how payments are landing across a season, line by line. For each camper and session it shows what was charged, how much has been paid, any discounts or credits, and the balance still owed.
+
+Payments are recorded against a season, not against a single line item, so each family's payments are split across their sessions in proportion to price. Charged minus Paid minus Discounts and Credits equals the Balance.
+
+## Filters
+
+<ParamField body="Season" param-type="filter" show-location="false">
+The report always covers one season. Use the season selector at the top to choose it.
+</ParamField>
+
+<ParamField body="Date range" param-type="filter" show-location="false">
+Paid and Discounts / Credits count only payments received in this range. It defaults to the last 30 days.
+</ParamField>
+
+## Summary cards
+
+<ParamField body="Total Charged" param-type="currency" show-location="false">
+The full value of all active registrations in the season.
+</ParamField>
+
+<ParamField body="Total Paid" param-type="currency" show-location="false">
+Payments received (card, bank, check, or cash) within the selected date range.
+</ParamField>
+
+<ParamField body="Discounts / Credits" param-type="currency" show-location="false">
+Non-payment reductions such as discounts, credits, and adjustments applied within the date range.
+</ParamField>
+
+<ParamField body="Outstanding Balance" param-type="currency" show-location="false">
+Charged minus what was paid and credited in the date range.
+</ParamField>
+
+## Table columns
+
+<ParamField body="Family" param-type="link" show-location="false">
+The family's name, linked to their profile.
+</ParamField>
+
+<ParamField body="Camper" param-type="text" show-location="false">
+The person the line item is for.
+</ParamField>
+
+<ParamField body="Session" param-type="text" show-location="false">
+The registered session or product.
+</ParamField>
+
+<ParamField body="Charged" param-type="currency" show-location="false">
+The full price of that line item.
+</ParamField>
+
+<ParamField body="Paid" param-type="currency" show-location="false">
+The share of payments allocated to that line, pro-rated by price.
+</ParamField>
+
+<ParamField body="Discounts / Credits" param-type="currency" show-location="false">
+The share of discounts and credits allocated to that line.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" show-location="false">
+Charged minus Paid minus Discounts / Credits for that line.
+</ParamField>
+
+<Callout kind="info">
+  Because payments apply to a season rather than a single session, the Paid and Discounts / Credits figures are an allocation, not a record of a specific charge against one line item. Adjust the date range to change which payments are counted.
+</Callout>
+
+## Where to find it
+
+<Steps>
+  <Step title="Open Payment Detail from Reports" icon="folder" titleType="p">
+    Go to **Reports** &gt; **System** and select **Payment Detail by Camper and Session**.
+  </Step>
+
+  <Step title="Pick a season and date range" icon="calendar" titleType="p">
+    Choose the season at the top, then set the date range to control which payments are counted.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+- **No active registrations were found**: There are no active registrations for the selected season. Confirm you picked the right season.
+- **Paid looks lower than expected**: Only payments received inside the date range are counted. Widen the range to include earlier payments.

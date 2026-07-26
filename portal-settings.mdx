@@ -1,0 +1,115 @@
+---
+title: Portal Settings
+description: >-
+  Configure your parent portal, including its browser favicon and which login
+  user types appear on the sign-in and registration screens.
+---
+## What Portal Settings control
+
+Portal Settings control how your parent portal presents itself to families. From this screen you can upload the favicon that appears in the browser tab and choose which user types families can select when they sign in or register.
+
+<Callout kind="info" collapsed="false">
+  Portal Settings require the site text permission. If you do not have access, you are redirected away from the page. Ask a Campium administrator on your team if you need access.
+</Callout>
+
+## Open Portal Settings
+
+Go to **Admin → Portal Settings**. The screen is organized into cards, one for the favicon and one for login user types.
+
+<Callout kind="info" collapsed="false">
+  Some portal options depend on how your account is set up. If the login user types card is not available, you see a message that portal settings are not available for your account yet.
+</Callout>
+
+## Favicon
+
+The favicon is the small icon shown in the browser tab and on the iOS home screen when a family saves your portal. Setting your own favicon makes the portal feel branded to your camp.
+
+<Steps>
+  <Step title="Review the current favicon" icon="monitor" title-type="p">
+    In the **Favicon** card, the current icon is shown. If you have not set one, the card notes that the default Campium favicon is in use.
+  </Step>
+
+  <Step title="Choose an image" icon="upload" title-type="p">
+    Under **Upload favicon**, select an image file. Accepted formats are ico, png, jpg, and gif, with a maximum size of 1 MB. A square image of 32 by 32 pixels or larger is recommended.
+  </Step>
+
+  <Step title="Upload" icon="check-circle" title-type="p">
+    Click **Upload**. The new favicon replaces the previous one on your portal.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Browsers cache favicons aggressively. After uploading, families may need to refresh or reopen the portal before the new icon appears in their tab.
+</Callout>
+
+## Login user types
+
+The login user types card controls which user types appear in the "I am" dropdown on your parent portal sign-in and registration screens. For example, you might show "Parent" and "Staff" but hide types that do not register through the portal.
+
+A **live preview** on the right shows the registration dropdown exactly as families see it, and updates as you make changes.
+
+<Callout kind="info" collapsed="false">
+  At least one user type must be shown. You cannot save with every type turned off, because families would have nothing to select at registration.
+</Callout>
+
+### Configure which types appear
+
+<Steps>
+  <Step title="Show or hide each type" icon="settings" title-type="p">
+    In the **Show** column, use the checkbox on each row to include or exclude that user type from the portal login and registration screens. Rows you turn off appear dimmed, and their label and order fields are disabled.
+  </Step>
+
+  <Step title="Set a login label" icon="edit" title-type="p">
+    In the **Login label** field, enter the wording families should see in the dropdown for that type. Leave it blank to use the user type's own name. This lets you show friendlier wording without renaming the underlying type.
+  </Step>
+
+  <Step title="Set the display order" icon="filter" title-type="p">
+    In the **Order** column, enter a number to control where the type appears in the dropdown. Lower numbers appear first. Use this to put the most common choice at the top.
+  </Step>
+
+  <Step title="Check the live preview" icon="monitor" title-type="p">
+    Watch the **Live preview** panel. Open the preview dropdown to confirm the labels and order match what you want families to see.
+  </Step>
+
+  <Step title="Save your changes" icon="check-circle" title-type="p">
+    Click **Save**. Your choices apply to the parent portal login and registration screens.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Only show the user types that actually register or sign in through the portal. A shorter, clearer dropdown reduces confusion and mis-registrations.
+</Callout>
+
+## Fields in the login user types table
+
+<ParamField body="Show" param-type="toggle" required="true" deprecated="false">
+  Whether this user type appears on the portal login and registration screens. At least one type must be shown.
+</ParamField>
+
+<ParamField body="User Type" param-type="text" required="true" deprecated="false">
+  The name of the user type as defined in your account. This is read-only here and is used as the default label when no login label is set.
+</ParamField>
+
+<ParamField body="Login label" param-type="text" required="false" deprecated="false">
+  Optional wording shown in the registration dropdown for this type. Leave blank to use the User Type name.
+</ParamField>
+
+<ParamField body="Order" param-type="number" required="false" deprecated="false">
+  The position of this type in the dropdown. Lower numbers appear first.
+</ParamField>
+
+## Related pages
+
+<Columns cols="3">
+  <Card title="Site Settings" href="/settings" icon="settings" cta="Configure account options" horizontal="false">
+    Adjust account-wide modules, payment, and mobile app behavior alongside your portal settings.
+  </Card>
+
+  <Card title="Business Info & Logo" href="/business-info-and-logo" icon="folder" cta="Set your branding" horizontal="false">
+    Configure the camp name and logo that families see across the portal and emails.
+  </Card>
+
+  <Card title="Legal Documents" href="/legal-documents" icon="file-text" cta="Manage terms of service" horizontal="false">
+    Edit the terms of service families agree to when they register through the portal.
+  </Card>
+</Columns>
