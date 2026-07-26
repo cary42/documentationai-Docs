@@ -8,14 +8,16 @@ description: >-
 
 Use the Import Users tool to load many new users into Campium at once or update details for existing users from a CSV file.&#x20;
 
-The Import Users screen can be found by going to **Admin** -> **Import & Export** -> **Import Users**
+The Import Users screen can be found by going to **Admin** -> **Import & Export** -> **Import** -> **Users**
+
+You can import both families (campers with guardians) and staff rosters. Choose the staff import mode when the file you are loading is a list of staff members rather than campers and their families.
 
 ## Where to find it
 
 Access the Import Users tool from within the Campium admin UI. Depending on your configuration, it may appear in areas such as users, profiles, or data/imports.
 
 <Callout kind="info" collapsed="false">
-  If you do not see an Import option in your admin menus, contact your Campium support contact or an internal admin with higher permissions to confirm that bulk imports are enabled for your account.
+  Access to the Import Users tool is controlled by the custom-fields permission. If you do not see an Import option in your admin menus, ask an internal admin to confirm that your role includes this permission for your account.
 </Callout>
 
 When you open the Import Users screen, you typically see options to upload a CSV file and map its columns to fields such as name, email, or profile attributes.
@@ -25,7 +27,7 @@ When you open the Import Users screen, you typically see options to upload a CSV
 Prepare your data and account before running any import to avoid duplicate records.
 
 <Callout kind="info" collapsed="false">
-  Confirm that your admin role is allowed to perform bulk imports. If your organization restricts this, ask a system administrator to either run the import for you or temporarily grant access.
+  Confirm that your role includes the custom-fields permission that unlocks the Import Users tool. If your access is restricted, ask an admin to either run the import for you or grant you the permission.
 </Callout>
 
 Recommended practices:
@@ -50,9 +52,11 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
 
 <Steps>
   <Step title="Open the Import Users tool" icon="folder" title-type="p">
-    - Sign in to the Campium admin UI with an account that has Administrator access
+    - Sign in to the Campium admin UI with an account whose role includes the custom-fields permission
 
-    - Navigate to **Admin** -> **Import & Export** -> **Import Users**
+    - Navigate to **Admin** -> **Import & Export** -> **Import** -> **Users**
+
+    - Choose whether you are importing families (campers and their guardians) or a staff roster.
 
     Success check: You see a page that lets you browse for a file or upload a CSV, with options to configure how the import behaves.
   </Step>
@@ -68,7 +72,7 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
 
     - Confirm the file appears as selected and, if shown, that the row count matches your expectations.
 
-    - Example CSV - [https://campiumdb.com/imports/download-template.php](https://campiumdb.com/imports/download-template.php)
+    - Download the example CSV template directly from the Import Users screen while you are signed in. The template is a logged-in download from within the tool, not a public link you paste into a browser.
 
     Success check: The screen advances to a mapping or preview step that shows your CSV columns and sample data.
   </Step>
@@ -76,13 +80,29 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
   <Step title="Map CSV columns to Campium fields" icon="settings" title-type="p">
     - For each CSV column shown, choose the matching field in Campium using the dropdowns or field selectors you see.
 
-    - Pay special attention to identifiers such as **Guardian 1 Email** (or the equivalent field in your configuration), since the import uses this email address to determine whether there is a matching family.
+    - Pay special attention to identifiers such as **Guardian 1 Email** (or the equivalent field in your configuration), since the import uses this email address as the first way to determine whether there is a matching family.
+
+    - Common column names are recognized automatically. For example, `mom`, `dad`, `mother`, and `father` map to **Guardian 1** and **Guardian 2**, and `dob` maps to the **birth date** field. You can still override any automatic match.
+
+    - If your CSV includes a **Person ID**, map it so existing people can be matched by their unique ID. This is what lets you safely re-import an updated file against the same records instead of creating duplicates.
+
+    - If a column has no matching field yet, you can create a new custom field on the fly during this mapping step, then map the column to it without leaving the import.
 
     - If the UI offers an option like "Ignore this column" or similar, use it for columns that you do not want to import.
 
     - Review any required fields indicated on the screen and confirm you mapped at least one field that can uniquely identify a user.
 
     Success check: All important columns are mapped to the fields you expect, with no obvious mismatches (for example, emails under a phone field), and Guardian 1 Email is correctly mapped for every family.
+  </Step>
+
+  <Step title="Preview the import (dry run)" icon="eye" title-type="p">
+    - Before anything is written, use the **Preview** step to see a dry run of what the import will do.
+
+    - Review the preview to confirm how many families, campers, and guardians would be created or updated, and check that existing records are being matched rather than duplicated.
+
+    - If the preview looks wrong, go back and adjust your mappings, then preview again.
+
+    Success check: The preview counts and matched records line up with what you expect from your file before you commit the import.
   </Step>
 
   <Step title="Run a test import" icon="play-circle" title-type="p">
@@ -127,24 +147,27 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
 </Callout>
 
 <Callout kind="alert" collapsed="false">
-  The import relies on Guardian 1 Email to match families. If you enter the wrong email or leave it blank for an existing family, the import can create a duplicate family or link users to the wrong family.
+  The import matches families first by Guardian 1 Email, then by Person ID, then by parent name. If you enter the wrong email and there is no Person ID or matching name to fall back on, the import can create a duplicate family or link users to the wrong family.
 </Callout>
 
 ## How duplicates and updates typically work
 
-The Import Users tool relies on the email address of Guardian 1 to decide whether a row belongs to an **existing family** or should create a **new family**.
+The Import Users tool decides whether a row belongs to an **existing family** or should create a **new family** by trying several identifiers in order.
 
 - **Family matching**\
-  When Guardian 1 Email in your CSV matches an existing Guardian 1 email in Campium, the import associates the row with that existing family and may update related user records based on your settings.
+  The import first tries to match on **Guardian 1 Email**. If there is no email match, it falls back to a matching **Person ID**, and if that is also missing it falls back to the **parent name**. Only when none of these match does the import create a new family.
+
+- **Camper matching**\
+  Within a matched family, campers are matched by **first name + last name + family**. A camper whose first name, last name, and family all match an existing record is updated in place rather than added again.
 
 - **New vs. existing families**\
-  If Guardian 1 Email from the CSV does not match any existing Guardian 1 email, or if it is missing, the import treats the row as a new family and creates a new family record along with its users.
+  If none of Guardian 1 Email, Person ID, or parent name match an existing family, the import treats the row as a new family and creates a new family record along with its users.
 
 - **Error handling**\
   When the import cannot process a row because a required field is missing or invalid, the tool may skip that row and show it as an error or warning in the results. Use these messages to clean up your source data and rerun only the problematic rows if needed.
 
 <Callout kind="alert" collapsed="false">
-  Because family matching is based on Guardian 1 Email, never guess or reuse email values. Always confirm this column in your CSV before running a large import, and validate the behavior using a small test file that includes at least one existing family.
+  Because family matching starts with Guardian 1 Email before falling back to Person ID and parent name, never guess or reuse email values. Include a Person ID whenever you can so re-imports match cleanly, and validate the behavior using a small test file that includes at least one existing family.
 </Callout>
 
 ## Troubleshooting

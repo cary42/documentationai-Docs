@@ -26,7 +26,7 @@ A **Season** represents a registration period, such as "Summer 2025" or "School 
 
 - Payment plans
 
-When you clone a Season, Campium copies these items from an existing Season into a new one along with Forms.
+When you copy a Season, Campium copies these items from an existing Season into a new one along with Forms.
 
 ### Session (Product)
 
@@ -90,29 +90,29 @@ Link patterns from the templates:
 
 ## Work with Seasons
 
-### Clone an existing Season
+### Copy an existing Season
 
-Cloning a Season lets you reuse all of the Sessions (Products), forms, and payment plans from one Season in another, which is useful when you run the same structure each year.
+Copying a Season lets you reuse all of the Sessions (Products), forms, and payment plans from one Season in another, which is useful when you run the same structure each year.
 
 <Steps>
-  <Step title="Open the Season clone modal" icon="folder" title-type="p">
+  <Step title="Open the Copy Season modal" icon="folder" title-type="p">
 
     - Go to the Seasons area in the admin.
-    - Select the Season you want to copy.
-    - Use the Season clone action (often labeled `Clone` or similar) to open the Season clone modal.
+    - Find the Season you want to copy.
+    - Open that Season's row menu and select **Copy Season** to open the copy modal.
 
   </Step>
 
-  <Step title="Review the clone note" icon="info" title-type="p">
-    The Season clone modal includes an alert describing what the clone does. The text from the template is:
+  <Step title="Review the copy note" icon="info" title-type="p">
+    The Copy Season modal includes an alert describing what the copy does. The text from the template is:
 
     > **Note:** This feature will create a copy of all sessions/products, forms, and payment plans from the selected season to a new season. This operation may take a few moments to complete. Please do not close this window until the process is finished.
 
     The exact label used for sessions/products is configurable under **Admin → Site Settings → Basic**.
   </Step>
 
-  <Step title="Fill in clone fields" icon="edit" title-type="p">
-    The Season clone modal includes:
+  <Step title="Fill in copy fields" icon="edit" title-type="p">
+    The Copy Season modal includes:
 
     <ParamField body="Copy From Season" param-type="string" required="true" deprecated="false">
       Read-only label showing the name of the Season you are copying from, displayed as `Copy From Season` with the selected Season name.
@@ -121,15 +121,23 @@ Cloning a Season lets you reuse all of the Sessions (Products), forms, and payme
     <ParamField body="New Season Name" param-type="string" required="true" deprecated="false">
       The name for the new Season that will receive the copied Sessions/Products, forms, and payment plans. For example, `Summer 2026`.
     </ParamField>
+
+    <ParamField body="New Season End Date" param-type="date" required="true" deprecated="false">
+      The end date for the new Season. Set this to the date the copied Season should run through.
+    </ParamField>
+
+    <ParamField body="Increase Form and Payment Plan dates by one year" param-type="boolean" required="false" deprecated="false">
+      Checkbox that is **checked by default**. Leave it checked to shift the copied forms' and payment plans' dates forward by one year, which is what you usually want when reusing last year's setup for a new Season. Uncheck it to copy those dates unchanged.
+    </ParamField>
   </Step>
 
-  <Step title="Start the clone" icon="play-circle" title-type="p">
+  <Step title="Start the copy" icon="play-circle" title-type="p">
 
-    - Click **Save** to start cloning the Season.
+    - Click **Save** to start copying the Season.
     - Leave the window open until the process finishes, as the note indicates.
-    - Click **Cancel** if you decide not to clone.
+    - Click **Cancel** if you decide not to copy.
 
-    When the clone completes, the new Season appears in your Seasons list with copied Sessions/Products, forms, and payment plans that you can then adjust.
+    When the copy completes, the new Season appears in your Seasons list with copied Sessions/Products, forms, and payment plans that you can then adjust.
   </Step>
 </Steps>
 
@@ -189,27 +197,27 @@ Use the New Session/Product modal to define a session that families can register
     </ParamField>
   </Step>
 
-  <Step title="Configure attendance and stats fields" icon="bar-chart" title-type="p">
-    These fields affect attendance tracking and internal statistics without changing how the Session/Product appears on the parent site, unless otherwise noted.
+  <Step title="Configure schedule and stats fields" icon="bar-chart" title-type="p">
+    These fields set the Session's schedule and internal statistics without changing how the Session/Product appears on the parent site, unless otherwise noted.
 
     <ParamField body="Staff" param-type="array" required="false" deprecated="false">
       Multi-select field labeled `Staff`. Use this to associate one or more staff members with the Session/Product.
     </ParamField>
 
-    <ParamField body="Days of Week For Attendance Only" param-type="array" required="false" deprecated="false">
-      Set of checkboxes or selections labeled `Days of Week For Attendance Only` covering Sunday through Saturday. Use this to indicate which days attendance occurs for this Session.
+    <ParamField body="Days of Week" param-type="array" required="false" deprecated="false">
+      Multi-select dropdown labeled `Days of Week`. It appears only after you enable the **Schedule** dates below. Use it to pick which days of the week this Session runs.
     </ParamField>
 
     <ParamField body="Number of Weeks Used for admin stats only" param-type="integer" required="false" deprecated="false">
       Labeled `Number of Weeks Used for admin stats only`. Tooltip explains it is used for multi-week sessions. Enter how many weeks this session spans for internal reporting.
     </ParamField>
 
-    <ParamField body="Start Date For Attendance Only" param-type="date" required="false" deprecated="false">
-      Labeled `Start Date For Attendance Only`. This date is used for attendance tracking and internal reference.
+    <ParamField body="Start Date" param-type="date" required="false" deprecated="false">
+      Labeled `Start Date` under the **Schedule** heading. Set the day this Session begins. Enabling the schedule dates reveals the **Days of Week** dropdown above.
     </ParamField>
 
-    <ParamField body="End Date For Attendance Only" param-type="date" required="false" deprecated="false">
-      Labeled `End Date For Attendance Only`. Use this with the start date to define the attendance range.
+    <ParamField body="End Date" param-type="date" required="false" deprecated="false">
+      Labeled `End Date` under the **Schedule** heading. Use it with the start date to define the Session's date range.
     </ParamField>
 
     <ParamField body="Hide From Attendance" param-type="boolean" required="false" deprecated="false">
@@ -274,318 +282,21 @@ Copying a Session/Product lets you reuse most settings from an existing session 
 
 ## Cancellation fees
 
-Cancellation fees let staff create a dedicated fee session inside a Season and reuse it whenever they need to charge the same cancellation fee. This keeps fee names and amounts consistent across staff workflows and reduces one-off manual setup.
+Cancellation fees let you create a dedicated fee session inside a Season and reuse it whenever you need to charge the same cancellation amount. You manage them from the **Cancellation Fees** panel on a Season's Products/Sessions page: enter a **Name**, **Amount**, and **Description**, then select **Save Cancellation Fee** to add the fee. To change an existing fee, select **Edit** on its row, update the fields, and select **Save Cancellation Fee** again — or **Cancel Edit** to leave without saving.
 
-### Who should use this
-
-- Office or admin staff setting up a Season before registration opens
-- Registration staff who apply standard cancellation charges
-- Staff handling cancellations, adjustments, or follow-up fee corrections
-
-### Where to find Cancellation Fees
-
-<Steps>
-  <Step title="Sign in to the staff admin website" icon="lock" title-type="p">
-
-    - Sign in with your staff account.
-    - Open the admin area you use to manage Seasons and Sessions/Products.
-
-  </Step>
-
-  <Step title="Open the products or sessions page for the Season" icon="folder" title-type="p">
-
-    - Go to the Season where you want the cancellation fee to live.
-    - Open that Season's Products/Sessions page.
-
-  </Step>
-
-  <Step title="Find the Cancellation Fees button" icon="settings" title-type="p">
-
-    - Look near the top of the page for **Cancellation Fees**.
-    - Select the button or link to open that area.
-
-  </Step>
-
-  <Step title="Expand the panel" icon="chevron-right" title-type="p">
-
-    - Expand the Cancellation Fees panel if it is collapsed.
-    - Review any existing cancellation fee rows before creating a new one.
-
-  </Step>
-</Steps>
-
-If you do not see **Cancellation Fees**, the feature may not be enabled for your site. Ask your administrator or Campium support contact to confirm availability.
-
-### Create a cancellation fee
-
-<Steps>
-  <Step title="Enter the fee name" icon="edit" title-type="p">
-
-    - In the Cancellation Fees panel, enter a clear **Name**.
-    - Use a name staff will recognize later during cancellation workflows.
-
-  </Step>
-
-  <Step title="Enter the amount" icon="bar-chart" title-type="p">
-
-    - Enter the **Amount** to charge for this cancellation fee.
-    - Use the standard fee amount your organization applies for this Season.
-
-  </Step>
-
-  <Step title="Add the description" icon="book-open" title-type="p">
-
-    - Enter a short **Description** that explains when staff should use this fee.
-    - Keep the wording specific enough to distinguish it from other fee rows.
-
-  </Step>
-
-  <Step title="Create the cancellation fee" icon="check-circle" title-type="p">
-
-    - Select **Create Cancellation Fee** to save the fee.
-    - Wait for the page to refresh or for the new row to appear under existing fees.
-
-  </Step>
-</Steps>
-
-#### What happens after save
-
-- The new fee appears in **Existing Cancellation Fees**.
-- Campium saves the cancellation fee for the current Season.
-- The amount you entered becomes the fee amount for that cancellation-fee session.
-
-### Edit an existing cancellation fee
-
-<Steps>
-  <Step title="Find the cancellation fee row" icon="folder" title-type="p">
-
-    - Open the Cancellation Fees panel for the correct Season.
-    - Locate the fee you want to change in **Existing Cancellation Fees**.
-
-  </Step>
-
-  <Step title="Select Edit" icon="edit" title-type="p">
-
-    - Select **Edit** on that row.
-    - Wait for the row or form to switch into edit mode.
-
-  </Step>
-
-  <Step title="Update the fields" icon="settings" title-type="p">
-
-    - Update the **Name**, **Amount**, or **Description** as needed.
-    - Review the values before saving.
-
-  </Step>
-
-  <Step title="Save the changes" icon="check-circle" title-type="p">
-
-    - Select **Update Cancellation Fee Session** to save your changes.
-    - Confirm the updated values appear in the list.
-
-  </Step>
-</Steps>
-
-Use **Cancel Edit** to leave edit mode without saving.
-
-### Delete a cancellation fee
-
-<Steps>
-  <Step title="Select Delete" icon="trash" title-type="p">
-
-    - Find the fee in **Existing Cancellation Fees**.
-    - Select **Delete** on the row you want to remove.
-
-  </Step>
-
-  <Step title="Confirm the deletion" icon="alert-triangle" title-type="p">
-
-    - Confirm the delete action if the system asks for confirmation.
-    - Check that the row is removed from the list.
-
-  </Step>
-</Steps>
-
-<Callout kind="info" collapsed="false">
-  Deletion is blocked if the cancellation fee session is already in use by registrations. Keep that fee for historical records, and create a new cancellation fee if you need a different amount or name going forward.
+<Callout kind="alert" collapsed="false">
+  Cancellation fees are **not** applied automatically when a registration is cancelled. Creating a fee here only makes it available to reuse — to actually charge it, open the family's profile and add the fee from the **Sales** tab.
 </Callout>
 
-### Recommended naming and setup
-
-- Use names that match your finance or registration policy, such as `Standard cancellation fee`.
-- Keep one fee per standard amount when possible instead of reusing one name for different amounts.
-- Include a short description that tells staff when to use the fee.
-- Set up cancellation fees at the start of each Season so staff can apply them consistently.
-- Create a new fee instead of renaming an older one that has already been used for registrations.
-
-### Troubleshooting
-
-<ExpandableGroup>
-  <Expandable title="Name is required" default-open="false">
-
-    Add a name before you select **Create Cancellation Fee** or **Update Cancellation Fee Session**. Use a short label that staff can identify later in the fee list.
-
-  </Expandable>
-
-  <Expandable title="Amount must be greater than 0" default-open="false">
-
-    Enter a positive amount for the cancellation fee. Check that the amount field does not contain `0`, a blank value, or non-numeric characters.
-
-  </Expandable>
-
-  <Expandable title="Description is required" default-open="false">
-
-    Add a description before saving. Use the description to explain when staff should apply this cancellation fee.
-
-  </Expandable>
-
-  <Expandable title="Session name already exists in this season" default-open="false">
-
-    Choose a different name. Cancellation fees create dedicated sessions inside the Season, so the name must be unique within that Season.
-
-  </Expandable>
-
-  <Expandable title="Delete button does not work" default-open="false">
-
-    The fee may already be tied to registrations, which blocks deletion. Keep the existing fee for historical use and create a new one for future cancellations.
-
-  </Expandable>
-</ExpandableGroup>
-
-### Quick workflow checklist
-
-- Open the correct Season before working with Cancellation Fees.
-- Check **Existing Cancellation Fees** to avoid creating duplicates.
-- Enter a clear name, amount, and description.
-- Select **Create Cancellation Fee** to save a new fee.
-- Use **Edit** and **Update Cancellation Fee Session** for changes.
-- Delete only fees that have not been used.
-- Create a new fee for future use when an older fee must remain for history.
+For the full walkthrough — creating, editing, deleting, naming conventions, and troubleshooting — see the [Cancellation Fees](/cancellation-fees) guide.
 
 ## Manage Subproducts/options
 
-Subproducts/options let you define multiple choices under a single Session/Product. You manage them from the Product options list and the edit option modal.
+Subproducts/options let you offer one Session in different ways — by grade, age band, time slot, or another profile answer — each with its own price, deposit, capacity, wait list, and status. Add one with the **New Subproduct** button, and adjust the `Price`, `Min. Dep.`, and `Capacity` columns inline directly in the options list, or open the edit modal for name, description, staff, and status changes.
 
-### View and edit Subproducts/options list
+Each option's **Status** uses **Open** and **Closed**: leave it **Open** to accept registrations, or set it to **Closed** to place new users on the wait list instead.
 
-The options list displays Subproducts/options with summary data and inline editing for key financial and capacity fields.
-
-The `product-options.html` template includes:
-
-- Parent summary:
-
-  - `Parent Price: <product_price>`
-
-  - `Parent Deposit: <product_min_deposit>`
-
-  - `Parent Capacity: <product_capacity>`
-
-- Table headers:
-
-  - `Option Name (displayed in reports)`
-
-  - `Description (displayed on parent site)`
-
-  - `Profile Fields`
-
-  - `Response`
-
-  - `Status`
-
-  - `Price` (inline editable)
-
-  - `Min. Dep.` (inline editable)
-
-  - `Capacity` (inline editable)
-
-  - `Wait`
-
-  - `# Reg.`
-
-- Actions:
-
-  - Button: `New Subproduct`
-
-  - Bulk link: `Delete`
-
-<Callout kind="info" collapsed="false">
-  The `Price`, `Min. Dep.`, and `Capacity` columns are inline editable in the options list. You can click directly into these cells to adjust values without opening the full edit modal. Use the edit option modal for name, description, status, and staff changes.
-</Callout>
-
-### Add a new Subproduct/option
-
-Use the `New Subproduct` button to add an option under a Session/Product.
-
-<Steps>
-  <Step title="Open the new Subproduct form" icon="plus" title-type="p">
-
-    - From the Session/Product row, click into its options/subproducts area.
-    - Click **New Subproduct** to open the option create modal (fields mirror the edit modal described below).
-
-  </Step>
-
-  <Step title="Configure core Subproduct fields" icon="edit" title-type="p">
-    The `edit-product-option.html` template defines these fields, which also apply when creating a new Subproduct:
-
-    <ParamField body="Option Name" param-type="string" required="true" deprecated="false">
-      Labeled `Option Name`. This appears in reports under the Session/Product.
-    </ParamField>
-
-    <ParamField body="Description" param-type="string" required="false" deprecated="false">
-      Optional field labeled `Description`. This is displayed on the parent site so families can see what distinguishes this option.
-    </ParamField>
-
-    <ParamField body="Price" param-type="number" required="false" deprecated="false">
-      Labeled `Price`. Defines the price for this specific Subproduct/option. You can also adjust this inline from the options list under the `Price` column.
-    </ParamField>
-
-    <ParamField body="Minimum Deposit" param-type="number" required="false" deprecated="false">
-      Labeled `Minimum Deposit`. Defines the minimum deposit for this option and is also inline editable under `Min. Dep.` in the options list.
-    </ParamField>
-
-    <ParamField body="Capacity" param-type="integer" required="false" deprecated="false">
-      Labeled `Capacity` with helper text `blank or 0 for unlimited`. Controls how many registrations you accept for this option. You can also adjust this inline from the `Capacity` column.
-    </ParamField>
-  </Step>
-
-  <Step title="Set staff and status" icon="users" title-type="p">
-    Complete the remaining Subproduct fields:
-
-    <ParamField body="Staff" param-type="array" required="false" deprecated="false">
-      Optional multi-select labeled `Staff`. Use this to assign staff members specifically to this option.
-    </ParamField>
-
-    <ParamField body="Status" param-type="string" required="true" deprecated="false">
-      Labeled `Status`. Use the available status values (for example, Active, Inactive) to control whether the option can be registered for.
-    </ParamField>
-  </Step>
-
-  <Step title="Save the Subproduct/option" icon="check-circle" title-type="p">
-
-    - Click **Save** to create or update the Subproduct/option.
-    - Click **Cancel** to abandon changes.
-
-    The option appears in the options list with the configured name, description, price, deposit, capacity, and status, and the `Wait` and `# Reg.` columns update according to your registrations and waitlists.
-  </Step>
-</Steps>
-
-### Edit an existing Subproduct/option
-
-You can adjust Subproducts/options in two ways:
-
-- **Inline edits** in the options list:
-
-  - Click directly into the `Price`, `Min. Dep.`, or `Capacity` cells to modify values.
-
-  - Save or confirm inline changes according to your UI controls.
-
-- **Full edit modal**:
-
-  - Click the edit action for a Subproduct/option.
-
-  - Adjust any field described in the previous section (Option Name, Description, Price, Minimum Deposit, Capacity, Staff, Status).
-
-  - Click **Save** to apply changes or **Cancel** to close without saving.
+For the full walkthrough of setting up and using subproducts, see the [Subproducts](/subproducts) guide.
 
 ## View registrations and waitlists
 
@@ -643,9 +354,9 @@ Admins can create and manage Seasons from the Seasons area, including adding new
 
 ## Summary
 
-- **Seasons** group Sessions/Products, forms, and payment plans and can be cloned with the Season clone modal.
+- **Seasons** group Sessions/Products, forms, and payment plans and can be copied with the Copy Season modal.
 
-- **Sessions/Products** are created and copied using modals that define names, prices, deposits, capacities, and attendance-related fields.
+- **Sessions/Products** are created and copied using modals that define names, prices, deposits, capacities, and schedule fields.
 
 - **Subproducts/options** extend Sessions with variants, managed through the options list and edit modal with inline editing for price, deposit, and capacity.
 

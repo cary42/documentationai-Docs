@@ -114,11 +114,18 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     Leave blank or enter `0` for no limit.
   </Step>
 
-  <Step title="Choose cart vs product behavior" icon="settings" title-type="p">
-    Set **Apply To Entire Cart**:
+  <Step title="Choose how a percent discount applies across sessions" icon="settings" title-type="p">
+    Set **Apply To All Sessions**:
 
-    - **Yes**: Apply the discount to the entire cart.
-    - **No**: Allow product-level targeting through **Apply Only To These Products**.
+    - **Yes**: A percent discount applies to every eligible session for that child.
+    - **No**: A percent discount applies only to the child's lowest-priced session.
+  </Step>
+
+  <Step title="Choose how sessions are counted across children" icon="settings" title-type="p">
+    Set **Combine All Children's Sessions** to control how a percent discount is calculated when a family has more than one child:
+
+    - **Yes**: The discount is computed across all children's sessions combined.
+    - **No**: The discount is computed separately for each child.
   </Step>
 
   <Step title="Configure a pay in full discount" icon="check-circle" title-type="p">
@@ -126,14 +133,14 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
 
     Set the discount amount as either a **Fixed Amount** or **Percent**, then make sure the discount is visible where families check out if you want them to apply it themselves.
 
-    Some discounts can also be set to bypass payment completely in Admin by turning on **Bypass payment at portal checkout?**. When this setting is turned on, the discount can cover the full checkout amount, so the family does not need to pay anything at checkout.
+    Some discounts can also be set to skip payment completely by turning on **Bypass payment at portal checkout?**. When this setting is turned on, parents can submit their registration without entering a card or ACH payment, so the family does not need to pay anything at checkout.
 
     To make the discount work as expected:
 
     - Set **Allow On Portal?** to **Yes** if families should apply it in the parent portal.
     - Set **Start Date** and **End Date** if the discount should only apply during a specific registration window.
     - Set **Limit** if you want to cap how many pay in full discounts can be used.
-    - Use **Apply To Entire Cart** or **Apply Only To These Products** to control which registrations qualify.
+    - Use **Apply Only To These Products** to control which registrations qualify.
   </Step>
 
   <Step title="Control who can use the discount" icon="users" title-type="p">
@@ -198,12 +205,12 @@ Use the action menu on each discount row to update or remove a discount.
 
   <Step title="Delete a discount" icon="trash" title-type="p">
     Choose **Delete Discount** to permanently remove the discount from your account.\
-    Confirm the deletion when prompted.
+    Confirm the deletion when prompted. **Delete** is only available for a discount that has never been used; a discount that has already been applied shows no **Delete Discount** option, so archive it instead.
   </Step>
 </Steps>
 
 <Callout kind="alert" collapsed="false">
-  Deleting a discount performs a hard delete in the database and cannot be undone. Use **Archive** when you want to preserve history. A delete may fail if the system cannot remove the record; in that case you see an error and the discount remains.
+  Deleting a discount performs a hard delete in the database and cannot be undone. Because delete is only offered for a discount that has never been used, use **Archive** to stop using a discount that already has usage history.
 </Callout>
 
 ## Key settings explained
@@ -245,11 +252,13 @@ Product restrictions control where a discount applies.
 
 Use product restrictions to limit discounts to certain camps, add-ons, or seasons.
 
-### Skip deposit
+### Bypass payment at portal checkout
 
-Some discounts can skip the deposit requirement at checkout instead of reducing the price. When you turn on **Skip Deposit?** on a discount, the code waives the family's deposit so they proceed directly to installment payments without paying the upfront amount.
+Some discounts can skip payment at checkout instead of only reducing the price. When you turn on **Bypass payment at portal checkout?** on a discount, parents can submit their registration in the parent portal without entering a card or ACH payment, so they proceed without paying the upfront amount.
 
-You can combine skip deposit with a dollar or percent credit. The deposit is skipped and the credit is applied to the remaining balance. This is useful for scholarships, financial aid agreements, or promotions where you want to remove the upfront barrier without changing the overall tuition.
+You can combine this setting with a dollar or percent credit. Payment is bypassed at checkout and the credit is applied to the balance. This is useful for scholarships, financial aid agreements, or promotions where you want to remove the upfront barrier without changing the overall tuition.
+
+There is a single field for this behavior. **Bypass payment at portal checkout?** is the same setting sometimes referred to as skipping the deposit — there is no separate toggle.
 
 ## Discount Calculator
 
@@ -289,7 +298,7 @@ The Discount Calculator lets you preview exactly how a discount will apply at ch
   </Step>
 </Steps>
 
-The calculator supports multi-product cart simulation, so you can preview discounts that target specific products or apply to the entire cart. Sibling discounts are included automatically when you add more than one child to the preview.
+The calculator supports multi-product cart simulation, so you can preview discounts that target specific products or apply broadly across eligible sessions. Sibling discounts are included automatically when you add more than one child to the preview.
 
 ## Multi-session discounts
 
@@ -428,20 +437,20 @@ You can disable a configuration temporarily by setting **Enabled** to **No**, in
 Use this section when you see an error while saving a discount or multi-session configuration, or when a discount does not apply as expected.
 
 <ExpandableGroup>
-  <Expandable title="Error: Discount code is required." default-open="false">
-    The system shows **Discount code is required.** when you leave the **Discount Code** field blank while creating or editing a discount.
+  <Expandable title="Error: You must enter a Discount Code" default-open="false">
+    The system shows **You must enter a Discount Code** when you leave the **Discount Code** field blank while creating or editing a discount.
 
     Fix it by entering a code:
 
-    - Use only allowed characters.
+    - Use only letters and numbers.
     - Make the code short and easy to type.
     - Save again after adding the code.
   </Expandable>
 
-  <Expandable title="Error: Discount code cannot contain &" default-open="false">
-    The system shows **Discount code cannot contain &** when the code includes the `&` character.
+  <Expandable title="Error: Discount Code can only be letters and numbers." default-open="false">
+    The system shows **Discount Code can only be letters and numbers.** when the code includes any character that is not a letter or a number.
 
-    Update the code to remove `&` and use letters, numbers, or other allowed symbols instead. Then save the discount again.
+    Update the code to use only letters and numbers, then save the discount again.
   </Expandable>
 
   <Expandable title="Error: Discount code already exists" default-open="false">
@@ -454,8 +463,8 @@ Use this section when you see an error while saving a discount or multi-session 
     - Save the new discount with a distinct code.
   </Expandable>
 
-  <Expandable title="Error: Discount description is required." default-open="false">
-    If you leave the **Discount Description** blank, the system returns **Discount description is required.**
+  <Expandable title="Error: You must enter a Discount Description" default-open="false">
+    If you leave the **Discount Description** blank, the system returns **You must enter a Discount Description**.
 
     Enter a clear description that will appear on invoices, then save again.
   </Expandable>
@@ -528,13 +537,13 @@ Use this section when you see an error while saving a discount or multi-session 
   </Expandable>
 </ExpandableGroup>
 
-## Discount Code Diagnosis
+## Discount Checker
 
-When a discount code does not work at checkout and the cause is not obvious, use the Discount Code Diagnosis tool to find the problem. The tool runs a series of checks against the discount and the specific products involved, then lists every issue it finds — sorted by severity so the most critical problems appear first.
+When a discount code does not work at checkout and the cause is not obvious, use the **Discount Checker** panel on the Discounts page to find the problem. The checker is a standalone panel on the page — not a per-row action. You pick a discount from a dropdown, pick the products involved, and optionally pick a user, then run it. It runs a series of checks against the discount and the products, then lists every issue it finds — sorted by severity so the most critical problems appear first.
 
 ### What the tool checks
 
-The diagnosis runs three layers of checks:
+The check runs three layers of checks:
 
 <ExpandableGroup>
   <Expandable title="Discount-level checks" default-open="false">
@@ -562,11 +571,15 @@ The diagnosis runs three layers of checks:
   </Expandable>
 </ExpandableGroup>
 
-### Run a diagnosis
+### Run a check
 
 <Steps>
-  <Step title="Open the diagnosis tool" icon="stethoscope" title-type="p">
-    Go to **Admin** > **Discounts** and open the action menu on the discount you want to investigate. Choose **Diagnose**.
+  <Step title="Open the Discount Checker" icon="stethoscope" title-type="p">
+    Go to **Admin** > **Discounts** and find the **Discount Checker** panel on the page.
+  </Step>
+
+  <Step title="Pick a discount" icon="tag" title-type="p">
+    Choose the discount you want to investigate from the dropdown of your existing discounts.
   </Step>
 
   <Step title="Select products to test" icon="package" title-type="p">
@@ -577,12 +590,12 @@ The diagnosis runs three layers of checks:
     Select a specific family to check for duplicate-discount status and enrollment capacity. Leave this blank to test without user-specific checks.
   </Step>
 
-  <Step title="Review the results" icon="clipboard-list" title-type="p">
-    The tool returns a list of issues sorted by severity: **ERROR** items block the discount from working, **WARN** items may cause unexpected behavior, and **INFO** items are for awareness. Each issue includes a plain-language explanation and the predicted checkout message if applicable.
+  <Step title="Run the check and review the results" icon="clipboard-list" title-type="p">
+    Run the check. The tool returns a list of issues sorted by severity: **ERROR** items block the discount from working, **WARN** items may cause unexpected behavior, and **INFO** items are for awareness. Each issue includes a plain-language explanation and the predicted checkout message if applicable.
   </Step>
 
   <Step title="Fix and re-test" icon="refresh-cw" title-type="p">
-    Address each error, then re-run the diagnosis to confirm the discount works. The tool reflects your saved changes, so save any edits before re-running.
+    Address each error, then run the check again to confirm the discount works. The tool reflects your saved changes, so save any edits before re-running.
   </Step>
 </Steps>
 
@@ -634,7 +647,7 @@ The diagnosis runs three layers of checks:
   </Expandable>
 
   <Expandable title="How do I apply a discount to only certain products?" default-open="false">
-    Set **Apply To Entire Cart** to **No**, then use **Apply Only To These Products** to pick the products that should qualify. If you leave the product list blank, the discount can apply across all eligible products.
+    Use **Apply Only To These Products** to pick the products that should qualify. If you leave the product list blank, the discount can apply across all eligible products. This control is independent of **Apply To All Sessions**, which only affects how a percent discount spreads across a child's sessions.
   </Expandable>
 
   <Expandable title="How do I set up a multi-session discount?" default-open="false">
@@ -658,19 +671,19 @@ The diagnosis runs three layers of checks:
   </Expandable>
 
   <Expandable title="Why is my discount code not working?" default-open="false">
-    Use the **Discount Code Diagnosis** tool on the Discounts page. Open the discount's action menu and choose **Diagnose**, select the products involved, and optionally pick a user. The tool runs a full set of checks and lists every issue sorted by severity. See **Discount Code Diagnosis** above.
+    Use the **Discount Checker** panel on the Discounts page. Pick the discount from the dropdown, select the products involved, and optionally pick a user, then run the check. The tool runs a full set of checks and lists every issue sorted by severity. See **Discount Checker** above.
   </Expandable>
 
-  <Expandable title="How do I diagnose a discount code problem?" default-open="false">
-    Go to **Admin** > **Discounts**, open the discount's action menu, and choose **Diagnose**. Select the session products to test against, optionally add a user, and review the results. Errors are listed first so you can fix the blocking issues. See **Discount Code Diagnosis** above.
+  <Expandable title="How do I check a discount code problem?" default-open="false">
+    Go to **Admin** > **Discounts** and use the **Discount Checker** panel. Pick the discount from the dropdown, select the session products to test against, optionally add a user, then run the check and review the results. Errors are listed first so you can fix the blocking issues. See **Discount Checker** above.
   </Expandable>
 
   <Expandable title="How do I skip a deposit with a discount?" default-open="false">
-    Turn on **Skip Deposit?** when you create or edit the discount. The code waives the family's deposit so they proceed to installment payments without paying the upfront amount. You can also add a dollar or percent credit on top of the skip. See **Skip deposit** above.
+    Turn on **Bypass payment at portal checkout?** when you create or edit the discount. Parents can then submit their registration without entering a card or ACH payment, so they proceed without paying the upfront amount. You can also add a dollar or percent credit alongside it. See **Bypass payment at portal checkout** above.
   </Expandable>
 
   <Expandable title="How do I make a discount waive the deposit?" default-open="false">
-    Same as skipping a deposit: turn on **Skip Deposit?** on the discount. The deposit is removed at checkout and the family goes straight to their installment plan. See **Skip deposit** above.
+    Same setting: turn on **Bypass payment at portal checkout?** on the discount. There is no separate "Skip Deposit?" toggle — this one field lets the family submit at checkout without paying. See **Bypass payment at portal checkout** above.
   </Expandable>
 </ExpandableGroup>
 

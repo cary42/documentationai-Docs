@@ -15,7 +15,7 @@ Use tiers to:
 
 <Callout kind="info">
 
-Access tiered pricing from the **Seasons** link in the left-hand navigation, then open the product in the admin product editor and manage tiers in the pricing area.
+Access tiered pricing from the **Seasons** link in the left-hand navigation. For a base product, use the **Tiers** button on the product's row in the **Products list**. For a priced option, manage tiers on the **subproducts** page or in the option's edit modal.
 
 </Callout>
 
@@ -73,7 +73,7 @@ The pricing date is the date Campium uses to decide which tier applies.
 For new registrations at checkout, Campium:
 
 - Uses **today's date** as the pricing date.
-- Interprets “today” in your **agency time zone**, so late-night registrations behave consistently with your local business day.
+- Interprets “today” in your **camp's time zone**, so late-night registrations behave consistently with your local business day.
 
 ### Changing an existing enrollment
 
@@ -93,30 +93,28 @@ Tiered pricing works independently for the base product and for each priced opti
 
 Key behaviors:
 
-- Each price row in the product editor has its own **Tiers** control.  
-  - Selecting **Tiers** next to the base price opens the schedule for the product price.  
-  - Selecting **Tiers** next to a specific priced option opens the schedule for that option.
+- The base product and each priced option have their own **Tiers** control, in different places:
+  - For the **base product**, the **Tiers** button appears on the product's row in the **Products list**. Selecting it opens the schedule for the base product price.
+  - For a **priced option**, manage tiers on the **subproducts** page or from within the option's edit modal. This opens the schedule for that specific option.
 - Campium stores each tier schedule with the correct product and option. When families register, the system automatically applies the tier schedule that belongs to that exact price line.
 
-## Managing tiers in the product editor
+## Managing tiers
 
-Use these steps to create, edit, or remove tiered pricing rows in the admin product editor.
+Use these steps to create, edit, or remove tiered pricing rows.
 
 <Steps>
 
-<Step title="Open the product from Seasons" icon="folder">
+<Step title="Open the Products list from Seasons" icon="folder">
 
 - Click **Seasons** in the left-hand navigation menu.
-- Open the relevant season or session group until you see the list of products.
-- Click the product you want to edit to open the admin product editor.
+- Open the relevant season or session group until you see the **Products list**.
 
 </Step>
 
-<Step title="Locate the pricing area" icon="settings">
+<Step title="Open the Tiers control for the price you want" icon="settings">
 
-- Scroll to the **pricing** section of the product editor.
-- Find the price row you want to manage (base product or a specific priced option).
-- Next to that price row, click **Tiers** (this may show as **Tiers (n)** if tiers already exist).
+- For the **base product**, click the **Tiers** button on that product's row in the Products list (this may show as **Tiers (n)** if tiers already exist).
+- For a **priced option**, go to the **subproducts** page or open the option's edit modal, then open its **Tiers** control.
 
 </Step>
 
@@ -153,7 +151,7 @@ Use these steps to create, edit, or remove tiered pricing rows in the admin prod
 
 <Callout kind="info">
 
-If you do not see the **Tiers** control or if saving tiers returns a **Forbidden** error, your account is not authorized to manage pricing tiers. Contact your Campium administrator to adjust your permissions.
+There is no separate permission required to manage pricing tiers. If saving a tier returns an error, it is because the request was invalid — for example, a missing or unparseable effective date or price. Correct the field values and save again.
 
 </Callout>
 
@@ -181,7 +179,7 @@ You must provide a **price** that parses as a valid number. You may type the val
 
 <Callout kind="info">
 
-Campium does not allow **two tiers for the same product or option with the same effective date**. If you try to save a duplicate date for the same scope, the save fails. Edit the existing tier for that date instead of adding a new one.
+As a best practice, avoid creating **two tiers for the same product or option with the same effective date** — overlapping dates make it harder to predict which price applies. Prefer editing the existing tier for a date rather than adding a second row for the same date.
 
 </Callout>
 

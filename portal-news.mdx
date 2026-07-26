@@ -52,25 +52,27 @@ Use these steps to add a new news item that appears in the parent portal.
   <Step title="Choose a news type" icon="settings" title-type="p">
     - Locate the **News Type** dropdown.
 
-    - Choose **Post News to Portal**, **Post Files to Portal**, or **Video Embed URL&#x20;**&#x62;ased on what you are sharing.
+    - Choose **Post News to Portal**, **Post Files to Portal**, **Video Embed URL**, or **Push Notification** based on what you are sharing.
 
     The type you choose controls how parents interact with the news item in the portal.
   </Step>
 
   <Step title="Add any related file or link" icon="upload" title-type="p">
-    - If you selected **Post News to Portal**, use the **File** field to upload or attach the document parents need (for example, medical forms or schedules).
+    - If you selected **Post Files to Portal**, use the **File** field to upload or attach the document parents need (for example, medical forms or schedules).
 
     - If you selected **Video Embed URL**, paste the embed URL into the provided field.
+
+    - If you selected **Push Notification**, the item is sent as a push notification to families rather than only appearing in the portal feed.
 
     - If you selected **Post News to Portal**, you usually do not need to attach a file, unless you want to include a downloadable document as part of the post.
   </Step>
 
   <Step title="Set start and end dates" icon="calendar" title-type="p">
-    - In **Start Date**, choose the date when the news should begin appearing in the portal.
+    - In **Start Date** (required), choose the date when the news should begin appearing in the portal.
 
-    - In **End Date**, choose the date when the news should stop showing.
+    - In **End Date** (required), choose the date when the news should stop showing.
 
-    - Leave the end date blank only if you want the news to remain visible until you manually change it.
+    - Both dates are required. To keep an item visible for a long time, set an End Date far in the future.
 
     Parents see the item in the portal only between the start and end dates while the status is active.
   </Step>
@@ -81,6 +83,8 @@ Use these steps to add a new news item that appears in the parent portal.
     - Set the status so the item is active/published according to your site’s labels.
 
     - Use the **Show full content** toggle if you want the entire news item to stay expanded in the parent portal with no collapse or `Read more` link; leave it off to keep the portal feed more compact for longer posts.
+
+    - Use the **Pin To Top** toggle to keep this item at the top of the portal news list above unpinned items; leave it off for standard date-ordered placement.
 
     - Save the news item.
 
@@ -112,7 +116,7 @@ Format text, add bullets, and include links so the message is clear and easy to 
 
 **News Type** controls how your item behaves in the portal and what kind of content parents see.
 
-You can choose from three options:
+You can choose from four options:
 
 #### Post News To Portal
 
@@ -148,11 +152,17 @@ When parents open the item, they see and can play the embedded video.
   For YouTube content, get the **share/embed URL** from YouTube and paste **only the URL** into the field. For example, use `https://www.youtube.com/embed/UWlzMIl7E48`.
 </Callout>
 
+#### Push Notification
+
+Use this to send the announcement to families as a push notification rather than only posting it to the portal feed.
+
+This is best for time-sensitive updates you want families to see right away, such as schedule changes or urgent reminders.
+
 ### File
 
 The **File** field lets you attach a document for families to view or download.
 
-This is most commonly used with **Parent Site Files**, but you can also attach supporting documents to a regular news item if helpful.
+It is used with the **Post Files to Portal** type, but you can also attach supporting documents to a regular news item if helpful.
 
 ### Show full content
 
@@ -162,15 +172,21 @@ Turn this off for longer posts if you want the portal feed to stay more compact 
 
 ### Start Date
 
-**Start Date** is the first day the news item becomes visible in the parent portal.
+**Start Date** is the first day the news item becomes visible in the parent portal, and it is required.
 
 Set this to the day you want families to start seeing the announcement, even if you create it ahead of time.
 
 ### End Date
 
-**End Date** is the last day the news item remains visible.
+**End Date** is the last day the news item remains visible, and it is required.
 
-Use this to automatically remove time-sensitive posts, such as deadlines or event reminders, from the portal after they are no longer relevant.
+Because an End Date is always set, posts are automatically removed from the portal after that date. For an item you want to keep visible indefinitely, set the End Date far in the future.
+
+### Pin To Top
+
+Use **Pin To Top** to keep an item at the top of the portal news list, above unpinned items.
+
+Turn it off to let the item fall into standard date-ordered placement with the rest of your news.
 
 ### Status
 

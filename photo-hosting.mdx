@@ -1,12 +1,13 @@
 ---
 title: Photo Hosting
 description: >-
-  Use Photo Hosting and the Gallery Module in CampiumDB to upload, tag, and
-  share camp photos with families, including reports and facial recognition.
+  Use Photo Hosting in CampiumDB to upload, tag, and share camp photos with
+  families in the portal and mobile app Gallery, including reports and facial
+  recognition.
 ---
 ## Overview
 
-Photo Hosting stores and shares your camp photos through CampiumDB, including the Gallery Module in the mobile app and Photos in the parent portal. It serves camp administrators, designated photo staff, and families who want to view and download memories from each season.
+Photo Hosting stores and shares your camp photos through CampiumDB, including the Gallery in the mobile app and Photos in the parent portal. It serves camp administrators, designated photo staff, and families who want to view and download memories from each season.
 
 Photo Hosting is organized by season and uses tags and optional facial recognition to help families quickly find their campers in large photo collections.
 
@@ -14,15 +15,15 @@ Photo Hosting is organized by season and uses tags and optional facial recogniti
   Camps do not pay for Photo Hosting access. Instead, parents pay a **one-time fee per season** for access to **unlimited high-resolution photo downloads** for that season.
 </Callout>
 
-## Enable Photo Hosting and the Gallery Module
+## Enable Photo Hosting
 
-Enable Photo Hosting and the Gallery Module before you start uploading photos or directing families to the portal or app.
+Enable Photo Hosting before you start uploading photos or directing families to the portal or app. A single module toggle turns on both the **Photos** section in the parent portal and the **Gallery** in the mobile app.
 
 <Steps>
-  <Step title="Turn on Photo Hosting and the Gallery Module" icon="settings" title-type="p">
+  <Step title="Turn on the Photo Hosting module" icon="settings" title-type="p">
     - Go to **Admin -> Site Settings → Modules** in the admin portal.
-    - Find the **Photo Hosting Module** and enable it for your site.
-    - Refresh and you'll now see&#x20;
+    - Find the single module toggle labeled **Photo Hosting** and enable it for your site. This one toggle covers both the parent portal Photos and the mobile app Gallery; there is no separate Gallery module to turn on.
+    - Refresh, and the Photo Hosting menu will now be available.
   </Step>
 
   <Step title="Give staff permission to upload photos" icon="users" title-type="p">
@@ -58,7 +59,7 @@ Use the Photo Hosting menu in the admin portal to upload photos by season and ap
       <Step title="Add batch tags and let processing run" icon="tag" title-type="p">
         - After selecting photos, apply **batch tags** such as cabin, age group, activity, or event name.
         - Start the upload and wait while CampiumDB performs automatic processing.
-        - Processing may include resizing, watermarking, and preparing photos for the Gallery Module.
+        - Processing may include resizing, watermarking, and preparing photos for the Gallery.
       </Step>
 
       <Step title="Review uploaded photos" icon="check-circle" title-type="p">
@@ -76,7 +77,7 @@ Use the Photo Hosting menu in the admin portal to upload photos by season and ap
     Families do not upload photos; they view what you and your staff share.
 
     - On the **parent portal (web)**, families go to **Photos** to see images from seasons where they have campers.
-    - In the **mobile app**, families open the **Gallery Module** to browse photos by date or tag and view their **My Photos** section when facial recognition is enabled.
+    - In the **mobile app**, families open the **Gallery** to browse photos by date or tag and view their **My Photos** section when facial recognition is enabled.
   </Tab>
 </Tabs>
 
@@ -178,8 +179,8 @@ Families view photos differently depending on whether they use the web parent po
     </Steps>
   </Tab>
 
-  <Tab title="Mobile app (Gallery Module)" icon="phone">
-    In the mobile app, families use the **Gallery Module** to see the same season-based photos in a mobile-friendly view.
+  <Tab title="Mobile app (Gallery)" icon="phone">
+    In the mobile app, families use the **Gallery** to see the same season-based photos in a mobile-friendly view.
 
     - After signing in, families open the **Gallery** from the app menu.
     - The app shows the default season and lets them switch to other seasons they have access to.
@@ -194,6 +195,10 @@ Families view photos differently depending on whether they use the web parent po
 ## Facial Recognition
 
 Facial recognition helps families find photos that appear to include their camper. It compares a saved profile photo with uploaded photos and suggests likely matches.
+
+<Callout kind="info" collapsed="false">
+  Facial recognition requires a separate module toggle. In **Admin -> Site Settings → Modules**, enable the **Facial Recognition** module in addition to the **Photo Hosting** module. Facial recognition only works when this module is on *and* the family has opted in for the camper.
+</Callout>
 
 <Callout kind="info" collapsed="false">
   Facial recognition is approximately 85% accurate. Families should still browse the full gallery, since some matches will be missed and some suggested matches may not be correct.
@@ -233,9 +238,9 @@ Use these common questions and answers to resolve Photo Hosting issues quickly.
 
 <ExpandableGroup>
   <Expandable title="Why do my staff not see Photo Hosting or Upload Photos?" default-open="false">
-    Staff need both the **Gallery Module** enabled for your site and the **Upload Photos** permission.
+    Staff need both the **Photo Hosting** module enabled for your site and the **Upload Photos** permission.
 
-    - Confirm **Site Settings → Modules** has the **Gallery Module** turned on.
+    - Confirm **Site Settings → Modules** has the single **Photo Hosting** toggle turned on. This is the same toggle that powers the mobile app Gallery.
     - Check the staff member's permissions and ensure **Upload Photos** is enabled.
     - Ask them to sign out and sign back in after you change permissions.
   </Expandable>
@@ -276,7 +281,7 @@ Use these common questions and answers to resolve Photo Hosting issues quickly.
 ## Glossary
 
 - **Photo Hosting** — The CampiumDB area where staff upload, organize, and manage photos by season.
-- **Gallery Module** — The module that shows season-based photos to families in the mobile app.
+- **Gallery** — The mobile app view that shows season-based photos to families. It is powered by the same single **Photo Hosting** module toggle, not a separate module.
 - **Photos (parent portal)** — The web portal section where families browse and download camp photos.
 - **Tags** — Labels such as cabins, activities, or events that help organize and filter photos.
 - **My Photos** — A view in the portal and app that shows photos CampiumDB believes contain a specific camper, based on facial recognition.
