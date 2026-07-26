@@ -16,7 +16,7 @@ You can open the Waitlist Report from your reports menu or directly from your se
   <Step title="Open from Reports" icon="folder" title-type="p">
     - Go to **Reports** in your menu.
 
-    - Look for a report named **Waitlist** (it may be under an **Enrollment** or **System** section).
+    - Look for **Wait List Management** (it may be under an **Enrollment** or **System** section).
 
     - Click the report name to open it.
   </Step>
@@ -63,7 +63,7 @@ Common items include:
 
 - **Family or contact email**: A primary email you can use to reach the family.
 
-- **Date added**: When the camper was added to the waitlist, so you can see who has been waiting longest.
+- **Registration Date**: When the camper was added to the waitlist, so you can see who has been waiting longest.
 
 - **Status**: A short label that tells you the current situation for that session, such as:
 
@@ -100,6 +100,24 @@ Use the email option when you want to send the same message to all families on a
 </Steps>
 
 If you do not see an email button on the report, you can still use your main **Mass Emails** feature and filter for that session and waitlist group.
+
+### Get notified when someone joins a wait list
+
+Use the **Email me when someone joins a wait list** checkbox in the report toolbar to opt in to a notification whenever a new camper is added to a wait list.
+
+<Steps>
+  <Step title="Turn on wait list notifications" icon="bell" title-type="p">
+    - On the Waitlist Report toolbar, find the **Email me when someone joins a wait list** checkbox.
+
+    - Check the box to start receiving an email each time someone joins a wait list.
+
+    - Uncheck it at any time to stop receiving those notifications.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  This opt-in controls notifications for your own account, so each admin who wants these emails needs to check the box for themselves.
+</Callout>
 
 ### Accept or invite someone when a spot opens
 
@@ -151,10 +169,28 @@ When the status shows an **Open Spot**, you can use the Wait List pop-up to acce
   </Step>
 </Steps>
 
-Invite emails give the family clear choices, including **Accept** and **Decline** buttons they can click to respond. After you send an invite with a response window, the status on that row may change to **Invite Open Until \[date]** to show how long the family has to accept.
+Invite emails give the family clear choices, including **Accept Spot** and **No Thanks** buttons they can click to respond. After you send an invite with a response window, the status on that row may change to **Invite Open Until \[date]** to show how long the family has to accept.
 
 <Callout kind="info" collapsed="false">
-  When a family clicks **Accept** or **Decline** in the invite email, their waitlist status updates based on their choice, and the report reflects the latest state after a refresh.
+  When a family clicks **Accept Spot** or **No Thanks** in the invite email, their waitlist status updates based on their choice, and the report reflects the latest state after a refresh.
+</Callout>
+
+### Cancel an outstanding invitation
+
+When a camper has an active invitation that has not yet been answered, a **Cancel Invitation** action appears on their row. Use it to withdraw the open invite without taking the camper off the wait list.
+
+<Steps>
+  <Step title="Cancel an open invite" icon="x-circle" title-type="p">
+    - Find a camper whose status shows **Invite Open Until \[date]**.
+
+    - Click **Cancel Invitation** on that camper's row.
+
+    - Confirm when asked. The open invite is withdrawn and the family can no longer claim that spot from their invite email.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  **Cancel Invitation** is different from **Remove**. Canceling only closes the outstanding invite and keeps the camper on the wait list, while **Remove** takes the camper off the wait list entirely. **Cancel Invitation** only appears while an invitation is still open.
 </Callout>
 
 ### Remove someone from the waitlist

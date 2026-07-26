@@ -9,7 +9,15 @@ A payment processor is a third-party service that handles the actual movement of
 
 Campium integrates with payment processors, but processor-specific details such as settlement timing, fees, and transaction behavior depend on the provider you use. For those details, refer to the documentation for your specific payment processor.
 
+<Callout kind="info">
+
+Campium supports multiple processors, and the one your camp uses is set per camp. Your camp may be on Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe. Because of this, ACH timing, refund handling, and settlement windows depend on which processor your camp uses. The settlement details below are specific to Finix and do not apply if your camp is on a different processor.
+
+</Callout>
+
 ## Finix
+
+The following settlement details apply only to camps on Finix. If your camp uses a different processor, refer to that processor's documentation instead.
 
 Finix uses accruing settlements that run on a 24-hour cycle. The settlement window and default settlement timing differ by payment method.
 

@@ -50,6 +50,8 @@ Families use One-Way Messaging from the family subdomain at `/account/one-way-me
 
     The page shows only eligible recipients from the same family account. The logged-in person never appears as their own recipient.
 
+    Eligibility is stricter than just being in the same family. To appear as a recipient, a person must be active, be a camper or staff type, and be enrolled in a session in an active season. Family members who do not meet all three conditions do not show up in the list.
+
     If the account has only one person, or no other eligible family members, the page shows that there is no one to send to.
   </Tab>
 
@@ -78,6 +80,8 @@ Use the family page to send a single note to another person in the same family.
   <Step title="Choose a recipient" icon="users" title-type="p">
     - Select one eligible person from the same family account.
 
+    - Recipients are limited to people who are active, are a camper or staff type, and are enrolled in a session in an active season.
+
     - The logged-in person does not appear in the recipient list.
 
     - If no eligible family members are available, the page shows that there is no one to send to.
@@ -104,9 +108,13 @@ The family page also shows message history for the logged-in person. This histor
   The family history is not an inbox of received messages. It shows only messages sent by the logged-in person.
 </Callout>
 
+To keep the list manageable, the message history collapses entries older than 6 months. Recent messages stay visible, while older ones are tucked away so the person sees their most recent activity first.
+
 ### Daily message limits
 
 If your camp sets **One-Way Messages Per Day**, each logged-in family user can send only that many messages per day. When the person reaches the limit, they cannot send another message until the next day.
+
+A remaining-messages counter shows how many messages the person has left for the day. Once the daily limit is reached, the counter reaches zero and the **Send** button is disabled until the next day.
 
 <Callout kind="alert" collapsed="false">
   If **One-Way Messages Per Day** is set to a value other than `0`, families may see that they cannot send more messages after reaching the daily limit. Set the value to `0` if you do not want a limit.

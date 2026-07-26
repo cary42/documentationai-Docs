@@ -51,6 +51,18 @@ Typical roles vary by camp, but these are common patterns:
 
 If a staff member does not see a canteen screen in the menu, an administrator may need to review their permissions.
 
+### Canteen permissions
+
+Access to the canteen areas is controlled by three separate permissions, so you can give each staff member only the parts of Canteen they need:
+
+| Permission | What it grants |
+| --- | --- |
+| **canteen_store** | The main **Canteen** point-of-sale screen and **Add Funds**. |
+| **canteen_manage** | **Manage Canteen Products** — adding, editing, and organizing items. |
+| **canteen_purchases** | **Purchases**, **Deposits**, and **Account Balance** review screens. |
+
+Assign permissions to match each role. For example, checkout staff typically need **canteen_store**, product owners need **canteen_manage**, and finance staff need **canteen_purchases**. If a staff member is missing a canteen screen, confirm they have the matching permission.
+
 ### Before you open for sales
 
 Before a busy store period, it helps to review a few basics:
@@ -69,7 +81,7 @@ Use the main **Canteen** screen as your point-of-sale view during the season.
 - Choose how the purchase is paid:
   - **User account** — Charges the selected camper, parent/guardian or staff canteen balance. Select the user first and confirm the account has enough money available.
   - **Cash** — Records a cash sale without using stored account balance. This appears only when your canteen settings allow cash.
-  - **Credit card** — May appear if your payment setup supports it. Some setups include a link to take payment on your payment page.
+  - **Credit card** — May appear if your payment setup supports it. Staff enter the card directly on an embedded card field at the register (processed through Payabli or Finix, depending on your setup), rather than being sent to a separate payment page.
 - When charging a user account, staff can review the current **Balance**, **Order Total**, and remaining amount before confirming.
 - Confirm the purchase to complete the sale. If inventory tracking is enabled, the saved sale also reduces quantity on hand.
 
@@ -102,9 +114,13 @@ When staff need to load funds in the office — for example, a parent pays at th
 1. Open **Canteen** in the left menu, then select **Deposits**.
 2. Click **Add Funds** in the page header. The Add funds modal opens.
 3. Search for the user by name and select them. Their current balance appears below.
-4. Choose the payment account — Cash, Zelle, or a saved card or bank account on the family's file (options load after you pick the user).
+4. Choose the payment account — Cash, Zelle, a saved card or bank account on the family's file (options load after you pick the user), or **Adjustment**.
 5. Enter the amount. The modal shows the current and new balance as you type.
 6. Click **Add funds** to save the deposit, or **Cancel** to close without saving.
+
+<Callout kind="info" collapsed="false">
+  **Adjustment** is a manual balance change rather than a real payment. Use it to correct a balance up or down — enter a positive amount to add or a negative amount to subtract. This option is gated behind the financial permission (or super-user access), so it only appears for staff who are allowed to make manual balance changes.
+</Callout>
 
 ### Purchases
 
@@ -190,6 +206,7 @@ Use **Canteen settings** to control how the rest of the team works.
 - **Track inventory** — Shows quantity on hand and reduces stored quantity when sales are saved.
 - **Enable cost basis and profit** — Shows cost and profit-related fields for products.
 - **Enable fulfillment status on purchases** — Adds fulfilled and pending controls on purchase records.
+- **Allow overspend to clear balances** — Lets a charge exceed the available account balance so staff can zero out or clear a balance at checkout, instead of blocking the sale when funds are short. Leave it off if purchases should never take an account negative.
 
 Save changes after updating settings.
 

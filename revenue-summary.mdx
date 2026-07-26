@@ -36,6 +36,10 @@ Use these options at the top of the report to define the scope of your summary.
   Optional start and end dates that limit which sales are included, based on the **date the sale was recorded in Campium**.
 </ParamField>
 
+<ParamField body="Group revenue by profile field" param-type="selector" required="false" deprecated="false">
+  Optional profile field used to break down revenue by each answer to that field. When you choose a field, the report adds a **Revenue by {field}** table at the top showing registrations and total revenue for each answer value. Leave it unset to skip the breakdown.
+</ParamField>
+
 <Callout kind="tip" collapsed="false">
   If you want to compare seasons, run the report once for each season or program group with the same date range.
 </Callout>
@@ -105,6 +109,28 @@ When non-revenue session lines are present:
 <Callout kind="tip" collapsed="false">
   When there is a remaining balance, you may see it as an underlined link labeled like "$4,250 A/R". Select this link to open the Accounts Receivable report for the same season or program group and review which accounts make up that balance.
 </Callout>
+
+## Revenue by profile field
+
+When you choose a field in **Group revenue by profile field**, the report adds a **Revenue by {field}** table at the top, above the Products, Payments, and Discounts sections. The heading uses the field you selected, so grouping by grade shows a **Revenue by Grade** table.
+
+Each row is one answer value for that field.
+
+### Columns
+
+<ParamField body="{Field value}" param-type="text" required="true" deprecated="false">
+  Each answer to the selected profile field, such as each grade, each cabin, or each answer option. One row appears per value.
+</ParamField>
+
+<ParamField body="Registrations" param-type="number" required="true" deprecated="false">
+  Number of registrations that match this field value within the current season/program group and date range filters.
+</ParamField>
+
+<ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
+  Total revenue attributed to registrations with this field value.
+</ParamField>
+
+Use this table to see how revenue and enrollment split across a profile answer, for example comparing revenue by grade, by session choice, or by any other profile field your camp collects.
 
 ## Products table
 

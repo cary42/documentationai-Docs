@@ -79,7 +79,7 @@ Optional text for **Standard** plans. Use it to explain the timing in plain lang
 </ParamField>
 
 <ParamField body="Charge cadence" param-type="string" show-location="false">
-Available for **Even split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st and 15th**.
+Available for **Even split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st & 15th**.
 </ParamField>
 
 <ParamField body="Day of month" param-type="integer" show-location="false">
@@ -96,6 +96,14 @@ For **Standard** plans, this is the last day the plan can be chosen. For **Even 
 
 <ParamField body="Season" param-type="season" required="true" show-location="false">
 Required when creating a new plan. The selected season determines where the plan belongs.
+</ParamField>
+
+<ParamField body="Require paid by session start" param-type="boolean" show-location="false">
+Gates when the plan can be offered so the plan is fully paid before camp begins. When this is on, the plan is only available if its schedule allows the last charge to land on or before the session start date. If the remaining time is too short for the plan to finish in time, families will not see the plan.
+</ParamField>
+
+<ParamField body="Show Only For These Sessions" param-type="multi-select" show-location="false">
+Restricts the plan to specific sessions. When you select one or more sessions here, the plan is offered only when the cart includes at least one of those selected sessions. Leave it empty to offer the plan for any eligible cart. The label reflects your product terminology, so it may read as **Show Only For These Sessions** or another product name.
 </ParamField>
 
 ## Choose between Standard and Even split
@@ -182,6 +190,8 @@ A plan may show **Not showing on forms** for one of these reasons:
 - The plan dates do not allow the plan to be chosen.
 - A **Standard** plan has no schedule lines.
 - No registration form in that season has payment plans enabled.
+- **Require paid by session start** is on and there is no longer enough time for the last charge to land on or before the session start date.
+- **Show Only For These Sessions** is set and the cart does not include one of the selected sessions.
 
 ## Edit or delete a plan
 
@@ -354,8 +364,8 @@ Charges every 7 days. The start date acts as the anchor, and charges continue ev
 Charges every 14 days. The start date acts as the anchor, and charges continue every 14 days through the end date.
 </ParamField>
 
-<ParamField body="1st and 15th" param-type="cadence" show-location="false">
-Charges on the 1st and 15th of each month when those dates fall within the selected date range.
+<ParamField body="1st & 15th" param-type="cadence" show-location="false">
+Charges on the 1st & 15th of each month when those dates fall within the selected date range.
 </ParamField>
 
 ## Recalculate an even split schedule
@@ -403,7 +413,7 @@ Use this table when you need to decide which plan type to build.
   </Expandable>
   <Expandable title="Why does my even split schedule not match what I expected?">
 
-  Check the plan's start date, end date, and cadence. Weekly and bi-weekly plans use the start date as the repeating anchor, monthly plans use the selected day of month, and 1st and 15th uses those calendar dates within the range.
+  Check the plan's start date, end date, and cadence. Weekly and bi-weekly plans use the start date as the repeating anchor, monthly plans use the selected day of month, and 1st & 15th uses those calendar dates within the range.
 
   </Expandable>
 </ExpandableGroup>

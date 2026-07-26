@@ -202,6 +202,10 @@ Display name and email address that appear to recipients as the sender. Use a re
 
 The email subject line shown in recipients' inboxes. Keep it clear and specific, for example, `Session 2: Bus Schedule and Packing List`.
 
+### BCC (optional)
+
+Enter one or more email addresses to blind-copy on the send. Recipients on the To line do not see the BCC addresses. Use this to keep an internal mailbox, a colleague, or an archive address on record for the message without exposing them to families.
+
 ### Template (optional)
 
 Optional layout or content template to start from. Choose a template to reuse a standard header, footer, or structure, then edit the message body as needed.
@@ -216,7 +220,7 @@ What Template Library does:
 
 - **Click to use** — Click any template thumbnail to insert that design into your email body.
 
-- **My Templates first** — See your agency templates at the top, followed by system templates.
+- **My Templates first** — See your organization's templates at the top, followed by system templates.
 
 <Steps>
   <Step title="Open Template Library while composing" icon="monitor" title-type="p">
@@ -233,7 +237,7 @@ What Template Library does:
 
     - In the Template Library modal, scroll through thumbnail previews to compare layouts and designs.
 
-    - Look at the **My Templates** section at the top to quickly find templates created for your agency.
+    - Look at the **My Templates** section at the top to quickly find templates created for your organization.
 
     - Click a template thumbnail to insert that template into your email body and then edit the text before sending.
 
@@ -264,6 +268,14 @@ Use this when you want the email to look more formal or transactional, such as b
   Turn on **Show Default Header** and use **Preview Email** or **Send Test Email** to confirm the header and body work well together, since the header can change spacing and overall layout.
 </Callout>
 
+### Display Login Button? (optional)
+
+Toggle that controls whether a login button is added to the email. Set this to **Yes** when the message asks families to sign in and take action, such as completing a form or making a payment, so recipients get a clear button that takes them straight to their portal login.
+
+### AI Rewrite
+
+Above the email body you have an **AI Rewrite** button. Use it to have Campium revise the wording of your draft, then review the result and edit as needed before sending. It changes only the message body, not the subject, recipients, or send settings.
+
 ### Marketing Email (optional)
 
 Set to **Yes** for promotional or marketing-style emails. When you mark an email as marketing, Campium adds an unsubscribe link for compliance and recipient preferences.
@@ -275,6 +287,10 @@ Set to **Yes** for promotional or marketing-style emails. When you mark an email
 ### When To Send (optional)
 
 Select a date and time to schedule the email. If you leave this blank or set it to now, the email sends immediately when you click **Send Now**. If you pick a future time, the email shows as **Scheduled** until that time.
+
+<Callout kind="info" collapsed="false">
+  Send times shown on the composer, the Mass Emails list, and the Logs tab are displayed in your configured send timezone, not in each recipient's local time. Set your scheduled time against that timezone.
+</Callout>
 
 ### Auto-send Emails To New Matching Recipients (optional)
 

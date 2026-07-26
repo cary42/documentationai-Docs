@@ -14,6 +14,12 @@ My Groups lets staff take attendance for their assigned group in the mobile app 
 
   This field determines which group assignment CampiumDB will use for My Groups attendance.
 
+  <Callout kind="alert">
+
+  The Group Field must be a **multi-select (Choose Many)** field with its **User Type** set to **All Users**. A single-select field, or one limited to a specific user type, will not work for My Groups. If your field does not meet these requirements, edit the profile field first, then return to this setting.
+
+  </Callout>
+
   </Step>
   <Step title="Assign campers to the Group" icon="users">
 
@@ -29,6 +35,12 @@ My Groups lets staff take attendance for their assigned group in the mobile app 
   Once assigned, staff can take attendance for that group from the mobile app or on CampiumDB.com.
 
   </Step>
+
+  <Step title="Show My Groups on the mobile app" icon="smartphone">
+
+  To make My Groups appear in the mobile app, turn on the **Display My Groups menu item** toggle in your mobile app settings. When this toggle is off, staff will not see My Groups in the app even if they are assigned to a group.
+
+  </Step>
 </Steps>
 
 <Callout kind="info">
@@ -36,3 +48,7 @@ My Groups lets staff take attendance for their assigned group in the mobile app 
 Once staff members are assigned, they will see a **My Groups** option in the navigation. This displays a roster of group members along with the attendance taker.
 
 </Callout>
+
+## Restrict a login to My Groups only
+
+You can put a staff login into a **my groups only** mode. In this restricted mode, the user signs in and goes straight to their assigned group's attendance roster, without access to the rest of the admin tools. This is useful for seasonal helpers or volunteers who only need to take attendance for their own group and nothing else.

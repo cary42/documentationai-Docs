@@ -28,6 +28,8 @@ Account Settings at `/account/` cover:
 
 - Turning two-factor authentication (2FA) on or off
 
+- Managing passkeys
+
 - Email Digest
 
 ### Change your password
@@ -182,6 +184,52 @@ Only disable 2FA if you are changing devices or have another strong security con
 
 <Callout kind="alert" collapsed="false">
   If you lose access to your mobile phone and cannot complete 2FA, contact an internal Campium admin or support channel defined by your organization to regain access.
+</Callout>
+
+---
+
+### Passkeys
+
+Passkeys let you sign in with the same face, fingerprint, or device PIN you use to unlock your phone or computer, instead of typing a password. They are built on the WebAuthn standard and are tied to your device, so there is no code to remember or phish.
+
+You manage passkeys from the **Passkeys** tab in your account settings.
+
+#### Add a passkey
+
+<Steps>
+  <Step title="Open the Passkeys tab" icon="key" title-type="p">
+    - Click on your name in the top right and then click on **My Settings.**
+
+    - Open the **Passkeys** tab.
+  </Step>
+
+  <Step title="Create the passkey" icon="plus" title-type="p">
+    - Choose **Add a passkey**.
+
+    - Follow your browser or device prompt to confirm with your fingerprint, face, security key, or device PIN.
+
+    - The new passkey is saved and appears in your list of passkeys.
+  </Step>
+</Steps>
+
+#### List and remove passkeys
+
+The Passkeys tab shows each passkey you have registered so you can review them across your devices.
+
+- Review the list to confirm which devices can sign in with a passkey.
+
+- Use the **Remove** action next to a passkey to delete it, for example when you replace or stop using a device.
+
+<Callout kind="tip" collapsed="false">
+  Register a passkey on more than one device so you are not locked out if one device is lost or unavailable.
+</Callout>
+
+#### Require a passkey to sign in
+
+Turn on **Require a passkey to sign in** to make your login password-less. With this setting on, Campium no longer accepts your password for sign-in; you complete every sign-in with a passkey instead. Google and Apple sign-in remain available on your account.
+
+<Callout kind="alert" collapsed="false">
+  Before you turn on **Require a passkey to sign in**, register a passkey on at least one device you reliably have access to. If you lose access to all of your passkeys, use Google or Apple sign-in, or contact an internal Campium admin to regain access.
 </Callout>
 
 ---

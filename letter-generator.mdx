@@ -68,6 +68,10 @@ Follow this workflow to create and send a letter efficiently.
   </Step>
 </Steps>
 
+<Callout kind="info" collapsed="false">
+  The batch PDF is generated asynchronously rather than downloaded in your browser right away. When it is ready, Campium emails you a download link, so you do not need to keep the page open while it builds. This lets larger batches finish in the background.
+</Callout>
+
 <Callout kind="success" collapsed="false">
   If the Matching Users table looks right, your generated PDF should contain one page per person in that result set.
 </Callout>
@@ -75,6 +79,18 @@ Follow this workflow to create and send a letter efficiently.
 ## Merge fields and logo tokens
 
 Merge fields personalize the letter for each recipient. Insert the fields that match the data you want to include, then preview the template against the filtered results to confirm the wording reads correctly.
+
+Merge fields are organized into groups so you can find the right value quickly:
+
+- **Camper** — details about the camper receiving the letter
+
+- **Guardian 1 & 2** — details for each guardian on the account
+
+- **Staff** — details for staff recipients
+
+- **General** — shared values that are not tied to a specific person
+
+Each field has a quick-insert merge badge. Click a badge to drop that merge field into the letter body at your cursor instead of typing the field name by hand.
 
 Use `[logo]` in templates that need the current logo.&#x20;
 
