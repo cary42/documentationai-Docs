@@ -248,6 +248,11 @@
                 "icon": "briefcase-medical"
               },
               {
+                "title": "Medications & Health",
+                "path": "medications",
+                "icon": "pill"
+              },
+              {
                 "group": "Payments",
                 "pages": [
                   {
@@ -326,6 +331,16 @@
                 "title": "Letter Generator",
                 "path": "letter-generator",
                 "icon": "book-open-text"
+              },
+              {
+                "title": "System Emails",
+                "path": "system-emails",
+                "icon": "lucide-mail"
+              },
+              {
+                "title": "Email Overview",
+                "path": "email",
+                "icon": "lucide-mail"
               }
             ],
             "public": true
@@ -347,6 +362,11 @@
                 "title": "Digital Signatures",
                 "path": "digital-signatures",
                 "icon": "pen-line"
+              },
+              {
+                "title": "Form Recipients & Permissions",
+                "path": "permissions-recipients",
+                "icon": "user-check"
               }
             ],
             "public": true
@@ -419,6 +439,16 @@
                 "title": "Todo List",
                 "path": "todo-list",
                 "icon": "list-todo"
+              },
+              {
+                "title": "Staff Hub",
+                "path": "staff-hub",
+                "icon": "briefcase"
+              },
+              {
+                "title": "Merge Users",
+                "path": "merge-users",
+                "icon": "users"
               }
             ],
             "public": true

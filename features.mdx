@@ -1,166 +1,179 @@
 ---
-title: Core Features of Campium
-description: Explore the essential tools in Campium for handling daily camp operations efficiently and securely.
+title: Features Overview
+description: A high-level tour of what Campium does, from registration and billing to attendance, communication, health, transportation, and integrations.
 ---
 
 ## Overview
 
-Campium equips you with powerful tools to streamline camp management. You handle registrations, billing, attendance, health records, and communications from a single dashboard. These core features ensure smooth operations, data-driven insights, and secure handling of sensitive information.
+Campium covers the full range of work involved in running a camp or program. This page is a high-level map of the main feature areas, with links to detailed guides for each. Everything below is managed from your admin site, and families and staff interact through the connected parent portal and mobile app.
 
-<Callout kind="info">
-Campium centralizes camp operations to save time and reduce errors. Customize workflows to fit your camp's unique needs.
-</Callout>
+## Registration & forms
 
-## Key Features Overview
+Build the forms families complete to enroll, sign waivers, and share the information you need. Forms sell your sessions, collect answers to your questions, and store every response.
 
-<Columns cols={3}>
-  <Card title="Registrations & Enrollments" icon="users" href="#registrations">
-    Manage camper sign-ups and capacity limits effortlessly.
+<Columns cols="2">
+  <Card title="Forms" href="/forms" icon="file-text" horizontal="false">
+    Configure form settings, product layouts, recipients, questions, and responses.
   </Card>
-  <Card title="Billing & Payments" icon="credit-card" href="#billing">
-    Process fees securely with automated invoicing.
-  </Card>
-  <Card title="Attendance & Transportation" icon="map-pin" href="#attendance">
-    Track campers in real-time during sessions and trips.
-  </Card>
-  <Card title="Medications & Health" icon="shield" href="#health">
-    Log and monitor health data for safety.
-  </Card>
-  <Card title="Communications" icon="message-circle" href="#communications" horizontal>
-    Connect staff, campers, and parents instantly.
+  <Card title="Profiles & fields" href="/profiles" icon="user" horizontal="false">
+    Manage camper and family profiles and the custom fields you collect.
   </Card>
 </Columns>
 
-## Managing Registrations and Enrollments
+## Seasons & sessions
 
-You create and track camper enrollments with intuitive forms and real-time availability checks.
+Organize everything you offer into seasons, then create sessions as the purchasable products families add to their cart.
 
-<Steps>
-  <Step title="Set Up Registration Form" icon="edit-3">
-
-    Customize fields for parent info, emergency contacts, and waivers.
-
-    ```
-    {
-      "fields": [
-        "camperName",
-        "parentEmail",
-        "allergies",
-        "emergencyContact"
-      ]
-    }
-    ```
-
-  </Step>
-  <Step title="Review Applications" icon="search">
-
-    Approve or waitlist campers based on capacity.
-
-  </Step>
-  <Step title="Send Confirmations" icon="send">
-
-    Automate email notifications with enrollment details.
-
-  </Step>
-</Steps>
-
-<Callout kind="tip">
-Use profile fields to filter enrollments by age group or session type for quick overviews.
-</Callout>
-
-## Processing Billing and Payments
-
-Handle payments securely with integrated gateways. Generate invoices and track outstanding balances.
-
-<Tabs>
-  <Tab title="Online Payments" icon="globe">
-
-    Configure Stripe or PayPal for seamless transactions.
-
-````jsx
-// Payment integration config
-const paymentConfig = {
-  gateway: "stripe",
-  apiKey: "pk_test_YOUR_STRIPE_KEY",
-  currency: "USD"
-};
-````
-
-  </Tab>
-  <Tab title="In-Person Collection" icon="dollar-sign">
-
-    Record cash/check payments and print receipts.
-
-    | Method     | Fee Applied | Receipt Generated |
-    |------------|-------------|-------------------|
-    | Cash       | 0%         | Yes               |
-    | Check      | 0%         | Yes               |
-    | Card       | 2.9%       | Yes               |
-
-  </Tab>
-</Tabs>
-
-## Tracking Attendance and Transportation
-
-Monitor daily attendance and bus routes to ensure camper safety.
-
-```mermaid
-graph TD
-    A[Morning Check-In] --> B[Mark Present/Absent]
-    B --> C[Track Transportation]
-    C --> D[Evening Check-Out]
-    D --> E[Generate Reports]
-```
-
-<Expandable title="Advanced Tracking Options" default-open="false">
-
-Enable geofencing for buses and automate parent notifications for late arrivals.
-
-</Expandable>
-
-## Logging Medications and Health Records
-
-Securely store and access health information. Staff view allergies and dosages during activities.
-
-<ParamField path="health.medication" param-type="object" required="true">
-  Details like name, dosage, and administration time.
-</ParamField>
-
-<ParamField path="health.allergies" param-type="array" required="false">
-  List of known allergies with severity levels.
-</ParamField>
-
-## Facilitating Communications
-
-Keep everyone informed with targeted messages, newsletters, and announcements.
-
-<CodeGroup tabs="Email,SMS">
-```javascript
-// Send email campaign
-await campium.sendEmail({
-  to: "parents@camp.com",
-  subject: "Session Update",
-  body: "Attendance reminder..."
-});
-```
-```javascript
-// Send SMS alert
-await campium.sendSMS({
-  to: "+15551234567",
-  message: "Camper pickup at 4PM"
-});
-```
-</CodeGroup>
-
-<Columns cols={2}>
-  <Card title="Staff Portal" icon="users">
-    Internal chats and shift schedules.
+<Columns cols="2">
+  <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar" horizontal="false">
+    Structure your offerings by season and build sessions with dates, pricing, and capacity.
   </Card>
-  <Card title="Parent App" icon="smartphone">
-    Real-time updates and photo sharing.
+  <Card title="Waitlist" href="/waitlist" icon="list" horizontal="false">
+    Keep enrolling once a session fills by managing a waitlist.
   </Card>
 </Columns>
 
-<Callout kind="success">
-These features integrate seamlessly, providing a complete view of camp operations from your dashboard.
-</Callout>
+## Discounts & payment plans
+
+Reduce prices at checkout and give families flexible ways to pay.
+
+<Columns cols="2">
+  <Card title="Discounts" href="/discounts" icon="tag" horizontal="false">
+    Offer discount codes and multi-session savings.
+  </Card>
+  <Card title="Payment Plans" href="/payment-plans" icon="credit-card" horizontal="false">
+    Let families spread fees over time or pay in full.
+  </Card>
+</Columns>
+
+## Billing & payment processing
+
+Collect payments online and manage balances. Campium works with Stripe, Payabli, USIO, and Finix for payment processing.
+
+<Columns cols="2">
+  <Card title="Payment Processors" href="/payment-processors" icon="dollar-sign" horizontal="false">
+    Connect Stripe, Payabli, USIO, or Finix to accept online payments.
+  </Card>
+  <Card title="Refunds & voids" href="/processing-refunds-and-voids" icon="rotate-ccw" horizontal="false">
+    Process refunds and voids and handle payment issues.
+  </Card>
+</Columns>
+
+## Canteen & store
+
+Run an on-site canteen or store. Families add funds, and staff record sales at camp.
+
+<Card title="Canteen" href="/canteen" icon="shopping-bag" horizontal="false">
+  Track balances, deposits, and purchases for your canteen or store.
+</Card>
+
+## Attendance & kiosk
+
+Check campers in and out, track absences, and run a self-service kiosk for daily rosters.
+
+<Columns cols="2">
+  <Card title="Attendance" href="/attendance" icon="check-square" horizontal="false">
+    Check campers in and out and keep an accurate daily roster.
+  </Card>
+  <Card title="Attendance kiosk" href="/system-report-attendance-kiosk" icon="monitor" horizontal="false">
+    Run a kiosk for fast, self-service check-in and check-out.
+  </Card>
+</Columns>
+
+## Bunking
+
+Assign campers to bunks, review requests, and manage capacity.
+
+<Card title="Bunk Assignments" href="/bunk-assignments" icon="grid" horizontal="false">
+  Place campers into bunks, move assignments, and watch for capacity warnings.
+</Card>
+
+## Transportation
+
+Manage buses and riders, review pickup privileges, and follow buses in real time with GPS bus tracking.
+
+<Card title="Transportation" href="/transportation" icon="map-pin" horizontal="false">
+  Manage buses and riders and view live GPS bus tracking.
+</Card>
+
+## Staff applications & scheduling
+
+Collect staff applications, review applicants, and build weekly and monthly schedules.
+
+<Columns cols="2">
+  <Card title="Staff Applications" href="/staff" icon="users" horizontal="false">
+    Set up a staff application form and manage applicants.
+  </Card>
+  <Card title="Staff Scheduling" href="/scheduling" icon="clock" horizontal="false">
+    Build, publish, and update weekly and monthly staff schedules.
+  </Card>
+</Columns>
+
+## Communication
+
+Reach families through mass email, SMS, and mobile push, and let families message one another with one-way messaging.
+
+<Columns cols="2">
+  <Card title="Mass Emails" href="/mass-emails" icon="mail" horizontal="false">
+    Send targeted one-off and scheduled emails to your recipients.
+  </Card>
+  <Card title="SMS" href="/sms" icon="message-square" horizontal="false">
+    Send one-way SMS updates to families.
+  </Card>
+  <Card title="Push Notifications" href="/push-notifications" icon="bell" horizontal="false">
+    Send mobile push notifications to your community.
+  </Card>
+  <Card title="One-way messaging" href="/one-way-messaging" icon="send" horizontal="false">
+    Enable and moderate family-to-family one-way messages.
+  </Card>
+</Columns>
+
+## Reports
+
+Build custom reports and use the built-in system reports to answer questions about registration, payments, attendance, and more.
+
+<Columns cols="2">
+  <Card title="Custom Reports" href="/custom-reports" icon="bar-chart-2" horizontal="false">
+    Build, save, and share reports with filters and display fields.
+  </Card>
+  <Card title="Report charts" href="/system-report-charts" icon="pie-chart" horizontal="false">
+    Visualize your data with built-in report charts.
+  </Card>
+</Columns>
+
+## Health & medications
+
+Record health details and track medications so staff have what they need on site.
+
+<Card title="Health Report" href="/health-report" icon="heart" horizontal="false">
+  Print one person's health details in a single PDF.
+</Card>
+
+## Contracts & e-signatures
+
+Send contracts and collect legally recorded typed signatures with a full audit trail.
+
+<Columns cols="2">
+  <Card title="Contracts" href="/contracts" icon="file-text" horizontal="false">
+    Create, send, and track digital contracts for staff, campers, and guardians.
+  </Card>
+  <Card title="Digital Signatures" href="/digital-signatures" icon="edit-3" horizontal="false">
+    Collect typed e-signatures with timestamps and audit trails.
+  </Card>
+</Columns>
+
+## Mobile app
+
+Give families and staff a mobile app for updates, photos, messaging, and day-to-day tasks.
+
+<Card title="Mobile App" href="/mobile-app" icon="smartphone" horizontal="false">
+  See what families and staff can do in the Campium mobile app.
+</Card>
+
+## Integrations
+
+Connect the tools you already use. Campium integrates with Mailchimp, Klaviyo, Constant Contact, Slack, QuickBooks, and Salesforce.
+
+<Card title="Integrations" href="/integrations" icon="link" horizontal="false">
+  Turn on and manage third-party integrations from Admin &gt; Integrations.
+</Card>

@@ -1,0 +1,300 @@
+---
+title: "Medications & health"
+description: "Record a camper's medications, dispense and log doses, manage medication seasons, and print single or bulk health reports."
+---
+
+The medication and health tools let you keep each camper's (or staff member's)
+medications on file, record every dose that gets handed out, and print a clean
+health report for the nurse's station or a doctor's visit. Families can enter and
+maintain their own camper's medications from the parent portal, so the list is
+ready before opening day.
+
+## Where it lives
+
+| Where | Who uses it | What they do |
+|-------|-------------|--------------|
+| **Profile → Health tab** (admin) | Camp staff, health office | Add/edit medications, dispense a dose, view the dispense history, download a health report |
+| **Parent portal → Medications** (`/medication/`) | Families | Add/edit their camper's medications for a season, carry meds forward, certify the list |
+| **Medication Log report** (admin) | Health office | See every dose recorded across camp |
+| **Combined Health Reports** (admin) | Health office | Print one PDF of health reports for everyone in a season |
+
+<Callout type="info">
+The medication features only appear when the **Medication module** is turned on
+for your camp. Until it is enabled, the Health tab, the parent Medications page,
+and the medication settings are hidden.
+</Callout>
+
+## Before you start
+
+Two things control who sees what:
+
+<ParamField path="Medication module" type="setting">
+  Turns the whole feature on. Enable it under your camp's medical settings
+  (**Reports → Medical Settings**). Without it, the medication pages return
+  "Medication module is not enabled."
+</ParamField>
+
+<ParamField path="Medical information permission" type="permission">
+  Staff need the **Medical information** permission to open the profile Health
+  tab and to run the health reports. Gate this to your health office and
+  directors, since medications are sensitive.
+</ParamField>
+
+<ParamField path="Reports permission" type="permission">
+  Required (together with **Medical information**) to open **Combined Health
+  Reports**.
+</ParamField>
+
+## Recording a camper's medications
+
+A medication record captures what the camper takes, how much, when, and who
+prescribed it. The same record is shared between the admin Health tab and the
+parent portal — a med a family enters shows up for your staff, and vice versa.
+
+### The fields you capture
+
+<ParamField path="Medication" type="text" required>
+  The name of the medication (for example, "Albuterol" or "Children's Tylenol").
+</ParamField>
+
+<ParamField path="Dosage" type="text" required>
+  How much to give — "1 tablet", "5 mL", "2 puffs", and so on.
+</ParamField>
+
+<ParamField path="When to administer" type="text">
+  Free-text timing, such as "After breakfast" or "As needed for headaches." On
+  the parent portal this can be paired with reusable **When** options (see below)
+  and specific **days of the week**.
+</ParamField>
+
+<ParamField path="Days of the week" type="checkboxes">
+  On the parent portal, families can check the specific days a dose is given.
+  When all seven are checked, the record simply reads "Every day."
+</ParamField>
+
+<ParamField path="Doctor / prescriber" type="text">
+  The prescribing doctor's name.
+</ParamField>
+
+<ParamField path="Phone" type="text">
+  The prescriber's phone number.
+</ParamField>
+
+<ParamField path="Start date / End date" type="date">
+  The window the medication is active. If both are set, the end date must be on
+  or after the start date.
+</ParamField>
+
+<ParamField path="Reason" type="text">
+  Why the camper takes it (for example, "Seasonal allergies").
+</ParamField>
+
+<ParamField path="Notes" type="text">
+  Anything else staff should know — storage instructions, side effects to watch
+  for, and so on.
+</ParamField>
+
+### Adding a medication as an admin
+
+<Steps>
+  <Step title="Open the camper's profile">
+    Search for the camper (or staff member) and open their profile, then click
+    the **Health** tab.
+  </Step>
+  <Step title="Add the medication">
+    Choose the person, enter the **Medication** and **Dosage** (both required),
+    and fill in any of the other fields above.
+  </Step>
+  <Step title="Save">
+    The medication is added to the list. Use the row's menu to **Edit** or
+    **Delete** it later.
+  </Step>
+</Steps>
+
+### Adding a medication as a parent
+
+Families open **Medications** from the parent portal menu for the camper they
+want. The parent form captures the same fields, plus the reusable **When**
+options and the day-of-week checkboxes. Parents can add, edit, and delete meds
+on any season that is currently open (active) for your camp.
+
+<Callout type="info">
+The **When** dropdown options (for example, "Breakfast," "Lunch," "Bedtime")
+are managed by your camp under **Medical Settings** with the **New Option for
+'When' Dropdown** button. Setting these up gives families consistent timing
+choices instead of only free text.
+</Callout>
+
+## Medication seasons
+
+Every medication belongs to a **season** (your camp's product group / year, such
+as "Summer 2026"). This keeps each summer's medication list separate — a camper's
+allergy meds for last year don't clutter this year's list.
+
+- You pick which season is the **medication season** under **Medical Settings**.
+  If you leave it unset, the feature falls back to your default season.
+- The configured season only decides the **default** season shown. Families can
+  still switch to and edit **any season that is currently open (active)** for
+  your camp using the season selector on the Medications page.
+- On the parent page, the default season is the active season the camper is
+  actually enrolled in (usually exactly one), falling back to your configured
+  medication season.
+- Older medications that were saved before seasons existed have no season
+  attached; those legacy records always show up in whichever season is being
+  viewed, so nothing gets lost.
+
+<Callout type="warning">
+When a season is **closed** (inactive), its medication list becomes read-only —
+families see "Medication entry for [season] is closed" and can no longer add or
+edit meds for it. Reopen the season if entries still need to change.
+</Callout>
+
+### Carrying medications forward
+
+So families don't re-type the same meds every year, the parent Medications page
+offers a **carry-over** tool.
+
+<Steps>
+  <Step title="View the new season">
+    Switch the season selector to the season you're filling in.
+  </Step>
+  <Step title="Choose a previous season to copy from">
+    The carry-over card lists the earlier seasons where the camper has meds on
+    file.
+  </Step>
+  <Step title="Pick the meds to copy">
+    Select one or more medications and confirm.
+  </Step>
+</Steps>
+
+Each copied medication becomes a **fresh record** in the new season with its own,
+empty dispense history. Any med that already exists in the target season (same
+name and dosage) is skipped so you don't get duplicates.
+
+### Certifying the list (parent portal)
+
+For each season, a family can **certify** that their camper's medication list is
+complete and correct — a checkbox on the Medications page records who certified
+it and when. Your staff see this on the profile Health tab under **Medication
+certification**.
+
+<Callout type="info">
+Adding a medication (or carrying one over) **clears** an existing certification,
+because the list changed and should be reviewed again. Simply editing or removing
+a med does **not** clear it.
+</Callout>
+
+## Dispensing and the medication log
+
+When a dose is actually handed to a camper, staff record it from the Health tab.
+This builds a running **medication log** — a legal record of every dose given.
+
+<Steps>
+  <Step title="Click Dispense">
+    On the camper's Health tab, find the medication and click **Dispense**. The
+    dosage is pre-filled from the medication record, and the most recent dispense
+    history is shown so you can see when it was last given.
+  </Step>
+  <Step title="Confirm the details">
+    Adjust the **Dosage** if needed, set the **Dispensed at** date/time (defaults
+    to now), and add any **Notes**.
+  </Step>
+  <Step title="Optionally notify the guardians">
+    Check **Send email notification to guardians** and/or **Send SMS to the
+    guardians** to let the family know the dose was given.
+  </Step>
+  <Step title="Save">
+    The dose is written to the medication log with your name as the recorder.
+  </Step>
+</Steps>
+
+<Callout type="info">
+Dispense records store the medication name, dosage, and notes encrypted at rest,
+since they are protected health information.
+</Callout>
+
+### The Medication Log report
+
+**Reports → Medication Log** lists every recorded dose across camp for the
+selected season, with columns for the camper, medication, dosage, date and time,
+whether guardians were notified, the notes, and who recorded it. Use it for
+end-of-day reconciliation or an audit of what was given.
+
+## Health reports
+
+A **health report** gathers everything a nurse or doctor needs about one person
+onto a single, print-friendly PDF.
+
+### What's on the report
+
+- **Guardian contact blocks** for the camper (or the staff member's own contact
+  line).
+- **Health information** — the profile fields you've flagged for the health
+  report (see below), plus an **Insurance information** section when those fields
+  exist.
+- **Medications** — every active medication on file, with dosage, schedule, days,
+  prescriber, dates, reason, and notes.
+- **Latest medical notes** — the most recent medical notes from the profile.
+- **Emergency information** — any profile field whose name or label mentions
+  "emergency."
+
+### The "Include on health report" flag
+
+Health reports don't show every profile field — only the ones you choose. To add
+a field:
+
+<Steps>
+  <Step title="Open the field">
+    Go to **Admin → Profile Fields** and edit the field you want on the report.
+  </Step>
+  <Step title="Turn on the flag">
+    Enable **Include on health report** and save.
+  </Step>
+</Steps>
+
+The report shows each person's **latest** answer for the flagged fields. If a
+person's user type has no flagged fields, the report says so instead of showing
+a blank section.
+
+### One camper's report
+
+From the profile **Health** tab, click **Download health report (PDF)**. The file
+downloads immediately, named for the person.
+
+### Combined Health Reports (bulk)
+
+To print health reports for a whole group at once, go to **Combined Health
+Reports** (requires the **Reports** and **Medical information** permissions).
+
+<Steps>
+  <Step title="Pick a season">
+    Use the season selector at the top of the report.
+  </Step>
+  <Step title="Choose a user type">
+    Switch between campers, staff, volunteers, and so on. The list reloads for
+    the selected season and type.
+  </Step>
+  <Step title="Select who to include">
+    Everyone active for that season and type is listed and pre-checked. Uncheck
+    anyone you want to leave out.
+  </Step>
+  <Step title="Generate one PDF">
+    Click **Generate One PDF**. Because a large batch can take several minutes,
+    the finished combined PDF is emailed to you as a download link rather than
+    generated on the spot.
+  </Step>
+</Steps>
+
+<Callout type="info">
+Every person's page in the combined PDF uses the same layout as the single-camper
+report, so the two always match.
+</Callout>
+
+## Permissions at a glance
+
+| Capability | What's required |
+|------------|-----------------|
+| See the profile Health tab, add/dispense meds, download a health report | **Medical information** permission (and the **Medication module** enabled) |
+| Configure the medication season and **When** options | **Medical Settings** (module enabled) |
+| Run **Combined Health Reports** | **Reports** **and** **Medical information** permissions |
+| Add/edit meds and certify the list from the portal | The family, on any open (active) season |
