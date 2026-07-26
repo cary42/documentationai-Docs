@@ -1,0 +1,131 @@
+---
+title: Tipping
+description: >-
+  Let parents and visitors leave tips online, then track, pay out, void, or
+  refund those tips with the tip report.
+---
+## What tipping does
+
+Tipping gives your camp a public page where parents and visitors can leave tips for your staff. Logged-in families tip from their saved payment methods; visitors enter a card or bank account on the page. You control how the page looks and behaves in **Tip settings**, and you track everything that comes in with the **Tip report**.
+
+<Callout kind="info" collapsed="false">
+  Tipping is an optional module. If it is not turned on for your account, the settings and report pages redirect back to the financial reports.
+</Callout>
+
+## Tip settings
+
+Open Tip settings to configure the tipping page. The page lives at your camp's tipping URL, shown at the top of the settings.
+
+### Availability
+
+<ParamField body="Enable tipping on your portal" param-type="toggle" required="false" deprecated="false">
+  When on, the tipping page is live at your tipping URL. When off, visitors are redirected away and cannot leave tips.
+</ParamField>
+
+### Page content
+
+<ParamField body="Page title" param-type="text" required="false" deprecated="false">
+  The heading shown at the top of the tipping page.
+</ParamField>
+
+<ParamField body="Intro copy" param-type="rich text" required="false" deprecated="false">
+  Text shown above the tip form.
+</ParamField>
+
+<ParamField body="Thank-you copy" param-type="rich text" required="false" deprecated="false">
+  Text shown after a tip is submitted.
+</ParamField>
+
+### Tip amounts
+
+<ParamField body="Minimum amount per tip line" param-type="currency" required="false" deprecated="false">
+  The smallest amount allowed for each tip.
+</ParamField>
+
+<ParamField body="Suggested amounts" param-type="text" required="false" deprecated="false">
+  Comma-separated values shown as quick-pick buttons on the form (for example, 20, 40, 60, 100).
+</ParamField>
+
+<ParamField body="Allow tippers to split by counselor name" param-type="toggle" required="false" deprecated="false">
+  When on, tippers can add a name to each tip line. When off, only a single bulk tip is collected.
+</ParamField>
+
+<ParamField body="Staff names" param-type="text" required="false" deprecated="false">
+  One name per line. When split tips are on, these appear as a dropdown so tippers can pick a name or type their own.
+</ParamField>
+
+<ParamField body="Email a receipt to the tipper" param-type="toggle" required="false" deprecated="false">
+  Sends an emailed receipt after a successful tip.
+</ParamField>
+
+<ParamField body="Offer a whole family option" param-type="toggle" required="false" deprecated="false">
+  When on, logged-in tippers can choose "Not specific / whole family" instead of a single camper.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  Select **Save settings** after any change. The intro and thank-you fields support basic formatting.
+</Callout>
+
+## Tip report
+
+The Tip report lists tips received and lets you manage each one. A summary bar at the top shows the number of tips, the tip total, surcharge collected, total charged, any refunds, and how much has been paid out.
+
+### Two views
+
+<Tabs>
+  <Tab title="Tips received" icon="list">
+    Every tip collected in the date range, one row per tip, with the tipper, who it was on behalf of, the amounts, and payout status.
+  </Tab>
+
+  <Tab title="Haven't tipped yet" icon="users">
+    Enrolled families with no tip for the season, with a manual reminder email flow to prompt them.
+  </Tab>
+</Tabs>
+
+### Filters
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Limits which tips are shown by date.
+</ParamField>
+
+<ParamField body="Tipped person" param-type="selector" required="false" deprecated="false">
+  Filter to tips left for one or more specific staff members.
+</ParamField>
+
+<ParamField body="Break up by" param-type="selector" required="false" deprecated="false">
+  Group the report by a profile field (for example, cabin). When grouped, a **Print by** button opens a print-ready view with one group per page.
+</ParamField>
+
+### Columns
+
+Each row shows the **Date**, **Tipper**, **Email**, who the tip was **on behalf of**, the individual **tip lines and payout** toggles, **Season**, a **Paid out** status, and the **Tip total**, **Surcharge**, and **Total charged** amounts. Select **Display Columns** to add profile fields as extra columns.
+
+### Manage tips
+
+- **Record manual tip** – log a tip received offline by cash, check, or another method.
+
+- **Paid out toggle** – mark each staff member's tip line as paid out; the status badge updates as lines are paid.
+
+- **Void** – cancel a charge before it settles, or remove a manually recorded tip.
+
+- **Refund** – return all or part of a settled charge to the tipper.
+
+<Callout kind="alert" collapsed="false">
+  Voids and refunds reduce your collected totals. The summary bar shows refunded and net-collected figures once any refunds exist, so use those when reconciling to deposits.
+</Callout>
+
+## Set up tipping
+
+<Steps>
+  <Step title="Turn on and configure the page" icon="toggle-right" title-type="p">
+    In Tip settings, enable tipping, set your page title and copy, and choose your minimum and suggested amounts.
+  </Step>
+
+  <Step title="Share your tipping URL" icon="link" title-type="p">
+    Give parents and visitors the tipping URL shown at the top of the settings page.
+  </Step>
+
+  <Step title="Track and pay out tips" icon="dollar-sign" title-type="p">
+    Use the Tip report to watch tips come in, mark lines paid out, and handle any voids or refunds.
+  </Step>
+</Steps>

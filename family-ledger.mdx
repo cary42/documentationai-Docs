@@ -1,0 +1,89 @@
+---
+title: Family Ledger report
+description: >-
+  Review every charge, payment, and credit for each family over a date range, in
+  a running ledger grouped by family with revenue and credit subtotals.
+---
+## Overview
+
+Use the **Family Ledger** report to see a transaction-by-transaction history of what each family was charged, what they paid, and any credits applied, over a date range you choose. Transactions are grouped by family, and each family block ends with a subtotal row summarizing its revenues and credits.
+
+<Callout kind="info" collapsed="false">
+  The date range filters by the **date each transaction was recorded in Campium**. If you leave the dates unset, the report defaults to the **last 30 days**.
+</Callout>
+
+## Filters
+
+<ParamField body="Season / program group" param-type="selector" required="false" deprecated="false">
+  Limit the ledger to a single season or program group. Leave it unset to include transactions across all seasons.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that control which transactions appear, based on when each was recorded. Defaults to the last 30 days.
+</ParamField>
+
+## Columns
+
+Each row is one transaction (a charged product or a cancellation), grouped by family and sorted by last name.
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  The date the transaction was recorded.
+</ParamField>
+
+<ParamField body="Family Name" param-type="text" required="true" deprecated="false">
+  The primary contact on the family account. Select it to open the family's profile.
+</ParamField>
+
+<ParamField body="Camper" param-type="text" required="true" deprecated="false">
+  The camper the transaction belongs to. (This column uses your camp's configured term for a person.)
+</ParamField>
+
+<ParamField body="Comment" param-type="text" required="false" deprecated="false">
+  Any note attached to the transaction. Cancelled products show a **PRODUCT CANCELLED** note with the cancellation date.
+</ParamField>
+
+<ParamField body="Transaction ID" param-type="text" required="false" deprecated="false">
+  The identifier for the transaction.
+</ParamField>
+
+<ParamField body="Category" param-type="text" required="true" deprecated="false">
+  The product, and its price level when applicable, that the transaction is for.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The dollar amount of the transaction.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="true" deprecated="false">
+  The running balance for the family as each transaction is applied.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Some camps also see a **Member #** column or a **Guardian** column, depending on your account setup.
+</Callout>
+
+## Family subtotal rows
+
+After each family's transactions, a highlighted subtotal row summarizes that family:
+
+- **Revenues** – total charges for the family in range.
+
+- **Credits** – total credits/discounts applied.
+
+Use these subtotals to reconcile a single family without adding up individual lines.
+
+## Run and export
+
+<Steps>
+  <Step title="Open the Family Ledger report" icon="folder" title-type="p">
+    Open the **Financials** area and choose the **Family Ledger** report.
+  </Step>
+
+  <Step title="Set the date range and season" icon="calendar" title-type="p">
+    Choose a start and end date, and optionally a season or program group. Leave the dates blank to use the last 30 days.
+  </Step>
+
+  <Step title="Review and export" icon="play-circle" title-type="p">
+    Review the ledger family by family. Use the export buttons above the table to copy, download to Excel or CSV, save a landscape PDF, or print.
+  </Step>
+</Steps>

@@ -103,6 +103,74 @@
                   {
                     "title": "Revenue Summary",
                     "path": "revenue-summary"
+                  },
+                  {
+                    "title": "Aging Account Balance",
+                    "path": "account-balance-aging"
+                  },
+                  {
+                    "title": "Negative Balance",
+                    "path": "negative-balance"
+                  },
+                  {
+                    "title": "Family Ledger",
+                    "path": "family-ledger"
+                  },
+                  {
+                    "title": "Ledger Summary",
+                    "path": "ledger-summary"
+                  },
+                  {
+                    "title": "Deposit Detail",
+                    "path": "deposit-detail"
+                  },
+                  {
+                    "title": "Invoiced Revenue",
+                    "path": "invoiced-revenue"
+                  },
+                  {
+                    "title": "Session Revenue",
+                    "path": "program-revenue"
+                  },
+                  {
+                    "title": "Revenue by Season",
+                    "path": "revenue-by-product-group"
+                  },
+                  {
+                    "title": "Rolling Revenue",
+                    "path": "rolling-revenue"
+                  },
+                  {
+                    "title": "Transaction Detail",
+                    "path": "transaction-detail"
+                  },
+                  {
+                    "title": "Payments",
+                    "path": "payments"
+                  },
+                  {
+                    "title": "Discount Reports",
+                    "path": "discount-reports"
+                  },
+                  {
+                    "title": "Product Rollup",
+                    "path": "product-rollup"
+                  },
+                  {
+                    "title": "Session Enrollees",
+                    "path": "product-user"
+                  },
+                  {
+                    "title": "Expense Report",
+                    "path": "expense-report"
+                  },
+                  {
+                    "title": "Tipping",
+                    "path": "tipping"
+                  },
+                  {
+                    "title": "Processing Volume",
+                    "path": "processing-volume"
                   }
                 ],
                 "icon": "circle-dollar-sign"
@@ -290,6 +358,26 @@
                 "title": "Bunk Assignments",
                 "path": "bunk-assignments",
                 "icon": "bed"
+              }
+            ],
+            "public": true
+          },
+          {
+            "group": "Fundraising",
+            "icon": "hand-heart",
+            "pages": [
+              {
+                "title": "Donations",
+                "path": "donations",
+                "icon": "hand-heart"
+              },
+              {
+                "title": "Donation Pages",
+                "path": "donation-pages"
+              },
+              {
+                "title": "Donor Management",
+                "path": "donor-management"
               }
             ],
             "public": true

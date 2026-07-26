@@ -1,0 +1,95 @@
+---
+title: Donation pages
+description: >-
+  Create and manage the public pages people use to give to your camp, including
+  page titles, supporting text, web addresses, and prefilled-amount links.
+---
+## What donation pages are
+
+A donation page is the public web page where supporters give to your camp. Each page has its own web address, so you can run a single general page or several pages for different appeals — for example an annual fund, a scholarship drive, or a capital campaign.
+
+You manage these pages under **Donor > Donation pages**. The [Donor module](/donations) must be enabled first.
+
+<Callout kind="info" collapsed="false">
+  Every donation page lives on your camp's own portal at an address like `/donate/?slug=annual-fund`. The **slug** is the short label at the end of the address and is generated automatically from the page name.
+</Callout>
+
+## The donation pages list
+
+The list shows every page you have created, with these columns:
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  The internal name you gave the page. This is how you recognize it in the list and is used to generate the web address.
+</ParamField>
+
+<ParamField body="Slug" param-type="text" required="true" deprecated="false">
+  The short label used in the page's web address, generated from the name (for example, "Annual Fund" becomes `annual-fund`).
+</ParamField>
+
+<ParamField body="Title" param-type="text" required="false" deprecated="false">
+  The heading shown to givers at the top of the public page.
+</ParamField>
+
+<ParamField body="Active" param-type="text" required="true" deprecated="false">
+  Whether the page is live. Only active pages accept gifts.
+</ParamField>
+
+<ParamField body="Link" param-type="url" required="true" deprecated="false">
+  The full public web address for the page. Select it to open the page in a new tab, or share it with supporters.
+</ParamField>
+
+<ParamField body="Prefilled amount link" param-type="text" required="false" deprecated="false">
+  A helper for building a link that opens the page with a gift amount already filled in. Enter an amount, then **Copy link**. See below.
+</ParamField>
+
+## Create or edit a page
+
+<Steps>
+  <Step title="Add a page" icon="plus" title-type="p">
+    From **Donation pages**, select **Add donation page**. To change an existing page instead, select **Edit** on its row.
+  </Step>
+
+  <Step title="Fill in the details" icon="edit" title-type="p">
+    Complete the fields (described below), then **Save**. Your new page appears in the list with its own link right away.
+  </Step>
+
+  <Step title="Share the link" icon="share" title-type="p">
+    Copy the page's **Link** and add it to your website, emails, or social posts so supporters can give.
+  </Step>
+</Steps>
+
+### Page fields
+
+<ParamField body="Name (internal)" param-type="text" required="true" deprecated="false">
+  A name only your staff sees. The web address slug is generated from it — for example, "First donation page" becomes `first-donation-page`.
+</ParamField>
+
+<ParamField body="Title (shown on page)" param-type="text" required="false" deprecated="false">
+  The heading supporters see at the top of the public donation page.
+</ParamField>
+
+<ParamField body="Subtitle / supporting text" param-type="text" required="false" deprecated="false">
+  The line shown under the title on that specific page. Use it to explain what gifts support. If left blank, a default encouraging message is shown.
+</ParamField>
+
+<ParamField body="Active" param-type="selector" required="true" deprecated="false">
+  Set to **Yes** to make the page live, or **No** to take it offline without deleting it.
+</ParamField>
+
+## Prefilled-amount links
+
+Sometimes you want a link that opens the donation page with a specific gift amount already entered — handy for an "give $100" button in an email or a matching-gift appeal.
+
+<Steps>
+  <Step title="Enter an amount" icon="dollar-sign" title-type="p">
+    In the page's row, type an amount of **$1 or more** in the **Prefilled amount link** field.
+  </Step>
+
+  <Step title="Copy the link" icon="copy" title-type="p">
+    Select **Copy link**. Campium builds a link that adds the amount to the page's web address and copies it to your clipboard.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  The prefilled amount is only a starting point. Givers can still change it on the page before they pay.
+</Callout>

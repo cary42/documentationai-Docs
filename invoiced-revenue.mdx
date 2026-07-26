@@ -1,0 +1,67 @@
+---
+title: Invoiced Revenue report
+description: >-
+  See a line-by-line list of every product invoiced for a season, with the
+  family, product, description, and price for each sale line.
+---
+## What the Invoiced Revenue report shows
+
+Use the Invoiced Revenue report to see every product line invoiced for a season, one row per sale line. It lists the date the line was recorded, the enrollee it belongs to, the product and its description, the price, and the family ID, with a running total at the bottom.
+
+This report only includes active sale lines for the season you pick, so it reflects what has actually been billed rather than what has been paid.
+
+<Callout kind="info" collapsed="false">
+  Each row is a single invoiced line. If a family bought several products, you see a separate row for each one.
+</Callout>
+
+## Filters
+
+<ParamField body="Season" param-type="selector" required="true" deprecated="false">
+  Season whose invoiced lines you want to review. Use the season picker at the top of the page. If you do not choose one, the report uses your default season.
+</ParamField>
+
+## Run the report
+
+<Steps>
+  <Step title="Choose a season" icon="folder" title-type="p">
+    Pick the season from the picker at the top of the page. The report loads every active invoiced line for that season.
+  </Step>
+
+  <Step title="Review the lines and total" icon="list" title-type="p">
+    Scan the table for the products, prices, and families you expect, then check the total at the bottom of the Price column.
+  </Step>
+</Steps>
+
+## Columns
+
+<ParamField body="Date" param-type="text" required="true" deprecated="false">
+  Date and time the sale line was recorded.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  Season the line belongs to.
+</ParamField>
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  Enrollee the product was invoiced to.
+</ParamField>
+
+<ParamField body="Product Name" param-type="text" required="true" deprecated="false">
+  Name of the product that was sold.
+</ParamField>
+
+<ParamField body="Description" param-type="text" required="false" deprecated="false">
+  Longer description of the product, when one is set.
+</ParamField>
+
+<ParamField body="Price" param-type="currency" required="true" deprecated="false">
+  Price of the line. The total at the bottom of this column is the sum of every line shown.
+</ParamField>
+
+<ParamField body="Family ID" param-type="number" required="true" deprecated="false">
+  Identifier for the family the enrollee belongs to, useful for grouping lines by household.
+</ParamField>
+
+## Export
+
+Export buttons above the table let you save the list as PDF, Excel, or CSV, or print and copy it. The export reflects exactly the season you have selected.

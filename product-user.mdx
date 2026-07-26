@@ -1,0 +1,85 @@
+---
+title: Session Enrollee report
+description: >-
+  See everyone registered for a specific session or price option, with contact
+  details, balance, revenue, and status, and choose which columns to display.
+---
+## What the Session Enrollee report shows
+
+Use the Session Enrollee report to see everyone registered for a single session or price option. It is the drill-down you reach by selecting a session name on the Product Rollup report. Each row is one enrollee, with their primary contact, email and phone, birthday and age, financial figures, and status.
+
+You control which columns appear, and you can build a picture report from the same list.
+
+<Callout kind="info" collapsed="false">
+  This report is scoped to the session or price option you drilled into, so it shows only the people registered for that item.
+</Callout>
+
+## Choosing what appears
+
+<ParamField body="Display Columns" param-type="selector" required="false" deprecated="false">
+  Opens the column settings so you can add or remove profile fields from the table. Your selection is saved for next time.
+</ParamField>
+
+<ParamField body="Create Picture Report" param-type="selector" required="false" deprecated="false">
+  Builds a picture report from the enrollees in the list, using the fields you choose.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Optional start and end dates that limit the list to registrations recorded in that window. Leave it blank to include all registrations for the session.
+</ParamField>
+
+## Columns
+
+The table always includes a core set of columns, plus any profile fields you add through Display Columns.
+
+<ParamField body="Enrollee" param-type="text" required="true" deprecated="false">
+  Name of the registered person. Select it to open their profile.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  Parent or guardian on the account, with a link to their profile.
+</ParamField>
+
+<ParamField body="Email" param-type="text" required="true" deprecated="false">
+  Primary contact's email address.
+</ParamField>
+
+<ParamField body="Phone" param-type="text" required="true" deprecated="false">
+  Primary contact's home and cell numbers.
+</ParamField>
+
+<ParamField body="Birthday (Age)" param-type="text" required="true" deprecated="false">
+  Enrollee's date of birth and current age.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="false" deprecated="false">
+  Amount the family still owes for the season. Shown when financial columns are enabled.
+</ParamField>
+
+<ParamField body="Cost" param-type="currency" required="false" deprecated="false">
+  Price of the enrollee's registration. Shown when financial columns are enabled.
+</ParamField>
+
+<ParamField body="Revenue" param-type="currency" required="false" deprecated="false">
+  Revenue attributed to the enrollee's family for the season. Shown when financial columns are enabled.
+</ParamField>
+
+<ParamField body="Session Status" param-type="text" required="true" deprecated="false">
+  Whether the enrollee is active or waitlisted for this session. A waitlisted status can be actioned from here.
+</ParamField>
+
+<ParamField body="Enrollee Status" param-type="text" required="true" deprecated="false">
+  Overall status of the person on the account, such as active, pending, lead, or archived.
+</ParamField>
+
+<ParamField body="Registration Date" param-type="text" required="true" deprecated="false">
+  Date the enrollee registered for the session.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  When financial columns are shown, the totals row sums balance, cost, and revenue across the enrollees in the list.
+</Callout>
+
+## Export
+
+Export buttons above the table let you save the list as PDF, Excel, or CSV, or print and copy it. The export includes whichever columns you have chosen to display.

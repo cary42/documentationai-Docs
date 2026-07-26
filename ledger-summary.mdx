@@ -1,0 +1,79 @@
+---
+title: Ledger Summary report
+description: >-
+  Review payment activity by family and day, with amounts broken out by payment
+  method alongside revenue, discounts, manual adjustments, and balance.
+---
+## Overview
+
+Use the **Ledger Summary** report to review payment activity, one row per payment, showing how each family paid and how that ties to their revenue and balance. The report is a per-family, per-day view of the money that moved in and out for the period you select.
+
+<Callout kind="info" collapsed="false">
+  The date range filters by the **date each payment was recorded in Campium**. If you leave the dates unset, the report defaults to the **current month**.
+</Callout>
+
+## Filters
+
+<ParamField body="Season / program group" param-type="selector" required="false" deprecated="false">
+  Limit the report to a single season or program group. Leave it unset to include payments across all seasons.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that control which payments appear, based on when each was recorded. Defaults to the current month.
+</ParamField>
+
+## Columns
+
+Each row is a payment tied to a family. Only successful payments are included.
+
+<ParamField body="Payment" param-type="date" required="true" deprecated="false">
+  The date the payment was recorded.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  The family's primary contact. Select it to open the family's profile.
+</ParamField>
+
+<ParamField body="Group" param-type="text" required="false" deprecated="false">
+  The program group, shown when your account groups seasons.
+</ParamField>
+
+<ParamField body="Season Revenue" param-type="currency" required="true" deprecated="false">
+  The revenue for the family's sale.
+</ParamField>
+
+<ParamField body="Payments" param-type="currency" required="true" deprecated="false">
+  The total payment amount for the row.
+</ParamField>
+
+The remaining columns split that payment by method and adjustment type:
+
+- **Credit Card**, **ACH**, **Cash**, **Check** – the amount attributed to each payment method.
+
+- **Discount** – credits/discounts applied.
+
+- **Manual Adj.** – manual adjustments applied to the balance.
+
+- **Balance** – the family's remaining balance.
+
+The table footer totals **Payments**, **Credit Card**, **ACH**, **Cash**, **Check**, **Discount**, and **Manual Adj.** across all rows, so you can reconcile totals by method for the period.
+
+## Ledger Summary By Day
+
+A companion **Ledger Summary By Day** report rolls the same figures up into one row per day, with columns for **Date**, **Revenues**, **Payments**, **Credit Card**, **Cash**, **Check**, **Discount**, and **Manual Adj.**, plus a totals row. Select any date to open the Ledger Summary filtered to that single day for the transaction-level detail behind the daily figure.
+
+## Run the report
+
+<Steps>
+  <Step title="Open the Ledger Summary report" icon="folder" title-type="p">
+    Open the **Financials** area and choose the **Ledger Summary** report.
+  </Step>
+
+  <Step title="Set the date range and season" icon="calendar" title-type="p">
+    Choose a start and end date and optionally a season or program group. Leave the dates blank to use the current month.
+  </Step>
+
+  <Step title="Review the totals" icon="play-circle" title-type="p">
+    Review each payment row, then use the footer totals to reconcile how much came in by credit card, ACH, cash, and check for the period.
+  </Step>
+</Steps>

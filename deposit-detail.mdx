@@ -1,0 +1,97 @@
+---
+title: Deposit Detail report
+description: >-
+  Drill into the individual payments behind a deposit, review fees and totals,
+  mark payments reconciled, and export a batch to PDF.
+---
+## Overview
+
+The **Deposit Detail** report is the payment-by-payment drill-down behind your deposits. Where the [Deposit Summary](/deposit-summary) shows batches and their totals, Deposit Detail lists every payment inside a deposit or date range, with the payer, the amount, the processor fee, and the net total.
+
+You reach Deposit Detail two ways:
+
+- **Overview** – with no batch selected, it lists individual credit card and ACH payments for a season and date range.
+
+- **Batch view** – opened from a specific processor batch (for example **AMEX**, **Visa/MC**, **Visa/MC/Discover**, **ACH**, or **ACH Return**), showing only the payments in that batch, with a **Generate PDF** button.
+
+<Callout kind="info" collapsed="false">
+  Deposit Detail uses the **date each payment was entered in Campium**, not the date funds settled at the bank or processor.
+</Callout>
+
+## Filters
+
+<ParamField body="Season / program group" param-type="selector" required="false" deprecated="false">
+  Limit the overview to a single season or program group. (Available in the overview view.)
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that control which payments appear, based on the date entered in Campium. Leave unset to use the saved or default range.
+</ParamField>
+
+## Columns
+
+Each row is one payment.
+
+<ParamField body="Date Entered" param-type="date" required="true" deprecated="false">
+  When the payment was recorded in Campium.
+</ParamField>
+
+<ParamField body="First / Last" param-type="text" required="true" deprecated="false">
+  The camper the payment is tied to. Both link to the profile.
+</ParamField>
+
+<ParamField body="Guardian 1 Email / Guardian 2 Email" param-type="text" required="false" deprecated="false">
+  Contact emails on the account.
+</ParamField>
+
+<ParamField body="Campers" param-type="text" required="true" deprecated="false">
+  The campers covered by the payment.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  The season or program group the payment applies to. In the overview view, additional **Session**, **Subproduct**, and **Batch ID** columns appear (the Batch ID links to that batch).
+</ParamField>
+
+<ParamField body="Check # / CC / Description" param-type="text" required="false" deprecated="false">
+  The reference for the payment, such as a check number, card description, or reason.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The amount applied.
+</ParamField>
+
+<ParamField body="Fee" param-type="currency" required="true" deprecated="false">
+  The processor fee for the payment.
+</ParamField>
+
+<ParamField body="Total" param-type="currency" required="true" deprecated="false">
+  The payment total.
+</ParamField>
+
+<ParamField body="Reconciled" param-type="action" required="false" deprecated="false">
+  A per-payment reconcile toggle. See below.
+</ParamField>
+
+The table footer totals the **Fee** and **Total** columns for the whole view.
+
+## Reconcile a payment
+
+Each row has a **Reconcile** button so you can track which payments you have checked against your bank or processor statement.
+
+<Steps>
+  <Step title="Mark reconciled" icon="check" title-type="p">
+    Select **Reconcile** on a row. You can add an optional note. The button turns green and shows a check mark, and hovering it shows who reconciled it and when, plus any note.
+  </Step>
+
+  <Step title="Undo" icon="rotate-ccw" title-type="p">
+    Select a green **Reconciled** button and confirm to remove the reconciliation and clear the note.
+  </Step>
+</Steps>
+
+## Export a batch
+
+When you open Deposit Detail for a specific batch, use the **Generate PDF** button in the header to produce a PDF of that batch's payments for filing or handing to your bookkeeper.
+
+<Callout kind="tip" collapsed="false">
+  Start from the [Deposit Summary](/deposit-summary) to pick a batch, then open Deposit Detail to see and reconcile the individual payments that make up its total.
+</Callout>

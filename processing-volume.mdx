@@ -1,0 +1,101 @@
+---
+title: Processing volume report
+description: >-
+  See how much your camp processed by credit card and ACH over time, broken down
+  by period and by card type.
+---
+## What the Processing volume report shows
+
+Use the Processing volume report to see how much money your camp processed through credit card and ACH payments over a date range. Summary tiles show the totals at a glance, a **By period** table (and chart) tracks volume over time, and a **card type** table breaks card volume down by brand.
+
+<Callout kind="info" collapsed="false">
+  This report is for camp administrators. It focuses on **processed payment volume** by method, not on revenue, discounts, or balances.
+</Callout>
+
+## Filters
+
+Set the scope at the top of the report, then select **Apply**.
+
+<ParamField body="Start / End" param-type="date range" required="false" deprecated="false">
+  The date range to measure. Defaults to the last year.
+</ParamField>
+
+<ParamField body="Group by" param-type="selector" required="false" deprecated="false">
+  How the **By period** table and chart are bucketed: **Day**, **Month**, or **Year**.
+</ParamField>
+
+<ParamField body="Seasons" param-type="selector" required="false" deprecated="false">
+  Optionally limit totals to one or more active seasons. Leave unset to include everything.
+</ParamField>
+
+## Summary tiles
+
+<ParamField body="Total processed" param-type="currency" required="true" deprecated="false">
+  Combined credit card and ACH volume for the selected range.
+</ParamField>
+
+<ParamField body="Credit card" param-type="currency" required="true" deprecated="false">
+  Card volume, with the transaction count beneath it.
+</ParamField>
+
+<ParamField body="ACH" param-type="currency" required="true" deprecated="false">
+  ACH volume, with the transaction count beneath it.
+</ParamField>
+
+## By period
+
+Each row is one time bucket (day, month, or year, per your **Group by** choice). A line chart above the table plots card and ACH amounts over the same periods.
+
+<ParamField body="Period" param-type="text" required="true" deprecated="false">
+  The time bucket. When grouped by month or year, select a period to drill into its days.
+</ParamField>
+
+<ParamField body="Total" param-type="currency" required="true" deprecated="false">
+  Combined card and ACH volume for the period.
+</ParamField>
+
+<ParamField body="CC amount / CC # / CC txn %" param-type="mixed" required="true" deprecated="false">
+  Card volume, card transaction count, and card transactions as a share of the period.
+</ParamField>
+
+<ParamField body="ACH amount / ACH # / ACH txn %" param-type="mixed" required="true" deprecated="false">
+  ACH volume, ACH transaction count, and ACH transactions as a share of the period.
+</ParamField>
+
+A footer row totals the columns across all periods.
+
+## Credit card by card type
+
+This table breaks card volume down by brand so you can see the mix.
+
+<ParamField body="Card type" param-type="text" required="true" deprecated="false">
+  The card brand.
+</ParamField>
+
+<ParamField body="Transactions" param-type="number" required="true" deprecated="false">
+  Number of card transactions of this type.
+</ParamField>
+
+<ParamField body="% of CC txns" param-type="text" required="true" deprecated="false">
+  This card type's share of all card transactions.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  Total volume for this card type. The footer totals the table.
+</ParamField>
+
+## Run the report
+
+<Steps>
+  <Step title="Set the date range" icon="calendar" title-type="p">
+    Choose the start and end dates you want to measure.
+  </Step>
+
+  <Step title="Choose how to group and scope" icon="filter" title-type="p">
+    Pick Day, Month, or Year, and optionally limit to specific seasons, then apply.
+  </Step>
+
+  <Step title="Review the trend and mix" icon="play-circle" title-type="p">
+    Read the summary tiles, follow the trend in the By period chart and table, and check the card type breakdown.
+  </Step>
+</Steps>

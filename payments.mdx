@@ -1,0 +1,117 @@
+---
+title: Payments report
+description: >-
+  See every payment collected, filter by outcome, payment type, transaction
+  type, discount, or card last four, and export the full filtered list.
+---
+## What the Payments report shows
+
+Use the Payments report to review the individual payments recorded in your account. Each row is one payment, with the date, who paid, the amount, how it was paid, its settlement status, the account balance, and transaction details.
+
+By default the report shows **successful payments only**. Switch to **All outcomes** to also include declined cards, returned ACH debits, and other failures.
+
+<Callout kind="info" collapsed="false">
+  The legacy "all payments" link opens this same report with **All outcomes** already selected.
+</Callout>
+
+## Filters
+
+Set your filters at the top of the report, then select **Apply**.
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Season or program group to limit payments to.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that limit which payments are shown.
+</ParamField>
+
+<ParamField body="Outcome" param-type="selector" required="true" deprecated="false">
+  **Successful only** (the default) or **All outcomes**, which adds declined cards, returned ACH debits, and other failures.
+</ParamField>
+
+<ParamField body="Last 4" param-type="text" required="false" deprecated="false">
+  Narrow to a specific card by its last four digits.
+</ParamField>
+
+<ParamField body="Payment type" param-type="checkboxes" required="false" deprecated="false">
+  Any of credit card, ACH, discount, adjustment, check, and cash. A canteen option appears when your account uses it.
+</ParamField>
+
+<ParamField body="Transaction type" param-type="checkboxes" required="false" deprecated="false">
+  Payment / credit, refund / debit, or void.
+</ParamField>
+
+<ParamField body="Discount" param-type="selector" required="false" deprecated="false">
+  Limit to payments tied to one or more specific discount codes.
+</ParamField>
+
+## Columns
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  When the payment was recorded.
+</ParamField>
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  Who the payment is associated with.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The payment amount. The footer shows the page total.
+</ParamField>
+
+<ParamField body="Settlement status" param-type="text" required="true" deprecated="false">
+  Where the payment is in processing and settlement.
+</ParamField>
+
+<ParamField body="Enrolled family members" param-type="text" required="false" deprecated="false">
+  The enrolled members on the family account.
+</ParamField>
+
+<ParamField body="Email" param-type="text" required="false" deprecated="false">
+  The contact email on the account.
+</ParamField>
+
+<ParamField body="Payment type" param-type="text" required="true" deprecated="false">
+  How the payment was made (card, ACH, cash, and so on).
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="false" deprecated="false">
+  The season or program group the payment applies to.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="true" deprecated="false">
+  The remaining account balance. The footer shows the grand balance.
+</ParamField>
+
+<ParamField body="Transaction / Transaction info" param-type="text" required="false" deprecated="false">
+  Transaction identifiers and processor details for reconciling.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Extra columns appear when your account uses them, including **Payment result** (shown with All outcomes), **Tier**, **Deposit #**, and a sessions column.
+</Callout>
+
+## Export
+
+Above the table, use the **PDF**, **XLS**, or **HTML** export buttons to download the **full filtered list**. The table buttons inside the report copy or export only the current page.
+
+<Callout kind="tip" collapsed="false">
+  Confirm your outcome, payment type, and date filters before exporting. The export reflects exactly the filtered list you have set.
+</Callout>
+
+## Run the report
+
+<Steps>
+  <Step title="Set the season and date range" icon="calendar" title-type="p">
+    Choose the season and dates you want to review.
+  </Step>
+
+  <Step title="Choose an outcome and refine" icon="filter" title-type="p">
+    Keep **Successful only** for collected money, or switch to **All outcomes** to investigate declines and returns, then narrow by payment type, transaction type, discount, or card last four.
+  </Step>
+
+  <Step title="Review and export" icon="play-circle" title-type="p">
+    Review the rows and page totals, then export the full filtered list if you need it elsewhere.
+  </Step>
+</Steps>

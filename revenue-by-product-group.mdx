@@ -1,0 +1,67 @@
+---
+title: Revenue by Season report
+description: >-
+  Compare revenue, discounts, payments, and receivables across all of your
+  seasons in one table, with an optional date range and payment-type filter.
+---
+## What the Revenue by Season report shows
+
+Use the Revenue by Season report to compare all of your seasons side by side in a single table. Each row is one season, with the number of campers and the revenue it produced. When discount detail is available, the report also shows discounts, payments, receivables, and revenue after discounts, with totals across every season at the bottom.
+
+Season names link to that season's group detail, so you can drill in from any row.
+
+<Callout kind="info" collapsed="false">
+  Seasons with no campers, no revenue, and no receivables are left out, so the table stays focused on seasons that had activity.
+</Callout>
+
+## Filters
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Optional start and end dates that limit which sales are counted, based on when each sale was recorded. Leave the range blank to include all sales for every season.
+</ParamField>
+
+<ParamField body="Payment Type" param-type="selector" required="false" deprecated="false">
+  Optional payment type used to narrow the payment figures. Leave it unset to include all payment types.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  Your date range and payment-type choices are remembered between visits, so the report opens on the same view you last used.
+</Callout>
+
+## Columns
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  Name of the season. Select it to open that season's group detail.
+</ParamField>
+
+<ParamField body="Number of Campers" param-type="number" required="true" deprecated="false">
+  Distinct campers with an active sale line in the season.
+</ParamField>
+
+<ParamField body="Revenues" param-type="currency" required="true" deprecated="false">
+  Total value of active sale lines for the season before discounts.
+</ParamField>
+
+<ParamField body="Discounts" param-type="currency" required="false" deprecated="false">
+  Total discounts applied to the season. Shown when discount detail is available.
+</ParamField>
+
+<ParamField body="Payments" param-type="currency" required="false" deprecated="false">
+  Money received for the season across payment types.
+</ParamField>
+
+<ParamField body="Receivables" param-type="currency" required="false" deprecated="false">
+  Amount still outstanding for the season, calculated as revenue minus discounts minus payments.
+</ParamField>
+
+<ParamField body="Revenue - Discount" param-type="currency" required="false" deprecated="false">
+  Revenue after discounts, representing what you should collect for the season.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  The bottom row totals each column across every season shown, giving you a single view of campers, revenue, discounts, payments, and receivables for the period.
+</Callout>
+
+## Export
+
+Export buttons above the table let you save the comparison as PDF, Excel, or CSV, or print and copy it. Confirm your date range before exporting, since the export reflects exactly what is on screen.
