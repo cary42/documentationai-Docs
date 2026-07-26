@@ -38,7 +38,7 @@ Each row represents one returned ACH payment and includes:
 
 - The date the return was posted.
 
-- The transaction ID for reconciliation and support.
+- Whether a later successful payment has since been received from the family, so you can tell at a glance which returns are already resolved.
 
 By default, the report shows **Active** returns (unarchived items). Use the **Active / Archive** toggle at the top of the page to switch to the **Archive** view and review archived returns separately from your active queue.
 
@@ -108,8 +108,8 @@ Each column in the ACH Returns and Rejects table provides specific information t
 - **Return Date**\
   The date the return was recorded. The report uses this column for its default sorting (newest returns first).
 
-- **Transaction ID**\
-  The unique identifier of the payment transaction. Use this for reconciliation, bank reference, or support requests.
+- **Payment since?**\
+  Shows whether the family has made a later successful payment since this ACH was returned. Use it to spot returns that may already be resolved (a valid replacement payment has come in) versus those that still need follow-up before you archive them.
 
 The table is configured for a large page size and can display up to roughly 1000 rows at once, so you can work through a backlog of returns without constantly paging through results.
 
