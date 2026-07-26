@@ -155,6 +155,20 @@ Used for monthly billing. Set a value from `1` to `31` to choose the charge day 
 Used for weekly billing. Charge on a fixed weekday or every `7` days from a chosen start date.
 </ParamField>
 
+<ParamField body="Charge window start date" param-type="date" required="false" show-location="false">
+The overall date the recurring charges are allowed to begin. Campium does not run a recurring charge before this date, even if the cadence would otherwise fall due.
+</ParamField>
+
+<ParamField body="Charge window end date" param-type="date" required="false" show-location="false">
+The overall date the recurring charges stop. Once this date passes, Campium no longer runs scheduled charges for the membership.
+</ParamField>
+
+<Callout kind="info">
+
+The charge window **start** and **end** dates gate the whole recurring schedule — they decide the first and last dates any charge can run. This is different from the **weekly** start date, which only sets the anchor day for counting a weekly cadence.
+
+</Callout>
+
 ## Understand how checkout changes for families
 
 Membership checkout makes recurring cost explicit before the family pays. Instead of showing only a registration balance, Campium separates what is due now from what will continue charging over time.
@@ -167,20 +181,19 @@ For some payment processors, Campium may route the family through a dedicated me
 
 </Callout>
 
-## Understand visibility and access for staff
+## Set up membership seasons across your team
 
-Membership seasons and recurring membership setup are not always visible to every admin user in the same way. This helps teams limit advanced recurring billing changes to users with broader access.
+Membership seasons and recurring membership setup are available to your admin users like any other season tool. There is no longer a super-user restriction on this setup.
 
-Keep these setup and visibility rules in mind:
+Keep these setup rules in mind:
 
 - You can set **Membership season** when creating or editing a season
-- Recurring billing fields on a session are part of advanced membership setup
-- Recurring session billing fields are currently restricted to super-user access in the admin product editor
-- Membership seasons may be hidden from season dropdowns for users who are not super users
+- Membership seasons appear in season dropdowns for all users, not only super users
+- Any user editing a product in a membership season sees the recurring-billing fields and can configure them
 
 <Callout kind="info">
 
-In many organizations, regular staff continue working in standard seasons while super users configure and test membership seasons before broader use.
+Even though every admin user can reach these settings, it is still a good idea to configure and test one membership season before rolling recurring billing out more broadly.
 
 </Callout>
 

@@ -1,0 +1,56 @@
+---
+title: Product Rollup report
+description: >-
+  See how many people have registered for each session versus its capacity,
+  including waitlisted counts and optional revenue, with expandable price
+  options.
+---
+## What the Product Rollup report shows
+
+Use the Product Rollup report to see how full each session is at a glance. Every row is a session, showing how many people have registered against its capacity, how many are waitlisted, and, when the session is not free, the total revenue it has produced. A fill percentage and progress bar make it easy to spot sessions that are close to full.
+
+Sessions that have more than one price option can be expanded to reveal a sub-row for each option, so you can see registration, capacity, and revenue at the price-option level too.
+
+<Callout kind="info" collapsed="false">
+  The color of each progress bar reflects how full the session is: green while there is room, amber as it fills, and red once it reaches capacity.
+</Callout>
+
+## Filters
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Season whose sessions you want to review. Use the season picker at the top of the page. Leave it unset to include sessions across seasons.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Optional start and end dates for narrowing the view. Leave the range blank to include all matching registrations.
+</ParamField>
+
+## Columns
+
+<ParamField body="Session" param-type="text" required="true" deprecated="false">
+  Name of the session. Select it to open the enrollee list for that session. Sessions with more than one price option show an expand control on the left.
+</ParamField>
+
+<ParamField body="Registered / Capacity" param-type="text" required="true" deprecated="false">
+  How many people have registered versus the session's capacity, with the fill percentage and a progress bar. Capacity and percentage appear only when a capacity is set.
+</ParamField>
+
+<ParamField body="Wait Listed" param-type="number" required="true" deprecated="false">
+  How many people are on the waitlist for the session. Select the number to open the waitlist for that session.
+</ParamField>
+
+<ParamField body="Total Revenue" param-type="currency" required="false" deprecated="false">
+  Total revenue from active registrations for the session. Shown only when the session is not free.
+</ParamField>
+
+<Callout kind="tip" collapsed="false">
+  Select the expand control next to a session to reveal a row for each of its price options, each with its own registered, capacity, waitlist, and revenue figures.
+</Callout>
+
+## Totals
+
+The bottom row totals registered count, waitlisted count, and revenue across every session shown, giving you a quick read on overall enrollment and income for the selection.
+
+## Export
+
+Export buttons above the table let you save the rollup as PDF, Excel, or CSV, or print and copy it.

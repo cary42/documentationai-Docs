@@ -1,19 +1,19 @@
 ---
-title: Family Scheduled Payments report
-description: Review families’ scheduled payments for a season, filter by payment details and issues, and send targeted payment notification emails.
+title: Scheduled Payments Potential Issues
+description: Review families’ scheduled payments for a season, filter by payment method and plan, spot potential issues, and send targeted payment notification emails.
 ---
 
 ## Overview
 
-Use the Family Scheduled Payments report to review upcoming scheduled payments for families in a given season, identify gaps or issues, and trigger payment notification emails directly from the report.
+Use the Scheduled Payments Potential Issues report to review upcoming scheduled payments for families in a given season, identify gaps or issues, and trigger payment notification emails directly from the report.
 
-The page title in the UI appears as `Family Scheduled Payments for {season}`, where the season selector controls which season's schedules you review.
+The page title and left-nav label both read **Scheduled Payments Potential Issues** (no season appears in the title). The season selector controls which season's schedules you review, but the title stays the same no matter which season you pick.
 
 <Callout kind="info">
   The report focuses on **scheduled** activity for a single season, not historical payments already completed.
 </Callout>
 
-## Open the Family Scheduled Payments report
+## Open the Scheduled Payments Potential Issues report
 
 Access the report from your Campium admin tools.
 
@@ -21,13 +21,13 @@ Access the report from your Campium admin tools.
   <Step title="Select the season" icon="calendar" title-type="h3">
     Use the season selector at the top of the page to choose the season you want to review.
 
-    The page title updates to `Family Scheduled Payments for {season}` to confirm which season is currently in view.
+    The title stays **Scheduled Payments Potential Issues**; the season selector only changes which season's schedules appear below.
   </Step>
 
   <Step title="Open the report page" icon="folder" title-type="h3">
-    Go to the **Reports** area, then choose **System** and select the **Family Scheduled Payments** report.
+    Go to the **Reports** area, then choose **System** and select the **Scheduled Payments Potential Issues** report.
 
-    Confirm that the report title shows the correct season before you begin reviewing results.
+    Confirm the season selector shows the season you want before you begin reviewing results.
   </Step>
 </Steps>
 
@@ -47,16 +47,6 @@ Filter the list based on payment method status. Options:
 - **Credit Card**: Show families with a credit card as their scheduled payment method.
 - **ACH**: Show families using ACH for scheduled payments.
 - **No Account on File**: Show families that do not have a payment account on file.
-
-### Issues
-
-Limit the report to families with potential problems in their schedule, or view only clean plans.
-
-Filter families based on whether the system has flagged any issues:
-
-- **All Families**: Show all families, whether or not they have issues.
-- **With Issues**: Show only families that have at least one issue flagged in the Issues column.
-- **No Issues**: Show only families whose schedules do not have any flagged issues.
 
 ### Records per page
 
@@ -85,7 +75,7 @@ Limit the report to a specific payment plan or show all families:
 
 After setting your filter options, apply them to refresh the table.
 
-Run the report with the current filter selections. The table below updates to show only families that match your chosen Payment Type, Issues, Records per page, and Payment Plan settings.
+Run the report with the current filter selections. The table below updates to show only families that match your chosen Payment Type, Records per page, and Payment Plan settings.
 
 ## Table columns
 
@@ -131,7 +121,7 @@ Provides a brief view of the upcoming scheduled payments for the family, includi
 
 ### Issues
 
-Lists any issues the system has detected for the family’s scheduled payments. Entries here align with the **Issues** filter and help you prioritize families that need attention.
+Lists any issues the system has detected for the family’s scheduled payments. Entries here help you prioritize families that need attention.
 
 <Callout kind="alert">
   Focus on families with a non‑zero **Gap** or entries in the **Issues** column when troubleshooting. These families are most likely to have under‑scheduled payments or configuration problems.

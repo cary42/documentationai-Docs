@@ -103,6 +103,74 @@
                   {
                     "title": "Revenue Summary",
                     "path": "revenue-summary"
+                  },
+                  {
+                    "title": "Aging Account Balance",
+                    "path": "account-balance-aging"
+                  },
+                  {
+                    "title": "Negative Balance",
+                    "path": "negative-balance"
+                  },
+                  {
+                    "title": "Family Ledger",
+                    "path": "family-ledger"
+                  },
+                  {
+                    "title": "Ledger Summary",
+                    "path": "ledger-summary"
+                  },
+                  {
+                    "title": "Deposit Detail",
+                    "path": "deposit-detail"
+                  },
+                  {
+                    "title": "Invoiced Revenue",
+                    "path": "invoiced-revenue"
+                  },
+                  {
+                    "title": "Session Revenue",
+                    "path": "program-revenue"
+                  },
+                  {
+                    "title": "Revenue by Season",
+                    "path": "revenue-by-product-group"
+                  },
+                  {
+                    "title": "Rolling Revenue",
+                    "path": "rolling-revenue"
+                  },
+                  {
+                    "title": "Transaction Detail",
+                    "path": "transaction-detail"
+                  },
+                  {
+                    "title": "Payments",
+                    "path": "payments"
+                  },
+                  {
+                    "title": "Discount Reports",
+                    "path": "discount-reports"
+                  },
+                  {
+                    "title": "Product Rollup",
+                    "path": "product-rollup"
+                  },
+                  {
+                    "title": "Session Enrollees",
+                    "path": "product-user"
+                  },
+                  {
+                    "title": "Expense Report",
+                    "path": "expense-report"
+                  },
+                  {
+                    "title": "Tipping",
+                    "path": "tipping"
+                  },
+                  {
+                    "title": "Processing Volume",
+                    "path": "processing-volume"
                   }
                 ],
                 "icon": "circle-dollar-sign"
@@ -199,6 +267,58 @@
                   {
                     "title": "Combined Season Invoices",
                     "path": "combined-season-invoices"
+                  },
+                  {
+                    "title": "Attendance Sheet",
+                    "path": "att"
+                  },
+                  {
+                    "title": "Pickup Privileges",
+                    "path": "pickup-report"
+                  },
+                  {
+                    "title": "Session Roster Matrix",
+                    "path": "session-roster-matrix"
+                  },
+                  {
+                    "title": "Matrix Report",
+                    "path": "matrix"
+                  },
+                  {
+                    "title": "Campers by Session (Daily)",
+                    "path": "friends-by-session-daily"
+                  },
+                  {
+                    "title": "New Registrations by Season",
+                    "path": "new-users-by-season"
+                  },
+                  {
+                    "title": "Family Registration",
+                    "path": "family-registration"
+                  },
+                  {
+                    "title": "Family Map",
+                    "path": "geo"
+                  },
+                  {
+                    "title": "Season Stats",
+                    "path": "index-stats"
+                  },
+                  {
+                    "title": "Note Summary",
+                    "path": "note-summary"
+                  },
+                  {
+                    "title": "Email Log",
+                    "path": "all-emails"
+                  },
+                  {
+                    "title": "Balance Transfer Utilization",
+                    "path": "balance-transfer-utilization"
+                  },
+                  {
+                    "title": "Payment Detail by Camper and Session",
+                    "path": "product-payment-detail"
                   }
                 ],
                 "icon": "clipboard-list-icon"
@@ -216,6 +336,28 @@
                   }
                 ],
                 "icon": "calendar-fold-icon"
+              },
+              {
+                "group": "Data Check",
+                "pages": [
+                  {
+                    "title": "Unverified Email Addresses",
+                    "path": "unverified"
+                  },
+                  {
+                    "title": "Bounced Email Addresses",
+                    "path": "bounced-emails"
+                  },
+                  {
+                    "title": "Incorrect Age",
+                    "path": "incorrect-age"
+                  },
+                  {
+                    "title": "Potential Duplicate Users",
+                    "path": "duplicates"
+                  }
+                ],
+                "icon": "search-check"
               }
             ],
             "public": true
@@ -246,6 +388,11 @@
                 "title": "Health Report",
                 "path": "health-report",
                 "icon": "briefcase-medical"
+              },
+              {
+                "title": "Medications & Health",
+                "path": "medications",
+                "icon": "pill"
               },
               {
                 "group": "Payments",
@@ -290,12 +437,37 @@
             "public": true
           },
           {
+            "group": "Fundraising",
+            "icon": "hand-heart",
+            "pages": [
+              {
+                "title": "Donations",
+                "path": "donations",
+                "icon": "hand-heart"
+              },
+              {
+                "title": "Donation Pages",
+                "path": "donation-pages"
+              },
+              {
+                "title": "Donor Management",
+                "path": "donor-management"
+              }
+            ],
+            "public": true
+          },
+          {
             "group": "Communications",
             "pages": [
               {
                 "title": "Mass Emails",
                 "path": "mass-emails",
                 "icon": "lucide-mail"
+              },
+              {
+                "title": "Email Sequences",
+                "path": "email-sequences",
+                "icon": "list-ordered"
               },
               {
                 "title": "SMS",
@@ -326,6 +498,16 @@
                 "title": "Letter Generator",
                 "path": "letter-generator",
                 "icon": "book-open-text"
+              },
+              {
+                "title": "System Emails",
+                "path": "system-emails",
+                "icon": "lucide-mail"
+              },
+              {
+                "title": "Email Overview",
+                "path": "email",
+                "icon": "lucide-mail"
               }
             ],
             "public": true
@@ -347,6 +529,11 @@
                 "title": "Digital Signatures",
                 "path": "digital-signatures",
                 "icon": "pen-line"
+              },
+              {
+                "title": "Form Recipients & Permissions",
+                "path": "permissions-recipients",
+                "icon": "user-check"
               }
             ],
             "public": true
@@ -419,6 +606,36 @@
                 "title": "Todo List",
                 "path": "todo-list",
                 "icon": "list-todo"
+              },
+              {
+                "title": "Staff Hub",
+                "path": "staff-hub",
+                "icon": "briefcase"
+              },
+              {
+                "title": "Merge Users",
+                "path": "merge-users",
+                "icon": "users"
+              },
+              {
+                "title": "Activity Scheduling",
+                "path": "activity-scheduling",
+                "icon": "calendar-range"
+              },
+              {
+                "title": "Note Types",
+                "path": "note-types",
+                "icon": "tags"
+              },
+              {
+                "title": "Legal Documents",
+                "path": "legal-documents",
+                "icon": "scale"
+              },
+              {
+                "title": "Portal Settings",
+                "path": "portal-settings",
+                "icon": "panels-top-left"
               }
             ],
             "public": true

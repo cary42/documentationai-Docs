@@ -1,0 +1,112 @@
+---
+title: Transaction Detail report
+description: >-
+  See one row for every session added to an account, with the cost, revenue,
+  payments by method, and remaining balance for that session in a chosen date
+  range.
+---
+## What the Transaction Detail report shows
+
+Use the Transaction Detail report to audit money at the line level. It lists **one row each time a session is added to an account**, along with what that session cost, the revenue recorded, how much was paid by each method, and the balance still owed.
+
+Where the Revenue Summary rolls totals up by product and payment type, this report keeps every session line separate, so you can reconcile individual charges and trace a specific family's activity.
+
+<Callout kind="info" collapsed="false">
+  Each row represents a session added to an account within your selected date range, not a single payment. A family that registers for several sessions appears on several rows.
+</Callout>
+
+## Filters and date range
+
+Set the scope at the top of the report with the season picker and the date range.
+
+<ParamField body="Season" param-type="selector" required="true" deprecated="false">
+  Season or program group whose sessions you want to review. The report title updates to match your selection.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that limit which session lines are included, based on when each session was added to the account.
+</ParamField>
+
+## Columns
+
+Each row breaks a session line into cost, revenue, payments by method, and balance.
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  When the session was added to the account.
+</ParamField>
+
+<ParamField body="Family ID" param-type="number" required="true" deprecated="false">
+  Identifier for the family account the session belongs to.
+</ParamField>
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  The camper (or other person type) the session is registered to. Links to that profile.
+</ParamField>
+
+<ParamField body="Grade" param-type="text" required="false" deprecated="false">
+  The person's grade, when on file.
+</ParamField>
+
+<ParamField body="Primary Name" param-type="text" required="true" deprecated="false">
+  The primary contact on the family account.
+</ParamField>
+
+<ParamField body="Session" param-type="text" required="true" deprecated="false">
+  The session or product that was added.
+</ParamField>
+
+<ParamField body="Cost" param-type="currency" required="true" deprecated="false">
+  The list price of the session before discounts.
+</ParamField>
+
+<ParamField body="Revenue" param-type="currency" required="true" deprecated="false">
+  The revenue recorded for the line after discounts.
+</ParamField>
+
+<ParamField body="Refunds" param-type="currency" required="true" deprecated="false">
+  Amounts refunded against the line.
+</ParamField>
+
+<ParamField body="Check / Credit Card / CC Surcharge / ACH / Cash / Other" param-type="currency" required="true" deprecated="false">
+  Payments applied to the line, split by method. **CC Surcharge** is the card surcharge collected; **Other** covers manual or miscellaneous payment entries.
+</ParamField>
+
+<ParamField body="Total" param-type="currency" required="true" deprecated="false">
+  Total paid toward the line across all methods.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="true" deprecated="false">
+  What still remains owed on the line.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  A few columns appear only when your account uses them, such as **Student ID**, **Plan Name** (for payment-plan lines), and **Subproduct** (for add-ons under a parent session).
+</Callout>
+
+## Choose which columns to show
+
+Select **Display Columns** above the table to open a checklist of every column. Toggle any column on or off, then **Save Display Columns** to store the view for your account so it loads the same way next time.
+
+<Callout kind="tip" collapsed="false">
+  Turn off payment-method columns you do not use to make the table easier to scan and export.
+</Callout>
+
+## Run the report
+
+<Steps>
+  <Step title="Select the season" icon="folder" title-type="p">
+    Choose the season or program group whose session lines you want to review.
+  </Step>
+
+  <Step title="Set a date range" icon="calendar" title-type="p">
+    Enter the start and end dates for the reconciliation window you care about.
+  </Step>
+
+  <Step title="Review and export" icon="play-circle" title-type="p">
+    Scan the rows, adjust the visible columns if needed, and use the table export buttons to copy or download the data.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Looking for a simpler list of individual payment transactions (date, name, amount, transaction ID, family ID, and budget code) rather than session lines? Your account may also offer a **Transaction report** view for that.
+</Callout>

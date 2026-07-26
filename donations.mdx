@@ -1,0 +1,101 @@
+---
+title: Donations and fundraising
+description: >-
+  Turn on the Donor module to accept online gifts, then track fundraising with
+  the donor dashboard, donation pages, donor list, newsletters, and receipts.
+---
+## What the Donor module does
+
+The Donor module adds a complete fundraising workspace to Campium. Once it is on, your camp can publish public donation pages, collect one-time and recurring gifts online, email receipts automatically, and follow your results from a dedicated dashboard.
+
+Everything lives under a **Donor** section in the left navigation, next to Financials. That section includes:
+
+- **Donor dashboard** – headline totals and charts for your giving.
+
+- **Donations** – a list of every gift received, with the option to resend receipts.
+
+- **Donor list** – your contacts (both donors and prospects) and their giving history.
+
+- **Newsletter** – a simple email tool to reach your donor list.
+
+- **Donation pages** – the public pages people use to give.
+
+- **Email log** – a record of newsletters sent, with open rates.
+
+<Callout kind="info" collapsed="false">
+  Online donations require a supported payment processor. The donor experience works with **Payabli**, **USIO**, or **Finix**. If your camp uses a different processor, the public donate page shows a notice instead of a payment form.
+</Callout>
+
+## Turn the module on
+
+The Donor module is off by default. An administrator enables it from your settings.
+
+<Steps>
+  <Step title="Open your module settings" icon="settings" title-type="p">
+    Go to your settings and find the module toggles. Look for **Donor Module** in the list.
+  </Step>
+
+  <Step title="Enable Donor Module" icon="toggle-right" title-type="p">
+    Switch **Donor Module** on and save. This adds the **Donor** section to your navigation with the dashboard, donations, donor list, newsletter, donation pages, and receipts.
+  </Step>
+
+  <Step title="Confirm your payment processor" icon="credit-card" title-type="p">
+    Make sure your camp is set up with Payabli, USIO, or Finix so the public donate page can accept payments. If donations show as unavailable, this is usually why.
+  </Step>
+</Steps>
+
+## How donations are collected
+
+People give through a public donation page hosted on your camp's portal, at a web address like `/donate/?slug=annual-fund`. You can run one page or many — see the [Donation pages](/donation-pages) guide.
+
+On a donation page, a giver:
+
+- Picks a suggested amount ($25, $50, $100, $250, $500) or types a custom amount.
+
+- Enters their name, email, optional phone, and billing address.
+
+- Enters card or bank (ACH) details in a secure payment form and completes the gift.
+
+<Callout kind="tip" collapsed="false">
+  With Finix, givers can also check **Make this a recurring gift** and choose **Monthly** or **Annually**. The first gift is charged right away, then automatically on that schedule until it is stopped.
+</Callout>
+
+Each completed gift is recorded in your **Donations** list, and the giver is added to your **Donor list** so you can follow up later. A receipt is emailed automatically, and you can resend it at any time.
+
+## The donor dashboard
+
+The donor dashboard is the quickest way to see how fundraising is going. At the top you can filter by a specific **donation page** (or all pages) and by a **date range** using the date picker.
+
+### Headline numbers
+
+<ParamField body="Donations YTD" param-type="currency" required="true" deprecated="false">
+  Total value of gifts received so far this calendar year.
+</ParamField>
+
+<ParamField body="All-time donations" param-type="currency" required="true" deprecated="false">
+  Total value of every gift ever recorded for the selected donation page filter.
+</ParamField>
+
+<ParamField body="One-time gifts" param-type="number" required="true" deprecated="false">
+  Count of gifts that are not part of a recurring schedule.
+</ParamField>
+
+<ParamField body="Recurring gifts" param-type="number" required="true" deprecated="false">
+  Count of gifts tied to a recurring schedule.
+</ParamField>
+
+### Charts
+
+- **Donations by month** – a bar chart of gift revenue for each month in the date range you selected.
+
+- **Projected recurring (next 12 months)** – an estimate of upcoming income from active recurring gifts, projected month by month for the year ahead.
+
+<Callout kind="info" collapsed="false">
+  The projected recurring chart appears when you are viewing **all donation pages**. It is an estimate based on each active recurring gift's amount and next charge date, so actual income can differ if gifts are changed or stopped.
+</Callout>
+
+## Where to go next
+
+- [Donation pages](/donation-pages) — create and manage the public pages people give through.
+
+- [Manage donors](/donor-management) — work with your donor list, gift records, newsletters, and email log.

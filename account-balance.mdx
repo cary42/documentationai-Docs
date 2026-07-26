@@ -8,7 +8,7 @@ description: >-
 
 Use the **Account Balance** report (Accounts Receivable) to see which families still owe money for a selected season or program group and how those balances compare to their scheduled payments.
 
-The report lists all families with a non-zero balance for the selected season, along with contact details, registration information, charges, scheduled payments, and current balance.
+The report lists all families with a non-zero balance for the selected season, along with contact details, registration information, revenue, scheduled payments, and current balance. Summary cards at the top of the report show your **Overall balance**, **Overall scheduled**, and the **Difference** between them.
 
 <Callout kind="info" collapsed="false">
   Use this report when you want a collections view by family: who owes money, how much they owe, how much is already scheduled to be paid, and where those numbers do not line up.
@@ -20,13 +20,15 @@ The Account Balance report is scoped by **season/program group**. It includes on
 
 Each row represents a **family account** and includes:
 
-- Key identifiers (family name and account number)
+- The primary contact and the users on the account
 
-- Registration context (plan, registration date, campers, products)
+- Registration context (registration date and products)
 
-- Contact information
+- Contact information (email)
 
-- Financial totals (charges, scheduled payments, and outstanding balance)
+- Financial totals (revenue, scheduled payments, and outstanding balance)
+
+- A per-family note you can edit inline
 
 Use it alongside your scheduled payments and deposit reports to monitor whether what is owed is actually planned to be collected.
 
@@ -40,47 +42,73 @@ The primary filter is **Season / program group**.
 
 If you use multiple program groups within a season, run the report once per group if you want to focus on a specific camp or program.
 
+## Summary cards
+
+Above the family list, the report shows three summary cards for the current selection:
+
+- **Overall balance**: The combined outstanding balance across every family in the report.
+
+- **Overall scheduled**: The combined total of future scheduled payments across those families.
+
+- **Difference**: **Overall balance** minus **Overall scheduled**, so you can see at a glance how much of what is owed is not yet planned to be collected.
+
 ## Columns in the Account Balance report
 
 This section describes the main columns you will see for each family row.
 
 ### Family and registration details
 
-- **Name**: The family account name.
+- **Primary Contact**: The primary contact on the family account.
 
-- **Account Number**: The internal account identifier for the family.
-
-- **Plan**: The payment plan or arrangement associated with the family’s registration for the selected season or program group.
-
-- **Registration Date**: The date the family completed registration for that season or program group.
-
-- **Campers**: The campers linked to this family’s registration for the selected season.
+- **Users**: The users linked to this family’s registration for the selected season.
 
 - **Products**: The camp sessions, add-ons, or other products tied to the family’s registration.
 
+- **Reg. Date**: The date the family completed registration for that season or program group.
+
 ### Contact information
 
-- **Primary contact info**: The primary contact details for the family, typically including email and phone, so you can reach out about outstanding balances or payment plan changes.
+- **Email**: The primary contact’s email address, so you can reach out about outstanding balances or payment plan changes.
 
 ### Financial totals
 
-- **Charges**: The total charges for this family for the selected season or program group. This is what the family owes before payments.
-
-- **Scheduled**: The total amount of **future scheduled payments** for this family that have not yet been completed for the relevant charges.
+- **Revenue**: The total revenue for this family for the selected season or program group. This is what the family owes before payments.
 
 - **Balance**: The current outstanding balance for the family for the selected season or program group, after payments and credits.
 
+- **Scheduled**: The total amount of **future scheduled payments** for this family that have not yet been completed for the relevant charges.
+
+### Notes and optional columns
+
+- **Note**: A free-text note for the family that you can edit inline directly in the report. Use it to record collection status, promises to pay, or other context that stays with the row.
+
+- **School** and **profile-field columns** (optional): You can add a **School** column and columns for your profile fields using the **Display Columns** selector. These appear only when you choose to show them.
+
 <Callout kind="info" collapsed="false">
-  Use **Charges** vs **Balance** to see how much of the family’s total fees remain unpaid, and compare **Scheduled** vs **Balance** to confirm whether future scheduled payments will fully cover what is still owed.
+  Use **Revenue** vs **Balance** to see how much of the family’s total fees remain unpaid, and compare **Scheduled** vs **Balance** to confirm whether future scheduled payments will fully cover what is still owed.
 </Callout>
 
-## Red-row mismatch warning
+## Choose which columns to show
+
+Use the **Display Columns** selector to tailor the report to what you need to see.
+
+- Turn on a **School** column to show each family’s school.
+
+- Turn on columns for your profile fields to pull that data into the report.
+
+- Columns you do not select stay hidden so the report stays focused.
+
+## Send an email from the report
+
+The Account Balance report includes a **Send Email** action so you can contact families about their balances without leaving the report. Use it to reach the families you have identified as needing follow-up on outstanding or unscheduled amounts.
+
+## Red-cell mismatch warning
 
 <Callout kind="alert" collapsed="false">
-  Rows highlighted in red indicate a **mismatch** between the **Balance** and **Scheduled** amounts. In these rows, the total scheduled future payments do **not** equal the outstanding balance for that family.
+  When a family’s scheduled payments do **not** equal their outstanding balance, the **Balance** and **Scheduled** cells for that family are highlighted in red. Only those two cells turn red — not the whole row. Hovering over a highlighted cell shows the tooltip **Scheduled amount does not equal the balance.**
 </Callout>
 
-When you see a red row:
+When you see red **Balance** and **Scheduled** cells:
 
 - Review the family’s scheduled payments and payment plan.
 
@@ -88,7 +116,7 @@ When you see a red row:
 
 - Follow up with the family if the plan does not fully cover the remaining balance.
 
-Red-highlighted families are your priority list for fixing gaps between what is owed and what is currently planned to be collected.
+Families with red **Balance** and **Scheduled** cells are your priority list for fixing gaps between what is owed and what is currently planned to be collected.
 
 ## Run the report
 
@@ -112,7 +140,7 @@ Red-highlighted families are your priority list for fixing gaps between what is 
 
 Use the Account Balance report regularly during your season to:
 
-- Identify families with outstanding balances that are **not fully covered** by scheduled payments (red rows).
+- Identify families with outstanding balances that are **not fully covered** by scheduled payments (red **Balance** and **Scheduled** cells).
 
 - Confirm that families on plans have enough future payments scheduled to cover their balances.
 

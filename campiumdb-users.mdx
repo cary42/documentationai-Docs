@@ -49,6 +49,7 @@ The main table lists staff members who already have a role. Each row shows what 
 | **Status** | The user's current status, such as Active or Inactive. Click it to change the status. |
 | **Last Login** | The last time the person signed in. A blank value means they have never signed in. |
 | **Access** | A button for managing access to other organization accounts. This appears only if your organization has more than one account. |
+| **Payment Digest** | A per-user subscribe toggle that controls whether this person receives the payment digest email. This column appears only when the payment digest is enabled for your account. |
 
 The top right of the page includes **Add New User With Role**.
 
@@ -68,7 +69,7 @@ Use this option when the person already exists in CampiumDB as a staff record an
   - In **Staff Names**, start typing the person's name.
   - Select the person from the list.
   - Add more than one person if needed. Everyone selected in this step receives the same role.
-  - Only staff members with an **Active** staff status appear in the search.
+  - Everyone with a staff-type user record appears in the search, regardless of whether their status is Active or Inactive.
 
   </Step>
 
@@ -89,13 +90,19 @@ Use this option when the person already exists in CampiumDB as a staff record an
 
 <Callout kind="tip">
 
-If the person does not appear in **Staff Names**, either they do not have a staff record yet or their staff status is not Active. Add them as a staff member or reactivate them from their profile, then return to **CampiumDB Users**.
+If the person does not appear in **Staff Names**, they do not have a staff-type user record yet. Add them as a staff member from their profile, then return to **CampiumDB Users**.
 
 </Callout>
 
 ## Change someone's role
 
 A role controls what the person can do after they sign in.
+
+<Callout kind="info">
+
+Changing a user's role requires the **Modify User Role** permission. This is a separate permission from the **Create Role** permission that controls who can open the CampiumDB Users page, so being able to see this page does not by itself mean you can change roles. If the role links do not save, ask an admin to grant you the Modify User Role permission.
+
+</Callout>
 
 <Steps>
   <Step title="Open the role editor" icon="edit" title-type="p">
@@ -191,7 +198,7 @@ This setting does not change the person's role in the account you are currently 
   </Step>
 </Steps>
 
-For full instructions, see [Account access across organization accounts](/staff-organization-account-access).
+For full instructions, open the per-user account-access page by clicking the button in the **Access** column of that person's row on **CampiumDB Users**.
 
 ## Common situations
 

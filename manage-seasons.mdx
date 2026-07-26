@@ -30,15 +30,17 @@ Create a new season from the Seasons list when you need a new registration perio
   </Step>
 
   <Step title="Enter the season settings" icon="edit" title-type="p">
+    The **Add New Season** modal keeps the create step short. It has only three fields:
+
     - Add the **Season Name**.
 
-    - Choose whether to show the season in the financial snapshot on the dashboard.
-
-    - Choose whether to show the season in dropdowns on the admin site.
+    - Set the **Season End Date** (required).
 
     - Set whether the season is a **Membership Season**.
 
-    - Leave **Status** set appropriately for how you plan to use the season.
+    <Callout kind="info" collapsed="false">
+      The financial-snapshot, dropdown, and status settings do not appear when you first create a season. They become available in the **Edit Season** modal after the season exists.
+    </Callout>
   </Step>
 
   <Step title="Save the season" icon="check-circle" title-type="p">
@@ -54,23 +56,25 @@ Use these settings to control how the season appears and how your team uses it.
 
 - **Season Name** — The name of the season as it appears in the admin area. Use a clear name your staff will recognize quickly.
 
-- **Show In Financial Snapshot On Dashboard** — Controls whether this season appears in the financial snapshot view on the dashboard.
+- **Season End Date** — Required when you create a season. Sets the date the season runs through.
 
-- **Show In Dropdowns On Admin Site** — Controls whether staff can select this season from season dropdown lists in the admin site.
+- **Show In Financial Snapshot On Dashboard** — Controls whether this season appears in the financial snapshot view on the dashboard. Available when editing an existing season.
 
-- **Membership Season** — Marks the season as a membership season when that applies to how your organization uses seasons.
+- **Show In Dropdowns On Admin Site** — Controls whether staff can select this season from season dropdown lists in the admin site. Available when editing an existing season.
 
-- **Status** — Sets whether the season is currently active or inactive. Keep this set carefully, because changing it can affect user status.
+- **Membership Season** — Marks the season as a membership season when that applies to how you use seasons.
+
+- **Status** — Sets whether the season is currently active or inactive. Available when editing an existing season. Keep this set carefully, because changing it can affect camper and staff status.
 
 ## Set a season inactive only after it has passed
 
 Set a season to inactive when you no longer want it treated as a current active season. This is usually something you do after the season has ended.
 
 <Callout kind="alert" collapsed="false">
-  Changing the **Status** from **Active** to **Inactive** will set users to **Inactive** as long as they are not also in another **Active** season. Only set a season to **Inactive** if that season has passed.
+  Changing the **Status** from **Active** to **Inactive** will set campers and season-assigned staff to **Inactive** as long as they are not also in another **Active** season. Only set a season to **Inactive** if that season has passed.
 </Callout>
 
-If you are unsure whether users still rely on the season, confirm that another active season already applies before you change the status.
+If you are unsure whether campers or season-assigned staff still rely on the season, confirm that another active season already applies before you change the status.
 
 ## Deactivate a season
 
@@ -86,7 +90,7 @@ Use this workflow when a season has ended and you are ready to mark it inactive.
   <Step title="Review whether the season should be deactivated" icon="alert-triangle" title-type="p">
     - Confirm that the season has passed.
 
-    - Check whether affected users are also in another **Active** season.
+    - Check whether affected campers and season-assigned staff are also in another **Active** season.
   </Step>
 
   <Step title="Change the status" icon="edit" title-type="p">
@@ -176,6 +180,18 @@ Use this at season close when registration should stop but forms are still live.
 Uncheck **Take live forms offline** only if you need a form to stay open after the season is marked **Inactive**. This is unusual and should be done intentionally.
 
 </Callout>
+
+## Also inactivate staff with an approved application
+
+When you move a season from **Active** to **Inactive**, another option appears in the same area below the status field: **Also inactivate staff with an approved application on [form]**, where the form name is filled in for the season's staff application.
+
+By default, going inactive only affects campers and season-assigned staff. Check this option when you also want to set staff who have an approved application on that form to **Inactive** — for example, when seasonal staff should no longer be active once the season closes. Leave it unchecked to keep those staff members active.
+
+## Email an invoice to families registered for the season
+
+The Edit Season modal also includes an **Email invoice to all families registered for season** checkbox. Check it when you want every family registered for the season to receive their current invoice by email as part of saving the season.
+
+When you check it, an optional message field appears so you can add a short note that is included with the emailed invoices. Leave the message blank to send the invoices without extra wording, or leave the checkbox unchecked to save the season without emailing anyone.
 
 ## Use profile-data snapshots for historical reporting
 

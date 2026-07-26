@@ -1,0 +1,113 @@
+---
+title: Discount reports
+description: >-
+  Review how discounts are used across your camp with three views: a usage
+  summary, a season breakdown, and a per-person detail list.
+---
+## What the discount reports show
+
+The discount reports tell you how much your discounts are being used and what they cost you in revenue. There are three related views:
+
+- **Discount Summary** – total quantity and value for each discount.
+
+- **Discount Summary Breakdown** – the same totals broken out so you can see usage within a date range.
+
+- **Discount by Person** – every registration a single discount was applied to, with contact and balance details.
+
+<Callout kind="info" collapsed="false">
+  Compare the totals here with the **Discounts** figure on the Revenue Summary to understand how much discounts reduced your overall revenue.
+</Callout>
+
+## Discount Summary
+
+The Discount Summary lists each discount once, with how many times it was used and its total value. Pick a season or program group with the season picker, or leave it unset to include **All Seasons**.
+
+### Columns
+
+<ParamField body="Discount" param-type="text" required="true" deprecated="false">
+  Name or description of the discount. Select it to open the **Discount by Person** view for that discount.
+</ParamField>
+
+<ParamField body="Quantity" param-type="number" required="true" deprecated="false">
+  Number of times the discount was applied.
+</ParamField>
+
+<ParamField body="Total" param-type="currency" required="true" deprecated="false">
+  Total value of the discount across all uses.
+</ParamField>
+
+A footer row shows the grand total quantity and grand total discount value across every discount.
+
+## Discount Summary Breakdown
+
+The Breakdown view shows the same Discount, Quantity, and Total columns, but adds a **date range** picker so you can see discount usage for a specific window (it defaults to the last 30 days). Use it to check how discounts were used during a promotion or a reconciliation period.
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Limits the breakdown to one season or program group.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that limit which discount uses are counted.
+</ParamField>
+
+## Discount by Person
+
+Selecting a discount from the summary opens a detailed list of every registration it was applied to. Use this to verify who received a discount and to follow up on outstanding balances.
+
+### Columns
+
+<ParamField body="Person" param-type="text" required="true" deprecated="false">
+  The person the discount was applied to. Links to their profile.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  The primary contact on the family account, linked to their profile.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  The season or program group the registration belongs to.
+</ParamField>
+
+<ParamField body="Note" param-type="text" required="false" deprecated="false">
+  The reason recorded when the discount was applied.
+</ParamField>
+
+<ParamField body="Birthday (Age) / Rising Grade" param-type="text" required="false" deprecated="false">
+  The person's birthday, age, and rising grade, when on file.
+</ParamField>
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  When the registration was recorded.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The discount amount applied to this registration.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="true" deprecated="false">
+  The balance still owed on the account. The footer totals both the amount and the balance columns.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  Depending on your setup, extra columns such as product description, phone, and email may also appear.
+</Callout>
+
+### Add your own profile fields as columns
+
+Select **Display Columns** above the table to choose profile fields (for example, cabin or group) to add as extra columns. Check the fields you want, save, and they appear in the table and exports.
+
+## Run the reports
+
+<Steps>
+  <Step title="Open the Discount Summary" icon="folder" title-type="p">
+    Choose a season or leave it on All Seasons to see totals for every discount.
+  </Step>
+
+  <Step title="Narrow by date if needed" icon="calendar" title-type="p">
+    Use the Breakdown view when you want discount usage for a specific date range.
+  </Step>
+
+  <Step title="Drill into a discount" icon="search" title-type="p">
+    Select a discount name to see the full list of people it was applied to, then export or follow up as needed.
+  </Step>
+</Steps>

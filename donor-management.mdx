@@ -1,0 +1,135 @@
+---
+title: Manage donors
+description: >-
+  Work with your donor list, review individual gifts and resend receipts, send
+  newsletters to donors and prospects, and track opens in the email log.
+---
+## Overview
+
+Once the [Donor module](/donations) is on, you have four tools for working with the people who give — and might give — to your camp:
+
+- **Donations** – every gift received, grouped by donation page.
+
+- **Donor list** – your contacts, with each person's giving history.
+
+- **Newsletter** – a quick email to your donor list.
+
+- **Email log** – a record of newsletters sent and how many were opened.
+
+All four live under the **Donor** section in your navigation.
+
+## Donations
+
+The **Donations** list shows individual gifts. Use the filters at the top to choose a **donation page** and a **date range**, then **Filter** to update the list. Gifts are grouped under each donation page with a subtotal, and a grand total appears at the bottom.
+
+Each row shows the gift date, donation page, donor first and last name, amount, email, and phone.
+
+<ParamField body="Resend receipt" param-type="button" required="false" deprecated="false">
+  Sends the donor's receipt email again. Use this when a giver says they did not receive their receipt or needs another copy for their records.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  A receipt is emailed automatically when a gift is completed. **Resend receipt** simply sends the same receipt again — it does not create a new charge.
+</Callout>
+
+## Donor list
+
+The **Donor list** is your people directory. It includes both **donors** (people who have given) and **prospects** (contacts you have added who have not given yet). Use the **donation page** filter to focus on people tied to a specific page.
+
+### Columns
+
+<ParamField body="First / Last" param-type="text" required="true" deprecated="false">
+  The contact's name.
+</ParamField>
+
+<ParamField body="Email" param-type="text" required="true" deprecated="false">
+  The contact's email address. This is how gifts are matched to a person and where newsletters are sent.
+</ParamField>
+
+<ParamField body="Phone" param-type="text" required="false" deprecated="false">
+  The contact's phone number, with country code.
+</ParamField>
+
+<ParamField body="Source" param-type="text" required="false" deprecated="false">
+  Where the contact came from — for example, an online gift or a contact you added by hand.
+</ParamField>
+
+<ParamField body="First donation / Last donation" param-type="date" required="false" deprecated="false">
+  When the contact first and most recently gave. Blank for prospects who have not given.
+</ParamField>
+
+<ParamField body="# Donations" param-type="number" required="true" deprecated="false">
+  How many gifts the contact has made.
+</ParamField>
+
+<ParamField body="Total donated" param-type="currency" required="true" deprecated="false">
+  The total value of all the contact's gifts.
+</ParamField>
+
+<ParamField body="Newsletter" param-type="text" required="true" deprecated="false">
+  Whether the contact has opted in to receive newsletters (**Yes** or **No**).
+</ParamField>
+
+### Add or edit a contact
+
+Select **Add donor contact** to open a form where you can enter a first and last name, email (required), phone with country code, and whether the person may receive newsletters. To change someone already in the list, select **Edit** on their row.
+
+<Callout kind="tip" collapsed="false">
+  Add prospects by hand to build a mailing list before your campaign starts. They will receive newsletters if their **Newsletter** setting is **Yes**, even before they make a first gift.
+</Callout>
+
+## Send a newsletter
+
+The **Newsletter** tool sends an email to your donor list. You choose who receives it, write a subject and a formatted message, and send.
+
+<Steps>
+  <Step title="Choose your audience" icon="users" title-type="p">
+    Under **Send to**, pick one of:
+
+    - **All donor list contacts** – everyone on your list.
+
+    - **Donors only** – people who have given.
+
+    - **Prospects only** – contacts who have not given yet.
+  </Step>
+
+  <Step title="Write your message" icon="edit" title-type="p">
+    Enter a **Subject**, then compose your message in the formatting editor. You can style text, add links, and lay out your update.
+  </Step>
+
+  <Step title="Send" icon="send" title-type="p">
+    Select **Send newsletter**. Campium confirms how many contacts it was sent to.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Newsletters only go to contacts whose **Newsletter** setting is **Yes**. Contacts opted out are skipped automatically.
+</Callout>
+
+## Email log
+
+The **Email log** records the newsletters you have sent so you can see what went out and how it landed. It has two parts.
+
+### Newsletter summary
+
+A table of each send, grouped by subject and date, showing:
+
+<ParamField body="Sent" param-type="number" required="true" deprecated="false">
+  How many emails went out in that send.
+</ParamField>
+
+<ParamField body="Opened" param-type="number" required="true" deprecated="false">
+  How many recipients opened the email.
+</ParamField>
+
+<ParamField body="Open rate" param-type="text" required="true" deprecated="false">
+  Opened divided by sent, shown as a percentage.
+</ParamField>
+
+### Individual emails
+
+Below the summary, a list of the most recent individual emails (up to 500) shows the send time, subject, recipient email and name, and when it was opened. Each row has a **Resend** action to send that email again to the same person.
+
+<Callout kind="tip" collapsed="false">
+  Open rates depend on recipients' email apps loading images, so treat them as a helpful guide rather than an exact count.
+</Callout>

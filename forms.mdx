@@ -172,6 +172,10 @@ You must complete Settings and click **Save Settings** before the form behaves c
 
 The **Products Layout** tab appears only when the **Form Type** is **Registration (With Products)**.
 
+<Callout kind="info" collapsed="false">
+The label on this tab is dynamic. It reflects the product terminology configured for your camp, so it may read as **Sessions Layout** (or another product name) rather than **Products Layout**.
+</Callout>
+
 - Lets you configure how products appear within the registration workflow.
 
 - Aligns products with the registration form so families can select and purchase items as part of completion.
@@ -465,6 +469,11 @@ Automatic discounts work best when eligibility is unambiguous and you want a con
 
 These settings solve different problems. One is a payment requirement, and the other is a pricing incentive.
 
+When you enable the pay-in-full discount, you can override the season default for this form using two fields:
+
+- **Pay In Full Discount Type** — Choose whether the incentive is a flat dollar amount or a percentage.
+- **Pay In Full Discount Value** — Enter the amount or percent to apply on this specific form. Leave these at the default if the form should use the standard season-wide pay-in-full discount.
+
 ### Minimum deposit settings
 
 Minimum deposit settings control how much a payer must submit when full payment is not required.
@@ -486,6 +495,12 @@ Use it when a form needs a different minimum than the season default.
 
 Use **Per user** when each registrant should meet a minimum commitment individually. Use **Entire checkout** when one combined deposit is enough for the transaction.
 
+#### Charge Deposit On Approval
+
+**Charge Deposit On Approval** holds the deposit until staff approve the submission, instead of collecting it at checkout. When the form is set to require approval, turning this on charges the deposit at the moment a submission is approved rather than when the family completes the form.
+
+When you enable it, you also set the **deposit amount** that Campium should charge on approval. Use this when you review registrations before committing families to a charge, but still want a deposit collected automatically once you approve.
+
 ### Send reminder emails
 
 Reminder emails help you follow up with recipients who still need to complete a form before or after its due date.
@@ -496,10 +511,21 @@ Campium sends reminder emails based on the form's progress tracking, not just wh
 | --- | --- |
 | **Not Started** | Yes |
 | **In Progress** | Yes |
-| **Pending** | Yes, if the workflow still treats the form as incomplete for follow-up purposes |
+| **Pending** | No |
 | **Approved** | No |
 
+Reminders only go to recipients who are **Not Started** or **In Progress**. Once a submission moves to **Pending** or **Approved**, Campium stops reminding that recipient.
+
 Reminder emails are most useful for deadline-driven forms that people must complete after registration or onboarding, such as medical forms, waivers, contracts, and staff paperwork.
+
+#### How reminders are enabled
+
+There is no single on/off toggle for reminders. Instead, you enable them by choosing which days should send a reminder in two multi-select controls:
+
+- **Before due date** — Select the number of days before the **Due Date** that a "due soon" reminder should send. Each day you add is another reminder. Leaving this empty means no pre-due reminders go out.
+- **After due date** — Select the number of days after the **Due Date** that a past-due reminder should send. This is a separate control from the before-due reminders, so you can nudge recipients who miss the deadline without touching the pre-due schedule. Leaving it empty means no past-due reminders go out.
+
+Selecting at least one day in either multi-select is what turns reminders on for the form.
 
 <Steps>
   <Step title="How to turn on form reminder emails" icon="mail" title-type="p">
@@ -508,14 +534,14 @@ Reminder emails are most useful for deadline-driven forms that people must compl
   2. Go to the **Settings** tab.
   3. Confirm the form has a recipient list configured in the **Recipients** tab.
   4. Enter a **Due Date**.
-  5. Turn on the reminder email option in the Settings area where reminder emails are configured.
+  5. Choose one or more days in the **Before due date** multi-select, and, if you want past-due nudges, one or more days in the **After due date** multi-select.
   6. Save the form using **Save Settings**.
   7. Wait for the daily reminder job to process eligible recipients, then review completions in **Responses**.
 
   </Step>
 </Steps>
 
-The reminder message changes depending on timing. Before the due date, the email tells recipients the form is due soon. After the due date passes, the email tells recipients the form is overdue or past due.
+The reminder message changes depending on timing. Days chosen in **Before due date** send a "due soon" message. Days chosen in **After due date** send an overdue or past-due message.
 
 Campium sends reminder emails through a daily automated job. That means reminders are not always immediate after you save the form. Plan for the next automated run when testing.
 
@@ -552,6 +578,12 @@ Email settings control who gets notified internally and which templates Campium 
 Use **Send Admin Email Notification To** to enter the staff email address or addresses that should receive an internal notification when someone submits the form.
 
 This notification is for administrators, not for families. Use it when staff need to know right away that a submission arrived.
+
+#### Also Notify When Additional Sessions Are Added
+
+**Also Notify When Additional Sessions Are Added** extends the admin notification so staff are alerted not only on the first submission but also when a family comes back and adds more sessions to an existing registration.
+
+Turn this on when later additions to a registration matter to your team as much as the original submission. Leave it off if you only want to be notified once, when the form is first completed.
 
 #### Email Template When Approved, Pending, or Rejected
 
@@ -598,6 +630,16 @@ Use it when the default heading is too generic for your enrollment process.
 **Cart Header Text** customizes the heading shown above the cart or summary area during checkout.
 
 This is useful when you want to reinforce what the payer is reviewing before submission.
+
+### Reference forms
+
+If your workflow collects references as part of an application, you can link up to two other forms as references.
+
+#### Reference One Form and Reference Two Form
+
+**Reference One Form** and **Reference Two Form** let you attach existing forms that serve as references for this form. Select the form you want to use in each field.
+
+Use these when an application needs supporting forms completed by someone other than the primary applicant, such as a recommendation or reference questionnaire. Leave a field empty if you do not need that reference.
 
 ### Question display
 
@@ -666,7 +708,7 @@ Use the checklist that matches the kind of form you are building.
 1. Set **Form Type** to **Standard (No Products for Purchase)** unless file upload is the primary action.
 2. Enter a clear **Form Name** and a short **Description** explaining the deadline.
 3. Set **Start Date**, **Due Date**, and **End Date**.
-4. Turn on reminder emails.
+4. Choose reminder days in the **Before due date** and **After due date** multi-selects.
 5. Add the correct recipients.
 6. Set **Lock Form After Completion** to **Yes** if responses should not change after submission.
 7. Choose the right admin notification and approval templates.

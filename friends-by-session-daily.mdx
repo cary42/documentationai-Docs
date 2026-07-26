@@ -1,0 +1,61 @@
+---
+title: Campers by Session (Daily)
+description: For a chosen day, see the campers attending each session with parent contact info and allergy details.
+---
+
+## Overview
+
+Use this daily report to see, for a chosen day, the campers attending each session, along with their parent contact info and allergy details. It is useful for day-of planning, roster checks, and knowing who to call.
+
+## What it shows
+
+Each row is a camper attending on the selected day.
+
+<ParamField body="Camper" param-type="text" show-location="false">
+The camper attending that day. This is a link to their profile.
+</ParamField>
+
+<ParamField body="Grade" param-type="text" show-location="false">
+The camper's grade.
+</ParamField>
+
+<ParamField body="Teacher" param-type="text" show-location="false">
+The camper's teacher, when on file.
+</ParamField>
+
+<ParamField body="Allergies" param-type="text" show-location="false">
+Any allergies noted for the camper, so staff can plan accordingly.
+</ParamField>
+
+<ParamField body="Session" param-type="text" show-location="false">
+The session the camper is attending, plus any special note.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" show-location="false">
+The camper's primary contact, with a link to that person's profile.
+</ParamField>
+
+<ParamField body="Contact Info" param-type="text" show-location="false">
+Home and cell phone numbers and email for the contact, so you can reach them quickly.
+</ParamField>
+
+## Choose the day and season
+
+<Steps>
+  <Step title="Pick a date" icon="calendar" titleType="p">
+    Use the date picker in the header to choose the day you want. The report reloads for that date.
+  </Step>
+
+  <Step title="Choose a season" icon="folder" titleType="p">
+    Use the season dropdown to focus the report on a single season.
+  </Step>
+</Steps>
+
+## Where to find it
+
+In Campium, go to **Reports** &gt; **System** and select this daily campers-by-session report.
+
+## Troubleshooting
+
+- **No campers listed**: No one is attending on the selected day for that season. Try another date.
+- **Allergies or contact info are blank**: That information has not been entered on the camper's profile.

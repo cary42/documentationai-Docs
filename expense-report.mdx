@@ -1,0 +1,85 @@
+---
+title: Expense report
+description: >-
+  Track and record your camp's expenses by category, vendor, and season, with a
+  running total for the filtered list.
+---
+## What the Expense report shows
+
+Use the Expense report to record and review money your camp spends. Each row is a single expense, with the vendor, description, amount, budget code, category, who spent it, and the season it applies to. A total at the bottom sums the amounts in the current filtered list.
+
+<Callout kind="info" collapsed="false">
+  This report tracks expenses you enter into Campium. It is a spending ledger, not a feed from your bank or accounting system.
+</Callout>
+
+## Filters
+
+Set the scope at the top of the report, then select **Apply filters**.
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Season or program group whose expenses you want to review. Leave it unset to see **All Seasons**.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that limit which expenses are included.
+</ParamField>
+
+<ParamField body="Category" param-type="selector" required="false" deprecated="false">
+  Limits the list to a single expense category.
+</ParamField>
+
+<ParamField body="Vendor" param-type="selector" required="false" deprecated="false">
+  Limits the list to a single vendor.
+</ParamField>
+
+## Columns
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  When the expense was recorded.
+</ParamField>
+
+<ParamField body="Vendor" param-type="text" required="true" deprecated="false">
+  Who the money was paid to.
+</ParamField>
+
+<ParamField body="Description" param-type="text" required="true" deprecated="false">
+  A short note describing the expense.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  How much was spent. The footer totals this column for the filtered list.
+</ParamField>
+
+<ParamField body="Budget #" param-type="text" required="false" deprecated="false">
+  The budget code assigned to the expense.
+</ParamField>
+
+<ParamField body="Category" param-type="text" required="false" deprecated="false">
+  The expense category.
+</ParamField>
+
+<ParamField body="Spent By" param-type="text" required="false" deprecated="false">
+  The staff member who recorded or made the purchase.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="false" deprecated="false">
+  The season or program group the expense is tied to.
+</ParamField>
+
+## Add, edit, or delete an expense
+
+Select **Add New Expense** to record a new one. To change or remove an existing expense, use the menu at the end of its row and choose **Edit** or **Delete**.
+
+<Steps>
+  <Step title="Filter to the expenses you want" icon="filter" title-type="p">
+    Set the season, date range, category, or vendor, then apply the filters.
+  </Step>
+
+  <Step title="Add or update expenses" icon="plus-circle" title-type="p">
+    Record new expenses with **Add New Expense**, or edit and delete existing ones from the row menu.
+  </Step>
+
+  <Step title="Review the total and export" icon="play-circle" title-type="p">
+    Check the total at the bottom of the list and use the table buttons to copy or export the data.
+  </Step>
+</Steps>

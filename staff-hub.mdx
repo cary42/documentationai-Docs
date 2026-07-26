@@ -1,0 +1,140 @@
+---
+title: Staff Hub
+description: >-
+  Use Staff Hub as your operations dashboard to track staff application
+  progress, application status, and contracts season by season, and to send a
+  contract without leaving the page.
+---
+## What Staff Hub is for
+
+Staff Hub is the operations dashboard for managing where each staff member is in your hiring process. It brings together, in one table, everyone who has started a staff form for the seasons you pick, along with their application status, key profile fields, form progress, and contract activity.
+
+Staff Hub does not replace building or reviewing the staff application itself. Use the [Staff Applications](/staff) guide to create the form and understand how applicants log in and complete it. Come to Staff Hub when you want to track many people at once and move hires forward.
+
+<Callout kind="info" collapsed="false">
+  Staff Hub reads from the staff forms you connect to each season. If the table looks empty, open **Staff Hub Settings** (top right of the page) and choose at least one staff form for each season, then save. Until a form is connected for a season, no one shows up for it.
+</Callout>
+
+## Open Staff Hub
+
+Staff Hub is available from the admin area at **Staff Hub**. You need admin access to open it.
+
+When it loads, you see a **Season** filter, five summary metrics, and a roster table of staff for the seasons in the filter.
+
+## Filter by season
+
+Each hire can belong to one or more seasons. Use the **Season** filter at the top left to choose which seasons you want to work with, then click **Filter**. **Clear** returns you to the default view.
+
+The roster lists staff who have started the configured staff form (registration or standard) for the seasons you selected. If you do not choose a season, Staff Hub uses your default season.
+
+## Read the summary metrics
+
+Above the roster, five tiles summarize the current season filter:
+
+<Card title="Summary tiles" icon="chart-bar" horizontal="false">
+  - **Ready for Offer** — staff who have completed at least one form but have no contract yet.
+
+  - **Awaiting Forms** — staff who have not finished every form they started.
+
+  - **Contracts Sent** — the number of contracts sent to staff in the filter.
+
+  - **Total Signed** — the number of signed contracts.
+
+  - **Signed This Week** — contracts signed in the last seven days.
+</Card>
+
+These tiles always reflect the full season filter. Searching the roster by name narrows the table below, but the tiles stay put.
+
+## Work the roster table
+
+Each staff member is one row. From left to right, the roster shows:
+
+- **Application status** — the main status of where the person is in your process (for example, applied, interviewing, hired). This comes from the staff profile field named **Application Status**. When the field is set up as a dropdown, you can change the status right in the table and it saves immediately.
+
+- **Staff** — the person's name (a link to their profile), email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline.
+
+- **Seasons** — the seasons the person is attached to.
+
+- **Profile field columns** — any staff profile fields you chose to display. Text fields and dropdowns can be edited directly in the table; your change saves on its own.
+
+- **Forms** — a **Started** and **Completed** count. Click it to expand a per-season breakdown of each staff form and its status.
+
+- **Contracts** — a **Total / Sent / Signed** rollup. Click it to expand the contract history and the send-a-contract panel.
+
+<Callout kind="tip" collapsed="false">
+  Use **Search staff** above the table to filter the roster by name. It matches the Staff column only and narrows the visible rows without changing the summary metrics.
+</Callout>
+
+## Choose which fields and statuses appear
+
+Open **Staff Hub Settings** (top right) to control the dashboard:
+
+<Steps>
+  <Step title="Pick fields to display and edit" icon="list" title-type="p">
+    Under **Fields to display and edit**, search and select which staff profile fields appear as columns. These columns are editable inline for everyone in the roster.
+  </Step>
+
+  <Step title="Set the application status field (optional)" icon="flag" title-type="p">
+    The first column uses the staff profile field named **Application Status** by default. Override it only if you use a different dropdown field for the same purpose.
+  </Step>
+
+  <Step title="Connect staff forms to each season" icon="folder" title-type="p">
+    Under **Staff form by season**, choose one or more staff forms (registration or standard) for each season. Forms marked **(assigns season)** add staff to that season when completed. This is what populates the roster, so set it for every season you use.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Click **Save Settings**. Your choices apply the next time the roster loads.
+  </Step>
+</Steps>
+
+## See form progress for one person
+
+Click the **Forms** cell in any row to expand a panel. It groups the person's staff forms by season and shows the status of each one, along with the completion date when a form is finished. Use this to see exactly which follow-up forms are still outstanding for a hire.
+
+## Track and send contracts from the hub
+
+Click the **Contracts** cell to expand the contract panel for that person. It has two parts:
+
+- **Contract history** — every contract created for the staff member, its template name, when it was created, when it was signed, its current status, and a button to view the contract itself.
+
+- **Create & Send** — a quick way to send a new contract without leaving Staff Hub.
+
+To send a contract:
+
+<Steps>
+  <Step title="Expand the Contracts cell" icon="file-text" title-type="p">
+    Click the **Total / Sent / Signed** rollup in the person's row.
+  </Step>
+
+  <Step title="Choose a template and season" icon="edit" title-type="p">
+    Pick a **contract template** and the **season** the contract is for. When the person belongs to a single season, it is pre-selected for you.
+  </Step>
+
+  <Step title="Create and send" icon="send" title-type="p">
+    Click **Create & Send**. Campium generates the contract and emails it to the staff member, then refreshes so the new contract appears in the history and the summary tiles update.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Contract templates come from your Contracts setup. If the template dropdown is empty, create an active contract template first. See the [Contracts](/contracts) guide.
+</Callout>
+
+## Related guides
+
+<Columns cols="2">
+  <Card title="Staff Applications" href="/staff" icon="users" horizontal="false">
+    Build the staff application form and understand how applicants log in and complete it.
+  </Card>
+
+  <Card title="Contracts" href="/contracts" icon="file-text" horizontal="false">
+    Create the contract templates you send to staff from Staff Hub.
+  </Card>
+
+  <Card title="Forms" href="/forms" icon="edit" horizontal="false">
+    Build and manage the forms that feed the roster and form-progress counts.
+  </Card>
+
+  <Card title="Profile Fields" href="/profile-fields" icon="list" horizontal="false">
+    Set up the profile fields, including Application Status, that appear as columns.
+  </Card>
+</Columns>

@@ -1,0 +1,94 @@
+---
+title: Balance Transfer Utilization
+description: See how automatic balance transfers move credit from one season to the next, and how much of it families have used.
+---
+
+## Overview
+
+Use Balance Transfer Utilization to see how credit rolled forward when balances were transferred from one season to another. It shows how much credit each family carried over, how much they have applied to their new registration, and how much is still sitting unused.
+
+Credit that rolls over is applied when a family registers in the destination season.
+
+## Run the report
+
+Pick the two seasons to compare, then run it.
+
+<ParamField body="From season (source)" param-type="filter" show-location="false">
+The season the credit or balance was transferred out of.
+</ParamField>
+
+<ParamField body="To season (destination)" param-type="filter" show-location="false">
+The season the credit or balance was transferred into.
+</ParamField>
+
+<ParamField body="Run Report" param-type="button" show-location="false">
+Select **Run Report** to build the comparison for the chosen seasons.
+</ParamField>
+
+## Summary cards
+
+<ParamField body="Credit rolled over" param-type="currency" show-location="false">
+Total credit carried into the destination season, with the number of families it came from.
+</ParamField>
+
+<ParamField body="Credit utilized" param-type="currency" show-location="false">
+How much of that credit has been applied to registrations, with the number of families and the overall utilization rate.
+</ParamField>
+
+<ParamField body="Credit unused" param-type="currency" show-location="false">
+Credit that has rolled over but not yet been applied, with the number of families holding it.
+</ParamField>
+
+<ParamField body="Balance owed rolled" param-type="currency" show-location="false">
+Outstanding balances (rather than credits) that carried forward, with the number of families.
+</ParamField>
+
+## Table columns
+
+<ParamField body="Primary Contact" param-type="text" show-location="false">
+The family's primary contact.
+</ParamField>
+
+<ParamField body="Transfer Type" param-type="text" show-location="false">
+Whether the family carried over a credit or an owed balance.
+</ParamField>
+
+<ParamField body="Transferred" param-type="currency" show-location="false">
+The amount moved from the source season.
+</ParamField>
+
+<ParamField body="Session Charges" param-type="currency" show-location="false">
+What the family was charged in the destination season.
+</ParamField>
+
+<ParamField body="Utilized" param-type="currency" show-location="false">
+How much of the transferred credit has been applied.
+</ParamField>
+
+<ParamField body="Unused Credit" param-type="currency" show-location="false">
+Credit still available to apply.
+</ParamField>
+
+<ParamField body="Current Balance" param-type="currency" show-location="false">
+The family's current balance in the destination season.
+</ParamField>
+
+<ParamField body="Status" param-type="text" show-location="false">
+A quick label summarizing where the family stands.
+</ParamField>
+
+<Callout kind="info">
+  This report requires the finance features and reporting access. If you do not see it, check that financial reporting is enabled for your login.
+</Callout>
+
+## Where to find it
+
+<Steps>
+  <Step title="Open Balance Transfer Utilization from Reports" icon="folder" titleType="p">
+    Go to **Reports** &gt; **System** and select **Balance Transfer Utilization**.
+  </Step>
+
+  <Step title="Choose the source and destination seasons" icon="calendar" titleType="p">
+    Pick the **From** and **To** seasons, then select **Run Report**.
+  </Step>
+</Steps>

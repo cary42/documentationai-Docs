@@ -1,0 +1,240 @@
+---
+title: Activity Scheduling
+description: >-
+  Plan your camp program with the Activity Scheduling module - set up
+  activities, periods, day templates, and cycles, assign groups to activities on
+  a calendar, and review the schedule in reports.
+---
+## What Activity Scheduling is for
+
+Activity Scheduling is the module for planning your daily camp program: deciding which groups do which activities, in which time slots, on which days. You build the pieces once (activities, time periods, day templates, and cycles), then assign groups to activities on a calendar or let Campium auto-generate a balanced schedule for you.
+
+<Callout kind="info" collapsed="false">
+  This is the program scheduler for campers and activities. It is separate from the [Staff Scheduler](/scheduling), which manages staff shifts and coverage. Use Activity Scheduling to plan what happens during the day; use the Staff Scheduler to plan who works.
+</Callout>
+
+<Callout kind="info" collapsed="false">
+  Activity Scheduling must be turned on for your account before you can use it. Enable the **Activity Scheduling** module in **Admin → Site Settings → Modules**. You also need admin access to open the scheduling pages.
+</Callout>
+
+## How the pieces fit together
+
+Activity Scheduling uses a small hierarchy. Understanding it makes the rest of the module straightforward.
+
+- **Activity** — Something campers do, such as Swimming, Archery, or Arts & Crafts.
+
+- **Period** — A time slot, such as 9:00 am or 10:00 am. Periods are the columns of your daily schedule.
+
+- **Day template** — A reusable blueprint for a day (for example, "Day 1", "Day 2", "Day 3"). Each day template holds the periods for that kind of day. Because it is reusable, the same template can repeat on multiple dates.
+
+- **Cycle** — A date range (for example, June 1 to June 4) that assigns a day template to each date. One cycle can use several day templates across its days.
+
+- **Group** — The unit you schedule into activities, based on a profile field you choose in Settings (often a cabin or group).
+
+- **Zone** — An optional location or area you can associate with scheduling.
+
+<Callout kind="tip" collapsed="false">
+  A typical flow: a cycle "June Week 1" covers June 1–4. You assign the Day 1 template to June 1, Day 2 to June 2, and so on. The Day 1 template holds periods (9 am, 10 am, 11 am), so June 1 automatically gets those slots. Then you assign groups to activities within each period.
+</Callout>
+
+## The Activity Scheduling dashboard
+
+Open the module from the admin navigation (under the reports or program area) to reach the Activity Scheduling landing page. From here you can:
+
+- Launch the **Setup Wizard** to configure everything step by step.
+
+- **Auto-Generate Assignments** to fill the schedule automatically.
+
+- Open the **Calendar View** to assign groups to activities by hand.
+
+- Jump to any setup page (Activities, Day Cycles, Periods, Cycles, Zones, Settings).
+
+- **Clear Assignments** for a season and date range when you need to start over.
+
+## Get set up with the Setup Wizard
+
+If you are new to the module, the Setup Wizard walks you through configuration in order and explains whether each step is required or optional.
+
+<Steps>
+  <Step title="Open the Setup Wizard" icon="settings" title-type="p">
+    On the Activity Scheduling dashboard, click **Start Setup Wizard**.
+  </Step>
+
+  <Step title="Set your group field" icon="users" title-type="p">
+    Confirm which profile field represents a group (for example, cabin or group). This tells the scheduler what it is assigning into activities. You can also change this later in **Settings**.
+  </Step>
+
+  <Step title="Create activities, periods, and day templates" icon="edit" title-type="p">
+    Add the activities campers do, the time periods for your day, and the day templates that hold those periods. The wizard links to each setup page.
+  </Step>
+
+  <Step title="Build your cycles" icon="calendar" title-type="p">
+    Create cycles that cover your date ranges and assign a day template to each date.
+  </Step>
+</Steps>
+
+## Configure Settings
+
+The Settings page controls the field mapping and group capacities the scheduler relies on.
+
+<Steps>
+  <Step title="Open Settings" icon="settings" title-type="p">
+    From the dashboard, click **Settings**.
+  </Step>
+
+  <Step title="Map the group field" icon="users" title-type="p">
+    Choose which profile field the scheduler treats as the group. Only dropdown-style profile fields are offered. This is the field that appears as the schedulable groups on the calendar and in reports.
+  </Step>
+
+  <Step title="Set group capacities" icon="edit" title-type="p">
+    Optionally set a capacity for each group. Auto-generation uses these capacities to keep assignments within limits.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  The group field is central to the whole module. If groups look wrong on the calendar or in reports, check the group field mapping in Settings first.
+</Callout>
+
+## Build the setup pieces
+
+From the dashboard's **Setup** list you can open each building block directly:
+
+- **Activities** — Add and manage the activities campers can be scheduled into.
+
+- **Periods** — Define the time slots that make up a day.
+
+- **Day Cycles** (day templates) — Create reusable day blueprints and add periods to them.
+
+- **Cycles** — Set date ranges and assign a day template to each date. You can also use **Auto-Create Cycles** to generate them quickly.
+
+- **Zones** — Optionally define locations or areas used in scheduling.
+
+## Assign groups to activities
+
+Once your pieces are in place, you assign groups to activities either by hand on the calendar or automatically.
+
+### Assign on the calendar
+
+<Steps>
+  <Step title="Open the Calendar" icon="calendar" title-type="p">
+    From the dashboard, open the **Calendar View** (or use the embedded calendar on the dashboard). The calendar shows your days and periods as a grid.
+  </Step>
+
+  <Step title="Drag a group onto a slot" icon="arrow-right" title-type="p">
+    Drag a group from the sidebar into a period cell for a given day to create an assignment. Assignment blocks show the group and activity, and you can color them by group or by activity.
+  </Step>
+
+  <Step title="Adjust assignments" icon="edit" title-type="p">
+    Move an assignment by dragging it to another cell. Use the list view (**Schedule Assignment**) if you prefer to work from a list rather than the calendar grid.
+  </Step>
+</Steps>
+
+### Auto-generate a schedule
+
+<Steps>
+  <Step title="Open Auto-Generate Assignments" icon="settings" title-type="p">
+    From the dashboard, click **Auto-Generate Assignments**.
+  </Step>
+
+  <Step title="Set your options" icon="filter" title-type="p">
+    Campium randomly assigns groups to activities with even distribution, respecting group capacities and any constraint rules you set. Make sure your group field is configured in Settings first.
+  </Step>
+
+  <Step title="Generate and review" icon="check-circle" title-type="p">
+    Run the generation, then open the calendar to review the result. Adjust any assignments by hand as needed.
+  </Step>
+</Steps>
+
+## Clear assignments
+
+When you need to redo part of the schedule, you can remove assignments for a season and date range. Campium previews exactly what will be deleted before you confirm.
+
+<Steps>
+  <Step title="Choose the season and dates" icon="calendar" title-type="p">
+    In the **Clear Assignments** card on the dashboard, select the season and the start and end dates.
+  </Step>
+
+  <Step title="Preview what will be removed" icon="search" title-type="p">
+    Click **Preview**. Campium shows how many assignments would be deleted, a breakdown by date, and a sample of the affected assignments.
+  </Step>
+
+  <Step title="Confirm the clear" icon="trash" title-type="p">
+    Click **Clear Assignments** and confirm. The assignments in that range are removed.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  Clearing assignments cannot be undone. Always run the preview and check the count and date breakdown before you confirm.
+</Callout>
+
+## Schedule views and reports
+
+Four reports let you review the finished schedule from different angles. Each includes an **Export to Excel** option. Filter by season and, depending on the report, by date or date range.
+
+<Steps>
+  <Step title="Activity Master Schedule" icon="calendar" title-type="p">
+    The full matrix of day, period, activity, and group across a date range. Use it as the complete picture of everything scheduled.
+  </Step>
+
+  <Step title="Activity Schedule by Activity" icon="list" title-type="p">
+    Shows which groups are in each activity, per period and day. Use it to see who is doing a given activity.
+  </Step>
+
+  <Step title="Activity Schedule by Group" icon="users" title-type="p">
+    A roster by group (for example, by cabin) listing the activities that group has each period and day. Use it as a group's daily itinerary.
+  </Step>
+
+  <Step title="Activity Schedule by Period" icon="monitor" title-type="p">
+    A grid of periods by groups, with activity names filled into the cells for a chosen date. Use it as an at-a-glance daily board.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  Print or export the **by Group** report to give each cabin or group its daily itinerary, and use the **by Period** grid as a front-desk board for the day.
+</Callout>
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="I do not see the Activity Scheduling pages" default-open="true">
+    - Confirm the **Activity Scheduling** module is turned on in **Admin → Site Settings → Modules**.
+
+    - Confirm you have admin access. The scheduling pages redirect users without admin permission.
+  </Expandable>
+
+  <Expandable title="Groups look wrong on the calendar or in reports" default-open="false">
+    - Open **Settings** and check the group field mapping. The scheduler uses the profile field you select there as the schedulable groups.
+
+    - Make sure the field you mapped is a dropdown-style profile field with the group values you expect.
+  </Expandable>
+
+  <Expandable title="A report shows no schedule" default-open="false">
+    - Check the season, date, or date range filters at the top of the report.
+
+    - Confirm you have created assignments for that range, either on the calendar or with auto-generate.
+  </Expandable>
+
+  <Expandable title="Auto-generate did not fill everything" default-open="false">
+    - Confirm your group field is set in Settings and that groups have capacities where needed.
+
+    - Make sure your cycles assign day templates to the dates you expect, and that those day templates contain periods.
+
+    - Review and adjust remaining slots by hand on the calendar.
+  </Expandable>
+</ExpandableGroup>
+
+## Related pages
+
+<Columns cols="3">
+  <Card title="Staff Scheduling" href="/scheduling" icon="calendar" cta="Plan staff shifts" horizontal="false">
+    Manage staff shifts and coverage, which is separate from scheduling camper activities.
+  </Card>
+
+  <Card title="Site Settings" href="/settings" icon="settings" cta="Enable the module" horizontal="false">
+    Turn on the Activity Scheduling module and adjust other account-wide options.
+  </Card>
+
+  <Card title="Profiles" href="/profiles" icon="users" cta="Manage group fields" horizontal="false">
+    Maintain the camper profile fields, including the group field the scheduler uses.
+  </Card>
+</Columns>

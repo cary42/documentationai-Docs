@@ -95,8 +95,6 @@ Use these steps to open and run the report from Campium.
 
     - A line chart for the trend over time.
 
-    - A bar chart by season.
-
     - Summary cards with key averages.
 
     - A season breakdown table.
@@ -109,7 +107,7 @@ Use these steps to open and run the report from Campium.
 
 ## Filters
 
-The Average Family Expected Revenue report has a single primary filter.
+The Average Family Expected Revenue report has two filters: **Season** and **Minimum Family Spend**.
 
 ### Season filter
 
@@ -122,6 +120,16 @@ The **Season** filter controls which seasons appear in the charts and season bre
 - Clearing or deselecting all seasons results in an empty chart and table.
 
 When you change the Season filter and run the report, Campium sends the selected seasons (along with your agency) to the server to recalculate the averages.
+
+### Minimum Family Spend
+
+Use **Minimum Family Spend** to leave low-spending families out of the averages, so a large number of near-zero balances does not pull the average down.
+
+- Enter a dollar amount. Only families whose expected revenue is at or above that amount are counted in the averages, summary cards, and breakdown table.
+
+- Leave it blank (or `0`) to include every family with a balance.
+
+- Changing this value re-runs the calculation on the server along with your selected seasons.
 
 ### URL context and pgcryid
 
@@ -156,26 +164,6 @@ You can use this view to:
 - Spot sharp increases or drops that might align with pricing changes, new programs, or discount policies.
 
 The points on the line chart are clickable and correspond to individual seasons.
-
-### Average Family Expected Revenue by Season (bar chart)
-
-The **bar chart** is labeled **Average Family Expected Revenue by Season**.
-
-This chart displays:
-
-- One bar per season included in your Season filter.
-
-- The height of each bar representing the average expected revenue per family for that season.
-
-Use the bar chart to:
-
-- Compare seasons side by side at a glance.
-
-- Identify outlier seasons with much higher or lower average expected revenue.
-
-- Confirm the pattern from the line chart in a more categorical view.
-
-Each bar is clickable and leads to the same season breakdown as clicking a season in the table.
 
 ### Summary cards
 

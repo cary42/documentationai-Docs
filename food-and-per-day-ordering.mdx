@@ -110,13 +110,13 @@ Use these week settings to shape the ordering grid in the portal. If lunch is av
 
 Configure the cutoff based on how much lead time your team needs.
 
-The cutoff is measured in days before the order date:
+The cutoff sets the lead days required before a date. A day is orderable only when its date is later than today plus the lead days, so today itself is never orderable:
 
-- **0** means families can order on the same day
-- **1** means families must order by the day before
-- **2** means families must order two days ahead
+- **0** means today is locked and the earliest day families can order is **tomorrow**
+- **1** means families must order **2 days ahead**
+- **2** means families must order **3 days ahead**
 
-Choose the smallest cutoff your staff can reliably fulfill. A shorter window gives families flexibility, but it also increases same-week changes for your team.
+Choose the smallest lead time your staff can reliably fulfill. A shorter window gives families more flexibility, but it also increases same-week changes for your team.
 
   </Step>
 
@@ -146,11 +146,17 @@ As parents enter quantities, the portal updates the running total. This gives fa
 Important portal behaviors include:
 
 - **Closed days cannot be edited** once they are outside the allowed ordering window
-- **No weeks open** appears when no defined weeks are currently orderable
+- **"No weeks are open for ordering yet."** appears when no defined weeks are currently orderable
 - **Previously purchased quantities pre-fill** when a family returns to adjust unlocked future dates
 - **No waitlist appears** for food ordering in the usual session sense
 
 That last point matters for staff communication. If a family cannot order a day, the reason is usually the order window, availability setup, or form access—not a food waitlist.
+
+<Callout kind="info">
+
+Two separate settings decide whether a day is orderable. The **order cutoff (lead days)** is a product-level setting that locks any date too close to today. The per-week **Orderable from** and **Orderable until** dates are a separate mechanism that opens or closes an entire week's ordering. A day shows up as orderable only when it clears both.
+
+</Callout>
 
 ## Checkout, billing, and changes
 
@@ -201,7 +207,7 @@ A few setup habits prevent most in-season confusion.
 
 - **Name items clearly.** Use names parents recognize, such as "Hot Lunch" or "Pizza Friday Lunch," not internal shorthand.
 - **Open ordering early enough.** Families are more likely to use the feature when they can place several weeks of orders at once.
-- **Choose realistic cutoff days.** A cutoff of `0` allows same-day orders, while `1` requires ordering the day before. Match the setting to kitchen or office capacity.
+- **Choose realistic cutoff days.** A cutoff of `0` locks today and lets families order from tomorrow onward, while `1` requires ordering 2 days ahead. Match the setting to kitchen or office capacity.
 - **Separate items when the workflow is different.** If one item has a different schedule, cutoff, or fulfillment process, create a separate product.
 - **Review copied seasons carefully.** If you copy a season, confirm the week dates, order windows, and sort order before opening registration.
 - **Decide how discounts should work.** Discounts are off by default in food mode, so confirm whether that is correct for your program before families start ordering.

@@ -1,0 +1,47 @@
+---
+title: Session Revenue report
+description: >-
+  See every session sold in a season, one row per camper session line, with
+  the date, camper, session name, and cost, plus a running total.
+---
+## What the Session Revenue report shows
+
+Use the Session Revenue report to see every session sold in a season, one row per camper session line. Each row shows when the line was recorded, the camper it belongs to, the session name, and the cost, with a total at the bottom.
+
+Camper names link to their profile, so you can jump straight from a line to the person behind it.
+
+<Callout kind="info" collapsed="false">
+  This report counts active session lines only, so it reflects what has been sold for the season you choose.
+</Callout>
+
+## Filters
+
+<ParamField body="Season" param-type="selector" required="true" deprecated="false">
+  Season whose session sales you want to review. Use the season picker at the top of the page. If you do not choose one, the report uses your default season.
+</ParamField>
+
+## Columns
+
+<ParamField body="Date" param-type="text" required="true" deprecated="false">
+  Date and time the session line was recorded.
+</ParamField>
+
+<ParamField body="Child Name" param-type="text" required="true" deprecated="false">
+  Camper the session was sold to. Select the name to open their profile.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  Season the line belongs to.
+</ParamField>
+
+<ParamField body="Session Name" param-type="text" required="true" deprecated="false">
+  Name of the session that was sold.
+</ParamField>
+
+<ParamField body="Cost" param-type="currency" required="true" deprecated="false">
+  Price of the session line. The total at the bottom of this column sums every line shown.
+</ParamField>
+
+## Export
+
+Export buttons above the table let you save the list as PDF, Excel, or CSV, or print and copy it. The export reflects the season you have selected.

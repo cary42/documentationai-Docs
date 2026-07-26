@@ -1,0 +1,108 @@
+---
+title: Merge Users
+description: >-
+  Combine two duplicate user records into one, moving payments, forms,
+  contracts, and other history onto the account you keep. Merging is permanent
+  and requires the merge users permission.
+---
+## When to merge users
+
+Use Merge Users when the same person exists twice in your system, for example a camper who was added again during a new registration or imported under a slightly different name. Merging combines the two records into one so all of their history lives in a single place.
+
+<Callout kind="alert" collapsed="false">
+  Merging is permanent and cannot be undone. Confirm you have the right two accounts before you merge. When in doubt, review each profile first.
+</Callout>
+
+## Permission required
+
+Merging is limited to users with the **merge users** permission. If you do not have it, the tool tells you access is denied. Ask an admin to grant the permission through your roles and permissions setup.
+
+## How a merge works
+
+A merge always has two sides:
+
+- **User A** is the duplicate that is merged away. After the merge, User A is set to **Archived**.
+
+- **User B** is the record you keep. You choose the status User B ends up with (Active, Inactive, Pending, Lead, or Archived).
+
+Campium moves User A's history onto User B and combines the two profiles into one.
+
+## Merge two users
+
+<Steps>
+  <Step title="Open Merge Users" icon="git-merge" title-type="p">
+    Go to the admin area and open **Merge Users**.
+  </Step>
+
+  <Step title="Select the two accounts" icon="users" title-type="p">
+    Use the **User A** and **User B** pickers to search for and choose each person. As you select, Campium shows each one's name, account number, email, status, user type, session and season counts, and creation date so you can confirm they are the same person.
+  </Step>
+
+  <Step title="Review the comparison" icon="list" title-type="p">
+    A comparison of the two profiles appears. For fields that differ, use the **Use A** or **Use B** buttons to pick which value the merged record should keep.
+  </Step>
+
+  <Step title="Choose the final status for User B" icon="flag" title-type="p">
+    Select the status User B should have after the merge. User A is always archived.
+  </Step>
+
+  <Step title="Merge" icon="check-circle" title-type="p">
+    Click **Merge Now**. The merge runs and a results list shows what was moved.
+  </Step>
+</Steps>
+
+## What gets combined
+
+When you merge, Campium moves User A's records onto User B, including:
+
+- Emails and notes
+
+- Payments and scheduled payments
+
+- Sessions and seasons
+
+- Forms, form sends, and form product answers
+
+- Attendance records and dismissals
+
+- Medical records and medication logs
+
+- Uploaded files
+
+- Contracts
+
+- Canteen payments and purchases
+
+- Product associations and bus assignments
+
+The results panel lists the counts for each so you can confirm the merge did what you expected.
+
+<Callout kind="info" collapsed="false">
+  Profile field values are combined too. Where a value exists on User A but not User B, it carries over. Where both differ, the value you chose with **Use A** or **Use B** is kept.
+</Callout>
+
+## Related tool: move a user into a family
+
+Merging is for two records that are the same person. If instead you have one correct person who is simply in the wrong family, use **Move User Into Family** rather than merging.
+
+That tool re-parents a single user into an existing family, keeping their identity and moving their family-scoped records onto the target family. If the target family already has someone with the same name, Move User Into Family points you to Merge Users to combine those duplicates. Moving a user into a family uses the same **merge users** permission.
+
+## Related guides
+
+<Columns cols="2">
+  <Card title="How to change a user's name" href="/how-to-change-a-users-name" icon="edit" horizontal="false">
+    Fix a name on a single record without merging.
+  </Card>
+
+  <Card title="Import Users" href="/import-users" icon="upload" horizontal="false">
+    Bring in records in bulk, a common source of duplicates to clean up later.
+  </Card>
+
+  <Card title="Roles and Permissions" href="/roles-and-permissions" icon="shield" horizontal="false">
+    Grant the merge users permission to the right admin users.
+  </Card>
+
+  <Card title="Profiles" href="/profiles" icon="user" horizontal="false">
+    Review a person's full record before deciding whether to merge.
+  </Card>
+</Columns>

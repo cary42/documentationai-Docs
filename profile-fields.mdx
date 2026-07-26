@@ -26,6 +26,8 @@ Profile fields support these field types:
 
 - **Choose Many** — multiple selections from a list, such as allergies or activity interests
 
+- **Link to a User** — links this field to another person in Campium. When you choose this type, you pick the target user type the field points to: **Staff**, **Camper**, or **Guardian** (for example, linking a camper to an assigned counselor)
+
 ## Find Profile Fields in Admin
 
 Open **Admin → Profile Fields** at `/admin/profile-fields.php`. You need the **Profile Fields** permission, listed as `custom_module`, to access the page.
@@ -40,7 +42,7 @@ The main Profile Fields screen gives you a high-level view of every field and ho
 | ----------------- | ------------------------------------------------------------------------ |
 | **Field Name**    | The label staff see for the field                                        |
 | **User Type**     | Which people the field applies to: Campers, Parents, Staff, or All Users |
-| **Field Type**    | Text, Date, Choose One, or Choose Many                                   |
+| **Field Type**    | Text, Date, Choose One, Choose Many, or Link to a User                    |
 | **Health report** | A checkmark if the field appears on health reports                       |
 | **Description**   | An internal note about the field - not seen by families                  |
 | **Status**        | Whether the field is Active or Inactive                                  |
@@ -66,15 +68,15 @@ Create a new field when you need to track information that Campium does not prov
 Use the Add New Field form to define the field.
 
 <ParamField body="Field name" param-type="string" required="true" deprecated="false" show-location="false">
-  The label staff see. Keep it under 50 characters, do not use commas, and do not prefix the user type in the name.
+  The label staff see. Keep it under 50 characters, do not use commas, and do not prefix the user type in the name. A field name cannot be **Family ID** and cannot start with **camper** or **staff**.
 </ParamField>
 
 <ParamField body="Signature field" param-type="boolean" required="false" deprecated="false" show-location="false">
   Turns the field into a signature-style field when that option is available in your setup.
 </ParamField>
 
-<ParamField body="Type" param-type="string" required="true" deprecated="false" show-location="false" enum="Choose One,Choose Many,Text,Date">
-  Sets the answer format for the field.
+<ParamField body="Type" param-type="string" required="true" deprecated="false" show-location="false" enum="Choose One,Choose Many,Text,Date,Link to a User">
+  Sets the answer format for the field. **Link to a User** connects the field to another person; when you pick it, choose the target user type the link points to (**Staff**, **Camper**, or **Guardian**).
 </ParamField>
 
 <ParamField body="Used for" param-type="string" required="true" deprecated="false" show-location="false">

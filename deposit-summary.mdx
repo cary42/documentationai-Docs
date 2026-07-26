@@ -9,7 +9,7 @@ The Deposit Summary report shows two related views of your payments in Campium:
 
 - **New deposits** – individual payments that are ready to be deposited but are not yet in a batch.
 
-- **Deposit summary** – existing deposit batches, each showing a total, estimated fees, and net amount.
+- **Deposit summary** – existing deposit batches, each showing a total and, when fee reporting is enabled, the fees and net amount reported by the processor.
 
 Use this report to reconcile check and cash activity, group payments into deposits, and compare what Campium shows to your bank and processor statements.
 
@@ -19,17 +19,27 @@ Use this report to reconcile check and cash activity, group payments into deposi
 
 ## Sections in the Deposit Summary
 
-The page contains two main tables:
+The page contains two main areas:
 
 - **New deposits**\
-  Shows recent check, cash, and certain manual payments that **have not been included in any deposit yet**. Use this section when you want to create a new deposit from individual payments.
+  A **collapsed card** that lists recent check, cash, and certain manual payments that **have not been included in any deposit yet**. It is not an always-visible table — expand the card when you want to create a new deposit from individual payments. When the canteen feature is turned on, eligible canteen payments are included here too.
 
 - **Deposit summary**\
-  Shows deposits that have already been grouped and sent through your normal processing. Each row represents a deposit and includes the total amount, estimated fees, and net amount.
+  Shows deposits that have already been grouped and sent through your normal processing. Each row represents a deposit and includes the total amount and, when fee reporting is enabled, the fees and net amount reported by the processor.
 
 <Callout kind="info" collapsed="false">
-  Think of **New deposits** as a staging area for money you still need to group into a deposit, and **Deposit summary** as your history of deposits that can be matched to bank and processor reports.
+  Think of the **New deposits** card as a staging area for money you still need to group into a deposit, and **Deposit summary** as your history of deposits that can be matched to bank and processor reports.
 </Callout>
+
+### Switch between By-batch and All-transactions views
+
+The Deposit summary offers a view toggle:
+
+- **By batch** — Groups payments into deposit batches, one row per batch. This is the reconciliation-friendly view that matches your bank and processor deposits.
+
+- **All transactions** — Lists every individual transaction instead of grouping them into batches, so you can drill into the underlying payments.
+
+Switch between the two views depending on whether you are reconciling whole deposits or reviewing individual transactions.
 
 ## Filters and date range behavior
 
@@ -71,7 +81,7 @@ The **New deposits** table shows individual payments that can be added to a depo
 
 ## Columns in the Deposit summary table
 
-The **Deposit summary** table shows one row per deposit batch, along with totals and estimated fees.
+The **Deposit summary** table shows one row per deposit batch, along with totals and, when fee reporting is enabled, the fees reported by the processor.
 
 - **Date** — The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
 
@@ -81,11 +91,11 @@ The **Deposit summary** table shows one row per deposit batch, along with totals
 
 - **Total** — The full amount of all payments in the deposit, before fees.
 
-- **Fees** — The estimated processing fees for the deposit. Hovering or viewing details may explain how these fees were estimated for your agency.
+- **Fees** *(shown only when enabled)* — The processing fees for the deposit, reported by the Finix settlement API. This column appears only when fee reporting is turned on for your account. The older, legacy deposit view does not include this column.
 
-- **Net** — The deposit amount after subtracting estimated fees. This is the amount you expect to receive after fees, though the exact processor or bank amounts may differ slightly.
+- **Net** *(shown only when enabled)* — The deposit amount after subtracting the fees reported by Finix. This column appears only when fee reporting is turned on for your account, and it too is absent from the legacy deposit view.
 
-- **Grand totals (footer)** — A summary row below the Deposit summary table that shows grand totals for **Total**, **Fees**, and **Net** across all deposits in the current date range.
+- **Grand totals (footer)** — A summary row below the Deposit summary table that shows grand totals for **Total** — and, when the fee columns are shown, **Fees** and **Net** — across all deposits in the current date range.
 
 <Callout kind="info" collapsed="false">
   Use the **grand totals** in the footer to reconcile an entire period against your accounting system, bank deposits, or processor statements.
@@ -213,20 +223,22 @@ After removal:
 - **Unreconciled** — a deposit that still needs review.
 - **Batch Number** — the processor identifier for a deposit group.
 
-## How fees and net are calculated
+## Where the Fees and Net columns come from
 
-Campium estimates fees and net amounts for each deposit based on your agency’s configured processing rates and per‑transaction charges.
+When the **Fees** and **Net** columns are shown, their values are reported by the **Finix settlement API** — they are **not** computed from processing rates you configure for card and ACH transactions.
 
 At a high level:
 
-- The system uses the percentage rates and per‑payment fees you have set for card and ACH transactions.
+- Campium reads the actual settled fee for each deposit from Finix.
 
-- It applies those rates to the payments in the deposit to calculate an **estimated fee amount**.
+- The **Fees** column shows that reported fee amount.
 
-- The **Net** column is the **Total minus the estimated Fees**.
+- The **Net** column is the **Total minus the reported Fees**.
+
+These columns appear only when fee reporting is enabled for your account. The older, legacy deposit view has no **Fees** or **Net** columns at all.
 
 <Callout kind="info" collapsed="false">
-  Fee amounts in this report are **estimates**. They may not match your processor or bank exactly, especially for chargebacks, refunds, or special pricing. Always rely on your processor statement for final fee totals.
+  Because the fee figures come directly from Finix settlement data, they reflect what the processor actually charged rather than an estimate from your own rates. For chargebacks, refunds, or special pricing, still reconcile against your processor statement for final totals.
 </Callout>
 
 ## Run the Deposit Summary report
@@ -251,7 +263,7 @@ Use the Financial area in Campium to open and run the Deposit Summary for reconc
   <Step title="Apply and review the results" icon="play-circle" title-type="p">
     - Apply the date range to refresh the **Deposit summary** table.
 
-    - Confirm that deposit totals, estimated fees, and net amounts look reasonable for the selected period.
+    - Confirm that deposit totals — and, when the fee columns are shown, the reported fees and net amounts — look reasonable for the selected period.
 
     - Review the **New deposits** table to see which recent payments are **not yet included** in any deposit.
   </Step>
@@ -277,7 +289,7 @@ Use the **New deposits** table to group selected payments into a deposit and ass
   </Step>
 
   <Step title="Open the Create Deposit window" icon="play-circle" title-type="p">
-    - Click the **Create Deposit** button in the New deposits footer.
+    - Click the **Create Deposit #** button in the New deposits footer.
 
     - A window opens showing a summary of the payments you selected and a field for the deposit date.
   </Step>
@@ -304,7 +316,7 @@ Use the **New deposits** table to group selected payments into a deposit and ass
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Batch numbers (shown as **Batch Number** in the Deposit summary table) come from downstream Campium and processor workflows, not from the **Create Deposit** action. Use the batch links in the Deposit summary when you need to review the payments inside an existing deposit.
+  Batch numbers (shown as **Batch Number** in the Deposit summary table) come from downstream Campium and processor workflows, not from the **Create Deposit #** action. Use the batch links in the Deposit summary when you need to review the payments inside an existing deposit.
 </Callout>
 
 ## Export, copy, and print options

@@ -1,0 +1,63 @@
+---
+title: Aging Account Balance report
+description: >-
+  See each family's outstanding balance built up over a date range, so you can
+  track how much is owed and follow up on aging balances.
+---
+## Overview
+
+Use the **Aging Account Balance** report to see which families carry an outstanding balance for charges recorded during a date range you choose. It gives you a quick, name-by-name list of who owes money and how much, so you can prioritize collections.
+
+The report is scoped by both a **date range** and, optionally, a **season / program group**. It looks at charges (sale products) recorded during the range and subtracts payments to arrive at each family's balance.
+
+<Callout kind="info" collapsed="false">
+  The date range filters by the **date each charge was recorded in Campium**. If you leave the dates unset, the report defaults to the **last 30 days**.
+</Callout>
+
+## Filters
+
+<ParamField body="Season / program group" param-type="selector" required="false" deprecated="false">
+  Limit the report to a single season or program group. Leave it unset to include charges across all seasons.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Start and end dates that control which charges are counted, based on the date each charge was recorded. Defaults to the last 30 days.
+</ParamField>
+
+## Columns
+
+Each row is one **family**, sorted by last name.
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  The primary contact on the family account. Select the name to open that family's profile.
+</ParamField>
+
+<ParamField body="Campers" param-type="text" required="true" deprecated="false">
+  The campers tied to the family's charges for the selected season and date range.
+</ParamField>
+
+<ParamField body="Balance" param-type="currency" required="true" deprecated="false">
+  The outstanding balance for the family across the charges in range, after payments are applied.
+</ParamField>
+
+The table footer shows the **total balance** across every family in the report.
+
+## Run the report
+
+<Steps>
+  <Step title="Open the report" icon="folder" title-type="p">
+    Open the **Financials** area of your admin portal and choose the **Aging Account Balance** report.
+  </Step>
+
+  <Step title="Set the date range and season" icon="calendar" title-type="p">
+    Pick the start and end dates you want to review, and optionally choose a season or program group. Leave the dates blank to use the last 30 days.
+  </Step>
+
+  <Step title="Review and export" icon="play-circle" title-type="p">
+    Review each family's balance and the total at the bottom. You can sort, search, and export the table using the built-in export tools.
+  </Step>
+</Steps>
+
+<Callout kind="tip" collapsed="false">
+  For a full transaction-level breakdown of a single family's charges, payments, and credits over time, use the **Family Ledger** report instead.
+</Callout>

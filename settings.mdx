@@ -29,7 +29,7 @@ Use the Admin menu to reach the Site Settings screen.
   </Step>
 
   <Step title="Confirm you see the Site Settings tabs" icon="check-circle" title-type="p">
-    At the top of the page, you should see a row of tabs such as **Modules**, **Basic**, **Payment Info**, **Mobile App**, and **Admin** (Admin appears only for superusers).
+    At the top of the page, you should see a row of tabs such as **Modules**, **Basic**, **Payment Info**, **Mobile App**, and **Admin** (Admin appears only for Campium employees).
   </Step>
 </Steps>
 
@@ -51,7 +51,7 @@ Two settings have extra behavior to be aware of:
 
 - **Credit Card Surcharge**: Enter the percentage as a number with or without the percent sign. For example, type `3` or `3%` and Campium treats both as the same value.
 
-If you do not see the **Admin** tab, your user account is not a superuser; those settings are restricted.
+If you do not see the **Admin** tab, your user account is not a Campium employee; those internal settings are restricted to Campium staff.
 
 ## Tabs and settings reference
 
@@ -112,6 +112,20 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
     - **Contracts Module** — Enables staff contracts. Build contract templates, send them out and have the staff sign them digitally.
 
     - **Bunking Module** — Turns on bunking features for assigning campers to bunks or cabins.
+
+    - **Kiosk Mode** — Enables kiosk mode for shared check-in or self-service stations.
+
+    - **Portal AI Chatbot** — Turns on the AI chatbot assistant in the parent portal so families can get answers on their own.
+
+    - **Donor Module** — Enables donor and donation management tools.
+
+    - **Tipping** — Lets families add tips during checkout or payment.
+
+    - **Activity Scheduling** — Turns on activity scheduling so you can plan and assign camp activities.
+
+    - **Staff Scheduler** — Enables the staff scheduler for building and managing staff shifts.
+
+    - **Staff time tracking** — Turns on staff time tracking for recording hours worked.
   </Tab>
 
   <Tab title="Basic" icon="settings">
@@ -130,6 +144,14 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
     - **Portal Logo Height** — Height of the logo in the parent portal, typically in pixels.
 
     - **Email Footer** — Footer content appended to outgoing emails, such as contact info or disclaimers.
+
+    - **User label (singular and plural)** — Overrides the words Campium uses for a person and multiple people (for example, "Camper" and "Campers") so the wording matches your camp.
+
+    - **Product label (singular and plural)** — Overrides the words Campium uses for a product and multiple products so labels match how your camp describes what you sell.
+
+    - **Required field indicator** — Sets the marker (such as an asterisk) shown next to required fields on forms.
+
+    - **Custom JavaScript** — Injects custom JavaScript into your site for advanced customizations. Use with care, since scripts run for your families.
   </Tab>
 
   <Tab title="Payment Info" icon="credit-card">
@@ -153,7 +175,7 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
 
     - **Send Scheduled Payment Receipt** — If enabled, sends a receipt email when a scheduled payment succeeds.
 
-    - **Send Payment Decline Email** — Admin-only. Controls whether Campium emails families when a payment is declined.
+    - **Send Email To User When Scheduled Payment Fails** — Controls whether Campium emails families when a scheduled payment is declined.
 
     - **Failed Payment Notification Email** — Email address where admin-level failed payment notifications are sent.
 
@@ -165,9 +187,9 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
 
     ### Card brands and processing behavior
 
-    - **Accept AMEX** — Admin-only. Determines whether you accept American Express cards.
+    - **Accept AMEX** — Determines whether you accept American Express cards.
 
-    - **Authorize and Capture** — Superuser-only. Controls whether charges are authorized and captured together or follow a different pattern, depending on processor support.
+    - **Accept ACH Payments** — Determines whether families can pay by ACH bank transfer in addition to card.
   </Tab>
 
   <Tab title="Mobile App" icon="monitor">
