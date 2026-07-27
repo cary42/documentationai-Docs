@@ -1,8 +1,9 @@
 ---
 title: Payments report
 description: >-
-  See every payment collected, filter by outcome, payment type, transaction
-  type, discount, or card last four, and export the full filtered list.
+  See every payment collected, filter by outcome, amount, deposit, card brand,
+  who recorded it, payment type, transaction type, discount, or card last four,
+  and export the full filtered list.
 ---
 ## What the Payments report shows
 
@@ -14,9 +15,19 @@ By default the report shows **successful payments only**. Switch to **All outcom
   The legacy "all payments" link opens this same report with **All outcomes** already selected.
 </Callout>
 
+## Open the report
+
+1. Sign in to your Campium admin portal.
+2. Open **Financials** in the left navigation.
+3. Select **Payments**.
+
 ## Filters
 
 Set your filters at the top of the report, then select **Apply**.
+
+Your filter choices stay in the page URL, so you can bookmark or share a filtered view. PDF, XLS, and HTML exports use the same filters as the table.
+
+When filters are active, an **Active filters** row of removable chips appears above the filter cards. Select **Clear all** to reset every filter to its default.
 
 <ParamField body="Season" param-type="selector" required="false" deprecated="false">
   Season or program group to limit payments to.
@@ -34,12 +45,28 @@ Set your filters at the top of the report, then select **Apply**.
   Narrow to a specific card by its last four digits.
 </ParamField>
 
+<ParamField body="Amount" param-type="currency range" required="false" deprecated="false">
+  Minimum and/or maximum amount. Matching uses the payment magnitude, so a payment and a refund of the same size both appear. Leave either bound blank for an open-ended range.
+</ParamField>
+
+<ParamField body="Deposit #" param-type="text" required="false" deprecated="false">
+  Limit to payments settled into a specific deposit or batch ID.
+</ParamField>
+
 <ParamField body="Payment type" param-type="checkboxes" required="false" deprecated="false">
-  Any of credit card, ACH, discount, adjustment, check, and cash. A canteen option appears when your account uses it.
+  Any of **Credit card**, **ACH**, **Discount**, **Adjustment**, **Check**, and **Cash**. A **Canteen** option appears when your account uses it.
 </ParamField>
 
 <ParamField body="Transaction type" param-type="checkboxes" required="false" deprecated="false">
-  Payment / credit, refund / debit, or void.
+  **Payment / credit**, **Refund / debit**, or **Void**.
+</ParamField>
+
+<ParamField body="Card brand" param-type="checkboxes" required="false" deprecated="false">
+  Narrow to one or more card brands (for example Visa, MasterCard, Amex, or Discover). Brands are grouped so older processor codes for the same brand stay together. This section stays empty until your account has card transactions.
+</ParamField>
+
+<ParamField body="Recorded by" param-type="selector" required="false" deprecated="false">
+  Who entered the payment. Choose a staff member, or **Online / system** for self-service checkout and automatic charges.
 </ParamField>
 
 <ParamField body="Discount" param-type="selector" required="false" deprecated="false">
@@ -97,21 +124,25 @@ Set your filters at the top of the report, then select **Apply**.
 Above the table, use the **PDF**, **XLS**, or **HTML** export buttons to download the **full filtered list**. The table buttons inside the report copy or export only the current page.
 
 <Callout kind="tip" collapsed="false">
-  Confirm your outcome, payment type, and date filters before exporting. The export reflects exactly the filtered list you have set.
+  Confirm your outcome, amount, deposit, card brand, recorded-by, payment type, and date filters before exporting. The export reflects exactly the filtered list you have set.
 </Callout>
 
 ## Run the report
 
 <Steps>
+  <Step title="Open Payments" icon="folder" title-type="p">
+    Go to **Financials** → **Payments**.
+  </Step>
+
   <Step title="Set the season and date range" icon="calendar" title-type="p">
     Choose the season and dates you want to review.
   </Step>
 
   <Step title="Choose an outcome and refine" icon="filter" title-type="p">
-    Keep **Successful only** for collected money, or switch to **All outcomes** to investigate declines and returns, then narrow by payment type, transaction type, discount, or card last four.
+    Keep **Successful only** for collected money, or switch to **All outcomes** to investigate declines and returns. Then narrow by **Last 4**, **Amount**, **Deposit #**, payment type, transaction type, **Card brand**, **Recorded by**, or discount. Select **Apply**.
   </Step>
 
   <Step title="Review and export" icon="play-circle" title-type="p">
-    Review the rows and page totals, then export the full filtered list if you need it elsewhere.
+    Review the rows and page totals, then export the full filtered list if you need it elsewhere. Use the **Active filters** chips or **Clear all** when you want to start over.
   </Step>
 </Steps>

@@ -19,7 +19,7 @@ The app uses a side drawer menu opened from the hamburger icon. On the web versi
 The **Home** screen is always available. Other items such as **Photos**, **News**, **Chat**, **Attendance**, **Bus Tracking**, **Billing**, and **To-do Tasks** appear only if the camp has enabled those features for that user.
 
 <Callout kind="info" collapsed="false">
-  If someone says they do not see a menu item, the most likely cause is that the camp has not enabled that feature for their account.
+  If someone says they do not see a menu item, the most likely cause is that the camp has not enabled that feature for their account, or that their role does not include the matching permission.
 </Callout>
 
 ## Signing in
@@ -304,9 +304,16 @@ When adding or editing a pickup person, families can enter the person’s name, 
 
 ## Attendance
 
-Attendance gives staff a dedicated way to update camper status outside of the My Groups screen. Staff use dropdowns to choose the camp or season and the date, then work through the roster.
+Attendance gives staff a dedicated way to update camper status outside of the **My Groups** screen. Staff use dropdowns to choose the camp or season and the date, then work through the roster.
 
 The attendance controls match the group-detail workflow. Staff can mark each camper as **Check In**, **Check Out**, or **Absent** and review a summary card showing the checked-in count with a progress bar.
+
+The **Attendance** menu item appears only when both of these are true:
+
+- **Attendance Module** is enabled in **Admin → Site Settings → Modules**.
+- The staff member's role includes the **Attendance** permission (the same permission used for Online Attendance in the admin portal).
+
+Staff who only need to take attendance for an assigned group can still use **My Groups**. That tab is based on group assignment, not the **Attendance** permission.
 
 ## Bus tracking
 
