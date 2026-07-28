@@ -54,7 +54,7 @@ Each row also includes a dropdown menu (⋮) with actions for that field. Not ev
 | **Edit Profile Field**          | Open the field settings to make changes             | Editable fields only                         |
 | **Options**                     | Add, reorder, or manage answer choices              | Choose One and Choose Many fields only       |
 | **View Usage in Forms/Reports** | See everywhere the field is referenced              | Always visible                               |
-| **Remove Everyone's Response**  | Clear all saved answers while keeping the field     | When removal is allowed for the field        |
+| **Remove Everyone's Response**  | Clear saved answers while keeping the field         | When removal is allowed for the field        |
 | **Delete Profile Field**        | Permanently remove the field definition             | Deletable fields only (blocked if in use)    |
 | **Copy Field**                  | Duplicate the field setup without copying answers   | Non-primary fields only                      |
 | **Access Rights**               | Control which staff roles can see this field's data | When access rights are enabled for the field |
@@ -187,9 +187,26 @@ The row menu includes several maintenance actions for existing fields.
 | ------------------------------ | -------------------------- | ------------------------------------------------------ |
 | **Copy Field**                 | Duplicates the field setup | Copies the field configuration only, not saved answers |
 | **Delete Profile Field**       | Removes the field          | Campium blocks deletion if the field is in use         |
-| **Remove Everyone's Response** | Clears all saved answers   | The field remains in place and can still be used again |
+| **Remove Everyone's Response** | Clears saved answers       | The field remains in place and can still be used again |
 
 System and primary fields cannot be deleted. If you need to stop using one of these fields, set it to inactive instead when that option is available.
+
+### Clear answers with Remove Everyone's Response
+
+Use **Remove Everyone's Response** when you want to wipe answers for a field without deleting the field itself. This is common at season change when parents should answer again.
+
+1. Open **Admin → Profile Fields**.
+2. Open the row menu (⋮) for the field and select **Remove Everyone's Response**.
+3. In the **Remove responses** dialog, choose a scope:
+   - **All responses** removes every saved answer for that field.
+   - **Only responses last updated before:** removes answers whose last update is before the date you pick. Newer answers stay. Pick a date that is today or earlier.
+4. Select **Remove responses** to confirm.
+
+Campium shows how many answers were removed (for example, **Removed 42 responses.**). This cannot be undone, so prefer the date scope when some families have already answered for the new season.
+
+<Callout kind="info" collapsed="false">
+  Last updated uses the answer's last update time, or its created time when no update time is stored. Answers with neither date are kept when you use a date cutoff.
+</Callout>
 
 ## Use Profile Layouts to place fields on profiles
 
