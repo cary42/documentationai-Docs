@@ -10,13 +10,15 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
-<Update label="2026-07-28" description="Date-scoped Remove Everyone's Response on profile fields, and accent-insensitive name search" tags={["feature","improvement"]}>
+<Update label="2026-07-28" description="Attendance Absent vs check-in rules, lasting staff calendar links, date-scoped clear answers, and accent-insensitive search" tags={["feature","improvement","bugfix"]}>
   ## New
 
   - **Date-scoped Remove Everyone's Response** - When clearing answers on a profile field, you can remove **All responses** or only responses last updated before a date you choose. That keeps newer answers when families have already re-answered for the new season. See [Profile Fields](/profile-fields).
 
   ## Updates
 
+  - **Absent and check-in stay consistent** - You cannot **Mark Absent** on a day that already has check-in or check-out activity. Undo those times first. A kiosk **Check-in** also clears an existing **Absent** flag for that day. See [Attendance](/attendance#absent-and-check-in-cannot-both-apply).
+  - **Staff calendar subscription links keep working** - Schedule publish emails still include **Add to Google Calendar**, **Add to Apple Calendar**, and **Open calendar link**. Subscribed calendar apps can keep refreshing those links instead of losing them after about a month. Each publish email has its own link for the schedule in that email. See [Scheduling](/scheduling#what-staff-receive-in-the-notification-email).
   - **Accent-insensitive name search** - Admin search and mobile directory search match names whether or not you type accents (for example, `Alvaro` finds **Álvaro**). See [Profiles](/profiles) and [Mobile App](/mobile-app#search).
 </Update>
 

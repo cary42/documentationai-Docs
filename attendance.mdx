@@ -116,6 +116,8 @@ Use the action buttons in each camper row.
 | **Absent** | Click **Mark Absent** when the camper is not coming that day. |
 | **Undo** | Use **undo** beside the recorded action to reverse a mistake. |
 
+A day cannot be both **Absent** and have check-in or check-out times. See [Absent and check-in cannot both apply](#absent-and-check-in-cannot-both-apply).
+
 A summary line at the top shows totals for checked in, checked out, absent, and total enrollment.
 
 </Step>
@@ -137,6 +139,22 @@ Your organization's selection is saved for future attendance views. On some rost
 </Step>
 
 </Steps>
+
+## Absent and check-in cannot both apply
+
+A camper cannot be marked **Absent** for a day that already has check-in or check-out activity. That keeps the roster, the profile attendance tab, and attendance reports from showing an absent day with arrival times or a pickup person.
+
+| Situation | What happens |
+|---|---|
+| You click **Mark Absent** after **Check-in** or **Check-out** is already recorded | Campium blocks the change and shows: *This camper has check-in/check-out activity on this date. Undo the check-in and check-out before marking them absent.* |
+| You need to mark them absent after a mistaken check-in | Click **undo** next to the check-in (and check-out, if any), then click **Mark Absent**. |
+| Someone was marked absent, then they arrive | On the live roster, **Check-in** stays disabled while the row shows **Absent**. Click **undo** next to **Absent**, then **Check-in**. On the [Attendance Kiosk](/system-report-attendance-kiosk), a successful **Check-in** scan clears the **Absent** flag for that day automatically. |
+
+<Callout kind="info">
+
+Existing past rows that already show both Absent and punches are left as they are. The rules above stop new contradictory records.
+
+</Callout>
 
 ## Staff view
 
@@ -389,6 +407,13 @@ Check your access and the current record state:
 - Verify your user role includes the **Attendance** permission.
 - Refresh the page and try again.
 - If a partial record appears, use **undo** and then retry the action.
+- If the row shows **Absent**, click **undo** next to **Absent** before using **Check-in**.
+
+</Expandable>
+
+<Expandable title="Mark Absent is blocked">
+
+If the camper already has check-in or check-out activity that day, Campium blocks **Mark Absent** and tells you to undo the check-in and check-out first. Click **undo** next to those times, then click **Mark Absent**.
 
 </Expandable>
 
