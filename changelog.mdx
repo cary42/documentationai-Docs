@@ -10,6 +10,36 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-07-31" description="Form response notes, email campaign tracking, season setup review, health report field management, photo auto-tagging, role-based field visibility, security hardening, and performance fixes" tags={["feature","improvement","security","bugfix"]}>
+  ## New
+
+  - **Form response notes** — Staff can add free-text notes to individual form responses directly in the responses table. Click a cell, type a note, and it saves instantly. Notes are staff-only. See [Forms](/forms).
+  - **Email campaign tracking links** — Generate a tracked registration link from the email editor and insert it into mass emails. Clicks and registrations through the link count toward the campaign, so you can measure how effectively each email drives signups. See [Campaigns](/campaigns).
+  - **Health report field management** — A new **Manage fields** button on the Health tab lets admins choose which profile fields appear on the Health tab and health report PDF without navigating to Profile Fields. Changes apply camp-wide. See [Health Report](/health-report).
+  - **Photo auto-tagging with division** — When facial recognition matches a camper in a photo, the camper's division is automatically added as a tag. Tags appear like any manual tag — searchable and clickable in the gallery. Available by request. See [Photo Hosting](/photo-hosting).
+  - **Season setup review improvements** — The Review step now shows who can access the form (e.g., "All families with Active campers can access this form") and displays a green **Registration is open** banner when registration is live. See [Manage Seasons](/manage-seasons).
+
+  ## Updates
+
+  - **Campaign analytics default date range** — Campaign analytics now defaults to the full campaign lifetime instead of the last 30 days, and the Clicks Over Time chart spans the entire range. See [Campaigns](/campaigns).
+  - **Role-based profile field visibility in search** — Profile search results now respect per-field access rights based on staff roles, so staff only see answers to fields their role is granted. Changes take effect immediately. See [Roles & Permissions](/roles-and-permissions).
+  - **Photo auto-tag accuracy** — Auto-tagging now requires a 97% or higher facial recognition match before adding a division tag, preventing look-alike siblings from being tagged in the wrong group's photos. See [Photo Hosting](/photo-hosting).
+  - **Profile search quality** — Profile search no longer matches on common filler words (like "yes," "no," "other," "maybe") that cluttered results. See [Profiles](/profiles).
+
+  ## Security
+
+  - **Password reset security** — Password reset links now use unique, cryptographically random tokens, fixing a bug where users saved in the same second could share a token. Links are consumed immediately after use and can't be replayed. See [Authentication](/authentication).
+  - **Parent portal session security** — Social login handoffs (Google/Apple) now use single-use encrypted tokens instead of forgeable cookies, and portal identity links require encrypted tokens. See [Authentication](/authentication).
+  - **Parent credential CSRF protection** — Changing a password or email from the parent portal now requires a CSRF token and the current password. See [Account](/account).
+
+  ## Bug Fixes
+
+  - Fixed 503 errors when deleting profile photos for accounts with many tagged photos. See [Photo Hosting](/photo-hosting).
+  - Fixed 503 errors on the products page for camps with many staff assignments. See [Manage Seasons](/manage-seasons).
+  - Fixed SQL errors during checkout when a user account couldn't be resolved, which could cause failed purchases for some users.
+  - Fixed the Tagged Campers modal showing "100.0% match" for every camper instead of the real facial recognition match score. See [Photo Hosting](/photo-hosting).
+</Update>
+
 <Update label="2026-07-29" description="Form preview Continue opens product selection, and attendance blocks check-in while Absent" tags={["improvement"]}>
   ## Updates
 
