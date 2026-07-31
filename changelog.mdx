@@ -29,15 +29,8 @@ description: >-
   ## Security
 
   - **Password reset security** — Password reset links now use unique, cryptographically random tokens, fixing a bug where users saved in the same second could share a token. Links are consumed immediately after use and can't be replayed. See [Authentication](/authentication).
-  - **Parent portal session security** — Social login handoffs (Google/Apple) now use single-use encrypted tokens instead of forgeable cookies, and portal identity links require encrypted tokens. See [Authentication](/authentication).
+  - **Parent portal session security** — Social login handoffs (Google/Apple) now use single-use encrypted tokens, and portal identity links require encrypted tokens. See [Authentication](/authentication).
   - **Parent credential CSRF protection** — Changing a password or email from the parent portal now requires a CSRF token and the current password. See [Account](/account).
-
-  ## Bug Fixes
-
-  - Fixed 503 errors when deleting profile photos for accounts with many tagged photos. See [Photo Hosting](/photo-hosting).
-  - Fixed 503 errors on the products page for camps with many staff assignments. See [Manage Seasons](/manage-seasons).
-  - Fixed SQL errors during checkout when a user account couldn't be resolved, which could cause failed purchases for some users.
-  - Fixed the Tagged Campers modal showing "100.0% match" for every camper instead of the real facial recognition match score. See [Photo Hosting](/photo-hosting).
 </Update>
 
 <Update label="2026-07-29" description="Form preview Continue opens product selection, and attendance blocks check-in while Absent" tags={["improvement"]}>
@@ -80,12 +73,9 @@ description: >-
 
   - Fixed the Family Ledger report showing full balances even when families had already made payments.
   - Fixed the [Accounts Receivable](/account-balance) (Account Balance Aging) report not subtracting received payments from outstanding balances when date or product filters were applied.
-  - Fixed sibling discounts being applied to the wrong camper — the discount now goes to the lower-spending camper, matching what the checkout page displayed.
+  - Fixed sibling discounts being applied to the wrong camper - the discount now goes to the lower-spending camper, matching what the checkout page displayed.
   - Fixed social login users with accounts at multiple camps being rejected if the first-matching camp didn't have the mobile app enabled.
   - Fixed Payabli payment webhooks creating orphaned payment records when a customer couldn't be resolved.
-  - Fixed Finix PCI compliance forms potentially showing another camp's form due to a cross-tenant data issue. See [Payment Processors](/payment-processors).
-  - Fixed Finix PCI attestation submissions failing due to a timestamp formatting error.
-  - Fixed the ACH checkout form showing pre-filled test routing and account numbers instead of blank fields.
   - Strengthened Apple Sign In by verifying token signatures against Apple's published keys, preventing forged tokens from being accepted.
 </Update>
 
