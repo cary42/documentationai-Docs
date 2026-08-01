@@ -10,26 +10,25 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
-<Update label="2026-07-31" description="Form response notes, email campaign tracking, season setup review, health report field management, photo auto-tagging, role-based field visibility, security hardening, and performance fixes" tags={["feature","improvement","security","bugfix"]}>
+<Update label="2026-07-31" description="Form response notes, mass-email campaign links, Health tab Manage fields, campaign analytics date range, Tagged Campers match scores, field access in search, and parent credential hardening" tags={["feature","improvement","security"]}>
   ## New
 
-  - **Form response notes** — Staff can add free-text notes to individual form responses directly in the responses table. Click a cell, type a note, and it saves instantly. Notes are staff-only. See [Forms](/forms).
-  - **Email campaign tracking links** — Generate a tracked registration link from the email editor and insert it into mass emails. Clicks and registrations through the link count toward the campaign, so you can measure how effectively each email drives signups. See [Campaigns](/campaigns).
-  - **Health report field management** — A new **Manage fields** button on the Health tab lets admins choose which profile fields appear on the Health tab and health report PDF without navigating to Profile Fields. Changes apply camp-wide. See [Health Report](/health-report).
-  - **Season setup review improvements** — The Review step now shows who can access the form (e.g., "All families with Active campers can access this form") and displays a green **Registration is open** banner when registration is live. See [Manage Seasons](/manage-seasons).
+  - **Form response notes** - On a form's **Responses** tab, use the **Note** column to add a staff-only note on a submission. Click **Click to add note**, edit in **Response note**, then **Save**. See [Forms](/forms#add-a-note-on-a-form-response).
+  - **Campaign tracking from Mass Emails** - On the email **Settings** tab, use **Campaign tracking** to **Generate campaign link**, choose **Website** or **Parent portal**, then **Insert into email**. Clicks and registrations count toward that campaign. See [Mass Emails](/mass-emails#track-registrations-from-a-mass-email) and [Campaigns](/campaigns#generate-a-campaign-link-from-a-mass-email).
+  - **Manage fields on the Health tab** - From a profile **Health** tab, open **Manage fields** to choose which profile fields appear on the Health tab and health report PDF for that user type across your camp. See [Health Report](/health-report#choose-health-tab-fields-from-a-profile).
 
   ## Updates
 
-  - **Campaign analytics default date range** — Campaign analytics now defaults to the full campaign lifetime instead of the last 30 days, and the Clicks Over Time chart spans the entire range. See [Campaigns](/campaigns).
-  - **Role-based profile field visibility in search** — Profile search results now respect per-field access rights based on staff roles, so staff only see answers to fields their role is granted. Changes take effect immediately. See [Roles & Permissions](/roles-and-permissions).
-  - **Photo auto-tag accuracy** — Auto-tagging now requires a 97% or higher facial recognition match before adding a division tag, preventing look-alike siblings from being tagged in the wrong group's photos. See [Photo Hosting](/photo-hosting).
-  - **Profile search quality** — Profile search no longer matches on common filler words (like "yes," "no," "other," "maybe") that cluttered results. See [Profiles](/profiles).
+  - **Campaign analytics default date range** - **View Analytics** now defaults to the campaign start date through today, and **Clicks Over Time** spans every day in the selected range. See [Campaigns](/campaigns#date-range-filter).
+  - **Tagged Campers match score** - In **Tagged Campers**, the percentage under a name is the facial recognition match score (for example, **99.4% match**). Older matches may show a blank score. See [Photo Hosting](/photo-hosting#review-campers-tagged-by-facial-recognition).
+  - **Profile field access in search** - Profile search and autocomplete respect each field's **Access Rights**, so staff only see answers for fields their role can access. See [Profile Fields](/profile-fields#control-access-and-visibility).
+  - **Profile search quality** - Profile search ignores common filler answers such as yes, no, other, and maybe so results stay focused on useful matches. See [Profiles](/profiles).
 
   ## Security
 
-  - **Password reset security** — Password reset links now use unique, cryptographically random tokens, fixing a bug where users saved in the same second could share a token. Links are consumed immediately after use and can't be replayed. See [Authentication](/authentication).
-  - **Parent portal session security** — Social login handoffs (Google/Apple) now use single-use encrypted tokens, and portal identity links require encrypted tokens. See [Authentication](/authentication).
-  - **Parent credential CSRF protection** — Changing a password or email from the parent portal now requires a CSRF token and the current password. See [Account](/account).
+  - **Password reset tokens** - Password reset links use unique tokens and are consumed after use so they cannot be replayed. See [Authentication](/authentication).
+  - **Parent portal session handoff** - Social login handoffs use single-use encrypted tokens. See [Authentication](/authentication).
+  - **Parent credential changes** - Changing a password or email in the parent portal still requires the current password; requests are protected against cross-site form posts. See [Account](/account).
 </Update>
 
 <Update label="2026-07-29" description="Form preview Continue opens product selection, and attendance blocks check-in while Absent" tags={["improvement"]}>
