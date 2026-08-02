@@ -88,7 +88,7 @@ Typical metrics include:
 
 - **Net revenue** – the amount after discounts and adjustments, representing what you should collect for the period.
 
-- **Money received** – the amount actually paid so far, including all payment types.
+- **Money received** – the amount actually paid so far for the selected filters. Adjustments can appear as a linked note under this card. **Balance Transfers** can also appear as a linked note with **(not included)**. Those season-to-season moves are shown for visibility but are not counted in Money Received.
 
 - **Percent received** – how much of your net revenue has been collected as a percentage.
 
@@ -163,7 +163,7 @@ The Payments table summarizes **money received** by payment type. Each row repre
 ### Columns
 
 <ParamField body="Payment Type" param-type="text" required="true" deprecated="false">
-  Category of payment, such as **Credit Card**, **Cash**, **Check**, **ACH**, **Refund**, **Void**, or **Adjustment**.
+  Category of payment, such as **Credit Card**, **Cash**, **Check**, **ACH**, **Refund**, **Void**, **Adjustment**, or **Balance Transfers**.
 </ParamField>
 
 <ParamField body="Amount" param-type="currency" required="true" deprecated="false">
@@ -188,8 +188,10 @@ You may also see:
 
 - **Adjustments** – Manual changes applied to balances, which can increase or decrease totals depending on the context.
 
+- **Balance Transfers** – Credits or balances moved from one season to another. The row is labeled **Balance Transfers (not included in Money Received)**. Select the label to open the Payments report filtered to **Balance Transfer** rows for the same season.
+
 <Callout kind="alert" collapsed="false">
-  Refunds, voids, and negative adjustments reduce your payment totals. When reconciling to bank deposits, be sure to account for these entries alongside positive payment types.
+  Refunds, voids, and negative adjustments reduce your payment totals. When reconciling to bank deposits, be sure to account for these entries alongside positive payment types. Do not treat **Balance Transfers** as new cash collected.
 </Callout>
 
 Use the Payments table to confirm that the total money received for the period matches what you expect from your bank deposits and processor reports, once you consider timing and fees.
