@@ -90,7 +90,6 @@ description: >-
   - Fixed the [Accounts Receivable](/account-balance) (Account Balance Aging) report not subtracting received payments from outstanding balances when date or product filters were applied.
   - Fixed sibling discounts being applied to the wrong camper - the discount now goes to the lower-spending camper, matching what the checkout page displayed.
   - Fixed social login users with accounts at multiple camps being rejected if the first-matching camp didn't have the mobile app enabled.
-  - Fixed Payabli payment webhooks creating orphaned payment records when a customer couldn't be resolved.
   - Strengthened Apple Sign In by verifying token signatures against Apple's published keys, preventing forged tokens from being accepted.
 </Update>
 
@@ -110,7 +109,7 @@ description: >-
 
   ## Updates
 
-  - **Bus ETA improvements** — ETA now refreshes the moment the first rider is picked up or dropped off, instead of waiting up to 5 minutes. Smarter auto-pass logic handles express buses and dense pickup clusters more accurately. See [Transportation](/transportation).
+  - **Bus ETA improvements** — ETA now refreshes the moment the first rider is picked up or dropped off, instead of waiting. Smarter auto-pass logic handles express buses and dense pickup clusters more accurately. See [Transportation](/transportation).
   - **Finix decline messaging** — Parents now see specific, actionable decline messages (e.g., invalid routing number, card issuer policy) instead of generic errors. See [Payment Processors](/payment-processors).
   - **Finix onboarding document uploads** — Voided checks and monthly bank statements are now supported during merchant onboarding, instead of being silently rejected. See [Payment Processors](/payment-processors).
   - **PCI compliance reminders** — Attestation reminder emails now mention the $35/month non-compliance fee with due dates, and are routed to the camp's primary contact first. See [Payment Processors](/payment-processors).
