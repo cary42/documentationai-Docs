@@ -2,20 +2,20 @@
 title: Negative Balance report
 description: >-
   Find families who have overpaid or hold a credit for a season, review the
-  amount, and move that credit to another season when needed.
+  amount, and transfer that credit to another season when needed.
 ---
 ## Overview
 
 Use the **Negative Balance** report to find families whose balance is **below zero** for a season, meaning they have a credit or overpayment on file. It shares its underlying data with the **Account Balance** (Accounts Receivable) report but keeps only the families in credit, so you can review and clean up overpayments.
 
 <Callout kind="info" collapsed="false">
-  A negative balance means the family has paid more than they owe, or a credit was applied. Use this report to spot credits that should be refunded or moved to a future season.
+  A negative balance means the family has paid more than they owe, or a credit was applied. Use this report to spot credits that should be refunded or transferred to a future season.
 </Callout>
 
 ## Filters
 
 <ParamField body="Season / program group" param-type="selector" required="false" deprecated="false">
-  Select the season or program group to review. When you select a **single** season, a per-row **Move** action becomes available so you can move a credit or balance to another season.
+  Select the season or program group to review. When you select a **single** season, a per-row **Transfer** action becomes available so you can transfer a credit or balance to another season.
 </ParamField>
 
 ## Columns
@@ -56,22 +56,22 @@ Each row is a **family** with a negative balance.
 
 The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of all negative balances.
 
-## Move a credit to another season
+## Transfer a credit to another season
 
-When you have a **single** season selected, each row shows a **Move** button. Use it to open **Move Credit / Balance To Another Season** and move that family's credit or balance to another season, for example rolling a leftover credit forward to next summer.
+When you have a **single** season selected, each row shows a **Transfer** button. Use it to open **Balance Transfer To Another Season** and transfer that family's credit or balance to another season, for example rolling a leftover credit forward to next summer.
 
-1. Select **Move** on the family row.
-2. In the modal, confirm **Move Credit / Balance From** the source season.
+1. Select **Transfer** on the family row.
+2. In the modal, confirm **Balance Transfer From** the source season.
 3. Choose **To This Season**.
 4. Enter **Amount**. A positive amount transfers a credit. A negative amount carries an owed balance forward.
-5. Select **Move Balance**.
+5. Select **Transfer Balance**.
 
-You can also start the same modal from a family's **Sales** tab with **Move credit / balance to another season**.
+You can also start the same modal from a family's **Sales** tab (tooltip **Balance transfer to another season**).
 
-After you move a balance, the ledger records show payment type **Balance Transfer**. Filter to them in **Financials → Payments**, or open the linked **Balance Transfers** row from [Revenue Summary](/revenue-summary).
+After you transfer a balance, the ledger records show payment type **Balance Transfer**, with reasons like **Balance Transfer to** and **Balance Transfer from** the other season. Filter to them in **Financials → Payments**, or open the linked **Balance Transfers** row from [Revenue Summary](/revenue-summary).
 
 <Callout kind="alert" collapsed="false">
-  Moving a credit changes real financial records for a live family. Review the family, the amount, and the destination season carefully before confirming.
+  Transferring a credit changes real financial records for a live family. Review the family, the amount, and the destination season carefully before confirming.
 </Callout>
 
 ## Run the report
@@ -82,10 +82,10 @@ After you move a balance, the ledger records show payment type **Balance Transfe
   </Step>
 
   <Step title="Choose a season" icon="settings" title-type="p">
-    Select the season or program group. Choose a single season if you plan to move credits between seasons.
+    Select the season or program group. Choose a single season if you plan to transfer credits between seasons.
   </Step>
 
   <Step title="Review credits and take action" icon="play-circle" title-type="p">
-    Review each family's credit, add a note where useful, and move or refund credits as needed.
+    Review each family's credit, add a note where useful, and transfer or refund credits as needed.
   </Step>
 </Steps>
