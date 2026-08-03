@@ -1,37 +1,128 @@
 ---
 title: Payment Processors
-description: Understand how Campium works with payment processors and review Finix settlement windows, timing, and approval behavior.
+description: >-
+  Understand how Campium works with payment processors and review Finix
+  settlement windows, timing, and approval behavior.
 ---
-
 ## What a payment processor does
 
 A payment processor is a third-party service that handles the actual movement of money when families pay your organization. Payment processors handle actions such as credit card charges, ACH debits, refunds, and related fund transfers on your behalf.
 
 Campium integrates with payment processors, but processor-specific details such as settlement timing, fees, and transaction behavior depend on the provider you use. For those details, refer to the documentation for your specific payment processor.
 
-<Callout kind="info">
-
-Campium supports multiple processors, and the one your camp uses is set per camp. Your camp may be on Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe. Because of this, ACH timing, refund handling, and settlement windows depend on which processor your camp uses. The settlement details below are specific to Finix and do not apply if your camp is on a different processor.
-
+<Callout kind="info" collapsed="false">
+  Campium supports multiple processors, and the one your camp uses is set per camp. Your camp may be on Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe. Because of this, ACH timing, refund handling, and settlement windows depend on which processor your camp uses. The settlement details below are specific to Finix and do not apply if your camp is on a different processor.
 </Callout>
 
 ## Finix
 
-The following settlement details apply only to camps on Finix. If your camp uses a different processor, refer to that processor's documentation instead.
+Reference for admin support and Sage. Applies when your Campium account uses **Finix** as the card/ACH processor.
 
-Finix uses accruing settlements that run on a 24-hour cycle. The settlement window and default settlement timing differ by payment method.
+All times below are **US Eastern** (`America/New_York`).
 
-### Settlement windows
+### Quick answers
 
-- **Credit cards** — 10:00 PM ET to 10:00 PM ET, with a default settlement of **T+2**
-- **ACH** — 8:00 PM ET to 8:00 PM ET, with a default settlement of **T+5**
+| Question                                                    | Answer                                                                                              |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| When does Finix close the daily **card** settlement window? | **10:00 PM Eastern** each day                                                                       |
+| When does Campium capture auth-only card charges?           | **9:00–10:00 PM Eastern** (before the Finix cutoff)                                                 |
+| When does Finix close the daily **ACH** settlement window?  | **8:00 PM Eastern** each day                                                                        |
+| When does money hit my bank?                                | Depends on your Finix **payout profile** (frequency, submission delay). Not a fixed Campium rule.   |
+| Can I void a card charge before it settles?                 | Yes, while it is still **authorized** (not yet captured). After capture, use refund/reversal rules. |
 
-<Callout kind="info">
+### Card payments
 
-Finix settlement windows cannot be adjusted.
+#### Daily settlement accrual (Finix)
 
+Finix accrues card transactions into a daily settlement batch at **10:00 PM Eastern**. Captured card transfers that clear before that cutoff are included in that day's settlement (`ST…` batch id).
+
+Payments captured **after** 10:00 PM Eastern roll into the **next** day's settlement.
+
+#### Auth-only card flow in Campium
+
+Many Finix card checkouts in Campium use **authorize now, capture later**:
+
+1. At checkout, Campium places a **hold** on the card (Finix authorization). The payment shows an **Auth** badge on the profile Sales tab.
+2. Until capture, you can **void** the authorization cleanly (hold released; no transfer yet).
+3. Campium runs a daily capture job between **9:00 PM and 10:00 PM Eastern** that captures all outstanding authorizations before Finix's cutoff.
+4. After capture, Finix creates a transfer (`TR…`). The Auth badge clears and the payment is eligible for that night's settlement batch.
+
+This capture window is the **same for every camp** on Finix. It is tied to Finix's Eastern cutoff, not a per-account setting.
+
+#### Manual capture
+
+On a camper profile **Sales** tab, an authorized Finix card payment may show a **capture** link. You can capture it manually before the nightly job runs if you need funds to settle that day.
+
+#### Card void vs refund
+
+| State                                                | What you can do                                                                                      |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Authorized** (Auth badge)                          | Void cleanly; hold is released                                                                       |
+| **Captured** but not yet in a settlement             | Reversal behavior depends on Finix transfer state                                                    |
+| **Attached to a settlement** (`ST…` on the transfer) | Void is no longer a clean cancel; Finix issues a separate credit that can take several business days |
+
+### ACH payments
+
+#### Daily settlement accrual (Finix)
+
+ACH debits use a **separate, earlier cutoff: 8:00 PM Eastern**. ACH does not use the card authorize/capture flow. Campium creates an immediate debit transfer when the payment is submitted.
+
+ACH submitted after the 8:00 PM Eastern cutoff typically accrues into the **next** business day's settlement.
+
+#### ACH void window in Campium
+
+For ACH voids, Campium enforces a **same-calendar-day window until 6:00 PM Eastern** on some flows (for example canteen). After that, or on a later day, void may no longer be available and a refund/reversal path may apply.
+
+Before voiding or refunding ACH on Finix, Campium checks whether the transfer is already attached to a Finix settlement. If it is, the UI warns that a reversal becomes a separate ACH credit (often 3–5 business days) rather than canceling the original debit in place.
+
+### Bank deposit timing (payouts)
+
+Settlement batching (when Finix groups transactions into an `ST…` batch) is **not** the same as when funds land in your bank.
+
+Your Finix **payout profile** controls funding:
+
+- **NET** vs **GROSS** payout type
+- Payout **frequency** (for example daily, weekly)
+- **submission\_delay\_days** and related schedule fields
+
+Campium reads settlement totals and fees from Finix for the **Deposit Summary** and **Deposit Detail** reports. The date you see as "settled" is when Finix closed the batch, not necessarily the day your bank statement shows the deposit.
+
+### How this appears in Campium
+
+| Where                           | What you see                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Financial → Deposit Summary** | Settled batches grouped by settlement date; Finix batches use `ST…` as batch number         |
+| **Deposit Detail**              | Per-transaction list for a batch; Finix settlements can show processor fees and net deposit |
+| **Profile → Sales**             | **Auth** badge on Finix card charges waiting for nightly capture                            |
+| **Settlement sync**             | A background job links Finix settlement ids to payments and refreshes fee totals            |
+
+If a card payment still shows **Auth** after 10:00 PM Eastern, it was not captured in time and will settle on a later day's batch once captured.
+
+### Common support questions
+
+#### "Why is this card payment still showing Auth?"
+
+The charge is authorized but not yet captured. Campium captures auth-only Finix card payments automatically between 9:00 and 10:00 PM Eastern. You can also capture manually from the profile Sales tab.
+
+#### "Why isn't yesterday's card payment in Deposit Summary yet?"
+
+Check whether it was still in **Auth** status at the 10:00 PM Eastern cutoff. Uncaptured auths are not in a settlement batch. Also confirm your date range on Deposit Summary includes the settlement date, not only the payment date.
+
+#### "Why did an ACH payment settle the next day?"
+
+ACH submitted after the **8:00 PM Eastern** Finix cutoff usually rolls to the next business day's settlement.
+
+#### "When will the deposit hit our bank account?"
+
+Use Deposit Summary for when Finix **settled** the batch. Actual bank funding follows your Finix payout schedule. Check your Finix merchant payout settings or bank statement for deposit timing.
+
+<Callout kind="info" collapsed="false">
+  Finix settlement windows cannot be adjusted.
 </Callout>
 
-### Settlement approval timing
+## Related topics
 
-Finix settlements are typically approved Monday through Friday, excluding holidays, between **1:15 PM ET and 2:15 PM ET**. If a settlement falls on a weekend or holiday, approval timing may shift to the next business day.
+- [Deposit Summary report](deposit-summary) (Financial menu)
+- Finix onboarding and settlement bank account setup (Admin)
+- Card surcharges on Finix (processor-native surcharge program, separate from settlement timing)
+
