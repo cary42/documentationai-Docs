@@ -10,10 +10,26 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-08-03" description="Deposit Summary bank matching and estimated deposit dates, Balance Transfer preview, scheduled decline labels" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Deposit Summary totals and bank match** - On **Financials → Deposit Summary** (**By batch**), summary cards show **Gross**, **Fees**, **Net**, and **ACH returns** for the date range. Use **Find a bank deposit** to filter batches by a bank-statement amount. See [Deposit Summary](/deposit-summary#find-a-bank-deposit).
+  - **Estimated bank deposit dates (Finix)** - Deposit Summary and Deposit Detail show **Est. deposit**. Batch rows can show **In transit** or **Overdue**. See [Deposit Summary](/deposit-summary) and [Payment processors](/payment-processors).
+
+  ## Updates
+
+  - **Balance Transfer preview** - **Balance Transfer To Another Season** shows **From** the source season with the current balance, a **Preview** of ledger entries and before/after balances, then **Confirm Transfer of** the amount. See [Negative Balance](/negative-balance#transfer-a-credit-to-another-season).
+  - **Scheduled decline status** - Failed scheduled charges can show **Declined, no automatic retry** with a note that you can retry manually. See [Retry a failed scheduled payment](/retry-failed-scheduled-payment).
+
+  ## Fixes
+
+  - **Balance Transfer season balances** - Manual Balance Transfers now post as approved ledger rows so source and destination season balances update when the transfer succeeds.
+</Update>
+
 <Update label="2026-08-02" description="Balance Transfer labels on Negative Balance and Sales" tags={["improvement"]}>
   ## Updates
 
-  - **Balance Transfer UI labels** - On **Negative Balance** and the family **Sales** tab, the season-to-season move action is labeled **Transfer** / **Balance Transfer To Another Season**, with **Transfer Balance** to confirm. Ledger reasons use **Balance Transfer to** and **Balance Transfer from** the other season. See [Negative Balance](/negative-balance#transfer-a-credit-to-another-season).
+  - **Balance Transfer UI labels** - On **Negative Balance** and the family **Sales** tab, the season-to-season move action is labeled **Transfer** / **Balance Transfer To Another Season**. Confirm with the previewed **Confirm Transfer of** amount. Ledger reasons use **Balance Transfer to** and **Balance Transfer from** the other season. See [Negative Balance](/negative-balance#transfer-a-credit-to-another-season).
 </Update>
 
 <Update label="2026-08-01" description="Mass-email Clicked and Registered stats, Balance Transfer payment type, and Revenue Summary transfer totals" tags={["feature","improvement"]}>

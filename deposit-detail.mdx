@@ -56,6 +56,10 @@ Each row is one payment.
   The reference for the payment, such as a check number, card description, or reason.
 </ParamField>
 
+<ParamField body="Est. deposit" param-type="date" required="false" deprecated="false">
+  For Finix camps, the estimated date funds arrive in your bank for that payment. Hover for funding timing detail. See [Deposit Summary](/deposit-summary) for **In transit** and **Overdue** status on batch rows.
+</ParamField>
+
 <ParamField body="Amount" param-type="currency" required="true" deprecated="false">
   The amount applied.
 </ParamField>

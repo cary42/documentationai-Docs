@@ -1,6 +1,6 @@
 ---
 title: Deposit Summary report
-description: Use the Deposit Summary in Campium to review new and batched deposits, understand fees and net totals, filter by date, create deposits, and export or print.
+description: Review deposit batches, summary totals, estimated bank deposit dates, and match a bank-statement amount to a batch.
 ---
 
 ## Overview
@@ -40,6 +40,28 @@ The Deposit summary offers a view toggle:
 - **All transactions** — Lists every individual transaction instead of grouping them into batches, so you can drill into the underlying payments.
 
 Switch between the two views depending on whether you are reconciling whole deposits or reviewing individual transactions.
+
+## Summary totals above the batch table
+
+When the **By batch** view has rows for your date range, Campium shows summary totals above the table:
+
+- **Gross** - sum of batch totals in the current date range.
+- **Fees** and **Net** - shown when fee amounts are available for those batches (not for every processor).
+- **ACH returns** - total returned ACH amount for the range, with the return count in parentheses. Hover the card for the ACH return rate against ACH volume when Campium can calculate it.
+
+These cards update with the same date range as the Deposit summary table.
+
+## Find a bank deposit
+
+Use **Find a bank deposit** when you have a dollar amount from your bank statement and need the matching Campium batch.
+
+1. Open **Financials → Deposit Summary** and stay on the **By batch** view.
+2. Set **Start date** and **End date** to cover the statement period.
+3. In **Find a bank deposit**, enter the bank amount (for example `1,234.56`).
+4. The table filters to batches whose **Net** or **Total** matches that amount. The status text shows how many rows matched.
+5. Clear the field with **×** to show the full list again.
+
+If you see **No match**, the bank line may combine more than one batch, or your bank may show a net that already withholds fees differently than Campium.
 
 ## Filters and date range behavior
 
@@ -83,19 +105,27 @@ The **New deposits** table shows individual payments that can be added to a depo
 
 The **Deposit summary** table shows one row per deposit batch, along with totals and, when fee reporting is enabled, the fees reported by the processor.
 
-- **Date** — The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
+- **Date** - The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
 
-- **Batch Number** — The deposit batch number. Click this link to open a detailed view of the payments included in that deposit.
+- **Type** - The tender for the batch, such as credit card or ACH.
 
-- **Number of Items** — How many individual payments are included in the deposit.
+- **Batch Number** - The deposit batch number. Click this link to open a detailed view of the payments included in that deposit.
 
-- **Total** — The full amount of all payments in the deposit, before fees.
+- **# of Items** - How many individual payments are included in the deposit.
 
-- **Fees** *(shown only when enabled)* — The processing fees for the deposit, reported by the Finix settlement API. This column appears only when fee reporting is turned on for your account. The older, legacy deposit view does not include this column.
+- **Total** - The full amount of all payments in the deposit, before fees.
 
-- **Net** *(shown only when enabled)* — The deposit amount after subtracting the fees reported by Finix. This column appears only when fee reporting is turned on for your account, and it too is absent from the legacy deposit view.
+- **Est. deposit** *(Finix)* - Estimated date funds arrive in your bank. Card funding is typically T+2 business days from settlement; ACH is typically T+4 (or T+3 after you qualify). Hover the date for the calculation detail. Status badges can appear next to the date:
+  - **In transit** - Finix is transferring these funds to your bank.
+  - **Overdue** - The estimated date has passed and Campium has not confirmed the bank deposit yet. Weekends, holidays, or funding delays can push the real deposit later.
 
-- **Grand totals (footer)** — A summary row below the Deposit summary table that shows grand totals for **Total** — and, when the fee columns are shown, **Fees** and **Net** — across all deposits in the current date range.
+- **Fees** *(shown only when enabled)* - Processing fees for the deposit. On Finix, hover for whether the figure is the actual settlement fee. On other processors with fee columns, hover can show an estimate breakdown.
+
+- **Net** *(shown only when enabled)* - The deposit amount after subtracting fees. Absent from the legacy deposit view when fee columns are off.
+
+- **Reconciled** - Mark the batch reviewed against your bank activity.
+
+- **Grand totals (footer)** - Totals for **Total**, and when shown, **Fees** and **Net**, across deposits in the current date range.
 
 <Callout kind="info" collapsed="false">
   Use the **grand totals** in the footer to reconcile an entire period against your accounting system, bank deposits, or processor statements.
@@ -132,7 +162,7 @@ Each row in the **Deposit summary** table includes a **Reconciled** column.
   </Step>
 
   <Step title="Compare each deposit" icon="scale" title-type="p">
-    Review each deposit row against your bank activity.
+    Review each deposit row against your bank activity. Use **Find a bank deposit** with the statement amount when you need to locate the matching batch.
   </Step>
 
   <Step title="Mark confirmed rows" icon="check-circle" title-type="p">
