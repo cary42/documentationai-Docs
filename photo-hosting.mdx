@@ -51,7 +51,8 @@ Use the Photo Hosting menu in the admin portal to upload photos by season and ap
 
       <Step title="Upload your photos" icon="upload" title-type="p">
         - Click the upload option in **Portal -> Photo Hosting → Photos**.
-        - Select one or more photos from your computer.
+        - Select one or more photos from your computer. JPEG, PNG, GIF, WebP, and iPhone **HEIC** / **HEIF** photos are supported. Campium converts HEIC and HEIF to JPEG during upload so previews and facial recognition can process them.
+        - Only image files are accepted. PDF, video, and other non-image files are rejected with a message that only images can be uploaded to a photo gallery.
         - Confirm the selected **Season** is correct before you start the upload.
         - You can also upload photos via the app by going to the Gallery and hitting the plus icon towards the bottom right of the screen.
       </Step>
@@ -262,6 +263,14 @@ Use these common questions and answers to resolve Photo Hosting issues quickly.
     - Confirm the photos appear under **Photo Hosting → Photos** for the correct season.
     - Give processing more time if you uploaded a large batch.
     - Check that the **default season** matches what families expect when they open **Photos** or **Gallery**.
+  </Expandable>
+
+  <Expandable title="Why did an HEIC upload fail or a non-image get rejected?" default-open="false">
+    Admin Photo Hosting uploads accept image files only, including HEIC and HEIF from iPhone and iPad.
+
+    - If Campium cannot convert an HEIC photo, try again or set the device camera to **Most Compatible** under **Settings → Camera → Formats**, then re-export or re-capture as JPEG.
+    - If you select a PDF, movie, ZIP, or other non-image file, Campium rejects it and does not add it to the gallery.
+    - WebP images are supported for resize and preview processing.
   </Expandable>
 
   <Expandable title="Why does a parent not see any photos for their camper?" default-open="false">
