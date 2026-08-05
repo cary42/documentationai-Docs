@@ -14,6 +14,19 @@ Open Forms from the main navigation as a top-level left hand navigation item lab
   Some tabs and options inside a form are conditional based on the **Form Type** you select. For example, Registration forms include a Products Layout tab, and Upload a File forms hide the Questions tab.
 </Callout>
 
+## Read the Status column on the Forms list
+
+On the **Forms** list, the **Status** column shows whether each form is available right now:
+
+| Badge or line | Meaning |
+| --- | --- |
+| **Live** | The form is within its **Start Date** and **End Date**, and **Visibility** is **Visible**. |
+| **Hidden** | The form is within its date window, but **Visibility** is **Hidden**. |
+| **Inactive** | The form is outside its date window (before **Start Date** or after **End Date**). |
+| **Opens** followed by a date (and time when needed) | The form's **Start Date** is still in the future. Use this to confirm when an inactive form will become available. |
+
+If a form shows **Inactive** and **Opens**, families cannot see it on the portal until that open date, even when recipients and other settings look correct.
+
 ## Create a new form
 
 Use the **New Form** button on the Forms list to start a new form and configure its core behavior.
@@ -327,7 +340,7 @@ Scheduling settings control when the form is visible, when reminders can talk ab
 
 **Start Date** is the first date the form becomes available on the Portal, assuming the form is also set to **Visible** and recipients are configured.
 
-If families say they cannot see a form yet, check whether the current date is before **Start Date**.
+If families say they cannot see a form yet, check whether the current date is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Inactive** with an **Opens** line under **Status** so you can see the scheduled open date without opening the form editor.
 
 #### End Date
 
@@ -711,7 +724,7 @@ Campium may show yellow warning banners when a form is not currently visible on 
 | Banner or warning state | Likely cause | What to fix |
 | --- | --- | --- |
 | **Hidden** warning | **Visibility** is set to **Hidden** | Change **Visibility** to **Visible** and save settings |
-| **Outside dates** warning | Current date is before **Start Date** or after **End Date** | Review the form's availability window and update the dates if needed |
+| **Outside dates** warning | Current date is before **Start Date** or after **End Date** | Review the form's availability window and update the dates if needed. On the Forms list, a future **Start Date** also shows as **Opens** under **Status**. |
 
 These warnings are useful because they explain why a correctly configured form may still not be visible to recipients.
 
