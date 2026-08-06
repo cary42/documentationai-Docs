@@ -1,16 +1,17 @@
 ---
 title: Discounts
 description: >-
-  Manage discount codes and multi-session discount settings in Campium Admin,
+  Manage discount codes, sibling discounts, and multi-session discount settings,
   including checkout behavior, usage, and troubleshooting.
 ---
 ## What you can do with Discounts
 
-Use the Discounts page in Campium Admin to manage discount codes and multi-session discount settings for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them at checkout.
+Use the Discounts page in Campium Admin to manage discount codes, sibling discounts, and multi-session discount settings for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them at checkout.
 
 Use this page when you want to:
 
 - Create new discount codes for promotions or financial aid
+- Create a **Sibling discount** that applies automatically when a family registers two or more children
 - Edit, archive, or delete existing discounts
 - Control when and where a discount can be used
 - Set up multi-session discounts that reward additional registrations
@@ -36,10 +37,10 @@ When the page loads, you see a list of discounts and any multi-session discount 
 
 ## Discount list: columns and status
 
-Each row in the discount list represents one discount code. Use the columns to understand how each discount behaves.
+Each row in the discount list represents one discount. Use the columns to understand how each discount behaves.
 
 <ParamField body="code" param-type="string" required="false" deprecated="false" show-location="false">
-  **Code** — The code families or staff enter at checkout.
+  **Code** — The code families or staff enter at checkout. Sibling discounts show a **Sibling** badge next to the code.
 </ParamField>
 
 <ParamField body="description" param-type="string" required="false" deprecated="false" show-location="false">
@@ -88,16 +89,29 @@ Use the action menu on each row to edit, archive, or delete a discount.
 
 ## Create a new discount
 
-Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, offer a pay in full discount, or make checkout free for the family.
+Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, offer a pay in full discount, make checkout free for the family, or set up an automatic sibling discount.
 
 <Steps>
   <Step title="Start a new discount" icon="plus" title-type="p">
     Click **Add New Discount** on the Discounts page.
   </Step>
 
+  <Step title="Choose the discount type" icon="settings" title-type="p">
+    Under **Discount Type**, choose:
+
+    - **Code discount**: families type a code at checkout (or staff apply it in Admin).
+    - **Sibling discount**: applied automatically when a family registers two or more children. Every child except the highest-priced one receives it.
+
+    You can have only one sibling discount. If one already exists, **Sibling discount** is disabled and you see a link to **Edit it**.
+  </Step>
+
   <Step title="Enter code and description" icon="edit" title-type="p">
+    For a **Code discount**:
+
     - Fill in **Discount Code**. This is what families or staff enter at checkout.
     - Fill in **Discount Description**. This appears on invoices and receipts.
+
+    For a **Sibling discount**, the code field is hidden. Description defaults to **Sibling Discount** if you leave it blank.
   </Step>
 
   <Step title="Set the discount value" icon="edit" title-type="p">
@@ -110,8 +124,8 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Optionally limit total uses" icon="settings" title-type="p">
-    In **Limit**, enter the maximum number of times this discount can be used.\
-    Leave blank or enter `0` for no limit.
+    For a **Code discount**, in **Limit**, enter the maximum number of times this discount can be used.\
+    Leave blank or enter `0` for no limit. Sibling discounts do not use Limit.
   </Step>
 
   <Step title="Choose how a percent discount applies across sessions" icon="settings" title-type="p">
@@ -122,10 +136,12 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Choose how sessions are counted across children" icon="settings" title-type="p">
-    Set **Combine All Children's Sessions** to control how a percent discount is calculated when a family has more than one child:
+    For a **Code discount**, set **Combine All Children's Sessions** to control how a percent discount is calculated when a family has more than one child:
 
     - **Yes**: The discount is computed across all children's sessions combined.
     - **No**: The discount is computed separately for each child.
+
+    Sibling discounts hide this setting and always calculate per child (not combined across the cart).
   </Step>
 
   <Step title="Configure a pay in full discount" icon="check-circle" title-type="p">
@@ -144,17 +160,21 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Control who can use the discount" icon="users" title-type="p">
-    Set **Allow On Portal?**:
+    For a **Code discount**, set **Allow On Portal?**:
 
     - **Yes**: Families can enter the code during checkout in the parent portal.
     - **No**: Only staff can apply the discount in Admin.
+
+    Sibling discounts always apply on the portal automatically, so this setting is hidden.
   </Step>
 
   <Step title="Control repeat usage" icon="settings" title-type="p">
-    Set **Allow Duplicate?**:
+    For a **Code discount**, set **Allow Duplicate?**:
 
     - **Yes**: The same user can receive the discount multiple times.
     - **No**: The discount applies at most once per user.
+
+    Sibling discounts hide this setting.
   </Step>
 
   <Step title="Choose calculation order" icon="settings" title-type="p">
@@ -181,8 +201,34 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations.
+  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, register two or more children in one checkout and confirm every child except the highest-priced one receives the discount.
 </Callout>
+
+## Create a sibling discount
+
+A **Sibling discount** applies automatically at checkout when a family registers two or more children. Every child except the highest-priced one receives it. Families do not type a code.
+
+<Steps>
+  <Step title="Open Add New Discount" icon="plus" title-type="p">
+    Go to **Admin → Discounts** and click **Add New Discount**.
+  </Step>
+
+  <Step title="Select Sibling discount" icon="users" title-type="p">
+    Under **Discount Type**, choose **Sibling discount**. The explainer confirms it applies when a family registers two or more children.
+  </Step>
+
+  <Step title="Set amount or percent and description" icon="edit" title-type="p">
+    Enter a **Fixed Amount** or **Percent**, and confirm **Discount Description** (defaults to **Sibling Discount** if blank).
+  </Step>
+
+  <Step title="Set remaining rules and save" icon="check-circle" title-type="p">
+    Set **Apply To All Sessions**, **Apply After Other Discounts?**, dates, and product restrictions as needed, then click **Save**.
+
+    Code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, and **Limit**) stay hidden for sibling discounts.
+  </Step>
+</Steps>
+
+If you already have a sibling discount, create flow disables **Sibling discount** and links you to edit the existing one. On the discount list, sibling rows show a **Sibling** badge. When you edit a sibling discount, **Discount Type** shows **Sibling Discount** instead of a code field.
 
 ## Edit, archive, or delete a discount
 

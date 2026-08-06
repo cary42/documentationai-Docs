@@ -109,7 +109,7 @@
                     "path": "account-balance-aging"
                   },
                   {
-                    "title": "Negative Balance",
+                    "title": "Credits",
                     "path": "negative-balance"
                   },
                   {
@@ -647,6 +647,11 @@
                 "title": "Manage Seasons",
                 "path": "manage-seasons",
                 "icon": "lucide-settings2"
+              },
+              {
+                "title": "Guided Season Setup",
+                "path": "guided-season-setup",
+                "icon": "list-checks"
               },
               {
                 "title": "Subproducts",
