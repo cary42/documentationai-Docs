@@ -1,15 +1,17 @@
 ---
-title: Negative Balance report
+title: Credits report
 description: >-
-  Find families who have overpaid or hold a credit for a season, review the
-  amount, and transfer that credit to another season when needed.
+  Find families who hold a credit or overpayment for a season, see where the
+  credit came from, and transfer it to another season when needed.
 ---
 ## Overview
 
-Use the **Negative Balance** report to find families whose balance is **below zero** for a season, meaning they have a credit or overpayment on file. It shares its underlying data with the **Account Balance** (Accounts Receivable) report but keeps only the families in credit, so you can review and clean up overpayments.
+Use the **Credits** report to find families whose balance is **below zero** for a season, meaning they have a credit or overpayment on file. It shares its underlying data with the **Account Balance** (Accounts Receivable) report but keeps only the families in credit, so you can review and clean up overpayments.
+
+Open it from **Financials → Credits**. On the dashboard **Financial Snapshot** card, switch to the **Credits** view, then select a season to open the same report for that season.
 
 <Callout kind="info" collapsed="false">
-  A negative balance means the family has paid more than they owe, or a credit was applied. Use this report to spot credits that should be refunded or transferred to a future season.
+  A credit means the family has paid more than they owe, or a credit was applied. Use this report to spot credits that should be refunded or transferred to a future season.
 </Callout>
 
 ## Filters
@@ -20,7 +22,7 @@ Use the **Negative Balance** report to find families whose balance is **below ze
 
 ## Columns
 
-Each row is a **family** with a negative balance.
+Each row is a **family** with a credit balance.
 
 <ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
   The family's primary contact. Select it to open the profile.
@@ -50,11 +52,21 @@ Each row is a **family** with a negative balance.
   The outstanding balance. In this report the value is negative, representing the credit on file.
 </ParamField>
 
+<ParamField body="Source" param-type="text" required="false" deprecated="false">
+  Where the credit came from. Badges can include:
+
+  - **Balance transfer**: credit moved in from another season
+  - **Adjustment**: a staff adjustment that created credit
+  - **Overpayment**: payment exceeded charges (default when no other source applies)
+
+  A row can show more than one badge when more than one source contributed.
+</ParamField>
+
 <ParamField body="Note" param-type="text" required="false" deprecated="false">
   A free-text note you can edit inline on the row to track follow-up, such as a planned refund or transfer.
 </ParamField>
 
-The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of all negative balances.
+The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of all credit balances.
 
 ## Transfer a credit to another season
 
@@ -78,8 +90,8 @@ After you transfer a balance, the ledger records show payment type **Balance Tra
 ## Run the report
 
 <Steps>
-  <Step title="Open the Negative Balance report" icon="folder" title-type="p">
-    Open the **Financials** area and choose the **Negative Balance** report.
+  <Step title="Open the Credits report" icon="folder" title-type="p">
+    Open the **Financials** area and choose the **Credits** report.
   </Step>
 
   <Step title="Choose a season" icon="settings" title-type="p">
@@ -87,6 +99,6 @@ After you transfer a balance, the ledger records show payment type **Balance Tra
   </Step>
 
   <Step title="Review credits and take action" icon="play-circle" title-type="p">
-    Review each family's credit, add a note where useful, and transfer or refund credits as needed.
+    Review each family's credit and **Source** badges, add a note where useful, and transfer or refund credits as needed.
   </Step>
 </Steps>
