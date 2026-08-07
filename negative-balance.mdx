@@ -20,6 +20,17 @@ Open it from **Financials → Credits**. On the dashboard **Financial Snapshot**
   Select the season or program group to review. When you select a **single** season, a per-row **Transfer** action becomes available so you can transfer a credit or balance to another season.
 </ParamField>
 
+### Filter by credit source
+
+Above the table, use the source buttons to narrow the list. Each button shows a count:
+
+- **All**
+- **Balance transfer**
+- **Adjustment**
+- **Overpayment**
+
+A family can match more than one source. Selecting a source keeps every row that includes that badge. The footer **Balance** total updates to match the filtered rows.
+
 ## Columns
 
 Each row is a **family** with a credit balance.
@@ -66,11 +77,18 @@ Each row is a **family** with a credit balance.
   A free-text note you can edit inline on the row to track follow-up, such as a planned refund or transfer.
 </ParamField>
 
-The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of all credit balances.
+<ParamField body="Actions" param-type="text" required="false" deprecated="false">
+  Per-row shortcuts:
+
+  - **Email this family** (mail icon) opens the family profile and starts the email composer.
+  - **Transfer** appears when a single season is selected (see below).
+</ParamField>
+
+The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of credit balances for the rows you are viewing.
 
 ## Transfer a credit to another season
 
-When you have a **single** season selected, each row shows a **Transfer** button. Use it to open **Balance Transfer To Another Season** and transfer that family's credit or balance to another season, for example rolling a leftover credit forward to next summer.
+When you have a **single** season selected, each row shows a **Transfer** button in **Actions**. Use it to open **Balance Transfer To Another Season** and transfer that family's credit or balance to another season, for example rolling a leftover credit forward to next summer.
 
 1. Select **Transfer** on the family row.
 2. In **Balance Transfer To Another Season**, confirm **From** the source season (the current balance shows under that label).
@@ -99,6 +117,6 @@ After you transfer a balance, the ledger records show payment type **Balance Tra
   </Step>
 
   <Step title="Review credits and take action" icon="play-circle" title-type="p">
-    Review each family's credit and **Source** badges, add a note where useful, and transfer or refund credits as needed.
+    Optionally filter by **Balance transfer**, **Adjustment**, or **Overpayment**. Review each family's credit and **Source** badges, email the family from **Actions**, add a note where useful, and transfer or refund credits as needed.
   </Step>
 </Steps>
