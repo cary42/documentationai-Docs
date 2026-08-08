@@ -281,6 +281,10 @@
                     "path": "session-roster-matrix"
                   },
                   {
+                    "title": "Who Has Sessions By Season",
+                    "path": "system-report-product-coverage"
+                  },
+                  {
                     "title": "Matrix Report",
                     "path": "matrix"
                   },
