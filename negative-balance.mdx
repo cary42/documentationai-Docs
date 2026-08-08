@@ -2,7 +2,7 @@
 title: Credits report
 description: >-
   Find families who hold a credit or overpayment for a season, see where the
-  credit came from, and transfer it to another season when needed.
+  credit came from, email them in bulk, and transfer credit when needed.
 ---
 ## Overview
 
@@ -86,6 +86,19 @@ Each row is a **family** with a credit balance.
 
 The report can also show optional **School** and **profile-field** columns, and the footer totals the sum of credit balances for the rows you are viewing.
 
+## Send an email from the report
+
+Use **Send Email** above the table to message every family in the current credit source filter about their credit amount.
+
+1. Optionally narrow the list with **All**, **Balance transfer**, **Adjustment**, or **Overpayment**.
+2. Select **Send Email** and write your **Message**.
+3. Optionally select **Preview Email** to open a sample in a new tab.
+4. Select **Send Email** in the composer. Campium loads the real recipient list for the selected season and filter, then asks **Send credit email?**
+5. Review the season, the active source filter (when not **All**), how many **families** and **email addresses** will receive the message, a short sample with credit amounts, and any note about families skipped because neither guardian has an email on file.
+6. Confirm with **Send Email**, or choose **Cancel**.
+
+Only families in the current view who have a credit and an email on file are emailed. If nobody qualifies, you see a warning instead of the confirm dialog.
+
 ## Transfer a credit to another season
 
 When you have a **single** season selected, each row shows a **Transfer** button in **Actions**. Use it to open **Balance Transfer To Another Season** and transfer that family's credit or balance to another season, for example rolling a leftover credit forward to next summer.
@@ -117,6 +130,6 @@ After you transfer a balance, the ledger records show payment type **Balance Tra
   </Step>
 
   <Step title="Review credits and take action" icon="play-circle" title-type="p">
-    Optionally filter by **Balance transfer**, **Adjustment**, or **Overpayment**. Review each family's credit and **Source** badges, email the family from **Actions**, add a note where useful, and transfer or refund credits as needed.
+    Optionally filter by **Balance transfer**, **Adjustment**, or **Overpayment**. Review each family's credit and **Source** badges, email one family from **Actions** or use **Send Email** for the filtered list, add a note where useful, and transfer or refund credits as needed.
   </Step>
 </Steps>
