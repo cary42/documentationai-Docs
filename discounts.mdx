@@ -11,7 +11,7 @@ Use the Discounts page in Campium Admin to manage discount codes, sibling discou
 Use this page when you want to:
 
 - Create new discount codes for promotions or financial aid
-- Create a **Sibling discount** that applies automatically when a family registers two or more children
+- Create a **Sibling discount** that applies automatically when a family has two or more children in the same season (in one checkout or across separate registrations)
 - Edit, archive, or delete existing discounts
 - Control when and where a discount can be used
 - Set up multi-session discounts that reward additional registrations
@@ -100,7 +100,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     Under **Discount Type**, choose:
 
     - **Code discount**: families type a code at checkout (or staff apply it in Admin).
-    - **Sibling discount**: applied automatically when a family registers two or more children. Every child except the highest-priced one receives it.
+    - **Sibling discount**: applied automatically when a family has two or more children enrolled or registering in the same season. Every child except the highest-priced one receives it.
 
     You can have only one sibling discount. If one already exists, **Sibling discount** is disabled and you see a link to **Edit it**.
   </Step>
@@ -201,12 +201,12 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, register two or more children in one checkout and confirm every child except the highest-priced one receives the discount.
+  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, try both paths: register two or more children in one checkout, and register a second child after the first is already enrolled. Confirm every child except the highest-priced one receives the discount.
 </Callout>
 
 ## Create a sibling discount
 
-A **Sibling discount** applies automatically at checkout when a family registers two or more children. Every child except the highest-priced one receives it. Families do not type a code.
+A **Sibling discount** applies automatically at checkout when a family has two or more children in the same season. That includes registering them together, or registering another child after a sibling is already enrolled. Campium ranks those children by session price and every child except the highest-priced one receives the discount. Families do not type a code.
 
 <Steps>
   <Step title="Open Add New Discount" icon="plus" title-type="p">
@@ -214,7 +214,7 @@ A **Sibling discount** applies automatically at checkout when a family registers
   </Step>
 
   <Step title="Select Sibling discount" icon="users" title-type="p">
-    Under **Discount Type**, choose **Sibling discount**. The explainer confirms it applies when a family registers two or more children.
+    Under **Discount Type**, choose **Sibling discount**. The on-screen help says it applies when a family registers two or more children. Checkout also counts siblings who are already enrolled in the same season, so a second registration alone still qualifies.
   </Step>
 
   <Step title="Set amount or percent and description" icon="edit" title-type="p">
