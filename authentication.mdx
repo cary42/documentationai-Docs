@@ -10,7 +10,7 @@ description: >-
 Authentication in Campium controls how users access accounts and how passwords are secured across registration, login, and password management flows.
 
 <Callout kind="info" collapsed="false">
-  Recent updates enforce stronger, application-specific password rules across all flows and add Google and Apple sign-in buttons to the login experience.
+  Password reset links expire after 24 hours and work only once. Stronger, application-specific password rules apply across all flows, and Google and Apple sign-in are available on the login page.
 </Callout>
 
 Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password. Client-side checks give real-time feedback, and server-side validation always runs before saving a password, so users cannot bypass the rules.
@@ -67,11 +67,13 @@ Users see updated UI hints in these flows that describe the minimum length for t
 
 Use this procedure when a user has forgotten their password, is locked out after too many failed attempts, or receives an invalid password error and cannot log in.
 
+Password reset links are single-use and stop working after 24 hours. After someone sets a new password with a link, that same link cannot be used again.
+
 <Steps>
   <Step title="Start the reset flow" icon="lock" title-type="p">
-    - Ask the user to open the appropriate Campium login page (campiumdb.com for admins or the portal for end users).
+    - Ask the user to open the appropriate Campium login page (campiumdb.com for admins or the portal for families and staff).
 
-    - Instruct them to select the forgot password option.
+    - On campiumdb.com, select **Forgot password?**. On the portal, select **Lost Password?** (some portal layouts show **Forgot Password?**).
 
     - They should enter the email address associated with their Campium account and submit the form.
   </Step>
@@ -81,11 +83,11 @@ Use this procedure when a user has forgotten their password, is locked out after
 
     - Confirm they check the correct inbox (and spam or promotions folders if necessary).
 
-    - If they do not receive an email after a short delay, confirm the email address you have on file and resend the reset from the admin tools if available.
+    - If they do not receive the email, confirm the email address you have on file. From a profile, you can also choose **Send Password Reset Email** under **Actions**. See [Profiles](/profiles#help-someone-change-or-reset-their-password).
   </Step>
 
   <Step title="Create a new strong password" icon="shield" title-type="p">
-    - When the user opens the reset link, the page shows inline guidance for password requirements, including the minimum length for that site.
+    - When the user opens a valid reset link, the page shows inline guidance for password requirements, including the minimum length for that site.
 
     - Ask portal users to enter a new password that is at least 8 characters long, and campiumdb.com admins to use at least 12 characters, in both cases including uppercase, lowercase, and a special character, and avoiding common or easily guessed passwords.
 
@@ -100,6 +102,15 @@ Use this procedure when a user has forgotten their password, is locked out after
     - If login fails, confirm they are using the updated password and not a previously saved one in the browser.
   </Step>
 </Steps>
+
+### When a reset link has expired or already been used
+
+If the link is older than 24 hours, or was already used to set a password, Campium will not open the change-password form.
+
+- **Portal:** The page title is **This reset link has expired**. It explains that reset links stop working after 24 hours, and shows an email field with **Send me a new link**, plus **Back to login**.
+- **campiumdb.com:** The page shows **This link has expired or has already been used.** and a **Send me a new link** button that opens password recovery so they can request a fresh email.
+
+Have the user request a new link and complete the reset with the newest email. Older links in their inbox will not work.
 
 ## Change your password while logged in
 
@@ -237,7 +248,19 @@ Use these expandable sections to quickly diagnose and resolve the most common au
 
     - Ask them to check spam, junk, and promotions folders.
 
-    - If your tooling allows, resend the reset email from the admin console and verify that your mail system is not blocking delivery.
+    - From the person's profile, open **Actions** and choose **Send Password Reset Email**, then confirm delivery again.
+  </Expandable>
+
+  <Expandable title="User sees that the reset link has expired" default-open="false">
+    Reset links stop working after 24 hours and after they are used once.
+
+    - On the portal, use **Send me a new link** on the expired page (or **Lost Password?** on the login page).
+
+    - On campiumdb.com, use **Send me a new link** or **Forgot password?** on the login page.
+
+    - Ask them to open the newest reset email and ignore older links.
+
+    - If they still cannot reset, confirm their login email on the profile and send **Send Password Reset Email** from **Actions**.
   </Expandable>
 
   <Expandable title="User is locked out after too many failed login attempts" default-open="false">
