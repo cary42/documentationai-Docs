@@ -179,13 +179,19 @@ Use the tabs at the top of the composer to move between content, audience, and h
 
   <Tab title="Logs" icon="bar-chart">
 
-    The **Logs** tab shows delivery and engagement details after you send.
+    The **Logs** tab shows delivery and engagement details after you send. Columns include **Name**, **Email**, **Sent**, **Opened** (when available), and **View**.
 
-    Information on this tab typically includes:
+    The **Sent** column can show:
 
-    - Per-recipient **sent** timestamps.
+    - A send timestamp when that recipient was actually emailed.
 
-    - **Opened** events for each recipient.
+    - **Already emailed** when this person was already covered in the same send for another camper, so Campium did not send a second copy.
+
+    - **Failed** when delivery did not succeed (hover the badge for the reason when one is available).
+
+    - **Pending** or **Not Yet Sent** while the message is still waiting to go out.
+
+    Empty state: **No emails sent yet**, with the note that delivery and open details appear here after you send.
 
     High-level **Sent**, **Opened**, **Clicked**, **Registered**, and **Time Sent** cards appear on the **Settings** tab after the email is sent (see [Review send and campaign stats](#review-send-and-campaign-stats)).
 
@@ -397,7 +403,9 @@ Use these actions in the composer to control how and when your email goes out.
 
   - Works best when **When To Send** is blank or set to the current time.
 
-  - After you confirm, the email status becomes **Sent** and stats begin to update as recipients open it.
+  - After you confirm (**Yes, Send!**), Campium queues recipients. When the full list finishes in one pass, you see **Successfully queued. Your email will be sent shortly.** and the page reloads.
+
+  - Very large recipient lists may stop partway through a single pass. A red message on the **Settings** tab explains that more recipients were queued, that those messages will still send, and that you should click **Send Now** again to queue the rest. Recipients already queued are not emailed twice.
 
 - **Scheduled**
 
@@ -453,8 +461,8 @@ Once your email is sent (or auto-sending), monitor performance from the list and
 
 - On the **Logs** tab, drill into:
 
-  - Individual recipients and whether their email was sent and opened.
+  - Individual recipients and whether their row shows a send time, **Already emailed**, **Failed**, **Pending**, or **Not Yet Sent**.
 
-  - **Time Sent** to confirm when the system delivered the message.
+  - **Opened** when that column is available, and **view** to open the message copy.
 
 Use these insights to refine subjects, sending times, and audiences for future emails.

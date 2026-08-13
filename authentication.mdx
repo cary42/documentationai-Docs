@@ -2,15 +2,15 @@
 title: Authentication and password security
 description: >-
   Understand how Campium authenticates users, enforces strong passwords by
-  application, and handles Google and Apple sign-in, plus admin-focused
-  troubleshooting tips.
+  application, handles portal Change Email and Change Password, and supports
+  Google and Apple sign-in, plus admin-focused troubleshooting tips.
 ---
 ## Overview
 
-Authentication in Campium controls how users access accounts and how passwords are secured across registration, login, and password management flows.
+Authentication in Campium controls how users access accounts and how passwords and login email addresses are secured across registration, login, and account management flows.
 
 <Callout kind="info" collapsed="false">
-  Password reset links expire after 24 hours and work only once. Stronger, application-specific password rules apply across all flows, and Google and Apple sign-in are available on the login page.
+  Password reset links expire after 24 hours and work only once. On the portal, families change their primary login email only from **Change Email** (not by editing it on **My Profile**). Stronger, application-specific password rules apply across all flows, and Google and Apple sign-in are available on the login page.
 </Callout>
 
 Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password. Client-side checks give real-time feedback, and server-side validation always runs before saving a password, so users cannot bypass the rules.
@@ -114,41 +114,84 @@ Have the user request a new link and complete the reset with the newest email. O
 
 ## Change your password while logged in
 
-Use this procedure when a user is already authenticated but wants to update their password for security or policy reasons.
+Use this procedure when a user is already signed in and wants to update their password.
+
+### Portal (families and staff)
+
+On the portal, password fields are not editable on **My Profile**. Use the dedicated **Change Password** page.
 
 <Steps>
-  <Step title="Open account settings" icon="settings" title-type="p">
-    - Ask the user to sign in to Campium if they are not already logged in.
+  <Step title="Open Change Password" icon="settings" title-type="p">
+    - Sign in to the portal.
 
-    - Direct them to their account or profile settings section.
+    - Open the menu under their name and choose **Change Password**.
 
-    - Have them locate the security or password settings option.
+    - Or open **My Profile**, find the **Password** row, and select **Change**.
   </Step>
 
   <Step title="Verify current password" icon="lock" title-type="p">
-    - The form typically asks for the current password before allowing changes.
+    - If the account has a Campium password, enter **Current Password**.
 
-    - The user should enter their existing password to verify their identity.
+    - Accounts that only use Google or Apple sign-in (no Campium password) do not see **Current Password**.
 
-    - If they cannot recall it, redirect them to the reset password flow instead of continuing here.
+    - If they cannot recall their password, use the [reset password](#reset-your-password) flow instead.
   </Step>
 
-  <Step title="Enter and confirm new password" icon="shield" title-type="p">
-    - The user must enter a new password that follows the same rules for their site: portal requires at least 8 characters, while campiumdb.com requires at least 12 characters, and both also require uppercase, lowercase, and a special character and block common or easily guessed passwords.
+  <Step title="Enter and confirm the new password" icon="shield" title-type="p">
+    - Enter **New Password** and **Confirm password**.
 
-    - Inline hints on the form show the requirements for that site and update as they type.
+    - Portal passwords need at least 8 characters, plus uppercase, lowercase, and a special character, and must not be a common weak password.
 
-    - Campium runs server-side validation when they submit; if the password is too short, weak, or on the blocked list, the change fails and the page shows what needs to be fixed.
-  </Step>
-
-  <Step title="Re-authenticate if prompted" icon="check-circle" title-type="p">
-    - After a successful change, Campium may ask the user to re-authenticate.
-
-    - Advise them to sign in again with the new password on any active devices or browsers.
-
-    - Encourage them to update any password managers they use so they do not get locked out later.
+    - Select **Save**. If a rule fails, the page explains what to fix.
   </Step>
 </Steps>
+
+### campiumdb.com (admin)
+
+Admins change passwords from their account security settings on campiumdb.com (12-character minimum, plus the same character and weak-password rules). If they cannot recall the current password, use **Forgot password?** on the login page.
+
+## Change your login email on the portal
+
+Families and portal staff change the primary login email only from **Change Email**. Editing the primary address on **My Profile** is not available. Alternate email addresses on **My Profile** stay editable there.
+
+After a successful change, Campium marks the new address **Unverified**, sends a verification link to that inbox, and notifies the previous address that the login email changed. They can keep signing in with the new address even before they verify it. Use any verified address listed under **Email Addresses** to sign in.
+
+<Steps>
+  <Step title="Open Change Email" icon="envelope" title-type="p">
+    - Sign in to the portal.
+
+    - Open the menu under their name and choose **Change Email**.
+
+    - Or open **My Profile**, find the primary address under **Email Addresses**, and select **Change**.
+  </Step>
+
+  <Step title="Confirm identity and enter the new address" icon="lock" title-type="p">
+    - Review **Current Email** (read-only).
+
+    - If the account has a Campium password, enter **Current Password**. Google- or Apple-only accounts skip this field.
+
+    - Enter **New Email** and **Confirm New Email**.
+
+    - The helper text explains: *We'll send a verification link to your new address. You'll use the new address to log in.*
+
+    - Select **Save**.
+  </Step>
+
+  <Step title="Verify the new address" icon="check-circle" title-type="p">
+    - On success, Campium shows: *Your email address has been updated. Please check your inbox to verify it.*
+
+    - Open the **Email Verification** message and select **Verify email address**.
+
+    - On **My Profile**, the primary address shows **Verified** or **Unverified**. Use **Resend** if the verification email is missing.
+  </Step>
+</Steps>
+
+Common errors on **Change Email**:
+
+- **Your current password is not correct.**
+- **The email addresses you entered do not match.**
+- **The email address specified is already in use.**
+- **Please enter a valid email address.**
 
 ## Email and password login behavior
 
