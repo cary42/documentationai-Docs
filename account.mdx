@@ -1,16 +1,16 @@
 ---
 title: Manage your Campium account
 description: >-
-  Update your password, default season, two-factor authentication, and system
-  digest email preferences in the Campium admin account section.
+  Update your password, default season, email notifications, two-factor
+  authentication, and passkeys in the Campium admin account section.
 ---
 ## Account overview
 
-Use the Campium account section to manage your own login, security, and communication shortcuts. All settings here apply only to your staff account.
+Use the Campium account section to manage your own login, security, and communication preferences. All settings here apply only to your staff account.
 
 You can access these pages from the admin navigation:
 
-- Click on your name in the top right and then click on **My Settings.**
+- Click your name in the top right, then click **Settings**.
 
 <Callout kind="info" collapsed="false">
   Changes you make in the Account section affect only your user login and messages. They do not change other admins or family accounts.
@@ -30,8 +30,7 @@ Account Settings at `/account/` cover:
 
 - Managing passkeys
 
-- Email Digest
-
+- **Email Notifications** (optional staff digests and alerts)
 ### Change your password
 
 Use this form when you know your current password and want to update it.
@@ -234,65 +233,52 @@ Turn on **Require a passkey to sign in** to make your login password-less. With 
 
 ---
 
-### Email digest (System Digest Email)
+### Email Notifications
 
-System Digest Email sends a summary of recent activity to your own email address, including registrations, logins, emails sent, revenue, payments received, and discounts for a selected time period. This setting is only available for Administrators.
+Use the **Email Notifications** tab to choose which optional staff emails you receive. Messages go to the email address on your staff account. Login, tickets, and billing emails always send.
 
-The digest is an HTML email sent to the email address on your staff account. Campium sends the digest based on your personal preferences, so each admin can choose their own schedule.
+Which types appear depends on your role and permissions. If a type is turned off for your organization, you see **This email is turned off for your organization.** and cannot enable it yourself.
 
-#### Where to manage digest settings
+#### Open Email Notifications
 
-Manage your digest settings on the Email Digest settings page:
+1. Click your name in the top right, then click **Settings**.
+2. Open the **Email Notifications** tab.
 
-- Click on your name in the top right and then click on **My Settings.**
+Administrators can also open camp-wide defaults from **Admin → Email Notifications**, or from the link on this tab.
 
-On this page you see a **Email** **Digest** tab with frequency options and a **Send Test Email** button.&#x20;
+#### Optional email types
 
-<Callout kind="info" collapsed="false">
-  Digest settings apply to your login only. Other admins need to configure their own digest preferences on the same settings page.
-</Callout>
+| Type | What it covers | How you control it |
+| --- | --- | --- |
+| **Activity digest** | Summary of registrations, logins, emails sent, revenue, payments, and discounts | Check **Daily**, **Weekly**, and/or **Monthly** |
+| **Payment health digest** | Families with upcoming charge issues, open ACH returns, or a balance and no primary payment method | Toggle **Email me this digest** |
+| **ACH returns digest** | Open ACH returns for your active seasons | Set **Frequency** to **Off**, **Daily**, or **Weekly (Mondays)** |
+| **Wait list signup alerts** | An email when someone new joins a wait list | Toggle **Email me when someone joins a wait list** |
+| **Campium product emails** | Optional product and announcement emails from Campium | Toggle **Email me Campium product updates** |
 
-#### Digest frequencies and coverage
+Activity digest schedules:
 
-Each digest covers a specific time window and is sent after that window ends.
+- **Daily** - Sent every morning covering the previous day.
+- **Weekly** - Sent Sunday mornings covering the prior Sunday through Saturday.
+- **Monthly** - Sent the 1st of each month covering the prior calendar month.
 
-- **Daily**: Sent every morning, covering the previous day.
+If you enable more than one Activity digest frequency, you receive a separate email for each schedule.
 
-- **Weekly**: Sent Sunday mornings, covering the prior Sunday through Saturday.
+#### Save and preview
 
-- **Monthly**: Sent on the 1st of each month, covering the prior calendar month.
+1. Adjust the toggles or frequencies you want.
+2. Click **Save Preferences**.
+3. For the Activity digest, use **Send Test Email** under **Preview** to send a sample to your address (when that type is available and not turned off for your organization).
 
-Digest metrics include:
+#### Turn a type off for everyone
 
-- Registered users count
+Administrators can turn optional staff email types on or off for the whole organization:
 
-- Login count
+1. Go to **Admin → Email Notifications**.
+2. Use the switch next to each type (**Activity digest**, **Payment health digest**, **ACH returns digest**, **Wait list signup alerts**, **Campium product emails**).
+3. Click **Save**.
 
-- Emails sent count
-
-- Revenue sum
-
-- Payments received sum
-
-- Discounts count and total discount amount
-
-If you enable more than one frequency, you receive a separate email for each schedule you select.
-
-<Callout kind="tip" collapsed="false">
-  Start with the weekly digest to get a broad view of activity, then add daily or monthly digests if you want more detailed or long-range summaries.
-</Callout>
-
-#### Turn the email digest on or off
-
-Use the checkboxes on the System Digest Email card to opt in or out of daily, weekly, or monthly summaries.
-
-<Callout kind="info" collapsed="false">
-  To fully opt out of system digests, clear all three checkboxes (Daily, Weekly, and Monthly). When no frequencies are selected, Campium does not send you digest emails.
-</Callout>
-
-#### Send a test digest email
-
-Use the test option to confirm delivery and preview what the digest looks like before you rely on it for monitoring.
+When a type is on for the organization, each person still chooses their own preferences under **Settings → Email Notifications**. Login, tickets, and billing emails always send.
 
 Keep your account settings up to date and encourage other admins with sensitive access to:
 
@@ -300,7 +286,5 @@ Keep your account settings up to date and encourage other admins with sensitive 
 
 - Turn on two-factor authentication
 
-- Standardize communications with well-named canned messages
-
-- Enable a System Digest Email schedule that matches how closely they monitor activity
+- Choose **Email Notifications** schedules that match how closely they monitor activity
 
