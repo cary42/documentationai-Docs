@@ -344,6 +344,19 @@ Scheduling settings control when the form is visible, when reminders can talk ab
 
 If families say they cannot see a form yet, check whether the current date is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Inactive** with an **Opens** line under **Status** so you can see the scheduled open date without opening the form editor.
 
+#### Form opening email for administrators
+
+The day before a form’s **Start Date**, Campium emails a **Form opening** digest to users with the **Administrator** role. The subject looks like **{Form name} opens tomorrow** (or **{N} forms open tomorrow** when more than one form opens that day).
+
+Each form card can include:
+
+- **Type** and **Visibility**
+- **Opens** (the start date)
+- **Notes** such as **Ready**, **Hidden on Portal**, **Test form**, or **No items for purchase**
+- Links **Open form settings →** and **View forms →**
+
+Use those notes to fix **Visibility**, clear a test form flag, or add products before families expect the form. There is no separate toggle for this email. It is not controlled by **Settings → Email Notifications**.
+
 #### End Date
 
 **End Date** is the date Campium stops showing the form on the Portal. This is the setting that actually hides the form when the availability window ends.

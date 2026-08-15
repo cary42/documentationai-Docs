@@ -209,6 +209,10 @@
                     "path": "system-report-charts"
                   },
                   {
+                    "title": "Season Recap",
+                    "path": "system-report-season-recap"
+                  },
+                  {
                     "title": "Chronological User Registration Report",
                     "path": "system-report-chronological-user-registration"
                   },
