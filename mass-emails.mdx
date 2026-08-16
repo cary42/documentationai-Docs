@@ -1,6 +1,6 @@
 ---
 title: Mass Emails
-description: Send targeted mass emails to families and users in Campium, including filters, scheduling, marketing flags, attachments, and basic delivery stats.
+description: Send targeted mass emails to families and users in Campium, including filters, scheduling, live delivery progress, attachments, and performance stats.
 ---
 ## Access the Mass Emails page
 
@@ -33,6 +33,8 @@ Key parts of the list:
     - **Sent** - Fully sent to all selected recipients.
 
     - **Auto-Sending** - Ongoing email that automatically sends to new users who match its recipient filters.
+
+    While a send is still running, the Status column can also show a live chip: **Preparing…**, **Sending X of Y**, or **Did not send** (if Campium could not build the recipient list).
 
   - **Opens / Sends** - At-a-glance open and send counts for emails that have gone out. Drafts and unsent rows show **Not sent**.
 
@@ -399,9 +401,19 @@ Use these actions in the composer to control how and when your email goes out.
 
   - Works best when **When To Send** is blank or set to the current time.
 
-  - After you confirm (**Yes, Send!**), Campium queues recipients. When the full list finishes in one pass, you see **Successfully queued. Your email will be sent shortly.** and the page reloads.
+  - After you confirm (**Yes, Send!**), Campium queues recipients, then delivers messages in batches. You can leave the page; delivery keeps going.
 
-  - Very large recipient lists may stop partway through a single pass. A red message on the **Settings** tab explains that more recipients were queued, that those messages will still send, and that you should click **Send Now** again to queue the rest. Recipients already queued are not emailed twice.
+  - On the **Settings** tab, a **Sending this email** panel shows progress while the send is in flight:
+
+    - **Preparing recipients** - Campium is still building the recipient list. No X of Y count yet.
+
+    - **Delivering** - Shows **X of Y messages delivered**, plus tallies for **failed** and **skipped** when those apply.
+
+    - **Retry N failed** - Requeues only failed delivery rows. Opted-out, archived, and already-emailed (skipped) recipients stay skipped.
+
+  - If the queue job fails before any messages go out, the panel shows **This email did not send**. Check the **Recipients** tab, then send again.
+
+  - Very large recipient lists may need a second **Send Now** click to finish queueing. A red message on the **Settings** tab explains that more recipients were queued, that those messages will still send, and that you should click **Send Now** again to queue the rest. Recipients already queued are not emailed twice.
 
 - **Scheduled**
 
@@ -410,6 +422,8 @@ Use these actions in the composer to control how and when your email goes out.
   - The email status shows as **Scheduled** on the list page.
 
   - Campium automatically sends the email at the scheduled time; you can usually edit or cancel it while it is still in Scheduled status.
+
+While delivery is in progress, the performance funnel (**How this email performed**) stays hidden so the page shows one send readout at a time. After delivery finishes, the funnel returns with **Sent**, **Opened**, and related metrics.
 
 ### Resend to non-openers
 
@@ -447,18 +461,14 @@ Check that attachments open correctly from your **Send Test Email** before you s
 
 ## After sending: stats and logs
 
-Once your email is sent (or auto-sending), monitor performance from the list and the **Logs** tab.
+Once your email is sent (or auto-sending), monitor performance from the list and the composer.
 
-- On the **Mass Emails list**, review:
+- On the Mass Emails list, use **Opens / Sends** and **Date Sent** for a quick read.
 
-  - **Sent** count, **Opened** count, and **Open rate**.
+- While a send is still delivering, open the email to watch the **Sending this email** panel, or watch the live **Sending X of Y** chip on the list.
 
-  - **Status** to confirm the email is Sent, Scheduled, Draft, or Auto-Sending.
+- After delivery finishes, the composer **Settings** tab shows **How this email performed** (Sent, Opened, and campaign click metrics when tracking is on).
 
-- On the **Logs** tab, drill into:
+- Use the **Logs** tab for per-recipient delivery detail (timestamps, **Already emailed**, **Failed**, **Pending**, and related statuses).
 
-  - Individual recipients and whether their row shows a send time, **Already emailed**, **Failed**, **Pending**, or **Not Yet Sent**.
-
-  - **Opened** when that column is available, and **view** to open the message copy.
-
-Use these insights to refine subjects, sending times, and audiences for future emails.
+Use these tools to decide whether to resend to non-openers or adjust your next campaign.
