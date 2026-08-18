@@ -60,6 +60,23 @@ Open the parent portal when a family needs to fix a declined or returned schedul
   </Step>
 </Steps>
 
+### Check the status of a scheduled payment
+
+The **Scheduled Payments** table on the family's portal account page has a **Status** column, so a charge that fails stays visible instead of quietly dropping off the list.
+
+| Status | What it means |
+| --- | --- |
+| **Scheduled** | The charge has not run yet. It counts toward the scheduled total shown under the table. |
+| **Failed** | The charge ran and did not go through. The row shows why, what to do next, and a **Manage payment methods and retry** link. |
+
+A failed charge is removed from the scheduled total, because that money is no longer on its way. The amount is still owed, so the family should retry it or the balance stays open.
+
+<Callout kind="info">
+
+The **Status** column appears for camps processing with Finix or Payabli. On other processors the table lists upcoming payments only, and families find failed charges under **Payment Methods → Failed Payments**.
+
+</Callout>
+
 ### Before you retry
 
 You need at least one valid payment method on file before you can retry. That can be a credit card or bank account, depending on your organization's setup.

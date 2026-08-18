@@ -10,6 +10,27 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-08-18" description="Bulk photo download, scheduled payment status for families, form availability badge" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Download all photos** - On the portal photo gallery, a family that has unlocked high-resolution photos for a season sees **Download all photos**. Campium bundles every photo for that camper and season, then emails a download link. See [Photo Hosting](/photo-hosting#download-a-full-season-of-photos).
+  - **Scheduled payment status for families** - The portal **Scheduled Payments** table adds a **Status** column showing **Scheduled** or **Failed**, the reason a charge failed, the next step to take, and a **Manage payment methods and retry** link. Available on Finix and Payabli. See [Retry a failed scheduled payment](/retry-failed-scheduled-payment#check-the-status-of-a-scheduled-payment).
+  - **Portal availability badge in the form editor** - The form editor header shows **Open**, **Scheduled**, **Closed**, **Hidden**, or **No dates set**, with a timing line such as **Opens Tue 9:00 AM**. It is visible from every tab. See [Forms](/forms#portal-availability-badge).
+
+  ## Updates
+
+  - **Preview any optional staff email** - All six optional emails now offer a preview. **Admin → Email Notifications** uses **Send test**, and **Settings → Email Notifications** uses **Send me a sample**. Both work even when the type is turned off for everyone, so you can check the content before you turn it on. See [Account](/account#email-notifications).
+  - **Save Settings moved to a bottom action bar** - On the form **Settings** tab, **Save Settings** and the **Auto-Save** switch sit in a bar pinned to the bottom of the card, so they stay reachable while you scroll a long settings form. See [Forms](/forms#save-settings-behavior).
+
+  ## Fixes
+
+  - **Form Start Date and End Date now require a time** - A date entered without a time saved an empty availability window and the date you just typed disappeared without an error. Saving is now blocked until the time is filled in. See [Forms](/forms#scheduling).
+  - **Send did nothing on an already-saved mass email** - Clicking **Send Now** and confirming produced no email, no error, and no change to the button when the email had no unsaved edits. Send now goes through.
+  - **Finished mass emails stayed listed as drafts** - Completed sends are marked sent instead of remaining in the draft state.
+  - **Saved bank accounts were charged the credit card surcharge** - A repeat checkout paid with a bank account already on file could pick up the credit card surcharge. Only credit card payments are surcharged.
+  - **Report export downloaded without a filename** - Payments report PDF exports saved as a nameless `.pdf`. They now save as `export.pdf`.
+</Update>
+
 <Update label="2026-08-15" description="News redesign, mass email send progress, Form opening digest preferences" tags={["feature","improvement"]}>
   ## New
 
