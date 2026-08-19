@@ -55,10 +55,12 @@ Open the parent portal when a family needs to fix a declined or returned schedul
 
   If your account has failed scheduled payments, a **Failed Payments** section appears below your saved payment methods.
 
-  Each row shows the scheduled date, amount, processor error message, and the payment method that was used if one was attached to the original attempt.
+  Each row shows the scheduled date, amount, error text, and the payment method that was used if one was attached to the original attempt. On Finix and Payabli billing pages, the Error column can also show a short next-step line under the processor message (for example, update the card on file, then retry).
 
   </Step>
 </Steps>
+
+On Finix and Payabli accounts, the parent **Account** page can also show failed scheduled payments in the payment list **Status** column (**Failed** badge, reason, optional next-step text, and a **Manage payment methods and retry** link). USIO billing shows the **Failed Payments** section with the raw error message and does not add the guided next-step line.
 
 ### Before you retry
 
@@ -70,7 +72,7 @@ If the **Retry** button is disabled, add a payment method in **Payment Methods**
 
 </Callout>
 
-If the saved card is expired or was declined, add a new method or update the existing one before you retry. Retrying with the same invalid method usually fails again.
+If the saved card is expired or was declined, add a new method or update the existing one before you retry. Retrying with the same invalid method usually fails again. When Campium has blocked repeats of the same decline, follow the on-screen message to use a different method or contact the camp office.
 
 ### Retry the payment
 
@@ -82,15 +84,15 @@ If the saved card is expired or was declined, add a new method or update the exi
   </Step>
   <Step title="Submit the retry" icon="play-circle">
 
-  Click **Retry**, then confirm when prompted.
+  Click **Retry**, then confirm when prompted. The confirm can include the payment amount and the method you selected.
 
   </Step>
   <Step title="Review the result" icon="check-circle">
 
   Wait for the result message.
 
-  - **Success** — the charge went through, and the row should disappear after the page refreshes.
-  - **Failure** — the processor declined the charge again. Read the error, update the payment method if needed, and retry again or contact your camp office.
+  - **Success** - the charge went through, and the row should disappear after the page refreshes.
+  - **Failure** - the processor declined the charge again. Read the error and any next-step line, update the payment method if needed, and retry again or contact your camp office.
 
   </Step>
 </Steps>

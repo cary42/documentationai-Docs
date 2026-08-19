@@ -190,8 +190,21 @@ Families view photos differently depending on whether they use the web parent po
       <Step title="Use My Photos (when facial recognition is enabled)" icon="users" title-type="p">
         - When facial recognition is turned on and the family has opted in, they see a **My Photos** section.
         - **My Photos** shows photos CampiumDB believes contain their camper, based on the profile photo and facial recognition settings.
+        - Open a camper under **My Photos** to view that camper's matched photos for the season.
+      </Step>
+
+      <Step title="Download all photos for a camper" icon="download" title-type="p">
+        - After the family unlocks high-resolution photos for the season (the one-time season fee), the per-camper gallery shows **Download all photos**.
+        - Helper text under the button: **We'll bundle every photo on this page and the rest of this season, then email you a download link.**
+        - Click **Download all photos**. Campium queues the bundle and shows a success message such as that it is putting the photos together and will email the download link.
+        - When the zip is ready, the family receives an email from Campium with subject **Your camp photos are ready to download**. The link works for **12 hours**. After that, they request the download again from the gallery.
+        - If a download is already in progress, Campium does not queue a second job and tells them to watch their email for the link.
       </Step>
     </Steps>
+
+    <Callout kind="info" collapsed="false">
+      **Download all photos** appears only on a camper's **My Photos** gallery after high-resolution access is unlocked for that season. It is not available from date or tag browse views. The bundle includes active facial matches for that camper and season. Very large galleries may fail with an email asking the family to contact the camp for help.
+    </Callout>
   </Tab>
 
   <Tab title="Mobile app (Gallery)" icon="phone">
