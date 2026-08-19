@@ -27,6 +27,20 @@ On the **Forms** list, the **Status** column shows whether each form is availabl
 
 If a form shows **Inactive** and **Opens**, families cannot see it on the portal until that open date, even when recipients and other settings look correct.
 
+## Read the availability badge in the form editor
+
+When you open a form, an availability badge appears beside the form name on every tab (and as the leading chip on the status row in Guided Season Setup). It reflects whether the form would show on the Portal right now, based on **Visibility** and **Start Date** / **End Date**:
+
+| Badge | Meaning |
+| --- | --- |
+| **Hidden** | **Visibility** is **Hidden** (hidden from the portal). |
+| **No dates set** | The form needs a start and end date to open. |
+| **Scheduled** | The form opens on a future **Start Date** (the badge meta shows when). |
+| **Closed** | The **End Date** has passed. |
+| **Open** | The form is visible on the Portal through the **End Date**. |
+
+After you click **Save Settings**, the badge updates without a full page reload.
+
 ## Create a new form
 
 Use the **New Form** button on the Forms list to start a new form and configure its core behavior.
@@ -126,7 +140,7 @@ Use **Settings** to define the core behavior and lifecycle of the form.
 - Lets you enable or disable **Lock Form After Completion**, which prevents users from changing responses once submitted.
 - Sets **Form Status After Completion** and **User Status After Completion**, which determine back-office status values after a user finishes the form.
 - Includes fee, payment, discount, email, and custom text panels that control how the form behaves for registrations and payments.
-- Includes the **Save Settings** button you use to create or update the form record.
+- Includes a bottom sticky action bar with **Auto-Save** and **Save Settings**. The bar stays visible while you scroll the **Settings** tab.
 
 You must complete Settings and click **Save Settings** before the form behaves correctly for recipients.
 
@@ -277,9 +291,9 @@ Scheduling settings control when the form is visible, when reminders can talk ab
 
 #### Start Date
 
-**Start Date** is the first date the form becomes available on the Portal, assuming the form is also set to **Visible** and recipients are configured.
+**Start Date** is when the form shows up on the Portal, assuming the form is also set to **Visible** and recipients are configured. The field is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
 
-If families say they cannot see a form yet, check whether the current date is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Inactive** with an **Opens** line under **Status** so you can see the scheduled open date without opening the form editor.
+If families say they cannot see a form yet, check whether the current date is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Inactive** with an **Opens** line under **Status** so you can see the scheduled open date without opening the form editor. In the form editor, the availability badge shows **Scheduled** with the open date.
 
 #### Form opening email for administrators
 
@@ -298,7 +312,7 @@ Administrators control this digest under **Settings → Email Notifications** as
 
 #### End Date
 
-**End Date** is the date Campium stops showing the form on the Portal. This is the setting that actually hides the form when the availability window ends.
+**End Date** is when the form disappears from the Portal. Like **Start Date**, it is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
 
 Use **End Date** when you want a form to disappear completely after a deadline or event window passes.
 
@@ -650,7 +664,9 @@ Leave it off when the form is short or conversational and numbering would add vi
 
 Saving a form does more than store text on the page. **Save Settings** updates the current Settings values and can change which tabs, warnings, and workflows are available in the editor.
 
-After you click **Save Settings**, Campium keeps you in the form editor. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
+On the **Settings** tab, **Save Settings** and the **Auto-Save** switch sit in a sticky bar at the bottom of the form. The bar stays in view while you scroll. **Auto-Save** applies only to your account, not everyone at your organization.
+
+After you click **Save Settings**, Campium keeps you in the form editor and refreshes the availability badge. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
 
 ### Save Settings behavior
 
@@ -658,6 +674,7 @@ After you click **Save Settings**, Campium keeps you in the form editor. Use tha
 - **Updates conditional fields and tabs** based on **Form Type**.
 - **Keeps you in the editor** so you can continue with Recipients, Questions, Products Layout, or Responses.
 - **Preserves the current workflow** without sending the form automatically.
+- **Blocks incomplete date-times** when **Start Date** or **End Date** has a date but no time.
 
 ### Yellow warning banners
 

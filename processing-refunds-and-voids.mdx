@@ -16,9 +16,13 @@ Refunds become available once the original charge has fully settled to your merc
 
 - For **credit card payments**, this is typically the next day.
 
-- For **ACH payments**, settlement typically takes **3–5 business days**.
+- For **ACH payments**, settlement typically takes **3-5 business days**. Until an ACH payment settles, Campium does not offer **refund**. Use **void** to cancel the debit instead.
 
 Before settlement, the payment is still pending and you will see a **Void** option instead of **Refund**. Voiding cancels the payment before it completes.
+
+<Callout kind="info" collapsed="false">
+  If you open **refund** on an ACH payment that has not settled yet, Campium shows: **This ACH payment has not settled yet. Void it to cancel the debit. You can refund only after it settles.** Use **Void this payment** (or **Close**), then issue a refund after settlement. The same message appears on profile payments and on **Canteen** → **Payments**.
+</Callout>
 
 <Callout kind="info" collapsed="false">
   If the transaction has not settled yet, you see a **Void** option that cancels the pending payment. Depending on your daily batching cutoff, you may see a message indicating you can no longer void the transaction. When that message appears, wait for the payment to settle, then issue a refund instead of a void.
