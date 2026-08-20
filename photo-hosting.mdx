@@ -194,16 +194,17 @@ Families view photos differently depending on whether they use the web parent po
       </Step>
 
       <Step title="Download all photos for a camper" icon="download" title-type="p">
-        - After the family unlocks high-resolution photos for the season (the one-time season fee), the per-camper gallery shows **Download all photos**.
-        - Helper text under the button: **We'll bundle every photo on this page and the rest of this season, then email you a download link.**
-        - Click **Download all photos**. Campium queues the bundle and shows a success message such as that it is putting the photos together and will email the download link.
-        - When the zip is ready, the family receives an email from Campium with subject **Your camp photos are ready to download**. The link works for **12 hours**. After that, they request the download again from the gallery.
-        - If a download is already in progress, Campium does not queue a second job and tells them to watch their email for the link.
+        - After the family unlocks high-resolution photos for the season (the one-time season fee), the per-camper gallery shows a download status area.
+        - When no bundle is waiting, they see **Download all photos** with helper text: **We'll bundle every photo on this page and the rest of this season, then email you a download link.**
+        - Click **Download all photos**. The gallery switches to preparing copy: **We're putting your photos together. We'll email a download link when they're ready.** Campium also emails the family when the zip is ready (subject **Your camp photos are ready to download**).
+        - When the bundle is ready, the gallery shows how many photos are ready and **Download your photos** (or separate **Part 1**, **Part 2**, … links for a large multi-part download). Links work for **12 hours**.
+        - After the link expires, the gallery shows **That download link has expired.** with **Request again**. If the build failed, it shows a short reason and **Request again**.
+        - If a download is already preparing, Campium does not queue a second job and keeps the preparing message on the gallery.
       </Step>
     </Steps>
 
     <Callout kind="info" collapsed="false">
-      **Download all photos** appears only on a camper's **My Photos** gallery after high-resolution access is unlocked for that season. It is not available from date or tag browse views. The bundle includes active facial matches for that camper and season. Very large galleries may fail with an email asking the family to contact the camp for help.
+      **Download all photos** appears only on a camper's **My Photos** gallery after high-resolution access is unlocked for that season. It is not available from date or tag browse views. The bundle includes active facial matches for that camper and season. Families can re-download or re-request from the same gallery without waiting for another email. Very large galleries may fail with a message asking them to contact the camp for help.
     </Callout>
   </Tab>
 
