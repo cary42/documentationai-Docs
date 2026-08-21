@@ -14,10 +14,10 @@ Use the Processing volume report to see how much money your camp processed throu
 
 ## Filters
 
-Set the scope at the top of the report, then select **Apply**.
+Use the controls in the page header, then select **Apply**.
 
-<ParamField body="Start / End" param-type="date range" required="false" deprecated="false">
-  The date range to measure. Defaults to the last year.
+<ParamField body="Date range" param-type="date range" required="false" deprecated="false">
+  The range to measure, from the shared header date picker. When you open the report with no range chosen, Campium uses the last year, and the picker label matches that window.
 </ParamField>
 
 <ParamField body="Group by" param-type="selector" required="false" deprecated="false">
@@ -25,7 +25,7 @@ Set the scope at the top of the report, then select **Apply**.
 </ParamField>
 
 <ParamField body="Seasons" param-type="selector" required="false" deprecated="false">
-  Optionally limit totals to one or more active seasons. Leave unset to include everything.
+  Optionally limit totals to one or more active seasons. Leave unset (or use the **All active seasons** placeholder) to include everything.
 </ParamField>
 
 ## Summary tiles
@@ -88,11 +88,11 @@ This table breaks card volume down by brand so you can see the mix.
 
 <Steps>
   <Step title="Set the date range" icon="calendar" title-type="p">
-    Choose the start and end dates you want to measure.
+    Use the header date picker to choose the range you want to measure (or keep the default last-year window).
   </Step>
 
   <Step title="Choose how to group and scope" icon="filter" title-type="p">
-    Pick Day, Month, or Year, and optionally limit to specific seasons, then apply.
+    In the header toolbar, set **Group by** to **Day**, **Month**, or **Year**, optionally pick seasons, then select **Apply**.
   </Step>
 
   <Step title="Review the trend and mix" icon="play-circle" title-type="p">
