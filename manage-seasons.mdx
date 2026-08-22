@@ -70,6 +70,8 @@ Use these settings to control how the season appears and how your team uses it.
 
 - **Membership Season** — Marks the season as a membership season when that applies to how you use seasons.
 
+- **Show Photos On Parent Portal When Inactive** - When **Yes**, this season stays available in the parent portal photo gallery and mobile Gallery after you set the season to **Inactive**. When **No** (the default), inactive seasons drop out of those galleries. Active seasons always appear. Available when editing an existing season. See [Photo Hosting](/photo-hosting#keep-photos-visible-after-a-season-goes-inactive).
+
 - **Status** — Sets whether the season is currently active or inactive. Available when editing an existing season. Keep this set carefully, because changing it can affect camper and staff status.
 
 ## Set a season inactive only after it has passed
@@ -77,7 +79,7 @@ Use these settings to control how the season appears and how your team uses it.
 Set a season to inactive when you no longer want it treated as a current active season. This is usually something you do after the season has ended.
 
 <Callout kind="alert" collapsed="false">
-  Changing the **Status** from **Active** to **Inactive** will set campers and season-assigned staff to **Inactive** as long as they are not also in another **Active** season. Only set a season to **Inactive** if that season has passed.
+  Changing the **Status** from **Active** to **Inactive** sets campers assigned to this season to **Inactive** as long as they are not also in another **Active** season. Staff inactivation is optional (see below). Only set a season to **Inactive** if that season has passed.
 </Callout>
 
 If you are unsure whether campers or season-assigned staff still rely on the season, confirm that another active season already applies before you change the status.
@@ -187,11 +189,27 @@ Uncheck **Take live forms offline** only if you need a form to stay open after t
 
 </Callout>
 
-## Also inactivate staff with an approved application
+## Staff options when a season goes inactive
 
-When you move a season from **Active** to **Inactive**, another option appears in the same area below the status field: **Also inactivate staff with an approved application on [form]**, where the form name is filled in for the season's staff application.
+When you move a season from **Active** to **Inactive**, staff controls can appear below the status field in the same area as the live-forms and snapshot checkboxes. Campers are always queued for inactivation (unless they belong to another active season). Staff are not changed unless you leave the matching option checked.
 
-By default, going inactive only affects campers and season-assigned staff. Check this option when you also want to set staff who have an approved application on that form to **Inactive** — for example, when seasonal staff should no longer be active once the season closes. Leave it unchecked to keep those staff members active.
+### Also inactivate staff assigned to this season
+
+If any active staff have this season on their profile, you see a checkbox such as **Also inactivate the 12 active staff assigned to this season.** (the count matches your season).
+
+| Behavior | Detail |
+| --- | --- |
+| Default | Checked when at least one active staff member is assigned to the season |
+| Optional | Uncheck to leave all staff as they are |
+| Exception | Anyone who also belongs to another active season stays active |
+
+Leave it checked when seasonal staff should go inactive with the season. Uncheck it when those people still need admin or portal access (for example, they already work the next active season but still show this season on their profile).
+
+### Also inactivate staff with an approved application
+
+A second option can appear: **Also inactivate staff with an approved application on:** plus a form picker for the season's staff application forms.
+
+This is separate from the season-assigned checkbox above. It covers staff who are approved on that form, even when they are not the same set as profile-assigned staff. Check it when you also want those approved applicants set to **Inactive**. Leave it unchecked to keep them active.
 
 ## Email an invoice to families registered for the season
 
