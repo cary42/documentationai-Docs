@@ -229,6 +229,34 @@ Later, customer reports can use that saved snapshot to filter profile data based
   A snapshot does not happen until after you save the season, and it runs in the background. Use it when you want reporting to reflect profile data as it existed at that specific point in time.
 </Callout>
 
+### Watch snapshot status on the Seasons list
+
+After you queue a snapshot, the **Seasons** list shows a badge under that season's **Status** link. The badge updates on its own while the snapshot is still working.
+
+| Badge | Meaning |
+| --- | --- |
+| **Snapshot queued** | The snapshot is waiting to start. |
+| **Snapshot building** | The snapshot is copying profile answers in the background. |
+| **Snapshot ready** | The snapshot finished. You can choose it under **Profile data** when you build a customer report. |
+| **Snapshot did not finish** | The snapshot failed. Open **Edit Season** to retry. |
+
+Hover the badge for the capture time. Click the badge (or the season status) to open **Edit Season**.
+
+### Review or retry a snapshot in Edit Season
+
+In **Edit Season**, the **Profile data snapshot** section shows the same badge plus details for that season's latest snapshot:
+
+- When the snapshot is **ready**, you see when it was captured, how many saved answers it holds, and a reminder to choose it under **Profile data** on a customer report.
+- When it is still **queued** or **building**, you see when it was queued and that the seasons list will update when it finishes.
+- When it **did not finish**, you see that there is nothing to report on from it, plus **Retry snapshot**.
+
+To retry a failed snapshot:
+
+1. Open **Edit Season** for that season.
+2. Under **Profile data snapshot**, select **Retry snapshot**.
+3. Confirm with **Yes, retry it** when asked **Put this snapshot back in the queue?**
+4. Campium shows **Snapshot queued again. It will rebuild in the background.** and reloads the season panel.
+
 ## When to use the snapshot option
 
 This option is optional. It is most useful when historical profile values matter for reporting, especially if customer profile information may change after the season is saved.

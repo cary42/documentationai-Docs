@@ -201,6 +201,25 @@ Use the **Note** column on the responses table when you need a short staff-only 
 
 Clearing the text and saving removes the note. Parents do not see these notes.
 
+## What families see when a form save fails
+
+On the parent portal, if answers cannot be saved, the form does **not** claim success. Families see a clear error at the top of the page, their answers stay on the form, and the submit button changes to **Try Again**.
+
+Typical messages include:
+
+- **We could not save part of this form.** with the section that failed (for example **Guardian 1 information**, **Guardian 2 information**, or camper information), plus **Nothing you typed is lost.** and a short **Reference** code for support.
+- A generic **We could not save this form.** message when the portal cannot reach the server or gets an unexpected response (instead of leaving the button stuck on **Saving...**).
+
+Families can press **Try Again**, refresh the page, or come back later and continue. The message also links to **contact the camp** if the problem keeps happening.
+
+### Guardian 2 first and last name
+
+If a family fills in any **Guardian 2** field, they must enter both a first and last name for Guardian 2 before the form can save. Without the name, Campium cannot create the second guardian, so the other Guardian 2 details would be lost.
+
+The error reads: **Please enter both a first and last name for Guardian 2.** It explains that the name is required to save the other Guardian 2 details, and that families with no second guardian should clear the Guardian 2 fields and continue.
+
+An empty Guardian 2 section stays valid, so single-guardian families are not blocked.
+
 ## Preview a form without saving
 
 Use **Preview Form** when you want to walk through the form layout on the parent portal without creating a real submission.
@@ -807,6 +826,10 @@ Use the checklist that matches the kind of form you are building.
 
   <Expandable title="Can families opt out of form reminders?" default-open="false">
     Yes. Recipients can unsubscribe from reminder emails, so do not assume every assigned recipient will continue receiving those messages indefinitely.
+  </Expandable>
+
+  <Expandable title="A family says the form failed to save. What should they do?" default-open="false">
+    Ask them to read the error at the top of the form. If it asks for Guardian 2's first and last name, have them add both names or clear the Guardian 2 fields. Otherwise, have them press **Try Again**, or refresh and continue. Their typed answers should still be on the form. If it keeps failing, ask them for the **Reference** code in the message and contact Campium support with that code.
   </Expandable>
 </ExpandableGroup>
 
