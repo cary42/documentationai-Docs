@@ -10,6 +10,25 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-08-24" description="Season snapshot status, honest form save errors, inactive-season photos, address label names" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Season snapshot status** - On **Seasons**, a badge under each season's status shows **Snapshot queued**, **Snapshot building**, **Snapshot ready**, or **Snapshot did not finish**. **Edit Season** includes **Profile data snapshot** details and **Retry snapshot** when a snapshot did not finish. See [Manage Seasons](/manage-seasons#watch-snapshot-status-on-the-seasons-list).
+
+  ## Updates
+
+  - **Honest parent form save errors** - If a portal form cannot save, families see a clear error (not a false success), their answers stay on the form, and the button becomes **Try Again**. Filling any **Guardian 2** field now requires both a first and last name. See [Forms](/forms#what-families-see-when-a-form-save-fails).
+  - **Show Photos On Parent Portal When Inactive** - On **Edit Season**, set this to **Yes** so an inactive season stays in the parent and mobile photo galleries. See [Manage Seasons](/manage-seasons) and [Photo Hosting](/photo-hosting#keep-photos-visible-after-a-season-goes-inactive).
+  - **Staff inactivation when closing a season** - Moving a season to **Inactive** can show **Also inactivate the N active staff assigned to this season** (checked by default) plus an optional approved-application form option. Campers still inactivate as before. See [Manage Seasons](/manage-seasons#staff-options-when-a-season-goes-inactive).
+  - **Name on Label for address labels** - On customer report **Labels**, choose **Guardian** (one per household) or **Camper** (one per row) under **Name on Label**. See [Custom Reports](/custom-reports#print-address-labels).
+  - **Processing volume filters** - Use the header date picker plus **Group by**, **Seasons**, and **Apply**. See [Processing Volume](/processing-volume).
+  - **Guided setup $0 subproduct deposit warning** - On **Guided setup** **Sessions** (and **Calendar**), a warning icon appears when an active subproduct has a $0 minimum deposit. See [Guided Season Setup](/guided-season-setup#sessions).
+
+  ## Fixes
+
+  - **Form response PDFs with photos** - Combined form response PDFs no longer drop photos after earlier jobs in the same worker, and a 16-bit or interlaced PNG upload no longer stops the whole PDF.
+</Update>
+
 <Update label="2026-08-15" description="News redesign, mass email send progress, Form opening digest preferences" tags={["feature","improvement"]}>
   ## New
 
