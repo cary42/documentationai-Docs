@@ -7,7 +7,7 @@ description: Preview forms on the parent portal before launch using Test Mode, i
 
 Test Mode lets staff and admin users open a form on the parent portal before the form is available to families. Use it to check the form experience, confirm the right account or camper can see it, and catch issues before launch.
 
-You can turn on Test Mode from **Forms** in the left navigation, then open the form and use the **Test Mode** toggle in the toolbar.
+You can turn on Test Mode from **Forms** in the left navigation, then open the form and use the **TEST MODE** toggle in the form toolbar. You can also use the **Test Mode** toggle next to the availability chip on the **Form** step in **Guided setup**.
 
 <Callout kind="info">
 
@@ -29,7 +29,9 @@ A red **Test Mode** badge appears on the admin Forms list and next to the form o
 
 ## Where to find Test Mode
 
-Follow this path to reach the toggle.
+You can reach the toggle from the form editor or from Guided setup.
+
+### From Forms
 
 <Steps>
   <Step title="Open Forms" icon="folder">
@@ -42,11 +44,33 @@ Follow this path to reach the toggle.
   Select the form you want to preview before launch.
 
   </Step>
-  <Step title="Turn on Test Mode" icon="play-circle">
+  <Step title="Turn on TEST MODE" icon="play-circle">
 
-  Use the **Test Mode** toggle in the form toolbar.
+  Use the **TEST MODE** toggle in the form toolbar.
 
   After you turn it on, look for the red **Test Mode** badge on the Forms list and on the parent portal next to the form.
+
+  </Step>
+</Steps>
+
+### From Guided setup
+
+<Steps>
+  <Step title="Open Guided setup" icon="folder">
+
+  Go to **Seasons**, then open **Guided setup** for the season. See [Guided Season Setup](/guided-season-setup).
+
+  </Step>
+  <Step title="Open the Form step" icon="edit">
+
+  Move to the **Form** step and choose the form you want to preview.
+
+  </Step>
+  <Step title="Turn on Test Mode" icon="play-circle">
+
+  Use the **Test Mode** toggle next to the form availability chip in the Form toolbar.
+
+  The tooltip explains that when Test Mode is on, you can see the form on the portal regardless of start and end dates or recipients. While the form is already **Open**, the switch is locked off and the tooltip says it turned off automatically while the form is open.
 
   </Step>
 </Steps>
@@ -103,7 +127,7 @@ Use this workflow to preview safely and avoid accidental family access.
   </Step>
   <Step title="Turn on Test Mode in the form toolbar" icon="settings">
 
-  Go to **Forms**, open the form, and switch on **Test Mode**.
+  Go to **Forms**, open the form, and switch on **TEST MODE**. Or open **Guided setup**, go to the **Form** step, and switch on **Test Mode**.
 
   Check for the red **Test Mode** badge so you know the bypass is active.
 
@@ -149,6 +173,8 @@ If a form is already visible, active, within its dates, and matches the right re
 ## Automatic turn-off
 
 Test Mode turns off automatically when the form goes live. This happens when the form is visible, active, and the current date falls between the Start Date and End Date.
+
+While the form stays in that open window, you cannot turn Test Mode back on from Guided setup (the switch is locked). On the form editor, the **TEST MODE** tooltip also notes that Test Mode turns off automatically while the form is open.
 
 If Test Mode switches off on its own, that usually means the form has entered its live window. This is expected behavior, not an error.
 
