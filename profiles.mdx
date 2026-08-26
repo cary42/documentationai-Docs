@@ -190,12 +190,16 @@ Use **Email** or **Actions** when you need to do something specific for this per
     </Callout>
   </Expandable>
 
-  <Expandable title="Delete (person)" default-open="false">
-    **Delete (person)** removes the individual profile from active use in your system.
+  <Expandable title="Delete a person" default-open="false">
+    **Delete [name]** removes that individual profile from active use in your system. The menu label uses the person’s first and last name (for example, **Delete Jane Smith**).
 
     Use this only in rare situations where a profile was created by mistake, is clearly a duplicate that should not stay active, or needs to be removed under your camp’s data-handling policies.
 
-    After you choose **Delete (person)**, Campium prompts you to confirm the action and may show a summary of what will happen to linked information. Once you confirm, you either remove the profile from normal views or move it into a deleted or archived state, depending on your site’s configuration.
+    After you choose **Delete [name]**, Campium opens a confirmation modal. Confirm with **Yes. Delete This User.** Once the delete succeeds, the modal title changes to **User deleted** and the message **This user has been deleted** appears.
+
+    If other people remain in the same household, the modal also shows **Open another family member:** with links for each remaining person (name plus relationship such as **Parent**, **Camper**, **Staff**, **Alumni**, or **Admin**). Choose a link to open that profile, or **Close** to dismiss the modal.
+
+    If nobody else remains in the household, the success message appears briefly and the delete modal closes without a family-member list.
 
     <Callout kind="alert" collapsed="false">
       Deleting a person can have lasting effects on linked forms, financial records, and history. Follow your camp’s procedures for handling duplicates or removal requests, and only delete a profile when you are certain it is appropriate.

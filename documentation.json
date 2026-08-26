@@ -43,6 +43,11 @@
                 "icon": "user"
               },
               {
+                "title": "Billing",
+                "path": "billing",
+                "icon": "credit-card"
+              },
+              {
                 "title": "Import Users",
                 "path": "import-users",
                 "icon": "upload"
