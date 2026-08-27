@@ -1,0 +1,127 @@
+---
+title: Camper Hub
+description: >-
+  Track enrolled campers by season, see which required forms they still need,
+  and update form status and profile fields from one admin roster.
+---
+
+## What Camper Hub is for
+
+Camper Hub is the operations dashboard for camper enrollment forms. It lists every camper with an active enrollment in the seasons you pick, along with their account status, key profile fields, and form progress.
+
+Use Camper Hub when you want to see who still needs forms, open the form detail for one camper, and approve, reject, or reset a form without hunting through each profile. For a spreadsheet-style report across many forms, use the [Form Status Summary](/form-status-summary) report instead.
+
+Camper Hub is the camper-side counterpart to [Staff Hub](/staff-hub). Staff Hub tracks people who started a staff application. Camper Hub tracks campers who already have an active enrollment for a season.
+
+<Callout kind="info" collapsed="false">
+  Only users with the **Administrator** role can open Camper Hub. It appears under **Admin → Camper Hub** (the menu item may show a **New** badge).
+</Callout>
+
+## Open Camper Hub
+
+1. Open **Admin** in the left navigation.
+2. Click **Camper Hub**.
+
+When it loads, you see a **Season** filter, **Camper Hub Settings**, summary metrics, and a roster table.
+
+## Filter by season
+
+Use the **Season** filter at the top to choose which seasons you want to work with, then click **Filter**. **Clear** returns you to the default view.
+
+Campers with an active enrollment in those seasons appear below. When more than one season is selected, a camper appears once per enrolled season, and a **Season** column shows which season each row belongs to.
+
+If you do not choose a season, Camper Hub uses your default season when one is set, or all available seasons.
+
+## Read the summary metrics
+
+Above the roster, four tiles summarize the current season filter:
+
+<Card title="Summary tiles" icon="chart-bar" horizontal="false">
+  - **Campers**: how many distinct campers are in the filter.
+
+  - **Required Forms Complete** or **All Forms Complete**: campers who finished every counted form for their enrollment row. The **Required** wording appears only when every selected season has required forms configured in settings.
+
+  - **Missing Required Forms** or **Missing Forms**: enrollment rows where at least one counted form is still unfinished.
+
+  - **No Forms Started**: enrollment rows where the camper has not started any of the counted forms.
+</Card>
+
+These tiles always reflect the full season filter. Searching the roster by name narrows the table below, but the tiles stay put.
+
+## Work the roster table
+
+Each row is one camper for one season (or one camper when a single season is selected). From left to right, the roster shows:
+
+- **Camper**: the person's name (a link to their profile) and email.
+
+- **Status**: the camper's account status (Active, Pending, and so on). You can change it in the table and it saves immediately. Changing status for a camper updates every row for that person when multiple seasons are shown.
+
+- **Season**: only when more than one season is selected.
+
+- **Profile field columns**: any camper profile fields you chose to display. Text fields and dropdowns can be edited in the table; click **Save** when the value changes.
+
+- **Forms**: **Started** and **Completed** counts for the forms Camper Hub is tracking. When every counted form is finished, a **Complete** pill appears. Click the counts to expand form details.
+
+<Callout kind="tip" collapsed="false">
+  Use **Search campers** above the table to find people by name across the whole season filter. Choose **Rows per page** (50, 100, 200, 500, or **All**) and use **Previous** / **Next** to page through large rosters.
+</Callout>
+
+## Choose which fields and forms count
+
+Open **Camper Hub Settings** on the page to control the dashboard:
+
+<Steps>
+  <Step title="Pick fields to display and edit" icon="list" title-type="p">
+    Under **Fields to display and edit**, search and select which camper profile fields appear as columns. These columns are editable inline for everyone in the roster.
+  </Step>
+
+  <Step title="Set required forms by season" icon="folder" title-type="p">
+    Under **Required forms by season**, choose the forms campers must complete for each season. The **Forms** column counts only the forms you pick here, and campers who finish all of them are marked **Complete**.
+
+    Leave a season empty to count all of its forms. Until you pick required forms, an alert may note that counts include every form for those seasons, with a link to **Pick required forms in Camper Hub Settings**.
+  </Step>
+
+  <Step title="Show or hide past seasons" icon="calendar" title-type="p">
+    Click **Show inactive seasons** to reveal seasons whose end date has passed so you can still set required forms for them. Their choices are kept when you save. Click **Hide inactive seasons** to collapse that list again.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Click **Save Settings**. Your choices apply the next time the roster loads.
+  </Step>
+</Steps>
+
+## See form progress for one camper
+
+Click the **Forms** cell in any row to expand a panel titled **Forms for** that camper (with the season name when more than one season is in the filter).
+
+Each form shows its status (for example **Not started**, **In progress**, **Pending approval**, **Approved**, or **Rejected**). Forms you marked as required in settings show a **Required** badge. Finished forms also show a **Completed** date.
+
+A form counts as completed when its status is **Pending approval** or **Approved**.
+
+From the gear menu on a form you can:
+
+- **Reset to In Progress**: **Pending Approval**: **Approve** (approving also sets the camper's account to Active, and may ask about a deposit if your form charges a deposit on approval)
+- **Reject** (may offer to remove purchased sessions when the camper has them)
+- **Delete** (the camper would need to start the form again)
+
+These actions use the same confirmation prompts as the form tools on a camper's profile.
+
+## Related guides
+
+<Columns cols="2">
+  <Card title="Staff Hub" href="/staff-hub" icon="briefcase" horizontal="false">
+    Track staff applications, form progress, and contracts season by season.
+  </Card>
+
+  <Card title="Form Status Summary" href="/form-status-summary" icon="table" horizontal="false">
+    Run a report of who has completed which forms for a season.
+  </Card>
+
+  <Card title="Forms" href="/forms" icon="edit" horizontal="false">
+    Build and manage the registration and follow-up forms that feed Camper Hub.
+  </Card>
+
+  <Card title="Profile Fields" href="/profile-fields" icon="list" horizontal="false">
+    Set up the camper profile fields that appear as editable columns.
+  </Card>
+</Columns>
