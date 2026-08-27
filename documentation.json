@@ -626,6 +626,11 @@
                 "icon": "briefcase"
               },
               {
+                "title": "Camper Hub",
+                "path": "camper-hub",
+                "icon": "users"
+              },
+              {
                 "title": "Merge Users",
                 "path": "merge-users",
                 "icon": "users"
