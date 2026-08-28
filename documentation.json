@@ -12,6 +12,10 @@
       "brand": "#81BCEF"
     }
   },
+  "seo": {
+    "robots:index": true,
+    "robots:follow": true
+  },
   "navigation": {
     "tabs": [
       {
@@ -391,7 +395,8 @@
                 "path": "payment-issues",
                 "icon": "circle-dollar-sign-icon"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Profile Management",
@@ -431,7 +436,8 @@
                 ],
                 "icon": "circle-dollar-sign-icon"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Transportation",
@@ -714,7 +720,8 @@
                 "path": "product-quantities",
                 "icon": "package"
               }
-            ]
+            ],
+            "public": true
           },
           {
             "group": "Portal",
@@ -729,7 +736,8 @@
                 "path": "photo-hosting",
                 "icon": "images"
               }
-            ]
+            ],
+            "public": true
           }
         ],
         "public": true
@@ -748,6 +756,7 @@
       {
         "tab": "FAQ",
         "icon": "circle-question-mark-icon",
+        "public": true,
         "groups": [
           {
             "group": "Forms",
