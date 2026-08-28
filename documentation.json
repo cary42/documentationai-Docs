@@ -330,6 +330,14 @@
                     "path": "balance-transfer-utilization"
                   },
                   {
+                    "title": "Transfer Season Balances",
+                    "path": "transfer-season-balances"
+                  },
+                  {
+                    "title": "Zero Out Season Credits",
+                    "path": "zero-out-season-credits"
+                  },
+                  {
                     "title": "Payment Detail by Camper and Session",
                     "path": "product-payment-detail"
                   }

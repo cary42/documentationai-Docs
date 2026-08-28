@@ -1,0 +1,62 @@
+---
+title: Transfer Season Balances
+description: >-
+  Preview and move family credits and amounts owed from one season to another in
+  bulk from System Reports.
+---
+
+## What this report does
+
+**Transfer Season Balances** moves every eligible family's season balance from a source season into a destination season in one run. Use it when you are rolling leftover credits (or carrying balances owed) forward for the whole camp, instead of transferring one family at a time from [Credits](/negative-balance#transfer-a-credit-to-another-season).
+
+Campium shows a live preview as you change seasons or transfer type. Families already transferred for that season pair are skipped on a re-run.
+
+## Who can open it
+
+You need:
+
+- An **Administrator** login
+- Access to reports and financial tools (the finance / report permissions your roles grant)
+- Financial features enabled for your organization
+
+The report is listed under **Reports → System** in the **Money** group. It is not available on free plans.
+
+## Open and set the seasons
+
+1. Go to **Reports → System**.
+2. Under **Money**, open **Transfer Season Balances**.
+3. In **Seasons and transfer type**, choose:
+   - **From season (source)**
+   - **To season (destination)** (must be a different season)
+   - **Transfer**: **Credits only**, **Amounts owed only**, or **All nonzero balances**
+4. Wait for the preview to load. **Transfer balances** stays disabled until at least one family is ready.
+
+## Read the preview
+
+The summary cards show:
+
+| Card | Meaning |
+| --- | --- |
+| **Ready to transfer** | Families that match your transfer type, with totals for credit and owed |
+| **Already transferred** | Families skipped because they already have a transfer for this season pair |
+| **Skipped** | Families outside the transfer type or with a zero balance |
+
+The **Families** table lists **Primary Contact**, **Transfer Type**, **Source Balance**, **Transfer Amount**, and **Status** for the ready rows.
+
+<Callout kind="alert" collapsed="false">
+  Transferring balances creates real **Balance Transfer** ledger rows and zeros the source season balance for each family that moves. Review the preview carefully before you confirm.
+</Callout>
+
+## Run the transfer
+
+1. Click **Transfer balances**.
+2. Confirm the dialog (it names the seasons, how many families will move, credit to move, and balance owed to carry). The confirm button is labeled **Transfer balances**.
+3. When it finishes, Campium reports how many families transferred and how many were skipped.
+
+Afterward, you can review individual transfers on [Credits](/negative-balance), in **Financials → Payments** filtered to **Balance Transfer**, or with [Balance Transfer Utilization](/balance-transfer-utilization).
+
+## Related pages
+
+- [Credits](/negative-balance) for one-family transfers and credit emails
+- [Balance Transfer Utilization](/balance-transfer-utilization) for how rolled credit is used later
+- [Zero Out Season Credits](/zero-out-season-credits) when you want to clear credits without rolling them forward

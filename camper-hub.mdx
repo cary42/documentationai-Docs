@@ -1,15 +1,15 @@
 ---
 title: Camper Hub
 description: >-
-  Track enrolled campers by season, see which required forms they still need,
-  and update form status and profile fields from one admin roster.
+  Track enrolled campers by season, filter who still needs forms, send guardian
+  reminders, and update form status and profile fields from one admin roster.
 ---
 
 ## What Camper Hub is for
 
 Camper Hub is the operations dashboard for camper enrollment forms. It lists every camper with an active enrollment in the seasons you pick, along with their account status, key profile fields, and form progress.
 
-Use Camper Hub when you want to see who still needs forms, open the form detail for one camper, and approve, reject, or reset a form without hunting through each profile. For a spreadsheet-style report across many forms, use the [Form Status Summary](/form-status-summary) report instead.
+Use Camper Hub when you want to see who still needs forms, email guardians a reminder, open the form detail for one camper, and approve, reject, or reset a form without hunting through each profile. For a spreadsheet-style report across many forms, use the [Form Status Summary](/form-status-summary) report instead. To email from one form's settings by completion status, see [Email users that have not completed a form](/email-users-who-have-not-completed-a-form).
 
 Camper Hub is the camper-side counterpart to [Staff Hub](/staff-hub). Staff Hub tracks people who started a staff application. Camper Hub tracks campers who already have an active enrollment for a season.
 
@@ -32,21 +32,23 @@ Campers with an active enrollment in those seasons appear below. When more than 
 
 If you do not choose a season, Camper Hub uses your default season when one is set, or all available seasons.
 
-## Read the summary metrics
+## Read and filter with the summary tiles
 
 Above the roster, four tiles summarize the current season filter:
 
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
-  - **Campers**: how many distinct campers are in the filter.
+  - **Campers** or **Camper Seasons**: how many roster rows match the season filter. The label is **Camper Seasons** when more than one season is selected (a camper enrolled in two seasons counts twice). Click this tile to clear a completion filter and show everyone again.
 
-  - **Required Forms Complete** or **All Forms Complete**: campers who finished every counted form for their enrollment row. The **Required** wording appears only when every selected season has required forms configured in settings.
+  - **Required Forms Complete** or **All Forms Complete**: enrollment rows where every counted form is finished. The **Required** wording appears only when every selected season has required forms configured in settings. Click the tile to show only these rows; click it again to clear the filter.
 
-  - **Missing Required Forms** or **Missing Forms**: enrollment rows where at least one counted form is still unfinished.
+  - **Missing Required Forms** or **Missing Forms**: enrollment rows where at least one counted form is still unfinished. Click to show only these rows; click again to clear.
 
-  - **No Forms Started**: enrollment rows where the camper has not started any of the counted forms.
+  - **No Forms Started**: enrollment rows where the camper has not started any of the counted forms. This tile is informational only (not a filter control).
 </Card>
 
-These tiles always reflect the full season filter. Searching the roster by name narrows the table below, but the tiles stay put.
+The tile totals always reflect the full season filter. Searching the roster by name narrows the table below, but the tile numbers stay put.
+
+When a completion filter is active, a short note under the tiles explains what the roster is showing (for example **Showing only those missing at least one required form. Click the tile again to show everyone.**). When nothing is filtered, the note says **Click a tile above to filter this list.**
 
 ## Work the roster table
 
@@ -78,7 +80,7 @@ Open **Camper Hub Settings** on the page to control the dashboard:
   <Step title="Set required forms by season" icon="folder" title-type="p">
     Under **Required forms by season**, choose the forms campers must complete for each season. The **Forms** column counts only the forms you pick here, and campers who finish all of them are marked **Complete**.
 
-    Leave a season empty to count all of its forms. Until you pick required forms, an alert may note that counts include every form for those seasons, with a link to **Pick required forms in Camper Hub Settings**.
+    Leave a season empty to count all of its forms. Until you pick required forms for a season, a callout appears above the tiles titled **Choose which forms are required for** that season (or seasons). It explains that every form counts toward the totals, the Missing filter can include people who only have optional forms left, and reminder emails list those optional forms too. Use **Choose required forms** to jump into settings.
   </Step>
 
   <Step title="Show or hide past seasons" icon="calendar" title-type="p">
@@ -105,6 +107,17 @@ From the gear menu on a form you can:
 - **Delete** (the camper would need to start the form again)
 
 These actions use the same confirmation prompts as the form tools on a camper's profile.
+
+## Send reminders for missing forms
+
+When at least one enrollment row is missing counted forms, **Send reminders** appears above the roster (to the right of the filter note).
+
+1. Click **Send reminders**. Recipients are everyone in the current season filter who still has forms outstanding, even if you filtered the roster with a tile.
+2. Review the **Send reminders** dialog: how many people still have forms outstanding, how many emails will go out, and a short sample of names and addresses.
+3. Under **Send to**, choose **Primary guardian only** or **Primary and secondary guardian**. Changing the choice recounts recipients before you send.
+4. Confirm with **Send reminders**, or cancel.
+
+Each recipient gets one email that lists the unfinished forms for that camper. Guardians without an email on file, and guardians who unsubscribed from form notifications, are skipped; the dialog notes those counts when they apply. If a season still has no required forms configured, the dialog notes that those reminders list every form for the season.
 
 ## Related guides
 
