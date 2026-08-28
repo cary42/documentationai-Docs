@@ -173,6 +173,14 @@ Combine that choice with **Allow multiple selections in this group**:
 
 Other group options stay the same: **Do not display the heading for this Layout Group**, **Require the user to select at least one item from this group**, and **Save Group**. On the layout tab, groups set to dropdown show a **Dropdown** badge.
 
+#### Continue on the product selection page
+
+On a live registration form, the product selection step holds **Continue** closed until the family picks at least one available session or product (checkboxes, dropdown groups, or a food quantity greater than zero all count). A short hint under the button uses your product wording, for example **Choose a session to continue.**
+
+Food-only pages are not held closed: ordering no food is a valid answer. If every option on the page is already purchased, full, or wait listed, **Continue** stays enabled and a warning explains why nothing can be selected (for example that all sessions shown are full). Already-purchased rows that appear pre-checked and disabled do not count as a new choice.
+
+Admin **Preview** of the product selection page still keeps **Continue** review-only; nothing is saved there.
+
 ### Recipients tab
 
 Use the **Recipients** tab to control who receives the form and monitor readiness.
