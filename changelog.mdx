@@ -10,6 +10,40 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-08-31" description="Camper Hub, season balance tools, reminder recency, Finix statement preview, registration polish" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Camper Hub** - Under **Admin → Camper Hub** (Administrators only), track enrolled campers by season, filter who still needs forms, edit profile columns, and manage form status from one roster. See [Camper Hub](/camper-hub).
+  - **Transfer Season Balances** and **Zero Out Season Credits** - Under **Reports → System Reports → Money**, roll leftover balances into another season or clear season credits in bulk (admin plus finance/report access; not on free plans). See [Transfer Season Balances](/transfer-season-balances) and [Zero Out Season Credits](/zero-out-season-credits).
+
+  ## Updates
+
+  - **Camper Hub form reminders** - Bulk **Send reminders** and per-row **Send reminder** email guardians about unfinished forms, with primary or primary-and-secondary options. Roster rows show **Reminded** timing; within 24 hours the bulk dialog can skip recent sends, and the per-row confirm becomes **Send again**. See [Camper Hub](/camper-hub#send-reminders-for-missing-forms).
+  - **Layout groups as dropdowns** - On a registration form's sessions/products layout tab, set **How this group appears** to **List** or **Dropdown**. See [Forms](/forms#how-a-layout-group-appears).
+  - **Multiple billing emails** - On **Billing**, **Billing Email** accepts several addresses separated by commas or semicolons. See [Billing](/billing).
+  - **Registration Continue gate** - On a live registration form, **Continue** stays closed until the family picks a session or product (food-only and fully locked pages excepted). See [Forms](/forms#continue-on-the-product-selection-page).
+  - **Accounts Receivable Products column** - Long product lists clamp after two lines with **more** / **less**. See [Account Balance](/account-balance).
+  - **Finix statement descriptor preview** - On Finix merchant onboarding (when enabled for your camp), **Appears on statements as:** shows the 20-character card statement string as you type DBA or legal name. See [Payment Processors](/payment-processors#finix-merchant-onboarding-statement-descriptor).
+  - **Sessions calendar overflow** - In Guided setup **Calendar** view (and the season products calendar), days with many sessions use **+N more** / **Show less**. See [Guided Season Setup](/guided-season-setup#sessions).
+  - **Parent photo zip status** - After **Download all photos**, the gallery shows preparing / ready / expired / failed states, **Download your photos** (and **Part N**), and **Request again** when needed. Still requires unlocked high-resolution photos. See [Photo Hosting](/photo-hosting).
+  - **Canteen Account Balance export** - The toolbar export includes every page of the filtered list. See [Canteen](/canteen).
+  - **Note Summary title** - The page title includes the selected date range when both dates are set. See [Note Summary](/note-summary).
+  - **Attendance reporting summary cards** - Camper and staff summary cards match the report UI. See [Attendance Reporting](/system-report-attendance-reporting).
+  - **Preview Cart Header** - From form settings, open a cart-header preview page without using the live parent cart. See [Forms](/forms).
+
+  ## Fixes
+
+  - **Session revenue profile links** - Account-number links on the session revenue report open the matching profile again.
+  - **Attendance date in the URL** - The attendance header date stays correct when the page reloads from the query string.
+  - **Finix onboarding descriptor length** - The statement descriptor sent to Finix is capped at 20 alphanumeric characters so a long DBA no longer rejects the whole application.
+  - **Forms Not Started tab** - Large **Not Started** lists page on the server so the tab stays responsive.
+  - **Form response PDFs** - Combined PDFs no longer break on orphaned list markup from the editor.
+  - **Parent login return** - After signing in, families return to the page they were trying to open.
+  - **Canteen balances** - Parent portal canteen balances match the staff **Account Balance** view for the same camper.
+  - **Deposit settlement status** - Payabli and USIO settlement status displays more accurately on deposit views.
+  - **Ticket attachments** - Attach limits are enforced before upload so oversized files fail with a clear message instead of hanging.
+</Update>
+
 <Update label="2026-08-24" description="Season snapshot status, honest form save errors, inactive-season photos, address label names" tags={["feature","improvement","bugfix"]}>
   ## New
 

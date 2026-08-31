@@ -110,6 +110,14 @@ From the gear menu on a form you can:
 
 These actions use the same confirmation prompts as the form tools on a camper's profile.
 
+## See when a family was last reminded
+
+After you send a reminder from Camper Hub, the roster remembers it for that camper and season.
+
+- Under the **Forms** counts, a line such as **Reminded just now**, **Reminded 2 hours ago**, or **Reminded 3 days ago** appears once a reminder has gone out.
+- The same wording appears next to **Send reminder** in the expanded **Forms for** panel.
+- Within the first **24 hours**, that line is highlighted and the **Send reminder** button looks softer, so you can tell the family was chased recently without opening the dialog.
+
 ## Send reminders for missing forms
 
 When at least one enrollment row is missing counted forms, **Send reminders** appears above the roster (to the right of the filter note).
@@ -117,7 +125,8 @@ When at least one enrollment row is missing counted forms, **Send reminders** ap
 1. Click **Send reminders**. Recipients are everyone in the current season filter who still has forms outstanding, even if you filtered the roster with a tile.
 2. Review the **Send reminders** dialog: how many people still have forms outstanding, how many emails will go out, and a short sample of names and addresses.
 3. Under **Send to**, choose **Primary guardian only** or **Primary and secondary guardian**. Changing the choice recounts recipients before you send.
-4. Confirm with **Send reminders**, or cancel.
+4. When some of those campers were already reminded in the last **24 hours**, a checkbox such as **Skip the 2 who were already reminded in the last 24 hours** appears (checked by default). Leave it on to avoid a second email the same day, or clear it if you want those families included again. The summary notes how many were left out, or that they will be emailed again.
+5. Confirm with **Send reminders**, or cancel.
 
 Each recipient gets one email that lists the unfinished forms for that camper. Guardians without an email on file, and guardians who unsubscribed from form notifications, are skipped; the dialog notes those counts when they apply. If a season still has no required forms configured, the dialog notes that those reminders list every form for the season.
 
@@ -128,7 +137,8 @@ When you need to chase one family (for example after a phone call), expand that 
 1. Expand the **Forms** cell for the camper. **Send reminder** appears only when counted forms are still unfinished.
 2. Click **Send reminder**. The **Send reminder** dialog shows the camper name, how many forms are outstanding (and their names), and the email addresses that will receive the message.
 3. Under **Send to**, choose **Primary guardian only** or **Primary and secondary guardian**. Changing the choice updates the **To** line before you send.
-4. Confirm with **Send**, or cancel.
+4. If the family was reminded in the last **24 hours**, the dialog warns **Already reminded** with how long ago, and the confirm button becomes **Send again**. Older reminders show a quieter **Last reminded** note instead. Per-row send never skips on recency; you choose whether to send again.
+5. Confirm with **Send** (or **Send again**), or cancel.
 
 If the family has no email on file, or nothing is outstanding any more, Campium tells you instead of opening the send step.
 
