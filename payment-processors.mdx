@@ -118,12 +118,13 @@ On the same application you also set:
 
 #### Documents when Finix needs more information
 
-If Finix asks for more information, the application status becomes **Update Required**. The page can show:
+If Finix asks for more information, the application status becomes **Update Required** (or **Rejected** in some cases). The page can show:
 
 - **Updates requested by Finix** - Plain-language reasons (for example proof of the signer's home address, or a correction to business information).
-- **Documents requested by Finix** - One upload row per requested file, labeled in everyday language (for example **Proof of home address (utility bill, mortgage statement, or lease)**, **Voided check**, **Bank statement**, or **Government-issued photo ID**). Accepts PDF or image (PNG, JPG, GIF, TIFF, WEBP, HEIC), up to 10 MB each.
+- **Documents requested by Finix** - Upload rows for each document Finix listed structurally, labeled in everyday language (for example **Proof of home address (utility bill, mortgage statement, or lease)**, **Voided check**, **Bank statement**, or **Government-issued photo ID**).
+- A type picker labeled **Document** (or **Another document** when structured rows already appear) - Use this when Finix asked for a file in the notes but did not list a specific upload row. Choose the document type that best matches, then pick the file. Repeat for each extra document.
 
-After you upload documents and fix any highlighted fields, use **Resubmit for review** to send everything back to Finix.
+Accepts PDF or image (PNG, JPG, GIF, TIFF, WEBP, HEIC), up to 10 MB each. Click **Upload document** on each row. After you upload documents and fix any highlighted fields, use **Resubmit for review** to send everything back to Finix.
 
 ### How this appears in Campium
 

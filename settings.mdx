@@ -49,7 +49,7 @@ Two settings have extra behavior to be aware of:
 
 - **Contact Email Address**: Campium checks that the email you enter looks valid. If the check fails, the change does not save and you stay on your previous address.
 
-- **Credit Card Surcharge**: Enter the percentage as a number with or without the percent sign. For example, type `3` or `3%` and Campium treats both as the same value.
+- **Credit Card Surcharge**: Enter the percentage as a number with or without the percent sign. For example, type `3` or `3%` and Campium treats both as the same value. Debit, prepaid, and HSA/FSA cards, plus ACH/e-check, are never surcharged. If your organization uses Finix, Campium also enforces your state's surcharge rules and rate cap when you save; invalid values show a warning dialog instead of saving.
 
 If you do not see the **Admin** tab, your user account is not a Campium employee; those internal settings are restricted to Campium staff.
 
@@ -183,7 +183,12 @@ Use the tabs below as a reference to match what you see on the Site Settings scr
 
     - **Receipt Emails** — Comma-separated list of email addresses that receive copies of payment receipts or related notices.
 
-    - **Credit Card Surcharge** — Text field representing the surcharge percentage on card payments (for example, `3` or `3%`). Campium treats both formats as the same percentage.
+    - **Credit Card Surcharge** - Percentage fee added when a family pays with a credit card, to help offset card-processing cost. Enter a number such as `2.5` or `2.5%`. Debit, prepaid, and HSA/FSA cards and ACH/e-check are never surcharged. On Finix, help text under the field summarizes your state's rules, and saves that break those rules (prohibited states or over the cap) are rejected with a warning dialog.
+
+    ### What families see at checkout
+
+    - Most camps show a **Credit Card Surcharge** line and a label such as **(X% Surcharge)** next to the credit card payment option.
+    - In New York (and any other state that requires two-tier pricing), the parent checkout shows two totals before a method is chosen: **Total with ACH/e-check or debit card** and **Total with credit card (includes the X% surcharge)**.
 
     ### Card brands and processing behavior
 

@@ -645,6 +645,16 @@
                 "icon": "users"
               },
               {
+                "title": "Training Videos",
+                "path": "training-videos",
+                "icon": "video"
+              },
+              {
+                "title": "Favorite pages",
+                "path": "favorite-pages",
+                "icon": "heart"
+              },
+              {
                 "title": "Merge Users",
                 "path": "merge-users",
                 "icon": "users"
