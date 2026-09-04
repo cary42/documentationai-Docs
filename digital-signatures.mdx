@@ -44,7 +44,7 @@ The setup has five parts: create a signature field, place it on a form, add the 
   </Step>
   <Step title="Family types their name on the Portal" icon="users" title-type="p">
 
-  On the Portal, the signer reads the legal text in a scrollable area and types their full name in the signature field.
+  On the Portal, the signer reviews the legal text (inline scroll box, or **Review the terms** when that option is on) and types their full name in the signature field.
 
   </Step>
   <Step title="Review the signed record" icon="check-circle" title-type="p">
@@ -142,9 +142,14 @@ The signature is only complete when the question includes the legal text the use
   Paste or write the waiver, release, or policy text in the rich text editor.
 
   </Step>
+  <Step title="Choose how families read the terms" icon="link" title-type="p">
+
+  Optionally turn on **Show legal terms as a link**. That replaces the scrolling text box with a **Review the terms** button above the signature box. The signature box stays locked until they open the terms. Leave it off to keep the classic scrollable legal text above the signature field.
+
+  </Step>
   <Step title="Adjust the question label if needed" icon="settings" title-type="p">
 
-  Optionally update **Question Text**. This label appears above the legal text block and helps families understand what they are signing.
+  Optionally update **Question Text**. This label appears above the terms (or above the **Review the terms** control) and helps families understand what they are signing. If you turn on link mode and your question text still says the terms appear above, reword it.
 
   </Step>
   <Step title="Save the question" icon="check-circle" title-type="p">
@@ -175,13 +180,26 @@ If a merge variable is not recognized, Campium removes it when the form renders.
 
 ## What families see on the Portal
 
-On the Portal, families see the legal text inside a scrollable box with a maximum height of about 250 pixels. Below that, they see a single-line field where they type their name in a signature-style font.
+How the legal text appears depends on **Show legal terms as a link** on the signature question.
 
-After they type their name, they submit the form the same way they submit any other form. If the signature field is blank, the form cannot be submitted.
+### Scrollable terms (default)
+
+When the link option is off, families see the legal text inside a scrollable box with a maximum height of about 250 pixels. Below that, they type their name in a signature-style field.
+
+### Review the terms (link mode)
+
+When **Show legal terms as a link** is on:
+
+1. Families see a **Review the terms** button above the signature box, with the hint **The signature box unlocks once you open the terms.**
+2. The signature box stays locked and shows **Review the terms first** until they open the terms.
+3. Selecting **Review the terms** opens a dialog titled **Terms you are agreeing to**. They read the text there, then select **Close**.
+4. After they open the terms, the button shows they reviewed them, the hint updates, and the signature box unlocks with placeholder **Type your full name**.
+
+They still cannot submit until they type a name. If they try to submit while the box is locked, the form asks them to open the terms first.
 
 <Callout kind="info" collapsed="false">
 
-Families type their name for form signature fields. They do not draw a signature on screen.
+Families type their name for form signature fields. They do not draw a signature on screen. Link mode is available on every camp's portal forms; it is not limited to a newer form layout.
 
 </Callout>
 
@@ -255,7 +273,7 @@ The typed signature also appears in the responses table like any other field ans
 
 ### Writing legal text
 
-Keep paragraphs short so the text is easier to review in the Portal scroll area. Put the most important terms first, use merge fields where a name helps clarify the agreement, and have your legal counsel review the final wording.
+Keep paragraphs short so the text is easier to review in the Portal scroll area or the **Terms you are agreeing to** dialog. Put the most important terms first, use merge fields where a name helps clarify the agreement, and have your legal counsel review the final wording.
 
 ### One field, many forms
 
@@ -276,7 +294,7 @@ Use form signatures for waiver-style acknowledgments on forms, and use Contracts
 |  | Form signature | Contracts |
 | --- | --- | --- |
 | Setup | Signature profile field + form question + legal text | Contract template + instance |
-| Portal UX | Scroll legal text and type name | Read contract and type or draw signature |
+| Portal UX | Scroll legal text (or **Review the terms**) and type name | Read contract and type or draw signature |
 | Typical use | Waivers, releases, policies on forms | Employment agreements, staff contracts |
 | Staff review | Profile Signatures tab; form PDF | Profile Contracts tab; Admin → Contracts |
 
@@ -327,5 +345,5 @@ Use this checklist before publishing a form that requires signatures:
 - Add the field to the form from **Questions → New Question**
 - Open the question editor and enter the **Legal Terms**
 - Confirm the question is **Required**
-- Test on the Portal to confirm the legal text displays, the name is required, and the form submits
+- Test on the Portal to confirm the legal text displays (scroll box or **Review the terms**), the name is required, and the form submits
 - Confirm the signature appears on **More → Signatures** and on the form response PDF

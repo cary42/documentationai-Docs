@@ -5,9 +5,18 @@ description: See how much each camper has paid toward each session, with charges
 
 ## Overview
 
-Use Payment Detail to see how payments are landing across a season, line by line. For each camper and session it shows what was charged, how much has been paid, any discounts or credits, and the balance still owed.
+Use Payment Detail to see how payments are landing across a season. Switch between a line-by-line camper view and a session rollup.
 
 Payments are recorded against a season, not against a single line item, so each family's payments are split across their sessions in proportion to price. Charged minus Paid minus Discounts and Credits equals the Balance.
+
+## Views
+
+Above the summary cards, choose:
+
+- **By Camper** (detail) – one row per camper and session, with family, charged, paid, discounts/credits, and balance
+- **By Session** (rollup) – one row per session with **Registrations**, charged, paid, discounts/credits, and balance totals
+
+Your camp's wording for people and products may replace **Camper** and **Session** on those buttons.
 
 ## Filters
 
@@ -16,7 +25,7 @@ The report always covers one season. Use the season selector at the top to choos
 </ParamField>
 
 <ParamField body="Date range" param-type="filter" show-location="false">
-Paid and Discounts / Credits count only payments received in this range. It defaults to the last 30 days.
+Paid and Discounts / Credits count only payments received in this range. When you first open the report for a season, the range defaults to that season's start and end dates (not the last 30 days). Change the dates if you need a narrower window.
 </ParamField>
 
 ## Summary cards
@@ -38,6 +47,8 @@ Charged minus what was paid and credited in the date range.
 </ParamField>
 
 ## Table columns
+
+### By Camper
 
 <ParamField body="Family" param-type="link" show-location="false">
 The family's name, linked to their profile.
@@ -65,6 +76,20 @@ The share of discounts and credits allocated to that line.
 
 <ParamField body="Balance" param-type="currency" show-location="false">
 Charged minus Paid minus Discounts / Credits for that line.
+</ParamField>
+
+### By Session
+
+<ParamField body="Session" param-type="text" show-location="false">
+The session or product name.
+</ParamField>
+
+<ParamField body="Registrations" param-type="number" show-location="false">
+How many active registration lines belong to that session.
+</ParamField>
+
+<ParamField body="Charged / Paid / Discounts / Credits / Balance" param-type="currency" show-location="false">
+Sums of the matching detail rows for that session.
 </ParamField>
 
 <Callout kind="info">
