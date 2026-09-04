@@ -76,7 +76,31 @@ Each row is one payment.
   A per-payment reconcile toggle. See below.
 </ParamField>
 
-The table footer totals the **Fee** and **Total** columns for the whole view.
+The table footer totals the **Fee** and **Total** columns for the whole view. When a refund filter is active, the footer still totals the full batch; the note under the KPI band says so.
+
+## Filter by refund KPIs (batch view)
+
+When you open Deposit Detail for a specific batch and that batch has refunds (in the batch or against its payments elsewhere), a band of clickable tiles appears above the table:
+
+- **Payments** – charges that settled in this batch
+- **Refunds in this batch** – refunds that settled in this batch (already subtracted from the batch total)
+- **Batch total** – every row in this batch (clears the filter)
+- **Refunds outside this batch** – only when some refunds reverse payments from this batch but settled in another batch or have not settled yet (those amounts are **not** in the batch total)
+
+Select a tile to filter the table to that bucket. Select it again to clear the filter. The note under the band names the active filter (or reminds you to click a tile).
+
+Selecting **Refunds outside this batch** also opens a list of those refunds with:
+
+| Column | What it shows |
+| --- | --- |
+| **Date** | When the refund was recorded |
+| **Family** | Payer name, linked to their profile when available |
+| **Amount** | Refund amount |
+| **Status** | Settlement status badge |
+| **Settled in** | Link to the other batch, or **Not in a batch** |
+| **Reverses** | Link to the original payment row in this batch |
+
+The KPI band appears only when there is at least one in-batch refund or one off-batch refund to show. Overview (no batch selected) does not use these tiles.
 
 ## Reconcile a payment
 
