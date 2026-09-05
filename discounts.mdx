@@ -81,6 +81,10 @@ Each row in the discount list represents one discount. Use the columns to unders
   **Limit** — Maximum number of allowed uses, if you set one. Blank or zero means no limit.
 </ParamField>
 
+<ParamField body="maxTotal" param-type="string" required="false" deprecated="false" show-location="false">
+  **Max Total** - How much of the code's dollar budget has been given away, when you set a **Maximum Total**. Shows as used-of-cap (for example `250.00 of 500.00`). Blank when there is no dollar cap.
+</ParamField>
+
 <ParamField body="startEndDate" param-type="string" required="false" deprecated="false" show-location="false">
   **Start Date / End Date** — The date range when the discount is valid. Outside this window, the discount cannot be applied.
 </ParamField>
@@ -128,6 +132,12 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     Leave blank or enter `0` for no limit. Sibling discounts do not use Limit.
   </Step>
 
+  <Step title="Optionally cap the total dollars given away" icon="settings" title-type="p">
+    For a **Code discount**, in **Maximum Total**, enter the maximum dollar amount this code can give away across all redemptions (for example `500` or `1,500.00`). Leave blank for no dollar limit.
+
+    This is the dollar sibling of **Limit**: **Limit** caps how many times the code can be used, and **Maximum Total** caps how much it can hand out. A 10% code with a `$500` maximum stops once `$500` has been discounted. Sibling discounts hide this field.
+  </Step>
+
   <Step title="Choose how a percent discount applies across sessions" icon="settings" title-type="p">
     Set **Apply To All Sessions**:
 
@@ -156,6 +166,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     - Set **Allow On Portal?** to **Yes** if families should apply it in the parent portal.
     - Set **Start Date** and **End Date** if the discount should only apply during a specific registration window.
     - Set **Limit** if you want to cap how many pay in full discounts can be used.
+    - Set **Maximum Total** if you want to cap the total dollars the code can give away.
     - Use **Apply Only To These Products** to control which registrations qualify.
   </Step>
 
@@ -224,7 +235,7 @@ A **Sibling discount** applies automatically at checkout when a family has two o
   <Step title="Set remaining rules and save" icon="check-circle" title-type="p">
     Set **Apply To All Sessions**, **Apply After Other Discounts?**, dates, and product restrictions as needed, then click **Save**.
 
-    Code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, and **Limit**) stay hidden for sibling discounts.
+    Code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, **Limit**, and **Maximum Total**) stay hidden for sibling discounts.
   </Step>
 </Steps>
 
@@ -278,6 +289,24 @@ Limit controls how many times a discount can be used across all families.
 - **Any positive number**: The discount stops working after it reaches that many successful uses.
 
 Use limits for early-bird specials, limited-seat promotions, or grants with fixed budgets.
+
+**Limit** does not block staff from applying the code by hand in Admin once the use count is reached. **Maximum Total** does block staff when the dollar budget is gone or the next redemption would overshoot it.
+
+### Maximum Total
+
+**Maximum Total** caps how many dollars a code discount can give away in total. It sits next to **Limit** on **Add New Discount** and **Edit Discount**.
+
+- **Blank or 0**: No dollar cap.
+- **A dollar amount** (for example `500` or `1,500.00`): the code stops once that much has been discounted. `$` signs and commas are accepted when you save.
+
+How it behaves:
+
+- Redeemed dollars are the net amount already credited for that code. Refunding a discount restores budget.
+- A redemption that would go over the remaining budget is refused whole. It is never trimmed to what is left, so nobody is quietly given less than the code advertises.
+- On edit, helper text shows how much has been used and how much is left (or that the code is spent out). The discount list **Max Total** column shows used-of-cap when a cap is set.
+- Families who try a spent-out or overshooting code see **Sorry. This discount is no longer available.** Staff who apply or raise a discount past the cap see a message that names the code, the maximum total, how much has been used, and what is left.
+
+Sibling discounts do not use **Maximum Total**.
 
 ### Date range
 
@@ -525,12 +554,19 @@ Use this section when you see an error while saving a discount or multi-session 
     - Saving the discount again.
   </Expandable>
 
+  <Expandable title="Error: Maximum Total must be a dollar amount like 500 or 1,500.00, or left blank for no limit." default-open="false">
+    The system shows this when **Maximum Total** is not blank and is not a valid dollar amount (letters, a bare decimal point, three decimal places, a negative, and similar values are refused).
+
+    Fix it by entering a dollar amount such as `500` or `1,500.00`, or clear the field for no limit, then save again. Leaving an invalid value blank by accident would have meant no dollar cap, so the save is refused instead.
+  </Expandable>
+
   <Expandable title="Discount is not showing for families at checkout" default-open="false">
     If families cannot see or use a discount code in the parent portal, check the following:
 
     - **Allow On Portal? = Yes** on the discount.
     - The current date is between the discount's **Start Date** and **End Date**, or both are blank.
     - The **Limit** has not been reached. If usage equals the limit, the discount no longer applies.
+    - **Maximum Total** has budget left. If the dollar cap is spent out, or the next redemption would overshoot what is left, families see **Sorry. This discount is no longer available.**
     - Product restrictions match the items in the cart; the discount applies only to qualifying products.
     - The discount is not archived and its status indicates it is in use.
     - For a pay in full discount, confirm the form's new pay in full setting is enabled or overridden correctly, and verify the discount is available for the full-balance checkout path.
@@ -597,6 +633,7 @@ The check runs three layers of checks:
     - Is the discount public (visible to families in the portal)?
     - Is the discount archived?
     - Has the usage limit been reached?
+    - Has the **Maximum Total** dollar budget been spent, or would this redemption overshoot what is left?
     - Is the amount or percent set to zero?
     - Is the current date outside the discount's start or end date?
   </Expandable>
@@ -678,6 +715,10 @@ The check runs three layers of checks:
 
   <Expandable title="How do I limit how many times a discount can be used?" default-open="false">
     Enter a number in the **Limit** field when you create or edit the discount. After the discount reaches that many uses, it stops working; leave the field blank or set it to `0` for no limit.
+  </Expandable>
+
+  <Expandable title="How do I cap how many dollars a discount can give away?" default-open="false">
+    Enter a dollar amount in **Maximum Total** when you create or edit a code discount. Leave it blank for no dollar cap. Sibling discounts do not use this field. See **Maximum Total** above.
   </Expandable>
 
   <Expandable title="How do I set a discount to expire on a certain date?" default-open="false">
