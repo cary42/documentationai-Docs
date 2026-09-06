@@ -304,7 +304,7 @@ How it behaves:
 - Redeemed dollars are the net amount already credited for that code. Refunding a discount restores budget.
 - A redemption that would go over the remaining budget is refused whole. It is never trimmed to what is left, so nobody is quietly given less than the code advertises.
 - On edit, helper text shows how much has been used and how much is left (or that the code is spent out). The discount list **Max Total** column shows used-of-cap when a cap is set.
-- Families who try a spent-out or overshooting code see **Sorry. This discount is no longer available.** Staff who apply or raise a discount past the cap see a message that names the code, the maximum total, how much has been used, and what is left.
+- Families who try a spent-out or overshooting code see **Sorry. This discount is no longer valid.** (Usage-limit refusals still say **Sorry. This discount is no longer available.**) Staff who apply or raise a discount past the cap see a message that names the code, the maximum total, how much has been used, and what is left.
 
 Sibling discounts do not use **Maximum Total**.
 
@@ -566,7 +566,7 @@ Use this section when you see an error while saving a discount or multi-session 
     - **Allow On Portal? = Yes** on the discount.
     - The current date is between the discount's **Start Date** and **End Date**, or both are blank.
     - The **Limit** has not been reached. If usage equals the limit, the discount no longer applies.
-    - **Maximum Total** has budget left. If the dollar cap is spent out, or the next redemption would overshoot what is left, families see **Sorry. This discount is no longer available.**
+    - **Maximum Total** has budget left. If the dollar cap is spent out, or the next redemption would overshoot what is left, families see **Sorry. This discount is no longer valid.**
     - Product restrictions match the items in the cart; the discount applies only to qualifying products.
     - The discount is not archived and its status indicates it is in use.
     - For a pay in full discount, confirm the form's new pay in full setting is enabled or overridden correctly, and verify the discount is available for the full-balance checkout path.
