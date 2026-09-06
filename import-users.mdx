@@ -10,7 +10,7 @@ Use the Import Users tool to load many new users into Campium at once or update 
 
 The Import Users screen can be found by going to **Admin** -> **Import & Export** -> **Import** -> **Users**
 
-You can import both families (campers with guardians) and staff rosters. Choose the staff import mode when the file you are loading is a list of staff members rather than campers and their families.
+On the first step, use **What are you importing?** to choose **Campers and families**, **Staff**, or **Parents and guardians only**. That choice tags every row for the rest of the wizard. Header sniffing no longer decides the mode; it only warns when the file looks like a different type than the one you picked.
 
 ## Where to find it
 
@@ -56,9 +56,9 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
 
     - Navigate to **Admin** -> **Import & Export** -> **Import** -> **Users**
 
-    - Choose whether you are importing families (campers and their guardians) or a staff roster.
+    - Under **What are you importing?**, choose **Campers and families**, **Staff**, or **Parents and guardians only**. Pick **Staff** only for a staff roster. A camper list without parent columns is still a camper list.
 
-    Success check: You see a page that lets you browse for a file or upload a CSV, with options to configure how the import behaves.
+    Success check: You see a page that lets you browse for a file or upload a CSV, with the import type set.
   </Step>
 
   <Step title="Prepare and upload your CSV file" icon="upload" title-type="p">
@@ -78,6 +78,8 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
   </Step>
 
   <Step title="Map CSV columns to Campium fields" icon="settings" title-type="p">
+    - Confirm **Importing as** still matches the type you chose. If a yellow **Check the import type:** banner appears, the file headers look like a different roster than your choice. Go back and change **What are you importing?** if needed.
+
     - For each CSV column shown, choose the matching field in Campium using the dropdowns or field selectors you see.
 
     - Pay special attention to identifiers such as **Guardian 1 Email** (or the equivalent field in your configuration), since the import uses this email address as the first way to determine whether there is a matching family.
@@ -96,11 +98,11 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
   </Step>
 
   <Step title="Preview the import (dry run)" icon="eye" title-type="p">
-    - Before anything is written, use the **Preview** step to see a dry run of what the import will do.
+    - Before anything is written, use the **Preview** step to see a dry run of what the import will do. The title reflects your type (first 5 families, staff, or parents).
 
-    - Review the preview to confirm how many families, campers, and guardians would be created or updated, and check that existing records are being matched rather than duplicated.
+    - Confirm the line that says **Importing as** your chosen type. Review the preview counts (families/campers, staff rows, or parent rows) and check that existing records are being matched rather than duplicated.
 
-    - If the preview looks wrong, go back and adjust your mappings, then preview again.
+    - If the preview looks wrong, go back to **Map Fields** (or change the import type on step 1) and preview again.
 
     Success check: The preview counts and matched records line up with what you expect from your file before you commit the import.
   </Step>
@@ -136,14 +138,14 @@ Follow these steps each time you use the Import Users tool. Adjust step names ac
 
     - Confirm the import to start processing.
 
-    After completion, review the summary again and spot-check a mix of newly created and previously existing users to confirm the results. The admin account that uploaded the file receives an email when processing finishes, summarizing how many families, campers, and guardians the import created.
+    After you confirm, you can close the window. The import keeps running on the server, and Campium emails the account that started it when it finishes (including the filename). The subject and summary counts follow the import type (campers, staff, or parents). Camper and parent imports can also include a **What was imported** people list in that email.
 
     Success check: The total numbers of created/updated/failed rows are close to what you expected from the full CSV, the completion email matches those counts, and sampled user records show correct data.
   </Step>
 </Steps>
 
 <Callout kind="info" collapsed="false">
-  After each import finishes, the account that uploaded the CSV receives a completion email showing how many families, campers, and guardians were created. If you do not see it, check your spam or junk folder and any email filters.
+  After each import finishes, the account that uploaded the CSV receives a completion email for that file. If you do not see it, check your spam or junk folder and any email filters.
 </Callout>
 
 <Callout kind="alert" collapsed="false">
