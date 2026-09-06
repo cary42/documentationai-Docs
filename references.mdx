@@ -1,0 +1,139 @@
+---
+title: References
+description: >-
+  Ask applicants to name people who will vouch for them, email each person one
+  shared reference form, and track invitation status from the profile and portal.
+---
+
+Ask applicants to name people who will vouch for them. Each person they name is emailed a short form to fill out. You track who was invited, who replied, and whether a message bounced, without waiting on the reference to finish before the applicant continues.
+
+## How it works
+
+1. On the application form **Settings**, turn on **Ask for References?** and pick one **Reference Form**.
+2. The applicant names each reference (first name, last name, email) on the application.
+3. Campium emails each person a link to that shared form.
+4. Staff review status on the applicant's profile **Forms** tab. Applicants can check progress on **My References** on the portal.
+
+Everyone the applicant names fills out the **same** reference form. You no longer link two separate forms for two references.
+
+<Callout kind="info" collapsed="false">
+  Applicants are not held up waiting for references to reply. **References Required** only controls how many people they must name before they can continue.
+</Callout>
+
+## Turn on references for a form
+
+Open **Forms** in the left navigation, open the application form, then open the **Settings** tab.
+
+<Steps>
+  <Step title="Ask for references" icon="users" title-type="p">
+
+  Set **Ask for References?** to **Yes**. Helper text explains that applicants name people who will vouch for them and each person is emailed a short form.
+
+  </Step>
+  <Step title="Pick the Reference Form" icon="folder" title-type="p">
+
+  Under **Reference Form**, choose the form each reference fills out. The first option is **-- Choose a form --**. Pick an existing form (for example a recommendation questionnaire). Forms from another season show **(different season)** after the name.
+
+  Saving **Ask for References?** as **No** clears the reference form and turns the feature off for this application.
+
+  </Step>
+  <Step title="Set how many are required" icon="hash" title-type="p">
+
+  Under **References Required**, choose **Optional** (0) or **1** through **10**. This is how many people the applicant must name before they can submit. It does not wait for those people to reply.
+
+  </Step>
+  <Step title="Choose where the block appears" icon="layout" title-type="p">
+
+  Under **Where References Appear**, choose:
+
+  - **At the top of the form**
+  - **At the bottom of the form**
+  - **After a section** (then pick the section; the block goes directly after it)
+
+  If you choose **After a section** and the form has no sections yet, the block goes at the bottom.
+
+  </Step>
+  <Step title="Add instructions (optional)" icon="edit" title-type="p">
+
+  Use **Reference Instructions** for copy shown above the reference questions, such as who counts as a good reference.
+
+  </Step>
+  <Step title="Set reminders (optional)" icon="bell" title-type="p">
+
+  Under **Remind References After**, choose **Do not send reminders**, or a number of days from **1** to **90** to nudge someone who has not replied.
+
+  </Step>
+  <Step title="Save" icon="check-circle" title-type="p">
+
+  Click **Save Settings**.
+
+  </Step>
+</Steps>
+
+### Older two-form setup
+
+If a form still uses the older **Reference One Form** / **Reference Two Form** setup, Settings shows a yellow notice:
+
+**Action needed: this form uses the older reference setup.**
+
+Applications already submitted still show their references, and any link already emailed still opens. **This form will not send any new reference requests until you choose a Reference Form above.** Pick one form for everyone to fill out (or combine the two into a single form), then save.
+
+## What the applicant sees
+
+On the application, a **References** section appears where you placed it.
+
+- Required count intro: **Please give us one reference** (or **N references**), with a note that you will email each person a short form and the applicant can carry on while they wait.
+- Optional intro when none are required: they can still add a reference if they want.
+- Each row is labeled **Reference 1**, **Reference 2**, and so on, with **First name**, **Last name**, and **Email address**.
+- **Add another reference** adds a row. **Remove** deletes one (with a confirm if that person may already have been emailed).
+- As they type, a live line confirms: we will email that address asking that person to complete a reference.
+- Self-references and duplicate emails are refused. A reference has to be someone else on a different address.
+
+After an invitation goes out, the row shows status such as **Invitation sent**, **Reminder sent**, **Completed**, **We could not deliver to this address**, or **Not sent yet**. Invitation and reminder badges can include the send date.
+
+## My References on the portal
+
+Applicants (and others who named references) can open **My References** at `/references/` on your portal.
+
+- The page lists each request grouped by form, with status and **Sent** / **Completed** dates.
+- **Send again** resends the invitation when allowed.
+- During a cooldown, the button is disabled with **You can send again in N minutes** (or minutes wording for the remaining wait).
+- After the self-send cap is reached, the page tells them to ask the camp to send it again.
+- **Change email address** opens a small form to correct a typo. Existing emailed links keep working; the new address is used the next time the invitation is sent.
+
+There is no separate top-nav label for this page yet. Share the portal path or bookmark when families need it. Staff remove a reference from the profile card, not from this page.
+
+## Track references on a profile
+
+Open the person's profile → **Forms** tab. When references exist, a **References** card appears above the forms list.
+
+| Column | What it shows |
+| --- | --- |
+| **Reference** | Name |
+| **Email** | Address on the invitation |
+| **Status** | Same plain-language status the applicant sees |
+| **Sent** | How many times the invitation was sent |
+| **Last sent** | Most recent send |
+
+Row menu actions:
+
+- **Resend invitation**
+- **Change email address**
+- **Remove** (confirm if they may already have been emailed; their link stops working)
+
+Reference-form submissions on the same **Forms** tab can show a **Reference** badge on the row.
+
+Access follows the **Forms** tab permission. There is no separate references permission.
+
+## Reference Request email
+
+Campium seeds a **Reference Request** email template the first time your camp sends a reference invite. Edit it under **Communication → Emails** (template name **Reference Request**).
+
+The default subject names the applicant. The body includes a **Complete the reference** link for the recipient.
+
+## Tips
+
+- Build the reference questionnaire as its own form first, then select it under **Reference Form** on the application.
+- Keep **References Required** at the number you actually need. Higher counts add more outbound email and follow-up.
+- If a family says a code or invitation failed, check status on the profile **References** card for **We could not deliver to this address** before resending.
+- Cloning a form for a new season copies these reference settings. Confirm **Reference Form** still points at the form you want for the new season.
