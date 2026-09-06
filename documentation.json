@@ -548,6 +548,11 @@
                 "icon": "lucide-newspaper"
               },
               {
+                "title": "References",
+                "path": "references",
+                "icon": "users"
+              },
+              {
                 "title": "Test Mode",
                 "path": "test-mode",
                 "icon": "flask-conical"
