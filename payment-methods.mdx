@@ -1,0 +1,153 @@
+---
+title: Payment Methods
+description: >-
+  Choose which methods families can use at checkout, record cash and check by
+  hand, and set ACH, American Express, and credit card surcharge options.
+---
+## How families pay, and how you record the rest
+
+Payment methods are the ways money lands on a family account. Families pay online with a card or, when you allow it, a bank account. You record cash and check yourself when someone pays at the office.
+
+Which options appear at checkout depends on **Admin → Site Settings → Payment Info**, and on the [payment processor](/payment-processors) your camp uses.
+
+<Callout kind="info" collapsed="false">
+  Families never enter cash or a paper check during online checkout. Those methods exist so you can record a payment that already happened in person.
+</Callout>
+
+## Methods families use at checkout
+
+At registration checkout, canteen add-funds, and other parent-portal payments, families choose from the electronic methods you have turned on.
+
+| Method | When it appears |
+| --- | --- |
+| **Credit card** | Always available for online checkout. Visa, MasterCard, and Discover do not have a separate on/off switch. |
+| **American Express** | Only when **Accept AMEX** is on. |
+| **ACH / e-check** | Only when **Accept ACH Payments** is on. Families enter a bank account, or pick a saved one. |
+
+Debit, prepaid, and HSA/FSA cards run through the same card option as credit cards. They are not a separate choice on the checkout screen.
+
+Families can also pay in full or choose a [payment plan](/payment-plans) when the season has one. The plan controls *when* charges run. The method on file controls *how* they run.
+
+### Saved methods on the parent portal
+
+Logged-in families manage cards and bank accounts from **Account** or **My Account**, then **Payment Methods**.
+
+- They can add, update, or replace a card or bank account.
+- Scheduled charges and retries use a method on file. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
+- You can find households with nothing on file using [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
+
+<Callout kind="tip" collapsed="false">
+  If a family says checkout would not take their card, confirm **Accept AMEX** if it is an American Express card, and confirm they are not hitting a surcharge or processor decline. The last four digits appear as `x####` (for example, `Visa x1234`) on failed-attempt lists.
+</Callout>
+
+## Methods you record by hand
+
+When a family pays at the office, you record the payment on their profile **Sales** tab. Those entries are not processed by your card or ACH processor.
+
+| Method | What it is | Where it shows up later |
+| --- | --- | --- |
+| **Cash** | Currency received in person | [Payments](/payments), [Revenue Summary](/revenue-summary), and undeposited rows in [Deposit Summary](/deposit-summary) |
+| **Check** | A paper check you will deposit | Same reports. The **Type** on undeposited rows in Deposit Summary shows **Check**. |
+| **Adjustment** | A manual balance change, not new money collected | [Revenue Summary](/revenue-summary) as **Adjustment**. Do not treat it as a bank deposit. |
+
+Cash, check, and some other manual types sit in **Financials → Deposit Summary** under **New deposits** until you group them into a deposit. Card and ACH settlements follow your processor instead. See [Deposit Summary](/deposit-summary).
+
+Canteen deposits taken at the office have their own **Add Funds** flow. The **Account** dropdown can include **Cash** (when **Accept cash** is on in Canteen settings), **Zelle**, a saved card or bank account, or **Adjustment**. See [Adding canteen funds](/adding-canteen-funds).
+
+## ACH and American Express
+
+Turn these two options on or off in **Admin → Site Settings → Payment Info**. Changes save as soon as you toggle them.
+
+<Steps>
+  <Step title="Open Site Settings" icon="settings" title-type="p">
+
+  From the left sidebar, click **Admin**, then **Site Settings**.
+
+  </Step>
+  <Step title="Open the Payment Info tab" icon="credit-card" title-type="p">
+
+  Click **Payment Info**.
+
+  </Step>
+  <Step title="Set Accept AMEX and Accept ACH Payments" icon="check-circle" title-type="p">
+
+  - **Accept AMEX** controls whether American Express cards are accepted.
+  - **Accept ACH Payments** controls whether families can pay by bank transfer (ACH / e-check) in addition to card.
+
+  </Step>
+</Steps>
+
+When **Accept ACH Payments** is off, families do not see a bank-account option at checkout, and you should not expect ACH rows in [Payments](/payments) or [ACH Returns](/ach-returns).
+
+When **Accept AMEX** is off, an American Express card is declined at checkout even if other cards work.
+
+<Callout kind="info" collapsed="false">
+  ACH timing, returns, and refund rules depend on your processor (Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe). See [Payment Processors](/payment-processors) and [What is an ACH return?](/what-is-an-ach-return).
+</Callout>
+
+## Credit card surcharge
+
+**Credit Card Surcharge** on the same **Payment Info** tab is the percentage added when a family pays with a **credit** card, to help offset card-processing cost.
+
+- Enter the percentage as a number with or without the percent sign. Campium treats `3` and `3%` as the same value.
+- Debit, prepaid, and HSA/FSA cards, plus ACH / e-check, are **never** surcharged.
+- Most camps show a **Credit Card Surcharge** line and a label such as **(X% Surcharge)** next to the credit card option.
+- In New York (and any other state that requires two-tier pricing), checkout shows two totals before a method is chosen: **Total with ACH/e-check or debit card** and **Total with credit card (includes the X% surcharge)**.
+
+If your camp uses **Finix**, Campium also enforces your state's surcharge rules and rate cap when you save. A value that is prohibited in your state, or over the cap, is rejected with a warning dialog instead of saving. Help text under the field summarizes those rules.
+
+<Callout kind="info" collapsed="false">
+  On Finix, the surcharge is a processor-native surcharge program. It is separate from settlement timing. See [Payment Processors](/payment-processors).
+</Callout>
+
+When you refund a card payment that included a surcharge, the refund form can include **Also Refund Surcharge**. That checkbox starts checked. On Finix it stays required. See [Processing Refunds and Voids](/processing-refunds-and-voids#refunds-and-credit-card-surcharges).
+
+## After you change these settings
+
+Site Settings save as soon as you change them. There is no separate Save button.
+
+- Turning **Accept ACH Payments** off hides the bank-account option at checkout. Scheduled ACH charges can fail until the family uses a card instead.
+- Turning **Accept AMEX** off stops American Express at checkout. Other card brands are unchanged.
+- Changing **Credit Card Surcharge** changes the percentage used on new card charges and on surcharge refunds. Refunds use the rate in settings at refund time, not the rate from the original payment. If you change the percentage after a family paid, a later surcharge refund may not match the original fee.
+
+**Payment Method Updated Email** on the same tab is the address that receives a notice when a family updates a method on file.
+
+## Troubleshooting
+
+<ExpandableGroup>
+  <Expandable title="Families do not see ACH at checkout">
+
+  Confirm **Accept ACH Payments** is on in **Admin → Site Settings → Payment Info**. If it is on and the option is still missing, the family may be on a flow that only accepts a card, or your processor may not be set up for ACH. See [Payment Processors](/payment-processors).
+
+  </Expandable>
+  <Expandable title="An American Express card is declined">
+
+  Confirm **Accept AMEX** is on. If it is on, the decline is from the processor or the card issuer, not from that toggle.
+
+  </Expandable>
+  <Expandable title="A family was charged a surcharge on a debit card">
+
+  Debit, prepaid, and HSA/FSA cards are never surcharged. If they see a surcharge line, they likely paid with a credit card. The checkout label **(X% Surcharge)** sits next to the credit card option.
+
+  </Expandable>
+  <Expandable title="A cash or check payment is not in Deposit Summary">
+
+  Open **Financials → Deposit Summary** and expand **New deposits**. That list is not filtered by the page date range. If the payment is already grouped into a deposit, look in the deposited batches instead. Confirm the payment exists on the profile **Sales** tab first.
+
+  </Expandable>
+  <Expandable title="A scheduled payment has no method on file">
+
+  Ask the family to add a card or bank account under **Account → Payment Methods**, or use [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) to find households that still need one.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Related pages
+
+- [Site Settings](/settings) for **Accept AMEX**, **Accept ACH Payments**, and **Credit Card Surcharge**
+- [Payment Processors](/payment-processors) for Finix, Payabli, USIO, and settlement windows
+- [Payment Plans](/payment-plans) for spreading fees over time versus paying in full
+- [Processing Refunds and Voids](/processing-refunds-and-voids) for reversing a payment, including the surcharge
+- [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment) for charging a different method on file
+- [Deposit Summary](/deposit-summary) for grouping cash and check into deposits
+- [Payments](/payments) to filter collected money by payment type

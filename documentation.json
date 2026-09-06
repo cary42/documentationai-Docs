@@ -87,6 +87,11 @@
                 "title": "Payment Processors",
                 "path": "payment-processors",
                 "icon": "credit-card"
+              },
+              {
+                "title": "Payment Methods",
+                "path": "payment-methods",
+                "icon": "wallet"
               }
             ],
             "public": true
