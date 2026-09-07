@@ -82,8 +82,12 @@ Optional text for **Standard** plans. Use it to explain the timing in plain lang
 Available for **Even split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st & 15th**.
 </ParamField>
 
-<ParamField body="Day of month" param-type="integer" show-location="false">
-Used with **Monthly** even split plans. Choose which day of the month charges should run.
+<ParamField body="Day of month for charges" param-type="integer" show-location="false">
+Used with **Monthly** Even Split plans. Choose which day of the month charges should run by default.
+</ParamField>
+
+<ParamField body="Let families choose their charge day" param-type="boolean" show-location="false">
+Available only for **Monthly** Even Split plans. When checked, checkout shows **Charge day of the month** so the family can pick a day from the **1st** through the **28th**. The plan's **Day of month for charges** stays the default until they change it. After checkout that creates their schedule, the day locks for the family. You can still change it on their profile. Plans with this option show a **Family picks** badge on the payment plans list.
 </ParamField>
 
 <ParamField body="Start date" param-type="date" required="true" show-location="false">
@@ -122,6 +126,17 @@ Standard plans give you full control over each charge. You create separate plan 
 ### Even split plans
 
 Even split plans do not use manual schedule lines. The system calculates the charge amounts based on the balance, the date range, and the cadence you choose.
+
+#### Let families choose their charge day
+
+On a **Monthly** Even Split plan, you can check **Let families choose their charge day** under **Family chooses the day**.
+
+- At checkout, families see **Charge day of the month** with days from the **1st** to the **28th**, plus helper text: **Your payments will run on this day each month. You will not be able to change it after you check out.**
+- The schedule preview updates when they change the day.
+- After the checkout that creates their scheduled payments, the portal shows locked text such as **Charges on the 15th of each month.** with **To change this, contact the camp office.**
+- Weekly, bi-weekly, and 1st & 15th Even Split plans do not offer this option. Standard plans do not either.
+
+This is a per-plan setting. It is not limited to a specific payment processor.
 
 <Callout kind="tip">
 
@@ -314,6 +329,11 @@ Change a family's assigned plan from the Sales area on their profile.
   If needed, choose **Choose Plan** first to clear the current selection before picking a new one.
 
   </Step>
+  <Step title="Adjust Charge day when needed" icon="calendar">
+
+  For a monthly Even Split plan, use **Charge day** to keep the family's day, pick **Use plan default**, or choose another day (**1st** through **31st**). Changing the day rebuilds their scheduled payments. Helper text explains when the family locked the day at checkout.
+
+  </Step>
   <Step title="Save the change" icon="check-circle">
 
   Click **Change Payment Plan** to save.
@@ -353,7 +373,7 @@ Clears the payment plan and removes those scheduled charges.
 Even split plans calculate charges based on the cadence and date range.
 
 <ParamField body="Monthly" param-type="cadence" show-location="false">
-Charges on the day of the month you set.
+Charges on the day of the month you set, or on the family's chosen day when **Let families choose their charge day** is on for that plan.
 </ParamField>
 
 <ParamField body="Weekly" param-type="cadence" show-location="false">

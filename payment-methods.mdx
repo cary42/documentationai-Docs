@@ -87,10 +87,10 @@ When **Accept AMEX** is off, an American Express card is declined at checkout ev
 
 - Enter the percentage as a number with or without the percent sign.
 - Debit, prepaid, and HSA/FSA cards, plus ACH / e-check, are **never** surcharged.
-- Most camps show a **Credit Card Surcharge** line and a label such as **(X% Surcharge)** next to the credit card option.
+- Most camps show a **Credit Card Surcharge** line and a label such as **(2% Surcharge)** or, when a small fixed amount is also configured for your processor, **(2% + $0.15 Surcharge)** next to the credit card option.
 - In New York (and any other state that requires two-tier pricing), checkout shows two totals before a method is chosen: **Total with ACH/e-check or debit card** and **Total with credit card (includes the X% surcharge)**.
 
-When you refund a card payment that included a surcharge, the refund form can include **Also Refund Surcharge**. That checkbox starts checked. On Finix it stays required. See [Processing Refunds and Voids](/processing-refunds-and-voids#refunds-and-credit-card-surcharges).
+When you refund a card payment that included a surcharge, the refund form can include **Also Refund Surcharge**. That checkbox starts checked. On Finix it stays required. The surcharge refund prorates the fee that was charged on the original payment. See [Processing Refunds and Voids](/processing-refunds-and-voids#refunds-and-credit-card-surcharges).
 
 ## After you change these settings
 
@@ -98,7 +98,7 @@ Site Settings save as soon as you change them. There is no separate Save button.
 
 - Turning **Accept ACH Payments** off hides the bank-account option at checkout. Scheduled ACH charges can fail until the family uses a card instead.
 - Turning **Accept AMEX** off stops American Express at checkout. Other card brands are unchanged.
-- Changing **Credit Card Surcharge** changes the percentage used on new card charges and on surcharge refunds. Refunds use the rate in settings at refund time, not the rate from the original payment. If you change the percentage after a family paid, a later surcharge refund may not match the original fee.
+- Changing **Credit Card Surcharge** changes the percentage used on **new** card charges. Refunds of an earlier payment still prorate the surcharge that was recorded on that payment.
 
 **Payment Method Updated Email** on the same tab is the address that receives a notice when a family updates a method on file.
 
@@ -114,7 +114,7 @@ Site Settings save as soon as you change them. There is no separate Save button.
   </Expandable>
 
   <Expandable title="A family was charged a surcharge on a debit card" default-open="false">
-    Debit, prepaid, and HSA/FSA cards are never surcharged. If they see a surcharge line, they likely paid with a credit card. The checkout label **(X% Surcharge)** sits next to the credit card option.
+    Debit, prepaid, and HSA/FSA cards are never surcharged. If they see a surcharge line, they likely paid with a credit card. The checkout label such as **(2% Surcharge)** or **(2% + $0.15 Surcharge)** sits next to the credit card option.
   </Expandable>
 
   <Expandable title="A cash or check payment is not in Deposit Summary" default-open="false">
