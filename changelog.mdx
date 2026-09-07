@@ -10,6 +10,42 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-09-07" description="Family charge day, references rebuild, forms Responses polish, surcharge refunds" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Family chooses charge day** - On a monthly **Even Split** payment plan, check **Let families choose their charge day**. At checkout, families pick **Charge day of the month** (**1st** through **28th**). The day locks after checkout; staff can still change **Charge day** on the profile. See [Payment Plans](/payment-plans#let-families-choose-their-charge-day).
+  - **References** - Application forms use one shared **Reference Form**, with **Ask for References?**, **My References** on the portal, and a **References** card on the profile **Forms** tab. See [References](/references).
+  - **Favorite pages** - Staff can save pages from the heart control in the top bar. See [Favorite Pages](/favorite-pages).
+  - **Training Videos** - When videos are available, **Admin → Training Videos** lists recordings you can open or copy. See [Training Videos](/training-videos).
+  - **Payment Methods** - One place for checkout methods, staff-recorded cash/check, ACH and AMEX toggles, and the credit card surcharge. See [Payment Methods](/payment-methods).
+
+  ## Updates
+
+  - **Forms Responses** - Click **Status** to change it, open a response from the **View** column, and use the **Print** dropdown for **Print All** / **Print Approved** / **Print Pending**. Multiple-choice types are labeled **Choose One** and **Choose Many**. See [Forms](/forms#responses-tab).
+  - **Reference form experience** - People invited as references see a clear banner and thank-you, and fill out the same form layout as other portal forms. Responses can show **Reference For** and the invitation email. See [References](/references#what-the-reference-sees).
+  - **Import Users type chooser** - **What are you importing?** guides the file before preview. See [Import Users](/import-users).
+  - **Discount Maximum Total** - Code discounts can use a dollar budget cap (**Max Total**). Parent wording distinguishes a spent budget from a usage limit. See [Discounts](/discounts).
+  - **Signature legal terms as a link** - Signature questions can show terms as **Review the terms** instead of inline. See [Digital Signatures](/digital-signatures).
+  - **Guided Season Setup Preview** - Preview the form, sessions page, or cart header; on wide screens a side drawer supports **Phone** / **Desktop**. See [Guided Season Setup](/guided-season-setup).
+  - **Deposit Detail refund tiles** - Clickable refund KPI tiles and a list of refunds outside the batch. See [Deposit Detail](/deposit-detail).
+  - **Revenue Summary Scheduled Payments** - A **Scheduled Payments** card appears when the season has scheduled payments. See [Revenue Summary](/revenue-summary).
+  - **Payment Detail views** - Toggle **By Camper** / **By Session**; the date range defaults to the season. See [Product Payment Detail](/product-payment-detail).
+  - **Credit card surcharge labels** - Checkout can show a percent, or a percent plus a small fixed amount when that is part of your setup. See [Payment Methods](/payment-methods#credit-card-surcharge).
+  - **Also Refund Surcharge** - Surcharge refunds prorate the fee from the original payment instead of re-applying today's percentage. See [Processing Refunds and Voids](/processing-refunds-and-voids#also-refund-surcharge-what-it-does).
+  - **Tipping portal menu** - Parent **Tipping** also requires **Enable tipping on your portal**. See [Tipping](/tipping).
+
+  ## Fixes
+
+  - **Form preview** - Opening a form preview no longer fails when a Current User question needs the signed-in person.
+  - **Reference invitations** - Opening an invite no longer hides **References** on the applicant's own application; reference Responses show the applicant and invitation email again.
+  - **Membership checkout** - A missing payment type no longer lets a membership checkout charge $0.
+  - **Checkout submit** - Submitting again after the cart was cleared no longer creates a duplicate checkout.
+  - **CRM proposal messages** - Line breaks in proposal and CRM messages display with correct spacing.
+  - **Parent session list on phones** - Registration session lists stay readable on small screens.
+  - **Family invoice emails** - Amount columns align correctly in Gmail.
+  - **Finix canteen session revenue** - Settled canteen charges leave Pending as expected on the session revenue view.
+</Update>
+
 <Update label="2026-08-31" description="Camper Hub, season balance tools, reminder recency, Finix statement preview, registration polish" tags={["feature","improvement","bugfix"]}>
   ## New
 

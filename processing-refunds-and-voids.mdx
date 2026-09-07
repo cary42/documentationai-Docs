@@ -125,7 +125,7 @@ The **Amount** you type is always the camp balance portion. Whether the surcharg
 
 The **Also Refund Surcharge** checkbox appears only when you are issuing a refund, not a void, and only if the original payment included a surcharge. If the payment had no surcharge, there is no fee to return and the checkbox does not appear. ACH and debit card payments usually do not include a surcharge.
 
-When the checkbox is checked (the default), Campium calculates an additional surcharge refund using the current surcharge rate from **Settings**, then credits the card for the entered **Amount** plus the surcharge refund. When you uncheck it (processors other than Finix), Campium refunds only the amount you enter and your organization keeps the surcharge.
+When the checkbox is checked (the default), Campium calculates an additional surcharge refund from the **original surcharge** on that payment, then credits the card for the entered **Amount** plus the surcharge refund. When you uncheck it (processors other than Finix), Campium refunds only the amount you enter and your organization keeps the surcharge.
 
 ### Finix
 
@@ -137,11 +137,11 @@ On Payabli, USIO, and similar processors, the checkbox starts checked with a not
 
 The calculation is:
 
-`surcharge refund = Amount × (surcharge rate ÷ 100)`
+`surcharge refund = original surcharge × (Amount ÷ original camp portion)`
 
-Campium rounds the surcharge refund to the nearest cent. The surcharge rate is read from settings at the time of the refund, not recalculated from the original payment record. If your surcharge percentage changed after the family paid, the refunded fee may differ slightly from the original surcharge amount.
+Campium rounds the surcharge refund to the nearest cent. The fee comes from what was charged on the original payment, not from re-applying today's **Credit Card Surcharge** percentage. Changing the percentage in settings after the family paid does not change how much surcharge is returned on that payment.
 
-## Examples (2.5% surcharge rate)
+## Examples (original payment had a 2.5% surcharge)
 
 Assume a family paid **$100.00** toward camp and **$2.50** in surcharge, for a total card charge of **$102.50**. On Finix, only the **Checked** rows apply (the checkbox cannot be turned off).
 
@@ -156,12 +156,12 @@ Assume a family paid **$100.00** toward camp and **$2.50** in surcharge, for a t
 
 | Amount entered | Also Refund Surcharge | Total returned to card | Explanation |
 | --- | --- | --- | --- |
-| $50.00 | Checked (default) | $51.25 | $50.00 + $1.25 surcharge refund |
+| $50.00 | Checked (default) | $51.25 | $50.00 + half of the original $2.50 surcharge |
 | $50.00 | Unchecked (non-Finix only) | $50.00 | Half of the camp amount only |
 
 ### Another partial example
 
-If the original camp portion was **$200.00** and the surcharge was **$5.00**, the total card charge was **$205.00**. Refunding **$80.00** with the checkbox checked (the default) returns **$82.00**, because 2.5% of $80.00 is $2.00. On a non-Finix processor, unchecking the box returns **$80.00** only.
+If the original camp portion was **$200.00** and the surcharge was **$5.00**, the total card charge was **$205.00**. Refunding **$80.00** with the checkbox checked (the default) returns **$82.00**, because $5.00 × ($80.00 ÷ $200.00) is $2.00. On a non-Finix processor, unchecking the box returns **$80.00** only.
 
 ## What families see
 
@@ -187,7 +187,7 @@ The **Amount** field is the camp portion, not the full card total. For a $102.50
   </Expandable>
   <Expandable title="If I refund 50% of the total, is only 50% of the surcharge refunded?">
 
-Refund 50% of the camp amount, not 50% of the full card charge. For a $100.00 camp amount, enter **$50.00**. With **Also Refund Surcharge** checked, Campium refunds $1.25 in surcharge at a 2.5% rate. If the rate has not changed, that matches half of the original $2.50 surcharge.
+Refund 50% of the camp amount, not 50% of the full card charge. For a $100.00 camp amount with a $2.50 surcharge, enter **$50.00**. With **Also Refund Surcharge** checked, Campium refunds $1.25 in surcharge (half of the original fee).
 
   </Expandable>
   <Expandable title="What if I leave the checkbox unchecked?">
@@ -213,13 +213,13 @@ The original payment probably did not include a surcharge. This is common for AC
 | --- | --- |
 | Refund amount seems too high | **Also Refund Surcharge** is checked by default. Uncheck it on non-Finix processors if you meant to keep the fee. |
 | Refund amount seems too low | Confirm you entered the full camp portion you intended. On Finix the surcharge is always included when the original payment had one. |
-| Refunded fee doesn't match original fee | Check whether the surcharge rate in settings changed after the original payment. Refunds use the current rate at refund time. |
+| Refunded fee doesn't match original fee | Surcharge refunds prorate the **original** fee on that payment. Confirm the original surcharge line on the payment, and that you entered the camp **Amount** you intended. |
 | Can't refund | The payment may be outside the processor's refund window or may not be settled yet. If it is still pending, try a void. Otherwise contact support. |
 | ACH refund warning (USIO) | Follow the instructions in the warning modal. Large ACH refunds may be issued as a separate credit. |
 
 ## Related settings
 
-- **Credit Card Surcharge** in [Site Settings](/settings): the percentage used when charging cards and when calculating **Also Refund Surcharge**.
+- **Credit Card Surcharge** in [Site Settings](/settings): the percentage used when charging cards. Surcharge refunds use the fee recorded on the original payment, not a fresh percentage from settings.
 - Debit, prepaid, and HSA/FSA cards and ACH/e-check are never surcharged, so those payments do not show the checkbox.
 - [Payment Methods](/payment-methods) for which methods families can use at checkout and which ones you record by hand.
 
