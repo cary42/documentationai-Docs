@@ -122,12 +122,18 @@ Copying a Season lets you reuse all of the Sessions (Products), forms, and payme
       The name for the new Season that will receive the copied Sessions/Products, forms, and payment plans. For example, `Summer 2026`.
     </ParamField>
 
-    <ParamField body="New Season End Date" param-type="date" required="true" deprecated="false">
-      The end date for the new Season. Set this to the date the copied Season should run through.
+    <ParamField body="Move Dates" param-type="string" required="true" deprecated="false">
+      Radio group that shifts session dates, form windows, and payment plan dates together. Choose one:
+
+      - **Same week next year** (default): moves each date forward by 364 days so it stays on the same weekday.
+      - **Same dates next year**: keeps the same month and day one year later.
+      - **Keep dates as they are**: copies dates unchanged.
+
+      A preview line under the options shows how the season end date will look. Helper text notes that the shift applies to your products, forms, and payment plans, and that **Same week next year** keeps each one on the same weekday.
     </ParamField>
 
-    <ParamField body="Increase Form and Payment Plan dates by one year" param-type="boolean" required="false" deprecated="false">
-      Checkbox that is **checked by default**. Leave it checked to shift the copied forms' and payment plans' dates forward by one year, which is what you usually want when reusing last year's setup for a new Season. Uncheck it to copy those dates unchanged.
+    <ParamField body="New Season End Date" param-type="date" required="true" deprecated="false">
+      The end date for the new Season. It follows the **Move Dates** option you picked. Change it if this season should end on a different date. Helper text: **Follows the option above. Change it if this season ends on a different date.**
     </ParamField>
   </Step>
 
@@ -272,6 +278,16 @@ Copying a Session/Product lets you reuse most settings from an existing session 
 
     <ParamField body="Season" param-type="string" required="true" deprecated="false">
       Dropdown labeled `Season`. Choose which Season should contain the copied Session/Product.
+    </ParamField>
+
+    <ParamField body="Move Dates" param-type="string" required="false" deprecated="false">
+      Radio group for shifting the session's dates when you copy into another season. Choose one:
+
+      - **Keep dates as they are** (default)
+      - **Same week next year**
+      - **Same dates next year**
+
+      A preview line updates under the options. Helper text: **Pick a shift when you are copying into next year's season.**
     </ParamField>
   </Step>
 
