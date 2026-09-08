@@ -12,7 +12,7 @@ Ask applicants to name people who will vouch for them. Each person they name is 
 1. On the application form **Settings**, turn on **Ask for References?** and pick one **Reference Form**.
 2. The applicant names each reference (first name, last name, email) on the application.
 3. Campium emails each person a link to that shared form.
-4. Staff review status on the applicant's profile **Forms** tab. Applicants can check progress on **My References** on the portal.
+4. Staff review status on the applicant's profile **Forms** tab. Applicants can check progress from the portal home card or on **My References**.
 
 Everyone the applicant names fills out the **same** reference form. You no longer link two separate forms for two references.
 
@@ -112,7 +112,20 @@ You can change status from the **Status** value and open a response from the **V
 
 ## My References on the portal
 
-Applicants (and others who named references) can open **My References** at `/references/` on your portal.
+Applicants (and others who named references) can open **My References** at `/references/` on your portal. There is still no separate top-nav menu item. The usual way in is a progress card on the portal **home** page.
+
+### Home page progress card
+
+When a logged-in family has at least one active reference request, the portal home shows a card that summarizes status and links to `/references/`. The card is hidden when every request was removed, or when all references were received more than 30 days ago.
+
+| Situation | Typical headline | Button |
+| --- | --- | --- |
+| Invitation bounced | **We could not deliver your reference request to** the address | **Update and send again** |
+| Not sent yet | **Your reference request to** the person **has not been sent yet.** | **Send the request** |
+| Waiting on replies | **Your reference request has been sent.** or **N of M references received.** | **See your references** |
+| All received (within 30 days) | **Your reference has been received.** or **All N references received.** | **See your references** |
+
+On the **My References** page itself:
 
 - The page lists each request grouped by form, with status and **Sent** / **Completed** dates.
 - **Send again** resends the invitation when allowed.
@@ -120,7 +133,7 @@ Applicants (and others who named references) can open **My References** at `/ref
 - After the self-send cap is reached, the page tells them to ask the camp to send it again.
 - **Change email address** opens a small form to correct a typo. Existing emailed links keep working; the new address is used the next time the invitation is sent.
 
-There is no separate top-nav label for this page yet. Share the portal path or bookmark when families need it. Staff remove a reference from the profile card, not from this page.
+Staff remove a reference from the profile card, not from this page.
 
 ## Track references on a profile
 
