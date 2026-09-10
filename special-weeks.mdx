@@ -62,7 +62,7 @@ You need a few pieces in place before Special Weeks can work correctly.
 | Requirement | Where to check | Why it matters |
 | --- | --- | --- |
 | Special Weeks module is turned on | Admin → Site Settings → Modules | The page and attendance logic depend on the module being enabled |
-| A `weeks` profile field exists with week options | Admin → Site Settings → Profile Fields | Attendance reads the camper's selected week options from this field |
+| A `weeks` profile field exists with week options | Admin → Profile Fields | Attendance reads the camper's selected week options from this field |
 | Week dates are configured for the season | Special Weeks page for that season | Attendance needs date ranges for each week option |
 | Campers have week choices saved | Registration form or camper profile | A camper needs at least one selected week to appear by Special Weeks rules |
 | Camper has active enrollment in the season | Enrollment records for the season | Attendance still requires a valid season enrollment |
@@ -106,7 +106,7 @@ You must be signed in to staff admin and working in a specific season. Special W
 Check these items first:
 
 - You are signed into the staff admin, not the family portal
-- The Special Weeks module is enabled in **Site Settings → Modules**
+- The Special Weeks module is enabled in **Admin → Site Settings → Modules**
 - You opened a specific season
 - Your site has a profile field with the internal key `weeks`
 
@@ -227,7 +227,7 @@ Yellow rows usually mean the week option exists but does not yet have complete d
 
   The site must have a profile field with the internal key `weeks`. If the field exists under a different internal key, Special Weeks cannot use it.
 
-  Check **Site Settings → Profile Fields** and confirm the internal key is exactly `weeks`.
+  Check **Admin → Profile Fields** and confirm the internal key is exactly `weeks`.
 
   </Expandable>
   <Expandable title="A camper is enrolled but not on the attendance list. What should we check?" default-open="false">
