@@ -33,10 +33,13 @@ The **Season** step opens **Season details**.
 1. Set **Season name**.
 2. Set **Status** to **Active** or **Inactive**.
 3. Set **Membership season** to **Yes** only when this season is for membership-style enrollment with recurring weekly or monthly charges. Leave **No** for a standard camp season.
-4. Set **End date** to help you close out the season later.
-5. Set **Display on dashboard snapshot** to **Yes** if this season should appear in the financial snapshot on your dashboard.
-6. Set **Show in season menus** to **Yes** to list the season in admin season menus and filters.
-7. Select **Save and continue**.
+4. Set **Start date** (required). Helper text: **When the first registration begins.**
+5. Set **End date** (required) to help you close out the season later. It must come after **Start date**.
+6. Set **Display on dashboard snapshot** to **Yes** if this season should appear in the financial snapshot on your dashboard.
+7. Set **Show in season menus** to **Yes** to list the season in admin season menus and filters.
+8. Select **Save and continue**.
+
+If an active season is missing its start or end date, the admin header can show a nudge: **At least one active season is missing its Season Start Date or Season End Date.**
 
 ## Sessions
 
@@ -65,9 +68,19 @@ This is different from **Copy Season** on the Seasons list, which creates a bran
 
 The sessions table shows **Session**, **Dates**, **Capacity**, **Price**, **Minimum deposit**, **Form status**, and an actions menu. From each row you can choose **Edit session**, **Copy session**, or **Delete session**. Sessions that already have registrations may disable delete. Next to each session name, a smaller **Subproducts** link opens that session's subproducts outside the guided workspace.
 
+#### Edit values in place
+
+On sessions without subproducts, click the blue **Price**, **Minimum deposit**, or **Capacity** values to edit them in the table (tooltips: **Edit price**, **Edit minimum deposit**, **Edit capacity**). Press Enter or click away to save. Empty price, deposit, or capacity shows **None set** (capacity blank or `0` means unlimited).
+
+**Dates** are always editable inline. Click the date range to change start and end without opening **Edit session**.
+
+When a session has subproducts, **Price**, **Minimum deposit**, and **Capacity** stay read-only on this table (ranges or summed capacity). Change those amounts on the session's **Subproducts** page instead. Dates still edit inline.
+
+#### Price, deposits, and tiers
+
 **Price** and **Minimum deposit** show the amounts families are charged. When a session has subproducts with different prices or deposits, the cell shows a range (for example `$4,200 - $5,800`). Hover the range for a tooltip such as **Range across N subproducts.** When every subproduct matches, you see a single amount.
 
-In the **Price** cell, select **Tiers** (or **Tiers (n)** when tiers already exist) to edit pricing tiers inline, the same editor as on **Admin → Products**. Parent-session tiers open here. Subproduct-scoped tiers still open from that session's **Subproducts** page.
+In the **Price** cell, select **Tiers** (or **Tiers (n)** when tiers already exist) only when the session has **no** subproducts. That opens the same pricing-tier editor as on **Admin → Products**. If the session already has subproducts, Guided setup hides **Tiers** here. Open **Subproducts** and use **Tiers** on each option instead. The products list can still show a parent **Tiers** button for older parent-level tiers.
 
 If an active subproduct under a session has a **$0** minimum deposit, a warning icon appears next to **Minimum deposit** in the table (and next to **Min. Dep.** in **Calendar** view). Hover the icon to see **A subproduct has a $0 minimum deposit.** Open **Subproducts** to correct the deposit before families register.
 
