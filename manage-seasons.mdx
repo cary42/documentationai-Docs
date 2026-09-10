@@ -36,13 +36,17 @@ Create a new season from the Seasons list when you need a new registration perio
   </Step>
 
   <Step title="Enter the season settings" icon="edit" title-type="p">
-    The **Add New Season** modal keeps the create step short. It has only three fields:
+    The **Add New Season** modal keeps the create step short. It has these fields:
 
     - Add the **Season Name**.
+
+    - Set the **Season Start Date** (required). Helper text: **When the first registration begins.**
 
     - Set the **Season End Date** (required).
 
     - Set whether the season is a **Membership Season**.
+
+    Reports and season windows use start through end, so both dates are required and the end date must come after the start date. If either date is missing, Campium shows **You must enter a season start date.** or **You must enter a season end date.**
 
     <Callout kind="info" collapsed="false">
       The financial-snapshot, dropdown, and status settings do not appear when you first create a season. They become available in the **Edit Season** modal after the season exists.
@@ -62,7 +66,9 @@ Use these settings to control how the season appears and how your team uses it.
 
 - **Season Name** — The name of the season as it appears in the admin area. Use a clear name your staff will recognize quickly.
 
-- **Season End Date** — Required when you create a season. Sets the date the season runs through.
+- **Season Start Date**: Required. Marks when the first registration begins. The Seasons list shows a **Start Date** column. **Edit Season**, Guided setup **Season** (**Start date**), and **Copy Season** (**New Season Start Date**, when you create a new season) use the same rule.
+
+- **Season End Date**: Required. Sets the date the season runs through. Must come after **Season Start Date**.
 
 - **Show In Financial Snapshot On Dashboard** - Controls whether this season appears in the **Financial Snapshot** card on the dashboard. Available when editing an existing season. On that card you can toggle **Receivables** (what families still owe) and **Credits** (credits families hold). Selecting a season opens the matching report for that view.
 

@@ -134,8 +134,12 @@ To fill an empty season that Guided setup already created, use **Copy last seaso
       A preview line under the options shows how the season end date will look. Helper text notes that the shift applies to your products, forms, and payment plans, and that **Same week next year** keeps each one on the same weekday.
     </ParamField>
 
+    <ParamField body="New Season Start Date" param-type="date" required="true" deprecated="false">
+      The start date for the new Season. Helper text: **When the first registration begins.** Required together with **New Season End Date**.
+    </ParamField>
+
     <ParamField body="New Season End Date" param-type="date" required="true" deprecated="false">
-      The end date for the new Season. It follows the **Move Dates** option you picked. Change it if this season should end on a different date. Helper text: **Follows the option above. Change it if this season ends on a different date.**
+      The end date for the new Season. It follows the **Move Dates** option you picked. Change it if this season should end on a different date. Helper text: **Follows the option above. Change it if this season ends on a different date.** Must come after **New Season Start Date**.
     </ParamField>
   </Step>
 
@@ -197,7 +201,7 @@ Use the New Session/Product modal to define a session that families can register
     Control how many registrations you accept and whether a child can register multiple times.
 
     <ParamField body="Capacity" param-type="integer" required="false" deprecated="false">
-      Labeled `Capacity:` with tooltip `Set to zero or leave blank for unlimited`. Use a positive integer to cap registrations, or `0`/blank to allow unlimited registrations at the session level.
+      Labeled `Capacity:` with tooltip `Set to zero or leave blank for unlimited`. Use a positive integer to cap registrations, or `0`/blank for unlimited. On the products list and Guided setup Sessions table, unlimited capacity shows as **None set**.
     </ParamField>
 
     <ParamField body="Allow Discounts To Be Applied?" param-type="boolean" required="false" deprecated="false">
@@ -217,7 +221,7 @@ Use the New Session/Product modal to define a session that families can register
     </ParamField>
 
     <ParamField body="Days of Week" param-type="array" required="false" deprecated="false">
-      Multi-select dropdown labeled `Days of Week`. It appears only after you enable the **Schedule** dates below. Use it to pick which days of the week this Session runs.
+      Multi-select dropdown labeled `Days of Week`. It appears only after you enable the **Schedule** dates below. Use it to pick which days of the week this Session runs. On the **New** and **Edit** session forms, if you set both a start and end date, you must also set **Days of Week**. Campium shows: **You must set the Days of Week if you set a start and end date.** Inline date edits on the sessions table do not require days of week (those cells have no Days of Week control).
     </ParamField>
 
     <ParamField body="Number of Weeks Used for admin stats only" param-type="integer" required="false" deprecated="false">
@@ -225,11 +229,11 @@ Use the New Session/Product modal to define a session that families can register
     </ParamField>
 
     <ParamField body="Start Date" param-type="date" required="false" deprecated="false">
-      Labeled `Start Date` under the **Schedule** heading. Set the day this Session begins. Enabling the schedule dates reveals the **Days of Week** dropdown above.
+      Labeled `Start Date` under the **Schedule** heading. Helper text: **For attendance.** Set the day this Session begins. Enabling the schedule dates reveals the **Days of Week** dropdown above.
     </ParamField>
 
     <ParamField body="End Date" param-type="date" required="false" deprecated="false">
-      Labeled `End Date` under the **Schedule** heading. Use it with the start date to define the Session's date range.
+      Labeled `End Date` under the **Schedule** heading. Use it with the start date to define the Session's date range. End date must be after start date for attendance.
     </ParamField>
 
     <ParamField body="Hide From Attendance" param-type="boolean" required="false" deprecated="false">
@@ -314,7 +318,7 @@ For the full walkthrough — creating, editing, deleting, naming conventions, an
 
 ## Manage Subproducts/options
 
-Subproducts/options let you offer one Session in different ways — by grade, age band, time slot, or another profile answer — each with its own price, deposit, capacity, wait list, and status. Add one with the **New Subproduct** button, and adjust the `Price`, `Min. Dep.`, and `Capacity` columns inline directly in the options list, or open the edit modal for name, description, staff, and status changes.
+Subproducts/options let you offer one Session in different ways — by grade, age band, time slot, or another profile answer — each with its own price, deposit, capacity, wait list, and status. Add one with the **New Subproduct** button, and adjust the `Price`, `Min. Dep.`, and `Capacity` columns inline directly in the options list, or open the edit modal for name, description, staff, and status changes. Drag the handle column (**Drag to reorder**) to set display order on that page. Empty price, deposit, or capacity cells show **None set**. The wait-list column is labeled **Waitlisted**.
 
 Each option's **Status** uses **Open** and **Closed**: leave it **Open** to accept registrations, or set it to **Closed** to place new users on the wait list instead.
 

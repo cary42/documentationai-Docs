@@ -108,8 +108,11 @@ The page address includes `admin/products/product-options.php` along with the pr
 
 At the top of the Subproducts page you see the **parent price**, **minimum deposit**, and **overall capacity**. Below that, you see:
 
-- A **New Subproduct** button for the step‑by‑step setup.
+- A **New Subproduct** button for the step-by-step setup.
 - A **table of existing subproducts** with quick editing for key numbers.
+- A drag handle column (tooltip **Drag to reorder**) so you can set the display order of options on this page. New options append at the bottom. After you drop a row, Campium confirms with **Order saved.**
+
+The order you set here is the order staff see on the Subproducts page.
 
 ## Create new subproducts
 
@@ -220,16 +223,16 @@ The subproducts table shows each option for that session and how it behaves. Eac
   Whether this option is open, full, on wait list, or in another state based on your setup.
 
 - **Price**  
-  The amount a matching camper will be charged for this option.
+  The amount a matching camper will be charged for this option. Click the blue value to edit inline (tooltip **Edit price**). When nothing is set, the cell shows **None set**.
 
 - **Min. Dep.**  
-  The minimum deposit required when a family registers for this option.
+  The minimum deposit required when a family registers for this option. Click to edit inline (**Edit minimum deposit**). Empty values show **None set**.
 
 - **Capacity**  
-  The seat limit for this option. Check the edit screen for how unlimited capacity works if that is enabled.
+  The seat limit for this option. Click to edit inline (**Edit capacity**). Leave blank or set `0` for unlimited; the cell shows **None set**.
 
-- **Wait**  
-  A link into the wait‑list reporting for this particular option.
+- **Waitlisted**  
+  A link into the wait-list reporting for this particular option.
 
 - **# Reg.**  
   The number of registrations that currently match this subproduct.
