@@ -1,0 +1,88 @@
+---
+title: "Group Summary"
+description: "Build a groups-by-week count matrix for your bunks or cabins, then print or export Excel and open camper rosters."
+---
+
+Compare how many campers sit in each group across the weeks of a season. **Group Summary** is a count matrix under bunking, with a layout editor, print and Excel export, and click-through camper rosters.
+
+## Who can use it
+
+You need all of the following:
+
+- The **Bunking Module** turned on in **Admin → Site Settings → Modules**
+- The **Bunking** permission on your role
+- The **Reports** permission on your role (Group Summary also checks report access)
+
+You must map your bunk (or cabin) profile field in **Bunk Settings** before the matrix can load. If that field is missing, the page asks you to open settings and choose it.
+
+## Where to find it
+
+Open **Bunking → Group Summary** in the left menu. The menu group stays **Bunking** when you use the default term, or uses your plural term (for example **Cabins**) when you rename the word in **Bunk Settings**. The **Group Summary** item label does not change.
+
+You can also open it from **Bunk Reports** with the **Group Summary** button.
+
+Pick the season in the header season selector. The page loads your default season when you arrive without one selected.
+
+## What the matrix shows
+
+| Part | Meaning |
+| --- | --- |
+| Rows | Groups from your layout (section headers, individual group options, and section totals) |
+| Columns | Weeks for the selected season |
+| Cells | Camper counts you can click when the count is greater than zero |
+| Badges | **Special Weeks** when week columns come from Special Weeks dates, or **Session products** when they come from attendance sessions |
+
+### How week columns are chosen
+
+1. If Special Weeks is set up for the season (week options with start and end dates), those week labels become the columns.
+2. Otherwise, columns come from active session products in that season that are marked to show on attendance.
+
+If neither source has weeks for the season, the page tells you no Special Weeks or session products are available.
+
+## Configure the layout
+
+Before counts appear, build a layout that groups your bunk or cabin options into sections.
+
+1. On **Group Summary**, select **Configure layout**.
+2. Select **Add section**. Name the section (for example Munchkins), optionally add a subtitle, and pick a color.
+3. Drag options from **Available options** into a section, or use **Move** on an option chip.
+4. Reorder sections with the drag handle. Remove a section when you no longer need it (its options return to **Available options**).
+
+Layout changes save automatically. Status text under the title shows when a save is pending or finished.
+
+### Template vs season override
+
+| Control | What it does |
+| --- | --- |
+| **Save as template** | Stores the default layout used when a season has no override |
+| **Save for this season** | Saves a season-specific layout (needs a season selected) |
+| **Copy template to this season** | Replaces the season override with the template |
+
+Badges show **Using template** or **Season override**. With no season selected you can still edit and save the template; season save and copy stay disabled until you pick a season.
+
+Select **Back to Group Summary** when you are done.
+
+## Read counts and open a roster
+
+After a layout and week columns exist:
+
+1. Scan the matrix for each group and week.
+2. Select a non-zero count to open the **Camper roster** modal for that group and week.
+3. Close the modal when you are finished reviewing names.
+
+Capacity shading can highlight cells that are at or over capacity when capacities are set in bunk settings.
+
+## Print and Excel
+
+When the matrix has rows and weeks, use:
+
+- **Print** to print the matrix
+- **Excel** to download a spreadsheet of the same counts
+
+Both controls sit in the page header next to **Configure layout**.
+
+## Related topics
+
+- [Bunk Assignments](/bunk-assignments) for day-to-day placement and Terminology
+- [Special Weeks](/special-weeks) when week columns should follow your week calendar
+- [Seasons and sessions](/seasons-and-sessions) for attendance session products used as fallback columns
