@@ -464,6 +464,11 @@
                 "title": "Bunk Assignments",
                 "path": "bunk-assignments",
                 "icon": "bed"
+              },
+              {
+                "title": "Group Summary",
+                "path": "group-summary",
+                "icon": "table"
               }
             ],
             "public": true

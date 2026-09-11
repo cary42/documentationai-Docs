@@ -1,15 +1,17 @@
 ---
 title: Bunk Assignments
 description: >-
-  Assign campers to bunks, move placements, review requests, and manage capacity
-  warnings from the Bunk Assignments board.
+  Assign campers to bunks or cabins, rename the term your camp uses, move
+  placements, review requests, and manage capacity warnings from the assignments board.
 ---
 ## Place campers into bunks from one board
 
-Bunk Assignments helps you see who still needs a bunk, who is already placed, and move people between the unassigned list and named bunks. You will find it in the admin site under `Bunking` → `Bunk Assignments`, at the path `/bunking/bunk-assignments.php`.
+Bunk Assignments helps you see who still needs a placement, who is already placed, and move people between the unassigned list and named bunks. You will find it in the admin site under **Bunking → Bunk Assignments** (or your renamed plural group, such as **Cabins → Cabin Assignments**).
+
+This guide uses **bunk** as the default word. If you set a custom term in **Bunk Settings**, the same screens use your singular and plural labels instead.
 
 <Callout kind="info" collapsed="false">
-  Staff can use this page only if their login includes the **Bunking** permission for the bunking module. If you see an access message instead of the board, ask an administrator to confirm you have the Bunking permission.
+  Staff can use this page only if the **Bunking Module** is on in **Admin → Site Settings → Modules** and their login includes the **Bunking** permission. If you see an access message instead of the board, ask an administrator to confirm both.
 </Callout>
 
 ## Before you start
@@ -28,6 +30,18 @@ Someone on your team must map the correct profile field in **Bunk Settings**. Ea
 
 If you collect bunkmate requests or bunk preference notes in other profile fields, link those fields in **Bunk Settings**. Once they are linked, request details can appear next to each person on this page.
 
+## Rename bunk, cabin, or group
+
+Camps call these placements different things. Open **Bunking → Bunk Settings** and use the **Terminology** card.
+
+1. Enter a **Singular** word (for example Cabin or Group).
+2. Enter a **Plural** word (for example Cabins or Groups). Leave plural blank to add an **s** to the singular.
+3. Select **Save Terminology**.
+
+Leave both fields blank to return to the default **Bunk** / **Bunks**. Letters, digits, spaces, and hyphens are allowed. The preview under the fields shows how labels will look.
+
+After you save, the left menu, page titles, buttons, toasts, print modals, label and Excel filenames, and Smart Assignments wording use your term. The top-level menu stays **Bunking** when you use the default. With a custom term, that menu group uses your plural (for example **Cabins**). **Group Summary** keeps that fixed label.
+
 ## Know the page layout
 
 The page has three main working areas. Once you know what each one does, daily bunking becomes much faster.
@@ -45,7 +59,7 @@ A reminder at the top of the board tells you to drag users into bunks to assign 
 Filters control who appears in **Available Users**. The panel works like other report-style filters, so you can choose fields, operators, and values to narrow the list.
 
 <Callout kind="tip" collapsed="false">
-  The default setup usually favors campers so you are not flooded with staff or parents. If the results look wrong, check the user type filter first.
+  The user type filter defaults to campers so you are not flooded with staff or parents. That default matches the stored camper user type even when your camp relabels campers on screen. If the results look wrong, check the user type filter first, then select **Apply Filter**.
 </Callout>
 
 ### What to expect from filters
@@ -246,7 +260,7 @@ This is helpful when a request, age group, cabin rule, or other profile detail n
 
 ## Related bunking features
 
-Once campers are placed, two related tools help you print and review your bunks.
+Once campers are placed, related tools help you print, count, and review placements.
 
 ### Bunk labels
 
@@ -255,6 +269,10 @@ Bunk labels let you print labels for your bunks, which is handy for luggage tags
 ### Bunk reports
 
 Bunk reports give you roster and print-ready views of who is assigned to each bunk, so you can hand a printed list to staff or review placements away from the board.
+
+### Group Summary
+
+[Group Summary](/group-summary) shows camper counts across your configured groups and weeks, with print and Excel export and click-through rosters.
 
 ## Troubleshoot common problems
 
