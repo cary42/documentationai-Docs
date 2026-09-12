@@ -155,7 +155,15 @@ This is especially useful when your camp repeats the same week pattern year to y
 
 ## Week choices on registration
 
-When Special Weeks is enabled and the `weeks` field has options, families can pick weeks on the registration products step. They see the heading **Which weeks will you attend?** with the help text **Select every week that applies.**, then a checkbox for each week option.
+When Special Weeks is enabled and the `weeks` field has options, families pick weeks on the registration products step. They see the heading **Which weeks will you attend?** and a checkbox for each week option.
+
+### Exact week count
+
+Week checkboxes start disabled with the help text **Select a session first.** After the family chooses a session product (not only a payment plan), the help text becomes **Select exactly N weeks.**, where N is that session's week count.
+
+- Families must check exactly that many weeks before **Continue** works.
+- The hint under Continue reads **Select exactly N weeks to continue.**
+- Saving with the wrong count shows the same **Select exactly N weeks.** message.
 
 Those checkboxes only appear when the products page loads the Special Weeks block correctly. If families can buy sessions but never see week checkboxes, confirm the module is on, the season has Special Weeks dates, and the form uses the products step with Special Weeks support.
 

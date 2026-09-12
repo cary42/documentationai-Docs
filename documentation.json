@@ -466,7 +466,7 @@
                 "icon": "bed"
               },
               {
-                "title": "Group Summary",
+                "title": "Bunk Summary",
                 "path": "group-summary",
                 "icon": "table"
               }
