@@ -89,10 +89,18 @@ On the Riders page, staff can typically:
 
 #### Filter by attendance date
 
-When the **Attendance Module** is on in **Admin → Site Settings → Modules**, the Riders page shows a **Filter by attendance date** switch.
+When the **Attendance Module** is on in **Admin → Site Settings → Modules**, the Riders page shows a **Filter by attendance date** switch. Flipping it refreshes the riders list in place (no full page reload).
 
 - **On** (default when you last left it on): the list follows the selected attendance date, with session-today and check-in style columns as before. Your preference is saved for your staff login.
 - **Off**: the page shows all active riders on this bus. Helper text reads **When off, shows all active riders on this bus.**
+
+When the filter is on and some riders match the date, a summary line appears above the table, for example **Showing 14 of 41 riders for Fri, Sep 11.**
+
+When the filter is on and nobody on that bus has an active session that day, the table is replaced with:
+
+- Heading: **No riders have an active session on this date.**
+- Detail such as **41 active riders are on this bus. Pick another date above, or show all active riders.**
+- Button: **Show all active riders**, which turns the filter off.
 
 If Attendance is off for your camp, the switch does not appear.
 

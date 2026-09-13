@@ -65,9 +65,10 @@ Use the **New Form** button on the Forms list to start a new form and configure 
     - **Core details**
       - **Form Name** (required)
       - **Form Type** (required)
-      - **User Type** (required)
       - **Season** (required)
       - **Description** (optional text that appears beneath the form name on the Portal)
+
+    Who the form is for is set on the **Recipients** tab, not here.
     - **Availability**
       - **Start Date** and **End Date** (required; control when the form is available on the Portal)
       - **Cutoff Date** (optional; set a different business cutoff than the End Date if needed)
@@ -134,13 +135,13 @@ Each form opens in a tabbed editor with consistent tab labels and order. Some ta
 
 Use **Settings** to define the core behavior and lifecycle of the form.
 
-- Sets the **Form Name**, **Form Type**, **User Type**, and **Season**.
+- Sets the **Form Name**, **Form Type**, and **Season**.
 - Defines the **Start Date**, **End Date**, and optional **Cutoff Date** for when the form is available and when business actions stop.
 - Controls **Visibility** (Visible or Hidden) so you can prepare forms in advance or hide completed workflows.
 - Lets you enable or disable **Lock Form After Completion**, which prevents users from changing responses once submitted.
 - Sets **Form Status After Completion** and **User Status After Completion**, which determine back-office status values after a user finishes the form.
 - Includes fee, payment, discount, email, and custom text panels that control how the form behaves for registrations and payments.
-- Includes a bottom sticky action bar with **Save Settings**. Settings changes also save automatically when you change a control. The bar stays visible while you scroll the **Settings** tab.
+- Includes a bottom sticky action bar with **Save Settings**. The bar shows **Your settings save automatically.** Changing a Settings control also saves on its own; after a save the status becomes **Saved just now.**, then **Last saved a moment ago.** While a save is in progress, the button reads **Saving...**
 
 You must complete Settings and save before the form behaves correctly for recipients.
 
@@ -181,15 +182,18 @@ When the page shows only one selectable session (not locked, not food-only, and 
 
 Food-only pages are not held closed: ordering no food is a valid answer. If every option on the page is already purchased, full, or wait listed, **Continue** stays enabled and a warning explains why nothing can be selected (for example that all sessions shown are full). Already-purchased rows that appear pre-checked and disabled do not count as a new choice.
 
-Admin **Preview** of the product selection page still keeps **Continue** review-only; nothing is saved there.
+Admin **Preview** of the product selection page still keeps **Continue** review-only; nothing is saved there. When Special Weeks is on, Preview (and Guided setup **Sessions selection**) also shows the **Which weeks will you attend?** block so you can check the week count gate without publishing.
 
 ### Recipients tab
 
-Use the **Recipients** tab to control who receives the form and monitor readiness.
+Use the **Recipients** tab to control who the form is for and who can see it.
 
-- Defines the population of users, students, or families who should complete the form.
-- Shows any warnings related to missing or incomplete recipient configuration.
-- Uses a built-in recipient warning icon next to **Recipients** when there is a configuration issue.
+- At the top, choose who the form is about:
+  - Registration forms: **Who is this registration for?** with helper text **Pick who attends, not who fills the form out. Guardians already complete it for campers.** (Your camper wording may differ.)
+  - Other forms: **Who is this form for?** with helper text **Pick who the form is about. Add Guardians only if they are the ones attending.**
+- Under **How to apply this form**, choose **To all the Active/Inactive/Pending user types selected above** or **Only people who match the filters below**.
+- If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type.
+- Shows any warnings related to missing or incomplete recipient configuration, and uses a warning icon next to **Recipients** when there is a configuration issue.
 
 Configure recipients before publishing or communicating about the form so your target audience can see and complete it.
 
@@ -725,7 +729,7 @@ Leave it off when the form is short or conversational and numbering would add vi
 
 Saving a form does more than store text on the page. **Save Settings** updates the current Settings values and can change which tabs, warnings, and workflows are available in the editor.
 
-On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form. The bar stays in view while you scroll. Changing a Settings control also saves automatically.
+On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form. The bar stays in view while you scroll. Next to the button, Campium shows **Your settings save automatically.** Changing a Settings control also saves on its own; the status updates to **Saved just now.** and then **Last saved a moment ago.**
 
 After you click **Save Settings**, Campium keeps you in the form editor and refreshes the availability badge. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
 
