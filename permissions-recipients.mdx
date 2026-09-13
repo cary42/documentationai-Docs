@@ -1,33 +1,36 @@
 ---
 title: Who can access a form
-description: Understand how a form decides who can see it — user-type permissions, recipient filters, and how the direct access link fits in.
+description: Understand how a form decides who can see it: audience permissions, recipient filters, and how the direct access link fits in.
 ---
 
 ## Overview
 
 Every form decides who can access it using two separate controls that work together:
 
-1. **User types** — which kinds of users are allowed to access the form at all.
-2. **Recipient filters** — the saved or dynamic criteria that narrow access down to specific people within those user types.
+1. **Who the form is for** - which kinds of people are allowed to access the form at all (campers, staff, and so on).
+2. **Recipient filters** - the saved or dynamic criteria that narrow access down to specific people within those types.
 
 You set both in the form's **Recipients** area. Understanding how they interact helps you make a form available to exactly the right people.
 
 <Callout kind="info">
-  User types and recipient filters are independent. User types decide **who is eligible**; filters decide **which eligible people actually match**. A person must clear both to see the form.
+  Who the form is for and recipient filters are independent. The audience picker decides **who is eligible**; filters decide **which eligible people actually match**. A person must clear both to see the form.
 </Callout>
 
-## User types
+## Who the form is for
 
-At the top of the **Recipients** area, you choose the **user types** this form applies to — for example, campers or staff. This is a permission gate: only the selected user types can ever access the form, no matter what the filters say.
+At the top of the **Recipients** area, choose the audience for the form:
 
-As you select user types, Campium shows a **potential access** count so you can see how many people are eligible before you add any filters.
+- Registration forms: **Who is this registration for?** Helper text: **Pick who attends, not who fills the form out.** Guardians already complete registration for campers.
+- Other forms: **Who is this form for?** Helper text: **Pick who the form is about. Add Guardians only if they are the ones attending.**
+
+Only the selected types can ever access the form, no matter what the filters say. If you add a Parent or Guardian type, Campium asks whether guardians will be attending before it keeps that choice.
 
 ## How to apply the form
 
-After choosing user types, you decide how the form applies to them:
+After choosing who the form is for, you decide how it applies:
 
-- **To all the selected user types** — everyone with an active, inactive, or pending status in the selected user types can access the form. No filters are used.
-- **Only people who match the filters below** — access is limited to the people who match the recipient filters you build.
+- **To all the Active/Inactive/Pending user types selected above** - everyone with an active, inactive, or pending status in those types can access the form. No filters are used.
+- **Only people who match the filters below** - access is limited to the people who match the recipient filters you build.
 
 ## Recipient filters
 
@@ -37,29 +40,29 @@ When you choose to filter, you build criteria that narrow the selected user type
 - save a set of filters as a reusable **Saved Filter** template and load it into other forms
 - see a live **Matches** count, and use **View** to preview exactly who matches
 
-Filters only ever narrow within the user types you selected — they never grant access to a user type the form does not allow.
+Filters only ever narrow within the types you selected. They never grant access to a type the form does not allow.
 
 ## The direct access link
 
 The **Direct access link** (found at the bottom of the **Recipients** area) is for special cases where a specific family needs a form but does not match your current filters. The link:
 
-- **bypasses recipient filters** — the person does not need to match your saved or dynamic criteria
-- **still respects user types** — the person's user type must be one the form allows
+- **bypasses recipient filters** - the person does not need to match your saved or dynamic criteria
+- **still respects who the form is for** - the person's type must be one the form allows
 - **still requires login** on the parent portal
 - **expires** after the timeframe you choose
 
-In other words, the direct access link is a shortcut around your filters, not around your user-type permissions. If a family's user type is not allowed on the form, the link will not let them in.
+In other words, the direct access link is a shortcut around your filters, not around the audience picker. If a family's type is not allowed on the form, the link will not let them in.
 
 <Callout kind="tip">
-  Use the direct access link as an exception for one-off cases, and keep user types and recipient filters as your main way of controlling access. For step-by-step instructions on generating and sharing a link, see [Recipients](/recipients).
+  Use the direct access link as an exception for one-off cases, and keep the audience picker and recipient filters as your main way of controlling access. For step-by-step instructions on generating and sharing a link, see [Recipients](/recipients).
 </Callout>
 
 ## Putting it together
 
 To decide whether a given person can access a form, Campium checks:
 
-1. **Is their user type allowed?** If not, they can never access the form.
-2. **How does the form apply?** If it applies to all selected user types, eligible people get access. If it is filtered, only people who match the filters get access — unless they were given a direct access link, which skips the filters but still requires an allowed user type.
+1. **Is their type allowed under who the form is for?** If not, they can never access the form.
+2. **How does the form apply?** If it applies to all selected types, eligible people get access. If it is filtered, only people who match the filters get access, unless they were given a direct access link, which skips the filters but still requires an allowed type.
 
 ## Related
 

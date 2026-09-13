@@ -159,11 +159,14 @@ When Special Weeks is enabled and the `weeks` field has options, families pick w
 
 ### Exact week count
 
-Week checkboxes start disabled with the help text **Select a session first.** After the family chooses a session product (not only a payment plan), the help text becomes **Select exactly N weeks.**, where N is that session's week count.
+Week checkboxes start disabled with the help text **Select a session first.** After the family chooses a session product (not only a payment plan), the help text updates live. For a 4-week session with 2 weeks checked, it reads **Select exactly 4 weeks for your session. You've picked 2 of 4.**
 
 - Families must check exactly that many weeks before **Continue** works.
-- The hint under Continue reads **Select exactly N weeks to continue.**
-- Saving with the wrong count shows the same **Select exactly N weeks.** message.
+- The hint under Continue counts down, for example **Select 1 more week to continue.** When the count is right, the hint clears.
+- If they try to check another week after reaching the required count, Campium explains how to swap: **You've already picked all 4 weeks. Uncheck one to choose a different week.** (For a 1-week session: **You've already picked your week. Uncheck it to choose a different week.**)
+- Saving with the wrong count still shows **Select exactly N weeks.**
+
+Staff see the same weeks block in form **Preview** and in Guided setup under **Preview → Sessions selection**, so you can verify the count gate before families register.
 
 Those checkboxes only appear when the products page loads the Special Weeks block correctly. If families can buy sessions but never see week checkboxes, confirm the module is on, the season has Special Weeks dates, and the form uses the products step with Special Weeks support.
 
