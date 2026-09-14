@@ -10,6 +10,43 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-09-14" description="Bunk terminology, Group Summary, snapshot compare, exact weeks, form audience labels" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Bunk terminology** - On **Bunk Settings**, set **Singular** and **Plural** (for example Cabin / Cabins) and **Save Terminology**. Navigation and bunking screens use your term. See [Bunk Assignments](/bunk-assignments#rename-bunk-cabin-or-group).
+  - **Group Summary** - Under **Bunking**, compare camper counts by group across the weeks of a season, configure the layout, print or export to Excel, and open a camper roster from a cell. The menu and page title use your bunk singular term (for example **Cabin Summary**). See [Group Summary](/group-summary).
+  - **Season snapshot compare** - On a profile **All User Data** (or custom data view), when a **Snapshot ready** season exists for that person, use **Season snapshot** (**Current data** vs a season) to compare answers side by side, with a **Changed** badge where they differ. See [Manage Seasons](/manage-seasons#use-profile-data-snapshots-for-historical-reporting) and [Profiles](/profiles#tabs-and-sections).
+  - **Hide profile options from the portal** - On **Admin → Profile Fields → Options**, hide or show a choice on the parent portal (**Hide from parent portal** / **Show on parent portal**). Hidden options show an **Inactive** badge. See [Profile Fields](/profile-fields#manage-options-for-choice-fields).
+
+  ## Updates
+
+  - **Move Dates when copying** - **Copy Season** and session/product copy use **Move Dates** (**Same week next year**, **Same dates next year**, or **Keep dates as they are**) instead of a one-year checkbox. See [Seasons & Sessions](/seasons-and-sessions#copy-an-existing-season).
+  - **Season Start Date required** - Creating or editing a season requires **Season Start Date** with **Season End Date**. The Seasons list shows a **Start Date** column. See [Manage Seasons](/manage-seasons).
+  - **Sidebar Season control** - The left sidebar **Season** picker sets your default season, with a first-run banner when Campium picked one for you. See [Account](/account#set-your-default-season).
+  - **Guided Season Setup** - Empty **Sessions** can **Copy last season's setup**; click price, deposit, capacity, and dates inline; **Tiers** hides when a session has subproducts; from **Seasons**, **Guided setup** opens on **Sessions**; Preview menus read **Questions**, **Sessions selection**, and **Cart**. See [Guided Season Setup](/guided-season-setup).
+  - **Special Weeks exact count** - Families must pick exactly the session's week count. Help text updates live (**You've picked X of N**). Continue stays closed until the count matches. See [Special Weeks](/special-weeks#exact-week-count).
+  - **Form Settings auto-save** - Form **Settings** always save as you change them. The sticky bar shows **Your settings save automatically.** / **Saved just now.** / **Last saved a moment ago.** The old Auto-Save switch is gone. See [Forms](/forms#tabs-inside-a-form).
+  - **Form Recipients wording** - Registration forms ask **Who is this registration for?**; other forms ask **Who is this form for?** Guardians confirm with **Will guardians be attending these sessions?** Audience lives on **Recipients**, not Settings. See [Forms](/forms#recipients-tab).
+  - **Bus riders by attendance date** - With the **Attendance Module** on, **Filter by attendance date** can show **Showing N of M riders for…**, an empty state when nobody has a session that day, and **Show all active riders**. See [Transportation](/transportation#filter-by-attendance-date).
+  - **Keep removed sessions as cancelled** - On **Admin → Site Settings → Basic**, keep removed sessions as cancelled records instead of deleting them. See [Settings](/settings#tabs-and-settings-reference).
+  - **Quantity from session length** - Products with **Set the quantity from the session length** show a unit × weeks price line on registration (for example `$85.00 x 4 = $340.00`). See [Product Quantities](/product-quantities#set-quantity-from-the-session-length).
+  - **Smart Assignments Allowed Bunks** - Placement rules use one **Allowed Bunks** list. **Add Rule** is removed. See [Bunk Assignments](/bunk-assignments#build-a-draft-with-smart-assignments).
+  - **Subproduct order and Waitlisted** - Drag rows to reorder (**Order saved.**). Empty capacity/price/deposit show **None set**. The wait column is **Waitlisted**. See [Subproducts](/subproducts).
+  - **Payment plan Preview** - On the payment plans list, **Preview** and **Preview a balance of** show a sample schedule for Standard and Even Split plans. Charge-day checkout includes **1st** / **15th** / **28th** shortcuts. See [Payment Plans](/payment-plans#preview-a-sample-schedule-on-the-list).
+  - **References on the portal home** - Applicants open **My References** from the home progress card. Invite links expire after 60 days. See [References](/references#my-references-on-the-portal).
+  - **Quick View age** - Birth Date on Quick View and the mini-profile shows age in parentheses. See [Profiles](/profiles#quick-view).
+
+  ## Fixes
+
+  - **New Subproduct** - Saving the first option no longer fails when its order position is zero.
+  - **Custom report filters** - Combining a contains-all filter with another filter type no longer breaks the search.
+  - **New Campers** - A cancellation in a prior season no longer hides a new registration in the current season's New Campers view.
+  - **Form clone dates** - Cloning a form no longer turns afternoon start/end times into morning times, and empty due dates no longer become invalid year-zero dates.
+  - **Days of Week on new sessions** - Creating a session with both start and end dates now requires **Days of Week**.
+  - **CampMinder Birth Date and Gender** - Import maps those fields into profile answers again.
+  - **GOALS report** - Opening the report no longer fails on seasons that use references.
+</Update>
+
 <Update label="2026-09-07" description="Family charge day, references rebuild, forms Responses polish, surcharge refunds" tags={["feature","improvement","bugfix"]}>
   ## New
 
