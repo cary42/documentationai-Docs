@@ -5,7 +5,7 @@ description: See how much each camper has paid toward each session, with charges
 
 ## Overview
 
-Use Payment Detail to see how payments are landing across a season. Switch between a line-by-line camper view and a session rollup.
+Use Payment Detail to see how payments are landing across one season or across **All Seasons**. Switch between a line-by-line camper view and a session rollup.
 
 Payments are recorded against a season, not against a single line item, so each family's payments are split across their sessions in proportion to price. Charged minus Paid minus Discounts and Credits equals the Balance.
 
@@ -21,7 +21,7 @@ Your camp's wording for people and products may replace **Camper** and **Session
 ## Filters
 
 <ParamField body="Season" param-type="filter" show-location="false">
-The report always covers one season. Use the season selector at the top to choose it.
+Pick a single season, or choose **All Seasons** in the season selector. In **All Seasons** mode the title shows **All Seasons**, and both the By Camper and By Session tables add a **Season** column so you can tell which season each row belongs to.
 </ParamField>
 
 <ParamField body="Date range" param-type="filter" show-location="false">
@@ -100,15 +100,15 @@ Sums of the matching detail rows for that session.
 
 <Steps>
   <Step title="Open Payment Detail from Reports" icon="folder" titleType="p">
-    Go to **Reports** &gt; **System** and select **Payment Detail by Camper and Session**.
+    Go to **Reports → System Reports** and select **Payment Detail by Camper and Session** (your camper and session wording may differ).
   </Step>
 
   <Step title="Pick a season and date range" icon="calendar" titleType="p">
-    Choose the season at the top, then set the date range to control which payments are counted.
+    Choose a season or **All Seasons** at the top, then set the date range to control which payments are counted.
   </Step>
 </Steps>
 
 ## Troubleshooting
 
-- **No active registrations were found**: There are no active registrations for the selected season. Confirm you picked the right season.
+- **No active registrations were found**: There are no active registrations for the selected season (or across **All Seasons**). Confirm you picked the right season.
 - **Paid looks lower than expected**: Only payments received inside the date range are counted. Widen the range to include earlier payments.

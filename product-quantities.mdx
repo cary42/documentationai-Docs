@@ -75,7 +75,9 @@ The minimum is always `1`. A quantity cannot be less than one.
 
 On the product editor, turn on **Set the quantity from the session length** when the price should scale with how many weeks the chosen session covers (for example an add-on charged per week).
 
-On the registration products step, families do not enter a **Quantity** for that product. After they pick a session, the price line updates to a format like `$85.00 x 4 = $340.00` (unit price times week count). Until a session is chosen, the weeks side stays unset.
+On the registration products step, families do not enter a **Quantity** for that product. After they pick a session, the price line updates to a format like `$85.00 × 4 = $340.00` (unit price times week count). Until a session is chosen, the weeks side stays unset.
+
+The same unit × weeks line also appears on the cart and pay steps when the quantity is greater than one (for example `$85.00 × 8 weeks = $680.00` when the quantity comes from session length).
 
 This is separate from **Allow quantities**, which lets families type how many of an item they want.
 
@@ -85,7 +87,7 @@ On the registration cart, a product that allows quantities shows a small **Quant
 
 If you set a maximum, the parent cannot go above it. During checkout and on the receipt, the item shows the count next to its name, such as `T-Shirt x2`.
 
-Products with **Set the quantity from the session length** show the unit times weeks line instead of a quantity box.
+Products with **Set the quantity from the session length** show the unit times weeks line instead of a quantity box. That breakdown carries through cart and checkout.
 
 ## What staff see
 
