@@ -141,7 +141,7 @@ Use **Settings** to define the core behavior and lifecycle of the form.
 - Lets you enable or disable **Lock Form After Completion**, which prevents users from changing responses once submitted.
 - Sets **Form Status After Completion** and **User Status After Completion**, which determine back-office status values after a user finishes the form.
 - Includes fee, payment, discount, email, and custom text panels that control how the form behaves for registrations and payments.
-- Includes a bottom sticky action bar with **Save Settings**. The bar shows **Your settings save automatically.** Changing a Settings control also saves on its own; after a save the status becomes **Saved just now.**, then **Last saved a moment ago.** While a save is in progress, the button reads **Saving...**
+- Includes a bottom sticky action bar with **Save Settings**. The bar shows **Your settings save automatically.** Changing a Settings control also saves on its own. Typing in a text field saves after a short pause (you do not need to leave the field). After a save the status becomes **Saved just now.**, then **Last saved a moment ago.** While a save is in progress, the button reads **Saving...** Typing saves update the status bar only; they do not show a separate success toast. Errors still show a toast.
 
 You must complete Settings and save before the form behaves correctly for recipients.
 
@@ -182,7 +182,7 @@ When the page shows only one selectable session (not locked, not food-only, and 
 
 Food-only pages are not held closed: ordering no food is a valid answer. If every option on the page is already purchased, full, or wait listed, **Continue** stays enabled and a warning explains why nothing can be selected (for example that all sessions shown are full). Already-purchased rows that appear pre-checked and disabled do not count as a new choice.
 
-Admin **Preview** of the product selection page still keeps **Continue** review-only; nothing is saved there. When Special Weeks is on, Preview (and Guided setup **Sessions selection**) also shows the **Which weeks will you attend?** block so you can check the week count gate without publishing.
+Admin **Preview** of the product selection page keeps **Continue** review-only (nothing is saved), and shows a **Parent view** strip above the button. The strip reports **Continue closed** or **Continue open**, with the same parent hint families would see (for example **Select 1 more week to continue.** or **Choose a session to continue.**). When the gate is clear, the hint reads **Nothing is blocking Continue.** Preview still notes that the continue button does not work in preview. When Special Weeks is on, Preview (and Guided setup **Sessions selection**) also shows the **Which weeks will you attend?** block so you can check the week count gate without publishing.
 
 ### Recipients tab
 
@@ -289,7 +289,14 @@ On a registration form preview:
 2. Click **Continue** (registration forms use **Continue**; other form types show **Submit** on this control).
 3. Campium opens the product selection preview so you can review that page too. Nothing is saved on either page.
 
-On the product selection preview, selections and the continue control stay review-only. Use the separate **Preview Sessions Selection Page** link from **Settings** if you only need that page.
+On the product selection preview, selections and the continue control stay review-only. Use the **Parent view** strip to see whether **Continue** would be closed or open for a parent, and why. Use the separate **Preview Sessions Selection Page** link from **Settings** if you only need that page.
+
+### Parent view on Questions and Cart Header previews
+
+Preview pages include a **Parent view** strip so you can check the same gates a family hits, without submitting anything:
+
+- **Questions** preview (**Preview Form**): the strip shows **Continue closed** with a message such as **N required answers still to fill in:** followed by question names, or **Continue open** with **Every required answer is filled in.** Photo, file upload, and reference questions are only fully checked on a live form, so when those are required the open message notes that they are checked when a parent presses **Continue**.
+- **Cart Header** preview (**Preview Cart Header**): the strip starts with **Try the checkout rules**. You can try sample **Payment plan** and **Paying today** choices (**Full Amount**, **Minimum Deposit**, **Other**). The strip reports **Checkout closed** or **Checkout open** with the parent's message (for example **Please select a payment plan before proceeding.**). **Submit Order** stays disabled in preview.
 
 <Callout kind="info" collapsed="false">
   If you need to submit answers for real while staff-only testing, use [Test Mode](/test-mode) instead of **Preview Form**.
@@ -705,7 +712,7 @@ Use it when the default heading is too generic for your enrollment process.
 
 This is useful when you want to reinforce what the payer is reviewing before submission.
 
-Under the field label, click **Preview Cart Header** to open a preview of how that text appears on the final checkout page. The preview marks itself as a preview and shows sample checkout content below your header so you can check layout without signing in as a parent.
+Under the field label, click **Preview Cart Header** to open a preview of how that text appears on the final checkout page. The preview marks itself as a preview, shows sample checkout content below your header, and includes the **Parent view** checkout-rules strip so you can check payment-plan and paying-today gates without signing in as a parent.
 
 ### Ask for References
 
@@ -729,7 +736,7 @@ Leave it off when the form is short or conversational and numbering would add vi
 
 Saving a form does more than store text on the page. **Save Settings** updates the current Settings values and can change which tabs, warnings, and workflows are available in the editor.
 
-On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form. The bar stays in view while you scroll. Next to the button, Campium shows **Your settings save automatically.** Changing a Settings control also saves on its own; the status updates to **Saved just now.** and then **Last saved a moment ago.**
+On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form. The bar stays in view while you scroll. Next to the button, Campium shows **Your settings save automatically.** Changing a Settings control also saves on its own. Typing in text fields saves after a short pause without leaving the field; those saves update **Saved just now.** / **Last saved a moment ago.** on the bar and skip the success toast. Errors still toast.
 
 After you click **Save Settings**, Campium keeps you in the form editor and refreshes the availability badge. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
 
