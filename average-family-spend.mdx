@@ -1,21 +1,23 @@
 ---
 title: Average Family Expected Revenue report
 description: >-
-  Track how much each family is expected to spend per season, review trends over
-  time, and drill into specific families from the Average Family Expected
+  Track average expected revenue per family and per camper over seasons, filter
+  by registration date, and drill into families from the Average Family Expected
   Revenue report.
 ---
 ## What the report shows
 
-Average Family Expected Revenue Over Time estimates how much revenue you expect from each family in a season, then tracks how that average changes over time and across seasons.
+Average Family Expected Revenue Over Time estimates how much revenue you expect from each family and each camper in a season, then tracks how those averages change over time and across seasons.
 
 Use this report when you want to:
 
-- Compare how much families are expected to spend from one season to the next.
+- Compare how much families and campers are expected to spend from one season to the next.
 
-- Spot seasons where family spend is trending up or down.
+- Spot seasons where average spend is trending up or down.
 
 - Drill into which families drive a season's expected revenue.
+
+- Limit the view to registrations created in a date window.
 
 <Callout kind="info" collapsed="false">
   The report calculates expected revenue based on your product setup and applied discounts/credits. It does not show collected or deposited revenue; use financial reports such as [Revenue Summary](/revenue-summary) or [Deposit Summary](/deposit-summary) for actual payments.
@@ -39,17 +41,13 @@ For each season:
 
 - The result is the family's **expected revenue** for that season.
 
-Average Family Expected Revenue for a season is:
+Average expected revenue for a season is:
 
-- **Total expected revenue for that season ÷ number of families with a balance in that season.**
+- **Avg per Family** = total expected revenue for that season ÷ unique families with a balance in that season.
 
-This matches the `avg_balance` value in the underlying report data, where:
+- **Avg per Camper** = total expected revenue for that season ÷ unique campers included in that season.
 
-- `total_balance` = sum of expected revenue for all families in the season.
-
-- `family_count` = number of families included in that season's calculation.
-
-- `avg_balance` = `total_balance / family_count`.
+These match the averages shown on the chart and in the season breakdown table.
 
 ## Permissions and access
 
@@ -59,7 +57,7 @@ You need the **finance module** permission to view this report.
   If you do not see Average Family Expected Revenue Over Time in the Reports area, an administrator must enable the finance module permission for your staff account. See [Allow a staff user to see a report](/allow-a-staff-user-to-see-a-report).
 </Callout>
 
-The report lives at the internal URL `/report/average-family-spend.php` and appears in your Reports area as **Average Family Expected Revenue Over Time**.
+The report appears in your Reports area as **Average Family Expected Revenue Over Time**.
 
 ## Run the report
 
@@ -84,30 +82,32 @@ Use these steps to open and run the report from Campium.
     The report page loads with all seasons selected and the charts ready to populate.
   </Step>
 
-  <Step title="Apply the season filter and load data" icon="settings" title-type="p">
-    - Use the **Season** multi-select filter at the top (labeled `season-select` in the code).
+  <Step title="Apply filters and load data" icon="settings" title-type="p">
+    - Use the **Season** multi-select filter at the top.
 
     - Keep the default of **all seasons selected** or pick specific seasons you want to analyze.
 
-    - After adjusting the seasons, run or refresh the report if the page does not auto-refresh.
+    - Optionally set a **date range** in the page header to count only registrations created in that window.
+
+    - Optionally set **Minimum Family Spend** to leave low-spend families out of the averages.
 
     When the data loads successfully, you see:
 
-    - A line chart for the trend over time.
+    - Summary cards, including unique family and camper counts.
 
-    - Summary cards with key averages.
+    - A line chart for averages per family and per camper.
 
     - A season breakdown table.
   </Step>
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  If you arrive at the report from a dashboard or a link with a `pgcryid` in the URL, Campium may pre-select a season or context for you. You can still change the Season filter to broaden or narrow the results.
+  If you arrive at the report from a dashboard or a shortcut, Campium may pre-select a season or context for you. You can still change the Season filter and date range to broaden or narrow the results.
 </Callout>
 
 ## Filters
 
-The Average Family Expected Revenue report has two filters: **Season** and **Minimum Family Spend**.
+The Average Family Expected Revenue report has three filters: **Season**, **date range**, and **Minimum Family Spend**.
 
 ### Season filter
 
@@ -119,7 +119,17 @@ The **Season** filter controls which seasons appear in the charts and season bre
 
 - Clearing or deselecting all seasons results in an empty chart and table.
 
-When you change the Season filter and run the report, Campium sends the selected seasons (along with your agency) to the server to recalculate the averages.
+When you change the Season filter and run the report, Campium recalculates the averages for the seasons you selected.
+
+### Date range
+
+Use the date range picker in the page header to limit the report to registrations created in a window.
+
+- When a range is set, the page title includes the dates (for example **Average Family Expected Revenue Over Time · Sep 1, 2026 - Sep 15, 2026**).
+- Only registrations created in that window are counted. Matching discounts and credits created in the same window are included.
+- Leave the picker on **All dates** to include every registration for the selected seasons.
+
+The report description on the page states: **A date range counts only registrations (and discounts or credits) created in that window. Leave it on All dates to include everything.**
 
 ### Minimum Family Spend
 
@@ -131,35 +141,27 @@ Use **Minimum Family Spend** to leave low-spending families out of the averages,
 
 - Changing this value re-runs the calculation on the server along with your selected seasons.
 
-### URL context and pgcryid
-
-You may sometimes see a `pgcryid` value in the URL when you open the report from another area, such as a dashboard widget or shortcut.
-
-- `pgcryid` tells the report which context or saved view you came from.
-
-- The report still honors any seasons you set in the Season multi-select.
-
-- You can safely ignore `pgcryid` unless you are debugging a custom link or integration.
-
 ## What you see on the page
 
 After you run the report with at least one season selected, the page shows a combination of charts, summary cards, and a detailed table.
 
-### Average Family Expected Revenue Trend Over Time (line chart)
+### Average Expected Revenue per Family and per Camper (line chart)
 
-The **line chart** at the top is labeled **Average Family Expected Revenue Trend Over Time**.
+The **line chart** at the top is labeled **Average Expected Revenue per Family and per Camper**.
+
+Its caption reads: **This line chart shows average expected revenue per family and per camper across the seasons you selected.**
 
 This chart shows:
 
-- The average expected revenue per family on the vertical axis.
+- Average expected revenue on the vertical axis.
 
-- Seasons or time points on the horizontal axis.
+- Seasons on the horizontal axis.
 
-- A line that connects each season's average expected revenue.
+- Two series: **Avg per Family** and **Avg per Camper**.
 
 You can use this view to:
 
-- See whether average spend per family is going up or down across seasons.
+- See whether average spend per family or per camper is going up or down across seasons.
 
 - Spot sharp increases or drops that might align with pricing changes, new programs, or discount policies.
 
@@ -177,11 +179,17 @@ Above or near the charts, you see summary cards that highlight key metrics:
 
 - **Trend**: The change in the most recent season compared to the prior season (for example, up or down as a percentage or amount).
 
+- **Unique Families**: How many distinct families are included across the seasons you selected.
+
+- **Unique Campers**: How many distinct campers are included across those seasons.
+
 Use these cards as a quick readout before digging into the detailed table:
 
 - If the Trend card shows a negative change, look for reasons families might be spending less (pricing, fewer sessions, more discounts).
 
 - If the Highest Average is a past season, compare what was different about that season's offerings or pricing.
+
+- Compare Unique Families and Unique Campers to see whether average-per-camper changes track enrollment mix.
 
 <Callout kind="tip" collapsed="false">
   Trend compares the **newest season in your filter** to the **prior season** in the same filtered set. If you limit the Season filter to a small set of seasons, you may see a different trend than when all seasons are selected.
@@ -196,20 +204,30 @@ The table includes these columns:
 - **Season**\
   The name of the season. The Season cell is clickable and opens the family-level drill-down for that season.
 
-- **Average Expected Revenue**\
+- **Avg per Family**\
   The average expected revenue per family for that season. The cell also shows a **percentage change vs the prior season** so you can quickly see whether family spend increased or decreased.
 
-- **Number of Families**\
-  How many families are included in the average for that season. This count is the denominator in the average calculation.
+- **Avg per Camper**\
+  The average expected revenue per camper for that season.
 
-- **Total Balance**\
+- **Unique Families**\
+  How many distinct families are included in the averages for that season.
+
+- **Unique Campers**\
+  How many distinct campers are included for that season.
+
+- **Total Expected Revenue**\
   The total expected revenue for that season across all included families. This is the sum of each family's expected revenue (product prices minus discounts and credits).
+
+A footer **Total** row sums the unique counts and total expected revenue across the seasons shown.
 
 For a given season, you can interpret the numbers as:
 
-- **Total Balance ÷ Number of Families = Average Expected Revenue.**
+- **Total Expected Revenue ÷ Unique Families = Avg per Family.**
 
-- The percentage change compares this season's average against the previous season's average.
+- **Total Expected Revenue ÷ Unique Campers = Avg per Camper.**
+
+- The percentage change compares this season's family average against the previous season's family average.
 
 <Callout kind="info" collapsed="false">
   The season breakdown table always reflects the seasons currently selected in the Season filter. If you deselect older seasons, the "prior season" used for percentage comparisons may change.
@@ -231,13 +249,15 @@ Clicking into a season opens a modal that shows which families contribute to tha
   </Step>
 
   <Step title="Review families and their expected revenue" icon="users" title-type="p">
-    Inside the modal, you see a table with:
+    Inside the modal, you see a count line for how many families are listed, then a table with:
 
-    - **Family Name**: The primary family name. The name is a link that opens the family profile in a new tab at `/profile/?an=account_number`.
+    - **Family Name**: The primary family name. The name is a link that opens the family profile in a new tab.
 
     - **Expected Revenue**: The expected revenue for that family in the selected season (product prices minus discounts and credits).
 
     - **Number of Participants**: How many participants from that family are registered for that season.
+
+    A footer shows totals for expected revenue and participant count across the families in the modal.
 
     Use this view to understand which families drive high or low averages and to investigate specific accounts.
   </Step>
@@ -253,9 +273,9 @@ Average Family Expected Revenue helps you answer planning and pricing questions:
 
 - **Pricing impact**: If average expected revenue per family jumps after a pricing change, confirm that the increase aligns with your goals and enrollment levels.
 
-- **Discount strategy**: A drop in average expected revenue might reflect more aggressive discounts or scholarships. Compare changes in Total Balance and Number of Families to see whether the drop is due to pricing or enrollment.
+- **Discount strategy**: A drop in average expected revenue might reflect more aggressive discounts or scholarships. Compare changes in Total Expected Revenue and Unique Families to see whether the drop is due to pricing or enrollment.
 
-- **Enrollment mix**: If the Number of Families grows but the Average Expected Revenue stays flat, you may be adding families with lower spend (shorter sessions, fewer add-ons).
+- **Enrollment mix**: If Unique Families grows but Avg per Family stays flat, you may be adding families with lower spend (shorter sessions, fewer add-ons). Use Avg per Camper alongside Unique Campers for the same check at the camper level.
 
 Remember that this report looks at **expected** revenue, not actual payments collected. Use it alongside payment-focused reports when making financial decisions.
 
@@ -291,7 +311,7 @@ If the charts or table are empty, or you see less data than expected, check thes
   <Expandable title="The trend or percentage changes do not match my expectations" default-open="false">
     - Review which seasons are selected in the Season filter; the "prior season" for comparisons depends on which seasons are included.
 
-    - Confirm that you are comparing **Average Expected Revenue** (per family) rather than Total Balance; a higher total with many more families can still produce a flat or lower average.
+    - Confirm that you are comparing **Avg per Family** rather than Total Expected Revenue; a higher total with many more families can still produce a flat or lower average.
 
     - Cross-check with [Revenue Summary](/revenue-summary) or other financial reports if you are looking at collected payments rather than expected charges.
   </Expandable>
