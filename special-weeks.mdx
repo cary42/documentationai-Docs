@@ -165,6 +165,7 @@ Week checkboxes start disabled with the help text **Select a session first.** Af
 - The hint under Continue counts down, for example **Select 1 more week to continue.** When the count is right, the hint clears.
 - If they try to check another week after reaching the required count, Campium explains how to swap: **You've already picked all 4 weeks. Uncheck one to choose a different week.** (For a 1-week session: **You've already picked your week. Uncheck it to choose a different week.**)
 - Saving with the wrong count still shows **Select exactly N weeks.**
+- When a session's **Number of Weeks** equals every dated week for the season, Campium checks every week for the family automatically. The help text becomes **This session covers all 8 weeks, so every week is selected for you.** (For a one-week season: **This session covers the only week, so it's selected for you.**) If the family unchecks a week, the ordinary count copy returns, and Campium does not re-check weeks for them after that.
 
 Staff see the same weeks block in form **Preview** and in Guided setup under **Preview → Sessions selection**, so you can verify the count gate before families register.
 
@@ -180,7 +181,20 @@ When Special Weeks is on, Campium compares each session's **Number of Weeks** to
 - the **Special Weeks** calendar page
 - Guided setup on the **Sessions** step
 
-The summary looks like **N sessions ask for more weeks than families can pick. Only X weeks have dates for this season…** (or **No special week has dates for this season yet…**). Listed sessions read **Session name asks for N weeks.** Use **Set special week dates** to open the Special Weeks calendar, or lower **Number of Weeks** on the session. Families cannot finish registration for a mismatched session until you fix it.
+The summary looks like **N sessions ask for more weeks than families can pick. Only X weeks have dates for this season…**. Listed sessions read **Session name asks for N weeks.**
+
+If no week has dates yet, the alert stays hidden. That case is treated as setup still in progress, not a mismatch.
+
+#### Fix a mismatch
+
+Use either path:
+
+1. **Set special week dates** opens the Special Weeks calendar so you can add start and end dates until the dated count matches each session.
+2. **Lower Number of Weeks to N on M sessions** (or **Lower Number of Weeks to N on this session** when only one is listed) lowers the session setting to match the current dated week count. Confirm with **Lower to N weeks**. A success toast reports **Lowered Number of Weeks to N on M sessions.** and the alert closes without a full page reload. You can raise **Number of Weeks** again later on any session.
+
+On the Special Weeks calendar page, the lower-weeks button appears alone. On the sessions list and Guided setup, it appears next to **Set special week dates**.
+
+Families cannot finish registration for a mismatched session until you fix it.
 
 ## How attendance uses Special Weeks
 

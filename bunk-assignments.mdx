@@ -252,11 +252,40 @@ This is helpful when a request, age group, cabin rule, or other profile detail n
 
 - which fields count as bunk requests
 
+- optional **Section Field** for a parent unit such as Division or Village
+
 - optional capacities
 
 - whether capacity behavior warns or blocks
 
+- whether a section mismatch warns or blocks
+
 **Bunk Assignments** is the day-to-day workspace where you filter people, drag assignments, review requests, and use Smart Assignments when needed.
+
+## Sections (Division or Village)
+
+Some camps keep bunks inside a larger unit, such as a Division or Village, stored on a profile field. Map that parent field once, then tie each bunk to one of its options.
+
+### Set up a Section Field
+
+1. Open **Bunking → Bunk Settings**.
+2. Under field mapping, choose **Section Field**. Helper text explains: **Optional. If your bunks sit inside a larger unit such as a Division or Village, select the profile field that stores it. You can then tie each bunk to one of its options below.** (Your bunk term appears in place of "bunks" when you renamed it.)
+3. Choose **When a camper's section does not match the bunk**:
+   - **Warn** shows a notice and still allows the assignment.
+   - **Block** cancels the assignment until the camper's section matches, or until you switch the setting to **Warn**.
+4. Click **Save Field Mapping**.
+5. When a section field is set, a **Division Colors** style card appears (the heading uses your section field's name). Pick a color per option and click **Save Division Colors** (or **Save Village Colors**, matching the field name). Those colors appear on Bunk Summary.
+
+Only dropdown and multiple-choice profile fields appear in the **Section Field** list. Leave it on **None** if you do not use parent sections.
+
+### How sections appear on the board
+
+With a section field configured:
+
+- Bunks group under a heading for each section option, then a **No Division** style bucket for bunks with no section (the label uses your section field name).
+- The **Show** filter lists bunks under section optgroups.
+- Campers whose profile section does not match the bunk's section show a mismatch badge. **Block** stops the drop; **Warn** lets it through and shows a notice.
+- Smart Assignments never drafts a camper into a bunk from another section.
 
 ## Related bunking features
 
@@ -290,7 +319,7 @@ Bunk reports give you roster and print-ready views of who is assigned to each bu
   </Expandable>
 
   <Expandable title="I cannot place someone into a bunk" default-open="false">
-    Check whether that bunk is using a **Block** capacity rule. If it is, free a spot in the bunk or update the limit in Bunk Settings.
+    Check whether that bunk is using a **Block** capacity rule. If it is, free a spot in the bunk or update the limit in Bunk Settings. If you use a **Section Field**, also confirm the camper's section matches the bunk, or switch the mismatch setting to **Warn**.
   </Expandable>
 
   <Expandable title="Smart Assignments says there are no campers" default-open="false">

@@ -37,7 +37,7 @@ Use these options at the top of the report to define the scope of your summary.
 </ParamField>
 
 <ParamField body="Group revenue by profile field" param-type="selector" required="false" deprecated="false">
-  Optional profile field used to break down revenue by each answer to that field. When you choose a field, the report adds a **Revenue by {field}** table at the top showing registrations and total revenue for each answer value. Leave it unset to skip the breakdown.
+  Optional profile field used to break down revenue by each answer to that field. When you choose a field, the report adds a **Revenue by Grade** style table at the top (the heading uses the field you picked) showing registrations, estimated net figures, and total revenue for each answer value. Leave it unset to skip the breakdown.
 </ParamField>
 
 <Callout kind="tip" collapsed="false">
@@ -94,6 +94,8 @@ Typical metrics include:
 
 - **Scheduled Payments** – when the selected season has at least one upcoming scheduled payment, a fifth card shows the total still expected. The card counts only pending scheduled payments (not failed ones). A link under the total opens the Scheduled Payments list for that season (for example **3 upcoming payments**). Failed scheduled amounts appear as a separate note such as **$91,138 in 12 failed payments (not included)** when any exist.
 
+- **Average Sale** – net revenue divided by the number of paying campers. The card is labeled **Average Sale** with **Per paying camper** and **Excludes campers attending for free**. Campers whose balance after discounts is zero (for example a full staff scholarship) do not pull this average down.
+
 <Callout kind="info" collapsed="false">
   The **Scheduled Payments** card ignores the report date range, because scheduled payments are future-dated. When a date range is set, the card shows **All dates (the date range does not apply)** so the figure is not mistaken for the filtered period. If the season has no scheduled payments, the card is hidden and the top row stays four equal columns.
 </Callout>
@@ -118,13 +120,13 @@ When non-revenue session lines are present:
 
 ## Revenue by profile field
 
-When you choose a field in **Group revenue by profile field**, the report adds a **Revenue by {field}** table at the top, above the Products, Payments, and Discounts sections. The heading uses the field you selected, so grouping by grade shows a **Revenue by Grade** table.
+When you choose a field in **Group revenue by profile field**, the report adds a **Revenue by Grade** style table at the top (the heading uses the field you selected), above the Products, Payments, and Discounts sections.
 
 Each row is one answer value for that field.
 
 ### Columns
 
-<ParamField body="{Field value}" param-type="text" required="true" deprecated="false">
+<ParamField body="Field value" param-type="text" required="true" deprecated="false">
   Each answer to the selected profile field, such as each grade, each cabin, or each answer option. One row appears per value.
 </ParamField>
 
@@ -132,9 +134,19 @@ Each row is one answer value for that field.
   Number of registrations that match this field value within the current season/program group and date range filters.
 </ParamField>
 
-<ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
-  Total revenue attributed to registrations with this field value.
+<ParamField body="Net Revenue" param-type="currency" required="true" deprecated="false">
+  Estimated revenue for the row after applying the season's overall discount rate to that row's gross.
 </ParamField>
+
+<ParamField body="Avg Net Revenue" param-type="currency" required="true" deprecated="false">
+  That row's estimated net revenue divided by its registration count.
+</ParamField>
+
+<ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
+  Total revenue attributed to registrations with this field value (before the season-wide discount estimate).
+</ParamField>
+
+A footnote under the table explains the estimate, for example: **Net Revenue and Avg Net Revenue are estimates: discounts are not tied to a Grade, so each row is reduced by the season's overall discount rate (12.3% of gross), and the average divides that by its registrations.**
 
 Use this table to see how revenue and enrollment split across a profile answer, for example comparing revenue by grade, by session choice, or by any other profile field your camp collects.
 
