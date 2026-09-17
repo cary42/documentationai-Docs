@@ -301,6 +301,8 @@ Use this card when a family asks why they are (or are not) receiving welcome ema
 
 ## Help someone change or reset their password
 
+### Send a password reset email
+
 Use the profile header Actions menu item **Send Password Reset Email** when a parent or staff member cannot sign in and needs to set a new password.
 
 <Steps>
@@ -320,6 +322,36 @@ Use the profile header Actions menu item **Send Password Reset Email** when a pa
 <Callout kind="tip" collapsed="false">
   If a family reports that they did not receive the reset email, first confirm the email address in the profile header, then resend the **Send Password Reset Email** action after correcting any obvious typos.
 </Callout>
+
+### Set a temporary password and require their own
+
+Use **Change Password** on the profile when you need to set a password yourself (for example, helping someone over the phone), and you want them to pick their own password on the next sign-in.
+
+<Steps>
+  <Step title="Open Change Password" icon="lock" title-type="p">
+    On the profile, click **Change Password**.
+  </Step>
+
+  <Step title="Enter a temporary password" icon="edit" title-type="p">
+    Enter the temporary password in **New Password**.
+  </Step>
+
+  <Step title="Leave require-own-password checked" icon="check-circle" title-type="p">
+    Leave **Make this person set their own password when they sign in** checked (it is checked by default). Helper text says they will be sent to the change password screen and cannot use the site until they pick a new one.
+
+    Clear the checkbox only when you do not want to force a change on next sign-in.
+  </Step>
+
+  <Step title="Save" icon="save" title-type="p">
+    Click **Change Password** to save. The profile shows a **Password change pending** badge until they complete their own change.
+  </Step>
+</Steps>
+
+On their next email-and-password sign-in, they are held on **Change Password** until they enter the temporary password as current and choose a new one. Admin accounts see: **Your password was set for you. Enter it as your current password, then choose one only you know. The rest of the site stays locked until you do.** Portal accounts see: **Your password was set for you by camp. Enter it as your current password, then choose one only you know. The rest of the portal stays locked until you do.**
+
+Google, Apple, and passkey sign-in are not held by this requirement. The pending state also clears if they use an emailed reset link, or if staff set a password again with the checkbox cleared.
+
+See [Authentication](/authentication#require-someone-to-set-their-own-password).
 
 ## Suspend an account (prevent login)
 
@@ -404,6 +436,24 @@ Each tab focuses on a different part of the person’s record. Use these section
     </Callout>
 
     Filters near the top of the tab help you narrow by season so you can focus on the correct year or session.
+
+    ### Edit weeks on a session sale
+
+    When Special Weeks is on and a session sale has two or more weeks, staff can change which weeks the camper attends without changing the session product.
+
+    - On a session line that already has weeks, the week list is a dashed underline link. Hover title: **Edit weeks**.
+    - When no weeks are selected yet, use the **edit weeks** action link. Empty values can show **None set**.
+    - Quick View **Weeks** uses the same link (or **None set**).
+
+    The **Edit weeks** modal is titled with the camper name when available. It shows:
+
+    - **Weeks for {season}** with checkboxes for each week option
+    - Helper text: **Choose the weeks this camper will attend. The session product does not change.**
+    - A **History** season dropdown and a table of **Week**, **Status**, and **Date** (for example Enrolled or Cancelled)
+    - Empty history: **No week changes recorded yet.**
+    - **Save** to keep the new week selections
+
+    See [Special Weeks](/special-weeks#edit-weeks-on-a-camper-profile).
 
     ### Switch a session
 

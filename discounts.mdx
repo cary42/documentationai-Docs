@@ -104,7 +104,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     Under **Discount Type**, choose:
 
     - **Code discount**: families type a code at checkout (or staff apply it in Admin).
-    - **Sibling discount**: applied automatically when a family has two or more children enrolled or registering in the same season. Every child except the highest-priced one receives it.
+    - **Sibling discount**: applied automatically when a family has two or more children enrolled or registering in the same season. The highest-priced child pays full price; the second child gets the rate you set, and you can add different rates under **Third Child And Beyond**.
 
     You can have only one sibling discount. If one already exists, **Sibling discount** is disabled and you see a link to **Edit it**.
   </Step>
@@ -212,12 +212,14 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, try both paths: register two or more children in one checkout, and register a second child after the first is already enrolled. Confirm every child except the highest-priced one receives the discount.
+  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, try both paths: register two or more children in one checkout, and register a second child after the first is already enrolled. Confirm the highest-priced child pays full price, the second child gets the base sibling rate, and any **Third Child And Beyond** rows apply when you set them.
 </Callout>
 
 ## Create a sibling discount
 
-A **Sibling discount** applies automatically at checkout when a family has two or more children in the same season. That includes registering them together, or registering another child after a sibling is already enrolled. Campium ranks those children by session price and every child except the highest-priced one receives the discount. Families do not type a code.
+A **Sibling discount** applies automatically at checkout when a family has two or more children in the same season. That includes registering them together, or registering another child after a sibling is already enrolled. Campium ranks those children by session price. The highest-priced child pays full price. The second child gets the rate you set on the discount. Families do not type a code.
+
+Waitlisted and cancelled enrollments do not count toward the sibling ranking.
 
 <Steps>
   <Step title="Open Add New Discount" icon="plus" title-type="p">
@@ -225,17 +227,30 @@ A **Sibling discount** applies automatically at checkout when a family has two o
   </Step>
 
   <Step title="Select Sibling discount" icon="users" title-type="p">
-    Under **Discount Type**, choose **Sibling discount**. The on-screen help says it applies when a family registers two or more children. Checkout also counts siblings who are already enrolled in the same season, so a second registration alone still qualifies.
+    Under **Discount Type**, choose **Sibling discount**. On-screen help explains that the highest-priced child pays full price and the second child gets the rate you set here. Checkout also counts siblings who are already enrolled in the same season, so a second registration alone still qualifies.
   </Step>
 
-  <Step title="Set amount or percent and description" icon="edit" title-type="p">
-    Enter a **Fixed Amount** or **Percent**, and confirm **Discount Description** (defaults to **Sibling Discount** if blank).
+  <Step title="Set the second-child rate and description" icon="edit" title-type="p">
+    Enter a **Fixed Amount** or **Percent** for the second child, and confirm **Discount Description** (defaults to **Sibling Discount** if blank).
+
+    For a percent, enter `5` for 5%, not `.05`. Helper text on the form reads **Enter 5 for 5%, not .05.**
   </Step>
 
   <Step title="Set remaining rules and save" icon="check-circle" title-type="p">
     Set **Apply To All Sessions**, **Apply After Other Discounts?**, dates, and product restrictions as needed, then click **Save**.
 
     Code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, **Limit**, and **Maximum Total**) stay hidden for sibling discounts.
+  </Step>
+
+  <Step title="Optional: add rates for the third child and beyond" icon="users" title-type="p">
+    After you save, open the sibling discount to edit it. Use **Third Child And Beyond** to give later children different rates.
+
+    1. Click **Add another child** to add a row.
+    2. Each row shows a label such as **3rd Child**, with **Amount** and **Percent** fields.
+    3. Click **Remove** on a row you do not need.
+    4. Leave **Third Child And Beyond** empty if every child after the highest-priced one should use the same second-child rate.
+
+    A child only receives a discount at a level you have set up, so add a row for each deeper child you want to cover. The discount list can show more than one rate (for example `5 / 8%`) when tiers exist.
   </Step>
 </Steps>
 
