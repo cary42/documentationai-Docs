@@ -157,6 +157,8 @@ This is especially useful when your camp repeats the same week pattern year to y
 
 When Special Weeks is enabled and the `weeks` field has options, families pick weeks on the registration products step. They see the heading **Which weeks will you attend?** and a checkbox for each week option.
 
+When a session or week option has start and end dates, those dates can appear under the name on the products page (for example `Jun 22 - Jun 26, 2026`). Dropdown options can show the same range in parentheses after the name. Rows without dates show the name only.
+
 ### Exact week count
 
 Week checkboxes start disabled with the help text **Select a session first.** After the family chooses a session product (not only a payment plan), the help text updates live. For a 4-week session with 2 weeks checked, it reads **Select exactly 4 weeks for your session. You've picked 2 of 4.**
@@ -172,6 +174,18 @@ Staff see the same weeks block in form **Preview** and in Guided setup under **P
 Those checkboxes only appear when the products page loads the Special Weeks block correctly. If families can buy sessions but never see week checkboxes, confirm the module is on, the season has Special Weeks dates, and the form uses the products step with Special Weeks support.
 
 Staff can still set the same week options on the camper profile. Registration checkboxes are the family-facing path during checkout.
+
+### Edit weeks on a camper profile
+
+On a camper **Sales** tab, staff can change weeks for an eligible session sale without switching the session product.
+
+1. Open the camper profile and go to **Sales**.
+2. On a qualifying session line, click the weeks value (dashed underline; title **Edit weeks**), or click **edit weeks** when no weeks are set yet (**None set**).
+3. In the modal, choose weeks under **Weeks for {season}**. Helper text: **Choose the weeks this camper will attend. The session product does not change.**
+4. Use **History** to pick a season and review **Week**, **Status**, and **Date**. If there are no rows: **No week changes recorded yet.**
+5. Click **Save**.
+
+This appears for session sales with two or more weeks when Special Weeks is on. Food and single-week lines do not show the editor. See [Profiles](/profiles#edit-weeks-on-a-session-sale).
 
 ### Session weeks vs dated weeks warning
 

@@ -11,20 +11,22 @@ Use the season selector at the top to switch which season the charts reflect.
 
 ## What it shows
 
+Chart titles change when you pick a season that has **Season Start Date** and **Season End Date**. Without a season window, recent charts use a rolling last-7-days label and monthly charts use a longer rolling window.
+
 <ParamField body="Payments Processed - Last 7 days" param-type="chart" show-location="false">
-Daily total of successful card and bank payments over the past week.
+Daily total of successful card and bank payments. With a season selected, the title becomes **Payments Processed - 7 days to** the end of the season window (or today if the season has not ended yet).
 </ParamField>
 
 <ParamField body="Payments By Month - Last 18 Months" param-type="chart" show-location="false">
-Monthly payment totals so you can see the longer-term trend and seasonality.
+Monthly payment totals. With a season selected, the title becomes **Payments By Month -** followed by the season start and end dates (for example `Jun 1, 2026 - Aug 15, 2026`).
 </ParamField>
 
 <ParamField body="Revenue By Day - Last 7 days" param-type="chart" show-location="false">
-Registration revenue booked each day over the past week.
+Registration revenue booked each day. Follows the same last-7-days versus season-window title pattern as payments.
 </ParamField>
 
 <ParamField body="Revenue By Month - Last 18 Months" param-type="chart" show-location="false">
-Monthly revenue totals across the past year and a half.
+Monthly revenue totals. With a season selected, uses the season start and end dates in the title.
 </ParamField>
 
 <ParamField body="New Children In System" param-type="chart" show-location="false">

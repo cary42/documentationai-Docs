@@ -150,6 +150,24 @@ On the portal, password fields are not editable on **My Profile**. Use the dedic
 
 Admins change passwords from their account security settings on campiumdb.com (12-character minimum, plus the same character and weak-password rules). If they cannot recall the current password, use **Forgot password?** on the login page.
 
+## Require someone to set their own password
+
+When staff set a password for someone on a profile with **Change Password**, they can require that person to pick their own password on the next sign-in.
+
+1. Open the person’s profile and click **Change Password**.
+2. Enter a temporary password.
+3. Leave **Make this person set their own password when they sign in** checked (default). Helper text says they will be sent to the change password screen and cannot use the site until they pick a new one.
+4. Save. The profile shows **Password change pending** until they finish.
+
+On their next email-and-password sign-in, only **Change Password** (and sign-out) stays available until they enter the temporary password as current and choose a new one.
+
+- Admin **Change Password** (name menu → **Settings** → **Password**): **Your password was set for you. Enter it as your current password, then choose one only you know. The rest of the site stays locked until you do.**
+- Portal **Change Password**: **Your password was set for you by camp. Enter it as your current password, then choose one only you know. The rest of the portal stays locked until you do.**
+
+Google, Apple, and passkey sign-in are not held by this requirement. The pending state clears when they save their own password, use an emailed reset link, or staff set a password again with the checkbox cleared.
+
+See [Profiles](/profiles#set-a-temporary-password-and-require-their-own).
+
 ## Change your login email on the portal
 
 Families and portal staff change the primary login email only from **Change Email**. Editing the primary address on **My Profile** is not available. Alternate email addresses on **My Profile** stay editable there.
