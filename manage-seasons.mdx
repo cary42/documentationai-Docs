@@ -72,7 +72,7 @@ Use these settings to control how the season appears and how your team uses it.
 
 If an active season is missing either date, admins can see a one-per-day **Quick reminder** that says at least one active season is missing its **Season Start Date** or **Season End Date**, and to click the green **Active** button next to a season to open it and set both dates. Reports use the start date through the end date, so filling these in keeps reporting and reminders accurate.
 
-On dashboard year-over-year cards, **Pace start (optional)** lets you override when pace charts begin. Helper text: **Leave blank to use the season's start date.**
+On dashboard year-over-year cards, **Pace start (optional)** lets you override when pace charts begin. Helper text: **Leave blank to use the season's start date.** Those cards show a **Using dates:** footnote with each selected season's charted range. An estimated range is labeled **(estimated)**. Hover the footnote for why each end was chosen. Click it to open that card's season settings gear so you can adjust dates or pace start without leaving the dashboard.
 
 - **Show In Financial Snapshot On Dashboard** - Controls whether this season appears in the **Financial Snapshot** card on the dashboard. Available when editing an existing season. On that card you can toggle **Receivables** (what families still owe) and **Credits** (credits families hold). Selecting a season opens the matching report for that view.
 
@@ -87,6 +87,8 @@ On dashboard year-over-year cards, **Pace start (optional)** lets you override w
 ## Set a season inactive only after it has passed
 
 Set a season to inactive when you no longer want it treated as a current active season. This is usually something you do after the season has ended.
+
+When a season's **Season End Date** has passed and the season is still **Active**, Campium emails people with the **Administrator** role a reminder. Starting 14 days after the end date you may see a subject such as **Reminder:** followed by the season name and **is still marked active**. Starting 30 days after the end date, a last reminder can follow. Once you set the season to **Inactive**, those reminders stop. You can review and edit the wording under **System Emails** (look for **Season still active** in **Notifications**). See [System Emails](/system-emails).
 
 <Callout kind="alert" collapsed="false">
   Changing the **Status** from **Active** to **Inactive** sets campers assigned to this season to **Inactive** as long as they are not also in another **Active** season. Staff inactivation is optional (see below). Only set a season to **Inactive** if that season has passed.

@@ -23,7 +23,16 @@ Open **Bunking → Bunk Summary** in the left menu (or **Cabins → Cabin Summar
 
 You can also open it from **Bunk Reports** (or **Cabin Reports**) with the **Bunk Summary** / **Cabin Summary** button.
 
-Pick the season in the header season selector. The page loads your default season when you arrive without one selected.
+## Pick a season
+
+Use the season selector in the page header. The list only includes seasons the summary can read:
+
+- The season in progress (opened by default), counted from live profiles
+- Past seasons that have a season-close snapshot
+
+Your usual default season is not forced here when that season is closed. Closed seasons without a snapshot do not appear until a snapshot exists. See [Manage Seasons](/manage-seasons#use-profile-data-snapshots-for-historical-reporting).
+
+When you view a past season, a note under the matrix explains that counts use the bunks and weeks campers had when that season closed, not their profiles today. When you view the season in progress and it has no snapshot yet, the note says counts use profiles as they are today.
 
 ## What the matrix shows
 
@@ -37,9 +46,12 @@ Pick the season in the header season selector. The page loads your default seaso
 ### How week columns are chosen
 
 1. If Special Weeks is set up for the season (week options with start and end dates), those week labels become the columns.
-2. Otherwise, columns come from active session products in that season that are marked to show on attendance.
+2. For a past season whose Special Weeks dates are no longer saved, columns come from the weeks campers held in that season (the same per-season week history past-season invoices use).
+3. Otherwise, columns come from active session products in that season that are marked to show on attendance.
 
 If neither source has weeks for the season, the page tells you no Special Weeks or session products are available.
+
+Counts include campers who later became inactive, as long as their enrollment and group answer still place them in that season. Deleted or merged-away records stay out.
 
 ## Configure the layout
 
@@ -78,10 +90,14 @@ After a layout and week columns exist:
 
 1. Scan the matrix for each group and week.
 2. Select a non-zero count to open the **Camper roster** modal for that group and week.
-3. Select a **group name** in the left column to open the same **Camper roster** modal for every week in the season. The title shows the group name and **All weeks**.
+3. Select a **group name** in the left column to open the same **Camper roster** modal for every week in the season. The title shows the group name and **All weeks**. That season-wide roster includes campers in the group even when their weeks were never recorded. Single week columns still require a week match.
 4. Close the modal when you are finished reviewing names.
 
 Cell counts still open one week at a time. The group name is the season-wide roster for that group.
+
+When the roster has names, the top of the modal shows a count such as **12 campers** (or **1 camper**). Filtering the table changes which rows you see; it does not change that count.
+
+When you open a roster for an older season, extra columns can appear for newer seasons that also have snapshot data (or the season in progress). Each column shows the group the camper held in that later season. Cells with no enrollment show **Not enrolled** in a light red tint.
 
 Capacity shading can highlight cells that are at or over capacity when capacities are set in bunk settings.
 
@@ -99,3 +115,4 @@ Both controls sit in the page header next to **Configure layout**.
 - [Bunk Assignments](/bunk-assignments) for day-to-day placement and Terminology
 - [Special Weeks](/special-weeks) when week columns should follow your week calendar
 - [Seasons and sessions](/seasons-and-sessions) for attendance session products used as fallback columns
+- [Manage Seasons](/manage-seasons#use-profile-data-snapshots-for-historical-reporting) for season-close snapshots past seasons need

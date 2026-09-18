@@ -292,7 +292,15 @@ Admins can see when a contract was viewed, signed, and downloaded.
 
 ### Optional status changes on signing
 
-You can configure the system so that when a contract is signed, the associated user status (for example, staff status) updates automatically.
+On a contract template, you can set what happens to the signer after they finish signing.
+
+1. Open **Admin → Contracts**, then open the template (or create one).
+2. Under **User Status After Signing**, choose the account status to apply (for example Active or Pending), or leave **No Change**.
+3. When your staff **Application Status** profile field (or the field you mapped for Staff Hub) has options set up, you also see **Application Status After Signing** (the label matches that field's display name). Choose an option, or leave **No Change**.
+
+When someone completes signing, Campium applies the choices you saved on the template. Leave either control on **No Change** to keep the signer's current value for that field.
+
+The application-status control only appears when that staff status field exists with options. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 
 <Callout kind="info" collapsed="false">
   If you rely on automatic status changes after signing, test the flow with an internal user first to confirm the correct statuses update as expected.
