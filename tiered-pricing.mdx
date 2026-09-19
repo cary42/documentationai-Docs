@@ -5,13 +5,14 @@ description: Configure tiered pricing for Campium products so prices and minimum
 
 ## What tiered pricing does
 
-Tiered pricing lets you define multiple prices for the same product or priced option over time. Each tier has an effective date and optional minimum deposit override, so Campium can automatically use the correct price based on when a family registers or when staff change an enrollment.
+Tiered pricing lets you define multiple prices for the same product or priced option over time. Each tier has an effective date, an optional minimum deposit override, and an optional **Description**. Campium uses the tier in effect on the pricing date for both the price and, when you set one, the description families and staff see.
 
 Use tiers to:
 
 - Schedule price increases ahead of a season.
 - Offer early-bird discounts that expire on a specific date.
 - Adjust required deposits for certain date ranges.
+- Swap in a different product or option description while a tier is in effect.
 
 <Callout kind="info">
 
@@ -40,6 +41,12 @@ Each tier is a row in the pricing editor. Campium evaluates these fields togethe
 <ParamField body="minimumDeposit" param-type="money" show-location="false">
 
 **Minimum deposit (optional)** — overrides the usual minimum deposit for this product or priced option while the tier applies. If you leave this blank, Campium uses your normal minimum deposit rules for that product or option.
+
+</ParamField>
+
+<ParamField body="description" param-type="string" show-location="false">
+
+**Description (optional)**: text that replaces the product or option description while this tier is in effect. Helper text in the editor: **If set, this replaces the description above while this tier is in effect.** Leave it blank to keep the usual description.
 
 </ParamField>
 
@@ -126,6 +133,7 @@ Use these steps to create, edit, or remove tiered pricing rows.
   - **Effective date**
   - **Price**
   - **Min. deposit**
+  - **Description** (when set)
 - Confirm which row is currently in effect by comparing effective dates with today or the pricing date scenario you care about.
 
 </Step>
@@ -136,8 +144,9 @@ Use these steps to create, edit, or remove tiered pricing rows.
 - Enter:
   - **Effective date** in `YYYY-MM-DD` format.
   - **Price** as a number, with or without currency symbol/commas.
-  - **Minimum deposit** only if you want to override the usual deposit while this tier is active.
-- Save the tier. Campium adds the row to the schedule and will use it for pricing when its effective date is reached.
+  - **Min. deposit (optional)** only if you want to override the usual deposit while this tier is active.
+  - **Description (optional)** if you want different copy while this tier is active.
+- Click **Save**. Campium adds the row to the schedule and will use it for pricing (and description, when set) when its effective date is reached.
 
 </Step>
 
@@ -179,9 +188,15 @@ You must provide a **price** that parses as a valid number. You may type the val
 
 </ParamField>
 
+<ParamField body="description" param-type="string" show-location="false">
+
+**Description** is optional. When set, it replaces the product or option description for as long as that tier is the one in effect.
+
+</ParamField>
+
 <Callout kind="info">
 
-As a best practice, avoid creating **two tiers for the same product or option with the same effective date** — overlapping dates make it harder to predict which price applies. Prefer editing the existing tier for a date rather than adding a second row for the same date.
+As a best practice, avoid creating **two tiers for the same product or option with the same effective date**. Overlapping dates make it harder to predict which price applies. Prefer editing the existing tier for a date rather than adding a second row for the same date.
 
 </Callout>
 
