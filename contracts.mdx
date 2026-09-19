@@ -302,6 +302,19 @@ When someone completes signing, Campium applies the choices you saved on the tem
 
 The application-status control only appears when that staff status field exists with options. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 
+Helper text on the template reminds you that the signer sees the change on their signed copy, and that it is noted on their profile and on the contract.
+
+### What the signer and staff see after a status change
+
+When a template sets a status (not **No Change**) and the value actually changes:
+
+- The signed copy shows **Thank you, your contract is signed.** and a **What changed when you signed** section (for example, **Your account status is now Active.**).
+- On **Admin → Contracts**, the contract view includes a **Changes on signing** block with who signed and before-to-after lines such as **Account status: Pending to Active**.
+- The contract instances list can show the same change lines under the **Signed** badge.
+- A system note is added on the person's profile, and the notify email can list the changes under **Changes on signing**.
+
+Settings left on **No Change**, or values that were already the target status, do not appear in these summaries.
+
 <Callout kind="info" collapsed="false">
   If you rely on automatic status changes after signing, test the flow with an internal user first to confirm the correct statuses update as expected.
 </Callout>
