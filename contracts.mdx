@@ -67,28 +67,28 @@ A template includes:
 ### Create a new contract template
 
 <Steps>
-  <Step title="Open the templates list" icon="folder" title-type="p">
-    Go to **Admin → Contracts** and switch to the **Templates** tab (or section) to see all existing templates.
+  <Step title="Open Contract Templates" icon="folder" title-type="p">
+    Go to **Admin → Contracts**. The list shows templates with status filters **All**, **Active**, and **Inactive**, plus a search box. Use **Edit default header** when you want one shared letterhead for new templates.
   </Step>
 
   <Step title="Add a new template" icon="plus" title-type="p">
-    Click **Add Template** or **New Template**. The template editor opens with fields for name, description, header, and HTML content.
+    Click **New Contract Template**. The editor opens with a compose column on the left and context panels on the right.
   </Step>
 
   <Step title="Enter template details" icon="edit" title-type="p">
-    Give the template a clear **Name** and short **Description** so other admins recognize when to use it. Set the template to **Active** if you want it available right away.
+    Under **Template**, give the template a clear **Name** and short **Description**. Set **Status** to **Active** or **Inactive**. Inactive templates stay in your list but cannot be sent.
   </Step>
 
-  <Step title="Set an optional header" icon="file-text" title-type="p">
-    If you use a standard contract heading or letterhead, enter it in the **Header** field or choose the default header. The system can apply this header to every contract generated from this template.
+  <Step title="Set the header and body" icon="file-text" title-type="p">
+    Edit **Contract header** and **Contract body** in the rich text editors. Merge tags in the header (for example camp name and logo placeholders) fill in per camp. The signature block is added at the bottom of the body automatically.
   </Step>
 
-  <Step title="Add HTML content and merge fields" icon="code" title-type="p">
-    Enter the main contract body using the HTML editor. Insert merge fields such as `user_name` or `agency_name` wherever you want the system to personalize content for each recipient.
+  <Step title="Choose what happens after signing" icon="settings" title-type="p">
+    In the **After signing** panel, set **User status** (and the application-status control when it appears). Leave either on **No Change** to keep the signer's current value. See [Optional status changes on signing](#optional-status-changes-on-signing).
   </Step>
 
   <Step title="Save the template" icon="check-circle" title-type="p">
-    Click **Save**. The template now appears in the templates list and is available when generating new contracts.
+    Click **Save** in the action bar. Use **Preview** or **Preview contract** after the first save to open a preview of the last saved version.
   </Step>
 </Steps>
 
@@ -110,7 +110,7 @@ Use active/inactive status to control which templates admins can choose when gen
 
 <Steps>
   <Step title="Change template status" icon="edit" title-type="p">
-    In **Admin → Contracts → Templates**, locate the template, open it, and change the status to **Active** or **Inactive**.
+    In **Admin → Contracts**, open the template and set **Status** to **Active** or **Inactive**.
   </Step>
 
   <Step title="Save the change" icon="check-circle" title-type="p">
@@ -176,27 +176,27 @@ Instances track:
 
 ### Generate a contract instance
 
+Open instances from a template row (**View instances**) or go to the Contract Instances page for that template. The instances table includes a **Filter** search box and defaults to showing 300 rows.
+
 <Steps>
-  <Step title="Open the contracts list" icon="folder" title-type="p">
-    Go to **Admin → Contracts** and switch to the **Contracts** or **Instances** tab to see existing contracts.
-  </Step>
-
   <Step title="Start a new contract" icon="plus" title-type="p">
-    Click **New Contract**, **Add Contract**, or similar. The system prompts you to choose a template and a recipient.
+    Click **Generate Contract**.
   </Step>
 
-  <Step title="Choose template and recipient" icon="users" title-type="p">
-    Select the appropriate **Template** from the active list, then search for and select the staff member, camper, or guardian who should sign this contract.
+  <Step title="Choose template, season, and staff" icon="users" title-type="p">
+    Select a **Contract Template** and **Season**. Under **Send to users**, choose one or more staff (placeholder **Select staff**). Helper text: **Select one or more staff. You can generate contracts for several people in one step.**
   </Step>
 
-  <Step title="Review generated content" icon="monitor" title-type="p">
-    Preview the contract content to ensure merge fields (such as `user_name`) appear correctly. Confirm the header and body show what you expect.
+  <Step title="Optionally email them" icon="mail" title-type="p">
+    Leave **Email user that they have a contract waiting on the portal** checked to write an **Email Subject** and **Email Body**, or clear it to generate without sending mail.
   </Step>
 
-  <Step title="Save as draft" icon="check-circle" title-type="p">
-    Save the contract. It starts in **Draft** status until you send it by email.
+  <Step title="Generate" icon="check-circle" title-type="p">
+    Click **Generate Contract** in the modal. Each selected person gets their own contract instance.
   </Step>
 </Steps>
+
+You can also send contracts from [Staff Hub](/staff-hub#send-contracts-to-several-staff-at-once) using roster checkboxes.
 
 <Callout kind="alert" collapsed="false">
   After you generate and save a contract instance, you cannot edit its text or structure. To change the wording, update the template and generate a new contract.
@@ -252,7 +252,7 @@ Recipients review and sign contracts through the parent portal using a simple fl
   </Step>
 
   <Step title="Review the contract" icon="monitor" title-type="p">
-    The contract opens with the header and HTML content from your template, filled in with merge fields such as their name and your agency name.
+    The contract opens with the header and HTML content from your template, filled in with merge fields such as their name and your camp name.
   </Step>
 
   <Step title="Provide a signature" icon="edit" title-type="p">
@@ -260,7 +260,7 @@ Recipients review and sign contracts through the parent portal using a simple fl
   </Step>
 
   <Step title="Confirm acceptance" icon="check-circle" title-type="p">
-    They check a confirmation box acknowledging they agree to the contract terms and then submit the signed contract.
+    They check **I agree to the terms and conditions of this contract** (and, when the template will change their account, **and to the account changes listed above**), then click **Sign Contract**.
   </Step>
 </Steps>
 
@@ -295,21 +295,31 @@ Admins can see when a contract was viewed, signed, and downloaded.
 On a contract template, you can set what happens to the signer after they finish signing.
 
 1. Open **Admin → Contracts**, then open the template (or create one).
-2. Under **User Status After Signing**, choose the account status to apply (for example Active or Pending), or leave **No Change**.
-3. When your staff **Application Status** profile field (or the field you mapped for Staff Hub) has options set up, you also see **Application Status After Signing** (the label matches that field's display name). Choose an option, or leave **No Change**.
+2. In the **After signing** panel, under **User status**, choose the account status to apply (for example Active or Pending), or leave **No Change**.
+3. When your staff **Application Status** profile field (or the field you mapped for Staff Hub) has options set up, you also see a second control whose label matches that field's display name. Choose an option, or leave **No Change**.
 
 When someone completes signing, Campium applies the choices you saved on the template. Leave either control on **No Change** to keep the signer's current value for that field.
 
 The application-status control only appears when that staff status field exists with options. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 
-Helper text on the template reminds you that the signer sees the change on their signed copy, and that it is noted on their profile and on the contract.
+Helper text on **User status** reminds you that they are told about the change before they sign and see it on the signed copy.
 
-### What the signer and staff see after a status change
+### What the signer and staff see for status changes
 
-When a template sets a status (not **No Change**) and the value actually changes:
+When a template sets a status (not **No Change**) and the value will change:
+
+**Before signing (portal)**
+
+- An info box appears above the agree checkbox: **Signing also updates your account**, with the planned changes listed.
+- Helper text: **Questions about these changes? Contact the camp before you sign.**
+- The agree checkbox adds **and to the account changes listed above**.
+- If those planned changes become out of date before they submit, they see **Please review again** and must click **Review changes** to reload the page.
+
+**After signing**
 
 - The signed copy shows **Thank you, your contract is signed.** and a **What changed when you signed** section (for example, **Your account status is now Active.**).
-- On **Admin → Contracts**, the contract view includes a **Changes on signing** block with who signed and before-to-after lines such as **Account status: Pending to Active**.
+- On the admin contract view, a **Changes on signing** block lists who signed and the before-to-after lines. A **Shown to the signer before signing** section records what they agreed to (or **Nothing. Signing was not going to change their account.** when there was nothing to disclose).
+- For an unsigned contract that still has planned changes, **Changes on signing** explains that the signer sees those changes and agrees to them before signing.
 - The contract instances list can show the same change lines under the **Signed** badge.
 - A system note is added on the person's profile, and the notify email can list the changes under **Changes on signing**.
 
