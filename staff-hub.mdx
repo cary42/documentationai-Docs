@@ -137,9 +137,11 @@ When you need to send the same template to more than one person, use the roster 
 4. Choose a **Contract template** and **Season**.
 5. Review **Will be emailed**. Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
 6. Enter the **Email subject** and **Email body**. You can personalize with merge fields such as `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}`. Each person gets their own values.
-7. Click **Send**. Contract history and the **Contracts Sent** tile update without reloading the page.
+7. Click **Send**. A progress dialog titled **Sending contracts** (or **Sending contract** for one person) lists each person as **Sent**, **Skipped**, or **Failed**, with running tallies and a **Close** button when the run finishes.
 
-You need the same admin access used to generate contracts elsewhere. Sending requires at least one active contract template. Clear the selection with **Clear** when you are done.
+**Sent** means the contract was created and emailed. **Skipped** is someone who already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People who still need a retry stay checked; the bar can show **Still selected from the last send…**, and **Send contracts** is the retry. Someone who got a contract row but no email is cleared from the selection so a retry does not treat them as a duplicate skip.
+
+Contract history and the **Contracts Sent** tile update without reloading the page. You need the same admin access used to generate contracts elsewhere. Sending requires at least one active contract template. Clear the selection with **Clear** when you are done.
 
 ## Related guides
 
