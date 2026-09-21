@@ -40,21 +40,37 @@ Each row is one **family**, sorted by last name.
   The outstanding balance for the family across the charges in range, after payments are applied.
 </ParamField>
 
-The table footer shows the **total balance** across every family in the report.
+Optional **profile-field columns** appear after **Balance** when you choose them under **Display Columns** (see below). The table footer shows the **total balance** across every family in the report.
+
+## Choose which columns to show
+
+Use **Display Columns** (top right of the report card) to add profile fields as extra columns.
+
+1. Click **Display Columns** to open the panel titled **Display Columns**.
+2. Under **Select profile fields to display**, type in the filter box to narrow the list, then check the fields you want. Helper text: **Selected fields will appear as columns in the table below.**
+3. Click **Save Display Columns**. The page refreshes with those columns on the table and on export.
+
+Camper fields use their field names. Guardian fields appear as **Guardian 1 …** and **Guardian 2 …** so you can show the same field for each guardian. When no profile fields are available, the panel shows **No profile fields available.**
+
+You need **Financials** access (finance module permission). The report is not on free plans.
 
 ## Run the report
 
 <Steps>
   <Step title="Open the report" icon="folder" title-type="p">
-    Open the **Financials** area of your admin portal and choose the **Aging Account Balance** report.
+    Open **Financials → Aging Account Balance**.
   </Step>
 
   <Step title="Set the date range and season" icon="calendar" title-type="p">
-    Pick the start and end dates you want to review, and optionally choose a season or program group. Leave the dates blank to use the last 30 days.
+    Pick the start and end dates you want to review, and optionally choose a season or program group. Leave the dates blank to use the last 30 days. When you pick a season and leave dates unset, the report can use that season's start and end dates.
+  </Step>
+
+  <Step title="Optional: add profile columns" icon="settings" title-type="p">
+    Use **Display Columns** if you want school, phone, or other profile fields next to each family's balance.
   </Step>
 
   <Step title="Review and export" icon="play-circle" title-type="p">
-    Review each family's balance and the total at the bottom. You can sort, search, and export the table using the built-in export tools.
+    Review each family's balance and the total at the bottom. You can sort, search, and export the table using the built-in export tools. Exports include any profile columns you saved.
   </Step>
 </Steps>
 

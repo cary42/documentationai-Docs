@@ -10,6 +10,49 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-09-21" description="Staff Hub bulk contracts, Aging columns, bunk sections, sibling tiers, contracts signing" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Staff Hub bulk Send contracts** - Select several staff, choose a template and season, then send with a per-person progress dialog (**Sending contracts**, **Sent** / **Skipped** / **Failed**, **Close**). Failed people stay selected so **Send contracts** is the retry. See [Staff Hub](/staff-hub#send-contracts-to-several-staff-at-once).
+  - **Aging Account Balance Display Columns** - On **Financials → Aging Account Balance**, choose profile fields with **Display Columns** and **Save Display Columns**. Extra columns appear on the table and on export. See [Aging Account Balance](/account-balance-aging#choose-which-columns-to-show).
+  - **Bunk Section Field** - Map a Division/Village (or similar) field in **Bunk Settings**, set Warn or Block on mismatch, and use those sections on the assignments board and Group Summary. See [Bunk Assignments](/bunk-assignments#set-up-a-section-field) and [Group Summary](/group-summary#when-a-section-field-is-mapped).
+  - **Sibling Third Child And Beyond** - Sibling discounts can give later children their own rates after the second child. See [Discounts](/discounts#create-a-sibling-discount).
+  - **Average Family Expected Revenue** - Filter by registration-created date range, with Unique Families / Campers and Avg per Family / Camper on the chart and table. See [Average Family Expected Revenue](/average-family-spend).
+  - **Revenue Summary Average Sale** - Card for average sale per paying camper, plus optional **Net Revenue** / **Avg Net Revenue** profile-field columns. See [Revenue Summary](/revenue-summary).
+
+  ## Updates
+
+  - **Contracts before and after signing** - Signers see **Signing also updates your account** and a **What changed when you signed** receipt. Admins see **Shown to the signer before signing** and **Changes on signing**. See [Contracts](/contracts).
+  - **Contracts template and generate UI** - Template editor tabs (**Template**, **Contract header**, **Contract body**, **After signing**), **Generate Contract** with staff multiselect, and instances **Filter**. See [Contracts](/contracts).
+  - **Inline dates** - Click **Start Date** / **End Date** on Seasons, discount **Starts** / **Ends**, and form **Opens** / **Closes** without opening the full editor. See [Manage Seasons](/manage-seasons), [Discounts](/discounts), and [Forms](/forms).
+  - **Edit weeks History** - Profile **Sales** **Edit weeks** includes a **History** of week status changes. See [Special Weeks](/special-weeks#edit-weeks-on-a-camper-profile) and [Profiles](/profiles).
+  - **Family-level discounts on a profile** - **Add Payment** discount **For User** can stay **Entire family**. See [Discounts](/discounts#family-level-discounts-on-a-profile).
+  - **People → All People Seasons** - The list shows a **Seasons** column; Status and type filters stay in the URL when you bookmark. See [Profiles](/profiles).
+  - **New Person children** - When User Type is Parent, **Children** / **Add a child** appears on create. See [Profiles](/profiles).
+  - **Require own password after staff set** - **Change Password** can require the person to set their own password on next sign-in (**Password change pending**). See [Authentication](/authentication) and [Profiles](/profiles).
+  - **Payment plans portal tooling** - Portal enable warning, empty state, **Preview Cart**, and **Copy All To Another Season**. See [Payment Plans](/payment-plans).
+  - **Email Templates auto-save** - Templates save as you edit (**Your template saves automatically.** / **Saving...** / **Saved just now.**). See [Email Templates](/email-templates).
+  - **Transfer Season Balances access** - Finance staff with report access can run the tool (not Administrator-only). See [Transfer Season Balances](/transfer-season-balances).
+  - **Staff season from signed contracts** - Eligible Staff, Admin, or Volunteer people (including dual-role) can receive the contract's season after signing. See [When do staff get assigned a season?](/when-do-staff-get-assigned-a-season).
+  - **Special Weeks mismatch** - The week-count alert hides when no weeks are dated; **Lower Number of Weeks to N…** can fix an overcount in one click. Full-season sessions can auto-check every dated week at checkout. See [Special Weeks](/special-weeks).
+  - **Camper Hub inactive seasons** - Season lists can include inactive seasons (**Show other seasons** / **Show inactive seasons**). See [Camper Hub](/camper-hub).
+  - **Subproduct Option name** - Click **Option name** (and Description) inline; tooltips distinguish reports vs portal. See [Subproducts](/subproducts).
+  - **Pricing tier Description** - Optional description replaces the product/option description while the tier is in effect. See [Tiered Pricing](/tiered-pricing).
+  - **Credit card surcharge on Pay** - The parent **Pay Now** page shows **Credit Card Surcharge** as soon as a card on file is selected. Paysafe saved cards that were never classified show the fee in the preview so it matches the charge. See [Payment Methods](/payment-methods#credit-card-surcharge).
+
+  ## Fixes
+
+  - **Session list after Edit Session** - Saving a session no longer turns **Start-End**, **Capacity**, **Price**, and **Min. Dep.** into plain text; click-to-edit stays until you leave the page. See [Seasons & Sessions](/seasons-and-sessions#work-with-sessions-products).
+  - **Paysafe on-file surcharge** - Saved Paysafe cards that were never marked debit or credit are surcharged consistently on charge and on the Pay preview.
+  - **Escape on open dialogs** - Pressing Escape no longer strips the overlay off an open Bootstrap dialog while leaving the dialog behind.
+  - **Checkout without payment** - Pay later and no-payment-method checkouts that should not complete are refused on the server.
+  - **Switch price on open** - Opening a session switch calculates the price difference for the default session correctly.
+  - **Zero Out Season Credits** - The table defaults to 300 rows and sorts money amounts numerically. See [Zero Out Season Credits](/zero-out-season-credits).
+  - **Parent Forms list** - Adult cards with no active forms stay hidden on the portal Forms list.
+  - **Group Summary All weeks** - The group-name roster for **All weeks** includes campers with no weeks recorded and inactive campers who still belong in the count. See [Group Summary](/group-summary).
+  - **Form Status Summary** - Inactive accounts that already have form records stay on the roster. See [Form Status Summary](/form-status-summary).
+</Update>
+
 <Update label="2026-09-14" description="Bunk terminology, Group Summary, snapshot compare, exact weeks, form audience labels" tags={["feature","improvement","bugfix"]}>
   ## New
 
