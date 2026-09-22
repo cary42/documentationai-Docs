@@ -507,6 +507,16 @@ Use this when your payment workflow depends on keeping a card or bank method on 
 
 **Allow User To Pay Later** lets the user complete registration without paying at the time of checkout.
 
+On the parent checkout page, families choose how much to pay under **How much today?**:
+
+- **Full amount** with helper **Pay the whole balance today.**
+- Pay-later option (label comes from your portal pay-later text) with helper **Nothing is charged today.** when pay later is allowed
+- Minimum deposit option (label from your minimum deposit text) with helper **The rest stays on your account balance.** when a minimum is offered
+- **Another amount** when custom amounts are allowed (at least the minimum)
+- **Credit card surcharge** line when a surcharge applies, then **Total today**
+
+When payment plans are offered, a **Payment plan** card lists each plan as a selectable option. Families who can pick their charge day still see **Charge day of the month**.
+
 <Callout kind="alert" collapsed="false">
   Use **Allow User To Pay Later** carefully. This setting is generally best for testing or tightly controlled workflows because it lets users finish registration without collecting payment immediately.
 </Callout>
