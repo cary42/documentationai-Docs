@@ -275,20 +275,35 @@ This way, you see whether you are ahead or behind at the same point in each cycl
 
 ## Retention dashboard card
 
-The **Retention** card on the admin dashboard shows how many people from a prior season came back, how long people have been with you, and average sale for paying campers.
+The **Retention** card on the admin **Dashboard** shows how many people from a prior season came back, how long people have been with you, and (when finance is on) average sale for paying campers.
 
-The card appears when dashboard charts are on for your account and the **Retention** card is visible in your dashboard layout (you can hide or show cards from the dashboard card picker).
+The card appears when:
+
+- Your role includes **Retention card on the dashboard** (under the **Dashboard** permission category; Administrators get it by default).
+- Your camp has at least two seasons.
+- The **Retention** card is visible in your dashboard layout (hide or show cards from the dashboard card picker).
+
+A short spotlight tip titled **New Retention card** may appear the first time you see the card. Dismiss it with **Got it**.
 
 ### What you see
 
-- Gear control **Change seasons** with **Current season** and **Compare to**, then **Apply** or **Cancel**.
+- Gear control titled **Configure retention** with **Current season**, **Compare to**, and **Seasons in retention**, then **Apply** or **Cancel**. Helper text: **Deselect a season to leave it out of retention. Use this for a fall season or a holiday weekend.**
 - Link **YoY report** to open **Product YoY Comparison**.
 - Note: **Retention excludes people whose profile grade is the highest option, unless you turned on include highest grade on the YoY report.**
-- Section **Retention**: comeback rate for the current season versus the compare season, plus a short trend by season when enough history exists.
+- Section **Retention**: comeback rate for the current season versus the compare season, plus a short trend by season when enough history exists. Use **Retained** and **Lost** (with counts) under the rate, or click a season bar, to open the drill-in list.
 - Section **Years at camp**: how many people fall into each years-at-camp bucket for the current season.
-- **Average sale per paying** camper (uses your camper singular label) for the current season, with a compare amount when available.
+- **Average sale per paying** camper (uses your camper singular label) for the current season, with a compare amount when available. This row only appears when the finance module is on and your role can use finance reports.
 
-Grades for people in a deactivated season that has a ready snapshot come from that snapshot when the card calculates retention.
+### Who counts as retained or lost
+
+Retention looks at active enrollments in the prior season (cancellation-fee or forfeited-deposit lines do not count). Profile status is ignored, so someone marked Removed, Lead, or Archived still counts if they had an active enrollment. Grades for people in a deactivated season that has a ready snapshot come from that snapshot when the card calculates retention.
+
+### Drill into Retained and Lost
+
+1. On the **Retention** card, click **Retained** or **Lost**, or click a season bar in the trend.
+2. A large dialog titled **Retention:** followed by the season name opens. Intro text explains: everyone registered in the prior season, split by whether they registered again in the selected season.
+3. Toggle **Retained** or **Lost** inside the dialog. Columns show the camper (your singular label), products from the prior season, products from the selected season (**Not registered** when they did not come back), and **Years**.
+4. Open a camper name to go to their profile, or use **YoY report** for the full comparison report.
 
 ### Interpreting the widget
 
