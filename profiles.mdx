@@ -26,7 +26,8 @@ Use the admin search tools, family views, or **People → All People** to open a
 3. When you pick a deactivated season that has a ready profile snapshot, a note appears: **People and extra columns for this season come from the snapshot saved when you deactivated it.** Extra columns then show snapshot values for that season, not live answers.
 4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Selected fields appear as extra columns on this list.
 5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. **Seasons** lists the seasons that person is registered in.
-6. Click the person’s name to open their profile.
+6. Use **Export CSV** (header tip: **Download the people on this list as a CSV file, including your Display Columns**) to download the filtered list. The file matches the filters and display columns on screen, including snapshot values when you selected a deactivated season with a ready snapshot.
+7. Click the person’s name to open their profile.
 
 <Steps>
   <Step title="Search for the person" icon="search" title-type="p">
@@ -93,6 +94,8 @@ The header gives you a quick snapshot of who you are looking at:
 - **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, an **Edit** control opens a dialog titled with that person's name where you can update **First name**, **Last name**, **Email**, and phone, then **Save**. You need permission to edit profiles, and you can only edit members of the same family.
 
 - **Profile photo**: Lets you upload, crop, rotate, or delete a profile photo so staff can recognize the person easily.
+
+- **Payment Methods on File**: Shows the family's primary payment method (or the first method if none is marked primary). When more methods exist, use **Show N more** / **Show less** to expand or collapse the rest. Empty state: **No payment methods on file.**
 
 When you change fields in the header or on many tabs, Campium often saves as you go. If a save is needed, you may see a button or message next to the field or section.
 
@@ -639,19 +642,17 @@ Each tab focuses on a different part of the person’s record. Use these section
     </Callout>
   </Tab>
 
-  <Tab title="Pickup" icon="settings">
-    The **Pickup** tab shows who is allowed to pick up the camper and any related restrictions.
+  <Tab title="Pickup Info" icon="settings">
+    Open **More → Pickup Info** when **Pickup Module** is on. This tab shows who is allowed to pick up the camper and any related restrictions.
 
-    - Review the list of approved adults and their contact details during check-in and checkout.
+    - Under **Guardians**, use **Can pick up** to mark a guardian **Allowed** or **Not allowed** for each camper. Blocked guardians are omitted from check-out on the web, app, and kiosk. See [Pickup privileges](/attendance#block-a-guardian-from-picking-up-a-camper).
 
-    - Add or remove pickup contacts when families update who is allowed to pick up the camper.
-
-    - Record notes about custody considerations, photo ID checks, or specific pickup instructions.
+    - Under **Authorized Pickups**, review extra adults families added, and use **New Authorized Pickup** when needed. Contacts that match a blocked guardian show **Hidden at check-out**.
 
     This tab helps front-desk and cabin staff verify that the person picking up a camper matches what the family has authorized.
 
     <Callout kind="info" collapsed="false">
-      Pickup rules can be sensitive, especially in custody situations. Follow your camp’s legal and safety guidelines before changing who is allowed to pick up a camper.
+      Pickup rules can be sensitive, especially in custody situations. Follow your camp's legal and safety guidelines before changing who is allowed to pick up a camper.
     </Callout>
   </Tab>
 
@@ -845,8 +846,8 @@ Use these quick answers when something on a profile does not look right.
     - If you still expect to see a tab, contact a system admin and ask them to review your permissions.
   </Expandable>
 
-  <Expandable title="I do not see Pickup, Signatures, Logins, or Audit" default-open="false">
-    Extra tabs such as **Pickup**, **Signatures**, **Logins**, and **Audit** can be more restricted than core tabs.
+  <Expandable title="I do not see Pickup Info, Signatures, Logins, or Audit" default-open="false">
+    Extra tabs such as **Pickup Info**, **Signatures**, **Logins**, and **Audit** can be more restricted than core tabs.
 
     - Look for a **More** menu or overflow area near the tab row; some layouts group less-used tabs there.
 

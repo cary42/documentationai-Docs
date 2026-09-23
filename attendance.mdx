@@ -237,19 +237,31 @@ Use the table tools where available to print or export the results.
 
 ## Pickup privileges
 
-Pickup features help staff confirm who is allowed to pick up a camper.
+Pickup features help staff confirm who is allowed to pick up a camper. Turn on **Pickup Module** in **Admin → Site Settings → Modules**.
 
 ### On the parent portal
 
-When **Pickup Module** is enabled, families see **Pickup** for each camper in the parent portal.
+When **Pickup Module** is enabled, families see **Pickup privileges** for each camper in the parent portal.
 
 They can add authorized pickup people, such as grandparents or caregivers, with name, relationship, and phone details. Parents and guardians already on the account are authorized automatically and do not need to be added again.
+
+If you turn off pickup for a guardian on that camper (see below), that guardian sees: **Pickup contacts for this camper are managed by the camp. Contact the camp to make changes.** Nobody can add a pickup contact whose name matches a blocked guardian; the portal shows: **This person can't be added as a pickup contact. Contact the camp for help.**
 
 <Callout kind="info">
 
 Authorized pickup people should be age 18 or older and bring valid ID at dismissal.
 
 </Callout>
+
+### Block a guardian from picking up a camper
+
+On a camper or family profile, open **More → Pickup Info** (needs **Pickup Module**).
+
+1. Under **Guardians**, find the camper and guardian row. Helper text: **Turn off pickup for a guardian who may not collect a camper. They won't be offered at check-out on the web, app, or kiosk.**
+2. Use the **Can pick up** switch. **Allowed** means they appear at check-out. **Not allowed** removes them from web, app, and kiosk check-out lists.
+3. Confirm with **Yes, stop pickup** when turning pickup off. Staff without edit permission see **Allowed** / **Not allowed** badges instead of the switch.
+
+Under **Authorized Pickups**, a contact whose name matches a blocked guardian shows the badge **Hidden at check-out**. Check-out refuses that person with: **This guardian is not allowed to pick up this camper.**
 
 ### Pickup Report
 
@@ -265,7 +277,7 @@ Use this report for front-desk binders, dismissal review, or exports before trip
 
 ### Pickup selection at check-out
 
-When **Pickup Popup** is enabled, staff choose the pickup person during check-out. That selection appears on the roster and in related reporting.
+When **Pickup Popup** is enabled, staff choose the pickup person during check-out. That selection appears on the roster and in related reporting. Guardians marked **Not allowed** do not appear in the list.
 
 ## Attendance Check in/out PDF
 
