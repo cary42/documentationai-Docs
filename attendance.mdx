@@ -241,11 +241,15 @@ Pickup features help staff confirm who is allowed to pick up a camper. Turn on *
 
 ### On the parent portal
 
-When **Pickup Module** is enabled, families see **Pickup privileges** for each camper in the parent portal.
+When **Pickup Module** is enabled, families see **Pickup privileges** for each camper in the parent portal. The page title is **Pickup Information for [name]**.
 
-They can add authorized pickup people, such as grandparents or caregivers, with name, relationship, and phone details. Parents and guardians already on the account are authorized automatically and do not need to be added again.
+The lead text explains who may pick up the camper. Parents and guardians are included automatically. Families add anyone else under **Authorized Pickups**.
 
-If you turn off pickup for a guardian on that camper (see below), that guardian sees: **Pickup contacts for this camper are managed by the camp. Contact the camp to make changes.** Nobody can add a pickup contact whose name matches a blocked guardian; the portal shows: **This person can't be added as a pickup contact. Contact the camp for help.**
+Under **Parents and Guardians**, the family sees each guardian's **Name** and **Pickup** status: **Allowed**, or **Not allowed for pickup**. The signed-in guardian is marked **(you)**. Help text: **Contact the camp with any questions about who is allowed to pick up.**
+
+They can add authorized pickup people, such as grandparents or caregivers, with **Full name (must match ID)**, **Relationship to child (aunt, friend, sitter)**, and **Phone number**.
+
+If you turn off pickup for a guardian on that camper (see below), that guardian sees: **You are not allowed to pick up [camper]. Pickup contacts for this camper are managed by the camp. Contact the camp to make changes.** The staff-only reason never appears on the portal. Nobody can add a pickup contact whose name matches a blocked guardian; the portal shows: **This person can't be added as a pickup contact. Contact the camp for help.**
 
 <Callout kind="info">
 
@@ -257,11 +261,16 @@ Authorized pickup people should be age 18 or older and bring valid ID at dismiss
 
 On a camper or family profile, open **More → Pickup Info** (needs **Pickup Module**).
 
-1. Under **Guardians**, find the camper and guardian row. Helper text: **Turn off pickup for a guardian who may not collect a camper. They won't be offered at check-out on the web, app, or kiosk.**
+1. Under **Guardians**, find the camper and guardian row. Helper text: **Turn off pickup for a guardian who may not collect a camper. They won't be offered at check-out on the web, app, or kiosk. You'll be asked for a short reason, which stays with staff. Families see only that the guardian is not allowed for pickup.**
 2. Use the **Can pick up** switch. **Allowed** means they appear at check-out. **Not allowed** removes them from web, app, and kiosk check-out lists.
-3. Confirm with **Yes, stop pickup** when turning pickup off. Staff without edit permission see **Allowed** / **Not allowed** badges instead of the switch.
+3. When turning pickup off, confirm with **Yes, stop pickup** and enter a **Reason (staff only, not shown to families)**. The prompt title is **Stop [guardian] from picking up [camper]?** Placeholder example: **For example: court order on file, dated [date]**. Empty reasons are rejected with: **Enter a short reason so staff know why pickup was turned off.** Success: **Pickup turned off.** Turning pickup back on shows **Pickup allowed.**
+4. Staff without edit permission see **Allowed** / **Not allowed** badges instead of the switch.
 
-Under **Authorized Pickups**, a contact whose name matches a blocked guardian shows the badge **Hidden at check-out**. Check-out refuses that person with: **This guardian is not allowed to pick up this camper.**
+The **Reason** column shows the staff reason, or **No reason recorded** for older blocks, plus **Turned off by [name] on [date]** when available.
+
+Under **Pickup changes**, every turn-off and turn-on is listed newest first (**When**, **Camper**, **Guardian**, **Change**, **Reason**, **By**). Change badges: **Pickup turned off** / **Pickup allowed**. Help text: **Every time pickup was turned off or back on for a guardian, newest first.**
+
+Under **Authorized Pickups**, a contact whose name matches a blocked guardian shows the badge **Hidden at check-out**. Check-out refuses that person with: **This guardian is not allowed to pick up this camper.** When **Pickup Popup** is on, a yellow notice can list blocked guardians with their staff reasons for the person checking out.
 
 ### Pickup Report
 
