@@ -56,10 +56,12 @@ At the bottom of the page, use the footer totals to understand your overall expo
 
 - Click **Send Email** in the page header.
 - The dialog explains: **This will send an email to families on this report who have a balance but no primary payment method on file.**
-- Edit the **Message**, use **Preview Email** if you want a sample, then **Send Email** again to confirm. Confirm with **Send email to families without a primary payment method?** when prompted.
-- Use **Close** to dismiss the dialog without sending.
+- Enter a **Subject** (default **Please Add a Payment Method to Your Account**). Helper text: **Every family gets this subject. Your last one is remembered.**
+- Edit the **Message**, use **Preview Email** if you want a sample, then **Send Email** again to confirm. Confirm with **Send email to families without a primary payment method?** when prompted. The confirm note explains you will see each family marked **Sent**, **Skipped**, or **Failed**, and can retry failures.
+- While sending, a progress dialog (**Sending email** / **Sending emails**) shows **N of M families** and the **Sent** / **Skipped** / **Failed** tallies. When finished, use **Close** or **Retry N families** for failures.
+- Families receive a payment-method call to action (**Log in and Add a Payment Method**), not a pay-balance button. Use **Close** to dismiss the compose dialog without sending.
 
-Only families that still match the report (balance and no primary method) are emailed.
+Only families that still match the report (balance and no primary method) are emailed. Each send chunk re-checks the list so a family that added a method mid-send is skipped.
 
 </Step>
 

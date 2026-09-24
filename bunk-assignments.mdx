@@ -8,6 +8,10 @@ description: >-
 
 Bunk Assignments helps you see who still needs a placement, who is already placed, and move people between the unassigned list and named bunks. You will find it in the admin site under **Bunking → Bunk Assignments** (or your renamed plural group, such as **Cabins → Cabin Assignments**).
 
+The board is scoped to one season at a time. Use the season selector in the page header. It opens on your signed-in **Default Season** when that season is available. The page title includes the season name. Only campers with an active enrollment in a session that shows on attendance for that season appear on the board. Buying an add-on alone does not count.
+
+Season is not offered as a **Filter Users** / **Add Another Filter** field here, so the pool cannot disagree with the header season.
+
 This guide uses **bunk** as the default word. If you set a custom term in **Bunk Settings**, the same screens use your singular and plural labels instead.
 
 <Callout kind="info" collapsed="false">
@@ -288,6 +292,7 @@ With a section field configured:
 - The **Show** filter lists bunks under section optgroups.
 - Campers whose profile section does not match the bunk's section show a mismatch badge. **Block** stops the drop; **Warn** lets it through and shows a notice.
 - Smart Assignments never drafts a camper into a bunk from another section.
+- Each section header includes a mail control (**Email [section name]**). Click it to open a compose dialog for people in that section's bunks for the selected season. You need **Manage Email** permission. Optional checkbox: **Include staff and guardians in this group**. Fields: **Subject** and **Message**. Buttons: **Open in full editor**, **Close**, **Send Email**. Confirm with **Send to N [label] recipients?** / **Yes, send it**. Emails go to Guardian 1 and Guardian 2 for campers in the audience. The same email pattern appears on **Bunk Summary** section rows, on a session product's row menu as **Email [Session] Group** (your product singular label), and on the session enrollee roster as **Email This Group**.
 
 ## Related bunking features
 
