@@ -43,7 +43,7 @@ The main Profile Fields screen gives you a high-level view of every field and ho
 | Column            | What it shows                                                            |
 | ----------------- | ------------------------------------------------------------------------ |
 | **Field Name**    | The label staff see for the field                                        |
-| **User Type**     | Which people the field applies to: Campers, Parents, Staff, or All Users |
+| **User Type**     | Which people the field applies to: Campers, Parents, Staff, All Users, or **Family** (one shared answer) |
 | **Field Type**    | Text, Date, Choose One, Choose Many, Ranked Choice, or Link to a User     |
 | **Health report** | A checkmark if the field appears on health reports                       |
 | **Description**   | An internal note about the field - not seen by families                  |
@@ -86,7 +86,7 @@ Use the Add New Field form to define the field.
 </ParamField>
 
 <ParamField body="Used for" param-type="string" required="true" deprecated="false" show-location="false">
-  Chooses which user types the field applies to. Use a specific type or make the field available to all users. On the form this label is **This field will be used for**.
+  Chooses which user types the field applies to. Use a specific type, make the field available to all users, or choose **Family** for one answer the whole household shares. On the form this label is **This field will be used for**. Helper text for Family: **Family means one answer the whole family shares**.
 </ParamField>
 
 <ParamField body="Field size" param-type="string" required="false" deprecated="false" show-location="false" enum="Regular,Large">
@@ -118,6 +118,38 @@ After you save, the field appears in the Profile Fields table.
 <Callout kind="info" collapsed="false">
   If you create a **Choose One**, **Choose Many**, or **Ranked Choice** field, the field is not ready for use until you add options.
 </Callout>
+
+## Family fields
+
+Use **Family** when everyone in the household should share one answer (for example, a shared doctor name or emergency note).
+
+1. Open **Admin → Profile Fields**.
+2. Create a field or open **Edit Profile Field**.
+3. Under **This field will be used for**, choose **Family**.
+4. Save. Only **Text**, **Date**, and multiple-choice types (**Choose One** / **Choose Many**) can be Family fields. Other types show: **Only text, date and multiple choice fields can be shared by a family.**
+
+On profiles, a **Family** badge (title **Shared by the whole family**) marks the field. Editing the answer on any member updates it for the whole family. Forms that include the field save to that same shared answer.
+
+If the field already has answers and you try to switch between Person and Family, Campium blocks the change for regular staff: **This field already has answers, so it can't switch between Person and Family here. Contact Campium support to convert it.** New Family fields, or eligible fields with no answers yet, can still be set to **Family** from the editor.
+
+## Linked Fields
+
+**Linked Fields** lets one **Choose One** dropdown update another when someone picks an option. Example: choosing a Group can fill in the matching Section.
+
+1. Open **Admin → Profile Fields**.
+2. Click **Linked Fields** (toolbar button on the main list).
+3. Click **Link two fields**.
+4. Under **When this field changes**, choose the source. Under **Update this field**, choose the target. Both must be single-choice (**Choose One**) dropdowns. Click **Continue**.
+5. For each source option, pick the matching target option (or leave unmapped so the target stays as-is when that source option is chosen). Clearing the source clears the target.
+6. Click **Link fields** (or **Save** when editing). Confirm: **Save this link? Active and pending people already in a changed option have their [field] updated to match. Inactive profiles are left as they are.**
+
+On the Linked Fields list, use **Edit** or **Remove** on an existing link, or **Back to Linked Fields** from the mapping screen.
+
+Rules:
+
+- A field cannot link to itself, be both a source and a target, or have more than one source.
+- You need **Profile Fields** access (same permission as the rest of this page).
+- Group and Section pairs that already use Group Settings keep those mappings; Linked Fields does not replace that special case.
 
 ## Ranked Choice fields
 
@@ -302,8 +334,8 @@ Create the field first, then place it where staff should see it.
     After setup, the same field can be reused across registration forms, the parent portal, reports, the health report, and Staff Hub. One field definition supports many workflows.
   </Step>
 
-  <Step title="Collect and update answers per person" icon="check-circle" title-type="p">
-    Answers save on each person's record. Staff can update those answers later from the profile or through forms, depending on where the field is exposed.
+  <Step title="Collect and update answers" icon="check-circle" title-type="p">
+    Answers normally save on each person's record. **Family** fields keep one shared answer for the household. Staff can update answers later from the profile or through forms, depending on where the field is exposed.
   </Step>
 </Steps>
 
