@@ -1,17 +1,26 @@
 ---
-title: Pickup Privileges Report
-description: See who is approved to pick up each camper so staff can verify identity at pickup.
+title: Pickup Report
+description: >-
+  Review authorized pickup people and guardians blocked from pickup for a season
+  and session so staff can verify identity at dismissal.
 ---
 
 ## Overview
 
-Use the Pickup Privileges Report to see who each family has authorized to pick up their child, so staff can verify identity at pickup time.
+Use the **Pickup Report** to see who each family has authorized to pick up a camper, and which guardians are blocked from pickup (with the staff-only reason). Needs the **Pickup Module** and Attendance report access.
 
-<Callout kind="info">
-  Data only appears once families have entered at least one authorized pickup person on their profile.
-</Callout>
+Open **Reports → System Reports**. Under **Attendance**, open **Pickup Report**.
 
-## What it shows
+The report has two views:
+
+| View | What it shows |
+| --- | --- |
+| **Authorized pickups** | People families listed as allowed to pick up each camper |
+| **Blocked guardians** | Guardians marked **Not allowed** for pickup, with staff reason and history |
+
+Use the season and session filters at the top for either view.
+
+## Authorized pickups
 
 Each row lists an authorized pickup person for a camper.
 
@@ -31,6 +40,29 @@ How the pickup person is related to the camper, for example parent, grandparent,
 A contact phone number for the pickup person.
 </ParamField>
 
+Select **Display Columns** above the table to add extra profile fields (cabin, group, bunk, and so on). Your selection is remembered.
+
+<Callout kind="info">
+  Authorized pickup rows appear after families have entered at least one authorized pickup person on their profile. See [Pickup privileges](/attendance#pickup-privileges).
+</Callout>
+
+## Blocked guardians
+
+Click **Blocked guardians** to list guardians who may not pick up a camper in the season and sessions above. Helper text: **Guardians who may not pick up a camper in the season and sessions above. The reason is for staff only. Open a camper's history to see every change.**
+
+| Column | What it shows |
+| --- | --- |
+| Camper | The camper the block applies to |
+| **Guardian** | The guardian who is not allowed to pick up |
+| **Reason** | Staff-only reason entered when pickup was turned off |
+| **Turned off by** | Who recorded the block |
+| **When** | When pickup was turned off |
+| **History** | Link **Pickup history** to the camper's pickup change log |
+
+Empty state: **No guardians are blocked from pickup.**
+
+To turn pickup off or back on for a guardian, use **More → Pickup Info** on the profile. See [Block a guardian from picking up a camper](/attendance#block-a-guardian-from-picking-up-a-camper).
+
 ## Filters
 
 <Steps>
@@ -43,15 +75,8 @@ A contact phone number for the pickup person.
   </Step>
 </Steps>
 
-## Add profile field columns
-
-Select **Display Columns** above the table to choose extra profile fields to show as columns, such as cabin, group, or bunk. Type in the filter box to find a field quickly, check the ones you want, and save. Your selection is remembered for next time.
-
-## Where to find it
-
-In Campium, go to **Reports** &gt; **System** and select the Pickup Privileges Report.
-
 ## Troubleshooting
 
-- **No data yet**: Families have not entered any authorized pickup people. Ask them to add at least one on their profile.
-- **A camper is missing**: Check the season and session filters, and confirm that family has entered a pickup person.
+- **No authorized pickup data yet**: Families have not entered any authorized pickup people. Ask them to add at least one on their profile.
+- **A camper is missing from Authorized pickups**: Check the season and session filters, and confirm that family has entered a pickup person.
+- **Blocked guardians is empty**: No guardians are marked **Not allowed** for the filters you chose. Blocks are set on **Pickup Info**.

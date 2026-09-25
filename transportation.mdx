@@ -10,7 +10,7 @@ Use Transportation in CampiumDB to manage bus routes, assign campers as riders, 
 Transportation has two main parts:
 
 - **Buses / Vehicles**: manage bus lists, assign riders, order riders, view a live map, and optionally send messages to riders.
-- **Pickup Privileges**: see who is allowed to pick up a camper and run a pickup privileges report.
+- **Pickup privileges**: see who is allowed to pick up a camper, block guardians when needed, and run the **Pickup Report**.
 
 <Callout kind="info">
 
@@ -35,7 +35,7 @@ Transportation typically involves three groups:
 Access Transportation features from the admin portal:
 
 - **Buses / Transportation**: open this area to work with the **Bus list**, Riders pages, and Map tab. This is commonly labeled **Bus** in the navigation.
-- **Reports**: open the **Pickup Privileges** report when you need a printable or exportable list of authorized pickup people.
+- **Reports**: open **Reports → System Reports → Attendance → Pickup Report** when you need authorized pickups or blocked guardians.
 
 ## Buses: basics
 
@@ -248,17 +248,18 @@ On **Pickup Info**, use the **Guardians** table to mark a guardian **Allowed** o
 
 When you remove a pickup person, CampiumDB keeps or deletes that record based on whether it has been used before. If the person is tied to past attendance activity, the system hides them from normal use but keeps the record for history. If the person has never been used in that way, the system removes them completely.
 
-### Pickup Privileges report
+### Pickup Report
 
-Run the **Pickup Privileges** report when you need a list of campers and their approved pickup people.
+Open **Reports → System Reports**. Under **Attendance**, open **Pickup Report**.
 
-You can typically use the report to:
+Use it to:
 
-- View each camper with their authorized pickup people.
-- Filter by season or product when filters are available.
-- Export or print the report, depending on your reporting tools.
+- Review **Authorized pickups** for each camper.
+- Review **Blocked guardians** (staff **Reason**, who turned pickup off, when, and **Pickup history**).
+- Filter by season or session.
+- Export or print from the report tools.
 
-Use printed or exported copies at dismissal points where live access to the admin portal is limited.
+Details: [Pickup Report](/pickup-report). Use printed or exported copies at dismissal points where live access to the admin portal is limited.
 
 ## Troubleshooting
 
