@@ -152,7 +152,7 @@ When you send or resend a contract email, you can include merge fields in the su
 
 - **`contract_url`** — Unique, secure link to the contract in the parent portal. Recipients click this to review and sign.
 
-- **`agency_name`** — Your camp or agency name, useful for branding and clarity in the email.
+- **`agency_name`** — Your camp or organization name, useful for branding and clarity in the email.
 
 <Callout kind="tip" collapsed="false">
   Include `contract_url` in every contract email so recipients can access their contract directly, even if they are not logged in to the portal.
@@ -174,13 +174,17 @@ Instances track:
 
 - Portal views and PDF downloads
 
-### Generate a contract instance
+### Open instances for a template
 
-Open instances from a template row (**View instances**) or go to the Contract Instances page for that template. The instances table includes a **Filter** search box and defaults to showing 300 rows.
+On **Admin → Contracts**, click the template **Name** (or the **Usage** count) to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, and **Signed**. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
+
+On each template row you can **Edit**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
+
+### Generate a contract instance
 
 <Steps>
   <Step title="Start a new contract" icon="plus" title-type="p">
-    Click **Generate Contract**.
+    On the instances page, click **Generate Contract**.
   </Step>
 
   <Step title="Choose template, season, and staff" icon="users" title-type="p">
@@ -274,11 +278,13 @@ When the signature is submitted, the system:
 
 - Updates the contract status to **Signed** or **Completed** (depending on configuration)
 
-### View tracking and PDFs
+### View tracking, print, and PDFs
 
 Admins can see when a contract was viewed, signed, and downloaded.
 
 - Portal view tracking shows when the recipient opened the contract page.
+
+- Use **Print** on a template or instance for a browser print page (blank template or filled/signed contract).
 
 - You can download a PDF of the signed contract from the contract instance details.
 

@@ -47,7 +47,11 @@ Above the roster, five tiles summarize the current season filter:
   - **Signed This Week** — contracts signed in the last seven days.
 </Card>
 
-These tiles always reflect the full season filter. Searching the roster by name narrows the table below, but the tiles stay put.
+Tile **counts** always reflect the full season filter (name search does not change them). Click a tile to filter the roster to that group. Helper text under the tiles says **Click a tile above to filter this list.** Click the same tile again to show everyone. When a tile filter is on, the note explains who you are seeing (for example **Showing N staff who have completed a form and have no contract yet. Click the tile again to show everyone.**). Your tile choice is remembered in this browser.
+
+## Export the roster
+
+Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports the staff currently shown after your filters. Tooltip: **Exports the staff shown, after your filters**.
 
 ## Work the roster table
 
@@ -55,9 +59,9 @@ Each staff member is one row. From left to right, the roster shows:
 
 - **Application status** — the main status of where the person is in your process (for example, applied, interviewing, hired). This comes from the staff profile field named **Application Status**. When the field is set up as a dropdown, you can change the status right in the table and it saves immediately.
 
-- **Staff** — the person's name (a link to their profile), email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline.
+- **Staff** — the person's name (a link to their profile), city and state when available, cell phone, email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline. When the person has seasons on their profile, a muted **N season** / **N seasons** line appears at the bottom of the cell (hover for the full list).
 
-- **Seasons** — the seasons the person is attached to.
+- **Seasons** — the seasons the person is attached to for the current filter. This column is hidden when you filter to exactly one season (every row would show the same value).
 
 - **Profile field columns** — any staff profile fields you chose to display. Text fields and dropdowns can be edited directly in the table; your change saves on its own.
 
@@ -66,7 +70,7 @@ Each staff member is one row. From left to right, the roster shows:
 - **Contracts** — a **Total / Sent / Signed** rollup. Click it to expand the contract history and the send-a-contract panel.
 
 <Callout kind="tip" collapsed="false">
-  Use **Search staff** above the table to filter the roster by name. It matches the Staff column only and narrows the visible rows without changing the summary metrics.
+  Use **Search staff** above the table to filter the roster by name. It matches the Staff column only. Summary tile counts stay on the full season filter; click a tile to filter the roster itself.
 </Callout>
 
 ## Choose which fields and statuses appear
@@ -99,11 +103,13 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
 
 Click the **Forms** cell in any row to expand a panel. It groups the person's staff forms by season and shows the status of each one, along with the completion date when a form is finished. Use this to see exactly which follow-up forms are still outstanding for a hire.
 
+For a completed form, use the printer icon (title **Print form**, with the form name) to open the same print dialog as the profile **Forms** tab, including **Layout** (**Compact** or **Expanded**). See [Forms](/forms#print-form-responses).
+
 ## Track and send contracts from the hub
 
 Click the **Contracts** cell to expand the contract panel for that person. It has two parts:
 
-- **Contract history** — every contract created for the staff member, its template name, when it was created, when it was signed, its current status, and a button to view the contract itself.
+- **Contract history** — every contract created for the staff member, its template name, when it was created, when it was signed, its current status, a button to view the contract, and a **Print** icon for a print-friendly page.
 
 - **Create & Send** — a quick way to send a new contract without leaving Staff Hub.
 
