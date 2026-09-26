@@ -251,7 +251,10 @@ On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
 - Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu still includes **View Responses** as well.
-- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it.
+- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice:
+  - **Compact**: *Smaller type and tighter spacing. Keeps answers on fewer pages when possible.*
+  - **Expanded**: *Text answers print under the question. Other answers stay on the same line.*
+  Your layout choice is remembered in this browser. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
 
 When the form has reference submissions, the table also shows a **Reference For** column (the applicant, linked to their profile), and **Primary Email** shows the reference's invitation email.
 
@@ -269,6 +272,15 @@ Use the **Note** column on the responses table when you need a short staff-only 
 4. In the **Response note** dialog, enter the note, then click **Save**.
 
 Clearing the text and saving removes the note. Parents do not see these notes.
+
+## Print form responses
+
+Use the **Print** controls on the **Responses** tab (or the print icon on a profile / Staff Hub completed form) to generate a PDF. Choose **Layout** before you confirm:
+
+- **Compact**: smaller type and tighter spacing when you want fewer pages.
+- **Expanded**: text answers print under the question; other answers stay on the same line.
+
+Confirm bulk jobs with **Yes, Generate PDF**. Completion-notify PDFs stay compact and do not offer a layout choice.
 
 ## What families see when a form save fails
 
@@ -306,15 +318,22 @@ This is different from [Test Mode](/test-mode). Test Mode lets staff open the li
 
 The preview opens on the parent portal with a banner that says you are viewing a **PREVIEW** and that nothing is saved.
 
+- **Registration** forms: **You are viewing a PREVIEW - nothing is saved. Click Continue to review the Sessions selection page.** (The product wording matches your camp, for example **Sessions**.)
+- **Standard**, staff, and other non-registration forms: **You are viewing a PREVIEW - nothing is saved. Click Submit to see the thank you message.**
+
 ### Continue to the product selection preview
 
 On a registration form preview:
 
 1. Review the questions page.
-2. Click **Continue** (registration forms use **Continue**; other form types show **Submit** on this control).
+2. Click **Continue**.
 3. Campium opens the product selection preview so you can review that page too. Nothing is saved on either page.
 
 On the product selection preview, selections and the continue control stay review-only. Use the **Parent view** strip to see whether **Continue** would be closed or open for a parent, and why. Use the separate **Preview Sessions Selection Page** link from **Settings** if you only need that page.
+
+### Submit on a non-registration preview
+
+On a standard or staff form preview, the control is **Submit**. Clicking it shows the thank-you message on the page and hides the preview banner. Nothing is saved, and you do not go to a product selection page.
 
 ### Parent view on Questions and Cart Header previews
 

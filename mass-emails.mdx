@@ -293,6 +293,19 @@ What Template Library does:
   Use Template Library when you want to choose a template by how it looks. If you prefer, you can still pick from the **Insert Template** dropdown; both methods insert the same underlying template into your email.
 </Callout>
 
+### Save as template
+
+Opposite the **Email body** heading, click **Save as template** to store the current subject and body in your template library.
+
+1. Enter a **Template name** (prefilled from the subject) and optional **Category** (first option **No category**).
+2. Helper text: **Saves the subject and body as they are now. Recipients and send settings are not included.**
+3. Click **Save template**. Success toast: **Saved "..." to your templates.**
+4. If that name already exists, Campium asks you to try a different name.
+
+If you inserted one of your organization's templates (not a Campium system template), the next **Save as template** click asks **Choose how you want to save changes to "..."** with **Overwrite "..."**, **Save as new**, or **Cancel**. Overwrite toast: **Updated "..." in your templates.**
+
+See also [Email Templates](/email-templates#mass-emails).
+
 ### Show Default Header (optional)
 
 Toggle that controls whether your default invoice header appears at the top of the mass email. If you set this to **Yes**, Campium adds your default invoice header, including logo, above the email content so the message matches your official documents.
@@ -306,6 +319,19 @@ Use this when you want the email to look more formal or transactional, such as b
 ### Display Login Button? (optional)
 
 Toggle that controls whether a login button is added to the email. In the composer the checkbox label is **Display login button**. New mass emails default to **Yes** (including drafts started from group email). Turn it on when the message asks families to sign in and take action, such as completing a form or making a payment, so recipients get a clear button that takes them straight to their portal login. Turn it off when the message does not need a login button.
+
+### Account setup merge fields
+
+When someone has never signed in, you can email them a setup link from a mass email.
+
+In the composer, use **Insert merge field** (or **Merge Fields**) and choose:
+
+- **Account Setup URL**: inserts `{magic_login_url}` (the bare setup link; the token is attached when the email sends)
+- **Account Setup Link**: inserts `{magic_login}` (the words **Set up your account** plus a copy-paste URL)
+
+These merge fields are available on mass emails. They are not on **Admin → Email Templates**. Recipients open the link on **Set up your account**, create a password (or continue with Google or Apple), and are signed into the portal when they finish. Setup links from welcome-style sends stop working after 14 days; the expired page lets them request a new one.
+
+You can also send a one-off setup email from a profile. See [Profiles](/profiles#send-an-account-setup-link).
 
 ### Also send to campers (optional)
 

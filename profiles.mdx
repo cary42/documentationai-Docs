@@ -291,6 +291,8 @@ When the camper **Group** profile field is in Quick View, its value is a link (o
 - Change the person's group when you have edit access, then **Save**
 - Review **History**: the group recorded in each past season snapshot for that person
 
+On a **camper** Quick View only, the field picker also offers guardian fields labeled **Guardian 1** and **Guardian 2** plus the field name (for example **Guardian 1 Email** and **Guardian 2 Email**). You can add both. Staff Quick View layouts do not include those guardian keys. Family-scoped fields stay labeled **Family** plus the field name.
+
 Use My Quick View when you need to see common reference information quickly, such as grade, group, key medical flags, or other custom fields your camp has highlighted for that user type.
 
 <Steps>
@@ -330,6 +332,21 @@ Use this card when a family asks why they are (or are not) receiving welcome ema
 </Callout>
 
 ## Help someone change or reset their password
+
+### Send an account setup link
+
+Use this when the person has **never signed in** and needs to create a password (or continue with Google or Apple) for the first time.
+
+1. Open their profile. Confirm they have an email on file.
+2. Click **Send setup link** in the profile header (tooltip: **Temporary: emails a magic setup link because they have never signed in**), or choose **Send account setup link** from **Actions**.
+3. Confirm: **Send an account setup email with a link to create a password or continue with Google/Apple?** then **Send**.
+4. Success: **Setup link sent to** their email. Subject: **Set up your account**.
+
+They open **Set up your account**, create a password (or use **Google** / **Apple**), agree to the Terms of Service and EULA, and are signed into the portal when they finish. Setup links stop working after 14 days. The expired page (**This setup link has expired**) lets them enter their email and **Send a new setup link**.
+
+This control is hidden when they have already signed in, when there is no usable email, or when **Send initial account email** is showing for new staff. You need family/profile action access. For people who already have an account but forgot their password, use **Send Password Reset Email** instead (24-hour link).
+
+You can also put setup links in a mass email with the **Account Setup URL** and **Account Setup Link** merge fields. See [Mass Emails](/mass-emails#account-setup-merge-fields).
 
 ### Send a password reset email
 
