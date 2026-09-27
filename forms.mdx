@@ -210,6 +210,7 @@ The **Questions** tab controls the structured prompts users see when they comple
 - Lets you add, edit, and order questions that collect the data you need.
 - Supports different question types depending on your Campium configuration, such as text fields, choices, or other input types.
 - Toolbar: **New Question**, **Add from Library**, **Add Section Header**, **Preview Form**.
+- Each row starts with a drag grip (**Drag to reorder**), then the question number, then an **Actions** menu (vertical dots) with **Edit**, **Move to position**, and **Delete**. The question text is also a clickable **Edit** link.
 
 For **Upload a File** forms, Campium hides the **Questions** tab. In those forms, the primary interaction is file upload rather than answering questions.
 
@@ -217,11 +218,11 @@ On the parent portal, file uploads show helper text **JPG, PNG, or PDF · up to 
 
 #### Move a question to a position
 
-Drag-and-drop still works. You can also jump a question by number:
+Drag the grip to reorder, or jump a question by number:
 
 1. Open **Forms**, open the form, then open the **Questions** tab.
 2. Clear the table search box if you used it. Moving or reordering while filtered fails with: **Clear the search box first, so every question shows in the list you are moving within.** (or the matching message when saving order).
-3. Open the row menu and choose **Move to position**.
+3. Open the row **Actions** menu and choose **Move to position**.
 4. In **Move Question**, set **Position** (the number this question should have) and/or **Or place it after** (**Place it after** for section headers). Use **Top of the form** to put it first.
 5. Click **Move**.
 
@@ -254,7 +255,7 @@ On the responses table:
 - Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice:
   - **Compact**: *Smaller type and tighter spacing. Keeps answers on fewer pages when possible.*
   - **Expanded**: *Text answers print under the question. Other answers stay on the same line.*
-  Your layout choice is remembered in this browser. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
+  Your layout choice is saved for you as an admin (it follows you across browsers). Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
 
 When the form has reference submissions, the table also shows a **Reference For** column (the applicant, linked to their profile), and **Primary Email** shows the reference's invitation email.
 
@@ -280,7 +281,11 @@ Use the **Print** controls on the **Responses** tab (or the print icon on a prof
 - **Compact**: smaller type and tighter spacing when you want fewer pages.
 - **Expanded**: text answers print under the question; other answers stay on the same line.
 
-Confirm bulk jobs with **Yes, Generate PDF**. Completion-notify PDFs stay compact and do not offer a layout choice.
+Your choice is saved for you as an admin and is used the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
+
+You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
+
+When a form completion email attaches a PDF, each staff recipient gets the layout they last chose in the admin portal.
 
 ## What families see when a form save fails
 

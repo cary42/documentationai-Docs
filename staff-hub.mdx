@@ -2,8 +2,9 @@
 title: Staff Hub
 description: >-
   Use Staff Hub as your operations dashboard to track staff application
-  progress, application status, and contracts season by season, and to send
-  contracts to one person or several without leaving the page.
+  progress, filter by profile fields, application status, and contracts season
+  by season, and to send contracts to one person or several without leaving the
+  page.
 ---
 ## What Staff Hub is for
 
@@ -17,7 +18,7 @@ Staff Hub does not replace building or reviewing the staff application itself. U
 
 ## Open Staff Hub
 
-Staff Hub is available from the admin area at **Staff Hub**. You need admin access to open it.
+Staff Hub is available from **Admin → Staff Hub**. You need the **Staff Hub** permission (under the **Admin** category). Administrators get it by default.
 
 When it loads, you see a **Season** filter, five summary metrics, and a roster table of staff for the seasons in the filter.
 
@@ -47,11 +48,24 @@ Above the roster, five tiles summarize the current season filter:
   - **Signed This Week** — contracts signed in the last seven days.
 </Card>
 
-Tile **counts** always reflect the full season filter (name search does not change them). Click a tile to filter the roster to that group. Helper text under the tiles says **Click a tile above to filter this list.** Click the same tile again to show everyone. When a tile filter is on, the note explains who you are seeing (for example **Showing N staff who have completed a form and have no contract yet. Click the tile again to show everyone.**). Your tile choice is remembered in this browser.
+Tile **counts** always reflect the full season filter until you apply a profile-field filter (below). Name search alone does not change the tiles. Click a tile to filter the roster to that group. Helper text under the tiles says **Click a tile above to filter this list.** Click the same tile again to show everyone. When a tile filter is on, the note explains who you are seeing (for example **Showing N staff who have completed a form and have no contract yet. Click the tile again to show everyone.**). Your tile choice is remembered in this browser.
+
+## Filter by profile fields
+
+Use **Filters** (in the bar above the table) to narrow the roster by staff profile answers. The panel title is **Filter staff by profile fields**. Helper text: **Changes apply as you make them. Every filter must match.**
+
+1. Click **Filters**.
+2. In a row, **Pick a field**, choose an operator, then enter or pick a value.
+3. Matching rows stay visible; others hide in place. Tile counts recount from the match set. Status shows **Updating...** while the filter applies.
+4. **Add filter** for more rows (every complete row must match). **Clear all** removes every row and chip.
+
+Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators match the Camper Hub filter (for example **is**, **contains any**, **contains**, **is on or after**, **is empty**). Up to 20 rows. Role-hidden fields are not offered.
+
+**Save as...** / **Saved filters** / **Delete** work the same as on Camper Hub: named filters are shared with everyone at your camp who uses Staff Hub, and your last-used filter is restored when you return.
 
 ## Export the roster
 
-Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports the staff currently shown after your filters. Tooltip: **Exports the staff shown, after your filters**.
+Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports the staff currently shown after your filters (including profile-field filters). Tooltip: **Exports the staff shown, after your filters**.
 
 ## Work the roster table
 
