@@ -47,7 +47,7 @@ The main Profile Fields screen gives you a high-level view of every field and ho
 | **Field Type**    | Text, Date, Choose One, Choose Many, Ranked Choice, or Link to a User     |
 | **Health report** | A checkmark if the field appears on health reports                       |
 | **Description**   | An internal note about the field - not seen by families                  |
-| **Status**        | Whether the field is Active or Inactive                                  |
+| **Status**        | Whether the field is Active or Inactive. The info icon explains: **Inactive hides the field from profiles and reports in every season. Answers are kept, so setting it back to Active restores them.** |
 
 Each row also includes a dropdown menu (⋮) with actions for that field. Not every action appears on every row — visibility depends on the field type and whether it is a system field.
 
@@ -174,38 +174,38 @@ On the parent portal and registration forms, families see one dropdown per rank 
 
 ## Manage options for choice fields
 
-Choose One, Choose Many, and Ranked Choice fields depend on an option list. After creating the field, open **Options** from the row menu to define the choices people can select.
+Choose One, Choose Many, and Ranked Choice fields depend on an option list. After creating the field, open **Options** from the row menu to open the **Edit Options** dialog.
 
-### What you can do in Options
+### What you can do in Edit Options
 
-- **Add options** by entering a value and pressing Enter after each one
+- **Add an option**: type a label and press Enter or click **Add**. Helper text: **Press Enter to add. Each option saves right away.** Click **Done** when you are finished (Done also adds any text still in the box, then closes).
 
-- **Reorder options** by dragging them into the order you want
+- **Reorder options** by dragging the grip (**Drag to reorder**). On a touch screen, press and hold briefly on the grip, then drag.
 
-- **Sort options** alphabetically or numerically with the available sort tools
+- **Sort options** with **A to Z** or **By number (0 to 9)**.
 
-- **Edit options** when a label needs to change
+- **Edit** an option from its ⋮ menu when a label needs to change.
 
-- **Hide from parent portal** / **Show on parent portal** from the option's ⋮ menu, so families no longer see a choice (or see it again) without deleting it
+- **Hide option** / **Show option** from the ⋮ menu, so the choice stops (or starts again) appearing on the parent portal and in admin without deleting it.
 
-- **Merge options** when two choices should become one
+- **Merge** selected options when two or more choices should become one. Check at least two options; the selection line reads **Select options to merge**, then **1 selected, pick one more**, then **N selected**. Merge combines them into the first checked option. Confirm with **Yes, merge**.
 
-- **Delete options** that you no longer need
+- **Delete** options that you no longer need.
 
-Campium shows a badge count for each option so you can see how many records currently use it. That count helps you judge the impact before editing, merging, or deleting an option.
+Each option shows how many people in the selected season have that answer (**No answers**, **1 person**, or **N people**; tooltip starts with **People in** and the season name). Use **Answers in** at the top of the list to switch between the current season and a ready season snapshot when snapshots exist.
 
 ### Hide an option from profile dropdowns
 
 Use this when a choice should stop appearing on the parent portal, registration forms, and admin profile pickers, but you still need the option on the Options list for history.
 
-1. Open **Options** for the field.
-2. Open the option's ⋮ menu and select **Hide from parent portal**.
-3. Confirm with **Yes, Hide it**. Campium explains that existing answers are kept; parents see a blank field and need to pick another option if the question is required.
-4. The option stays in your Options list with an **Inactive** badge.
+1. Open **Options** for the field (modal title **Edit Options**).
+2. Open the option's ⋮ menu and select **Hide option**.
+3. Confirm with **Yes, hide it**. Campium explains that the option will no longer be offered on the parent portal or in admin, and that answers people already gave are kept.
+4. The option stays in your Options list with a **Hidden** badge.
 
-Hidden options no longer appear in admin profile dropdowns either (including when someone already had that answer selected). The next time that profile is saved, the hidden answer is cleared, so pick a current option first if you still need a value. The Options list itself still shows the choice with **Inactive**.
+Hidden options no longer appear in admin profile dropdowns either (including when someone already had that answer selected). The next time that profile is saved, the hidden answer is cleared, so pick a current option first if you still need a value. The Options list itself still shows the choice with **Hidden**.
 
-To bring it back, open the same menu and select **Show on parent portal**, then confirm with **Yes, Show it**.
+To bring it back, open the same menu and select **Show option**, then confirm with **Yes, show it**.
 
 This is separate from setting the whole field to **Active** or **Inactive**.
 
@@ -217,7 +217,7 @@ This is separate from setting the whole field to **Active** or **Inactive**.
 
 Use **Edit** from the row menu to update an existing field's settings. You can rename the field, change user types, adjust size, update question text, change formatting, toggle the health report setting, and revise role access.
 
-You can also change the field status between **Active** and **Inactive**. Inactive fields are hidden from normal use, but Campium keeps the existing answers.
+You can also change the field status between **Active** and **Inactive**. The **Status** column header has an info icon with the same explanation as in the table above. Inactive fields are hidden from profiles and reports in every season, but Campium keeps the existing answers so setting the field back to Active restores them.
 
 ### Active vs. inactive
 

@@ -1,8 +1,9 @@
 ---
 title: Camper Hub
 description: >-
-  Track enrolled campers by season, filter who still needs forms, send guardian
-  reminders, and update form status and profile fields from one admin roster.
+  Track enrolled campers by season, filter by forms or profile fields, send
+  guardian reminders, and update form status and profile fields from one admin
+  roster.
 ---
 
 ## What Camper Hub is for
@@ -14,7 +15,7 @@ Use Camper Hub when you want to see who still needs forms, email guardians a rem
 Camper Hub is the camper-side counterpart to [Staff Hub](/staff-hub). Staff Hub tracks people who started a staff application. Camper Hub tracks campers who already have an active enrollment for a season.
 
 <Callout kind="info" collapsed="false">
-  Only users with the **Administrator** role can open Camper Hub. It appears under **Admin → Camper Hub** (the menu item may show a **New** badge).
+  You need the **Camper Hub** permission (under the **Admin** category) to open this page. Administrators get it by default. It appears under **Admin → Camper Hub** (the menu item may show a **New** badge).
 </Callout>
 
 ## Open Camper Hub
@@ -46,13 +47,26 @@ Above the roster, four tiles summarize the current season filter:
   - **No Forms Started**: enrollment rows where the camper has not started any of the counted forms. This tile is informational only (not a filter control).
 </Card>
 
-The tile totals always reflect the full season filter. Searching the roster by name narrows the table below, but the tile numbers stay put.
+The tile totals always reflect the full season filter. Searching the roster by name narrows the table below, but the tile numbers stay put. Profile-field filters (below) rebuild the roster and the tile totals together.
 
 When a completion filter is active, a short note under the tiles explains what the roster is showing (for example **Showing only those missing at least one required form. Click the tile again to show everyone.**). When nothing is filtered, the note says **Click a tile above to filter this list.**
 
+## Filter by profile fields
+
+Use **Filters** (next to **Search campers**) to narrow the roster by profile answers. The panel title is **Filter campers by profile fields**. Helper text: **Changes apply as you make them. Every filter must match. A Guardian 1 or Guardian 2 field matches campers whose guardian has that answer.**
+
+1. Click **Filters**.
+2. In a row, **Pick a field**, choose an operator, then enter or pick a value (**Pick one or more**, **Type to filter**, or a date).
+3. The roster updates on its own (status shows **Updating...**). Add more rows with **Add filter**. Every complete row must match (AND). Incomplete rows are ignored until you finish them.
+4. Remove one row with the trash control, remove one chip with **×** when the panel is closed, or click **Clear all**.
+
+Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators depend on the type (for example **is**, **contains any**, **contains all**, **contains**, **is on or after**, **is empty**). You can add up to 20 filter rows. Role-hidden fields do not appear in the picker.
+
+**Save as...** stores a named filter that everyone at your camp who uses Camper Hub can load from **Saved filters**. Re-using an existing name replaces that filter. **Delete** removes a named one. Your last-used filter is restored the next time you open the page.
+
 ## Export the roster
 
-Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports every camper in the current filter, not just the page you are viewing. Tooltip: **Exports every camper in the current filter, not just this page**.
+Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports every camper in the current filter (season, tiles, and profile-field filters), not just the page you are viewing. Tooltip: **Exports every camper in the current filter, not just this page**.
 
 ## Work the roster table
 
