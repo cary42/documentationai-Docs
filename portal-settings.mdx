@@ -44,9 +44,9 @@ The favicon is the small icon shown in the browser tab and on the iOS home scree
 
 ## Login user types
 
-The login user types card controls which user types appear in the "I am" dropdown on your parent portal sign-in and registration screens. For example, you might show "Parent" and "Staff" but hide types that do not register through the portal.
+The login user types card controls which user types appear under **I am a** when someone opens **Create account** on your parent portal. For example, you might show Parent and Staff but hide types that do not register through the portal.
 
-A **live preview** on the right shows the registration dropdown exactly as families see it, and updates as you make changes.
+A **live preview** on the right shows how those types look in the registration chooser and updates as you make changes. On the live portal login page, types appear as selectable chips rather than a classic dropdown.
 
 <Callout kind="info" collapsed="false">
   At least one user type must be shown. You cannot save with every type turned off, because families would have nothing to select at registration.
@@ -60,24 +60,24 @@ A **live preview** on the right shows the registration dropdown exactly as famil
   </Step>
 
   <Step title="Set a login label" icon="edit" title-type="p">
-    In the **Login label** field, enter the wording families should see in the dropdown for that type. Leave it blank to use the user type's own name. This lets you show friendlier wording without renaming the underlying type.
+    In the **Login label** field, enter the wording families should see for that type. Leave it blank to use the user type's own name. This lets you show friendlier wording without renaming the underlying type.
   </Step>
 
   <Step title="Set the display order" icon="filter" title-type="p">
-    In the **Order** column, enter a number to control where the type appears in the dropdown. Lower numbers appear first. Use this to put the most common choice at the top.
+    In the **Order** column, enter a number to control where the type appears. Lower numbers appear first. Use this to put the most common choice at the top.
   </Step>
 
   <Step title="Check the live preview" icon="monitor" title-type="p">
-    Watch the **Live preview** panel. Open the preview dropdown to confirm the labels and order match what you want families to see.
+    Watch the **Live preview** panel and confirm the labels and order match what you want families to see.
   </Step>
 
   <Step title="Save your changes" icon="check-circle" title-type="p">
-    Click **Save**. Your choices apply to the parent portal login and registration screens.
+    Click **Save**. Your choices apply to the parent portal **Create account** flow.
   </Step>
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Only show the user types that actually register or sign in through the portal. A shorter, clearer dropdown reduces confusion and mis-registrations.
+  Only show the user types that actually register or sign in through the portal. A shorter, clearer list reduces confusion and mis-registrations.
 </Callout>
 
 ## Fields in the login user types table
@@ -91,11 +91,11 @@ A **live preview** on the right shows the registration dropdown exactly as famil
 </ParamField>
 
 <ParamField body="Login label" param-type="text" required="false" deprecated="false">
-  Optional wording shown in the registration dropdown for this type. Leave blank to use the User Type name.
+  Optional wording shown for this type under **I am a** on **Create account**. Leave blank to use the User Type name.
 </ParamField>
 
 <ParamField body="Order" param-type="number" required="false" deprecated="false">
-  The position of this type in the dropdown. Lower numbers appear first.
+  The position of this type in the list. Lower numbers appear first.
 </ParamField>
 
 ## Related pages

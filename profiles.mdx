@@ -91,7 +91,7 @@ The header gives you a quick snapshot of who you are looking at:
 
 - **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly. Next to the primary email (or alone when there is no email yet), use **Manage emails** to add or edit addresses on the account.
 
-- **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, an **Edit** control opens a dialog titled with that person's name where you can update **First name**, **Last name**, **Email**, and phone, then **Save**. You need permission to edit profiles, and you can only edit members of the same family.
+- **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, the pencil control (**Edit name, email, and phone**) opens **Edit contact**, where you update **First name**, **Last name**, **Email**, and phone, then **Save**. A short **Saved.** toast confirms the change, and the family-row email (and this profile's primary email when it matches) refresh in place. You need permission to edit profiles, and you can only edit members of the same family.
 
 - **Profile photo**: Lets you upload, crop, rotate, or delete a profile photo so staff can recognize the person easily.
 
@@ -295,6 +295,16 @@ On a **camper** Quick View only, the field picker also offers guardian fields la
 
 Use My Quick View when you need to see common reference information quickly, such as grade, group, key medical flags, or other custom fields your camp has highlighted for that user type.
 
+### Edit a Quick View value in place
+
+When you have permission to edit the person and that field, click a blue value in **My Quick View** (or in the hover mini-profile) to change it without leaving the page. Empty values show **None set**.
+
+1. Click the blue value to open the inline editor for that field.
+2. Change the text, date, yes/no, choose-one, choose-many, or ranked-choice answer. Multi-select fields use **Select options**.
+3. Click **Save**. A short **Saved.** toast confirms the change. Escape cancels; Enter saves on single-line fields. Leaving the field without **Save** does not keep the change.
+
+You cannot edit signature fields, link-to-a-user fields, or the special **Weeks** / **Group** editors from this inline control. Those keep their own links and modals. If you lack edit access for a field, Campium shows a warning instead of saving.
+
 <Steps>
   <Step title="Find the My Quick View card on the profile" icon="search" title-type="p">
     Open the person’s profile and look near the top of the main content area for the card titled **My Quick View**. Review the current list of fields to confirm what is already included in the summary.
@@ -312,6 +322,14 @@ Use My Quick View when you need to see common reference information quickly, suc
 <Callout kind="info" collapsed="false">
   The My Quick View card only appears when at least one field is configured for that user type. Your permissions may also limit whether you can open the layout editor or change which fields appear in Quick View.
 </Callout>
+
+### Session Calendar on a camper profile
+
+On a camper profile, click **Calendar** to open **Session Calendar** (title includes the person's name when available). The calendar shows enrolled sessions with their run dates and daily start and end times.
+
+When the **Special Weeks** module is on and your season has dated week options, attending weeks also appear as their own calendar blocks (week name, season, and date range). Without Special Weeks, you still see enrolled session products only. **Print** and **Close** are available on the modal. Empty state: **No scheduled sessions found for this person.**
+
+See [Special Weeks](/special-weeks#session-calendar-on-a-camper-profile).
 
 ## Welcome Sequence
 
@@ -457,6 +475,8 @@ Each tab focuses on a different part of the person’s record. Use these section
     - When ready season snapshots exist for this person, use the **Season snapshot** menu (default **Current data**) to compare side by side. The right column shows the snapshot values; a **Changed** badge marks fields that differ. User-link fields that were never stored in snapshots show **Not saved in snapshots**. Blank snapshot cells mean that field was not answered when the snapshot was taken.
 
     Fields on this tab often update as soon as you change them, without needing to click a separate save button.
+
+    Profile fields from your field library stay visible here based on hide settings and user type, not on an old year stamp. If a field used to disappear from All User Data after you provisioned it from the library, it should appear again after the next refresh.
 
     You need permission to view the custom profile tab. The snapshot menu appears only when at least one **Snapshot ready** season captured this person. Snapshots are created when you deactivate a season with **Take a snapshot of the profile data** checked. See [Manage Seasons](/manage-seasons#use-profile-data-snapshots-for-historical-reporting).
   </Tab>

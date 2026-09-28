@@ -1,6 +1,6 @@
 ---
 title: "Medications & health"
-description: "Record a camper's medications, dispense and log doses, manage medication seasons, and print single or bulk health reports."
+description: "Record a camper's medications, dispense prescribed and OTC doses, manage medication seasons, and print single or bulk health reports."
 ---
 
 The medication and health tools let you keep each camper's (or staff member's)
@@ -13,9 +13,10 @@ ready before opening day.
 
 | Where | Who uses it | What they do |
 |-------|-------------|--------------|
-| **Profile → Health tab** (admin) | Camp staff, health office | Add/edit medications, dispense a dose, view the dispense history, download a health report |
+| **Profile → Health tab** (admin) | Camp staff, health office | Add/edit prescribed medications, dispense a dose, view the dispense history, download a health report |
+| **Medical → Medications** (admin) | Health office | Dispense over-the-counter (OTC) doses for a camper or staff member, and dispense prescribed meds from the report |
 | **Parent portal → Medications** (`/medication/`) | Families | Add/edit their camper's medications for a season, carry meds forward, certify the list |
-| **Medication Log report** (admin) | Health office | See every dose recorded across camp |
+| **Medical → Medication Log** (admin) | Health office | See every prescribed and OTC dose recorded across camp |
 | **Combined Health Reports** (admin) | Health office | Print one PDF of health reports for everyone in a season |
 
 <Callout type="info">
@@ -186,8 +187,12 @@ a med does **not** clear it.
 
 ## Dispensing and the medication log
 
-When a dose is actually handed to a camper, staff record it from the Health tab.
-This builds a running **medication log** — a legal record of every dose given.
+When a dose is actually handed out, staff record it so you keep a running
+**medication log** of every dose given. Prescribed medications use **Dispense**
+on the profile **Health** tab (and on **Medical → Medications**). Over-the-counter
+doses use **Dispense OTC** on **Medical → Medications**.
+
+### Dispense a prescribed medication
 
 <Steps>
   <Step title="Click Dispense">
@@ -213,12 +218,61 @@ Dispense records store the medication name, dosage, and notes encrypted at rest,
 since they are protected health information.
 </Callout>
 
+### Dispense an over-the-counter (OTC) medication
+
+Use **Dispense OTC** when you give a medication that is not on the camper's
+prescribed list (for example acetaminophen for a headache). You need the
+**Medication Module** on, plus the **Medication** permission that also unlocks
+the profile **Health** tab.
+
+#### Set up parent-approved OTC options (recommended)
+
+1. Go to **Admin → Profile Fields**.
+2. Add or edit a multi-select (**Choose Many**) field whose name includes **OTC**
+   (or whose question includes "over-the-counter"). A common library label is
+   **OTC Medications Approved**.
+3. Add the medications you offer as options on that field.
+4. Families (or staff) mark which options are approved for that person.
+
+If no matching OTC field exists, staff can still type a medication name when
+dispensing.
+
+#### Record an OTC dose
+
+<Steps>
+  <Step title="Open Medical → Medications">
+    In the left navigation, open **Medical → Medications**. Click **Dispense OTC**
+    in the page header.
+  </Step>
+  <Step title="Choose who is receiving it">
+    Under **Who are you giving it to?**, search by name (at least two letters) and
+    pick a camper or staff member. Staff results show **(Staff)** after the name.
+    Use **Change person** if you need to pick someone else without closing the
+    dialog.
+  </Step>
+  <Step title="Enter the dose">
+    Choose **Medication** (grouped as **Approved by parent** and **Not approved by
+    parent** when an OTC field exists), enter **Dose** and **Reason**, and
+    optionally set **Given at** and **Notes**. Campium warns when the person has
+    had other OTC doses in the last four hours, and when the medication is not on
+    their approved list.
+  </Step>
+  <Step title="Optionally notify guardians">
+    For campers, check **Email the guardians** and/or **Text the guardians**.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The dose appears under **Recent OTC doses** in the dialog and
+    on **Medical → Medication Log** with **Type** **OTC**.
+  </Step>
+</Steps>
+
 ### The Medication Log report
 
 **Medical → Medication Log** lists every recorded dose across camp for the
-selected season, with columns for the camper, medication, dosage, date and time,
-whether guardians were notified, the notes, and who recorded it. Use it for
-end-of-day reconciliation or an audit of what was given.
+selected season, with columns for the person, medication, dosage, date and time,
+type (**Prescribed** or **OTC**), whether guardians were notified, the notes, and
+who recorded it. Use it for end-of-day reconciliation or an audit of what was
+given. On a profile **View Log**, OTC rows show **(OTC)** next to the name.
 
 ## Health reports
 
@@ -296,7 +350,8 @@ report, so the two always match.
 
 | Capability | What's required |
 |------------|-----------------|
-| See the profile Health tab, add/dispense meds, download a health report | **Medical information** permission (and the **Medication module** enabled) |
+| See the profile Health tab, add/dispense prescribed meds, download a health report | **Medical information** permission (and the **Medication module** enabled) |
+| **Dispense OTC** on **Medical → Medications** | **Medication Module**, plus the same medication permission used for the Health tab |
 | Configure the medication season and **When** options | **Medical Settings** (module enabled) |
 | Run **Combined Health Reports** | **Reports** **and** **Medical information** permissions |
 | Add/edit meds and certify the list from the portal | The family, on any open (active) season |
