@@ -10,6 +10,51 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-09-28" description="OTC dispense, hub filters, Family and Linked Fields, Retention card, pickup blocks" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Dispense OTC** - On **Medical → Medications**, record over-the-counter doses for a camper or staff member, optionally from a parent-approved OTC profile field. See [Medications & Health](/medications#dispense-an-over-the-counter-otc-medication).
+  - **Retention card** - Dashboard **Retention** with **Configure retention**, **Retained** / **Lost**, and (when finance is on) average sale. Needs the **Retention card on the dashboard** permission and at least two seasons. See [Chart Reports](/system-report-charts#retention-dashboard-card).
+  - **Family fields** - On **Admin → Profile Fields**, set **This field will be used for** to **Family** so the household shares one answer. See [Profile Fields](/profile-fields#family-fields).
+  - **Linked Fields** - Link two **Choose One** dropdowns so picking one fills the other. See [Profile Fields](/profile-fields#linked-fields).
+  - **Block a guardian from pickup** - On **More → Pickup Info**, set **Can pick up** to **Allowed** or **Not allowed** with a staff-only **Reason**. Pickup Report adds **Blocked guardians**. Needs **Pickup Module**. See [Attendance](/attendance#block-a-guardian-from-picking-up-a-camper) and [Pickup Report](/pickup-report#blocked-guardians).
+  - **Hub Filters** - On **Camper Hub** and **Staff Hub**, **Filters** apply as you edit, combine with AND, and support **Save as...** / **Saved filters**. See [Camper Hub](/camper-hub#filter-by-profile-fields) and [Staff Hub](/staff-hub#filter-by-profile-fields).
+  - **Account setup links** - **Send setup link** / **Send account setup link** on a profile, plus **Account Setup URL** / **Account Setup Link** in mass emails. See [Profiles](/profiles#send-an-account-setup-link) and [Mass Emails](/mass-emails#account-setup-merge-fields).
+
+  ## Updates
+
+  - **Portal login** - One card with **Sign in** and **Create account** tabs, plus **Continue with Google** / **Continue with Apple**. See [Authentication](/authentication#portal-login-sign-in-and-create-account).
+  - **My Quick View inline edit** - Click a blue value, change it, and **Save** with a **Saved.** toast. **Edit contact** on family members uses the same toast. See [Profiles](/profiles#edit-a-quick-view-value-in-place).
+  - **Session Calendar weeks** - With **Special Weeks** on, a camper **Calendar** includes attending week blocks. See [Special Weeks](/special-weeks#session-calendar-on-a-camper-profile).
+  - **Mass Emails Insert button** - Place a styled link button in the body; **AI Rewrite** sits in the toolbar. See [Mass Emails](/mass-emails#insert-button).
+  - **People → All People** - Season filter, **Display Columns**, snapshot note, **Export CSV**. See [Profiles](/profiles#browse-all-people).
+  - **Bunk Assignments** - Season-scoped board, section and session group **Email**, auto-save on **Bunk Settings**. See [Bunk Assignments](/bunk-assignments).
+  - **Pickup Reason and history** - Staff-only reason, **Pickup changes**, parent **Allowed** / **Not allowed for pickup**. See [Attendance](/attendance#pickup-privileges).
+  - **Forms Questions and print** - **Move to position**, **Field Size**, drag grip and **Actions**, PDF **Layout** (remembered per admin), dashboard **Quick Access Forms → Print**. See [Forms](/forms#questions-tab-conditional).
+  - **Staff Hub / Camper Hub** - KPI tiles filter the roster, export toolbar, form and contract **Print**. See [Staff Hub](/staff-hub) and [Camper Hub](/camper-hub#export-the-roster).
+  - **Contracts** - Template **Name** / **Usage** open instances, **Print**, search, paging. See [Contracts](/contracts#open-instances-for-a-template).
+  - **Payment Methods on File** - Primary row, **Show N more**, **Change primary**, **Remove**. See [Profiles](/profiles#header-area).
+  - **No Primary Payment Method** - **Send Email** / **Preview Email**, progress, and retry. See [Families Without a Primary Payment Method](/system-report-families-without-primary-payment-method).
+  - **Transfer / Zero Out** - Per-family **Transfer**, export toolbar on both, **Ready to zero out** sorts by credit. See [Transfer Season Balances](/transfer-season-balances#one-family).
+  - **Profile Fields Edit Options** - **Add** / **Done**, **Answers in**, **Hide option** / **Show option**. Hidden options leave admin pickers. See [Profile Fields](/profile-fields#manage-options-for-choice-fields).
+  - **Current Enrollments** - One attending week per line. See [Special Weeks](/special-weeks#what-families-see-under-current-enrollments).
+  - **Manage Emails** - **Remove** primary, **Set Primary** on additional addresses. See [Managing Multiple Email Addresses](/managing-multiple-email-addresses).
+  - **Mass Emails Save as template** - Overwrite or save as new; new emails default **Display login button** to Yes. See [Mass Emails](/mass-emails#save-as-template).
+  - **Merchant ID** - On **Admin → Business Info & Logo** for Finix / USIO. See [Business Info & Logo](/business-info-and-logo).
+  - **Processing Volume Seasons** - Includes inactive seasons; empty means all seasons. See [Processing Volume](/processing-volume#filters).
+  - **Option Description** - Shows on the portal and invoices. See [Subproducts](/subproducts).
+  - **Quick View Guardian 1 / Guardian 2** fields on camper layouts. See [Profiles](/profiles#quick-view).
+
+  ## Fixes
+
+  - **Campium billing nags** - With a Campium Payabli payment method on file, trial and renewal banners and trial-ending emails stay off. See [Billing](/billing).
+  - **Season lists** - Season pickers sort newest first by end date. See [Manage Seasons](/manage-seasons).
+  - **Reference form save** - A reference can submit from the invite without a portal login. See [References](/references#what-the-reference-sees).
+  - **Grade Display Columns** - Choosing **Grade** on Session Enrollee no longer doubles cells or shifts **Balance**. See [Session Enrollee](/product-user).
+  - **Parent calendar weekends** - Mon-Fri Special Weeks no longer paint Saturday. See [Special Weeks](/special-weeks).
+  - **All User Data library fields** - Fields from the profile field library are no longer hidden by an old year stamp. See [Profiles](/profiles#tabs-and-sections).
+</Update>
+
 <Update label="2026-09-21" description="Staff Hub bulk contracts, Aging columns, bunk sections, sibling tiers, contracts signing" tags={["feature","improvement","bugfix"]}>
   ## New
 

@@ -13,7 +13,20 @@ Authentication in Campium controls how users access accounts and how passwords a
   Password reset links expire after 24 hours and work only once. On the portal, families change their primary login email only from **Change Email** (not by editing it on **My Profile**). Stronger, application-specific password rules apply across all flows, and Google and Apple sign-in are available on the login page.
 </Callout>
 
-Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The login page also supports OAuth-based sign-in with Google and Apple alongside standard email and password. Client-side checks give real-time feedback, and server-side validation always runs before saving a password, so users cannot bypass the rules.
+Campium now validates password strength on both the client and server and provides inline guidance as users reset or change their passwords. The portal login page uses one card with **Sign in** and **Create account** tabs (when new registrations are allowed), plus Google and Apple sign-in. Client-side checks give real-time feedback, and server-side validation always runs before saving a password, so users cannot bypass the rules.
+
+## Portal login: Sign in and Create account
+
+On your parent portal login page, families use a single card:
+
+- **Sign in** - **Email**, **Password**, **Forgot password?**, then **Sign in**.
+- **Create account** - Shown when **Allow New Registrations** is on under **Admin → Site Settings → Modules**. Fields include **Your first name**, **Last name**, **Email**, **Create a password**, account-type chips under **I am a**, and agreement to the Terms of Service and EULA, then **Create account**.
+
+Below both forms, **Continue with Google** and **Continue with Apple** appear once for the whole card. Deep links such as `#create` or a staff registration URL open the **Create account** tab. When new registrations are off, the page shows **Sign in** only (no tabs).
+
+Password helper text on create: **At least 8 characters, with an uppercase letter, a lowercase letter, a number and a symbol. Tap the eye to check what you typed.**
+
+See also [Portal Settings](/portal-settings#login-user-types) for which account types appear under **I am a**, and [Staff](/staff) for sending applicants to a staff registration link.
 
 ## Password strength rules
 
@@ -73,7 +86,7 @@ Password reset links are single-use and stop working after 24 hours. After someo
   <Step title="Start the reset flow" icon="lock" title-type="p">
     - Ask the user to open the appropriate Campium login page (campiumdb.com for admins or the portal for families and staff).
 
-    - On campiumdb.com, select **Forgot password?**. On the portal, select **Lost Password?** (some portal layouts show **Forgot Password?**).
+    - On campiumdb.com, select **Forgot password?**. On the portal, select **Forgot password?** (some older layouts showed **Lost Password?**).
 
     - They should enter the email address associated with their Campium account and submit the form.
   </Step>
@@ -240,7 +253,7 @@ Campium supports OAuth-based sign-in with Google and Apple in addition to email 
 
 ### High-level OAuth flow
 
-When a user selects **Sign in with Google** or **Sign in with Apple**:
+When a user selects **Continue with Google** or **Continue with Apple**:
 
 1. Campium redirects or opens a popup to the provider's sign-in page.
 
