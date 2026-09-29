@@ -71,7 +71,7 @@ Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Ema
 
 Each staff member is one row. From left to right, the roster shows:
 
-- **Application status** — the main status of where the person is in your process (for example, applied, interviewing, hired). This comes from the staff profile field named **Application Status**. When the field is set up as a dropdown, you can change the status right in the table and it saves immediately.
+- **Application status** — the main status of where the person is in your process (for example, applied, interviewing, hired). This comes from the staff profile field named **Application Status**. When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. After a season's profile snapshot finishes (**Snapshot ready** on **Seasons**), Campium clears that season's Application status for staff on that season's roster (people still on another active season's roster keep their status). Returning staff start the next hiring cycle blank instead of carrying last season's value. The snapshot still holds the historical answer for reporting.
 
 - **Staff** — the person's name (a link to their profile), city and state when available, cell phone, email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline. When the person has seasons on their profile, a muted **N season** / **N seasons** line appears at the bottom of the cell (hover for the full list).
 
@@ -79,7 +79,7 @@ Each staff member is one row. From left to right, the roster shows:
 
 - **Profile field columns** — any staff profile fields you chose to display. Text fields and dropdowns can be edited directly in the table; your change saves on its own.
 
-- **Forms** — a **Started** and **Completed** count. Click it to expand a per-season breakdown of each staff form and its status.
+- **Forms** — a **Started** and **Completed** count. When the person has reference requests, a **References** done/total line appears as well. Click the cell to expand a panel: **References** first (same statuses and actions as the profile **References** card, including **Reopen** for completed ones), then a per-season breakdown of each staff form and its status. See [References](/references#track-references-on-a-profile).
 
 - **Contracts** — a **Total / Sent / Signed** rollup. Click it to expand the contract history and the send-a-contract panel.
 
@@ -115,7 +115,7 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
 
 ## See form progress for one person
 
-Click the **Forms** cell in any row to expand a panel. It groups the person's staff forms by season and shows the status of each one, along with the completion date when a form is finished. Use this to see exactly which follow-up forms are still outstanding for a hire.
+Click the **Forms** cell in any row to expand a panel. When references exist, a **References** section lists them first. Below that, the panel groups the person's staff forms by season and shows the status of each one, along with the completion date when a form is finished. Use this to see exactly which follow-up forms are still outstanding for a hire.
 
 For a completed form, use the printer icon (title **Print form**, with the form name) to open the same print dialog as the profile **Forms** tab, including **Layout** (**Compact** or **Expanded**). See [Forms](/forms#print-form-responses).
 

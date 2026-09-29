@@ -301,7 +301,9 @@ When you have permission to edit the person and that field, click a blue value i
 
 1. Click the blue value to open the inline editor for that field.
 2. Change the text, date, yes/no, choose-one, choose-many, or ranked-choice answer. Multi-select fields use **Select options**.
-3. Click **Save**. A short **Saved.** toast confirms the change. Escape cancels; Enter saves on single-line fields. Leaving the field without **Save** does not keep the change.
+3. Click **Save**. A short **Saved.** toast confirms the change. Click **Cancel** or press Escape to restore the previous value without saving. Enter saves on single-line fields. Leaving the field without **Save** does not keep the change.
+
+When you save a phone or address from this editor (or from **Edit contact**), other places that show the same value on the profile (family card, contact row, hover card) refresh in place so they stay current.
 
 You cannot edit signature fields, link-to-a-user fields, or the special **Weeks** / **Group** editors from this inline control. Those keep their own links and modals. If you lack edit access for a field, Campium shows a warning instead of saving.
 
@@ -360,11 +362,11 @@ Use this when the person has **never signed in** and needs to create a password 
 3. Confirm: **Send an account setup email with a link to create a password or continue with Google/Apple?** then **Send**.
 4. Success: **Setup link sent to** their email. Subject: **Set up your account**.
 
-They open **Set up your account**, create a password (or use **Google** / **Apple**), agree to the Terms of Service and EULA, and are signed into the portal when they finish. Setup links stop working after 14 days. The expired page (**This setup link has expired**) lets them enter their email and **Send a new setup link**.
+They open **Set up your account**, create a password (or use **Google** / **Apple**), agree to the Terms of Service and EULA, and are signed into the portal when they finish. The password field is a normal new-password input, so browsers that offer to save passwords can remember it after sign-in. When your payment processor has a self-service payment methods page, finishing setup lands them there so they can add a card or bank account. If your processor has no self-service page, they land on the portal home instead. Setup links stop working after 14 days. The expired page (**This setup link has expired**) lets them enter their email and **Send a new setup link**.
 
 This control is hidden when they have already signed in, when there is no usable email, or when **Send initial account email** is showing for new staff. You need family/profile action access. For people who already have an account but forgot their password, use **Send Password Reset Email** instead (24-hour link).
 
-You can also put setup links in a mass email with the **Account Setup URL** and **Account Setup Link** merge fields. See [Mass Emails](/mass-emails#account-setup-merge-fields).
+You can also put setup links in a mass email with the **Account Setup URL** merge field. See [Mass Emails](/mass-emails#account-setup-merge-fields).
 
 ### Send a password reset email
 
@@ -484,10 +486,9 @@ Each tab focuses on a different part of the person’s record. Use these section
   <Tab title="Notes" icon="edit">
     The **Notes** tab holds internal comments about the person that only staff can see.
 
-    - Add new notes for behavior, special instructions, or follow-ups.
-
+    - Click **New Note** to add notes for behavior, special instructions, or follow-ups.
+    - When notes exist, use **All notes** / **My notes** at the top of the tab to show every note or only ones you wrote. Each button shows a count.
     - Edit existing notes when you need to correct or clarify something.
-
     - Remove notes that are no longer relevant, according to your camp policies.
 
     Use clear, professional language in notes, since other staff rely on this tab to make decisions during camp.

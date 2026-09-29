@@ -247,16 +247,16 @@ Later, customer reports can use that saved snapshot to filter profile data based
 
 ### Watch snapshot status on the Seasons list
 
-After you queue a snapshot, the **Seasons** list shows a badge under that season's **Status** link. The badge updates on its own while the snapshot is still working.
+After you queue a snapshot, the **Seasons** list shows status under that season's **Status** link. Queued, building, and failed states use a badge. When the snapshot finishes, the list shows muted helper text **Snapshot ready** instead of a badge (hover for the capture time). Status updates on its own while the snapshot is still working.
 
-| Badge | Meaning |
+| Status | Meaning |
 | --- | --- |
-| **Snapshot queued** | The snapshot is waiting to start. |
-| **Snapshot building** | The snapshot is copying profile answers in the background. |
-| **Snapshot ready** | The snapshot finished. You can choose it under **Profile data** when you build a customer report. |
-| **Snapshot did not finish** | The snapshot failed. Open **Edit Season** to retry. |
+| **Snapshot queued** (badge) | The snapshot is waiting to start. |
+| **Snapshot building** (badge) | The snapshot is copying profile answers in the background. |
+| **Snapshot ready** (helper text) | The snapshot finished. You can choose it under **Profile data** when you build a customer report. |
+| **Snapshot did not finish** (badge) | The snapshot failed. Open **Edit Season** to retry. |
 
-Hover the badge for the capture time. Click the badge (or the season status) to open **Edit Season**.
+Click a queued, building, or failed badge (or the season status) to open **Edit Season**. **Snapshot ready** helper text is informational; open **Edit Season** from the season status link if you need details.
 
 ### Review or retry a snapshot in Edit Season
 
