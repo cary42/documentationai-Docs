@@ -324,12 +324,9 @@ Toggle that controls whether a login button is added to the email. In the compos
 
 When someone has never signed in, you can email them a setup link from a mass email.
 
-In the composer, use **Insert merge field** (or **Merge Fields**) and choose:
+In the composer, use **Insert merge field** (or **Merge Fields**) and choose **Account Setup URL**. It inserts `{magic_login}`, which is the bare setup link (the token is attached when the email sends). Wrap that URL in your own link text or an **Insert button** label. There is no separate merge field that auto-writes **Set up your account** link copy.
 
-- **Account Setup URL**: inserts `{magic_login_url}` (the bare setup link; the token is attached when the email sends)
-- **Account Setup Link**: inserts `{magic_login}` (the words **Set up your account** plus a copy-paste URL)
-
-These merge fields are available on mass emails. They are not on **Admin → Email Templates**. Recipients open the link on **Set up your account**, create a password (or continue with Google or Apple), and are signed into the portal when they finish. Setup links from welcome-style sends stop working after 14 days; the expired page lets them request a new one.
+These merge fields are available on mass emails. They are not on **Admin → Email Templates**. Recipients open the link on **Set up your account**, create a password (or continue with Google or Apple), and finish setup. When your payment processor has a self-service payment methods page, they land there next; otherwise they land on the portal home. Setup links from welcome-style sends stop working after 14 days; the expired page lets them request a new one.
 
 You can also send a one-off setup email from a profile. See [Profiles](/profiles#send-an-account-setup-link).
 
