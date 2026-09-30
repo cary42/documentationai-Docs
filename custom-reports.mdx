@@ -87,11 +87,17 @@ Filters define **who** appears in the report. You can add one filter or many, de
   <Step title="Add more filters to narrow results" icon="settings" title-type="p">
     - Use **Add Another Filter** again to stack additional conditions.
 
-    - Combine filters to answer specific questions, such as "Status is Active" **and** "Balance is not 0".
+    - On each extra filter row, choose **and** or **or** (control label: **Join with the filter above**). Helper text: **Choose "or" to match this filter or the one above it. Filters joined with "or" form a group, and every group must match.**
+
+    - Combine filters to answer specific questions, such as "Status is Active" **and** "Balance is not 0", or group alternatives with **or**.
+
+    - **or** is not available next to **contains all** or **is null**.
   </Step>
 </Steps>
 
 As you change filters, the report updates and shows how many records match.
+
+The same **and** / **or** joining appears when you build recipient filters for mass email, SMS, and push.
 
 ### Filter operators explained
 
@@ -146,6 +152,8 @@ Display fields control **what information** shows as columns in your report resu
 
   <Step title="Add the columns you need" icon="plus" title-type="p">
     - Select the fields you want to see for each record, such as **Name**, **Email**, **Phone**, **Session**, **Balance**, or other details.
+
+    - **Guardian 1 Status** and **Guardian 2 Status** appear with that guardian's other fields in alphabetical order. Camper Status and Staff Status stay pinned near the top of their lists.
 
     - Keep only the columns that matter for your question to make the report easier to read.
   </Step>
