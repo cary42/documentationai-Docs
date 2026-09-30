@@ -71,7 +71,7 @@ Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Ema
 
 Each staff member is one row. From left to right, the roster shows:
 
-- **Application status** — the main status of where the person is in your process (for example, applied, interviewing, hired). This comes from the staff profile field named **Application Status**. When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. After a season's profile snapshot finishes (**Snapshot ready** on **Seasons**), Campium clears that season's Application status for staff on that season's roster (people still on another active season's roster keep their status). Returning staff start the next hiring cycle blank instead of carrying last season's value. The snapshot still holds the historical answer for reporting.
+- **Application status** - the main status of where the person is in your process (for example, applied, interviewing, hired). This always comes from the staff profile field named **Application Status** (any capitalization). When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. After a season's profile snapshot finishes (**Snapshot ready** on **Seasons**), Campium clears that season's Application status for staff on that season's roster (people still on another active season's roster keep their status). Returning staff start the next hiring cycle blank instead of carrying last season's value. The snapshot still holds the historical answer for reporting.
 
 - **Staff** — the person's name (a link to their profile), city and state when available, cell phone, email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline. When the person has seasons on their profile, a muted **N season** / **N seasons** line appears at the bottom of the cell (hover for the full list).
 
@@ -80,6 +80,8 @@ Each staff member is one row. From left to right, the roster shows:
 - **Profile field columns** — any staff profile fields you chose to display. Text fields and dropdowns can be edited directly in the table; your change saves on its own.
 
 - **Forms** — a **Started** and **Completed** count. When the person has reference requests, a **References** done/total line appears as well. Click the cell to expand a panel: **References** first (same statuses and actions as the profile **References** card, including **Reopen** for completed ones), then a per-season breakdown of each staff form and its status. See [References](/references#track-references-on-a-profile).
+
+- **W-4** / **I-9** / **W-4 & I-9** - hiring document status when [W-4 collection](/w4-collection) and/or [I-9 verification](/i9-verification) is on (I-9 also needs the **I-9 Records** permission). Download filled PDFs from the cell when a form is signed.
 
 - **Contracts** — a **Total / Sent / Signed** rollup. Click it to expand the contract history and the send-a-contract panel.
 
@@ -96,8 +98,12 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
     Under **Fields to display and edit**, search and select which staff profile fields appear as columns. These columns are editable inline for everyone in the roster.
   </Step>
 
-  <Step title="Set the application status field (optional)" icon="flag" title-type="p">
-    The first column uses the staff profile field named **Application Status** by default. Override it only if you use a different dropdown field for the same purpose.
+  <Step title="Confirm Application Status" icon="flag" title-type="p">
+    The first column always uses the staff profile field named **Application Status**. Create that dropdown under **Admin → Profile Fields** if it is missing. There is no separate override field.
+  </Step>
+
+  <Step title="Set W-4 and I-9 automatic requests" icon="file-text" title-type="p">
+    When **W-4 collection** is on, use **Request a W-4 automatically** to pick Application Status values that trigger a request (empty = **By hand only**). Optionally check **Also collect New York Form IT-2104**. When **I-9 verification** is on and you have **I-9 Records**, use **Request an I-9 automatically** the same way. See [W-4 collection](/w4-collection) and [I-9 verification](/i9-verification).
   </Step>
 
   <Step title="Connect staff forms to each season" icon="folder" title-type="p">
@@ -152,7 +158,7 @@ To send a contract:
 When you need to send the same template to more than one person, use the roster checkboxes instead of opening each row.
 
 1. Check the box on each staff row you want, or use the header checkbox to select everyone currently visible in the table.
-2. A bar appears with **N selected**, **Send contracts**, and **Clear**.
+2. A bar appears with **N selected**, **Send contracts**, **Clear**, and (when those modules are available) **Request W-4** and/or **Request I-9**.
 3. Click **Send contracts**. The **Send contract** modal opens (title becomes **Send contracts** when more than one person is selected).
 4. Choose a **Contract template** and **Season**.
 5. Review **Will be emailed**. Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
@@ -184,5 +190,13 @@ Contract history and the **Contracts Sent** tile update without reloading the pa
 
   <Card title="Profile Fields" href="/profile-fields" icon="list" horizontal="false">
     Set up the profile fields, including Application Status, that appear as columns.
+  </Card>
+
+  <Card title="W-4 collection" href="/w4-collection" icon="file-text" horizontal="false">
+    Collect federal W-4s (and optional New York IT-2104) from Staff Hub.
+  </Card>
+
+  <Card title="I-9 verification" href="/i9-verification" icon="file-text" horizontal="false">
+    Collect Form I-9 Section 1 and Section 2 from Staff Hub and I-9 Records.
   </Card>
 </Columns>

@@ -62,6 +62,16 @@ What syncs:
 - Existing matching users on the first sync
 - Ongoing updates after that
 
+### Field mapping
+
+On the Mailchimp settings page, the **Field mapping** card lets you choose which Campium fields to send and where each one goes in Mailchimp.
+
+1. Click **Add field**.
+2. Pick a **Campium field** and the matching Mailchimp field.
+3. Use **Preview** to check a sample, then **Save mapping**.
+
+Empty state copy: **No extra fields yet.** A blank Campium value is skipped, so a sync never erases a value already in Mailchimp.
+
 ## Klaviyo
 
 <Steps>
@@ -83,6 +93,14 @@ What syncs:
 
 - Contacts/users and statuses
 - Initial import plus ongoing status updates
+
+### Mark families as subscribed
+
+Optionally check **Mark synced families as subscribed to email marketing**. The first time you turn it on, confirm with **Yes, they agreed**. Only turn this on if your families agreed to receive marketing email from you. You are responsible for that consent. Leave it off (the default) if you manage subscription status in Klaviyo yourself.
+
+### Field mapping
+
+Same **Field mapping** card as Mailchimp: **Add field**, **Preview**, **Save mapping**. Blank Campium values are skipped so Klaviyo values are not erased.
 
 ## Constant Contact
 
@@ -106,6 +124,10 @@ What syncs:
 - Contacts/users to the selected list
 - Status tags mapped to contact tags such as Active, Inactive, Pending, and Lead
 - Ongoing updates after connection
+
+### Field mapping
+
+Same **Field mapping** card: choose Campium fields and Constant Contact destinations, then **Preview** and **Save mapping**.
 
 ## Slack
 
@@ -222,6 +244,10 @@ On the settings page you will see:
 **Disconnect** stops syncing and removes the connection. You can reconnect later.
 
 If the connection expires, you will see a prompt to reconnect.
+
+### Field mapping
+
+Same **Field mapping** card: map Campium fields to Salesforce fields with **Add field**, **Preview**, and **Save mapping**. Blank Campium values are skipped so Salesforce values are not erased.
 
 ### What you don't need to do in Salesforce
 

@@ -655,6 +655,16 @@
                 "icon": "briefcase"
               },
               {
+                "title": "W-4 collection",
+                "path": "w4-collection",
+                "icon": "file-text"
+              },
+              {
+                "title": "I-9 verification",
+                "path": "i9-verification",
+                "icon": "file-text"
+              },
+              {
                 "title": "Camper Hub",
                 "path": "camper-hub",
                 "icon": "users"

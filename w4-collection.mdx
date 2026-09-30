@@ -1,0 +1,57 @@
+---
+title: "W-4 collection"
+description: "Turn on W-4 collection, request forms from Staff Hub, and download signed federal (and optional New York) tax forms."
+---
+
+Collect a signed federal Form W-4 from each hire on the staff portal, then download the filled IRS PDF from **Staff Hub**. You can also collect New York Form IT-2104 or IT-2104-E alongside each W-4.
+
+## Turn on W-4 collection
+
+1. Open **Admin → Site Settings → Modules**.
+2. Under the **Staff** section, find the **W-4 collection** card.
+3. Click **Turn on** (or **Turn on for $X** when the add-on has a price). Campium charges your saved subscription payment method when one is on file. If payment is still owed, use **Go to Billing** and pay the balance invoice. Paying that invoice turns the module on.
+
+You need an **admin** login to turn the module on or off. Turning it off stops new requests. Staff can still finish forms already sent. There is no refund.
+
+When the module is off, **Admin → Staff Hub** can show an upsell titled **Collect W-4s from your hires in Staff Hub** with **Turn on W-4 collection** (or **Go to Billing** when an unpaid fee is waiting).
+
+## Set automatic requests
+
+1. Open **Admin → Staff Hub**.
+2. Open **Staff Hub Settings**.
+3. Under **Request a W-4 automatically**, pick one or more **Application Status** values. Empty text on the control is **By hand only**.
+4. Helper text: when you set someone's Application status to a selected choice, they get an email asking them to fill out a W-4 for their Staff Hub season. Moving them to an unselected choice cancels a W-4 they have not signed yet. Leave it empty to request W-4s only by hand.
+5. Click **Save Settings**.
+
+You need a staff profile field named **Application Status** (any capitalization) for automatic triggers. Staff Hub always uses that field name. See [Staff Hub](/staff-hub).
+
+## Collect New York IT-2104
+
+Still in **Staff Hub Settings**, check **Also collect New York Form IT-2104**. Helper text: **For staff who work in New York. Every W-4 request then also asks for an IT-2104, and you download it from the same cell.**
+
+This is an opt-in for your camp, not an automatic geo setting. Staff then choose **Form IT-2104** (withhold New York tax) or **Form IT-2104-E** (claim exemption) on the portal page titled **New York tax withholding**.
+
+## Request a W-4 by hand
+
+1. On **Staff Hub**, select one or more staff rows.
+2. Click **Request W-4** in the selection bar.
+3. Confirm. When New York collection is on, the confirm mentions a W-4 and a New York IT-2104.
+
+Each selected person gets an email with a link to fill out the form(s).
+
+## Track status in Staff Hub
+
+When W-4 collection is on, the roster shows a **W-4** column (or **W-4 & I-9** when I-9 is also visible). Status badges include **Requested**, **In progress**, **Signed, SSN pending**, **Signed**, **Downloaded**, and **Signed, SSN deleted**. An empty cell means **Not requested**.
+
+When New York collection is on, a second line under the cell shows **IT-2104** or **IT-2104-E**. Download the filled PDF from the cell after the form is signed.
+
+## What staff see on the portal
+
+Staff open **Fill out your W-4** (or similar home card copy) and land on **Form W-4**. They complete and sign the federal form. When New York collection is on, they also see **Fill out your New York IT-2104** / **Fill out IT-2104**.
+
+## Related guides
+
+- [Staff Hub](/staff-hub) for roster requests and settings
+- [I-9 verification](/i9-verification) when you also collect Form I-9
+- [Site Settings](/settings#tabs-and-settings-reference) for the Modules card
+- [Billing](/billing) for unpaid add-on invoices
