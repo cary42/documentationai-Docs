@@ -251,6 +251,10 @@
                     "path": "system-report-families-without-primary-payment-method"
                   },
                   {
+                    "title": "Membership Recurring Charges report",
+                    "path": "system-report-membership-recurring-charges"
+                  },
+                  {
                     "title": "Form Status Summary",
                     "path": "form-status-summary"
                   },
