@@ -32,7 +32,7 @@ Choose **Email Templates** from the available admin settings.
 </Step>
 <Step title="Review the template list">
 
-The Email Templates list opens with your saved templates, available actions, and access to the Template Library.
+The Email Templates list opens with your saved templates and available actions. Use **Add New Template** to create one. Per-row **Preview** still opens a view of a template. The visual **Template Library** thumbnail browser is temporarily off.
 
 </Step>
 </Steps>
@@ -57,27 +57,9 @@ Before you deactivate or delete a template, check its **Usage** value and any wo
 
 </Callout>
 
-## Use Template Library and Add New Template
+## Add a new template
 
-Template Library gives you a visual way to browse templates, while Add New Template opens the editor for a new template from scratch.
-
-<Steps>
-<Step title="Open Template Library">
-
-Select **Template Library** to browse templates as visual thumbnails instead of rows in the main list. This view is useful when staff recognize templates by layout or content rather than by name alone.
-
-</Step>
-<Step title="Start a new template">
-
-Select **Add New Template** to open a blank template editor.
-
-</Step>
-<Step title="Choose how you want to work">
-
-Use the list view when you want to sort and review details such as usage, status, or visibility. Use Template Library when you want to scan templates visually before choosing one.
-
-</Step>
-</Steps>
+Select **Add New Template** to open a blank template editor. Use the list view to sort and review details such as usage, status, or visibility. Visual thumbnail browsing (**Template Library**) is temporarily unavailable; use per-row **Preview** or open a template to review it.
 
 ## Organize templates with categories
 
@@ -116,14 +98,23 @@ Write the email message and insert any merge fields needed for personalized cont
 If needed, enable the login button, include images or attachments, and use AI Rewrite to adjust the wording.
 
 </Step>
-<Step title="Preview and confirm the auto-save">
+<Step title="Preview, send a test, and confirm the auto-save">
 
-The editor shows **Your template saves automatically.** As you edit, the status updates to **Saving...** and then **Saved just now.** Preview the message to confirm it looks correct. Use **Save** when you want to force an immediate save.
+The editor shows **Your template saves automatically.** As you edit, the status updates to **Saving...** and then **Saved just now.** Use **Preview** to open the message in a new tab. Use **Send preview** to email a test copy. Use **Save** when you want to force an immediate save.
 
 A successful save leaves the template available in the Email Templates list and ready for use in supported areas of Campium.
 
 </Step>
 </Steps>
+
+### Send a test email from the editor
+
+1. Open a template and click **Send preview** in the bottom action bar (next to **Preview** and **Save**).
+2. In **Send Test Email**, choose a recipient under **To** (your signed-in admin address is offered), or enter one or more addresses in the optional field (**Optional - separate multiple addresses with commas**). You can send to up to 10 addresses.
+3. Note: **The test email uses the subject and body as they are on screen now. Merge fields are filled in from your own profile, so camper and guardian fields may come through blank.**
+4. Click **Send Test**. Success feedback: **Email Sent.**
+
+You need access to open the template (shared organization templates, or private templates you own). The side panel may still offer **Preview email** for an on-screen preview without sending.
 
 ## Edit template fields and options
 
@@ -145,6 +136,7 @@ Use the editor to update both the message itself and the details staff see when 
 - **AI Rewrite** helps revise the wording of your message.
 - Changes save automatically (**Your template saves automatically.** / **Saving...** / **Saved just now.**). **Save** still forces an immediate save.
 - **Preview** shows how the message will look before you use it.
+- **Send preview** emails a test copy of the subject and body as they appear on screen (see [Send a test email from the editor](/email-templates#send-a-test-email-from-the-editor)).
 
 ## Know where templates are used
 
@@ -156,7 +148,7 @@ Forms can use templates in their email settings for status-based communication. 
 
 ### Mass Emails
 
-Mass Emails can use templates through **Insert Template** or **Template Library**. This lets staff start with a saved subject and email body instead of creating every message from scratch.
+Mass Emails can use templates through **Insert Template**. The visual **Template Library** / **Library** thumbnail browser is temporarily off; pick from the dropdown instead. This lets staff start with a saved subject and email body instead of creating every message from scratch.
 
 You can also create or update a template from inside a mass email with **Save as template** on the **Email body** panel. That saves the current subject and body into **Admin → Email Templates** (recipients and send settings are not included). If you inserted one of your organization's templates, you can **Overwrite** that template or **Save as new**. System templates cannot be overwritten from this path.
 
@@ -184,7 +176,7 @@ Use this checklist before publishing or updating a template.
 - Add a **Description** if staff might confuse this template with another one.
 - Check the **Subject** and **Email body** for accuracy.
 - Insert the correct **merge fields** for personalization.
-- Preview the template before saving.
+- Preview the template (or **Send preview**) before relying on it.
 - Review **Usage** before deactivating or deleting a template.
 - Use **inactive** status when you want to stop new selections without removing the record immediately.
 
@@ -192,7 +184,7 @@ Use this checklist before publishing or updating a template.
 
 <Columns cols={2}>
   <Card title="Mass Emails" href="/mass-emails" icon="mail" cta="Open page">
-    Reuse saved templates in email campaigns with Insert Template and Template Library.
+    Reuse saved templates in email campaigns with Insert Template.
   </Card>
   <Card title="Forms" href="/forms" icon="folder" cta="Open page">
     Assign approved, pending, and rejected email templates in form email settings.

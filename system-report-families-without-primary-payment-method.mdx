@@ -23,8 +23,8 @@ Use this workflow whenever you want a current list of families missing a primary
 
 <Step title="Open the report" icon="folder">
 
-- From the admin portal, go to **Reports**.
-- In the **System** section, open **No Primary Payment Method** (the menu label).
+- From the admin portal, go to **Reports → System Reports**.
+- Under **Money**, open **No Primary Payment Method** (the list label).
 - Confirm the page title shows **Families Without Primary Payment Method - [selected season]**.
 
 When the page loads successfully, you see a **Season** dropdown in the page header and a results table with columns for **Primary Contact**, **Email**, **Active Registrations**, and **Balance**.
@@ -54,14 +54,13 @@ At the bottom of the page, use the footer totals to understand your overall expo
 
 <Step title="Email families from the report" icon="mail">
 
-- Click **Send Email** in the page header.
-- The dialog explains: **This will send an email to families on this report who have a balance but no primary payment method on file.**
-- Enter a **Subject** (default **Please Add a Payment Method to Your Account**). Helper text: **Every family gets this subject. Your last one is remembered.**
-- Edit the **Message**, use **Preview Email** if you want a sample, then **Send Email** again to confirm. Confirm with **Send email to families without a primary payment method?** when prompted. The confirm note explains you will see each family marked **Sent**, **Skipped**, or **Failed**, and can retry failures.
-- While sending, a progress dialog (**Sending email** / **Sending emails**) shows **N of M families** and the **Sent** / **Skipped** / **Failed** tallies. When finished, use **Close** or **Retry N families** for failures.
-- Families receive a payment-method call to action (**Log in and Add a Payment Method**), not a pay-balance button. Use **Close** to dismiss the compose dialog without sending.
+1. Click **Send Email** in the page header. That opens the shared **Email this group** modal titled **Email Families Without Primary Payment Method**.
+2. The audience line names how many families and addresses are **on the Families Without Primary Payment Method report.** Use **Show names** to review the list (households with no email are badged).
+3. Edit **Subject** (default **Please Add a Payment Method to Your Account**; your last subject is remembered) and **Message**.
+4. Optionally click **Open in full editor** to continue in **Mass Emails**, where the draft is named **Email: Families Without Primary Payment Method**. The full editor shows **Recipients came from a report.** Changing a filter there replaces that list.
+5. Click **Send Email**, then confirm with **Send to …?** and **Yes, send it**.
 
-Only families that still match the report (balance and no primary method) are emailed. Each send chunk re-checks the list so a family that added a method mid-send is skipped.
+The send becomes a normal mass email (Guardian 1 and Guardian 2 routing, login button when enabled, and a trail in Mass Emails). Use **Close** to dismiss the modal without sending.
 
 </Step>
 

@@ -95,9 +95,13 @@ Filters define **who** appears in the report. You can add one filter or many, de
   </Step>
 </Steps>
 
-As you change filters, the report updates and shows how many records match.
+As you change filters, a plain-language summary appears under the rows (for example, **Matches people where User Type is Camper and Season is Summer 2026.**). Groups joined with **or** read as **either … or …**. A row with no value yet is called out as not applied (for example, **Allergies has no value yet, so it is not applied.**).
 
-The same **and** / **or** joining appears when you build recipient filters for mass email, SMS, and push.
+The same **and** / **or** joining and summary appear when you build recipient filters for mass email, SMS, and push. On those editors, the sticky **Who** summary may lead with **People where** instead of **Matches people where**.
+
+### Search historical data
+
+When you have at least one completed season snapshot, a **Search historical data** link appears under **Add Another Filter**. Open it to choose current profile data or a snapshot you saved when you deactivated a season. Helper text: **Use current profile data, or a snapshot you saved when you deactivated a season.**
 
 ### Filter operators explained
 
@@ -152,6 +156,8 @@ Display fields control **what information** shows as columns in your report resu
 
   <Step title="Add the columns you need" icon="plus" title-type="p">
     - Select the fields you want to see for each record, such as **Name**, **Email**, **Phone**, **Session**, **Balance**, or other details.
+
+    - When finance reporting is on, you can also add **Family Balance** (or **Camper Family Balance** / your camper singular label plus **Family Balance** on camper lists). That column is calculated from payments and cannot be edited in hubs.
 
     - **Guardian 1 Status** and **Guardian 2 Status** appear with that guardian's other fields in alphabetical order. Camper Status and Staff Status stay pinned near the top of their lists.
 

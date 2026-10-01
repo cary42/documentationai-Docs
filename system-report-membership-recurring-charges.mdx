@@ -1,0 +1,83 @@
+---
+title: Membership Recurring Charges report
+description: Review upcoming membership recurring charges, payment methods on file, and how many charges remain for each enrollment.
+---
+
+## Purpose of this report
+
+Use **Membership Recurring Charges** to see upcoming automatic dues for everyone enrolled in a membership season: the next charge date, amount, how many charges are left, and which card or bank account will be charged.
+
+These charges come from each session's recurring billing settings. They do not appear under **Scheduled Payments**.
+
+<Callout kind="info">
+
+The report appears under **Reports → System Reports** in the **Money** group only when you have at least one season marked as a membership season, and when your account includes finance reporting. See [Memberships](/memberships).
+
+</Callout>
+
+## Run the report
+
+<Steps>
+
+<Step title="Open the report" icon="folder">
+
+1. Go to **Reports → System Reports**.
+2. Under **Money**, open **Membership Recurring Charges**.
+3. Confirm the page title is **Membership Recurring Charges**.
+
+</Step>
+
+<Step title="Choose a membership season" icon="settings">
+
+1. In the **Season** panel, use **Membership season**.
+2. Leave **All membership seasons** selected, or pick one membership season.
+
+The summary cards and **Upcoming charges** table refresh for that choice.
+
+</Step>
+
+<Step title="Review the summary" icon="bar-chart">
+
+When there are upcoming charges, three summary cards appear:
+
+- **Next charge run** - the next date any enrollment will be charged.
+- **Charges on that date** - how many enrollments charge on that date, with the total amount.
+- **No payment method on file** - how many enrollments would be skipped for want of a card or bank account. When every enrollment can be charged, the note says **Every enrollment can be charged**.
+
+</Step>
+
+</Steps>
+
+## Columns in Upcoming charges
+
+Each row is one enrollment with an upcoming recurring charge.
+
+| Column | What it shows |
+| --- | --- |
+| **Next Charge** | The next date this enrollment will be charged. |
+| **Family** | The guardian or primary contact, linked to their profile when available. |
+| Member name | The enrolled person (uses your camper or member singular label), linked to their profile. |
+| **Membership** | The membership session or product. |
+| **Season** | The membership season. |
+| **Amount** | The recurring charge amount. |
+| **Schedule** | How often the charge runs (for example monthly on a day of the month, or weekly). |
+| **Charges Left** | How many charges remain. An open-ended schedule can show a count with `+`. |
+| **Total Left** | Remaining dollar total, or **Ongoing** when there is no end date. |
+| **Payment Method** | The card or bank account on file, or **None on file**. |
+| **Last Charge** | The most recent charge date and status (**Paid**, **Declined**, and similar), or **Not charged yet**. |
+
+## Empty states
+
+- **You have no membership seasons. Recurring charges only apply to sessions in a season marked as a membership season.** - Mark a season with **Membership season** set to **Yes**, then configure recurring billing on a session. See [Memberships](/memberships).
+- **No upcoming recurring charges. Either nobody is enrolled, or recurring billing is turned off or has ended for these memberships.** - Check enrollments and each session's recurring settings.
+
+## Related pages
+
+<Columns cols={2}>
+  <Card title="Memberships" href="/memberships" icon="repeat" cta="Open page">
+    Set up membership seasons and recurring billing on sessions.
+  </Card>
+  <Card title="Scheduled Payments" href="/system-report-scheduled-payments" icon="calendar" cta="Open page">
+    Review installment schedules that are not membership recurring dues.
+  </Card>
+</Columns>
