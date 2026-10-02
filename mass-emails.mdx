@@ -36,7 +36,7 @@ Key parts of the list:
 
     While a send is still running, the Status column can also show a live chip: **Preparing…**, **Sending X of Y**, or **Did not send** (if Campium could not build the recipient list).
 
-  - **Opens / Sends** - At-a-glance open and send counts for emails that have gone out. Drafts and unsent rows show **Not sent**.
+  - **Opens / Sends** - At-a-glance open and send counts for emails that have gone out. Drafts and unsent rows show **Not sent**. While a send is still delivering, the cell shows **Sending**. After a send finishes with nobody delivered, it shows **None delivered** (not **Not sent**) next to the **Sent** status.
 
   - **Date Sent** - When the email went out. Unsent rows show **Not sent**.
 
@@ -393,7 +393,9 @@ Use these actions in the composer to control how and when your email goes out.
 ### Preview Email
 
 - Click **Preview Email** to see how the email looks on screen.
-
+- Merge fields are filled from **one random recipient** in your campaign audience when recipients are selected. A notice at the top of the preview says it is test data and names that sample person. Use **Pick another** when you want a different sample. If nobody is selected yet, merge fields use your own profile (or another fallback) instead.
+- The notice can also say who the real send would address (for example a guardian) when that differs from the sample recipient.
+- Addresses you enter for a test send still only go to those addresses. The sample person is for fill-in only.
 - Use this preview to catch spacing issues, long subject lines, or missing content.
 
 ### Send Now vs scheduled send

@@ -287,24 +287,38 @@ A short spotlight tip titled **New Retention card** may appear the first time yo
 
 ### What you see
 
-- Gear control titled **Configure retention** with **Current season**, **Compare to**, and **Seasons in retention**, then **Apply** or **Cancel**. Helper text: **Deselect a season to leave it out of retention. Use this for a fall season or a holiday weekend.**
+- Gear control titled **Configure retention** with **Current season**, **Compare to**, and **Seasons in retention**, then **Apply** or **Cancel**. Helper text: **Deselect a season to leave it out of retention. Use this for a fall season or a holiday weekend.** Selected seasons keep their checkboxes visible in the list.
 - Link **YoY report** to open **Product YoY Comparison**.
-- Note: **Retention excludes people whose profile grade is the highest option, unless you turned on include highest grade on the YoY report.**
+- When grades are left out of retention, a note lists those grade names. By default, retention leaves out people whose current grade is the highest option (graduates who are not expected back). An administrator can change this on **Product YoY Comparison** with **Include every grade in retention (camp-wide)** or **Grades left out of retention**.
 - Section **Retention**: comeback rate for the current season versus the compare season, plus a short trend by season when enough history exists. Use **Retained** and **Lost** (with counts) under the rate, or click a season bar, to open the drill-in list.
 - Toggle **All campers** / **Without $0 campers** (uses your camper plural label). **Without $0…** leaves out people whose charges came to $0 after discounts in the season they are counted from. Helper text appears under the toggle when that mode is on. Your choice is remembered in this browser.
 - Section **Years at camp**: how many people fall into each years-at-camp bucket for the current season.
-- **Average sale per paying** camper (uses your camper singular label) for the current season, with a compare amount when available. This row only appears when the finance module is on and your role can use finance reports.
+- **Average sale per paying** camper (uses your camper singular label) for the current season, with a compare amount when available. This row only appears when the finance module is on and your role can use finance reports. Click the average sale amount to open the **Average sale** breakdown.
 
 ### Who counts as retained or lost
 
-Retention looks at active enrollments in the prior season (cancellation-fee or forfeited-deposit lines do not count). Profile status is ignored, so someone marked Removed, Lead, or Archived still counts if they had an active enrollment. Grades for people in a deactivated season that has a ready snapshot come from that snapshot when the card calculates retention.
+Retention looks at active enrollments in the prior season (cancellation-fee or forfeited-deposit lines do not count). Profile status is ignored, so someone marked Removed, Lead, or Archived still counts if they had an active enrollment. Grades for people in a deactivated season that has a ready snapshot come from that snapshot when the card calculates retention. People whose current grade is in **Grades left out of retention** (or the highest grade when that list is empty and camp-wide include-all is off) are not counted as retained or lost.
 
 ### Drill into Retained and Lost
 
 1. On the **Retention** card, click **Retained** or **Lost**, or click a season bar in the trend.
 2. A large dialog titled **Retention:** followed by the season name opens. Intro text explains: everyone registered in the prior season, split by whether they registered again in the selected season.
-3. Toggle **Retained** or **Lost** inside the dialog. Columns show the camper (your singular label), products from the prior season, products from the selected season (**Not registered** when they did not come back), and **Years**.
-4. Open a camper name to go to their profile, or use **YoY report** for the full comparison report.
+3. Toggle **Retained** or **Lost** inside the dialog. Columns show the camper (your singular label), optional **Grade** when grades are present, products from the prior season, products from the selected season (**Not registered** when they did not come back), and **Years**.
+4. When you have **Manage Email** permission and the list has people, use **Email This List** to open the shared **Email this group** composer for the retained or lost list currently on screen. The list respects **Without $0 campers** when that toggle is on.
+5. Open a camper name to go to their profile, or use **YoY report** for the full comparison report.
+
+### Average sale breakdown
+
+Click the average sale amount on the card to open a dialog titled **Average sale:** followed by the season. It shows gross sales, discounts, optional non-revenue sessions, net revenue, enrolled / attending for free / paying counts, and the average (net revenue divided by paying campers). A compare season appears as a second column when one is selected. Finance access is required, the same as the average sale row on the card.
+
+### Grades on Product YoY Comparison
+
+On **Reports → System Reports → Product YoY Comparison**, administrators can set camp-wide retention grade rules:
+
+- **Include every grade in retention (camp-wide)** - when checked, retention on this report and the dashboard counts every person, including grades that would otherwise be left out.
+- **Grades left out of retention** - multiselect of grades. Last season's people who are now in these grades are not counted as retained or lost. Leave it empty to use the highest grade. The control uses the house multi-select with search.
+
+Staff who are not administrators see a read-only note describing the current camp-wide setting.
 
 ### Interpreting the widget
 
