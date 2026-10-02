@@ -48,6 +48,8 @@ Filter the list based on payment method status. Options:
 - **ACH**: Show families using ACH for scheduled payments.
 - **No Account on File**: Show families that do not have a payment account on file.
 
+Families with upcoming scheduled charges but **no payment method** on the schedule (including when the linked method is missing) appear on this report the same way the charge job would skip them. That includes rows that would previously look like they had a method when they did not.
+
 ### Records per page
 
 Control how many rows appear at once in the report table.

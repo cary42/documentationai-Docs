@@ -255,6 +255,10 @@
                     "path": "system-report-membership-recurring-charges"
                   },
                   {
+                    "title": "Paying vs Non-paying report",
+                    "path": "system-report-paying-vs-non-paying"
+                  },
+                  {
                     "title": "Form Status Summary",
                     "path": "form-status-summary"
                   },

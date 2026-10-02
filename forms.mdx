@@ -33,6 +33,18 @@ If a form shows **Inactive** and **Opens**, families cannot see it on the portal
 
 The **Open / Close** column shows when the form window starts and ends. Click the cell to edit without opening the form. Lines are labeled **Opens** and **Closes**. Empty cells show **No dates set**. Enter the date and time, then **Save** (or **Cancel**). After you save, the **Status** badge on that row refreshes to match the new window. You still need the **Manage Forms** permission. You can also set **Start Date** and **End Date** on the form **Settings** tab.
 
+### Recently deleted forms
+
+Deleting a form from the Forms list, or removing one person's copy of a form from their profile **Forms** tab, moves it to trash instead of erasing it right away.
+
+1. Confirm the delete. Whole-form delete asks: **Are you sure you want to delete this form? Every response to it is deleted too. You can restore it from Recently deleted for 30 days.** Removing one person's copy asks: **Are you sure you want to remove this form? You can restore it from Recently deleted for 30 days.**
+2. After delete, a toast can include **Undo** so you can restore immediately.
+3. On the Forms list, click **Recently deleted**. On a profile **Forms** tab, use the **Recently deleted** link.
+4. The **Recently deleted forms** dialog lists **Form**, what was deleted (the whole form with every response, or one person's response), **Deleted**, and **Restore**. Empty state: **Nothing was deleted in the last 30 days.**
+5. Helper text: deleted forms stay for **30 days**, then they are gone for good.
+
+If you restore a person's response while they already have a newer copy of the same form, Campium asks whether to replace their current copy (the current copy then moves to **Recently deleted**).
+
 ## Read the availability badge in the form editor
 
 When you open a form, an availability badge appears beside the form name on every tab (and as the leading chip on the status row in Guided Season Setup). It reflects whether the form would show on the Portal right now, based on **Visibility** and **Start Date** / **End Date**:
