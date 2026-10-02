@@ -805,7 +805,7 @@
             "group": "Forms",
             "pages": [
               {
-                "title": "User can't see the form on their portal",
+                "title": "Can't find a form on the parent portal",
                 "path": "user-cant-see-the-form-on-their-portal"
               }
             ]
