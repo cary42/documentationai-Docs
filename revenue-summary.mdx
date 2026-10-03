@@ -37,7 +37,7 @@ Use these options at the top of the report to define the scope of your summary.
 </ParamField>
 
 <ParamField body="Group revenue by profile field" param-type="selector" required="false" deprecated="false">
-  Optional profile field used to break down revenue by each answer to that field. When you choose a field, the report adds a **Revenue by Grade** style table at the top (the heading uses the field you picked) showing registrations, estimated net figures, and total revenue for each answer value. Leave it unset to skip the breakdown.
+  Optional profile field used to break down revenue by each answer to that field. When you choose a field, the report adds a **Revenue by Grade** style table at the top (the heading uses the field you picked) showing campers, estimated net figures, and total revenue for each answer value. Leave it unset to skip the breakdown.
 </ParamField>
 
 <Callout kind="tip" collapsed="false">
@@ -130,8 +130,8 @@ Each row is one answer value for that field.
   Each answer to the selected profile field, such as each grade, each cabin, or each answer option. One row appears per value.
 </ParamField>
 
-<ParamField body="Registrations" param-type="number" required="true" deprecated="false">
-  Number of registrations that match this field value within the current season/program group and date range filters.
+<ParamField body="Campers" param-type="number" required="true" deprecated="false">
+  Number of distinct campers that match this field value within the current season/program group and date range filters.
 </ParamField>
 
 <ParamField body="Net Revenue" param-type="currency" required="true" deprecated="false">
@@ -139,14 +139,14 @@ Each row is one answer value for that field.
 </ParamField>
 
 <ParamField body="Avg Net Revenue" param-type="currency" required="true" deprecated="false">
-  That row's estimated net revenue divided by its registration count.
+  That row's estimated net revenue divided by its camper count.
 </ParamField>
 
 <ParamField body="Total Revenue" param-type="currency" required="true" deprecated="false">
   Total revenue attributed to registrations with this field value (before the season-wide discount estimate).
 </ParamField>
 
-A footnote under the table explains the estimate, for example: **Net Revenue and Avg Net Revenue are estimates: discounts are not tied to a Grade, so each row is reduced by the season's overall discount rate (12.3% of gross), and the average divides that by its registrations.**
+A footnote under the table explains the estimate, for example: **Net Revenue and Avg Net Revenue are estimates: discounts are not tied to a Grade, so each row is reduced by the season's overall discount rate (12.3% of gross), and the average divides that by its campers.**
 
 Use this table to see how revenue and enrollment split across a profile answer, for example comparing revenue by grade, by session choice, or by any other profile field your camp collects.
 
