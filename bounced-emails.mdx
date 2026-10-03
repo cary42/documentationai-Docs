@@ -1,15 +1,17 @@
 ---
 title: Bounced Email Addresses Report
-description: Review email addresses that permanently bounced, understand the Active and Resolved tabs and every column in the Bounced Email Addresses Report, and see how bounces resolve automatically when an address is updated.
+description: Review email addresses that bounced, understand the Active and Resolved tabs, clear a bounce from a profile, and see how bounces resolve when an address is updated.
 ---
 
 ## Overview
 
-Use the Bounced Email Addresses Report to see addresses that permanently bounced when your camp emailed them. A permanent bounce means the message could not be delivered, so the person is not receiving your confirmations, receipts, or reminders until the address is fixed.
+Use the Bounced Email Addresses Report to see addresses that bounced when your camp emailed them. A bounce means the message could not be delivered, so the person is not receiving your confirmations, receipts, or reminders until the address is fixed or the bounce is cleared.
+
+Bounces include permanent failures (for example, the mailbox does not exist) and addresses whose mail server never answered after repeated tries. On a profile, the reason can read **That mailbox does not exist.** or **The address's mail server never answered, so the email could not be delivered.**
 
 <Callout kind="info">
 
-A bounce is archived automatically once the account owner updates their email address, since changing the address re-verifies the account. The **Active** tab shows bounces that still need attention; the **Resolved** tab shows the ones that have cleared.
+A bounce is archived automatically once the account owner updates their email address, since changing the address re-verifies the account. You can also clear a bounce from the profile **Bounced** badge without changing the address. The **Active** tab shows bounces that still need attention; the **Resolved** tab shows the ones that have cleared.
 
 </Callout>
 
@@ -22,7 +24,7 @@ Access the report directly from the Data Check reports area.
   <Step title="Go to the Bounced Email Addresses Report" icon="folder">
 
   - Sign in with an admin account.
-  - In the main navigation, go to **Reports** and select **System**.
+  - In the main navigation, go to **Reports** and select **System Reports**.
   - Under **Data Check**, choose **Bounced Email Addresses**.
   - Confirm the page title reads `Bounced Email Addresses`.
 
@@ -33,7 +35,7 @@ Access the report directly from the Data Check reports area.
   <Step title="Follow up and resolve bounces" icon="check-circle">
 
   - Stay on the **Active** tab to work the bounces that still need attention.
-  - Select a **Name** to open the profile, then confirm and correct the email address with the contact.
+  - Select a **Name** to open the profile, then confirm and correct the email address with the contact, or use the **Bounced** badge on the profile to see why and **Clear bounce** when the address is fixed.
   - Switch to the **Resolved** tab to see bounces that have already cleared, along with the date each was archived.
 
   When an address is updated, that bounce moves to **Resolved** on its own. A green banner tells you how many bounces were archived because the account owner has since updated their email address.
@@ -42,9 +44,13 @@ Access the report directly from the Data Check reports area.
 
 </Steps>
 
+## Clear a bounce from a profile
+
+On the profile, click the primary email **Bounced** badge to open **Bounced email**. Review **Last bounce**, then **Clear bounce** if you have permission to edit profiles. Confirm **Yes, clear it**. See [Profiles](/profiles) contact information for the full badge flow.
+
 ## Report columns
 
-Each row is an email address that permanently bounced.
+Each row is an email address that bounced.
 
 ### Name
 
@@ -68,10 +74,10 @@ The date and time the bounce was recorded.
 
 ### Archived
 
-Shown only on the **Resolved** tab. The date and time the bounce was archived, which happens automatically once the address is updated.
+Shown only on the **Resolved** tab. The date and time the bounce was archived, which happens automatically once the address is updated, or when you clear the bounce from the profile.
 
 <Callout kind="alert">
 
-A permanently bounced address will keep failing until it is corrected. Fix the email on the profile so the account owner starts receiving your messages again and the bounce clears to the **Resolved** tab.
+A bounced address will keep failing until it is corrected or the bounce is cleared after you know the address works. Fix the email on the profile so the account owner starts receiving your messages again and the bounce clears to the **Resolved** tab.
 
 </Callout>

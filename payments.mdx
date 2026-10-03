@@ -23,11 +23,11 @@ By default the report shows **successful payments only**. Switch to **All outcom
 
 ## Filters
 
-Set your filters at the top of the report, then select **Apply**.
+Filters live in the **Filters** card at the top of the report. Set the ones you need, then select **Apply filters**. Select **Clear all** to reset every filter to its default.
 
-Your filter choices stay in the page URL, so you can bookmark or share a filtered view. PDF, XLS, and HTML exports use the same filters as the table.
+Your filter choices stay in the page URL, so you can bookmark or share a filtered view. Exports use the same filters as the table.
 
-When filters are active, an **Active filters** row of removable chips appears above the filter cards. Select **Clear all** to reset every filter to its default.
+Always-visible filters:
 
 <ParamField body="Season" param-type="selector" required="false" deprecated="false">
   Season or program group to limit payments to.
@@ -37,7 +37,7 @@ When filters are active, an **Active filters** row of removable chips appears ab
   Start and end dates that limit which payments are shown.
 </ParamField>
 
-<ParamField body="Outcome" param-type="selector" required="true" deprecated="false">
+<ParamField body="Payment result" param-type="selector" required="true" deprecated="false">
   **Successful only** (the default) or **All outcomes**, which adds declined cards, returned ACH debits, and other failures.
 </ParamField>
 
@@ -52,6 +52,8 @@ When filters are active, an **Active filters** row of removable chips appears ab
 <ParamField body="Deposit #" param-type="text" required="false" deprecated="false">
   Limit to payments settled into a specific deposit or batch ID.
 </ParamField>
+
+Open **More filters** for the rest (a count appears on the control when any of these are active). Helper text there explains that you tick boxes to narrow the list.
 
 <ParamField body="Payment type" param-type="checkboxes" required="false" deprecated="false">
   Any of **Credit card**, **ACH**, **Discount**, **Adjustment**, **Balance Transfer**, **Check**, and **Cash**. A **Canteen** option appears when your account uses it. **Balance Transfer** rows are season-to-season credit or balance moves, not new money collected.
@@ -73,6 +75,8 @@ When filters are active, an **Active filters** row of removable chips appears ab
   Limit to payments tied to one or more specific discount codes.
 </ParamField>
 
+If the table cannot load, you may see **We could not load payments. Try again, or choose a shorter date range.** with **Try again**.
+
 ## Columns
 
 <ParamField body="Date" param-type="date" required="true" deprecated="false">
@@ -88,7 +92,7 @@ When filters are active, an **Active filters** row of removable chips appears ab
 </ParamField>
 
 <ParamField body="Settlement status" param-type="text" required="true" deprecated="false">
-  Where the payment is in processing and settlement.
+  Where a credit card or ACH payment is in processing and settlement. Discount, adjustment, balance transfer, cash, and check rows leave this blank.
 </ParamField>
 
 <ParamField body="Enrolled family members" param-type="text" required="false" deprecated="false">
@@ -121,10 +125,10 @@ When filters are active, an **Active filters** row of removable chips appears ab
 
 ## Export
 
-Above the table, use the **PDF**, **XLS**, or **HTML** export buttons to download the **full filtered list**. The table buttons inside the report copy or export only the current page.
+Above the table, use **Export all pages** with **PDF**, **XLS**, or **HTML** to download the full filtered list. The table buttons inside the report copy or export only the current page.
 
 <Callout kind="tip" collapsed="false">
-  Confirm your outcome, amount, deposit, card brand, recorded-by, payment type, and date filters before exporting. The export reflects exactly the filtered list you have set.
+  Confirm your payment result, amount, deposit, card brand, recorded-by, payment type, and date filters before exporting. The export reflects exactly the filtered list you have set.
 </Callout>
 
 ## Run the report
@@ -138,11 +142,11 @@ Above the table, use the **PDF**, **XLS**, or **HTML** export buttons to downloa
     Choose the season and dates you want to review.
   </Step>
 
-  <Step title="Choose an outcome and refine" icon="filter" title-type="p">
-    Keep **Successful only** for collected money, or switch to **All outcomes** to investigate declines and returns. Then narrow by **Last 4**, **Amount**, **Deposit #**, payment type, transaction type, **Card brand**, **Recorded by**, or discount. Select **Apply**.
+  <Step title="Choose a payment result and refine" icon="filter" title-type="p">
+    Keep **Successful only** for collected money, or switch to **All outcomes** to investigate declines and returns. Then narrow by **Last 4**, **Amount**, **Deposit #**, and (under **More filters**) payment type, transaction type, **Card brand**, **Recorded by**, or discount. Select **Apply filters**.
   </Step>
 
   <Step title="Review and export" icon="play-circle" title-type="p">
-    Review the rows and page totals, then export the full filtered list if you need it elsewhere. Use the **Active filters** chips or **Clear all** when you want to start over.
+    Review the rows and page totals, then use **Export all pages** if you need the full filtered list elsewhere. Select **Clear all** when you want to start over.
   </Step>
 </Steps>

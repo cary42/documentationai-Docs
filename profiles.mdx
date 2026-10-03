@@ -89,7 +89,7 @@ The header gives you a quick snapshot of who you are looking at:
 
 - **Name and status**: Shows the person’s full name and a badge that reflects their current status (for example, active, inactive, or **Suspended**). When the status is **Suspended**, the person cannot log in to the portal or app.
 
-- **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly. Next to the primary email (or alone when there is no email yet), use **Manage emails** to add or edit addresses on the account.
+- **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly. Next to the primary email (or alone when there is no email yet), use **Manage emails** to add or edit addresses on the account. When the primary address has bounced, a **Bounced** badge appears next to it. Click the badge to open **Bounced email**, which shows that email is not being delivered, the **Last bounce** details (**Email** subject and **Reason** when available), and a link **See all bounced emails** to [Bounced Email Addresses](/bounced-emails). With permission to edit profiles, use **Clear bounce** once the address is fixed (confirm **Yes, clear it**). Success: **Bounce cleared. Email is back on.** (or that email stays off if they unsubscribed). If the address bounces again, it is marked bounced again.
 
 - **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, the pencil control (**Edit name, email, and phone**) opens **Edit contact**, where you update **First name**, **Last name**, **Email**, and phone, then **Save**. A short **Saved.** toast confirms the change, and the family-row email (and this profile's primary email when it matches) refresh in place. You need permission to edit profiles, and you can only edit members of the same family.
 
@@ -358,7 +358,7 @@ Use this card when a family asks why they are (or are not) receiving welcome ema
 Use this when the person has **never signed in** and needs to create a password (or continue with Google or Apple) for the first time.
 
 1. Open their profile. Confirm they have an email on file.
-2. Click **Send setup link** in the profile header (tooltip: **Temporary: emails a magic setup link because they have never signed in**), or choose **Send account setup link** from **Actions**.
+2. Click **Send setup link** in the profile header (tooltip: **Emails a link they can use to set up their account**), or choose **Send account setup link** from **Actions**.
 3. Confirm: **Send an account setup email with a link to create a password or continue with Google/Apple?** then **Send**.
 4. Success: **Setup link sent to** their email. Subject: **Set up your account**.
 
@@ -545,7 +545,7 @@ Each tab focuses on a different part of the person’s record. Use these section
       </Step>
 
       <Step title="Open the Switch modal and choose the new session" icon="edit" title-type="p">
-        Click **Switch** when hovering over the session. Choose the session under **Switch to** (your session singular label). Review **Price Difference**. Optional: **Use original purchase date** and **Note** (shown on the invoice). When the target session uses weeks and Special Weeks is on, a **Weeks** checklist appears. Select exactly the number of weeks the session requires before you continue.
+        Click **Switch** when hovering over the session. The **Switch to** dropdown (your session singular label) starts blank with placeholder **Select [session]**. Choose the new session. Until you pick one, **Price Difference** stays **$0.00**, and confirming without a choice shows **Choose what to switch to.** Optional: **Use original purchase date** and **Note** (shown on the invoice). When the target session uses weeks and Special Weeks is on, a **Weeks** checklist appears. Select exactly the number of weeks the session requires before you continue.
       </Step>
 
       <Step title="Confirm the price difference and complete the switch" icon="check-circle" title-type="p">
