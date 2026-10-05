@@ -10,6 +10,62 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-10-05" description="W-4 and I-9, Paying vs Non-paying, Membership Recurring Charges, forms trash, SMS AI" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **W-4 collection** - Paid **Admin → Site Settings → Modules** card for federal W-4 (optional New York IT-2104), Staff Hub request and download. See [W-4 collection](/w4-collection).
+  - **I-9 verification** - Paid Modules card for Form I-9; needs the **I-9 Records** permission. See [I-9 verification](/i9-verification).
+  - **Paying vs Non-paying** - Under **Reports → System Reports → Money**, season grid with paying and non-paying counts. See [Paying vs Non-paying](/system-report-paying-vs-non-paying).
+  - **Membership Recurring Charges** - Under **Reports → System Reports → Money**, upcoming membership dues with summary tiles that filter the table. See [Membership Recurring Charges](/system-report-membership-recurring-charges).
+  - **Recently deleted forms** - Soft-delete with **Recently deleted**, **Undo**, and 30-day restore on the Forms list and profile Forms tab. See [Forms](/forms#recently-deleted-forms).
+
+  ## Updates
+
+  - **Retention card** - **All campers** / **Without $0 campers**, **Email This List**, **Grade** column, and **Configure retention** grade settings. See [Chart Reports](/system-report-charts#retention-dashboard-card).
+  - **Integrations field mapping** - Map profile fields for Mailchimp, Klaviyo, Constant Contact, and Salesforce; Klaviyo can mark synced families as subscribed. See [Integrations](/integrations).
+  - **Custom report filters** - Plain-language filter summary, **and** / **or** connectors, **Search historical data**, and **Family Balance** display columns when finance reporting is on. See [Custom Reports](/custom-reports).
+  - **Email Templates Send preview** - Send a test of the template you are editing. See [Email Templates](/email-templates).
+  - **SMS Rewrite with AI** - Opens from **Shorten**, with **Sending this SMS** progress; carrier **STOP** turns off **SMS Subscribed**. See [SMS](/sms).
+  - **Email this group** - Sample message before **Yes, send it**; **Open in full editor** can lock Recipients until **Replace with a filter**. See [Mass Emails](/mass-emails).
+  - **Bounced email** - Profile **Bounced** badge opens reason and **Clear bounce**. See [Bounced Emails](/bounced-emails) and [Profiles](/profiles).
+  - **Sibling Amount By Weeks Enrolled** - Set sibling discount dollars by weeks attended. See [Discounts](/discounts#create-a-sibling-discount).
+  - **Finix billing address** - Parents can **Add address** / **Edit** on **Accounts on File**. See [Payment Methods](/payment-methods).
+  - **Payments filters** - **More filters**, **Apply filters**, **Export all pages**, and **Payment result**. See [Payments](/payments).
+  - **Processing Volume** - KPI tiles open Payments; inactive seasons stay in the season list. See [Processing Volume](/processing-volume).
+  - **References** - Compact **References** card, **Reopen** completed references, Staff Hub counts. See [References](/references).
+  - **Required Field Indicator** - Badge, asterisk, or mark-optional on **Admin → Site Settings → Basic**. See [Settings](/settings).
+  - **Stepped portal forms** - Every camp gets the stepped parent form; uploads show **Received** after save. See [Forms](/forms).
+  - **Check Permissions results** - FAQ steps for each result when a form is missing on the parent site. See [When a family cannot find a form](/user-cant-see-the-form-on-their-portal).
+  - **Only as needed medications** - Families can mark **Only as needed, not on a schedule** on the portal Medications page. See [Medications & health](/medications#the-fields-you-capture).
+  - **Health report PDF** - Single and combined health reports use a shared two-column layout. See [Health Report](/health-report) and [Medications & health](/medications#health-reports).
+  - **Food Fulfillment** - Date range lives in the header picker. See [Food and Per-Day Ordering](/food-and-per-day-ordering).
+  - **Revenue Summary** - Profile breakdown column reads **Campers**. See [Revenue Summary](/revenue-summary).
+  - **No Primary Payment Method** - Footer shows **Total: N family/families**. See [Families Without a Primary Payment Method](/system-report-families-without-primary-payment-method).
+  - **Mass Emails Account Setup URL** - One merge field for the bare setup link. See [Mass Emails](/mass-emails#account-setup-merge-fields).
+  - **Season Snapshot ready** - Muted helper text instead of a badge. See [Manage Seasons](/manage-seasons).
+  - **Staff Hub Application Status** - Always uses the Application Status field (no override). See [Staff Hub](/staff-hub).
+  - **FAQ and Medications in the app menu** - When those modules are on. See [FAQ](/faq) and [Mobile App](/mobile-app).
+
+  ## Fixes
+
+  - **Sidebar Season on phones** - The season picker opens on the first tap. See [Account](/account#set-your-default-season).
+  - **Finix payment plans** - Saving a plan when a payment method is already on file, and returning after a missing-plan error, complete correctly.
+  - **Same-amount app pay** - A second identical payment in the same request is refused so families are not charged twice.
+  - **Required field badge** - **Red "required" badge** renders as a red pill on the revised portal form.
+  - **Forms question order** - Dragging questions no longer snaps back after you add or search.
+  - **Finix Deposit Summary** - Shared merchants across sibling orgs no longer show a false **Overdue**.
+  - **New Users By Season** - Seasons rank by date, not by id. See [New Users By Season](/new-users-by-season).
+  - **Membership charges and credits** - Recurring membership double-charge and credit creation edge cases are corrected.
+  - **Invoice system emails** - No longer tagged as Mass Email in logs.
+  - **Invoice PDF Amount** - Surcharged payments keep a correct Amount column.
+  - **Never-answer mail servers** - Addresses that never answer can flag as bounced after repeated transient failures. See [Bounced Emails](/bounced-emails).
+  - **Finix Resubmit** - Resubmitting verification that is already pending succeeds.
+  - **Account setup link** - Shown for people who have never signed in (not on every signed-in profile). See [Profiles](/profiles#send-an-account-setup-link).
+  - **Discount apply-after** - Credits that apply after discounts stay limited to the same line item.
+  - **Constant Contact / Klaviyo sync** - Existing contacts update instead of failing on conflict.
+  - **Scheduled payments Phone** - Prefers the cell number when both home and cell exist.
+</Update>
+
 <Update label="2026-09-28" description="OTC dispense, hub filters, Family and Linked Fields, Retention card, pickup blocks" tags={["feature","improvement","bugfix"]}>
   ## New
 
