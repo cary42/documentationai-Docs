@@ -434,6 +434,11 @@
                 "icon": "pill"
               },
               {
+                "title": "Immunization",
+                "path": "immunization",
+                "icon": "shield-check"
+              },
+              {
                 "group": "Payments",
                 "pages": [
                   {

@@ -85,6 +85,8 @@ A template includes:
 
   <Step title="Choose what happens after signing" icon="settings" title-type="p">
     In the **After signing** panel, set **User status** (and the application-status control when it appears). Leave either on **No Change** to keep the signer's current value. See [Optional status changes on signing](#optional-status-changes-on-signing).
+
+    For staff contracts, you can also check **Require a guardian signature under 18**. Helper text: **Staff under 18, or with no birth date on file, must have a guardian sign this contract too.** When that applies, the portal shows a required **Guardian Signature** field (placeholder **Guardian full name**) before the staff member can finish signing.
   </Step>
 
   <Step title="Save the template" icon="check-circle" title-type="p">
@@ -409,7 +411,7 @@ To keep contract data clean:
   </Expandable>
 
   <Expandable title="Can multiple people sign the same contract?" default-open="false">
-    Contracts are designed as one-to-one between the system user (staff, camper, or guardian profile) and a contract instance. If you need multiple people to sign for the same camper (for example, two guardians), generate separate contract instances for each person.
+    Contracts are designed as one-to-one between the system user (staff, camper, or guardian profile) and a contract instance. If you need multiple people to sign for the same camper (for example, two guardians), generate separate contract instances for each person. For underage staff, **Require a guardian signature under 18** collects a second signature on the same staff contract instead of a separate instance.
   </Expandable>
 
   <Expandable title="How long are signed contracts stored?" default-open="false">
