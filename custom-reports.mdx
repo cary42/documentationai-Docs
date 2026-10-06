@@ -97,6 +97,10 @@ Filters define **who** appears in the report. You can add one filter or many, de
 
 As you change filters, a plain-language summary appears under the rows (for example, **Matches people where User Type is Camper and Season is Summer 2026.**). Groups joined with **or** read as **either … or …**. A row with no value yet is called out as not applied (for example, **Allergies has no value yet, so it is not applied.**).
 
+Saved text filters keep their values when you reopen the report. For example, a **Last Name** **contains** filter still shows the text you saved, so running the report again does not drop that condition.
+
+When you filter on **Season** (or a season profile field) with **is**, people who have that season on their profile are included even if they have no registration in that season. That is how staff and other non-enrolled people match a season filter. People who do have a registration in the season still need an active enrollment in that season to match.
+
 The same **and** / **or** joining and summary appear when you build recipient filters for mass email, SMS, and push. On those editors, the sticky **Who** summary may lead with **People where** instead of **Matches people where**.
 
 ### Search historical data

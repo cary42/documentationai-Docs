@@ -15,11 +15,11 @@ The report lists each scheduled payment with key contact details, amount, timing
 
 ## Open the Scheduled Payments Report
 
-Access the Scheduled Payments Report directly from the Reports area.
+Access the Scheduled Payments Report from the dashboard Payment Issues card (not from **Reports → System Reports**).
 
 <Steps>
-  <Step title="Go to the report in Reports" icon="folder" titleType="p">
-    In Campium Money, go to **Reports** &gt; **System** and select **Scheduled Payments Report**.
+  <Step title="Go to the report" icon="folder" titleType="p">
+    On the dashboard, open the **Payment Issues** card and select **Scheduled Payments**. You can also follow a **Scheduled Payments** link from **Financials → Revenue Summary** when that stat is shown.
   </Step>
 
   <Step title="Confirm the page title" icon="check-circle" titleType="p">
@@ -29,27 +29,19 @@ Access the Scheduled Payments Report directly from the Reports area.
 
 ## Filters and display settings
 
-The Scheduled Payments Report includes one primary filter and a column picker that controls which profile fields appear as table columns.
+The Scheduled Payments Report includes season and payment-type filters, a month filter on the chart, and a column picker for profile fields.
 
-### Filter by Type
+### Season and Payment type
 
-Use the **Filter by Type** dropdown to narrow the list of scheduled payments by payment method (credit card, ACH, or no account on file).
-
-#### Filter by Type
-
-Choose a payment method to include only matching scheduled payments in the results table. The options are **All Payments**, **Credit Card Only**, **ACH Only**, and **No Account on File**. When you change this value, the report immediately updates the table below.
-
-<Callout kind="info">
-  Changes to **Filter by Type** update the report right away. You do not need to click a separate run or refresh button after adjusting this filter.
-</Callout>
+Use the season control and the **Payment type** dropdown in the header to narrow the list. Payment type options are **All Payments**, **Credit Card Only**, **ACH Only**, and **No Account on File**. Changes update the table and chart right away.
 
 ### Profile Fields Display Settings
 
 Use Profile Fields Display Settings to choose which profile fields you want to see as additional columns in the results table.
 
-You configure these in the **Profile Fields Display Settings** panel using the **Select Profile Fields to Display** control.
+You configure these with the **Display Columns** control.
 
-#### Select Profile Fields to Display
+#### Display Columns
 
 Choose one or more profile fields to include as extra columns in the results table. Selected fields appear as columns in the table, with each field name shown as its display name.
 
@@ -59,11 +51,11 @@ Choose one or more profile fields to include as extra columns in the results tab
 
 ## Expected Income chart
 
-At the top of the report, Campium shows a chart labeled **Expected Income** that summarizes upcoming payments.
+At the top of the report, Campium shows a chart labeled **Expected Income** that summarizes upcoming payments by month.
 
 #### Expected Income
 
-See the income expected from the scheduled payments currently included by your filters, visualized as a chart. When you change **Filter by Type**, it updates to reflect the visible rows in the table. Use this to understand short-term cash flow based on pending scheduled payments.
+See the income expected from the scheduled payments currently included by your filters. Click a month column on the chart to limit the table to payments due in that month. A banner shows **Showing payments due in** the month name; click **Show all months** (or click the same month again) to clear the filter. Use this to understand short-term cash flow based on pending scheduled payments.
 
 ## Results table columns
 
@@ -101,7 +93,7 @@ Shows the season, term, or program label that the scheduled payment belongs to, 
 
 #### Type
 
-Shows the payment method for this scheduled payment, such as credit card, ACH, or no account on file. This value matches the options in **Filter by Type**.
+Shows the payment method for this scheduled payment, such as credit card, ACH, or no account on file. This value matches the options in **Payment type**.
 
 #### Message
 

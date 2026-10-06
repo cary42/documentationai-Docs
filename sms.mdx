@@ -17,7 +17,7 @@ Campium sends SMS messages from the number `(551) 209-2312`. This is a one-way n
 
 Open SMS from the main navigation:
 
-1. Go to **Communication**.
+1. Go to **Communications**.
 2. Click **SMS**.
 
 The SMS page shows three main areas: **Settings**, **Recipients**, and **Logs**.
@@ -36,7 +36,7 @@ On the **Communications → SMS** page, start a new message if one is not alread
 
 <Step title="Fill in Settings" icon="settings">
 
-Go to the **Settings** tab and complete the fields for your message, timing, and any additional recipients. Campium marks required fields with an asterisk `*`. Keep your SMS text short and clear so families understand the update at a glance.
+Go to the **Settings** tab and complete the fields for your message, timing, and any additional recipients. Campium marks required fields with an asterisk `*`. Keep your SMS text short and clear so families understand the update at a glance. Use **Insert link** or **Insert account setup link** when you need a URL in the message (see [Insert link and account setup link](#insert-link-and-account-setup-link)).
 
 </Step>
 
@@ -102,11 +102,24 @@ Type the text you want families to receive in the **SMS message** box.
 
 <Callout kind="tip">
 
-Campium shows: up to 160 characters sends as one message; longer text, emoji, and special characters send as multiple messages, each billed at $0.01. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter helps you stay within one segment.
+Campium shows: up to 160 characters sends as one message; longer text sends as multiple messages, each billed at $0.01. Emoji and special characters are removed, and curly quotes and long dashes become plain ones, because any of them would split the text into more messages. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter helps you stay within one segment.
 
 </Callout>
 
 Keep your message focused on one topic, such as a schedule change, arrival reminder, or weather update.
+
+### Insert link and account setup link
+
+Above the **SMS message** box you can:
+
+- **Insert link** - Opens **Insert a link**. Enter a full web address that starts with `https://`, then click **Insert**. Campium shortens long links to your parent portal address when the message sends, and the character counter already counts those shorter links.
+- **Insert account setup link** - Inserts a personal setup placeholder. Each recipient gets their own short link that signs them in to set up their account. It works once and expires after 14 days.
+
+Helper text under the message box: **Long links are shortened to your portal address when the message sends. The account setup link becomes a personal short link for each recipient that signs them in to set up their account. It works once and expires after 14 days.**
+
+### Text families from a report
+
+On **Reports → System Reports → No Primary Payment Method** and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a **Text this group** modal. Write the message, review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need permission to manage email (the same permission used for **Email this group** on those reports). See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
 
 ### Rewrite with AI
 

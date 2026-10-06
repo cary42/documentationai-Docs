@@ -23,8 +23,8 @@ Use this workflow to open the Family Payment Plans Report, choose the season, an
 
 <Step title="Open the report page" icon="folder">
 
-- Go to the Money or Reports area of the admin portal.
-- Open the **Family Payment Plans Report** from the list of system reports.
+- On the dashboard, open the **Payment Issues** card and select **Payment Plans** (list label). The page title is **Family Payment Plans Report for** your selected season.
+- You can also open this report from a plan's usage link under **Admin → Payment Plans**.
 
 Success signal: The page header displays **Family Payment Plans Report for** your selected season and you see the season and payment plan filters above the results table.
 
@@ -40,10 +40,10 @@ Success signal: The page title updates to **Family Payment Plans Report for Summ
 
 <Step title="Select a payment plan" icon="settings">
 
-- Use the **payment plan selector** to choose a specific plan or view all plans.
+- Use the **payment plan** dropdown to choose a specific plan, **All Payment Plans**, or **No Plan Assigned**.
 - After selecting, wait for the report to refresh.
 
-Success signal: The table shows only families assigned to the selected payment plan (or all plans, depending on your choice).
+Success signal: The table shows only families for the selected plan filter. **All Payment Plans** includes families with a plan and families with none. **No Plan Assigned** lists only families without a plan.
 
 </Step>
 
@@ -59,7 +59,7 @@ Use the season selector at the top of the page to choose the active season to re
 
 #### Payment plan
 
-Use the payment plan selector to filter results to a single payment plan or view all plans. Use this to confirm enrollment or balances for a particular plan.
+Use the payment plan dropdown to filter results to a single plan, **All Payment Plans**, or **No Plan Assigned**. Use this to confirm enrollment or balances for a particular plan, or to find families who still need a plan.
 
 #### Guardians / Enrollees view
 
@@ -139,7 +139,7 @@ Use profile field columns to avoid exporting to a spreadsheet for basic context.
 
 ## Report columns
 
-The main table shows one row per family with a payment plan in the selected season, plus any dynamic profile field columns you enabled.
+The main table shows one row per family in the selected season (with or without a payment plan, depending on your filter), plus any dynamic profile field columns you enabled.
 
 ### Standard columns
 
@@ -157,7 +157,7 @@ In **Enrollees** view, this column is replaced by **User Status**, which shows e
 
 #### Plan Name
 
-Name of the assigned payment plan for the family. This helps you confirm each family is on the correct plan and compare across different plan types.
+Name of the assigned payment plan for the family. Families with no plan show a **No Plan Assigned** badge. This helps you confirm each family is on the correct plan and spot who still needs one.
 
 #### Balance
 
@@ -177,7 +177,7 @@ Email address for the second guardian contact, if available. Use this for copied
 
 #### Method
 
-Saved payment method associated with the family's payment plan, such as card or bank account. Use this to verify whether families have a valid method on file for scheduled payments.
+Primary payment method on file for the family, shown as **ACH** or **Credit** when a method exists. Use this to verify whether families have a valid method ready for scheduled payments.
 
 ### Dynamic profile field columns
 
