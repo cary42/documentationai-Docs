@@ -231,9 +231,29 @@ The Edit Season modal also includes an **Email invoice to all families registere
 
 When you check it, an optional message field appears so you can add a short note that is included with the emailed invoices. Leave the message blank to send the invoices without extra wording, or leave the checkbox unchecked to save the season without emailing anyone.
 
+## Freeze a running season's data
+
+Use this when you open the next season for registration before the current season ends, and you still need to edit the running season's profile answers.
+
+On an **Active** season that does not already have a snapshot, **Edit Season** shows **Opening next season before this one ends?** with **Freeze this season's data**. Helper text: **Take a snapshot of this season's profile data now so you can keep editing it after next season's registration opens, while the season stays active.**
+
+1. Open **Seasons**, then **Edit Season** for the active season.
+2. Click **Freeze this season's data**.
+3. Confirm **Freeze this season's profile data now? From then on, every profile and customer report asks which season you are editing.** with **Yes, freeze it**.
+4. Campium shows **Snapshot queued. It builds in the background, and you can edit this season's data once it is ready.**
+
+After the freeze is ready:
+
+- Profiles and customer reports ask which season you are editing (**Current data** vs the frozen season).
+- Editable freeze options in reports are labeled with the season name and **(you can edit this season)**.
+- On a profile, seasons and products for that frozen season stay in sync with session changes (helper: **Updates when this season's sessions change**). Other snapshot fields that cannot be edited show **Can't be changed for this season**.
+- When you later set the season to **Inactive**, helper text explains that keeping the early freeze **adds anyone who enrolled since and makes it read-only**.
+
+You need access to manage seasons (the same permission as the **Seasons** area). Freezing is only offered while the season is **Active** and no snapshot already exists.
+
 ## Use profile-data snapshots for historical reporting
 
-When you change a season from **Active** to **Inactive**, Campium takes a snapshot of the profile data automatically. Helper text under the status field says **A snapshot of the profile data is taken when you save. It runs in the background.**
+When you change a season from **Active** to **Inactive**, Campium takes a snapshot of the profile data automatically (unless you already froze the season early). Helper text under the status field says **A snapshot of the profile data is taken when you save. It runs in the background.**
 
 If the season already has a snapshot, helper text says you already have one and can keep it or override it when you save. On save, confirm **You already have a snapshot. Do you want to override it?** with **Yes, override it** or **No, keep it**.
 
@@ -304,7 +324,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   Yes. On a person's profile, open **All User Data** (or a custom data view). When ready snapshots exist for that person, choose a season from the **Season snapshot** menu next to **Filter by profile field**. Current answers stay editable on the left; the snapshot values appear on the right, with a **Changed** badge where they differ.
 
-  Snapshots come from deactivating a season (Active to Inactive). See [Profiles](/profiles#tabs-and-sections) for the comparison view.
+  Snapshots come from deactivating a season (Active to Inactive), or from **Freeze this season's data** while the season is still active. See [Profiles](/profiles#tabs-and-sections) for the comparison view.
 
   </Expandable>
 
@@ -358,7 +378,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   <Expandable title="Are snapshot reports read-only, or can they change live season data?">
 
-  Snapshot reporting is described here as a way to use saved historical profile data in reports. Running reports does not imply that live season data is changed.
+  Most snapshots are saved history and stay read-only. If you froze a season early with **Freeze this season's data**, you can still edit that season's profile answers from a profile or customer report until you close the freeze (for example when you deactivate the season).
 
   </Expandable>
 

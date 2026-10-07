@@ -115,7 +115,11 @@ Above the **SMS message** box you can:
 - **Insert link** - Opens **Insert a link**. Enter a full web address that starts with `https://`, then click **Insert**. Campium shortens long links to your parent portal address when the message sends, and the character counter already counts those shorter links.
 - **Insert account setup link** - Inserts a personal setup placeholder. Each recipient gets their own short link that signs them in to set up their account. It works once and expires after 14 days.
 
-Helper text under the message box: **Long links are shortened to your portal address when the message sends. The account setup link becomes a personal short link for each recipient that signs them in to set up their account. It works once and expires after 14 days.**
+Helper text under the message box always includes: **Long links are shortened to your portal address when the message sends.** When the message includes an account setup link placeholder, an extra note explains that it becomes a personal short link for each recipient, works once, and expires after 14 days.
+
+### Start with your camp name
+
+On **Settings**, leave **Start with your camp name** checked (it is on by default) so each text begins with your camp name. The hint explains that families can tell who the text is from, and that the character count includes the prefix. Uncheck it only when the message already names your camp. The same checkbox appears on **Text this group** from reports. The prefix is added when the message sends; it is not stored inside the draft body.
 
 ### Text families from a report
 
@@ -187,6 +191,10 @@ On this tab, you generally:
 
 Aim for the smallest accurate group you need, such as a single session, age group, or bus route, instead of the entire camp, to keep your messages relevant.
 
+### Skip people without changing filters
+
+When you open the recipient list for a mass text, a **Send** column lets you uncheck anyone who should not get this SMS. Helper text: **Uncheck anyone who should not get this text. Unchecking a camper skips both guardians. Changes save right away.** The summary shows how many people are unchecked and will be skipped. Skipped people are left out of the send and out of the sent count.
+
 <Callout kind="info">
 
 SMS messages from Campium are one-way. Families see them as coming from `(551) 209-2312` and cannot reply, so they will follow up using your usual contact channels.
@@ -202,6 +210,8 @@ On this tab, you can typically:
 - View when an SMS was sent or scheduled.
 - See which recipients were included.
 - Confirm that a message you expected to go out appears in the history.
+
+When people were unchecked before send, **Logs** also shows **Skipped (N)** with columns **Name**, **Unchecked by**, and **When**. Helper text: **Unchecked in the recipient list, so they did not get this text and are not counted as sent.**
 
 Use Logs when:
 
