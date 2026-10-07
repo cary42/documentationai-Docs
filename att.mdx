@@ -1,39 +1,47 @@
 ---
-title: Attendance Sheet
-description: Print a paper PDF sheet for taking check-in and check-out attendance by hand.
+title: "Attendance Sheets"
+description: "Print paper PDF attendance sheets by session, group, or bus for a date range."
 ---
 
-## Overview
-
-Use the Attendance sheet to print a paper PDF for taking check-in and check-out attendance by hand. It is handy when you want to track attendance away from a screen, such as at a trailhead, a cabin, or an off-site activity.
+Use **Attendance Sheets** when you need printable paper rosters for check-in and check-out away from a screen, such as at a trailhead, cabin, or bus stop.
 
 <Callout kind="info">
-  This is a printable paper sheet. To record attendance online instead, use the online attendance reports for a single session or for a whole season.
+  This builds paper PDFs. To record attendance online, use the live attendance reports instead. See [Attendance](/attendance).
 </Callout>
-
-## How it works
-
-The page shows a full year of monthly calendars for the selected season. Pick a day, and Campium builds a printable PDF attendance sheet for that day.
-
-<Steps>
-  <Step title="Choose a season" icon="folder" titleType="p">
-    Use the season dropdown in the page header to pick the season you are taking attendance for. The export always targets a single season, so there is no "All Seasons" option here.
-  </Step>
-
-  <Step title="Click the day you need" icon="calendar" titleType="p">
-    In the calendar grid, click the date you want. Campium generates a PDF attendance sheet for that day and season, ready to print.
-  </Step>
-
-  <Step title="Print and take attendance on paper" icon="printer" titleType="p">
-    Print the sheet and use it to check campers in and out by hand during the day.
-  </Step>
-</Steps>
 
 ## Where to find it
 
-In Campium, go to **Reports** &gt; **System** and select the Attendance sheet.
+1. Open **Reports** in the left navigation.
+2. Choose **System Reports**.
+3. Under **Attendance**, select **Attendance Sheets (PDF)**.
 
-## Troubleshooting
+You need the **Attendance Module** on in **Admin → Site Settings → Modules**, and your role must include the **Attendance** permission.
 
-- **No day exports anything**: Confirm a season is selected in the header dropdown before clicking a date.
-- **Wrong campers on the sheet**: Check that the season in the header matches the season you are taking attendance for.
+## Print sheets
+
+The page title is **Attendance Sheets**. Pick a season in the header, then set the date range in the date picker. Campium defaults to the current week (Monday through Friday).
+
+<Steps>
+  <Step title="Choose how sheets are split" icon="layers">
+    Under **One sheet for each**, pick **Session**, **Group**, or **Bus** (Bus appears when you have bus profile fields). Use **Only these** to limit which sessions, groups, or buses print, or leave it empty for all of them.
+  </Step>
+  <Step title="Pick a layout" icon="layout">
+    Under **Layout**, choose **Weekly, Mon-Fri**, **Weekly, 7 days**, **Daily**, **Daily sign-in / out**, or **Driver route** (Driver route is available when sheets are by **Bus**). Optionally turn on **Mark check-out too** so each day has IN and OUT circles. Choose **Page** portrait or landscape.
+  </Step>
+  <Step title="Choose what each row shows" icon="list">
+    Turn on extras such as sessions enrolled, **Group**, **Bus**, **Gender, age, grade, years**, **Health alerts**, guardian names and phones, and any extra profile fields you select.
+  </Step>
+  <Step title="Print or save the setup" icon="printer">
+    Click **Print PDF** to open the PDF in a new tab. Use **Save setup** to keep the options (except season and dates) under **Saved sheets**, then load them later with **Load a saved setup**.
+  </Step>
+</Steps>
+
+## Season dates
+
+If the selected season has no usable dates yet, Campium shows a notice that names the season and says it **has no dates yet**. Session and group sheets print empty until you set session dates (or Special Weeks dates when that is what the season uses). Administrators can open the linked **Sessions** or **Special Weeks** page from that notice.
+
+## Related guides
+
+- [Attendance](/attendance) for live check-in and check-out
+- [Attendance Reporting](/system-report-attendance-reporting) for historical online attendance
+- [Pickup Report](/pickup-report) for authorized pickup lists
