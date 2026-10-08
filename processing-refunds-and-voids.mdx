@@ -30,6 +30,12 @@ Before settlement, the payment is still pending and you will see a **Void** opti
 
 Once the payment settles, the **Void** option is no longer available and a **Refund** option appears for that transaction.
 
+## Imported payments
+
+Payments brought in from another system (for example a CampMinder or markdown import) do not show **Refund** or **Void** on the profile. Those rows have no processor transaction behind them, so Campium cannot reverse them the usual way.
+
+If someone still tries to refund or void an imported payment, Campium shows: **This payment was imported from another system, so it can't be refunded or voided here. Record a credit instead.**
+
 ## How to issue a refund
 
 Use the Sales tab in a user’s profile to refund completed credit card or ACH payments.

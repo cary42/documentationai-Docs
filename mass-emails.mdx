@@ -85,6 +85,8 @@ Use these steps when you want to send a new communication to a group of families
 
     - If the email will send people to register, use **Campaign tracking** to generate a tracked registration link (see [Track registrations from a mass email](#track-registrations-from-a-mass-email)).
 
+    Draft emails auto-save while you edit (see [Draft auto-save](#draft-auto-save)). You can still click **Save** any time.
+
     You can find details on each field in the [Email settings reference](#email-settings-reference) below.
 
   </Step>
@@ -200,12 +202,31 @@ Use the tabs at the top of the composer to move between content, audience, and h
   </Tab>
 </Tabs>
 
+## Draft auto-save
+
+While an email is still a **Draft**, Campium saves your edits automatically after you pause typing. The note in the bottom action bar shows the status:
+
+- Resting: **Changes save automatically. Send yourself a preview before sending it out.**
+- While you have edits waiting: **You have unsaved changes.**
+- While saving: **Saving…**
+- After a successful save: **Saved at** followed by the local time (for example **Saved at 3:42 PM.**)
+- If auto-save fails: **Couldn't save automatically. Click Save to see why.** or **Couldn't save automatically. Check your connection, then click Save.**
+
+Auto-save runs only when all of these are true:
+
+- The email is still a draft (not already sent)
+- **Auto-send** is off
+- **When To Send** is empty
+- Both **Subject** and the email body have content
+
+If you turn on **Auto-send**, fill in **When To Send**, or open a sent email, the note goes back to asking you to save yourself, and you use **Save** (with its usual confirms) before changes stick. Buttons such as **Preview**, **Send preview**, **Save**, and **Send** stay available either way.
+
 ## Track registrations from a mass email
 
 Use **Campaign tracking** on the **Settings** tab when the email should send people to register and you want clicks and signups attributed to that send.
 
 1. Open the email from **Communications → Mass Emails**.
-2. On the **Settings** tab, save the email if it is still unsaved.
+2. On the **Settings** tab, confirm the draft has saved (see [Draft auto-save](#draft-auto-save)), or click **Save** if you are on a scheduled or Auto-send draft.
 3. Under **Campaign tracking** / **Registration link**, click **Generate campaign link**.
 4. Choose **Website** or **Parent portal**, then click **Insert into email** (or copy the link).
 5. If you have access to Campaigns, open **View campaign results** to review performance.

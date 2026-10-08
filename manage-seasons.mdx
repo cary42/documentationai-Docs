@@ -239,12 +239,13 @@ On an **Active** season that does not already have a snapshot, **Edit Season** s
 
 1. Open **Seasons**, then **Edit Season** for the active season.
 2. Click **Freeze this season's data**.
-3. Confirm **Freeze this season's profile data now? From then on, every profile and customer report asks which season you are editing.** with **Yes, freeze it**.
+3. Confirm **Freeze this season's profile data now? From then on, every profile and custom report asks which season you are editing.** with **Yes, freeze it**.
 4. Campium shows **Snapshot queued. It builds in the background, and you can edit this season's data once it is ready.**
 
 After the freeze is ready:
 
-- Profiles and customer reports ask which season you are editing (**Current data** vs the frozen season).
+- On the **Seasons** list, under **Status**, the season shows a **Frozen (editable)** badge. Hover it for when the freeze was captured and a reminder that profiles and custom reports ask which season you are editing.
+- Profiles and custom reports ask which season you are editing (**Current data** vs the frozen season).
 - Editable freeze options in reports are labeled with the season name and **(you can edit this season)**.
 - On a profile, seasons and products for that frozen season stay in sync with session changes (helper: **Updates when this season's sessions change**). Other snapshot fields that cannot be edited show **Can't be changed for this season**.
 - When you later set the season to **Inactive**, helper text explains that keeping the early freeze **adds anyone who enrolled since and makes it read-only**.
@@ -257,7 +258,7 @@ When you change a season from **Active** to **Inactive**, Campium takes a snapsh
 
 If the season already has a snapshot, helper text says you already have one and can keep it or override it when you save. On save, confirm **You already have a snapshot. Do you want to override it?** with **Yes, override it** or **No, keep it**.
 
-Later, customer reports can use that saved snapshot to filter profile data based on what was true at the time the snapshot was taken. This is useful when profile details may change over time and you need reporting based on the earlier values.
+Later, custom reports can use that saved snapshot to filter profile data based on what was true at the time the snapshot was taken. This is useful when profile details may change over time and you need reporting based on the earlier values.
 
 <Callout kind="alert" collapsed="false">
   A snapshot does not happen until after you save the season, and it runs in the background. Use it when you want reporting to reflect profile data as it existed at that specific point in time.
@@ -271,7 +272,8 @@ After you queue a snapshot, the **Seasons** list shows status under that season'
 | --- | --- |
 | **Snapshot queued** (badge) | The snapshot is waiting to start. |
 | **Snapshot building** (badge) | The snapshot is copying profile answers in the background. |
-| **Snapshot ready** (helper text) | The snapshot finished. You can choose it under **Profile data** when you build a customer report. |
+| **Frozen (editable)** (badge) | You froze this season early while it is still **Active**. Profiles and custom reports ask which season you are editing. |
+| **Snapshot ready** (helper text) | The snapshot finished. You can choose it under **Profile data** when you build a custom report. |
 | **Snapshot did not finish** (badge) | The snapshot failed. Open **Edit Season** to retry. |
 
 Click a queued, building, or failed badge (or the season status) to open **Edit Season**. **Snapshot ready** helper text is informational; open **Edit Season** from the season status link if you need details.
@@ -280,7 +282,7 @@ Click a queued, building, or failed badge (or the season status) to open **Edit 
 
 In **Edit Season**, the **Profile data snapshot** section shows the same badge plus details for that season's latest snapshot:
 
-- When the snapshot is **ready**, you see when it was captured, how many saved answers it holds, and a reminder to choose it under **Profile data** on a customer report.
+- When the snapshot is **ready**, you see when it was captured, how many saved answers it holds, and a reminder to choose it under **Profile data** on a custom report.
 - When it is still **queued** or **building**, you see when it was queued and that the seasons list will update when it finishes.
 - When it **did not finish**, you see that there is nothing to report on from it, plus **Retry snapshot**.
 
@@ -293,7 +295,7 @@ To retry a failed snapshot:
 
 ## When snapshots run
 
-Campium queues a profile-data snapshot automatically when you move a season from **Active** to **Inactive**. That is most useful when historical profile values matter for reporting, especially if customer profile information may change after the season is saved. If a snapshot already exists, you choose whether to keep it or override it on save.
+Campium queues a profile-data snapshot automatically when you move a season from **Active** to **Inactive**. That is most useful when historical profile values matter for reporting, especially if family profile information may change after the season is saved. If a snapshot already exists, you choose whether to keep it or override it on save.
 
 ## Summary
 
@@ -378,7 +380,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   <Expandable title="Are snapshot reports read-only, or can they change live season data?">
 
-  Most snapshots are saved history and stay read-only. If you froze a season early with **Freeze this season's data**, you can still edit that season's profile answers from a profile or customer report until you close the freeze (for example when you deactivate the season).
+  Most snapshots are saved history and stay read-only. If you froze a season early with **Freeze this season's data**, you can still edit that season's profile answers from a profile or custom report until you close the freeze (for example when you deactivate the season).
 
   </Expandable>
 
