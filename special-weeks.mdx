@@ -185,11 +185,17 @@ On a camper **Sales** tab, staff can change weeks for an eligible session sale w
 
 1. Open the camper profile and go to **Sales**.
 2. On a qualifying session line, click the weeks value (dashed underline; title **Edit weeks**), or click **edit weeks** when no weeks are set yet (**None set**).
-3. In the modal, choose weeks under **Weeks for {season}**. Helper text: **Choose the weeks this camper will attend. The session product does not change.**
+3. In the modal, choose weeks under **Weeks for {season}**. The hint shows **Select exactly N weeks. M selected.** You must match the session's week count before you can save (same rule as switching sessions).
 4. Use **History** to pick a season and review **Week**, **Status**, and **Date**. If there are no rows: **No week changes recorded yet.**
 5. Click **Save**.
 
 This appears for session sales with two or more weeks when Special Weeks is on. Food and single-week lines do not show the editor. See [Profiles](/profiles#edit-weeks-on-a-session-sale).
+
+### Removing a session that has Weeks
+
+When you remove a session sale that has week answers, the confirm dialog can add: **This also clears their Weeks:** followed by the week names. Confirm with **Yes, remove it.** or keep the session with **No, keep it.**
+
+After remove, a toast can say weeks were cleared and offer **View week history**, which opens a read-only **Week history for {person}, {season}** list (**Week**, **Status**, **Date**).
 
 ### Session Calendar on a camper profile
 

@@ -76,6 +76,8 @@ Use the **New Form** button on the Forms list to start a new form and configure 
 
   <Step title="Start a new form" icon="plus" title-type="p">
     - Click the **New Form** button at the top of the list.
+    - Enter a **Form Name**, choose a **Season**, and set **Form Type**.
+    - When the form name looks like an immunization form (for example it contains "immunization" or "immunisation"), Campium offers **Include our immunization form?** Parents download Campium's blank fillable PDF, take it to their doctor, and upload the completed copy. Checking it sets **Form Type** to **Allow an upload of a File**. Use **Preview the form** to open the PDF. The same offer appears when you create a form from Guided Season Setup.
     - Campium opens the form editor with the **Settings** tab active.
 
     The editor shows additional tabs such as **Recipients**, **Questions**, and **Responses**, and may show **Products Layout** depending on the Form Type.
@@ -399,6 +401,15 @@ Clear names also make the **Responses** tab easier to use because staff can quic
 
 If you change **Form Type** after starting configuration, Campium changes which tabs and fields are available. Review the Settings tab again after any type change so you do not miss required fields.
 
+### Immunization blank form (upload forms)
+
+On an **Allow an upload of a File** form, **Settings** can show an **Immunization Records** block:
+
+1. Turn on **This form collects immunization records** when uploads should be read for vaccine doses (paid immunization add-on). Leave it off for other uploads such as insurance cards.
+2. Until Campium's blank PDF is attached, you also see **Include our immunization form?** with **Add our form** and **Preview**. That attaches Campium's fillable immunization PDF so families can download it from the portal, complete it with a doctor, and upload the finished copy.
+
+The blank PDF offer is available whenever you create or edit an immunization-style upload form. Turning on immunization *reading* still requires the paid Immunization add-on. See [Immunization](/immunization).
+
 #### Season
 
 **Season** connects the form to the seasonal setup used elsewhere in Campium. For registration forms, the selected season determines which products, fees, discounts, and payment plans are available to the form.
@@ -690,6 +701,8 @@ There is no single on/off toggle for reminders. Instead, you enable them by choo
 - **After due date** — Select the number of days after the **Due Date** that a past-due reminder should send. This is a separate control from the before-due reminders, so you can nudge recipients who miss the deadline without touching the pre-due schedule. Leaving it empty means no past-due reminders go out.
 
 Selecting at least one day in either multi-select is what turns reminders on for the form.
+
+Next to **Preview Before-Due Email** and **Preview Past-Due Email**, use **Edit Wording** to open **Admin → Automated Emails** for **Form reminder: due soon** or **Form reminder: past due**. See [Automated Emails](/automated-emails).
 
 <Steps>
   <Step title="How to turn on form reminder emails" icon="mail" title-type="p">

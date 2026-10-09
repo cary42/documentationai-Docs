@@ -47,6 +47,14 @@ Success signal: The table shows only families for the selected plan filter. **Al
 
 </Step>
 
+<Step title="Narrow by status and assignment" icon="filter">
+
+- Status buttons: **Open** (default), **With balance**, or **Cancelled**. Each shows a count badge. **Open** leaves cancelled-only families out of the way. Your browser remembers the choice.
+- Assignment buttons: **All** (default), **Has a plan**, or **No plan**.
+- Exports and paging follow the filters currently on screen.
+
+</Step>
+
 </Steps>
 
 ### Filters and selectors
@@ -57,11 +65,17 @@ Use these controls to scope what appears in the report.
 
 Use the season selector at the top of the page to choose the active season to report on. The report title updates to `Family Payment Plans Report for` the selected season and all results are limited to that season.
 
-A family appears only when they still have a non-cancelled session in that season. If every session for the season is cancelled, they drop off this report.
+A family appears only when they still have a non-cancelled session in that season. If every session for the season is cancelled, they drop off this report unless you choose **Cancelled**.
 
 #### Payment plan
 
-Use the payment plan dropdown to filter results to a single plan, **All Payment Plans**, or **No Plan Assigned**. Use this to confirm enrollment or balances for a particular plan, or to find families who still need a plan.
+Use the payment plan dropdown to filter results to a single plan, **All Payment Plans**, or **No Plan Assigned**. Use this to confirm enrollment or balances for a particular plan, or to find families who still need a plan. The **All** / **Has a plan** / **No plan** buttons are a faster assignment filter that works with the dropdown.
+
+#### Status
+
+- **Open** - families with open (non-cancelled) sessions in the season
+- **With balance** - open families who still owe money
+- **Cancelled** - families whose sessions in the season are cancelled
 
 #### Guardians / Enrollees view
 
@@ -70,7 +84,7 @@ Use the **Guardians** and **Enrollees** toggle to switch what each row represent
 - **Guardians** (the default) shows one row per family account, with the guardian contact details and family balance.
 - **Enrollees** shows one row per enrolled camper or participant on the plan, so you can see the individual people behind each family.
 
-Switching the toggle also changes one column: in **Guardians** view you see the **Users** count column, and in **Enrollees** view that column becomes **User Status** and shows each enrollee's current status instead of a count.
+Switching the toggle also changes one column: in **Guardians** view you see the **Enrollees** column (names link to mini-profiles), and in **Enrollees** view that column becomes **User Status** and shows each enrollee's current status instead of the enrollee list.
 
 <Callout kind="alert">
 
@@ -151,11 +165,9 @@ These columns always appear in the report.
 
 Family name shown on the account, typically the primary billing name. Use this to identify the family in other financial reports.
 
-#### Users
+#### Enrollees
 
-Number of users linked to the family account. This usually reflects enrolled campers or participants associated with the family.
-
-In **Enrollees** view, this column is replaced by **User Status**, which shows each enrollee's current status instead of a count. See [Guardians / Enrollees view](#guardians--enrollees-view) for how to switch.
+In **Guardians** view, enrollee names for the family (linked to profiles). In **Enrollees** view, this column is replaced by **User Status**, which shows each enrollee's current status. See [Guardians / Enrollees view](#guardians--enrollees-view) for how to switch.
 
 #### Plan Name
 

@@ -65,12 +65,14 @@ Each row is one payment.
 </ParamField>
 
 <ParamField body="Fee" param-type="currency" required="true" deprecated="false">
-  The processor fee for the payment.
+  The processor fee for the payment. On Payabli batch detail, the column may be labeled **Fees**, with a matching **Net** column.
 </ParamField>
 
 <ParamField body="Total" param-type="currency" required="true" deprecated="false">
   The payment total.
 </ParamField>
+
+For **Payabli** batches, Deposit Detail can show estimated **Fees** and **Net** with a note such as: **Fees are estimated from your rates: card {rate}, ACH {rate}. Payabli bills actual processing fees monthly, not per batch.** Finix camps continue to show settlement fees from the processor.
 
 <ParamField body="Reconciled" param-type="action" required="false" deprecated="false">
   A per-payment reconcile toggle. See below.
