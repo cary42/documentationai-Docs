@@ -94,9 +94,17 @@ Once Finix settles a batch, the following funding timelines apply for deposits t
 - **Credit cards** - Funding takes **2 business days**. For example, if a credit card transaction is processed on Monday, the funds will be deposited into your account on Wednesday.
 - **ACH** - Funding takes **4 business days**. For example, if an ACH transaction is processed on Monday, the funds will be deposited on Friday. After a month of processing we can change this to **3 business days**.
 
-### Finix merchant onboarding (statement descriptor)
+### Merchant application (Finix or Payabli)
 
-When Finix onboarding is enabled for your camp, administrators open the merchant application from Admin to submit your business details. Onboarding is available only to administrators, and only while Campium has turned it on for your organization (typically while you are switching to or setting up Finix).
+When merchant onboarding is enabled for your camp, administrators see a **Merchant application** button in the admin header. It opens the application for your payment processor (Finix or Payabli). Onboarding is available only to administrators, and only while Campium has turned it on for your organization (typically while you are switching processors or setting up payments). The button hides once that provider's application is live or approved.
+
+#### Payabli application
+
+For Payabli camps, the page title is **Merchant Application**. You see **Application Status**, then **Start application** or **Continue application**. Complete the form on Payabli's secure site. Have ready: your EIN, the bank account for deposits, and details for each owner with 25% or more of the business. Use **Refresh status** if the decision looks out of date. Status can include waiting for a signature, under review, approved, or not approved.
+
+#### Finix merchant onboarding (statement descriptor)
+
+When Finix is your onboarding provider, administrators open the same **Merchant application** header button to submit your business details.
 
 #### Statement descriptor
 
@@ -131,7 +139,7 @@ Accepts PDF or image (PNG, JPG, GIF, TIFF, WEBP, HEIC), up to 10 MB each. Click 
 | Where                           | What you see                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------- |
 | **Financials → Deposit Summary** | Settled batches grouped by settlement date; Finix batches use `ST…` as batch number         |
-| **Deposit Detail**              | Per-transaction list for a batch; Finix settlements can show processor fees and net deposit |
+| **Deposit Detail**              | Per-transaction list for a batch; Finix and Payabli batches can show fees and net (Payabli fees are estimates from your rates) |
 | **Profile → Sales**             | **Auth** badge on Finix card charges waiting for nightly capture                            |
 | **Settlement sync**             | A background job links Finix settlement ids to payments and refreshes fee totals            |
 

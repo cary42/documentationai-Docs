@@ -140,11 +140,13 @@ If the field already has answers and you try to switch between Person and Family
 2. Click **Linked Fields** (toolbar button on the main list).
 3. Click **Link two fields**.
 4. Under **When this field changes**, choose the source. Under **Update this field**, choose the target. Both must be single-choice (**Choose One**) dropdowns. Click **Continue**.
-5. For each source option, pick the matching target option (or leave unmapped so the target stays as-is when that source option is chosen). Clearing the source clears the target. The mapping table includes a **Saving updates** column that counts who would change.
-6. As you map options, a live preview shows **Checking who this would update...**, then **Saving updates** with the target field name and person count (or **Saving updates no one.**), with move counts such as `3 from blank to Section A`. Use **Show names** / **Hide names** to list sample people. Helper text: **Only active and pending profiles are updated. Inactive profiles keep what they have.** People in options you did not change who already differ can be left alone, or you can choose **Update them**.
-7. Click **Link fields** (or **Save** when editing). Confirm with a prompt that names how many people will be updated (or **Save this link? No one is updated.**). Confirm button: **Yes, save it**. If people need updating, a progress dialog shows counts for **Updated**, **Skipped**, and **Failed**, plus **Close** and a retry control when needed.
+5. For each source option, pick the matching target option (or leave unmapped so the target stays as-is when that source option is chosen). Clearing the source clears the target.
+6. Each choice saves as soon as you make it. The footer status shows **Saves as you choose.** on a new link, or **Changes save automatically.** when you edit an existing one, then **Saving…** and **Saved** (or **Not saved** if something goes wrong). There is no separate Save button on the map.
+7. A live preview shows who matches the link (active and pending profiles only). When people need their answers brought in line with the map, click **Update N people** (or **Update 1 person**). Confirm with **Yes, update them**. A progress dialog tracks the sync, with retry if some rows fail.
 
-On the Linked Fields list, use **Edit** or **Remove** on an existing link, or **Back to Linked Fields** from the mapping screen.
+Saving the map does not by itself rewrite existing answers. Use **Update N people** when you want active and pending profiles to match the link. Inactive profiles keep what they have.
+
+On the Linked Fields list, use **Edit** or **Remove** on an existing link, or **Back to Linked Fields** from the mapping screen. Group Settings pairs can open the same map when you edit that pair.
 
 Rules:
 

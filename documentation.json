@@ -227,6 +227,10 @@
                     "path": "system-report-season-recap"
                   },
                   {
+                    "title": "Retention",
+                    "path": "system-report-retention"
+                  },
+                  {
                     "title": "Chronological User Registration Report",
                     "path": "system-report-chronological-user-registration"
                   },
@@ -548,6 +552,11 @@
                 "title": "Letter Generator",
                 "path": "letter-generator",
                 "icon": "book-open-text"
+              },
+              {
+                "title": "Automated Emails",
+                "path": "automated-emails",
+                "icon": "lucide-mail"
               },
               {
                 "title": "System Emails",
