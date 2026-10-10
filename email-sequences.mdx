@@ -1,18 +1,124 @@
 ---
-title: Email Sequences
-description: >-
-  Email Sequences are not currently available in the admin menu. Use Mass Emails
-  or Automated Emails for timed and event-driven messages.
+title: "Sequences"
+description: "Write a series of emails Campium sends on a schedule after session registration, a new lead, or when you add people from a list."
 ---
 
-## Not currently available
+A **sequence** is a series of emails you write once. Campium sends each one on its day: after a family registers for a session, before or after the session, after someone becomes a lead, or after you add people from a list.
 
-**Email Sequences** (scheduled drip steps after registration) are not currently available in the left navigation. The older sequence editor is not offered for camps right now.
+## Who can use Sequences
 
-For messages you compose and send on a schedule, use [Mass Emails](/mass-emails).
+Sequences appear under **Communications → Sequences** only when:
 
-For messages Campium sends on its own (payment notices, form reminders, wait list updates, birthday wishes, and more), use [Automated Emails](/automated-emails).
+1. Campium has turned on **Email Sequences (beta)** for your camp.
+2. Your role includes **Manage Email** (the same permission used for **Email this group** and Mass Emails).
 
-<Callout kind="info" collapsed="false">
-  If you previously used Email Sequences, contact Campium support about your options. Do not rely on this page for a current setup path.
-</Callout>
+You cannot turn the module on yourself under **Admin → Site Settings → Modules**. If you do not see **Sequences** in the left menu, ask Campium support whether it is available for your camp.
+
+You also need a valid **Contact Email Address** under **Admin → Site Settings → Basic** before you can turn a sequence on, so replies can reach you.
+
+For one-off or scheduled blasts, use [Mass Emails](/mass-emails). For messages Campium already sends on its own (payment notices, form reminders, and similar), use [Automated Emails](/automated-emails).
+
+## Open the list
+
+1. Go to **Communications → Sequences**.
+2. The page title is **Sequences**. Subtitle: **Emails Campium sends for you on a schedule**.
+3. Click **New Sequence**, or open an existing row by its name.
+
+The list panel **Your sequences** shows columns **Sequence**, **Starts when**, **Status**, **Emails**, **In progress**, and **Sent**. Use **Archived** (or **Back to your sequences**) to switch views.
+
+Empty state: **A sequence is a series of emails you write once. Campium sends each one on its day: after a family registers for a session, before the session starts, after it ends, or after someone becomes a lead.** Then **New Sequence**.
+
+## Create a sequence
+
+1. Click **New Sequence**.
+2. Enter a **Name** (required).
+3. Choose **Starts when**:
+   - **Session registration** - Families get these emails when they register for the sessions you pick.
+   - **New lead** - People get these emails when their status is set to Lead, including inquiries from your website form.
+   - **Added from a list** - You add people from a report or a group, and they get these emails from that day.
+4. Save. The sequence opens as a **Draft**. Nobody gets these emails until you turn it on.
+
+## Work on one sequence
+
+The sequence page uses tabs:
+
+| Tab | What it is for |
+| --- | --- |
+| **Emails (N)** | Write and edit each email in place |
+| **People (N)** | Who is enrolled, their status, and **Remove from sequence** |
+| **Sent** | What the sequence has already sent |
+| **Settings** | Name, description, sessions (for session sequences), stop on reply |
+
+Status badges: **Draft**, **Active**, **Paused**, **Archived**.
+
+The bottom bar shows what the status means, then actions such as **Copy to another season** (session sequences) or **Make a copy**, **Archive** / **Restore**, **Pause**, **Turn On**, or **Resume**.
+
+### Emails tab
+
+Each email is a card with its timing, optional **Only** badge naming one session, subject, and a preview of the message. Use **Edit** to change it, or **Add Email** under the list.
+
+When you edit:
+
+- **When it goes out** - Days plus one of: **days after they are enrolled**, **days before the session starts**, **days after the session starts**, or **days after the session ends** (session sequences). Lead and list sequences only use days after enrollment.
+- For session sequences, choose **for every session** or a single session option labeled **for** that session **only**.
+- **Subject** and **Message** (required). Optionally **Start from a saved template**.
+- **Send test to me**, **Cancel**, **Save Email**, or **Delete**.
+
+The side column **How it runs** shows **Starts when**, **Sessions**, **Sends at** (**9am your time**), **Replies go to**, and **Stop when they reply**. **Progress** counts link into the **People** tab. **Merge fields** insert tags such as `{first_name}`, `{campers}`, `{session_name}`, `{session_start_date}`, `{session_end_date}`, `{days_until_session}`, `{agency_name}` (your camp's name), and `{magic_login}` where you are typing.
+
+Helper note: if someone joins after an email's day has passed, they skip that email. Changes apply to everyone's future emails.
+
+If a reply could not be forwarded, **Replies we could not deliver** appears above the emails with **Read** and **Done**.
+
+### People tab
+
+Shows who is in the sequence: **Name**, optional **Session**, **Status**, **Enrolled**, **Emails sent**, and **Remove from sequence** while in progress.
+
+Statuses include **In progress**, **Finished**, **Converted** (lead sequences), **Replied**, **Stopped (no longer registered)**, and **Removed**.
+
+For **Added from a list** sequences, helper text points you to **Add to Sequence** in the **Email this group** window on a report or group.
+
+### Sent tab
+
+Columns: **Sent**, **To**, **Email**, **Status**, **Opened**, **Replied**.
+
+### Settings tab
+
+- **Name** and **Description** (staff only).
+- **Starts when** is fixed after create; helper text explains that trigger.
+- Session sequences: **Sessions** (required). Families join when a camper's registration for one of those sessions is active. Waitlisted and pending campers join once moved to active.
+- **Stop sending to someone who replies** - Replies are noted and forwarded to your **Contact Email Address** when reply tracking is on. Automatic replies (such as out of office) do not count.
+- **Save Settings**.
+
+## Turn a sequence on
+
+1. Finish at least one email with a subject and message.
+2. For session sequences, pick sessions on **Settings**.
+3. Confirm **Contact Email Address** under **Admin → Site Settings → Basic**.
+4. Click **Turn On**.
+
+The confirm modal explains that matching people join automatically from now on. If people already match, you can check **Also enroll the N families who already match** (or **leads** / **people**, depending on how the sequence starts). They skip any email whose day has already passed.
+
+Problems before the modal opens (shown as a warning):
+
+- **Add at least one email first.**
+- **Pick the sessions that start this sequence on the Settings tab.**
+- **Add a parent contact email in Site Settings, so replies reach you.**
+
+**Pause** holds pending sends. Emails that came due while paused are skipped when you **Resume**. **Archive** stops the sequence; **Restore** brings it back.
+
+## Add people from a list
+
+1. Create a sequence with **Starts when** set to **Added from a list**, write its emails, and turn it on.
+2. From a report or roster, open **Email this group** (or **Send Email**).
+3. When your camp has a manual sequence, the modal shows **Or add them to a sequence** with a select and **Add to Sequence**.
+4. They get that sequence's emails starting today. Anyone already in it is skipped.
+
+**Send Email** stays the primary action. Adding to a sequence does not replace sending a one-off email.
+
+## Related guides
+
+- [Email overview](/email)
+- [Mass Emails](/mass-emails#add-people-to-a-sequence-from-email-this-group)
+- [Automated Emails](/automated-emails)
+- [Settings](/settings) for **Contact Email Address**
