@@ -519,7 +519,7 @@
                 "icon": "lucide-mail"
               },
               {
-                "title": "Email Sequences",
+                "title": "Sequences",
                 "path": "email-sequences",
                 "icon": "list-ordered"
               },
