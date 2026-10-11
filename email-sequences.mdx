@@ -28,6 +28,8 @@ The list panel **Your sequences** shows columns **Sequence**, **Starts when**, *
 
 Empty state: **A sequence is a series of emails you write once. Campium sends each one on its day: after a family registers for a session, before the session starts, after it ends, or after someone becomes a lead.** Then **New Sequence**.
 
+When a sequence has replies that could not be forwarded, its row shows a chip such as **1 reply not delivered** or **N replies not delivered**. See [Undelivered replies on the list](#undelivered-replies-on-the-list).
+
 ## Create a sequence
 
 1. Click **New Sequence**.
@@ -55,16 +57,19 @@ The bottom bar shows what the status means, then actions such as **Copy to anoth
 
 ### Emails tab
 
-Each email is a card with its timing, optional **Only** badge naming one session, subject, and a preview of the message. Use **Edit** to change it, or **Add Email** under the list.
+Each email is a card with its timing, optional **Only** badge naming one session, subject, and a preview of the message. Cards that have already sent show a line such as **N sent · N opened · N clicked** (people, not scanners). Use **Edit** to change it, or **Add Email** under the list.
+
+If a session sequence has no sessions yet, a panel above the emails says **Pick the sessions this sequence covers…** with **Choose sessions**. Nobody joins until you pick sessions.
 
 When you edit:
 
 - **When it goes out** - Days plus one of: **days after they are enrolled**, **days before the session starts**, **days after the session starts**, or **days after the session ends** (session sequences). Lead and list sequences only use days after enrollment.
 - For session sequences, choose **for every session** or a single session option labeled **for** that session **only**.
 - **Subject** and **Message** (required). Optionally **Start from a saved template**.
-- **Send test to me**, **Cancel**, **Save Email**, or **Delete**.
+- Next to **Message**, **AI Rewrite** opens rewrite styles, then **Original** vs **Rewritten**. Choose **Use This Text** or cancel. It does not save until you click **Save Email**.
+- **Send test to me**, **Cancel**, **Save Email**, or **Delete**. Leaving with unsaved edits asks **Discard your changes to this email?** (**Yes, discard** / **Keep editing**).
 
-The side column **How it runs** shows **Starts when**, **Sessions**, **Sends at** (**9am your time**), **Replies go to**, and **Stop when they reply**. **Progress** counts link into the **People** tab. **Merge fields** insert tags such as `{first_name}`, `{campers}`, `{session_name}`, `{session_start_date}`, `{session_end_date}`, `{days_until_session}`, `{agency_name}` (your camp's name), and `{magic_login}` where you are typing.
+The side column **How it runs** shows **Starts when**, **Sessions** (or **Pick sessions**), **Sends at** (**9am your time**), **Replies go to**, and **Stop when they reply**. **Progress** counts link into the **People** tab. **Merge fields** insert tags such as `{first_name}`, `{campers}`, `{session_name}`, `{session_start_date}`, `{session_end_date}`, `{days_until_session}`, `{agency_name}` (your camp's name), and `{magic_login}` where you are typing.
 
 Helper note: if someone joins after an email's day has passed, they skip that email. Changes apply to everyone's future emails.
 
@@ -80,20 +85,25 @@ For **Added from a list** sequences, helper text points you to **Add to Sequence
 
 ### Sent tab
 
-Columns: **Sent**, **To**, **Email**, **Status**, **Opened**, **Replied**.
+Columns: **Sent**, **To**, **Email**, **Status**, **Opened**, **Clicked**, **Replied**.
 
 ### Settings tab
 
 - **Name** and **Description** (staff only).
 - **Starts when** is fixed after create; helper text explains that trigger.
-- Session sequences: **Sessions** (required). Families join when a camper's registration for one of those sessions is active. Waitlisted and pending campers join once moved to active.
+- Session sequences:
+  - **Season** (required). Placeholder **Choose a season**.
+  - **Sessions** (required) with **Choose sessions**. The checklist modal filters with **Filter, like Week**, offers **Select all (N)** and **None** per season group, shows **N sessions picked**, and applies with **Use 1 session** or **Use N sessions**.
+  - Helper text: one sequence can cover many sessions (for example every week of summer). Each email set to **for every session** goes out for each session, timed to that session. Families join when a camper's registration for one of those sessions is active. Waitlisted and pending campers join once moved to active.
 - **Stop sending to someone who replies** - Replies are noted and forwarded to your **Contact Email Address** when reply tracking is on. Automatic replies (such as out of office) do not count.
 - **Save Settings**.
+
+**Copy to another season** uses the same **Choose sessions** checklist (same-named sessions can be pre-checked).
 
 ## Turn a sequence on
 
 1. Finish at least one email with a subject and message.
-2. For session sequences, pick sessions on **Settings**.
+2. For session sequences, choose a **Season** and sessions on **Settings** (or **Choose sessions** from the Emails tab).
 3. Confirm **Contact Email Address** under **Admin → Site Settings → Basic**.
 4. Click **Turn On**.
 
@@ -106,6 +116,20 @@ Problems before the modal opens (shown as a warning):
 - **Add a parent contact email in Site Settings, so replies reach you.**
 
 **Pause** holds pending sends. Emails that came due while paused are skipped when you **Resume**. **Archive** stops the sequence; **Restore** brings it back.
+
+## Undelivered replies on the list
+
+When reply tracking cannot forward a reply to your contact email, Campium keeps it for you to read in admin.
+
+- On **Communications → Sequences**, a sequence row can show **1 reply not delivered** or **N replies not delivered**.
+- A camp-wide panel (title such as **1 reply we could not deliver**) lists recent undelivered replies with **Read**, **Open sequence**, and **Done**. Overflow text can say **And N more…**.
+- The same panel also appears at the top of **Communications → Mass Emails** when Sequences is on for your camp (not on the Archived sequences view).
+
+Read replies here and answer from your own email. Each undelivered reply is removed after a set number of days.
+
+## Email sequences on a profile
+
+Open a person's profile **Emails** tab. When they (or their family) are in a sequence, the **Email sequences** card lists **Sequence**, **Status**, **Joined**, and **Emails sent**. While enrollment is active, use **Remove from sequence**. If the sequence is paused, you see **Sequence paused** next to the status.
 
 ## Add people from a list
 

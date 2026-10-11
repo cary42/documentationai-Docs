@@ -63,6 +63,16 @@ On the Bus list you typically see:
 
 Use the Bus list to confirm buses exist, review rider counts, and jump into Riders or Map views.
 
+#### Print Roster
+
+On the Bus Information page (Buses tab) and on a bus **Riders** page, click **Print Roster**. The **Print Options** modal offers:
+
+- **Condensed: one line for each rider** (on by default)
+- **Print Without Columns**
+- **Print With Check-In / Check-Out**
+
+The roster opens as a PDF in a new tab (same Attendance Sheets roster layout used elsewhere).
+
 The map refreshes every 30 seconds, so location updates may lag slightly behind the bus's exact position.
 
 <Callout kind="info">
@@ -110,9 +120,20 @@ Use these rider statuses for different purposes: **Check-in** confirms the rider
 
 Bus staff can log notes from **Bus Tracking** in the Campium mobile app. In admin, open **Transportation**, then click **Bus Notes** on the Bus Information page (or go to **Bus Notes** from that header button).
 
-Filter with **From**, **To**, **Bus** (**All buses** or one bus), and **Type** (**All types**, **Camper behavior**, **Driver issue**, or **Other**), then click **Show notes**.
+Filter with **From**, **To**, **Bus** (**All buses** or one bus), and **Type** (**All types**, **Rider behavior**, **Driver issue**, **Other**, or **For Parents**), then click **Show notes**.
 
-The table columns are **Date**, **Bus**, **Type**, **Camper**, **Note**, **Logged By**, and **Alert**. **Alert** shows **Emailed** when an alert email went out for that note. Bus names link to that bus's riders page; camper and author names open profiles when available.
+The table columns are **Date**, **Bus**, **Type**, **Rider**, **Note**, **Logged By**, and **Sent**. Under **Sent**:
+
+- **Emailed** when an alert email went out for that note
+- **Parents notified** when a **For Parents** note was pushed to guardians
+
+Bus names link to that bus's riders page; rider and author names open profiles when available.
+
+#### Email for bus note alerts
+
+When staff bus tracking is on, set **Email for bus note alerts** under **Admin → Site Settings → Mobile App**. Staff can choose to email an alert to that address when they log a rider-behavior or driver-issue note. Separate several addresses with commas. Leave the field blank to turn alert emails off.
+
+**For Parents** notes are about one rider. Guardians can see them in the Campium app (and may get a push). They are separate from the alert-email setting.
 
 If nothing matches, you see: **No bus notes match these filters. Bus staff add notes from Bus Tracking in the Campium app.** When many notes match, a warning can say newest notes are shown and to narrow the dates or pick a bus.
 
