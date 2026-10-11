@@ -10,6 +10,13 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-10-11" description="Simpler password rules, leaked-password check" tags={["improvement"]}>
+  ## Updates
+
+  - **Password rules** - Passwords no longer need a mix of uppercase and lowercase letters. The minimum length stays at 8 characters on the portal and 12 on campiumdb.com. The live checklist on the portal **Reset Password**, **Change Password**, and account setup pages, and the helper text on campiumdb.com, now say so. See [Authentication](/authentication#password-strength-rules).
+  - **Leaked passwords** - New and changed passwords are checked against known data breaches and refused if found. The check is private: only part of a scrambled version of the password is compared, and the password itself is never sent anywhere. The portal checklist item now reads **Not a common, easy-to-guess, or leaked password**. See [Authentication](/authentication#password-strength-rules).
+</Update>
+
 <Update label="2026-10-05" description="W-4 and I-9, Paying vs Non-paying, Membership Recurring Charges, forms trash, SMS AI" tags={["feature","improvement","bugfix"]}>
   ## New
 

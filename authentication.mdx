@@ -24,7 +24,7 @@ On your parent portal login page, families use a single card:
 
 Below both forms, **Continue with Google** and **Continue with Apple** appear once for the whole card. Deep links such as `#create` or a staff registration URL open the **Create account** tab. When new registrations are off, the page shows **Sign in** only (no tabs).
 
-Password helper text on create: **At least 8 characters, with an uppercase letter, a lowercase letter, a number and a symbol. Tap the eye to check what you typed.**
+Password helper text on create: **At least 8 characters. Longer is stronger, and a phrase is easy to remember. Tap the eye to check what you typed.**
 
 See also [Portal Settings](/portal-settings#login-user-types) for which account types appear under **I am a**, and [Staff](/staff) for sending applicants to a staff registration link.
 
@@ -40,23 +40,21 @@ Campium enforces a consistent password policy across registration, password rese
 
   - **Portal:** at least 8 characters
 
-- Include at least one uppercase letter
-
-- Include at least one lowercase letter
-
-- Include at least one special character (for example: `!`, `@`, `#`, `$`, `%`)
-
 - Not be a common weak password (for example, `password`, `123456`, `qwerty`) or an obvious repeat or sequence (like `aaaa`, `1234`)
+
+- Not have appeared in a known data breach. Campium checks this privately: only the first few characters of a scrambled version of the password are compared, and the password itself is never sent anywhere.
+
+There is no required mix of uppercase, lowercase, numbers, or symbols. Length is what makes a password strong, so a short phrase of a few unrelated words is a good choice.
 
 If a user submits a password that does not meet these rules, Campium rejects the change and shows an inline error explaining what is missing. The same validation runs on the server even if UI hints are bypassed, so weak or prohibited passwords never get saved.
 
 ### Password policy by application
 
-Campium applies the same character and weak-password checks everywhere, but the minimum length depends on where the user signs in:
+Campium applies the same weak-password and breach checks everywhere, but the minimum length depends on where the user signs in:
 
-- **campiumdb.com (admin site):** 12-character minimum, plus upper/lower/special and blocked weak passwords.
+- **campiumdb.com (admin site):** 12-character minimum, plus blocked weak and leaked passwords.
 
-- **Portal:** 8-character minimum, plus the same upper/lower/special and blocked weak passwords.
+- **Portal:** 8-character minimum, plus the same blocked weak and leaked passwords.
 
 When you support users, always confirm which site they are using so you reference the correct minimum length.
 
@@ -70,7 +68,7 @@ Campium applies the same validation logic in these flows, with the appropriate m
 
 - **Change password** from within a logged-in session
 
-Users see updated UI hints in these flows that describe the minimum length for that site, character requirements, and blocked weak passwords before they submit the form. As an admin, you can rely on the platform to enforce the policy; you do not need to manually review individual passwords.
+Users see updated UI hints in these flows that describe the minimum length for that site and the blocked weak and leaked passwords before they submit the form. As an admin, you can rely on the platform to enforce the policy; you do not need to manually review individual passwords.
 
 <Callout kind="tip" collapsed="false">
   If users report that a password "will not save," have them read the inline password requirements on the page and adjust their password to meet all criteria for the site they are using.
@@ -102,9 +100,9 @@ Password reset links are single-use and stop working after 24 hours. After someo
   <Step title="Create a new strong password" icon="shield" title-type="p">
     - When the user opens a valid reset link, the page shows inline guidance for password requirements, including the minimum length for that site.
 
-    - Ask portal users to enter a new password that is at least 8 characters long, and campiumdb.com admins to use at least 12 characters, in both cases including uppercase, lowercase, and a special character, and avoiding common or easily guessed passwords.
+    - Ask portal users to enter a new password that is at least 8 characters long, and campiumdb.com admins to use at least 12 characters, in both cases avoiding common, easily guessed, or previously leaked passwords. Uppercase, lowercase, numbers, and symbols are welcome but not required.
 
-    - If the password is too weak, too short for that site, or appears in the blocked list of common passwords, the page highlights which rule is missing or violated and blocks submission until all rules are satisfied.
+    - If the password is too short for that site, is a common password, or has appeared in a data breach, the page highlights which rule is missing and blocks submission until all rules are satisfied.
   </Step>
 
   <Step title="Confirm access" icon="check-circle" title-type="p">
@@ -153,9 +151,9 @@ On the portal, password fields are not editable on **My Profile**. Use the dedic
   <Step title="Enter and confirm the new password" icon="shield" title-type="p">
     - Enter **New Password** and **Confirm password**.
 
-    - On the portal reset and change-password pages, a live checklist updates as they type: **At least 8 characters**, **An uppercase letter**, **A lowercase letter**, **Not a common or easy-to-guess password**, and **Matches the password above**.
+    - On the portal reset and change-password pages, a live checklist updates as they type: **At least 8 characters**, **Not a common, easy-to-guess, or leaked password**, and **Matches the password above**.
 
-    - Portal passwords need at least 8 characters, plus uppercase, lowercase, and a special character, and must not be a common weak password.
+    - Portal passwords need at least 8 characters and must not be a common weak password or one found in a data breach.
 
     - Select **Save**. If a rule fails, the page explains what to fix.
   </Step>
@@ -163,7 +161,7 @@ On the portal, password fields are not editable on **My Profile**. Use the dedic
 
 ### campiumdb.com (admin)
 
-Admins change passwords from their account security settings on campiumdb.com (12-character minimum, plus the same character and weak-password rules). If they cannot recall the current password, use **Forgot password?** on the login page.
+Admins change passwords from their account security settings on campiumdb.com (12-character minimum, plus the same weak-password and leaked-password rules). If they cannot recall the current password, use **Forgot password?** on the login page.
 
 ## Require someone to set their own password
 
@@ -231,7 +229,7 @@ Common errors on **Change Email**:
 
 ## Email and password login behavior
 
-Standard login uses the combination of a registered email address and a password that meets the strength policy for the specific site (8-character minimum in the portal, 12-character minimum on campiumdb.com, plus character and weak-password rules).
+Standard login uses the combination of a registered email address and a password that meets the strength policy for the specific site (8-character minimum in the portal, 12-character minimum on campiumdb.com, plus weak-password and leaked-password rules).
 
 When a user attempts to log in:
 
@@ -307,9 +305,9 @@ Use these expandable sections to quickly diagnose and resolve the most common au
   <Expandable title="User reports 'my new password will not save'" default-open="false">
     This usually indicates the new password does not meet the strength requirements.
 
-    - Verify which site they are using, since the portal requires at least 8 characters while campiumdb.com requires at least 12 characters, and both also require uppercase, lowercase, and a special character.
+    - Verify which site they are using, since the portal requires at least 8 characters while campiumdb.com requires at least 12 characters. Neither site requires uppercase, lowercase, numbers, or symbols.
 
-    - Remind them that common or easily guessed passwords are blocked on both sites even if they meet length and character rules.
+    - Remind them that common, easily guessed, or previously leaked passwords are blocked on both sites even when they are long enough.
 
     - Ask them to read any inline error text carefully; it highlights which rule is not satisfied.
 
@@ -371,7 +369,7 @@ Use these expandable sections to quickly diagnose and resolve the most common au
 
 Admins and technical staff can improve authentication reliability and support by adopting a few practices:
 
-- **Standardize password guidance separately** for portal users and campiumdb.com admins so portal users know about the 8-character minimum and admins know about the 12-character minimum, along with the required character mix and blocked weak passwords.
+- **Standardize password guidance separately** for portal users and campiumdb.com admins so portal users know about the 8-character minimum and admins know about the 12-character minimum, along with the blocked weak and leaked passwords.
 
 - **Encourage password managers** to help users generate and store strong passwords that meet Campium's rules.
 
