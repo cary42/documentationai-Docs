@@ -10,7 +10,21 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
-<Update label="2026-10-12" description="Portal Create account, Pay In Full checkout, Finix wallet, ACH returns, and report fixes" tags={["bugfix"]}>
+<Update label="2026-10-12" description="Staff two-step sign-in, season setup, Linked Fields inbox, FAQ brackets, Sequences clicks" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Two-step sign-in** - Staff with payment, refund, or health access set up a second step (passkey, authenticator app, or text message) from your name menu → **Settings** → **Sign-in security**. Setup must be done by **November 25** to keep that access. See [Account](/account#sign-in-security).
+  - **Name format in reports** - Choose **First Last** or **Last, First** camp-wide under **Admin → Site Settings → Basic**, or override it for yourself on **Settings → Name Format**. See [Site Settings](/settings) and [Account](/account#name-format).
+
+  ## Updates
+
+  - **Season setup** - Clicking a season name on **Seasons** opens the six-step setup workspace (no Beta label). Old session and subproduct pages redirect into **Sessions**. See [Guided Season Setup](/guided-season-setup).
+  - **Require two-step for all staff** - On **Admin → Roles & Permissions**, turn on **Require two-step sign-in for all staff** so everyone with a staff role is asked at their next sign-in. See [Account](/account#require-two-step-for-all-staff).
+  - **Sign-in security tab** - Passkeys and the old phone 2FA controls live in one **Sign-in security** tab, with recovery codes and **Remember this browser for 30 days**. See [Account](/account#sign-in-security).
+  - **Linked Fields Need updating** - A camp-wide **Need updating** inbox lists everyone whose answers do not match their links. See [Profile Fields](/profile-fields#need-updating-inbox).
+  - **FAQ bracket coaching** - After **Add from Library**, unfinished `[bracketed]` answers show a banner, **Finish next**, and row badges so you can replace placeholders before parents see them. See [FAQ](/faq#add-from-library).
+  - **Sequences link clicks** - On **Sent**, **Links people clicked** shows which links people opened. Step cards show **N clicked**. See [Sequences](/email-sequences#sent-tab).
+
   ## Fixes
 
   - **Portal Create account** - The **Create account** tab on the parent login page works again. See [Authentication](/authentication#portal-login-sign-in-and-create-account).
