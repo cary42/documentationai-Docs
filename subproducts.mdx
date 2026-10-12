@@ -27,7 +27,7 @@ Each subproduct can have its own:
 - **Option name** (used in admin and reports; editable inline in the table)
 - **Staff** (optional, in the edit screen)
 
-The main session still has its own overall price, deposit, and capacity. Those appear at the top of the Subproducts page as a reference. Subproducts override those numbers for campers who match them.
+The main session still has its own overall price, deposit, and capacity on the season setup **Sessions** table. Open **Subproducts** / **Add subproducts** on a session row to manage options in the in-page panel. Subproducts override those numbers for campers who match them.
 
 ## When to use subproducts
 
@@ -93,26 +93,25 @@ When troubleshooting, it often helps to compare the camper’s profile answers t
 
 ## Where to find subproducts in admin
 
-Access subproducts from within the session product itself.
+Open subproducts from season setup on the **Sessions** step.
 
 <Callout kind="info">
 
 To work with subproducts:
 
-- Open the session product in admin.
-- Click **Subproducts** in that product’s menu.
-
-The page address includes `admin/products/product-options.php` along with the product and security key. You can bookmark it if you often return to the same product.
+1. Open **Seasons**, then click the season name (or choose **Guided setup** on the row).
+2. On the **Sessions** step, open the session row menu and choose **Subproducts** or **Add subproducts**.
+3. Work in the in-page panel under the sessions table.
 
 </Callout>
 
-At the top of the Subproducts page you see the **parent price**, **minimum deposit**, and **overall capacity**. Below that, you see:
+In the **Subproducts** panel you see:
 
-- A **New Subproduct** button for the step-by-step setup.
-- A **table of existing subproducts** with quick editing for key numbers.
-- A drag handle column (tooltip **Drag to reorder**) so you can set the display order of options on this page. New options append at the bottom. After you drop a row, Campium confirms with **Order saved.**
+- Buttons **Add subproducts**, **Delete selected** (when rows are checked), and **Close**
+- A **table of existing subproducts** with quick editing for key numbers
+- A drag handle column (tooltip **Drag to reorder**) so you can set display order. New options append at the bottom. After you drop a row, Campium confirms with **Order saved.**
 
-The order you set here is the order staff see on the Subproducts page.
+The order you set here is the order staff see in the panel and related pickers.
 
 ## Create new subproducts
 
@@ -122,9 +121,8 @@ Use the New Subproduct wizard to build subproducts from one or more profile ques
 
 <Step title="Open the New Subproduct wizard" icon="plus">
 
-- Go to the session product in admin.
-- Click **Subproducts**.
-- Click **New Subproduct**.
+- Open season setup **Sessions**, then **Subproducts** / **Add subproducts** on the session.
+- Click **Add subproducts** (or **New Subproduct** when that label appears).
 
 You should now see a screen where you can choose profile questions to drive your subproducts.
 

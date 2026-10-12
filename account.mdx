@@ -1,8 +1,8 @@
 ---
 title: Manage your Campium account
 description: >-
-  Update your password, default season, email notifications, two-factor
-  authentication, and passkeys in the Campium admin account section.
+  Update your password, default season, name format, email notifications, and
+  Sign-in security (two-step sign-in, passkeys, and recovery codes).
 ---
 ## Account overview
 
@@ -20,16 +20,12 @@ You can access these pages from the admin navigation:
 
 ## Account Settings
 
-Account Settings at `/account/` cover:
+Account Settings cover:
 
 - Changing your password
-
 - Choosing your default season
-
-- Turning two-factor authentication (2FA) on or off
-
-- Managing passkeys
-
+- **Name Format** for how names appear in reports (for you)
+- **Sign-in security** (two-step sign-in, recovery codes, remembered browsers, passkeys)
 - **Email Notifications** (optional staff digests and alerts)
 ### Change your password
 
@@ -121,129 +117,87 @@ Helper text on the Account tab matches the sidebar purpose: the season selected 
 
 ---
 
-### Manage two-factor authentication (2FA)
+### Name Format
 
-Two-factor authentication adds a second check at sign-in using your mobile phone. When enabled, you enter your password and then confirm a code or prompt sent to your phone.
+Choose how camper and guardian names appear in reports and exports for your login only.
 
-2FA sessions last **about 12 hours**. During that time, you usually do not need to re-enter a code on the same browser. Standard non-2FA sessions are shorter (about 90 minutes).
+1. Click your name in the top right, then **Settings**.
+2. Open the **Name Format** tab.
+3. Under **Show names in reports as**, pick **Use camp setting (First Last)** or **Use camp setting (Last, First)** (whichever your camp uses), **First Last (Jane Smith)**, or **Last, First (Smith, Jane)**.
+4. Click **Save Name Format**.
 
-<Callout kind="tip" collapsed="false">
-  Use 2FA on accounts with access to payment data, refunds, or staff scheduling to reduce the risk from stolen passwords.
-</Callout>
+Helper text: applies to camper and guardian names in reports and exports, for you only. **Last, First** also sorts by last name. Mailing labels and parent emails are unchanged.
 
-#### Requirements for 2FA
-
-- A **mobile phone number** on your user profile
-
-- Access to that device when you sign in
-
-- Ability to receive calls or messages, depending on your 2FA method
-
-If your account does not have a mobile number, the 2FA section shows a warning and you cannot turn it on until you add one.
-
-#### Turn 2FA on
-
-<Steps>
-  <Step title="Confirm your mobile number" icon="users" title-type="p">
-    - Go to `/account/`.
-
-    - In the **Two-Factor Authentication** section, verify that your mobile number is displayed and correct.
-
-    - If the number is missing or wrong, update your user profile first, then return to this page.
-  </Step>
-
-  <Step title="Enable two-factor authentication" icon="shield" title-type="p">
-    - In the 2FA section, switch the **Two-Factor Authentication** toggle to **On**.
-
-    - Follow any on-screen prompts to confirm the change.
-  </Step>
-
-  <Step title="Sign in with 2FA" icon="lock" title-type="p">
-    - On your next sign-in, enter your email and password as usual.
-
-    - Complete the second step sent to your phone.
-
-    - After you finish, Campium keeps your session active for about 12 hours on that browser before asking for 2FA again.
-  </Step>
-</Steps>
-
-<Callout kind="info" collapsed="false">
-  If you sign in from a new browser or device, Campium asks for 2FA again, even if your 12-hour window is still active on another device.
-</Callout>
-
-#### Turn 2FA off
-
-Only disable 2FA if you are changing devices or have another strong security control in place.
-
-<Steps>
-  <Step title="Open 2FA settings" icon="settings" title-type="p">
-    - Go to `/account/`.
-
-    - Scroll to the **Two-Factor Authentication** section.
-  </Step>
-
-  <Step title="Disable the toggle" icon="minus" title-type="p">
-    - Switch the 2FA toggle to **Off**.
-
-    - Confirm the change if prompted.
-  </Step>
-
-  <Step title="Verify access" icon="check-circle" title-type="p">
-    - Sign out and sign back in to confirm that you are no longer asked for a 2FA step.
-
-    - If you did not intend to disable 2FA, return to `/account/` and turn it back on immediately.
-  </Step>
-</Steps>
-
-<Callout kind="alert" collapsed="false">
-  If you lose access to your mobile phone and cannot complete 2FA, contact an internal Campium admin or support channel defined by your organization to regain access.
-</Callout>
+Camp-wide default lives under **Admin → Site Settings → Basic → Name Format in Reports**. See [Site Settings](/settings).
 
 ---
 
-### Passkeys
+### Sign-in security
 
-Passkeys let you sign in with the same face, fingerprint, or device PIN you use to unlock your phone or computer, instead of typing a password. They are built on the WebAuthn standard and are tied to your device, so there is no code to remember or phish.
+**Sign-in security** is the tab for two-step sign-in, recovery codes, remembered browsers, and passkeys. It replaces the older separate **Two-Factor Authentication** and **Passkeys** tabs.
 
-You manage passkeys from the **Passkeys** tab in your account settings.
+Two-step sign-in applies to **campiumdb.com** staff accounts only. The parent portal does not use two-step sign-in.
 
-#### Add a passkey
+#### Who needs two-step sign-in
 
-<Steps>
-  <Step title="Open the Passkeys tab" icon="key" title-type="p">
-    - Click on your name in the top right and then click on **My Settings.**
+Staff with payment, refund, or health permissions are asked to set it up. That includes roles that can process payments, use finance features, or open medical information, medications, or immunization. Super users are always covered.
 
-    - Open the **Passkeys** tab.
-  </Step>
+One enrollment covers every camp you can sign into with the same account.
 
-  <Step title="Create the passkey" icon="plus" title-type="p">
-    - Choose **Add a passkey**.
+Until **November 25**, you can still sign in without finishing setup. A banner reminds you to set it up by that date to keep access to payments and health records. In the last few days before the cutoff, the banner stays until you finish. From **November 25**, covered staff who have not enrolled are held at the setup wizard until they complete it.
 
-    - Follow your browser or device prompt to confirm with your fingerprint, face, security key, or device PIN.
+#### Open Sign-in security
 
-    - The new passkey is saved and appears in your list of passkeys.
-  </Step>
-</Steps>
+1. Click your name in the top right, then **Settings**.
+2. Open the **Sign-in security** tab.
 
-#### List and remove passkeys
+You see heading **Two-step sign-in** and helper text: after your password, Campium asks for a second step (a passkey, a code from an authenticator app, or a code by text message).
 
-The Passkeys tab shows each passkey you have registered so you can review them across your devices.
+Status badges include **Two-step sign-in is on**, **Text message only**, or **Not set up**. When you still have time before the cutoff, a grace note can say to set it up by the date to keep access to payments and health records.
 
-- Review the list to confirm which devices can sign in with a passkey.
+#### Add a method
 
-- Use the **Remove** action next to a passkey to delete it, for example when you replace or stop using a device.
+1. Click **Add a method** to open the setup wizard.
+2. Choose a method:
+   - **Passkey** (recommended when your browser supports it): your fingerprint, face, or device PIN
+   - **Authenticator app**: Google Authenticator, Microsoft Authenticator, 1Password, and similar apps
+   - **Text message** under **Other options** (labeled less safe). Super users are not offered text message as their only method
+3. Follow the on-screen steps for that method.
+4. On **Save your recovery codes**, download or copy the codes, then confirm **I saved them** (or **I saved these codes**) and finish.
 
-<Callout kind="tip" collapsed="false">
-  Register a passkey on more than one device so you are not locked out if one device is lost or unavailable.
-</Callout>
+The methods table lists **Method**, **Added**, and **Last used**. You can add more than one method later from the same tab.
+
+#### Recovery codes
+
+Use a recovery code if you lose your phone or passkey. Each code works once. The tab shows how many of **10** are left. Click **Generate new codes** when you need a fresh set, then **Download** or **Copy**.
+
+#### Remembered browsers
+
+On the sign-in challenge after your password, you can check **Remember this browser for 30 days** (checked by default). That browser skips the second step for 30 days.
+
+On **Sign-in security**, **Sign out all browsers** clears every remembered browser for your account.
 
 #### Require a passkey to sign in
 
-Turn on **Require a passkey to sign in** to make your login password-less. With this setting on, Campium no longer accepts your password for sign-in; you complete every sign-in with a passkey instead. Google and Apple sign-in remain available on your account.
+Turn on **Require a passkey to sign in** to stop password sign-in for your account. Google and Apple sign-in still work. You need at least one passkey before you can turn this on.
 
 <Callout kind="alert" collapsed="false">
-  Before you turn on **Require a passkey to sign in**, register a passkey on at least one device you reliably have access to. If you lose access to all of your passkeys, use Google or Apple sign-in, or contact an internal Campium admin to regain access.
+  Before you turn on **Require a passkey to sign in**, register a passkey on at least one device you reliably have access to. If you lose access to all of your passkeys, use Google or Apple sign-in, or contact Campium support to regain access.
 </Callout>
+
+#### Sign-in challenge
+
+After your password (or Google sign-in, when two-step is on), Campium asks for the second step. Use **Verify**, switch among **Use your authenticator app**, **Text me a code**, **Use a passkey**, **Use a recovery code**, or **Send a new text**, and optionally leave **Remember this browser for 30 days** checked.
+
+#### Require two-step for all staff
+
+Administrators can widen coverage beyond payment, refund, and health roles:
+
+1. Go to **Admin → Roles & Permissions**.
+2. Turn on **Require two-step sign-in for all staff**.
+3. Helper text: staff with payment, refund, or health permissions always need it. Turn this on to ask everyone with a staff role here.
+
+When you grant a covered permission to a role, Campium can warn that everyone with that role will be asked to set up two-step at their next sign-in.
 
 ---
 
@@ -299,8 +253,6 @@ When a type is on for the organization, each person still chooses their own pref
 Keep your account settings up to date and encourage other admins with sensitive access to:
 
 - Use strong, unique passwords
-
-- Turn on two-factor authentication
-
+- Finish **Sign-in security** / two-step sign-in by the cutoff if they handle payments or health
 - Choose **Email Notifications** schedules that match how closely they monitor activity
 

@@ -10,6 +10,47 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-10-12" description="Staff two-step sign-in, season setup, Linked Fields inbox, FAQ brackets, Sequences clicks" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Two-step sign-in** - Staff with payment, refund, or health access set up a second step (passkey, authenticator app, or text message) from your name menu → **Settings** → **Sign-in security**. Setup must be done by **November 25** to keep that access. See [Account](/account#sign-in-security).
+  - **Name format in reports** - Choose **First Last** or **Last, First** camp-wide under **Admin → Site Settings → Basic**, or override it for yourself on **Settings → Name Format**. See [Site Settings](/settings) and [Account](/account#name-format).
+
+  ## Updates
+
+  - **Season setup** - Clicking a season name on **Seasons** opens the six-step setup workspace (no Beta label). Old session and subproduct pages redirect into **Sessions**. See [Guided Season Setup](/guided-season-setup).
+  - **Require two-step for all staff** - On **Admin → Roles & Permissions**, turn on **Require two-step sign-in for all staff** so everyone with a staff role is asked at their next sign-in. See [Account](/account#require-two-step-for-all-staff).
+  - **Sign-in security tab** - Passkeys and the old phone 2FA controls live in one **Sign-in security** tab, with recovery codes and **Remember this browser for 30 days**. See [Account](/account#sign-in-security).
+  - **Linked Fields Need updating** - A camp-wide **Need updating** inbox lists everyone whose answers do not match their links. See [Profile Fields](/profile-fields#need-updating-inbox).
+  - **FAQ bracket coaching** - After **Add from Library**, unfinished `[bracketed]` answers show a banner, **Finish next**, and row badges so you can replace placeholders before parents see them. See [FAQ](/faq#add-from-library).
+  - **Sequences link clicks** - On **Sent**, **Links people clicked** shows which links people opened. Step cards show **N clicked**. See [Sequences](/email-sequences#sent-tab).
+
+  ## Fixes
+
+  - **Portal Create account** - The **Create account** tab on the parent login page works again. See [Authentication](/authentication#portal-login-sign-in-and-create-account).
+  - **PayConex ACH returns** - Late ACH returns (including returns posted well after the original charge) now appear on the payment and in **ACH Returns & Rejects**, without emailing the family again when the return was already recorded. See [What is an ACH return?](/what-is-an-ach-return).
+  - **Portal week labels** - Week names under **Current Enrollments** on the parent home page are full size and easier to read. See [Special Weeks](/special-weeks#what-families-see-under-current-enrollments).
+  - **Pay In Full at checkout** - Choosing **Pay In Full** recalculates so the amounts match the payment type the family selected.
+  - **New Ticket Submit** - **Ask Sage AI**, **Cancel**, and **Submit Ticket** stay pinned at the bottom of the New Ticket window so Submit stays reachable.
+  - **Sessions YoY** - Results always match the seasons you pick in the dropdowns.
+  - **Status after last week** - When removed sessions stay as cancelled records, removing the last active week prompts for status again.
+  - **Family discount note** - Removing a family-level discount writes a profile note again. See [Discounts](/discounts#family-level-discounts-on-a-profile).
+  - **Guardian Quick View** - Guardian fields on Quick View stay where the layout puts them. See [Profiles](/profiles#quick-view).
+  - **Finix onboarding success** - The success message is short; identity and merchant ids stay on the application status card. See [Payment Processors](/payment-processors).
+  - **Imported payments** - Imported payment rows no longer offer **Refund** or **Void**. See [Processing refunds and voids](/processing-refunds-and-voids).
+  - **Payment Plans report** - Families whose only season sessions are cancelled no longer appear on the report. See [Family Payment Plans Report](/system-report-payment-plans).
+  - **Add Subproducts** - Hidden and unlinked options stay out of the picker. See [Subproducts](/subproducts).
+  - **Parent payment methods (Finix)** - Saving a card or bank the family already has reports it as already on file instead of creating a duplicate. See [Payment Methods](/payment-methods).
+  - **Finix scheduled payments** - After a parent adds an account, planned charges that had no account link to that account.
+  - **Weeks clear warning** - Removing a special-week session warns when Weeks will clear and can open **View week history** afterward. See [Special Weeks](/special-weeks#edit-weeks-on-a-camper-profile).
+  - **Automated Emails Preview** - Closing Preview with **X** also clears the overlay. See [Automated Emails](/automated-emails).
+  - **Profile photo** - The profile photo page shows the photo on file again.
+  - **Google / Apple sign-in** - Parent **Continue with Google** / **Continue with Apple** complete sign-in again. See [Authentication](/authentication#portal-login-sign-in-and-create-account).
+  - **Admin scrollbar** - The main column scrollbar is no longer hidden under the fixed top bar.
+  - **Bus attendance filter** - The attendance-date filter sits on its own line with its helper text. See [Transportation](/transportation#filter-by-attendance-date).
+  - **Payment Plans report save** - Saving a plan from the report no longer fails with a stale page message.
+</Update>
+
 <Update label="2026-10-11" description="Simpler password rules, leaked-password check" tags={["improvement"]}>
   ## Updates
 
