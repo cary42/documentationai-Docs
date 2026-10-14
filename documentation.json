@@ -753,6 +753,11 @@
                 "icon": "badge-dollar-sign"
               },
               {
+                "title": "Withdraw a camper",
+                "path": "withdraw-a-camper",
+                "icon": "user-minus"
+              },
+              {
                 "title": "Cancellation Fees",
                 "path": "cancellation-fees",
                 "icon": "ban"

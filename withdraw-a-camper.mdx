@@ -1,0 +1,131 @@
+---
+title: Withdraw a camper or cancel a registration
+description: Drop a camper from a session, cancel their registration, and settle the money afterward.
+---
+
+## Withdraw a camper or cancel a registration
+
+When a family withdraws, drops a week, or cancels camp, you take the session off the camper's account from their profile. Campium then recalculates what the family owes. Refunds, cancellation fees, and leftover credits are separate steps you take afterward, so you decide how the money is handled.
+
+<Callout kind="info" collapsed="false">
+
+Families cannot withdraw themselves from a session they are enrolled in. Staff do it from the admin site. The only thing families can remove on their own is a wait list spot, when **Allow users to remove themselves from wait lists** is on.
+
+</Callout>
+
+---
+
+## Remove the session
+
+<Steps>
+  <Step title="Open the camper's Sales tab" icon="search" title-type="p">
+
+Open the camper's profile and select the **Sales** tab. If the session is in a different season, change the season filter on the tab.
+
+  </Step>
+  <Step title="Select remove on the session row" icon="trash" title-type="p">
+
+Hover over the session row and select **remove** in the row's links (**remove | edit | switch | move**).
+
+If the camper is moving to a different session rather than leaving, select **switch** instead. See [Switch a session](/profiles#switch-a-session).
+
+  </Step>
+  <Step title="Confirm, with an optional message" icon="alert-triangle" title-type="p">
+
+The prompt asks **Are you sure you want to remove** followed by the session and camper. If the camper has Weeks selected for that session, it also says **This also clears their Weeks:** and lists them.
+
+Type a reason in **Optional message, saved on the note** if you want one on the record, for example "Withdrew for medical reasons, refund approved". Then select **Yes, remove it.**
+
+  </Step>
+  <Step title="Choose whether to change their status" icon="user" title-type="p">
+
+If that was the camper's last session in the season, Campium asks **This was their last session in the season** and offers a status, set to **Inactive** by default. Select **Update status** to change it, or **Not now** to leave the status as it is.
+
+  </Step>
+</Steps>
+
+### What happens when you remove a session
+
+- The session drops out of the family's balance, and the **Sales** tab refreshes with the new total.
+- The camper comes off rosters, attendance, and session filters for that session, and the spot opens up for someone else.
+- A note is added to the profile: **Product [session] has been removed**, plus your message if you typed one.
+- If the family is on a payment plan, the remaining scheduled payments are adjusted to the new balance. If the balance for the season reaches zero or below, the remaining scheduled payments for that season are removed.
+- If the camper has no other sessions left in the season, they are taken out of that season.
+- **No email goes to the family.** Let them know yourself if you need to.
+- **Money already paid is not refunded.** If the family paid more than they now owe, the account shows a credit. See [Settle the money](#settle-the-money).
+
+<Callout kind="alert" collapsed="false">
+
+Discounts are not recalculated when you remove a session. If the family had a sibling discount, a multi-session discount, or a code discount that no longer applies, review the discount lines on the **Sales** tab and adjust them yourself.
+
+</Callout>
+
+---
+
+## Keep a record of cancelled sessions
+
+By default, a removed session is deleted from the account and only the profile note remains. If you want the cancelled session to stay on the record, turn on **Keep removed sessions as cancelled** in **Admin → Site Settings → Basic**.
+
+With this setting on, a removed session:
+
+- Stays on the **Sales** tab struck through, with its cancel date, and no longer has action links.
+- Does not count toward the balance, invoices, capacity, or rosters.
+- Is left off the family's invoices and their account page in the parent portal.
+- Creates a credit memo in QuickBooks when your QuickBooks integration is connected.
+
+Memberships with recurring billing always keep a cancelled record, even when this setting is off. Canceling one also stops its future recurring charges. See [Memberships](/memberships).
+
+---
+
+## Settle the money
+
+Removing the session changes what the family owes. It does not move money. After you remove it, decide which of these applies.
+
+<Steps>
+  <Step title="Refund what the family paid" icon="rotate-ccw" title-type="p">
+
+In the payments section of the **Sales** tab, use **refund** on the payment row. Enter the **Amount** and a **Reason**, which appears on the invoice. A payment from the current processing day (after 6 pm yesterday) can be voided instead with **void**. See [Processing Refunds and Voids](/processing-refunds-and-voids).
+
+  </Step>
+  <Step title="Charge a cancellation fee" icon="ban" title-type="p">
+
+If your policy keeps a fee, add your cancellation fee session to the camper with **Add Session** on the **Sales** tab. Cancellation fees are never charged automatically. See [Cancellation Fees](/cancellation-fees).
+
+  </Step>
+  <Step title="Keep a credit or move it to another season" icon="repeat" title-type="p">
+
+If the family is coming back later, leave the credit on the account or use **Transfer balance** on the **Sales** tab to carry it to another season. See [Credits report](/negative-balance#transfer-a-credit-to-another-season).
+
+  </Step>
+</Steps>
+
+---
+
+## Withdraw a camper from every session at once
+
+To take a camper out of an active season entirely, select the status badge on the profile and change their **Status** to an archived status, such as **Archived**, **Deleted**, or **Removed** (the names depend on your status list), then select **Save Status**. If they still have sessions in an active season, Campium shows **Still enrolled in an active season** with the sessions and the season balance. Select **Remove all sessions and continue** to remove them and archive the camper, or **Keep as is** to stop.
+
+As with a single removal, this does not refund or credit anything already paid.
+
+Changing a camper to **Inactive** only changes their status. Their sessions, balance, and scheduled payments stay as they are. To stop charges, remove the sessions.
+
+---
+
+## Reject an application and remove sessions
+
+If the camper registered through a form that needs approval, you can reject the form and remove sessions in the same step. Open the gear menu on the form, on the profile or in [Camper Hub](/camper-hub), and select **Reject**. When the camper has sessions in that form's season, Campium asks **This user has purchased sessions. Would you like to remove any sessions from their account?** Check the sessions to remove and select **Reject / Remove**.
+
+---
+
+## Fill the open spot from the wait list
+
+Removing a session frees the spot, but Campium does not invite the next family automatically. Open the [Waitlist Report](/waitlist) and send an invitation to the family you want to offer the spot to.
+
+---
+
+## Troubleshooting
+
+- **The balance is lower than expected after removing a session.** A discount tied to the removed session may still be on the account. Review the discount lines on the **Sales** tab.
+- **Scheduled payments still look wrong.** Open the family's scheduled payments and check that the remaining installments match the new balance.
+- **I don't see a remove link.** The row is already cancelled (struck through), or you are looking at a different season. Change the season filter on the **Sales** tab.
+- **The camper still shows in the season.** They may still have another session in that season. Check the **Sales** tab for other rows.
