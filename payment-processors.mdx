@@ -87,6 +87,30 @@ Your Finix **payout profile** controls funding:
 
 Campium reads settlement totals and fees from Finix for the **Deposit Summary** and **Deposit Detail** reports. The date you see as "settled" is when Finix closed the batch, not necessarily the day your bank statement shows the deposit.
 
+**Est. deposit** dates on **Financials → Deposit Summary**, Deposit Detail, and Payments skip U.S. bank holidays when estimating when funds arrive.
+
+### Update a Finix payout bank account
+
+Applies when your camp uses **Finix** and a settlement funding transfer to your bank fails.
+
+You reach **Payout bank account** from the failed-payout email button **Update payout account**, or from the admin banner **Update the account**. The page is not a left-nav item.
+
+On that page you enter:
+
+- **Routing number** - Helper: **The 9-digit number from the bank.** Campium checks the number against the Federal Reserve ACH directory as you type. You may see **Enter a valid 9-digit routing number.**, **That routing number is not a known bank.**, or **That routing number was replaced. Use …** with the replacement number and bank name.
+- **Account number**, **Account type**, and **Name on account**
+- The required business-purpose acknowledgment checkbox
+
+Then click **Save new payout account**.
+
+#### Also use this bank account to pay for Campium
+
+When automatic Campium subscription payments are off and you have no payment method on file for Billing, the payout page can show the optional checkbox **Also use this bank account to pay for Campium**.
+
+Helper text explains that automatic payments are off, shows the charge amount and date when known, and links to the **billing page** and **Terms of Service**. Checking the box and saving authorizes Campium to debit that bank account for your subscription. You can turn automatic payments off later under your name → **Billing**. See [Billing](/billing).
+
+This checkbox only appears when Campium subscription billing is configured for your organization and the offer conditions above are met.
+
 ### Funding (deposits to your account)
 
 Once Finix settles a batch, the following funding timelines apply for deposits to your organization's bank account:

@@ -198,16 +198,24 @@ Standard plans need plan detail lines before they can work as expected.
 
 Choose these settings for each payment line:
 
-- **Date** — Pick the day that charge should run.
-- **Charge entire balance** — Turn this on if that payment should collect whatever amount is still unpaid at that point.
-- **Amount or percentage** — Use this when the line should charge only part of the balance. Depending on your setup, you can enter either a fixed dollar amount or a percentage.
-- **Per child or whole registration** — Choose whether the payment applies separately to each child or to the registration as a whole, based on the options shown in your form.
+- **Date** - Pick the day that charge should run.
+- **Charge Entire Balance** - Turn this on (**Yes**) if that payment should collect whatever amount is still unpaid at that point. The schedule line then shows as **Remaining Balance**.
+- **Amount or percentage** - Use this when the line should charge only part of the balance. Depending on your setup, you can enter either a fixed dollar amount or a percentage.
+- **Per child or whole registration** - Choose whether the payment applies separately to each child or to the registration as a whole, based on the options shown in your form.
 
 <Callout kind="info">
 
 Even split plans do not use plan detail lines. The system calculates those charges automatically from the balance and dates.
 
 </Callout>
+
+### Last payment isn't the balance
+
+On **Admin → Payment Plans** (and on the **Payment plans** step in guided season setup), a **Standard** plan can show a warning badge: **Last payment isn't the balance**.
+
+Hover the badge for: **The last payment is a set amount or percentage, not the remaining balance. Anything the earlier payments don't cover is never charged. Open the last payment and set Charge Entire Balance to Yes.**
+
+Open the latest-dated plan detail line and set **Charge Entire Balance** to **Yes** so leftover balance is collected. Even Split plans do not use this badge.
 
 ## Turn plans on or off
 
@@ -417,6 +425,14 @@ Charges every 14 days. The start date acts as the anchor, and charges continue e
 Charges on the 1st & 15th of each month when those dates fall within the selected date range.
 </ParamField>
 
+## How schedules adjust when the balance changes
+
+When a family's season balance changes (for example you add or remove a session, or apply a discount), remaining scheduled payments update as follows:
+
+- **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Preview for** sample and **Recalc Even Split** use the same rounding.
+- **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row).
+- **Standard** plans with unequal percents or fixed dollar amounts: leftover balance still flexes on the final **Charge Entire Balance** row when that row is set to **Yes**.
+
 ## Recalculate an even split schedule
 
 Some accounts use a **Recalc Even Split** action near the payment controls on the family profile.
@@ -431,7 +447,7 @@ Use it when the family's balance or plan assignment has changed and you need the
   </Expandable>
   <Expandable title="When should staff use it?">
 
-  Use it after a balance change or a plan assignment change when the even split schedule needs to be rebuilt from the family's current balance and the plan dates.
+  Use it after a balance change or a plan assignment change when the even split schedule needs to be rebuilt from the family's current balance and the plan dates. Plan-based Even Split schedules also re-spread automatically when you add or remove a session; use **Recalc Even Split** when you still need a manual rebuild.
 
   </Expandable>
 </ExpandableGroup>

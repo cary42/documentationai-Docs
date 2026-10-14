@@ -10,6 +10,15 @@ Process refunds and voids for credit card and ACH payments from the **Sales** ta
 
 Refunds are available only after a payment settles. Before settlement, you may see a **Void** or **Remove** option instead of **Refund**, depending on whether the payment has already run or is still scheduled.
 
+### Who can refund or void
+
+On **Admin → Roles & permissions**, staff need:
+
+- **View the 'Sales' tab** (**Users** category) to open the profile **Sales** tab
+- **Process Payments** (**Financial** category) to see **Refund** and **Void**, and to use **Add Payment**
+
+Without **Process Payments**, those payment action links stay hidden. If someone still reaches a refund or void action without that access, Campium shows: **You do not have permission to record payments, refunds or voids.** Removing a session from **Sales** only needs **View the 'Sales' tab**; without it, Campium shows: **You do not have permission to remove sessions.**
+
 ## When refunds are available
 
 Refunds become available once the original charge has fully settled to your merchant account.
