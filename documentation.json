@@ -283,6 +283,10 @@
                     "path": "system-report-scheduled-payments"
                   },
                   {
+                    "title": "Upcoming Charge Emails",
+                    "path": "system-report-upcoming-charge-emails"
+                  },
+                  {
                     "title": "Scheduled Payments - Missing report",
                     "path": "system-report-scheduled-payments-missing"
                   },
@@ -624,6 +628,11 @@
               {
                 "title": "Contracts",
                 "path": "contracts",
+                "icon": "file-text"
+              },
+              {
+                "title": "Inquiry Forms",
+                "path": "inquiry-forms",
                 "icon": "file-text"
               },
               {
