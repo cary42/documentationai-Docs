@@ -1,0 +1,100 @@
+---
+title: "Inquiry Forms"
+description: "Build website inquiry forms, embed them on your site, review submissions, and start a lead email sequence."
+---
+
+Inquiry Forms are the forms you put on your website so families can ask about camp. Each submission can create a lead, email your staff, and optionally start an email sequence.
+
+You need the **Site Settings** permission. Open **Admin → Inquiry Forms**.
+
+Subtitle on the page: **Forms you put on your website to collect inquiries**.
+
+These are separate from portal **Forms** (registration and paperwork). Portal forms live under **Forms** in the left navigation. See [Forms](/forms).
+
+## Your forms list
+
+The **Your forms** table shows:
+
+| Column | What it shows |
+| --- | --- |
+| **Form** | Form name (staff-only). A **Default** badge marks the form older embed codes still show. |
+| **Submissions** | How many people have submitted |
+| **Last submission** | Date of the latest submission, or **Never** |
+| **Embed** | **Copy Code** for the recommended script embed |
+
+Click **New Form** to create another form. Enter a **Name** (required). Helper text: **Only you and your staff see this name.**
+
+## Edit a form
+
+Open a form from the list. Tabs: **Form**, **Submissions (N)**, and **Embed**.
+
+### Form tab
+
+#### Basics
+
+- **Form name** (required). Staff-only label.
+- **Title** and **Subtitle** shown on the public form.
+
+#### Fields
+
+First name, last name, and email are always asked. Drag fields to reorder. Click **Add Field** for:
+
+- **Short text**, **Long text**, **Dropdown**, **Choose one**, **Choose many**, **Phone**, **Date**, **Number**
+
+Per field you can set **Save to profile field**, **Full width** / **Half width**, and **Required**. Message fields also offer **Show this field**.
+
+#### Look
+
+- **Button color**, **Text color**, **Font**, **Button text**
+- **Corners**
+- **Background**: **White** or **Transparent**
+- **Labels**: **Above fields** or **Inside fields**
+- Optional **Custom CSS** (advanced; this form only)
+
+#### After someone submits
+
+- **Show a message**, or
+- **Send them to a page** (full page address starting with `https://`)
+
+#### Leads and notifications
+
+- **Email new inquiries to**: comma-separated addresses. Empty uses your parent contact email. Replies go to the family.
+- **Mark where they came from** (optional): pick a profile field, or **Don't mark it**, then set a **Value** (for example Lead source = Rentals page).
+- **Start this email sequence**: pick a sequence, or leave **Your "New lead" sequences, as usual**. New leads from this form get the sequence you pick here instead of your usual New lead sequences, so nobody gets both. People who are already customers never get it. Session sequences are not listed.
+
+If Email Sequences are not on for your camp, the page says to contact Campium support. If the module is on but you have no lead-friendly sequences yet, create one under **Communications → Sequences** that starts on **New lead** or **Added from a list**, then pick it here. See [Sequences](/email-sequences).
+
+A live **Preview** sits beside the settings. **Open saved form** opens the public form in a new tab.
+
+Use **Save** on the action bar. **Make Default** marks this form for older embed codes. **Delete** removes a non-default form.
+
+## Submissions
+
+The **Submissions** tab lists:
+
+| Column | What it shows |
+| --- | --- |
+| **When** | Submission time |
+| **Name** | Links to the profile when one exists |
+| **Email** | Address they entered |
+| **Outcome** | **New lead**, **Already a lead**, or **Existing person** |
+| **Answers** | **View** to open their answers |
+
+Empty state: **Nobody has used this form yet. Put it on your website from the Embed tab.**
+
+## Embed on your website
+
+On the **Embed** tab:
+
+1. Prefer **Recommended: script**. Click **Copy Code** and paste it where the form should appear. Helper: **Paste this where you want the form on your website. It sizes itself to fit the form.**
+2. Use **iframe** if your website builder does not allow scripts. Change the height if the form is cut off.
+
+Older embed codes keep working. They show your **Default** form unless the code was generated for a specific form.
+
+You can also **Copy Code** from the list without opening the form.
+
+## Related guides
+
+- [Sequences](/email-sequences) for New lead and Added from a list sequences
+- [Forms](/forms) for portal registration and paperwork forms
+- [Profile Fields](/profile-fields) for fields you can save inquiry answers into

@@ -1,0 +1,67 @@
+---
+title: "Upcoming Charge Emails"
+description: "Preview who will get the next upcoming charge reminder, by send date, without sending the email."
+---
+
+The **Upcoming Charge Emails** system report shows the next upcoming charge reminders that have not been sent yet: who will receive each one, and a preview of what it will say. The report does not send or queue email.
+
+You need **Reports** and **Financial** access, with the financial module on. It is not available on the free plan.
+
+System Reports description: **The next upcoming charge reminders that have not been sent yet: who will receive each one, and a preview of what it will say.**
+
+## Open the report
+
+1. Go to **Reports → System Reports**.
+2. Under **Money**, open **Upcoming Charge Emails**.
+
+You can also open it from:
+
+- **Scheduled Payments** (dashboard **Payment Issues** card): header button **Upcoming Charge Emails**
+- **Admin → Site Settings → Payment Info**: **See Who Gets It Next** next to **Charge Coming Email**, or **See who gets each reminder** next to **Days Before Charge For Email Notification**
+- **Admin → Automated Emails → Upcoming scheduled charge** editor: **See who gets the next reminder**
+
+## When upcoming charge email is off
+
+If **Charge Coming Email** is off under Payment Info, the report shows **Upcoming charge email is off** and explains that nobody will receive an upcoming charge email while it is turned off. Use **Turn on the upcoming charge email** to open the Automated Emails editor for **Upcoming scheduled charge**.
+
+Turn the email on under **Admin → Site Settings → Payment Info**, and choose the reminder days under **Days Before Charge For Email Notification**. See [Site Settings](/settings) and [Automated Emails](/automated-emails).
+
+## Pick the email date
+
+When the email is on, use **When the email goes out** under **Email date**. Each option is a send date tied to a charge date and reminder day (for example, 12 days before a charge). The page defaults to the next send date after today.
+
+Changing the dropdown reloads the list for that send.
+
+## Summary and table
+
+Summary tiles:
+
+| Tile | Meaning |
+| --- | --- |
+| **Emails to send** (or **People** when the send is not due yet) | How many reminder emails are waiting |
+| **Scheduled payments** | Payments those emails cover |
+| **No payment method** | Rows where the email will say there is no payment method |
+
+The **Upcoming charge emails** table columns:
+
+| Column | What it shows |
+| --- | --- |
+| **Charge date** | When the payment is scheduled |
+| **Family** | Family name (links to the profile when available) |
+| **Recipient** | Person and email. **Will not send** when there is no email address |
+| **Reminder** | Which reminder day this is |
+| **Amount** | Payment amount |
+| **Season** | Season for the payment |
+| **Payment method** | Method on file, or **No payment method** |
+| **Preview** | Eye button opens **Email preview** with the subject and message for that row |
+
+If payments were scheduled after today's email already went out, a note titled **Added after today's email** explains that nothing has been sent for them and that this page does not send email.
+
+Empty states: **No upcoming charge emails are waiting for this day.** or **The upcoming charge email for this day has already been sent.**
+
+## Related guides
+
+- [Automated Emails](/automated-emails) to edit **Upcoming scheduled charge** wording
+- [Scheduled Payments Report](/system-report-scheduled-payments)
+- [Scheduled Payment Email Log](/system-report-scheduled-payment-email-log) for reminders that already went out
+- [Site Settings](/settings#charge-notices-and-routing) for Charge Coming Email and reminder days
