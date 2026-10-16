@@ -2,11 +2,11 @@
 title: Portal Settings
 description: >-
   Configure your parent portal favicon, home page heading and name bar colour,
-  and which login user types appear on sign-in and registration.
+  login user types, and related Portal Site Text such as text message opt-in wording.
 ---
 ## What Portal Settings control
 
-Portal Settings control how your parent portal presents itself to families. From this screen you can upload the favicon that appears in the browser tab, set the home page heading and instructions (with a name bar colour and live preview), and choose which user types families can select when they sign in or register.
+Portal Settings control how your parent portal presents itself to families. From this screen you can upload the favicon that appears in the browser tab, set the home page heading and instructions (with a name bar colour and live preview), and choose which user types families can select when they sign in or register. Related wording for forms, including text message opt-in, lives on **Portal → Portal Site Text**.
 
 <Callout kind="info" collapsed="false">
   Portal Settings require the site text permission. If you do not have access, you are redirected away from the page. Ask a Campium administrator on your team if you need access.
@@ -133,6 +133,19 @@ A **live preview** on the right shows how those types look in the registration c
 <ParamField body="Order" param-type="number" required="false" deprecated="false">
   The position of this type in the list. Lower numbers appear first.
 </ParamField>
+
+## Text message opt-in wording
+
+On forms that ask for a cell phone, families see **Can we send you text messages?** with **Yes, text me** and **No thanks**. Anyone who enters a cell number must pick one before they can submit. Nothing is selected ahead of time unless that person has already answered. The wording under the question comes from **Portal → Portal Site Text**.
+
+1. Open **Portal → Portal Site Text**.
+2. Edit **Text Message Opt-in** for the wording on any form that asks for a cell phone. Helper text starts with: **Appears under "Can we send you text messages?" on any form that asks for a cell phone.**
+3. Optionally edit **Text Message Opt-in for Staff** for the staff member's own cell phone on staff applications and staff forms. Helper: **Used for the staff member's own cell phone on staff applications and staff forms.**
+4. Leave a box on Campium's wording (or clear a custom override) to keep following the default.
+
+Your custom wording must include your camp name (or `{name}`), how often you text (**Message frequency varies** or similar), **Message and data rates may apply**, **Reply STOP to opt out**, and **Reply HELP for help**. Use `{terms}` where the Terms and Privacy Policy link should appear; Campium adds it at the end if you leave it out. Keep the texts about account or job updates, not promotions.
+
+Each answer updates **SMS Subscribed** on the profile and is logged with the date, form, and wording they saw. See [SMS](/sms#text-message-opt-in-on-forms).
 
 ## Related pages
 

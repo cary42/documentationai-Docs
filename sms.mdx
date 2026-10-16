@@ -13,6 +13,14 @@ Campium sends SMS messages from the number `(551) 209-2312`. This is a one-way n
 
 </Callout>
 
+## Text message opt-in on forms
+
+When a portal form asks for a cell phone number, Campium shows **Can we send you text messages?** with **Yes, text me** and **No thanks**. Anyone who enters a cell number must choose one before they can submit. Error if they skip it: **Choose Yes or No for text messages.** Nothing is pre-selected unless that person has already answered.
+
+Customize the wording under that question on **Portal → Portal Site Text** with **Text Message Opt-in** and optional **Text Message Opt-in for Staff**. See [Portal Settings](/portal-settings#text-message-opt-in-wording).
+
+Answers update **SMS Subscribed** on the profile. Campium also keeps a consent log of each answer. Staff cannot opt someone in for them by changing **SMS Subscribed** alone; the next form with a cell phone asks again. Setting someone to **Unsubscribed** is always fine. Replies of **STOP** still turn texts off automatically.
+
 ## Where to find SMS
 
 Open SMS from the main navigation:
@@ -124,6 +132,8 @@ On **Settings**, leave **Start with your camp name** checked (it is on by defaul
 ### Text families from a report
 
 On **Reports → System Reports → No Primary Payment Method** and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a **Text this group** modal. Write the message, review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need permission to manage email (the same permission used for **Email this group** on those reports). See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
+
+When you schedule a text that started from a report, Campium rechecks who still appears on that report at send time. People who left the report are dropped. Nobody new is added. People you unchecked in **View** / **Send** stay skipped when the scheduled send runs.
 
 ### Rewrite with AI
 
