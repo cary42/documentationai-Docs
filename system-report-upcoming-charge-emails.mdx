@@ -42,17 +42,23 @@ Summary tiles:
 | **Scheduled payments** | Payments those emails cover |
 | **No payment method** | Rows where the email will say there is no payment method |
 
+Beside the **Filter** box, chips filter the table (export follows the chip):
+
+- **All**
+- **Will not send** (no email address on the recipient)
+- **No payment method**
+
 The **Upcoming charge emails** table columns:
 
 | Column | What it shows |
 | --- | --- |
 | **Charge date** | When the payment is scheduled |
 | **Family** | Family name (links to the profile when available) |
-| **Recipient** | Person and email. **Will not send** when there is no email address |
+| **Recipient** | Person and email. **Will not send** when there is no email address, with a **Fix** link to that person's profile |
 | **Reminder** | Which reminder day this is |
 | **Amount** | Payment amount |
 | **Season** | Season for the payment |
-| **Payment method** | Method on file, or **No payment method** |
+| **Payment method** | Method on file, or **No payment method** with a **Fix** link to the family profile at **Payment Methods on File** |
 | **Preview** | Eye button opens **Email preview** with the subject and message for that row |
 
 If payments were scheduled after today's email already went out, a note titled **Added after today's email** explains that nothing has been sent for them and that this page does not send email.

@@ -275,7 +275,7 @@ After you queue a snapshot, the **Seasons** list shows status under that season'
 | **Snapshot queued** (badge) | The snapshot is waiting to start. |
 | **Snapshot building** (badge) | The snapshot is copying profile answers in the background. |
 | **Frozen (editable)** (badge) | You froze this season early while it is still **Active**. Profiles and custom reports ask which season you are editing. |
-| **Snapshot ready** (helper text) | The snapshot finished. You can choose it under **Profile data** when you build a custom report. |
+| **Snapshot ready** (helper text) | The snapshot finished. On a custom report, set the **Season** filter to this season, then choose its close under **Profile answers as of**. |
 | **Snapshot did not finish** (badge) | The snapshot failed. Open **Edit Season** to retry. |
 
 Click a queued, building, or failed badge (or the season status) to open **Edit Season**. **Snapshot ready** helper text is informational; open **Edit Season** from the season status link if you need details.
@@ -284,7 +284,7 @@ Click a queued, building, or failed badge (or the season status) to open **Edit 
 
 In **Edit Season**, the **Profile data snapshot** section shows the same badge plus details for that season's latest snapshot:
 
-- When the snapshot is **ready**, you see when it was captured, how many saved answers it holds, and a reminder to choose it under **Profile data** on a custom report.
+- When the snapshot is **ready**, you see when it was captured, how many saved answers it holds, and a reminder to set the **Season** filter to this season on a custom report, then choose its close under **Profile answers as of**.
 - When it is still **queued** or **building**, you see when it was queued and that the seasons list will update when it finishes.
 - When it **did not finish**, you see that there is nothing to report on from it, plus **Retry snapshot**.
 
@@ -308,7 +308,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 <ExpandableGroup>
   <Expandable title="Can I run a report using season data from a previous point in time?">
 
-  Yes. When you deactivate a season, Campium captures a profile-data snapshot (unless you keep an existing one). Reports can use that snapshot. The exact historical views available depend on the reports your organization has access to.
+  Yes. When you deactivate a season, Campium captures a profile-data snapshot (unless you keep an existing one). On a custom report, set the **Season** filter to that season, then choose its close under **Profile answers as of**. The exact historical views available depend on the reports your organization has access to.
 
   </Expandable>
 

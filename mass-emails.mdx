@@ -395,7 +395,7 @@ The **Recipients** tab is where you decide who receives your message.
 
   - Click **View Recipients** to see the list of individual recipients when you need to verify who will receive the email.
 
-  - On that list, use the **Send** column to uncheck anyone who should not get this email. Helper text: **Uncheck anyone who should not get this email. Unchecking a camper skips both guardians. Use the Send box in the header to check or uncheck everyone, then pick who should get it. Changes save right away.** (For SMS the helper says **text** instead of **email**.) The header **Send** checkbox (aria-label **Send to everyone in this list**) checks or unchecks the whole list. Checking everyone asks **Check all N people? Everyone in this list will get it.** with **Yes, check all**. The summary shows how many people are unchecked and will be skipped.
+  - On that list, use the **Send** column to uncheck anyone who should not get this email. Helper text: **Uncheck anyone who should not get this email. Unchecking a camper skips both guardians. Use the Send box in the header to check or uncheck everyone, then pick who should get it. Changes save right away.** (For SMS the helper says **text** instead of **email**.) The header **Send** checkbox (aria-label **Send to everyone in this list**) checks or unchecks the whole list. Checking everyone asks **Check all N people? Everyone in this list will get it.** with **Yes, check all**. The summary shows how many people are unchecked and will be skipped. Unchecks also apply when a scheduled email or text sends later.
 
 <Callout kind="tip" collapsed="false">
   Always check the **recipient count** and, when sending to a sensitive group, use **View Recipients** to spot-check the list before sending.
@@ -408,6 +408,8 @@ Campium shows a **warning** on the Recipients tab if no recipients are set. Reso
 When you start from a report or roster **Send Email** / **Email this group** control and choose **Open in full editor**, Mass Emails opens on **Settings** with that audience already set.
 
 On **Recipients**, filters stay hidden so the list cannot change by accident. You see a banner such as **This email goes to the [count] [people] from [label].** The side panel also notes that everyone came from the button you used.
+
+When that message was started from a report and you schedule it for later, Campium rechecks who still appears on that report at send time. People who left the report are dropped. Nobody new is added.
 
 To pick a different audience, click **Replace with a filter**, then confirm **Replace with a filter**. After that, the normal filter builder is available again. Until you replace the list, changing recipients another way is blocked.
 
