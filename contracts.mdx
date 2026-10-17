@@ -90,11 +90,15 @@ A template includes:
   <Step title="Choose what happens after signing" icon="settings" title-type="p">
     In the **After signing** panel, set **User status** (and the application-status control when it appears). Leave either on **No Change** to keep the signer's current value. See [Optional status changes on signing](#optional-status-changes-on-signing).
 
+    Under **Notify when signed**, search and pick staff who should get an email when someone signs (placeholder **Choose staff**). You can select more than one person.
+
     For staff contracts, you can also check **Require a guardian signature under 18**. Helper text: **Staff under 18, or with no birth date on file, must have a guardian sign this contract too.** When that applies, the portal shows a required **Guardian Signature** field (placeholder **Guardian full name**) before the staff member can finish signing.
   </Step>
 
-  <Step title="Save the template" icon="check-circle" title-type="p">
-    Click **Save** in the action bar. Use **Preview** or **Preview contract** after the first save to open a preview of the last saved version.
+  <Step title="Let the template save" icon="check-circle" title-type="p">
+    Templates save themselves while you edit. The action bar note starts as **Changes save automatically.**, then **Saving…**, then **Saved at** a time. **Save** is still there if you want to force a save or see a validation error.
+
+    Add a **Name** and contract body before **Preview** or **Preview contract** work. Until then, Preview stays disabled with: **Add a name and contract text first. The template saves itself, then you can preview it.**
   </Step>
 </Steps>
 
@@ -104,11 +108,30 @@ A template includes:
 
 ### How template changes affect existing contracts
 
-<Callout kind="alert" collapsed="false">
-  When you edit a contract template, the changes only apply to contracts generated **after** the edit. Existing contract instances keep their original content. You cannot update previously generated or sent contracts by editing the template.
-</Callout>
+Unsigned contracts still show the live template. If you fix wording while contracts are out for signature, people who have not signed yet see the updated text the next time they open the link.
 
-If you need a new version of a contract for future hires or families, update the template and generate new contract instances from the updated version.
+Once **any** contract from that template is signed, the template becomes read only so the signed wording stays stable. See [Signed templates are read only](#signed-templates-are-read-only).
+
+### Signed templates are read only
+
+When a template has at least one signed contract:
+
+- The editor subtitle reads **Contract template · signed, read only**.
+- A **Read only** panel explains that the wording stays as it was signed, and points you to **Make a copy** to change it. You can still set the template to **Inactive** so it is not sent again. Use **View contracts** to open the instances for that template.
+- The action bar note becomes **Status changes save automatically.** **Save** is hidden. **Make a copy** appears instead.
+- Name, body, header, After signing choices, and **Notify when signed** are locked. Only **Active** / **Inactive** still saves.
+
+On the templates list, a locked template's menu says **View template** instead of **Edit template**. Every row also has **Make a copy**.
+
+### Make a copy of a template
+
+Use **Make a copy** when you need new wording after a template has been signed, or when you want a second version to edit safely.
+
+1. On **Admin → Contracts**, open the template menu and choose **Make a copy**, or open a locked template and click **Make a copy** in the action bar.
+2. Campium creates **Copy of** the original name (or **Copy of untitled template**), starts it **Inactive**, and opens the copy in the editor.
+3. Edit the copy, set **Status** to **Active** when you are ready to send it, then generate new contracts from the copy.
+
+If the copy fails, you see **Could not copy the template.**
 
 ### Activate or deactivate templates
 
@@ -116,11 +139,11 @@ Use active/inactive status to control which templates admins can choose when gen
 
 <Steps>
   <Step title="Change template status" icon="edit" title-type="p">
-    In **Admin → Contracts**, open the template and set **Status** to **Active** or **Inactive**.
+    In **Admin → Contracts**, open the template and set **Status** to **Active** or **Inactive**. Status still saves on a signed (read only) template.
   </Step>
 
-  <Step title="Save the change" icon="check-circle" title-type="p">
-    Click **Save**. Active templates can be used for new contracts. Inactive templates stay in the system for record-keeping but are hidden from new contract generation.
+  <Step title="Confirm the save" icon="check-circle" title-type="p">
+    Status changes save automatically (**Status changes save automatically.** when the template is locked). Active templates can be used for new contracts. Inactive templates stay in the system for record-keeping but are hidden from new contract generation.
   </Step>
 </Steps>
 
@@ -184,7 +207,7 @@ Instances track:
 
 On **Admin → Contracts**, click the template **Name** (or the **Usage** count) to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, and **Signed**. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
 
-On each template row you can **Edit**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
+On each template row you can **Edit template** (or **View template** when the template is signed and read only), **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
 
 ### Generate a contract instance
 
@@ -209,7 +232,7 @@ On each template row you can **Edit**, **Preview**, **Print** (opens a print-fri
 You can also send contracts from [Staff Hub](/staff-hub#send-contracts-to-several-staff-at-once) using roster checkboxes.
 
 <Callout kind="alert" collapsed="false">
-  After you generate and save a contract instance, you cannot edit its text or structure. To change the wording, update the template and generate a new contract.
+  After you generate and save a contract instance, you cannot edit that instance's text as a separate document. Unsigned contracts still follow the live template, so wording fixes on an unlocked template show up for people who have not signed yet. After anyone has signed from that template, the template locks. Make a copy to change wording for future sends.
 </Callout>
 
 ## Contract statuses
@@ -344,9 +367,9 @@ Settings left on **No Change**, or values that were already the target status, d
 ## Limitations and best practices
 
 <Callout kind="alert" collapsed="false">
-  - You cannot edit a contract instance after it is generated or sent.
+  - You cannot edit a generated contract instance as its own document. Unsigned contracts still follow the live template until someone signs from that template.
 
-  - Editing a template does not change any existing contract instances.
+  - After a template locks (first signature), edit wording only on a copy. Status can still switch between Active and Inactive.
 
   - You cannot delete a template that has associated contract instances; set it to inactive instead.
 </Callout>

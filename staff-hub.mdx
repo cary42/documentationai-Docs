@@ -158,7 +158,7 @@ To send a contract:
 When you need to send the same template to more than one person, use the roster checkboxes instead of opening each row.
 
 1. Check the box on each staff row you want, or use the header checkbox to select everyone currently visible in the table.
-2. A bar appears with **N selected**, **Send contracts**, **Clear**, and (when those modules are available) **Request W-4** and/or **Request I-9**.
+2. A bar appears with **N selected**, **Send contracts**, **Clear**, and (when those modules are available) **Request W-4** and/or **Request I-9**. When your **Application Status** profile field has options, the bar also includes **Set Application Status**.
 3. Click **Send contracts**. The **Send contract** modal opens (title becomes **Send contracts** when more than one person is selected).
 4. Choose a **Contract template** and **Season**.
 5. Review **Will be emailed**. Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
@@ -168,6 +168,17 @@ When you need to send the same template to more than one person, use the roster 
 **Sent** means the contract was created and emailed. **Skipped** is someone who already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People who still need a retry stay checked; the bar can show **Still selected from the last send…**, and **Send contracts** is the retry. Someone who got a contract row but no email is cleared from the selection so a retry does not treat them as a duplicate skip.
 
 Contract history and the **Contracts Sent** tile update without reloading the page. You need the same admin access used to generate contracts elsewhere. Sending requires at least one active contract template. Clear the selection with **Clear** when you are done.
+
+## Set Application Status for several staff
+
+Use the same roster checkboxes when you want one Application Status on several people at once.
+
+1. Check the staff rows you want (or use the header checkbox for everyone visible).
+2. On the bulk bar, open **Set Application Status** and pick a status from your **Application Status** options.
+3. Confirm with **Set status** (or **Cancel**). The confirm names the status and how many people are selected. If that status also requests a W-4 and/or an I-9, the confirm says so and notes that anyone who does not already have one open gets that email.
+4. While saving, the button reads **Saving...**. Success: **Application Status set to** the status **for** the selected people. Anyone not saved stays checked so you can retry; the bar can show how many were set and how many were not.
+
+You need **Staff Hub** permission. The dropdown appears only when the staff profile field named **Application Status** exists with options. Clearing the selection uses **Clear**.
 
 ## Related guides
 
