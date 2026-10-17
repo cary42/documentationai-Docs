@@ -711,6 +711,11 @@
                 "icon": "heart"
               },
               {
+                "title": "Walk me through",
+                "path": "walk-me-through",
+                "icon": "footprints"
+              },
+              {
                 "title": "Merge Users",
                 "path": "merge-users",
                 "icon": "users"
