@@ -93,13 +93,12 @@ Use the **New Form** button on the Forms list to start a new form and configure 
       - **Description** (optional text that appears beneath the form name on the Portal)
 
     Who the form is for is set on the **Recipients** tab, not here.
-    - **Availability**
+    - **Basics / Availability**
       - **Start Date** and **End Date** (required; control when the form is available on the Portal)
-      - **Cutoff Date** (optional; set a different business cutoff than the End Date if needed)
-    - **Visibility and locking**
-      - **Visibility** (Visible or Hidden)
-      - **Lock Form After Completion** (Yes or No)
-      - **Show Question Numbers?** (toggle to display question numbering on the form)
+      - **Cutoff Date** (optional age gate; helper: people born after this date can't register, using your camper plural)
+      - **Show Question Numbers?**
+      - **Visibility** (Visible or Hidden; helper: **Hidden takes this form off the portal for everyone.**)
+      - **Lock Form After Completion** (helper: **Users can't change their answers after they submit.**)
     - **Statuses after completion**
       - **Form Status After Completion** (required)
       - **User Status After Completion** (required)
@@ -107,11 +106,11 @@ Use the **New Form** button on the Forms list to start a new form and configure 
       - **Application Fee** and **Manage Fees** options
       - **Show # of spots left** on the form
       - **Enable Payment Plan**
-      - **Allow User To Pay Later**
-      - **Pay In Full Upon Registration**
-      - **Due Date** for payment plan or pay-later balances
-      - **Default Payment To** (which account or category receives payments)
+      - **Allow User To Pay Later** (helper: **Users can register without paying a deposit. Use this mainly for testing.**)
+      - **Pay In Full Upon Registration** (own **Deposits** grouping; when **Yes**, deposit rows hide with: **Users pay the full amount, so Default Payment To and the minimum deposit settings are hidden.**)
+      - **Default Payment To** (helper: **The payment option already picked when users reach checkout.**)
       - **Minimum deposit settings** including override amount and scope
+      - **Due Date** (helper: **Users see this date on the portal.**)
     - **Discounts**
       - **Discount settings panel**, including:
         - **Allow Discounts**
@@ -119,10 +118,9 @@ Use the **New Form** button on the Forms list to start a new form and configure 
         - **Auto-Apply Discounts**
         - **Pay In Full Discount** settings for enabling the discount and overriding the default amount or percent on a per-form basis
     - **Email settings**
-      - **Admin Notifications** when forms are submitted
-      - **Approved Template**
-      - **Pending Template**
-      - **Rejected Template**
+      - **Send Reminder Emails** (helper: **Users who haven't started or finished this form get an email asking them to complete it.** Warn note: avoid reminders on a primary registration form or a large audience)
+      - **Send Admin Email Notification To** (searchable staff chips; placeholder **Search staff**)
+      - **Approved Template**, **Pending Template**, and **Rejected Template** (blank option **Don't send an email**)
     - **Custom text**
       - **Button Text** (required label for the submit button)
       - **Thank You Message**
@@ -496,13 +494,13 @@ These settings control whether recipients can see the form at all and whether th
 | Visibility  | Behavior                                                                                             |
 | ----------- | ---------------------------------------------------------------------------------------------------- |
 | **Visible** | Eligible recipients can see the form when the current date is within the form's availability window. |
-| **Hidden**  | No recipients can see the form on the Portal, even if dates and recipients are configured correctly. |
+| **Hidden**  | No recipients can see the form on the Portal, even if dates and recipients are configured correctly. Helper: **Hidden takes this form off the portal for everyone.** |
 
 Use **Hidden** while building or testing a form. Switch to **Visible** only when content, recipients, and dates are ready.
 
 #### Lock Form After Completion
 
-**Lock Form After Completion** controls whether recipients can edit a form after they submit it.
+**Lock Form After Completion** controls whether recipients can edit a form after they submit it. Helper: **Users can't change their answers after they submit.**
 
 | Setting | Behavior                                                                                              | Best use                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -595,24 +593,24 @@ On the parent checkout page, families choose how much to pay under **How much to
 When payment plans are offered, a **Payment plan** card lists each plan as a selectable option. Families who can pick their charge day still see **Charge day of the month**.
 
 <Callout kind="alert" collapsed="false">
-  Use **Allow User To Pay Later** carefully. This setting is generally best for testing or tightly controlled workflows because it lets users finish registration without collecting payment immediately.
+  Use **Allow User To Pay Later** carefully. Helper text: **Users can register without paying a deposit. Use this mainly for testing.** It lets users finish registration without collecting payment immediately.
 </Callout>
 
 #### Pay In Full Upon Registration
 
-**Pay In Full Upon Registration** requires the full amount due at checkout instead of allowing installment behavior.
+**Pay In Full Upon Registration** requires the full amount due at checkout instead of allowing installment behavior. When it is **Yes**, **Default Payment To** and the minimum deposit settings are hidden, with note: **Users pay the full amount, so Default Payment To and the minimum deposit settings are hidden. Set Pay In Full Upon Registration to No to change them.**
 
 Use this when you want registration to count only after the full amount is paid.
 
 #### Default Payment To
 
-**Default Payment To** sets the default account, category, or destination that receives payments collected through the form.
+**Default Payment To** sets which payment option is already picked when users reach checkout.
 
 Pick the correct destination before you publish the form. Correcting misapplied payment routing after families have paid is much harder than confirming it upfront.
 
 #### Cutoff Date
 
-**Cutoff Date** acts as an age gate for registration logic. Campium uses the cutoff date when calculating age-based eligibility tied to the form.
+**Cutoff Date** acts as an age gate for registration logic. Campium uses the cutoff date when calculating age-based eligibility tied to the form (people born after this date can't register).
 
 For example, if a program requires campers to be a certain age by a specific date, set that date in **Cutoff Date** so age validation uses the correct rule.
 
@@ -694,7 +692,7 @@ Use this when you review registrations before committing families to a charge, b
 
 ### Send reminder emails
 
-Reminder emails help you follow up with recipients who still need to complete a form before or after its due date.
+Reminder emails help you follow up with recipients who still need to complete a form before or after its due date. Settings helper: **Users who haven't started or finished this form get an email asking them to complete it.** A warn note also says to avoid reminders on a primary registration form or on any form where a large audience could receive these emails.
 
 Campium sends reminder emails based on the form's progress tracking, not just whether the form exists.
 
