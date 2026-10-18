@@ -20,26 +20,26 @@ Staff Hub does not replace building or reviewing the staff application itself. U
 
 Staff Hub is available from **Admin → Staff Hub**. You need the **Staff Hub** permission (under the **Admin** category). Administrators get it by default.
 
-When it loads, you see a **Season** filter, five summary metrics, and a roster table of staff for the seasons in the filter.
+When it loads, you see a **Season** filter, five summary metrics, and a roster table of staff for the seasons in the filter. Name search, **Application status**, export tools, and pagination sit in the bar under the table.
 
 ## Filter by season
 
 Each hire can belong to one or more seasons. Use the **Season** filter at the top left to choose which seasons you want to work with, then click **Filter**. **Clear** returns you to the default view. The season list includes past and inactive seasons, not only active ones.
 
-The roster lists staff who have started the configured staff form (registration or standard) for the seasons you selected. If you do not choose a season, Staff Hub uses your default season.
+The roster lists staff who have started the configured staff form (registration or standard) for the seasons you selected, plus anyone marked **Returning** (they stay on the roster for any season filter, even before they reapply or get a contract). If you do not choose a season, Staff Hub uses your default season.
 
 ## Filter by application status
 
-When your application status field has options, an **Application status** multiselect appears next to the season filter. Pick one or more statuses to narrow the roster (including **Not set** when people have no value yet). Selecting every status, or clearing the control, shows everyone again. Name search and this filter apply together. Empty results show **No staff match your search or status filter.**
+When your application status field has options, an **Application status** multiselect appears in the pagination bar under the table (button text **All statuses** when nothing is picked, or when every status is selected). Pick one or more statuses to narrow the roster (including **Not set** when people have no value yet). Selecting every status, or clearing the control, shows everyone again. Name search and this filter apply together. Empty results show **No staff match these filters.** (or **No staff found for the selected season filter.** when the season filter itself has no one).
 
 ## Read the summary metrics
 
 Above the roster, five tiles summarize the current season filter:
 
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
-  - **Ready for Offer** — staff who have completed at least one form but have no contract yet.
+  - **Ready for Offer** — staff who have completed at least one form but have no contract yet, and **Returning** staff who have no contract for the seasons in the filter (or for any season that has not ended yet when no season is filtered).
 
-  - **Awaiting Forms** — staff who have not finished every form they started.
+  - **Awaiting Forms** — staff who have not finished every form they started (never someone who is already Ready for Offer as Returning).
 
   - **Contracts Sent** — the number of contracts sent to staff in the filter.
 
@@ -63,31 +63,34 @@ Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. O
 
 **Save as...** / **Saved filters** / **Delete** work the same as on Camper Hub: named filters are shared with everyone at your camp who uses Staff Hub, and your last-used filter is restored when you return.
 
-## Export the roster
+## Page, search, and export the roster
 
-Above the table, an export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) exports the staff currently shown after your filters (including profile-field filters). Tooltip: **Exports the staff shown, after your filters**.
+Under the table, the pagination bar includes:
+
+- **Filter by staff name** (sr-only label **Search staff**) - matches the Staff column only. Summary tile counts stay on the full season filter; click a tile to filter the roster itself.
+- **Application status** - see [Filter by application status](#filter-by-application-status).
+- Export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) - tooltip: **Exports every staff member in the current filter, not just this page**.
+- **Rows per page** - **50**, **100**, **200**, **500**, or **All**, with **Previous** / **Next** and **Showing first-last of total** (and **Page n of pages** when there is more than one page).
+
+Checkboxes and the bulk bar apply to the page you are viewing. Filters (season, status, name, profile fields, tiles) apply across the full roster, not only the current page. If a page fails to load, you see **The list could not be loaded. Try again.**
 
 ## Work the roster table
 
 Each staff member is one row. From left to right, the roster shows:
 
-- **Application status** - the main status of where the person is in your process (for example, applied, interviewing, hired). This always comes from the staff profile field named **Application Status** (any capitalization). When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. The same status also appears under the name on that person's profile header (editable there when you have Staff Hub permission). Statuses such as **Rejected**, **Declined**, **Withdrawn**, **DNR**, and **Do Not Rehire** read red on the roster and the profile. After a season's profile snapshot finishes (**Snapshot ready** on **Seasons**), Campium clears that season's Application status for staff on that season's roster (people still on another active season's roster keep their status). Returning staff start the next hiring cycle blank instead of carrying last season's value. The snapshot still holds the historical answer for reporting.
+- **Application status** - the main status of where the person is in your process (for example, applied, interviewing, hired). This always comes from the staff profile field named **Application Status** (any capitalization). When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. The same status also appears under the name on that person's profile header (editable there when you have Staff Hub permission). Statuses such as **Rejected**, **Declined**, **Withdrawn**, **DNR**, and **Do Not Rehire** read red on the roster and the profile. When a season closes (profile snapshot finishes, **Snapshot ready** on **Seasons**), Hired staff become **Returning**, people who were already **Returning** are cleared, and every other Application status is cleared, except statuses you keep in **Staff Hub Settings** under **Keep these statuses at season close**. The snapshot still holds the historical answer for reporting.
 
 - **Staff** — the person's name (a link to their profile), city and state when available, cell phone, email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline. When the person has seasons on their profile, a muted **N season** / **N seasons** line appears at the bottom of the cell (hover for the full list).
 
-- **Seasons** — the seasons the person is attached to for the current filter. This column is hidden when you filter to exactly one season (every row would show the same value).
+- **Seasons** — seasons from staff forms or contracts for the current filter. When someone has none of those yet (common for **Returning** staff who have not reapplied), the column shows seasons from their profile instead of **None**. This column is hidden when you filter to exactly one season (every row would show the same value).
 
 - **Profile field columns** — any staff profile fields you chose to display. Text fields and dropdowns can be edited directly in the table; your change saves on its own.
 
-- **Forms** — a **Started** and **Completed** count. When the person has reference requests, a **References** done/total line appears as well. Click the cell to expand a panel: **References** first (same statuses and actions as the profile **References** card, including **Reopen** for completed ones), then a per-season breakdown of each staff form and its status. See [References](/references#track-references-on-a-profile).
+- **Forms** — a **Started** and **Completed** count. When the person has reference requests, a **References** done/total line appears as well. Click the cell to expand a panel: **References** first (**View answers** and **Resend** when you have **Forms** tab access and the reference can be resent), then a per-season breakdown of each staff form and its status. Empty forms for a season show **No staff forms for this season.** with **Pick them in Staff Hub Settings**. See [References](/references#track-references-on-a-profile).
 
 - **W-4** / **I-9** / **W-4 & I-9** - hiring document status when [W-4 collection](/w4-collection) and/or [I-9 verification](/i9-verification) is on (I-9 also needs the **I-9 Records** permission). Download filled PDFs from the cell when a form is signed.
 
 - **Contracts** — a **Total / Sent / Signed** rollup. Click it to expand the contract history and the send-a-contract panel.
-
-<Callout kind="tip" collapsed="false">
-  Use **Search staff** above the table to filter the roster by name. It matches the Staff column only. Summary tile counts stay on the full season filter; click a tile to filter the roster itself.
-</Callout>
 
 ## Choose which fields and statuses appear
 
@@ -100,6 +103,10 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
 
   <Step title="Confirm Application Status" icon="flag" title-type="p">
     The first column always uses the staff profile field named **Application Status**. Create that dropdown under **Admin → Profile Fields** if it is missing. There is no separate override field.
+  </Step>
+
+  <Step title="Keep statuses at season close" icon="shield" title-type="p">
+    When **Application Status** has options, use **Keep these statuses at season close** (empty shows **None**). Helper text: **When you close a season, Hired staff become Returning, staff still Returning from last time are cleared, and every other Application status is cleared. Pick the statuses that should stay as they are, such as DNR or Fired.** If you have never saved a choice, Campium defaults to keeping common do-not-rehire style options when they exist.
   </Step>
 
   <Step title="Set W-4 and I-9 automatic requests" icon="file-text" title-type="p">
@@ -121,7 +128,11 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
 
 ## See form progress for one person
 
-Click the **Forms** cell in any row to expand a panel. When references exist, a **References** section lists them first. Below that, the panel groups the person's staff forms by season and shows the status of each one, along with the completion date when a form is finished. Use this to see exactly which follow-up forms are still outstanding for a hire.
+Click the **Forms** cell in any row to expand a panel titled **Forms for** that person. The Forms and Contracts panels load the first time you open them.
+
+When references exist, a **References** section lists them first. Use **View answers** to open the responses, or **Resend** to email the reference request again (title **Email [name] the reference request again**). While sending, the button reads **Sending**. Success: **Reference request sent.** Failure: **The reference request could not be sent.** **Resend** needs **Forms** tab access and is hidden when the reference is already completed or removed. For **Reopen** on a completed reference, use the profile **References** card instead. See [References](/references#track-references-on-a-profile).
+
+Below that, the panel groups the person's staff forms by season (forms you chose in Settings, forms they already started, and active staff-audience forms) and shows the status of each one, along with the completion date when a form is finished. Empty season: **No staff forms for this season.** with **Pick them in Staff Hub Settings**. No seasons available: **No seasons available to list forms.**
 
 For a completed form, use the printer icon (title **Print form**, with the form name) to open the same print dialog as the profile **Forms** tab, including **Layout** (**Compact** or **Expanded**). See [Forms](/forms#print-form-responses).
 
