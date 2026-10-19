@@ -11,6 +11,8 @@ Photo Hosting stores and shares your camp photos through CampiumDB, including th
 
 Photo Hosting is organized by season and uses tags and optional facial recognition to help families quickly find their campers in large photo collections.
 
+Photos flagged by automatic content screening wait in **Moderation** until your staff approve or reject them. See [Moderate flagged photos](#moderate-flagged-photos).
+
 <Callout kind="info" collapsed="false">
   Camps do not pay for Photo Hosting access. Instead, parents pay a **one-time fee per season** for access to **unlimited high-resolution photo downloads** for that season.
 </Callout>
@@ -108,6 +110,53 @@ Tags help families filter photos by cabin, activity, event, or other categories.
 
 <Callout kind="tip" collapsed="false">
   Create a short, consistent tag list at the start of the season. Consistent names such as **Cabin Pine** and **Cabin Oak** make it easier for families to find photos over time.
+</Callout>
+
+## Moderate flagged photos
+
+Open **Portal → Photo Hosting → Moderation** in the left menu.
+
+Campium can screen each new upload automatically for explicit nudity, violence, and visually disturbing content. When screening flags a photo, or cannot check it, the photo is held in **Moderation** instead of going live. Held photos are hidden from families in the parent portal and the app until someone on your staff approves them. Swimwear and similar camp photos are not flagged.
+
+You see **Moderation** when you can see **Photo Hosting**: the **Photo Hosting** module must be on and you need the **Upload Photos** permission. When photos are waiting for review, a red badge next to **Moderation** in the menu shows how many.
+
+### What is on the Moderation page
+
+The page is titled **Photos held for review** and shows one card per held photo, newest first.
+
+- **Reason badge**: the top-left corner of each card shows why the photo was held, such as **Violence** or **Explicit Nudity**, with the screening confidence as a percentage. A yellow **Screening error** badge means Campium could not check the photo, so it was held to be safe rather than published unscreened.
+- **Flagged**: the date and time the photo was screened.
+- **View full size**: click the image to open it in a larger view before you decide.
+- **Approve** and **Reject**: buttons at the bottom of each card.
+
+When nothing is waiting, the page shows **No photos are awaiting review.**
+
+### Review held photos
+
+<Steps>
+  <Step title="Open the queue" icon="shield" title-type="p">
+    Go to **Portal → Photo Hosting → Moderation**. Click a photo to check it at full size.
+  </Step>
+
+  <Step title="Approve a photo that is fine" icon="check-circle" title-type="p">
+    Click **Approve** on the card, then confirm. The photo leaves the queue, goes live in your gallery for families, and continues through face matching, which held photos skip.
+  </Step>
+
+  <Step title="Reject a photo that should not be shared" icon="trash" title-type="p">
+    Click **Reject** on the card, then confirm. The photo leaves the queue and is never published. In **Portal → Photo Hosting → Photos** it stays as a **Rejected** placeholder without the image, which you can delete.
+  </Step>
+</Steps>
+
+### Approve several photos at once
+
+Check the box in the top-right corner of each photo you want to approve, or check **Select all**. Then click **Approve selected** (the button shows how many you picked) and confirm. Campium tells you how many photos were approved and published, and how many could not be approved. There is no bulk reject; reject photos one at a time.
+
+<Callout kind="info" collapsed="false">
+  Photos in **Moderation** show an **In review** chip in **Portal → Photo Hosting → Photos**, and rejected photos show **Rejected**. Hover the chip to see the reason. If you see **This photo has already been reviewed**, another staff member approved or rejected it first; reload the page to refresh the queue.
+</Callout>
+
+<Callout kind="info" collapsed="false">
+  Campium controls whether automatic screening runs. While it is switched off, new uploads are not screened, nothing new is added to **Moderation**, and the queue stays empty.
 </Callout>
 
 ## Review campers tagged by facial recognition

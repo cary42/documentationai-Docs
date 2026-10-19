@@ -1,0 +1,176 @@
+---
+title: Dashboard
+description: >-
+  The CampiumDB home dashboard: what each card shows, which permissions and
+  settings control it, and how to hide, move, and rearrange cards for your own
+  login.
+---
+Open **Dashboard** at the top of the left menu.
+
+## What the dashboard is
+
+The dashboard, titled **Campium Dashboard**, is the first screen you see after you sign in to CampiumDB. It is a set of cards that summarize your camp at a glance: people counts, active seasons, money, registrations, forms, and shortcuts to the reports you use most.
+
+Every login sees **Dashboard** in the left menu. Which cards appear depends on your role's permissions, your camp's settings, and whether there is anything to show. A card with nothing to report usually hides itself instead of showing an empty box. If your login is limited to **My Groups**, the left menu shows only **My Groups** instead. See [My Groups](/my-groups).
+
+## Customize your dashboard
+
+Your layout is saved for your login only. Other staff keep their own layout.
+
+<Steps>
+  <Step title="Open the Customize panel" icon="settings" title-type="p">
+    Click **Customize** at the top right of the dashboard. The **Customize dashboard** panel lists every card on your dashboard, column by column.
+  </Step>
+
+  <Step title="Hide or show cards" icon="eye" title-type="p">
+    Use the switch beside a card's name to hide or show it. **Show all cards** turns every card back on.
+  </Step>
+
+  <Step title="Move cards" icon="move" title-type="p">
+    Drag a card by its header, or use the up and down arrows in the panel. Use the **Column** dropdown beside a card to move it to **Column 1**, **Column 2**, or **Column 3**.
+  </Step>
+
+  <Step title="Reset the layout" icon="rotate-ccw" title-type="p">
+    **Reset to default layout** puts every card back in its default place after you confirm. Hidden cards stay hidden.
+  </Step>
+</Steps>
+
+## Cards and who sees them
+
+Cards are listed below in their default order. Permission names are shown as they appear on the Roles & Permissions screen.
+
+### Test mode banner
+
+If your camp has not gone live yet, a banner across the top says **You are in test mode.** Only your staff can register, and payments are test transactions. It shows how many Go Live checks are done and links to **See what is left**. The banner goes away once your camp is live.
+
+### Your Campium checklist
+
+Shows your setup checklist from Campium: a progress bar, how many items are done (and how many are overdue), and the next three open items. Items with a guided tour have a **Show me** link. Click **Open** or **See all** for the full checklist. The card appears only while your camp has open checklist items and hides itself when everything is done.
+
+### User Stats
+
+Counts of campers and staff by status. Under **Campers** you see **Active**, **Pending**, **Inactive**, and **Leads** (Leads only when you have any). Under **Staff** you see **Active**, **Pending**, and **Inactive**. Click any number to open **All People** filtered to that group.
+
+Click the gear icon to choose how **Active** campers are counted: **All active campers**, or **Only campers with a session in an active season**. Click **Save**. This choice applies to your whole camp, not just your login.
+
+Requires the **View User Profiles** and **User Stats Section on Dashboard** permissions.
+
+### Active Seasons
+
+Lists your active seasons with a count in the title. Under each season you see when its registration form opens and ends (for example, **Registration opens** or **Registration ended** with a date). **Setup** opens guided setup for that season, and **All seasons** opens the Seasons page. If you have no active seasons, the card links you to the Seasons page to add one.
+
+Requires the **Access To Modify Seasons & Sessions** permission. See [Guided Season Setup](/guided-season-setup) and [Manage Seasons](/manage-seasons).
+
+### Attendance Stats
+
+Shows **Total Enrollment Today** and how many campers are **Absent**, **Checked In**, and **Checked Out** today, each with a bar showing its share of today's enrollment. **Online Attendance** opens the attendance screen.
+
+Requires the **Access to Online Attendance** permission and the **Attendance Module** turned on in **Admin → Site Settings → Modules**. The card hides on days when no one is enrolled. See [Attendance](/attendance).
+
+### System Reports
+
+Quick links to the system reports available to you, on a **General** tab, a **Charts** tab (when your role has **Access to system Charts**), and a **Custom** tab when there are any. **View all** opens **Reports → System Reports**. Payment plan and scheduled payment reports are not listed here; they are in the **Payment Issues** card.
+
+### Financial Snapshot
+
+Shows **Total Accounts Receivable** and a table of your seasons with **Revenue After Discounts** and **Receivables**. Switch to **Credits** to see **Total credits held** and each season's credits instead. Click a season to open the families who owe for that season, or, in the Credits view, the families holding credit. Click the total to open the [Account Balance report](/account-balance) or the [Credits report](/negative-balance).
+
+Click the gear icon (**Modify Dashboard Financials**) and use **Select Seasons To Display** to choose which seasons the table shows. This choice is saved for your login only.
+
+Requires your camp's financial module (Campium turns this on) plus the **Access To financial reports and financials in profiles** and **View the Financial Snapshot on the dashboard** permissions.
+
+### Retention
+
+Shows how many of last season's campers came back, comparing the two seasons you choose. Use **All campers** or **Paying campers only** to change who is counted (the buttons use your camp's label for campers). Paying leaves out campers whose charges came to $0 after discounts. **YoY report** opens the product year-over-year comparison.
+
+Click the gear icon to pick the **Current season** and **Compare to** season, choose which **Seasons in retention** count (for example, leave out a fall season or holiday weekend), and click **Apply**. Last season's campers in the highest grade are left out because they are not expected to return. If your camp has a grade field, you can check **Include every grade in retention** or pick the **Grades left out of retention**. Those grade settings apply to all staff.
+
+Requires the **Retention card on the dashboard** permission, and your camp must have at least two seasons. See [Retention report](/system-report-retention).
+
+### Payment Issues
+
+Shortcuts to scheduled payment, payment plan, missing payment method, and ACH return reports, with counts, plus the payment digest email setting. Requires the **Access To financial reports and financials in profiles** permission, and is hidden for free camps. See [Payment Issues](/payment-issues) for the full details.
+
+### Product Rollup
+
+A summary of one season's enrollment: total campers, **Capacity filled**, **Wait listed**, and revenue (when your camp is not free). Below that are the fullest sessions with registered count, capacity, percent full, and a wait-list badge when people are waiting. Click a session to see who is enrolled. **Full report** opens the Product Rollup report.
+
+Click the gear icon to pick a different active season for this card. The choice only changes this card, for your login. **Default season** follows the season you picked as your default.
+
+Requires the **View the Product Rollup report** permission. See [Product Rollup report](/product-rollup).
+
+### Revenue - year over year
+
+A chart comparing revenue in your current season against a comparison season, measured from each season's start so you see whether you are ahead of or behind last year's pace. **Stats** opens [Season Stats](/index-stats).
+
+### Cumulative registrations
+
+A chart of registrations building up over the current season compared with a comparison season, on the same timeline as the revenue chart. **Weeks sold report** opens the full Weeks Sold report.
+
+Both charts require your camp's financial module, more than one season, and the **Access To financial reports and financials in profiles**, **View the Financial Snapshot on the dashboard**, and **Access to system Charts** permissions.
+
+### Season Registrations
+
+Side-by-side registration totals for your current season and a previous season, compared at the same point in each season, with the **Change** between them.
+
+Requires the **View User Profiles** and **Access to system Charts** permissions, and more than one season.
+
+### Season settings shared by the comparison cards
+
+**Season Registrations**, **Revenue - year over year**, **Cumulative registrations**, and **Retention** each have a gear icon with **Current season** and **Compare to**. The two seasons must be different. The three registration and revenue cards also let you set an optional pace start date for each season; leave it blank to use the season's start date. These choices are saved for your login only, and a note under the settings tells you which other visible cards use the same seasons.
+
+### Recently Viewed
+
+The last 10 people whose profiles you opened, with their status and user type. Requires the **Edit User Data (the save button) on All User Data tab** permission.
+
+### My Reports
+
+Custom reports that someone shared with your role or with you directly. Each name opens a read-only view of the report. The card appears only when at least one report is shared with you. See [Allow a staff user to see a report](/allow-a-staff-user-to-see-a-report).
+
+### New Campers
+
+The 10 people who most recently registered for a session in the past month, newest first, with the registration date. The title uses your camp's label for campers. **See All New Campers** opens the [Chronological User Registration report](/system-report-chronological-user-registration).
+
+Requires the **View User Profiles** and **New Users Section on Dashboard** permissions.
+
+### Reminder Emails
+
+Upcoming scheduled emails, soonest first:
+
+- Form reminder emails set to send in the next 30 days, with the send date and, for non-registration forms, the estimated number of recipients. Click the refresh icon to update the count. Requires the **Display Reminder Emails alert box on Dashboard** permission.
+
+- **Upcoming charge reminder** emails going out in the next 14 days (starting tomorrow), with the charge date and number of payments. Click one to open [Upcoming Charge Emails](/system-report-upcoming-charge-emails). Requires the **Access To The Report Module** and **Access To financial reports and financials in profiles** permissions, upcoming charge emails turned on, and a camp that is not free.
+
+The card hides when nothing is scheduled.
+
+### Form Status Alerts
+
+Forms that opened or closed in the last 7 days or will open or close in the next 7 days. Forms that have already closed show in red. A registration form that is opening with nothing for families to buy is flagged **No items to buy**. Requires the **Form Status Alerts** permission.
+
+### Quick Access Forms
+
+Every form that is open right now, plus forms with no start or end date. Click a form name to open its settings, or use the menu icon beside it to jump to **Settings**, **Layout** (registration forms), **Recipients**, **Questions**, **Responses**, or **Print**. Requires the **Manage Forms** permission. See [Forms](/forms).
+
+### My Sessions
+
+Below the three columns, a card titled with your camp's label for sessions lists the sessions in active seasons that you are assigned to as staff, with each session's dates. **View _N_ registered** shows who is enrolled, and **Send Email** emails that session's families. It appears only for staff assigned to at least one session. See [Allow staff to quickly email their assigned sessions](/help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions).
+
+## Notes
+
+- **System Reports**, **Financial Snapshot**, and **Payment Issues** load after the rest of the page and may show cached numbers. When the data is more than a minute old, the card shows when it was last updated (for example, **Updated 4 min ago**) and a refresh button.
+
+- If a card fails to load, it shows a **Retry** link.
+
+- A card you expect is missing? Check the permissions listed for it with an admin on **Roles & Permissions**, and check **Customize** in case you hid it.
+
+## Related guides
+
+- [Season Stats](/index-stats)
+
+- [Payment Issues](/payment-issues)
+
+- [Roles & Permissions](/roles-and-permissions)
+
+- [Create and use custom reports](/custom-reports)
+
+- [Favorite pages](/favorite-pages)

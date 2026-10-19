@@ -1,0 +1,134 @@
+---
+title: Mobile App Settings
+description: >-
+  A standalone page for administrators that holds the Campium mobile app
+  options: chat, menu items, the group field, support contact details, and the
+  app's main screen. It edits the same settings as the Mobile App tab in Site
+  Settings.
+---
+Open **Admin → Mobile App Settings** in the left menu.
+
+## What this page is for
+
+Mobile App Settings controls what families and staff see in the Campium mobile app: whether they can chat, which menu items appear, which profile field the app uses for groups, how people contact you for support, and what the app's main screen shows. For a tour of the app itself, see [Mobile App](/mobile-app).
+
+## How it differs from Site Settings → Mobile App
+
+You can reach the same mobile app options in two places:
+
+- **Admin → Mobile App Settings** (this page) shows only the mobile app options, on a page of their own.
+- **Admin → Site Settings → Mobile App** is one tab of [Site Settings](/settings), next to **Modules**, **Basic**, and **Payment Info**.
+
+Both pages read and save the same settings. A change you make on one page shows on the other, so use whichever is easier to reach. What differs is who sees each one:
+
+| | Mobile App Settings | Site Settings → Mobile App |
+|---|---|---|
+| Who sees it | Users with the **Administrator** role | Users whose role includes the **Site Settings** permission |
+| When it appears | Only after the mobile app is turned on for your account | Always, as a tab in Site Settings |
+
+<Callout kind="info" collapsed="false">
+  If **Mobile App Settings** is missing from your **Admin** menu, either the mobile app is not turned on for your account or your role is not **Administrator**. Campium turns the mobile app on for your account; contact Campium support if you want it. Users with the **Site Settings** permission can still change the same options from **Admin → Site Settings → Mobile App**.
+</Callout>
+
+## Settings on this page
+
+Each change saves as soon as you make it. A toggle saves when you switch it; a text box saves when you click out of it. You see a confirmation after each save.
+
+### Groups
+
+<ParamField body="Group Field" param-type="selector" required="false" deprecated="false">
+  The profile field that represents the group each person is in. For example, if a child is in Rangers for a field called **Group**, choose **Group**. Campium uses this for attendance and for assigning staff to groups. Choose a field whose user type is set to **All Users**.
+</ParamField>
+
+### Chat
+
+<ParamField body="Allow parents to chat with counselors/camp" param-type="toggle" required="false" deprecated="false">
+  Lets families message your camp and counselors in the app. See [Use App Chat for camp communications](/app-chat).
+</ParamField>
+
+<ParamField body="Allow staff to chat" param-type="toggle" required="false" deprecated="false">
+  Lets staff message each other in the app.
+</ParamField>
+
+### App menu items
+
+<ParamField body="Display Files menu item for staff" param-type="toggle" required="false" deprecated="false">
+  Shows a **Files** menu item to staff in the app.
+</ParamField>
+
+<ParamField body="Enable Todo List" param-type="toggle" required="false" deprecated="false">
+  Turns on the to-do list for staff. This is the same setting as **Todo List Module** on the **Modules** tab of Site Settings. See [Use the Todo List](/todo-list).
+</ParamField>
+
+<ParamField body="Display Files menu item for parents" param-type="toggle" required="false" deprecated="false">
+  Shows a **Files** menu item to families in the app.
+</ParamField>
+
+<ParamField body="Display My Groups menu item" param-type="toggle" required="false" deprecated="false">
+  Shows **My Groups** to staff in the app. See [My Groups](/my-groups).
+</ParamField>
+
+<ParamField body="Display Support menu item" param-type="toggle" required="false" deprecated="false">
+  Shows a **Support** menu item where app users can send your camp a message.
+</ParamField>
+
+<ParamField body="Display Useful Links menu item" param-type="toggle" required="false" deprecated="false">
+  Shows a **Useful Links** menu item that lists the web links saved for your account.
+</ParamField>
+
+<ParamField body="Allow users to update the mailing address" param-type="toggle" required="false" deprecated="false">
+  Adds **Update Address** to the app's profile area so families can change their mailing address.
+</ParamField>
+
+### Support contact
+
+<ParamField body="Text to display at top of support screen" param-type="text area" required="false" deprecated="false">
+  A note shown above the support form, such as your office hours or how quickly you reply.
+</ParamField>
+
+<ParamField body="Email to send support requests to" param-type="text" required="false" deprecated="false">
+  Messages sent from the app's support screen go to this address.
+</ParamField>
+
+<ParamField body="Email for bus note alerts" param-type="text" required="false" deprecated="false">
+  Appears only when bus tracking for staff is on for your account. Bus staff can log notes about rider behavior or driver issues in the app and choose to email an alert to this address. Separate several addresses with commas. Leave it blank to turn alerts off. See [Transportation](/transportation).
+</ParamField>
+
+<ParamField body="Phone # For App Users To Contact" param-type="text" required="false" deprecated="false">
+  The phone number app users see for reaching your camp.
+</ParamField>
+
+### Main screen
+
+<ParamField body="Main screen photo" param-type="text" required="false" deprecated="false">
+  The image the app shows on its main screen once someone signs in.
+</ParamField>
+
+<ParamField body="Slogan / text for main screen" param-type="text" required="false" deprecated="false">
+  A short line of text shown on the app's main screen.
+</ParamField>
+
+## Change a mobile app setting
+
+<Steps>
+  <Step title="Open the page" icon="smartphone" title-type="p">
+    Go to **Admin → Mobile App Settings**. If you do not have the **Administrator** role, use **Admin → Site Settings** and open the **Mobile App** tab instead.
+  </Step>
+
+  <Step title="Make your change" icon="toggle-right" title-type="p">
+    Switch a toggle, pick a **Group Field**, or type in a text box and click out of it.
+  </Step>
+
+  <Step title="Confirm the save" icon="check-circle" title-type="p">
+    Wait for the save confirmation. If a session-expired message appears instead, reload the page and make the change again.
+  </Step>
+</Steps>
+
+## Related guides
+
+- [Mobile App](/mobile-app)
+- [Site Settings](/settings)
+- [Use App Chat for camp communications](/app-chat)
+- [Send push notifications](/push-notifications)
+- [Useful Links](/useful-links)
+- [Roles & Permissions](/roles-and-permissions)
