@@ -28,7 +28,7 @@ Footer helper: **Send Test emails the saved wording to you, filled in with sampl
 | **Upcoming scheduled charge** | Sent before each scheduled payment on the days you choose under **Admin → Site Settings → Payment Info**. Turn **Charge Coming Email** on there to send it. In the editor, **See who gets the next reminder** opens the [Upcoming Charge Emails](/system-report-upcoming-charge-emails) report. |
 | **Scheduled payment receipt** | Sent after a scheduled payment goes through when **Send Scheduled Payment Receipt** is on under Payment Info. |
 | **Scheduled payment failed** | Standard wording when a scheduled payment is declined. |
-| **ACH payment returned** | Standard wording when the bank returns an ACH payment after it settled. |
+| **ACH payment returned** | Standard wording when the bank returns an ACH payment after it settled. When your camp is set up for Canada on Finix, this row reads **PAD payment returned** instead. |
 
 ### Wait list
 
@@ -66,13 +66,13 @@ These rows appear only when the matching module is on:
 
 | Row | What it is |
 | --- | --- |
-| **Email footer** | Added to the bottom of emails you send from Campium and most automated ones. **Admin → Site Settings → Basic** also links here with **Edit in Automated Emails**. |
+| **Email footer** | Added to the bottom of emails you send from Campium and most automated ones. The editor label is **Footer** (HTML editor). **Admin → Site Settings → Basic** also links here with **Edit in Automated Emails**. Staff can set a personal footer under your name → **Settings → Email Footer**; that personal footer replaces the camp footer only when the email goes out From their own verified address. See [Account](/account#email-footer). |
 
 ## Edit an automated email
 
 1. Open **Admin → Automated Emails**.
 2. Click **Edit** on the row you want, or open a direct link such as **Edit Wording** on a form.
-3. The editor shows **Subject** (when the email has one) and **Message** or **Footer text**.
+3. The editor shows **Subject** (when the email has one) and **Message** or **Footer**.
 4. Use **Merge fields** on the right: click in the subject or message, then click a field to insert it. Fields marked **Required** must stay in the message.
 5. Click **Save**.
 6. Optionally click **Preview**, **Send Test**, or **Reset to default**.

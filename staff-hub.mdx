@@ -34,18 +34,20 @@ When your application status field has options, an **Application status** multis
 
 ## Read the summary metrics
 
-Above the roster, five tiles summarize the current season filter:
+Above the roster, tiles summarize the current season filter:
 
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
-  - **Ready for Offer** — staff who have completed at least one form but have no contract yet, and **Returning** staff who have no contract for the seasons in the filter (or for any season that has not ended yet when no season is filtered).
+  - **Returning** - staff marked **Returning**. This tile appears only when your **Application Status** field has a Returning option. Active filter note: **Showing N staff marked Returning. Click the tile again to show everyone.**
 
-  - **Awaiting Forms** — staff who have not finished every form they started (never someone who is already Ready for Offer as Returning).
+  - **Ready for Offer** - staff who have completed at least one form but have no contract yet, and **Returning** staff who have no contract for the seasons in the filter (or for any season that has not ended yet when no season is filtered).
 
-  - **Contracts Sent** — the number of contracts sent to staff in the filter.
+  - **Awaiting Forms** - staff who have not finished every form they started (never someone who is already Ready for Offer as Returning).
 
-  - **Total Signed** — the number of signed contracts.
+  - **Contracts Sent** - the number of contracts sent to staff in the filter.
 
-  - **Signed This Week** — contracts signed in the last seven days.
+  - **Total Signed** - the number of signed contracts.
+
+  - **Signed This Week** - contracts signed in the last seven days.
 </Card>
 
 Tile **counts** always reflect the full season filter until you apply a profile-field filter (below). Name search alone does not change the tiles. Click a tile to filter the roster to that group. Helper text under the tiles says **Click a tile above to filter this list.** Click the same tile again to show everyone. When a tile filter is on, the note explains who you are seeing (for example **Showing N staff who have completed a form and have no contract yet. Click the tile again to show everyone.**). Your tile choice is remembered in this browser.
@@ -72,13 +74,13 @@ Under the table, the pagination bar includes:
 - Export toolbar (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) - tooltip: **Exports every staff member in the current filter, not just this page**.
 - **Rows per page** - **50**, **100**, **200**, **500**, or **All**, with **Previous** / **Next** and **Showing first-last of total** (and **Page n of pages** when there is more than one page).
 
-Checkboxes and the bulk bar apply to the page you are viewing. Filters (season, status, name, profile fields, tiles) apply across the full roster, not only the current page. If a page fails to load, you see **The list could not be loaded. Try again.**
+The header checkbox selects **Select all staff on this page**. When every row on the page is checked and more pages match your filters, an offer appears: **Select all N matching**. While that runs, the button reads **Selecting...**. With everyone matching selected, the bulk bar shows **N selected across all pages** (and confirmations say **across all pages**). **Clear** drops the selection. Filters (season, status, name, profile fields, tiles) still apply across the full roster. If a page fails to load, you see **The list could not be loaded. Try again.**
 
 ## Work the roster table
 
 Each staff member is one row. From left to right, the roster shows:
 
-- **Application status** - the main status of where the person is in your process (for example, applied, interviewing, hired). This always comes from the staff profile field named **Application Status** (any capitalization). When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. The same status also appears under the name on that person's profile header (editable there when you have Staff Hub permission). Statuses such as **Rejected**, **Declined**, **Withdrawn**, **DNR**, and **Do Not Rehire** read red on the roster and the profile. When a season closes (profile snapshot finishes, **Snapshot ready** on **Seasons**), Hired staff become **Returning**, people who were already **Returning** are cleared, and every other Application status is cleared, except statuses you keep in **Staff Hub Settings** under **Keep these statuses at season close**. The snapshot still holds the historical answer for reporting.
+- **Application status** - the main status of where the person is in your process (for example, applied, interviewing, hired). This always comes from the staff profile field named **Application Status** (any capitalization). When the field is set up as a dropdown, you can change the status right in the table and it saves immediately. The same status also appears under the name on that person's profile header (editable there when you have Staff Hub permission). Statuses such as **Rejected**, **Declined**, **Withdrawn**, **DNR**, and **Do Not Rehire** read red on the roster and the profile. Changing someone who is already **DNR**, **Do Not Rehire**, **Fired**, **Dismissed**, or **Terminated** asks you to confirm with their name and current status (for example **Alex is DNR. Are you sure you want to change their Application status?**) and **Yes, change it** / **Cancel**. Other edit screens that cannot change a locked status show a message that the Application status is locked and you can change it from Staff Hub or the status at the top of the profile. When a season closes (profile snapshot finishes, **Snapshot ready** on **Seasons**), Hired staff become **Returning**, people who were already **Returning** are cleared, and every other Application status is cleared, except statuses you keep in **Staff Hub Settings** under **Keep these statuses at season close**. **DNR**, **Fired**, and **Dismissed** always stay through season close. The snapshot still holds the historical answer for reporting. Before you deactivate a season, **Edit Season** can preview those Application Status changes under **Staff Hub application status**. See [Manage Seasons](/manage-seasons#staff-hub-application-status-when-you-close-a-season).
 
 - **Staff** — the person's name (a link to their profile), city and state when available, cell phone, email, and a separate **user status** badge (Active, Inactive, Pending, and so on). The user status is also editable inline. When the person has seasons on their profile, a muted **N season** / **N seasons** line appears at the bottom of the cell (hover for the full list).
 
@@ -106,7 +108,7 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
   </Step>
 
   <Step title="Keep statuses at season close" icon="shield" title-type="p">
-    When **Application Status** has options, use **Keep these statuses at season close** (empty shows **None**). Helper text: **When you close a season, Hired staff become Returning, staff still Returning from last time are cleared, and every other Application status is cleared. Pick the statuses that should stay as they are, such as DNR or Fired.** If you have never saved a choice, Campium defaults to keeping common do-not-rehire style options when they exist.
+    When **Application Status** has options, use **Keep these statuses at season close** (empty shows **None**). Helper text: **When you close a season, Hired staff become Returning, staff still Returning from last time are cleared, and every other Application status is cleared. Pick the statuses that should stay as they are. DNR, Fired and Dismissed always stay: nothing changes them automatically, and changing one here asks you to confirm.** Those locked options stay checked and cannot be unchecked. If you have never saved a choice, Campium defaults to keeping common do-not-rehire style options when they exist.
   </Step>
 
   <Step title="Set W-4 and I-9 automatic requests" icon="file-text" title-type="p">
@@ -168,12 +170,12 @@ To send a contract:
 
 When you need to send the same template to more than one person, use the roster checkboxes instead of opening each row.
 
-1. Check the box on each staff row you want, or use the header checkbox to select everyone currently visible in the table.
-2. A bar appears with **N selected**, **Send contracts**, **Clear**, and (when those modules are available) **Request W-4** and/or **Request I-9**. When your **Application Status** profile field has options, the bar also includes **Set Application Status**.
-3. Click **Send contracts**. The **Send contract** modal opens (title becomes **Send contracts** when more than one person is selected).
+1. Check the box on each staff row you want, use the header checkbox for **Select all staff on this page**, or (when offered) **Select all N matching** for everyone in the current filter across pages.
+2. A bar appears with **N selected** (or **N selected across all pages**), **Send contracts**, **Clear**, and (when those modules are available) **Request W-4** and/or **Request I-9**. When your **Application Status** profile field has options, the bar also includes **Set Application Status**.
+3. Click **Send contracts**. The **Send contract** modal opens (title becomes **Send contracts** when more than one person is selected). With everyone matching selected, confirm sending that template to N people across all pages, with **Send contracts** / **Cancel**.
 4. Choose a **Contract template** and **Season**.
-5. Review **Will be emailed**. Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
-6. Enter the **Email subject** and **Email body**. You can personalize with merge fields such as `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}`. Each person gets their own values.
+5. Review **Will be emailed** (across-pages wording when applicable). Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
+6. Enter the **Email subject** and **Email body**. You can personalize with merge fields such as `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}`. Each person gets their own values. Use **Save for this template** to keep that email for the next send of this template (success: **Email saved for this template.**). See [Contracts](/contracts#generate-a-contract-instance).
 7. Click **Send**. A progress dialog titled **Sending contracts** (or **Sending contract** for one person) lists each person as **Sent**, **Skipped**, or **Failed**, with running tallies and a **Close** button when the run finishes.
 
 **Sent** means the contract was created and emailed. **Skipped** is someone who already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People who still need a retry stay checked; the bar can show **Still selected from the last send…**, and **Send contracts** is the retry. Someone who got a contract row but no email is cleared from the selection so a retry does not treat them as a duplicate skip.
@@ -184,10 +186,11 @@ Contract history and the **Contracts Sent** tile update without reloading the pa
 
 Use the same roster checkboxes when you want one Application Status on several people at once.
 
-1. Check the staff rows you want (or use the header checkbox for everyone visible).
+1. Check the staff rows you want, use the header checkbox for this page, or **Select all N matching** when offered.
 2. On the bulk bar, open **Set Application Status** and pick a status from your **Application Status** options.
-3. Confirm with **Set status** (or **Cancel**). The confirm names the status and how many people are selected. If that status also requests a W-4 and/or an I-9, the confirm says so and notes that anyone who does not already have one open gets that email.
-4. While saving, the button reads **Saving...**. Success: **Application Status set to** the status **for** the selected people. Anyone not saved stays checked so you can retry; the bar can show how many were set and how many were not.
+3. Confirm with **Set status** (or **Cancel**). The confirm names the status and how many people are selected (including **across all pages** when that selection is active). If that status also requests a W-4 and/or an I-9, the confirm says so and notes that anyone who does not already have one open gets that email.
+4. If anyone in the selection is **DNR**, **Fired**, or **Dismissed**, a second confirm asks whether to change those people too (**Yes, change** / **No, leave as is**). Leaving them alone notes **DNR, Fired or Dismissed left as is**.
+5. While saving, the button reads **Saving...**. Success: **Application Status set to** the status **for** the selected people. Anyone not saved stays checked so you can retry; the bar can show how many were set and how many were not.
 
 You need **Staff Hub** permission. The dropdown appears only when the staff profile field named **Application Status** exists with options. Clearing the selection uses **Clear**.
 

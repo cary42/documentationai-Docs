@@ -10,6 +10,44 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-10-19" description="Inquiry Forms, Staff Hub select-all, contract email per template, Canada PAD, email footers, SSN mask" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Inquiry Forms** - Build more than one website inquiry form under **Admin → Inquiry Forms**, with **New Form**, embed code, and **Duplicate**. See [Inquiry Forms](/inquiry-forms).
+  - **Upcoming Charge Emails** - Under **Reports → System Reports → Money**, preview who gets the next unsent charge-coming reminder. See [Upcoming Charge Emails](/system-report-upcoming-charge-emails).
+  - **Walk me through** - Start an in-page guide from the title row, rate **Did this help?**, and open related guides from the footer (**N more** when there are extras). See [Walk me through](/walk-me-through).
+  - **Personal Email Footer** - Under your name → **Settings → Email Footer**, set **Your footer** for emails sent from your own address. See [Account](/account#email-footer).
+  - **Mask on screens** - Text profile fields (including SSN-style names) can show only the last 4 characters on profiles and reports, with an eye to reveal. See [Profile Fields](/profile-fields#field-settings).
+
+  ## Updates
+
+  - **Staff Hub** - Pagination with **Rows per page**, **Select all N matching** across pages, a **Returning** tile when that status exists, locked **DNR** / **Fired** / **Dismissed** confirms, season-close keep statuses, and Forms panel **Resend**. See [Staff Hub](/staff-hub).
+  - **Contracts** - Templates stay editable after signatures; signed copies keep their wording; **When sent** Application Status; **Save for this template** on the send email; **Make a copy** and **Notify when signed**. See [Contracts](/contracts).
+  - **Season close preview** - **Edit Season** shows **Staff Hub application status** before you set a season **Inactive**. See [Manage Seasons](/manage-seasons#staff-hub-application-status-when-you-close-a-season).
+  - **Product Rollup** - Dashboard card with season totals, capacity links, and unique-person counts. See [Product Rollup](/product-rollup).
+  - **Payment Plans** - **Last payment isn't the balance** badge, **Charge Entire Balance**, and **Fix last payment**. See [Payment Plans](/payment-plans).
+  - **Canada on Finix** - When Campium has set your camp up for Canada, charges are CAD and bank pay uses PAD (transit and institution numbers). Merchant Submit may still say applications are not open yet. See [Payment Processors](/payment-processors#canada-on-finix).
+  - **Camp email footer** - **Admin → Automated Emails → Email footer** uses an HTML **Footer** editor. See [Automated Emails](/automated-emails).
+  - **Portal Home page (Beta)** - Heading, instructions, and name bar colour live under **Portal → Settings**. See [Portal Settings](/portal-settings).
+  - **SMS opt-in** - Portal profile **Text messages** Yes/No; Site Text for Text Message Opt-in. See [SMS](/sms).
+  - **Custom reports** - **Profile answers as of** for season snapshots (replaces Search historical data). See [Custom Reports](/custom-reports).
+  - **Retention card** - Toggle **Paying campers only**. See [Chart Reports](/system-report-charts#retention-dashboard-card).
+  - **Financial Snapshot** - **Total credits held** and **Total Accounts Receivable** headlines. See [Negative Balance](/negative-balance).
+  - **My Sessions email** - Audience counts, **Show names**, and confirm before send. See [Allow staff to email their sessions](/help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions).
+  - **Early form links** - **Get direct access link** works before a form **Start Date**. See [Recipients](/recipients).
+  - **Wait list self-remove** - Optional setting lets families remove themselves. See [Waitlist](/waitlist).
+  - **Charge deposit on approval** - Approve with **Charge now** or **On a date**. See [Forms](/forms).
+  - **Passkey-first challenge** - Sign-in leads with **Use a passkey** when you have one. See [Account](/account#sign-in-challenge).
+
+  ## Fixes
+
+  - **Signed contract Download** - Parent portal **Download** serves the signed PDF through Campium instead of a short-lived storage redirect.
+  - **Payment plans with a missed charge** - An open missed charge no longer reshuffles the rest of that plan in a way that double-counts the balance.
+  - **Even Split rounding** - Weekly checks allow whole-dollar rounding when the last payment is the remaining balance.
+  - **Immunization DOB** - When a profile has no birthday, the compliance card shows **No DOB on profile** with a link to the profile.
+  - **Checkout alerts** - Registration checkout validation messages use the shared checkout alert path so families see them consistently.
+</Update>
+
 <Update label="2026-10-12" description="Staff two-step sign-in, season setup, Linked Fields inbox, FAQ brackets, Sequences clicks" tags={["feature","improvement","bugfix"]}>
   ## New
 

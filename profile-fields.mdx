@@ -105,6 +105,10 @@ Use the Add New Field form to define the field.
   Adds the field to the health report when selected.
 </ParamField>
 
+<ParamField body="Mask on screens" param-type="boolean" required="false" deprecated="false" show-location="false">
+  For text fields only. When on, profiles, Quick View, reports, and exports show only the last 4 characters as `xxxxx1234`. Staff can click the eye (**Show full value** / **Hide full value**) on a profile field to reveal the full answer; exports stay masked. New fields named like SSN or Social Security start with masking on. Helper on the switch: **Show only the last 4 characters (xxxxx1234) on reports and profiles. Click the eye to see the full value.**
+</ParamField>
+
 <ParamField body="Who has access" param-type="string" required="false" deprecated="false" show-location="false">
   Limits field visibility by role. If left empty, all CampiumDB users can see the field data.
 </ParamField>
