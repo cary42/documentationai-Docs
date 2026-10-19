@@ -61,11 +61,25 @@ On a camper profile **Sales** tab, an authorized Finix card payment may show a *
 | **Captured** but not yet in a settlement             | Reversal behavior depends on Finix transfer state                                                    |
 | **Attached to a settlement** (`ST…` on the transfer) | Void is no longer a clean cancel; Finix issues a separate credit that can take several business days |
 
+### Canada on Finix
+
+When Campium has set your camp up for Canada on Finix:
+
+- Charges run in **CAD**
+- Bank payments use **PAD** (pre-authorized debit) wording instead of ACH, including family emails and the Automated Emails row **PAD payment returned**
+- Families enter a Canadian bank account with **Transit number** (5 digits) and **Institution number** (3 digits), plus **Province** and **Postal code** where address fields appear
+- Checkout can show a **Pre-authorized debit (PAD) agreement**
+- The Finix **Merchant application** can ask for Canadian business details (for example **Business Number (BN)** and **Signer's SIN**) with a banner that you are applying as a camp in Canada
+
+Live **Submit** for a Canadian merchant application may still show **Applications for camps in Canada are not open yet. You can fill in the form now, and your draft is saved. Contact support@campium.com for timing.** Drafts still save. Contact Campium support when you are ready to go live in Canada.
+
+US camps are unchanged. Canada setup is not a self-serve Site Settings toggle for camp staff.
+
 ### ACH payments
 
 #### Daily settlement accrual (Finix)
 
-ACH debits use a **separate, earlier cutoff: 8:00 PM Eastern**. ACH does not use the card authorize/capture flow. Campium creates an immediate debit transfer when the payment is submitted.
+ACH debits use a **separate, earlier cutoff: 8:00 PM Eastern**. ACH does not use the card authorize/capture flow. Campium creates an immediate debit transfer when the payment is submitted. For Canada camps, the same bank-debit path uses PAD labels instead of ACH.
 
 ACH submitted after the 8:00 PM Eastern cutoff typically accrues into the **next** business day's settlement.
 
