@@ -281,34 +281,38 @@ Use **Camper** when you need a label for every camper in the report (for example
 
 ## Batch edit selected rows
 
-Batch Edit lets you update a field for many records at once, based on the rows you select in your report.
+Batch Edit sets one profile field to the same answer for every row you tick in a report, such as a cabin, bus route, or t-shirt size. Build a report whose filters find exactly the people you want to change first.
+
+<Callout kind="tip" collapsed="false">
+  Want to be guided through it in Campium? [Start the Batch Edit walkthrough](https://campiumdb.com/report/?walkthrough=batch-edit-report). It opens your custom reports and shows each step on the page as you go.
+</Callout>
 
 <Steps>
   <Step title="Select the rows to change" icon="check-circle" title-type="p">
-    - In the results table, use the checkboxes to select one or more rows.
+    - In the results table, tick the box beside each person you want to change. Tick the box in the header to select every row, or hold Shift and click to tick a range.
 
-    - Confirm that the **matches** count and your selections reflect exactly who you intend to change.
+    - Check the **matches** count and your ticks. Only the rows you tick are changed.
   </Step>
 
-  <Step title="Launch Batch Edit" icon="settings" title-type="p">
-    - With rows selected, use the **Batch Edit** action.
+  <Step title="Open Batch Edit and choose the field" icon="settings" title-type="p">
+    - Once at least one row is ticked, a **Batch Edit** button appears at the bottom of the screen. Click it.
 
-    - Choose which field you want to update (for example, a tag, status, or other editable field).
+    - Under **Select Field**, choose the profile field to change. Tags and User Type are not in this list.
 
     - **Save** stays off until the field options finish loading. If loading fails, you see **Could not load the options for this field. Choose it again to retry.** Some fields show **This field can't be batch edited.**
   </Step>
 
-  <Step title="Apply the change" icon="alert-triangle" title-type="p">
-    - Set the new value you want to apply to all selected records.
+  <Step title="Set the answer and save" icon="alert-triangle" title-type="p">
+    - Type or pick the new answer. For a field with several choices, the options you pick replace what each person had.
 
-    - Review the summary of how many records will change.
+    - To empty the field instead, tick **Clear this answer for everyone selected**. Campium asks you to confirm before clearing.
 
-    - Confirm to apply the update.
+    - Click **Save**. You see **Batch update started**, the change runs in the background, and a **Success** message tells you how many people were updated. The report then refreshes.
   </Step>
 </Steps>
 
 <Callout kind="info" collapsed="false">
-  Batch edits update many records at once. If you are testing a new report, start with a small selection and confirm the results before applying a larger change.
+  Batch edits can't be undone. If you are testing a new report, start with a small selection and confirm the results before applying a larger change. If the report shows a closed season's snapshot, you can't batch edit it.
 </Callout>
 
 ## Organize and find your custom reports
