@@ -1,0 +1,75 @@
+---
+title: Transaction Report
+description: >-
+  A simple list of successful credit card payments for one season, with the
+  date, last name, amount, transaction ID, family ID, and budget code.
+---
+Open **Financials → Transaction Report** in the left menu.
+
+## What the Transaction Report shows
+
+Use the Transaction Report to list the **successful credit card payments** recorded for a season, one row per payment. Each row gives the processor's transaction ID, so you can match payments in Campium against your card processor's statements.
+
+<Callout kind="info" collapsed="false">
+  This item appears only for camps that have it turned on. Contact Campium support if you want it. You also need the **Access To financial reports and financials in profiles** permission (in the **Financial** group on **Admin → Roles & Permissions**), and the **Financials** menu is hidden on the free plan.
+</Callout>
+
+### How it differs from Transaction Detail
+
+The [Transaction Detail report](/transaction-detail) has one row for each **session added to an account**, with its cost, revenue, payments split by method, and balance. The Transaction Report has one row for each **credit card payment**. It does not include checks, cash, ACH, or other payment types, and it does not show sessions or balances.
+
+## Filters
+
+<ParamField body="Season" param-type="selector" required="true" deprecated="false">
+  Use the season picker at the top of the page to choose the season. The page title, **Transaction Report for** followed by the season name, updates to match. The report covers one season at a time; if no single season is chosen, it uses your camp's default season.
+</ParamField>
+
+There is no date range filter. To review a specific window, export the rows and filter by the **Date** column.
+
+## Columns
+
+<ParamField body="Date" param-type="date" required="true" deprecated="false">
+  The date and time the payment was recorded.
+</ParamField>
+
+<ParamField body="Last Name" param-type="text" required="true" deprecated="false">
+  The last name recorded on the payment.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The payment amount. The footer shows the total of all payments listed.
+</ParamField>
+
+<ParamField body="Transaction ID" param-type="text" required="true" deprecated="false">
+  The transaction ID returned by your card processor.
+</ParamField>
+
+<ParamField body="Family ID" param-type="number" required="true" deprecated="false">
+  The family account the payment belongs to.
+</ParamField>
+
+<ParamField body="Budget Code" param-type="text" required="true" deprecated="false">
+  The name of the season the payment was recorded against.
+</ParamField>
+
+## Run the report
+
+<Steps>
+  <Step title="Pick the season" icon="folder" title-type="p">
+    Choose the season with the season picker at the top of the page.
+  </Step>
+
+  <Step title="Match against your processor" icon="search" title-type="p">
+    Use the **Transaction ID** column to find each payment in your card processor's records.
+  </Step>
+
+  <Step title="Export" icon="download" title-type="p">
+    Use the table export buttons to copy or download the rows.
+  </Step>
+</Steps>
+
+## Related guides
+
+- [Transaction Detail report](/transaction-detail)
+- [Payments report](/payments)
+- [Revenue Summary report](/revenue-summary)

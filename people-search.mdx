@@ -1,0 +1,97 @@
+---
+title: People Search
+description: >-
+  Search for campers, staff, and family members by name or by profile answers,
+  choose which statuses to include, and open a profile from the results.
+---
+Open **People → Search** in the left menu.
+
+## What People Search does
+
+People Search is a full-page search for everyone in your camp's database. Type part of a name and Campium lists matching people with their photo, status, user type, and contact details. You can also turn on profile data so the search looks inside profile field answers, not just names.
+
+<Callout kind="info" collapsed="false">
+  The **People** menu, including **Search**, appears only when your role has the **Create New User** permission (in the **Users** group on the Roles & Permissions screen). If you do not see it, ask an admin to update your role.
+</Callout>
+
+## Search for a person
+
+<Steps>
+  <Step title="Open People Search" icon="search" title-type="p">
+    Go to **People → Search** in the left menu.
+  </Step>
+
+  <Step title="Type in the Search box" icon="keyboard" title-type="p">
+    Type at least two characters. Results appear below the box as you type, with **Searching...** shown while Campium looks. If nothing matches, you see **No Results**.
+  </Step>
+
+  <Step title="Open the profile" icon="user" title-type="p">
+    Click a person's name to open their profile.
+  </Step>
+</Steps>
+
+### How names are matched
+
+Each word you type must match the start of the person's first name or last name. For example, `jo sm` finds Joe Smith and Josh Smalley. Name matches are listed by last name, then first name.
+
+Campium shows up to 30 people at a time. If the person you want is not in the list, type more of the name.
+
+## What each result shows
+
+- Profile photo
+
+- Name, linked to the profile
+
+- Status and user type (for example, **Active Camper**)
+
+- **Created:** the date the profile was created
+
+- Phone and email, when they are on file
+
+- When the match came from profile data, the profile field name and the matching answer, with your search text highlighted
+
+## Search settings
+
+Click **Settings** under the search box to choose what the search covers. Each change saves as soon as you click it, and it is saved for your login only. The search box at the top of the admin screens uses the same settings.
+
+<ParamField body="Include Profile Data" param-type="checkbox" required="false" deprecated="false">
+  Off by default, so only names are searched. When on, Campium also searches answers in profile fields. Name matches are listed first, followed by people whose profile answers match. You only see matches in profile fields your role is allowed to view.
+</ParamField>
+
+<ParamField body="Include Active Users" param-type="checkbox" required="false" deprecated="false">
+  On by default. Includes people whose status is Active.
+</ParamField>
+
+<ParamField body="Include Pending Users" param-type="checkbox" required="false" deprecated="false">
+  On by default. Includes people whose status is Pending.
+</ParamField>
+
+<ParamField body="Include Inactive Users" param-type="checkbox" required="false" deprecated="false">
+  On by default. Includes people whose status is Inactive.
+</ParamField>
+
+<ParamField body="Include Archived & Leads" param-type="checkbox" required="false" deprecated="false">
+  Off by default. When on, the search also includes Archived, Removed, Deleted, and Lead records.
+</ParamField>
+
+<Callout kind="info" collapsed="false">
+  The status settings filter name matches. If you cannot find someone you know is in the system, check whether their status is turned off here. Archived records and leads are hidden until you turn on **Include Archived & Leads**.
+</Callout>
+
+## Troubleshooting
+
+- **No Results for a name you know exists.** Check the status settings. Merged duplicates are set to Archived, so they only appear with **Include Archived & Leads** on.
+
+- **Searching for an allergy, school, or other answer finds nothing.** Turn on **Include Profile Data**. Without it, only names are searched. If it is already on, the field may be one your role cannot view.
+
+- **Searching by middle name or nickname finds nothing.** Names match on the start of the first or last name only. Try the first or last name instead, or turn on **Include Profile Data** if the nickname is stored in a profile field.
+
+## Related guides
+
+- [Profiles](/profiles)
+
+- [Potential Duplicate Users Report](/duplicates)
+
+- [Merge Users](/merge-users)
+
+- [Roles & Permissions](/roles-and-permissions)

@@ -1,0 +1,127 @@
+---
+title: Logins and Audit
+description: >-
+  See who signed in and from where, who is using Campium right now, and every
+  recent change to profile field values, with a one-click restore for many of
+  those changes.
+---
+Open **Admin → Data Tools & Activity** in the left menu, then choose **Logins**, **Who's Online?**, or **Audit**.
+
+## Who can see these pages
+
+**Logins**, **Who's Online?**, and **Audit** appear for users whose role includes the **Access To Profile Fields under Admin** permission on the Roles & Permissions screen. The same permission controls the **Export** items in this menu. Each page shows activity for your camp only. See [Roles & Permissions](/roles-and-permissions).
+
+## Logins
+
+Open **Admin → Data Tools & Activity → Logins** in the left menu.
+
+Logins lists sign-ins to your account, newest first. Use it to check whether someone has signed in, when, and from which part of Campium.
+
+### Date range
+
+<ParamField body="Date range" param-type="date range" required="false" deprecated="false">
+  The page opens on the current month. Pick another range with the date picker at the top of the page. The list shows the 200 most recent sign-ins within the range; narrow the range to see older ones.
+</ParamField>
+
+### Columns
+
+- **Name** - who signed in. Click the name to open their profile.
+- **Client Info** - the browser, operating system, and device type, for example `Chrome Generic on Win10 - Desktop`.
+- **Date / Time** - when they signed in.
+- **Site** - where they signed in: **CampiumDB** (the admin site), **Parent Site** (your parent portal), or **App** (the Campium mobile app).
+
+Type in the **Filter** box above the table to find a person, and use the **Copy**, **Excel**, **CSV**, **PDF**, or **Print** buttons to export the list.
+
+## Who's Online?
+
+Open **Admin → Data Tools & Activity → Who's Online?** in the left menu.
+
+Who's Online? shows the people active in Campium right now, on both the admin site and your parent portal. A person drops off the list after about 30 minutes without opening a page. If nobody has been active, the page says **No Users have been online lately.**
+
+### Columns
+
+- **Name** - click to open the person's profile.
+- **Page** - the title of the last page they opened.
+- **Last Seen** - the time of their most recent page view.
+- **Time Online** - how long they have been active in this visit, for example `1h 5m`, `12m`, or `< 1m`.
+- **Site** - **CampiumDB** for the admin site or **Parent Site** for your parent portal.
+- **Active Cart** - a badge appears when a parent portal user's family has sessions sitting in their cart.
+
+The list is sorted with the people who arrived most recently at the top.
+
+### See what is in a family's cart
+
+<Steps>
+  <Step title="Find the badge" icon="shopping-cart" title-type="p">
+    Look for the **Active Cart** badge in a parent portal user's row.
+  </Step>
+
+  <Step title="Open the cart" icon="list" title-type="p">
+    Click **Active Cart**. The **Active Cart Items** window lists each item with its **Product**, **For User**, and **Added** date, plus who in the family added items and how long items stay in the cart before they expire.
+  </Step>
+
+  <Step title="Follow up" icon="user" title-type="p">
+    Click a name in the window to open that person's profile, then click **Close** when you are done.
+  </Step>
+</Steps>
+
+This helps you spot a family that is partway through registering, for example to offer help while they are still online. For a list of all open carts, see the [Active Cart Report](/system-report-active-cart).
+
+## Audit
+
+Open **Admin → Data Tools & Activity → Audit** in the left menu.
+
+The page title reads **Data Audit**. It lists changes to profile field values: who was changed, which field, the value before and after, and who made the change. Use it to answer questions like "who changed this camper's cabin?" or "what was this phone number before?"
+
+### What the list covers
+
+The list holds your 500 most recent profile field changes, newest first. The date range at the top of the page does not narrow this list. To find a specific change, type in the search box above the table. It matches the person's name, the field name, the old or new value, the date, and the name of whoever made the change.
+
+Use **Show** to choose how many rows appear per page, from 25 up to **All**. The page shows 100 rows by default.
+
+### Columns
+
+- **Name** - the person whose profile changed.
+- **Date** - when the change was made.
+- **Field** - the profile field that changed.
+- **Old Value** and **New Value** - the value before and after the change.
+- **Changed By** - who made the change.
+
+Click a column heading to sort by **Name**, **Date**, **Field**, or **Changed By**.
+
+### Restore an old value
+
+Many rows have a restore button (an undo arrow) at the end of the row. It puts the field back to that row's **Old Value**.
+
+<Steps>
+  <Step title="Find the change" icon="search" title-type="p">
+    Type the person's name or the field in the search box, then find the row with the value you want back.
+  </Step>
+
+  <Step title="Click restore" icon="undo-2" title-type="p">
+    Click the undo arrow, labeled **Restore old value** when you hover over it.
+  </Step>
+
+  <Step title="Confirm" icon="check-circle" title-type="p">
+    Check the confirmation, which names the field, the person, and the value, then click **Yes, restore it**. A message confirms the field is back to the old value, and a new row for the restore appears in the list.
+  </Step>
+</Steps>
+
+The restore button appears only for text, date, dropdown, and multi-select fields. It does not appear when:
+
+- The old value is blank.
+- The old value cannot be read.
+- The old value was long enough that the audit log may have kept only part of it.
+- The change was made to a frozen season rather than current data.
+
+A restore can also stop with a message when the person is no longer in your account, the field no longer exists, or the old dropdown choice is no longer an option on the field. If the field already holds the old value, you are told so and nothing changes. A locked **Application status** cannot be restored here; change it from the profile or Staff Hub.
+
+## Related guides
+
+- [Data Exports](/data-exports)
+- [Merge Users](/merge-users)
+- [Import Users](/import-users)
+- [Profile Fields](/profile-fields)
+- [Profiles](/profiles)
+- [Active Cart Report](/system-report-active-cart)
+- [Roles & Permissions](/roles-and-permissions)

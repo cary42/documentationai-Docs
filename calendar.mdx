@@ -1,0 +1,110 @@
+---
+title: Calendar
+description: >-
+  Add camp events such as visiting days and special programs to the parent
+  portal Calendar, and edit or delete them from the admin portal.
+---
+Open **Portal → Calendar** in the left menu.
+
+## What the Calendar does
+
+The Calendar is where you list camp events that families see on the **Calendar** page of the parent portal, such as visiting day, a family barbecue, or a closing show. Families see your events alongside the sessions their own campers are registered for.
+
+## Who can see it
+
+The **Calendar** item appears under **Portal** only when both of these are true:
+
+- The **Calendar Module For Portal** toggle is on in **Admin → Site Settings → Modules** (in the **Parent portal navigation** group).
+- Your role includes the **Access To Calendar Module** permission (in the **Calendar** category on **Admin → Roles & Permissions**).
+
+The **Portal** menu itself appears only for staff who have the admin menu, Staff Hub, Camper Hub, or **Upload Photos** permission.
+
+<Callout kind="info" collapsed="false">
+  The same **Calendar Module For Portal** toggle adds **Calendar** to the parent portal menu. Turn it off and families no longer see the Calendar link.
+</Callout>
+
+## What is on the page
+
+The **Event Calendar** page has an **Add New Event** button and a table of every event you have added. Until you add one, the page shows **No events yet.**
+
+<ParamField body="Title" param-type="text" required="true" deprecated="false">
+  The event name.
+</ParamField>
+
+<ParamField body="Description" param-type="text" required="false" deprecated="false">
+  The details you entered for the event.
+</ParamField>
+
+<ParamField body="Start Date" param-type="date and time" required="true" deprecated="false">
+  When the event begins. All-day events show the date only.
+</ParamField>
+
+<ParamField body="End Date" param-type="date and time" required="true" deprecated="false">
+  When the event ends. All-day events show the date only.
+</ParamField>
+
+<ParamField body="All Day" param-type="Yes / No" required="false" deprecated="false">
+  Whether the event is marked as an all-day event.
+</ParamField>
+
+<ParamField body="Public" param-type="Yes / No" required="false" deprecated="false">
+  Your answer to **Visible on Public Site?** for the event.
+</ParamField>
+
+Each row has a menu on the right with **Edit Event** and **Delete Event**. Export buttons above the table let you copy, download, or print the list.
+
+## Add an event
+
+<Steps>
+  <Step title="Open the Calendar" icon="calendar" title-type="p">
+    Go to **Portal → Calendar** and click **Add New Event**.
+  </Step>
+
+  <Step title="Describe the event" icon="edit" title-type="p">
+    In the **New Event** window, enter a **Title** and, if you like, a **Description**. Families see the description when they select the event on their calendar.
+  </Step>
+
+  <Step title="Set the timing" icon="clock" title-type="p">
+    Choose **Yes** or **No** for **All Day Event?**, then pick the **Start Date** and **End Date**, including the time. **Title**, **Start Date**, and **End Date** are required.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Choose **Yes** or **No** for **Visible on Public Site?**, then click **Save**. The page reloads with your new event in the table.
+  </Step>
+</Steps>
+
+<Callout kind="alert" collapsed="false">
+  The parent portal Calendar shows every event you add, whatever you choose for **Visible on Public Site?**. Do not rely on **No** to hide an event from families. If families should not see an event, do not add it to the Calendar.
+</Callout>
+
+## Edit or delete an event
+
+<Steps>
+  <Step title="Find the event" icon="list" title-type="p">
+    In **Portal → Calendar**, find the event in the table and open the menu at the end of its row.
+  </Step>
+
+  <Step title="Edit it" icon="edit" title-type="p">
+    Click **Edit Event**, change any field in the **Edit Event** window, and click **Save**.
+  </Step>
+
+  <Step title="Or delete it" icon="trash" title-type="p">
+    Click **Delete Event** and confirm. The event is removed from the table and from the parent portal Calendar.
+  </Step>
+</Steps>
+
+## What families see
+
+Families open **Calendar** from the parent portal menu. The calendar opens on the current month, and they can switch between **month**, **week**, and **day** views or move with the previous, next, and **today** buttons.
+
+- **Your camp events** appear on their dates. Selecting an event shows its title and description.
+- **Their own registrations** appear too: each registered session shows with the camper's name. Wait-listed sessions show in grey and are marked **(Wait List)**.
+
+A timed event whose start and end are both set to midnight shows as an all-day event.
+
+## Related guides
+
+- [Portal Settings](/portal-settings)
+- [Site Settings](/settings)
+- [Roles & Permissions](/roles-and-permissions)
+- [Manage portal news](/portal-news)

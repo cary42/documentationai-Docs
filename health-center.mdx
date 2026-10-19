@@ -1,0 +1,303 @@
+---
+title: Health Center
+description: >-
+  Run your health office from one place: med pass, the dose log, health center
+  visits, camper health charts, kitchen and counselor allergy lists, and the
+  health access log.
+---
+Open **Health Center** in the left menu.
+
+## What the Health Center is for
+
+The Health Center gives your nurses one workspace for the whole day. From it you can give scheduled medications at each medication time (med pass), log every trip to the health center, open a camper's or staff member's health chart, review medications families add, and print allergy and dietary lists for the kitchen and counselors.
+
+<Callout kind="info" collapsed="false">
+  The Health Center is in beta. It appears only for camps that have it turned on. Contact Campium support if you want it. When it is on, the **Medical** menu no longer appears in the left menu. The Health Center **Reports** and **Settings** tabs link to the medication report, medication log, medical notes, and medication time names that used to live there. See [Medications & health](/medications) for those pages.
+</Callout>
+
+## Who can open it
+
+You see **Health Center** in the left menu when the Health Center is on for your camp and you have at least one of these permissions on the Roles & Permissions screen. Administrators have all three.
+
+<ParamField body="Use the Health Center: med pass, visit log, camper health charts, and settings" param-type="permission" required="false" deprecated="false">
+  The full Health Center: the summary cards and the **Today**, **Med Pass**, **Dose log**, **Visits**, **Campers**, **Reports**, and **Settings** tabs.
+</ParamField>
+
+<ParamField body="Everything in the Health Center, plus the director summary and the health access log" param-type="permission" required="false" deprecated="false">
+  Everything above, plus the **Most common this week** summary on **Today** and the health access log.
+</ParamField>
+
+<ParamField body="See and print allergy and dietary lists (no medications, visits, or diagnoses)" param-type="permission" required="false" deprecated="false">
+  For kitchen staff and counselors. They see only the **Reports** tab with the **Kitchen list** and **Counselor list**. They do not see the summary cards, medications, visits, or the **New visit** button.
+</ParamField>
+
+Assign these on [Roles & Permissions](/roles-and-permissions). If you open a Health Center page without the right permission, you see "You do not have permission to open this part of the Health Center."
+
+## The summary cards
+
+Above the tabs, staff with full access see six cards. Each card links to the list behind its number.
+
+- **Waiting for review**: medications families added or changed that need a nurse to approve them.
+
+- **Overdue doses today**: scheduled doses whose medication time has ended with nothing logged.
+
+- **In the health center now**: open visits.
+
+- **Visits today** and **Visits this week**: visits in the last day and the last seven days.
+
+- **Medications not confirmed**: active medications for campers registered in the current season whose family has not certified the medication list. This card opens the medication report.
+
+**New visit** sits at the top of every Health Center page for staff with full access.
+
+## Today
+
+**Today** shows what needs you right now:
+
+- A **Med pass** card for the medication time that is open now, with how many doses are done and how many are still to give.
+
+- An **Overdue** card listing each medication time that still has doses not logged.
+
+- **In the health center now**: everyone with an open visit, when they came in, and how long they have been there.
+
+- **Waiting for review**: medications families added or changed. Each shows when and on which days it is given, dates, doctor, reason, notes, and when it changed. If a medication has no medication time, it says **Not on med pass yet** with a **Set a time** link.
+
+Staff with the director permission also see the most common complaints from the last week.
+
+### Review a medication a family added
+
+<Steps>
+  <Step title="Find it on Today" icon="list" title-type="p">
+    Open the **Today** tab and scroll to **Waiting for review**. Use **Filter** to find a camper by name.
+  </Step>
+
+  <Step title="Approve or discontinue" icon="check" title-type="p">
+    Select **Approve, bottle received** if the medication is at camp, or **Approve** if it is not here yet. Select **Discontinue** to stop it. You must enter a reason to discontinue.
+  </Step>
+</Steps>
+
+Approved medications go on med pass at their medication times. Until then they show on med pass as **Awaiting review**. You can turn this review step off in **Settings**.
+
+## Med Pass
+
+**Med Pass** lists every scheduled dose for one medication time on one day, grouped by bunk (campers with no bunk are under **No bunk**).
+
+At the top, pick **Today** or **Yesterday** and choose the medication time from the dropdown. Med Pass opens on the medication time that is open now, or the next one to open. A bedtime pass that runs past midnight stays on the day it started.
+
+A medication shows on Med Pass when it is approved, is not marked as needed, includes that medication time, is within its start and end dates, and is set for that day of the week. A medication with no days ticked runs every day. As-needed medications never show here; give them from the health chart or a visit.
+
+Each row shows a status:
+
+| Status | Meaning |
+|--------|---------|
+| **Upcoming** | The medication time has not started yet. |
+| **Due** | The medication time is open and nothing is logged. |
+| **Overdue** | The medication time has ended and nothing is logged. |
+| **Given**, **Refused**, **Held**, **Missed** | What a staff member logged. |
+| **Not here** | The camper does not count as here that day (see **Who counts as here** in Settings). Never shown as missed. |
+| **Awaiting review** | A family added or changed the medication and it has not been approved. |
+
+Staff always count as here. Nothing is marked **Missed** automatically; only a person records it.
+
+### Give doses on med pass
+
+<Steps>
+  <Step title="Pick the medication time" icon="clock" title-type="p">
+    Open **Med Pass** and choose the day and medication time.
+  </Step>
+
+  <Step title="Log each dose" icon="check-circle" title-type="p">
+    Select **Given** on a row. Use the menu next to it for **Given, with details** (change the time given or the dose, add notes, and optionally notify guardians), **Refused**, **Held**, or **Missed**. **Refused** and **Held** ask for a reason.
+  </Step>
+
+  <Step title="Give a whole bunk at once" icon="users" title-type="p">
+    Select **Give all due** on a bunk to mark every upcoming, due, and overdue dose in that bunk given. Mark any exceptions on their own rows first.
+  </Step>
+
+  <Step title="Undo a mistake" icon="rotate-ccw" title-type="p">
+    After you log, a notice with **Undo** appears at the bottom. To fix a dose later, open **Change** on the row and pick the right outcome or **Undo**.
+  </Step>
+</Steps>
+
+If the dose was logged more than 5 minutes ago or by someone else, a change is added as a correction and the original stays in the history. If a dose was already logged for that medication time today, you are asked to confirm before logging another.
+
+If a medication time has no start and end, a banner says its doses never show as overdue. Set the times in **Settings**. If your camp has no medication times yet, Med Pass shows **Set up medication times**.
+
+## Dose log
+
+**Dose log** lists every dose recorded on med pass, during visits, and over the counter. It shows today by default. Use the date range at the top, **Who** (**Everyone**, **Campers**, or **Staff**), and the outcome filter (**Any outcome**, **Given**, **Refused**, **Held**, or **Missed**).
+
+Columns are **When**, **Who**, **Medication**, **Outcome**, **Where** (a link to the visit when the dose was given in one), **Notes**, and **By**. **Parent told** appears under the outcome when guardians were notified. Select **Display Columns** to add profile fields as extra columns; your choice is saved for you. The log shows up to the latest 1,000 doses, so narrow the dates to see more.
+
+## Visits
+
+**Visits** is the health center log. It shows today by default. At the top, filter by season, date range, **Who** (**Everyone**, **Campers**, or **Staff**), and complaint.
+
+Open visits are pinned under **In the health center now**. Finished visits for the dates you chose are listed below. Each row shows time in, the person and their allergy and health flags, what brought them in, where they went next, and chips such as **Here now**, **Parent told**, and **Incident report**.
+
+Click a row to open its details: times, what they said, what you found, treatment, notes, whether a parent was told, and medications given. From the details you can:
+
+- **Check out now** to close an open visit.
+
+- **Give** an approved medication listed under **Give now**.
+
+- **Notify guardians** (campers only).
+
+- **Edit visit**.
+
+- **Write an incident report**, when incident reports are turned on for your camp.
+
+- Open the person's **Health chart**.
+
+### Log a visit
+
+<Steps>
+  <Step title="Start a new visit" icon="plus-circle" title-type="p">
+    Select **New visit** at the top of any Health Center page. From the **Campers** tab or a health chart, the person is filled in for you.
+  </Step>
+
+  <Step title="Pick who came in" icon="user" title-type="p">
+    Type a name in **Who came in** and choose the camper or staff member.
+  </Step>
+
+  <Step title="Fill in the visit" icon="file-text" title-type="p">
+    Set **Time in** (it cannot be in the future). Choose **What brought them in** or describe it in **In their words**; one of the two is required. Add **What you found**, **Treatment**, **Where they went next**, and **Notes** as needed. Tick **Parent or guardian told** if you already called the family, and enter **Your initials**.
+  </Step>
+
+  <Step title="Save" icon="save" title-type="p">
+    Select **Save and check out** if they are leaving now, or **Save, still here** to keep the visit open.
+  </Step>
+</Steps>
+
+The **What brought them in** list starts with common complaints such as Headache, Fever, Cut or scrape, and Head injury. **Where they went next** offers **Back to activity**, **Resting in the health center**, **Sent home**, **Referred to a doctor**, **Emergency services**, and **Other**.
+
+### Notify guardians about a visit
+
+**Notify guardians** sends an email, a text, or both to the camper's primary and secondary guardians, then marks the visit **Parent told**. The dialog shows who will be reached and the exact message. The message says the camper came to the health center, when, and where they went next. It never says why they came in. Add a note if the family should know more. If no guardian has a usable email or cell phone, nothing is sent and you are asked to call the family.
+
+### Start an incident report from a visit
+
+**Write an incident report** starts a draft in Incident Reports from the visit's details, then opens it so you can finish and file it. You need incident reports turned on for your camp and permission to file or manage incident reports.
+
+## Campers
+
+**Campers** lists people registered in the season you pick, with their allergy and health flags. Use **Who** to switch between **Campers**, **Staff**, and **Everyone**, and **Find by name** to search. The list shows up to 300 people; search by name to find someone else.
+
+Each row has **Health chart** and **New visit**.
+
+## The health chart
+
+The health chart is one person's health record, and the place to act on it. Open it with **Health chart** on the **Campers** tab, or by clicking a person's name on **Today**, **Med Pass**, or the **Dose log**.
+
+The chart shows:
+
+- The person's allergy and health flags, and a warning when no emergency contact or emergency phone number is on file.
+
+- **Guardians**, with tap-to-call phone numbers, email, and address.
+
+- **Emergency contacts** and **Insurance**.
+
+- **Medications**: current medications with dose, medication times or **As needed**, days, and reason. Chips show **Awaiting review** and **Bottle received**.
+
+- **Health information**: answers to your health profile questions, with how many are answered. Select **Show unanswered** to see the blanks.
+
+- **Doses, last 30 days**.
+
+- **Health center visits**: the person's recent visits.
+
+### What you can do from the chart
+
+- **Give over the counter**: choose the medication (parent-approved choices are marked), enter the dose, reason, and time given, and optionally **Notify guardians**. Only give what the parent approved.
+
+- **Add medication**: enter the medication, dose, medication times (or tick **Only as needed, not on a schedule** and fill in **How often, at most**), days (none picked means every day), start and end dates, reason, doctor, notes, and whether the bottle was received.
+
+- **Give** an approved medication they can have today.
+
+- On a medication pending review, **Approve, bottle received** or **Approve**.
+
+- From a medication's menu, **Edit**, **Mark bottle received**, or **Discontinue** (a reason is required).
+
+- **Print** the chart.
+
+- From the **More** menu, **Open profile**, or **Who opened this chart** (director permission only).
+
+If you give a medication within 4 hours of an earlier dose of the same medication, you are asked to confirm before it saves.
+
+### Tell guardians about a dose
+
+**Given, with details**, **Give over the counter**, and **Give** on the chart include a **Notify guardians** checkbox. Tick it to email, text, or both when you save the dose. The message says a medication was given and when. The **Note** box starts with the medication's name; delete it if you would rather not name the medication. The dose is marked **Parent told**.
+
+## Print a health chart
+
+Select **Print** on a health chart to open a PDF with **What to know**, **Guardians**, **Emergency contacts**, **Insurance**, **Medications**, **Health information**, **Doses, last 30 days**, **Health center visits**, and **Medical notes**. It uses the same layout as the profile [Health Report](/health-report). Printing is recorded in the health access log as an export.
+
+## Reports
+
+The **Reports** tab links to:
+
+- **Kitchen list** and **Counselor list** (everyone with Health Center access).
+
+- **Medications** and **Medication log**, when the medication module is on. See [Medications & health](/medications).
+
+- **Medical notes**.
+
+- **Incident reports**, when incident reports are turned on.
+
+### Kitchen and counselor lists
+
+The **Kitchen list** shows allergies, dietary needs, and EpiPens for everyone here on the day you pick, most severe first. The **Counselor list** adds the conditions and other health details you chose to share with counselors.
+
+At the top, pick the season, the day, a session (**Every session**), a bunk (**Every bunk**), and tick **Include staff** if you want staff too. A line above the list says how many of the people here have something to know. If you pick a session that is not running on the chosen day, the list moves to the session's first day and says so.
+
+Columns are **Photo**, **Name** (with an **EpiPen** badge when it applies), **Bunk**, and **What to know**. Select **Display Columns** to add profile fields. Use the **Kitchen list** or **Counselor list** button to switch lists, and **Print** to print.
+
+<Callout kind="alert" collapsed="false">
+  The lists stay empty until you choose which profile questions mean an allergy, dietary need, or EpiPen in **Settings** under **Allergy and health flags**.
+</Callout>
+
+## Settings
+
+**Settings** holds how the Health Center works for your camp. Each change saves as you make it, except the flags and medication times, which have their own save buttons.
+
+<ParamField body="Medications families add" param-type="checkbox" required="false" deprecated="false">
+  **Hold new and changed medications for review before they reach med pass**. On by default. Held medications show on **Today** as **Waiting for review** and on med pass as **Awaiting review**.
+</ParamField>
+
+<ParamField body="Who counts as here" param-type="selector" required="false" deprecated="false">
+  **Decide for me: require check-in if we took attendance in the last week**, **Campers must be checked in that day**, or **Registered for a session that day is enough**. Anyone who does not count as here shows as **Not here** on med pass.
+</ParamField>
+
+<ParamField body="Allergy and health flags" param-type="table" required="false" deprecated="false">
+  For each health profile question, choose what it **Means** (**Not a flag**, **Allergy**, **Dietary**, **EpiPen**, **Condition**, or **Other**), its **Severity** (**Note**, **Caution**, or **Severe**), and whether to **Share with counselors**. **Asked on** shows which open forms ask the question, or **No open form**. Answers like None or N/A are ignored. Select **Save flags**. Allergies, dietary needs, and EpiPens always reach both lists; the share setting controls conditions and other details on the counselor list.
+</ParamField>
+
+<ParamField body="Family Health page" param-type="selector" required="false" deprecated="false">
+  Choose whether families can update allergies, dietary needs, EpiPen, and over-the-counter permission on a Health page in their portal, or answer these only on forms. Changes families make save to the profile, the same as a form.
+</ParamField>
+
+<ParamField body="Medication times" param-type="table" required="false" deprecated="false">
+  Give each medication time a **Start** and **End**, and tick **On** for the ones you use. A dose not logged by the end turns **Overdue**. A window can run past midnight, like 9:00 PM to 1:00 AM. Select **Save times**. To add or rename medication times, use **Add or rename medication times** at the bottom of Settings (shown when the medication module is on).
+</ParamField>
+
+The over-the-counter choices come from your camp's over-the-counter profile question. Settings shows which question it is and which forms ask it.
+
+## Health access log
+
+The health access log records every time someone opens a health chart, a visit, med pass, the medication review list, the dose log, the visit list, or a kitchen or counselor list. Opening the log is recorded too. Only staff with the director permission (and administrators) can open it, from **See who opened health information** in **Settings**, or **Who opened this chart** on a health chart.
+
+Pick **From** and **To** dates (the last seven days by default) and a person in **Who opened it**, then select **Show**. Columns are **When**, **Who opened it**, **What**, and **About**. Exports, such as a printed chart, are marked **(exported)**. Select **Download CSV** to save the log as a spreadsheet. The log shows up to the latest 2,000 entries; narrow the dates or pick a person to see the rest.
+
+## Related guides
+
+- [Medications & health](/medications)
+
+- [Health Report](/health-report)
+
+- [Immunization](/immunization)
+
+- [Incident Reports](/incident-reports)
+
+- [Roles & Permissions](/roles-and-permissions)
+
+- [Profile Fields](/profile-fields)
+
+- [Attendance](/attendance)

@@ -1,0 +1,79 @@
+---
+title: Camper Session Revenue report
+description: >-
+  List every active session line by camper, with the season, session,
+  registration date, and revenue, plus a count of unique campers and a total.
+---
+Open **Financials → Camper Session Revenue** in the left menu.
+
+## What the Camper Session Revenue report shows
+
+Use the Camper Session Revenue report to see what each camper is registered for and the revenue on each line. It lists **one row for every active session line**, so a camper registered for four sessions appears on four rows.
+
+The footer counts how many **unique campers** are on the list and totals the **Total revenue** column, so you can see both the number of campers and the money behind them at a glance.
+
+<Callout kind="info" collapsed="false">
+  This item appears only for camps that have it turned on. Contact Campium support if you want it. You also need the **Access To financial reports and financials in profiles** permission (in the **Financial** group on **Admin → Roles & Permissions**), and the **Financials** menu is hidden on the free plan.
+</Callout>
+
+## Filters
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Choose a season with the season picker at the top of the page, or pick **All Seasons** to include every season. If you do not choose one, the report uses your default season. The page title updates to match.
+</ParamField>
+
+<ParamField body="Date Range" param-type="date range" required="false" deprecated="false">
+  Limits the list to lines registered between the start and end dates. The range filters on the registration date, not on the dates the session runs. No date filter is applied until you pick a range, so the report first opens with every line for the season.
+</ParamField>
+
+## Columns
+
+<ParamField body="First name" param-type="text" required="true" deprecated="false">
+  The camper's first name. Links to the camper's profile.
+</ParamField>
+
+<ParamField body="Last name" param-type="text" required="true" deprecated="false">
+  The camper's last name. Links to the camper's profile.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  The season the session line belongs to.
+</ParamField>
+
+<ParamField body="Session" param-type="text" required="true" deprecated="false">
+  The name of the session on the line.
+</ParamField>
+
+<ParamField body="Registration date" param-type="date" required="false" deprecated="false">
+  The date the session line was added to the account.
+</ParamField>
+
+<ParamField body="Total revenue" param-type="currency" required="true" deprecated="false">
+  The price recorded on the session line. The footer totals this column.
+</ParamField>
+
+## Run the report
+
+<Steps>
+  <Step title="Pick a season" icon="folder" title-type="p">
+    Use the season picker at the top of the page to choose one season, or **All Seasons**.
+  </Step>
+
+  <Step title="Narrow by registration date if needed" icon="calendar" title-type="p">
+    Pick a date range to see only lines registered in that window, for example registrations taken during an early-bird period.
+  </Step>
+
+  <Step title="Review and export" icon="download" title-type="p">
+    Check the unique camper count and total in the footer, then use the table export buttons to copy or download the list.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Only active session lines are included.
+</Callout>
+
+## Related guides
+
+- [Transaction Detail report](/transaction-detail)
+- [Revenue Summary report](/revenue-summary)
+- [Revenue by Season report](/revenue-by-product-group)

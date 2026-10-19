@@ -147,6 +147,10 @@
                     "path": "program-revenue"
                   },
                   {
+                    "title": "Camper Session Revenue",
+                    "path": "camper-session-revenue"
+                  },
+                  {
                     "title": "Revenue by Season",
                     "path": "revenue-by-product-group"
                   },
@@ -159,12 +163,24 @@
                     "path": "transaction-detail"
                   },
                   {
+                    "title": "Transaction Report",
+                    "path": "transaction-report"
+                  },
+                  {
                     "title": "Payments",
                     "path": "payments"
                   },
                   {
+                    "title": "No Payment Since",
+                    "path": "no-payment-since"
+                  },
+                  {
                     "title": "Discount Reports",
                     "path": "discount-reports"
+                  },
+                  {
+                    "title": "Accounting Office Reports",
+                    "path": "accounting-office-reports"
                   },
                   {
                     "title": "Product Rollup",
@@ -377,6 +393,10 @@
                     "path": "custom-reports"
                   },
                   {
+                    "title": "Report Categories",
+                    "path": "report-categories"
+                  },
+                  {
                     "title": "Allow a staff user to see a report",
                     "path": "allow-a-staff-user-to-see-a-report"
                   }
@@ -412,6 +432,11 @@
             "group": "Dashboard",
             "pages": [
               {
+                "title": "Dashboard",
+                "path": "dashboard",
+                "icon": "home"
+              },
+              {
                 "title": "Payment Issues",
                 "path": "payment-issues",
                 "icon": "circle-dollar-sign-icon"
@@ -428,6 +453,11 @@
                 "icon": "users"
               },
               {
+                "title": "People Search",
+                "path": "people-search",
+                "icon": "search"
+              },
+              {
                 "title": "Sex Offender Registry Check",
                 "path": "sex-offender-registry-check"
               },
@@ -440,6 +470,21 @@
                 "title": "Medications & Health",
                 "path": "medications",
                 "icon": "pill"
+              },
+              {
+                "title": "Medical Notes",
+                "path": "medical-notes",
+                "icon": "notebook-pen"
+              },
+              {
+                "title": "Health Center",
+                "path": "health-center",
+                "icon": "heart-pulse"
+              },
+              {
+                "title": "Incident Reports",
+                "path": "incident-reports",
+                "icon": "clipboard-list"
               },
               {
                 "title": "Immunization",
@@ -616,6 +661,16 @@
                 "icon": "file-text"
               },
               {
+                "title": "Mobile App Settings",
+                "path": "mobile-app-settings",
+                "icon": "smartphone"
+              },
+              {
+                "title": "Useful Links",
+                "path": "useful-links",
+                "icon": "link"
+              },
+              {
                 "title": "Profile Fields",
                 "path": "profile-fields",
                 "icon": "list"
@@ -721,6 +776,16 @@
                 "icon": "users"
               },
               {
+                "title": "Data Exports",
+                "path": "data-exports",
+                "icon": "download"
+              },
+              {
+                "title": "Logins and Audit",
+                "path": "logins-and-audit",
+                "icon": "history"
+              },
+              {
                 "title": "Activity Scheduling",
                 "path": "activity-scheduling",
                 "icon": "calendar-range"
@@ -803,6 +868,11 @@
             "group": "Portal",
             "pages": [
               {
+                "title": "Portal Site Text",
+                "path": "portal-site-text",
+                "icon": "type"
+              },
+              {
                 "title": "FAQ",
                 "path": "faq",
                 "icon": "align-center-icon"
@@ -811,6 +881,11 @@
                 "title": "Photo Hosting",
                 "path": "photo-hosting",
                 "icon": "images"
+              },
+              {
+                "title": "Calendar",
+                "path": "calendar",
+                "icon": "calendar"
               }
             ],
             "public": true
