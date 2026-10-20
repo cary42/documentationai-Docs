@@ -6,9 +6,9 @@ description: >-
 ---
 ## Overview
 
-Season setup walks you through preparing a season for registration in six steps: **Season**, **Sessions**, **Form**, **Payment plans**, **Discounts**, and **Review**. Every camp uses this workspace. Older separate session and subproduct pages redirect into the **Sessions** step.
+Season setup takes you through six steps to get a season ready for registration: **Season**, **Sessions**, **Form**, **Payment plans**, **Discounts**, and **Review**. Every camp uses this workspace. Older separate session and subproduct pages redirect into the **Sessions** step.
 
-Use it when you want one place that ties sessions, the registration form, plans, and discounts together, then checks what families will see before you open registration.
+It ties sessions, the registration form, plans, and discounts together in one place, then checks what families will see before you open registration.
 
 ## Open season setup
 
@@ -34,10 +34,11 @@ The **Season** step opens **Season details**.
 2. Set **Status** to **Active** or **Inactive**.
 3. Set **Membership season** to **Yes** only when this season is for membership-style enrollment with recurring weekly or monthly charges. Leave **No** for a standard camp season.
 4. Set **Start date** (required). Helper text: **When the first registration begins.**
-5. Set **End date** (required) to help you close out the season later. It must come after **Start date**.
+5. Set **End date** (required). Helper text: **Helps you close out your season when the time comes.** It must come after **Start date**.
 6. Set **Display on dashboard snapshot** to **Yes** if this season should appear in the financial snapshot on your dashboard.
 7. Set **Show in season menus** to **Yes** to list the season in admin season menus and filters.
-8. Select **Save and continue**.
+8. Optionally enter **Invoice footer**, which is printed at the bottom of every invoice for this season. Leave it empty for no footer.
+9. Select **Save and continue**.
 
 If an active season is missing its start or end date, the admin header can show a nudge: **At least one active season is missing its Season Start Date or Season End Date.**
 
@@ -48,12 +49,12 @@ On the **Sessions** step you manage the season's sessions in **Table** or **Cale
 - Select **Add session** to create a session with dates, capacity, price, and minimum deposit.
 - Use **Table** / **Calendar** to switch how sessions are listed.
 - In **Calendar** view, each day shows session chips. When a day has more than three, a **+N more** / **Show less** control lets you collapse or expand the extras.
-- If **Cancellation Fees** appears, expand it to define reusable cancellation-fee sessions for the season. Fees are not charged automatically; you still add them from a profile **Sales** tab. See [Cancellation Fees](/cancellation-fees).
+- If **Cancellation Fees** appears, expand it to define reusable cancellation-fee sessions for the season. Fees are not charged automatically. You add them from a profile **Sales** tab. See [Cancellation Fees](/cancellation-fees).
 - If **Special Weeks** appears for your camp, open it to manage week schedules. See [Special Weeks](/special-weeks). When a session's **Number of Weeks** is higher than the dated week count for the season, a red mismatch alert appears on this step with **Set special week dates** and **Lower Number of Weeks to N on…**. See [Session weeks vs dated weeks warning](/special-weeks#session-weeks-vs-dated-weeks-warning).
 
 ### Copy last season's setup
 
-When this season has no sessions, forms, or payment plans yet, and you already have another season with setup, the empty Sessions step also offers **Copy last season's setup**. Helper text explains: **Copying brings a past season's sessions, forms, and payment plans across, with their dates moved forward.**
+When this season has no sessions, forms, or payment plans yet, and you already have another season with setup, the empty Sessions step also offers **Copy last season's setup**. Helper text: **Copying brings a past season's sessions, forms, and payment plans across, with their dates moved forward.**
 
 1. Select **Copy last season's setup**.
 2. In the **Copy season setup** window, choose **Copy from** (the season whose sessions, forms, and plans you want).
@@ -62,11 +63,11 @@ When this season has no sessions, forms, or payment plans yet, and you already h
 
 After a successful copy, check the dates on the sessions, forms, and payment plans before you open registration. Copying is only offered while the season is empty. A camp's first season never shows this button.
 
-This is different from **Copy Season** on the Seasons list, which creates a brand-new season. Here you fill the season setup already created. See [Seasons & Sessions](/seasons-and-sessions#copy-an-existing-season).
+This is different from **Copy Season** on the Seasons list, which creates a new season. Here you fill the season you already created. See [Seasons & Sessions](/seasons-and-sessions#copy-an-existing-season).
 
 ### Sessions table
 
-The sessions table shows **Session**, **Status**, **Dates** (or **Cadence** on a membership season), **Capacity**, **# registered**, optional **Wait listed** (when wait lists are on), **Price**, **Minimum deposit**, **Form status**, and an actions menu.
+The sessions table shows **Session**, **Status**, **Dates** (or **Cadence** on a membership season), **Capacity**, **# registered**, **Wait listed** (only when the **Wait List Module** is on), **Price**, **Minimum deposit**, **Form status**, and an actions menu.
 
 **Status** badges include **Open**, **Closed**, **Closed - Waitlist**, and **Expired**. Hidden sessions also show **Archived**. **Form status** is **On form** or **Off form**. Food / per-day sessions show a **Food** badge and a **Weeks** (or **Weeks (n)**) control to manage weeks.
 
@@ -78,7 +79,7 @@ On sessions without subproducts, click the blue **Price**, **Minimum deposit**, 
 
 **Dates** (or **Cadence**) are always editable inline. Click the date range to change start and end without opening **Edit session**.
 
-When a session has subproducts, **Price**, **Minimum deposit**, and **Capacity** stay read-only on this table (ranges or summed capacity). Change those amounts in the **Subproducts** panel instead. Dates still edit inline.
+When a session has subproducts, **Capacity** is read-only on this table because it is the total of the subproduct capacities. **Price** and **Minimum deposit** stay editable while every subproduct has the same amount: the tooltip reads **Edit price for all N subproducts** (or **Edit minimum deposit for all N subproducts**), and the value you enter is saved to every subproduct. When the subproducts differ, the cell shows a range. Click the range to open the **Subproducts** panel and change each one there. Dates still edit inline.
 
 #### Price, deposits, and tiers
 
@@ -117,8 +118,8 @@ The Form toolbar also shows the form's availability chip and a **Test Mode** swi
 
 After you choose a form, open **Preview** for a menu of parent-facing pages:
 
-- **Questions** – what people see when they open this form
-- **Sessions selection** and **Cart** – only for registration forms that sell sessions
+- **Questions** - what people see when they open this form
+- **Sessions selection** and **Cart** - only for registration forms that sell sessions
 
 On a wide screen (about 1400px and up), choosing a Preview item opens a side drawer beside the form editor instead of leaving season setup. The drawer includes:
 
@@ -126,7 +127,7 @@ On a wide screen (about 1400px and up), choosing a Preview item opens a side dra
 - **Refresh** to reload the preview
 - **New tab** if you still want the page on its own tab
 
-After you save a change on the Form step, an open drawer refreshes on its own. If the portal cannot load inside the panel, you see **This preview cannot be shown here** with **Open in new tab**. On narrower screens, or when you use a modifier click (for example Ctrl/Cmd+click), Preview keeps opening each page in a new tab the way it did before.
+After you save a change on the Form step, an open drawer refreshes on its own. If the portal cannot load inside the panel, you see **This preview cannot be shown here** with **Open in new tab**. On narrower screens, or when you use a modifier click (for example Ctrl/Cmd+click), Preview opens each page in a new tab.
 
 For full form editing outside season setup, see [Forms](/forms).
 
