@@ -5,35 +5,35 @@ description: Set up, manage, and troubleshoot seasonal payment plans so families
 
 ## Spread fees over time with seasonal payment plans
 
-Payment plans let families spread camp fees over time instead of paying everything at once. When a season has at least one active payment plan, families will still also see an automatic pay-in-full option, so do not create a separate plan named `Pay In Full`.
+Payment plans let families spread camp fees over time instead of paying everything at once. When a season has at least one payment plan, families also see an automatic pay-in-full option, so do not create a plan named `Pay In Full`.
 
 <Callout kind="info">
 
-Payment plans belong to a **season**. Before you create, edit, or copy a plan, confirm that the season selector is showing the season you want to work in.
+Payment plans belong to a **season**. Before you create, edit, or copy a plan, confirm the season selector shows the season you want.
 
 </Callout>
 
 <Callout kind="alert">
 
-You cannot use `Pay In Full` as a payment plan name. That option is reserved and the system handles it automatically.
+You cannot use `Pay In Full` as a payment plan name. Campium adds that option automatically.
 
 </Callout>
 
 ## Open the Payment Plans page
 
-Set up payment plans from the admin area.
+Set up payment plans from the Admin menu.
 
 <Steps>
   <Step title="Go to Payment Plans" icon="settings">
 
-  Open **Payment Plans** from the admin area.
+  Go to **Admin → Payment Plans**.
 
   </Step>
   <Step title="Choose the season" icon="calendar">
 
-  Use the season selector at the top of the page to view the correct season.
+  Use the season selector at the top of the page to pick the season.
 
-  What you see in the list belongs only to the season you selected.
+  The list shows only that season's plans.
 
   </Step>
 </Steps>
@@ -48,13 +48,13 @@ When the season has no plans yet, the page shows **No payment plans yet**, with:
 
 ## Preview a sample schedule on the list
 
-In the plans table, the column header **Preview for** includes a `$` sample balance input (default `$1,000`). Tooltip on the label: **What a family owing this sample balance would be charged, and when**. The same control appears in **Seasons → Guided setup → Payment plans**.
+In the plans table, the **Preview for** column header has a `$` sample balance box (default `$1,000`). Hover the label to see **What a family owing this sample balance would be charged, and when**. The same control appears on the **Payment plans** step of a season's **Guided setup** (from **Seasons**).
 
 Each row under that column shows the sample schedule for that plan, Standard and Even Split alike. Rows can show **per camper** or **balance** badges. Long schedules use **Show N more** / **Show fewer**.
 
-If a plan cannot be previewed yet, the cell explains why (for example missing a final payment date, missing plan details, every charge date in the past, or nothing due on that sample balance). Changing the sample balance refreshes every row.
+If a plan cannot be previewed yet, the cell explains why, for example a missing final payment date, no plan details, every charge date in the past, or nothing due on that sample balance. Changing the sample balance refreshes every row.
 
-Use **Copy All To Another Season** to copy every plan in the current season. When a cart-style preview link is available, use **Preview Cart** (it opens in a new tab). That button is separate from the **Preview for** column on the list.
+Use **Copy All To Another Season** to copy every plan in the current season. When the page shows **Preview Cart**, it opens a cart preview in a new tab. That button is separate from the **Preview for** column.
 
 ## Create a new plan
 
@@ -68,14 +68,12 @@ Create a plan after you confirm the correct season.
   </Step>
   <Step title="Complete the plan form" icon="edit">
 
-  Enter the plan name, choose the plan type, set the dates, and complete any additional fields for that plan type.
+  Choose **Type of plan**, enter **Plan Name**, set the dates, and fill in the fields for that plan type.
 
   </Step>
   <Step title="Save the plan" icon="check-circle">
 
-  Save the plan to add it to the season.
-
-  After saving, the plan appears in the list for that season.
+  Click **Save**. The plan appears in the list for that season.
 
   </Step>
 </Steps>
@@ -85,35 +83,35 @@ Create a plan after you confirm the correct season.
 Use these fields when creating or editing a plan.
 
 <ParamField body="Plan name" param-type="string" required="true" show-location="false">
-Choose a clear name that families and staff can recognize. Helper text under the label: **Visible on the portal.** You cannot use `Pay In Full` as the plan name.
+The **Plan Name** field. Helper text: **Visible on the portal.** You cannot use `Pay In Full`.
 </ParamField>
 
 <ParamField body="Type of plan" param-type="string" required="true" show-location="false">
-Choose **Standard** or **Even split**. Standard plans use manually defined charge lines. Even split plans divide the remaining balance across charges between the start and end dates.
+The **Type of plan** field: **Standard** or **Even Split**. Standard plans use charge lines you define. Even Split plans divide the remaining balance across charges between the start and end dates.
 </ParamField>
 
 <ParamField body="Description" param-type="string" show-location="false">
-Optional text for **Standard** plans. Helper text: **Visible on the portal.** Use it to explain the timing in plain language if families will see it.
+Optional text for **Standard** plans. Helper text: **Visible on the portal.** Use it to explain the timing in plain language.
 </ParamField>
 
 <ParamField body="Charge cadence" param-type="string" show-location="false">
-Available for **Even split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st & 15th**.
+The **Charge cadence** field, for **Even Split** plans only. Choose **Monthly**, **Weekly**, **Bi-weekly**, or **1st and 15th each month**. The list's **Type** column shows the last one as **Even Split (1st & 15th)**.
 </ParamField>
 
 <ParamField body="Day of month for charges" param-type="integer" show-location="false">
-Used with **Monthly** Even Split plans. Choose which day of the month charges should run by default.
+The **Day of month** field, for **Monthly** Even Split plans. Choose the day of the month charges run by default.
 </ParamField>
 
 <ParamField body="Let families choose their charge day" param-type="boolean" show-location="false">
-Available only for **Monthly** Even Split plans. When checked, checkout shows **Charge day of the month** so the family can pick a day from the **1st** through the **28th**. The plan's **Day of month for charges** stays the default until they change it. After checkout that creates their schedule, the day locks for the family. You can still change it on their profile. Plans with this option show a **Family picks** badge on the payment plans list.
+Available only for **Monthly** Even Split plans. When checked, checkout shows **Charge day of the month** so the family can pick a day from the **1st** through the **28th**. The plan's **Day of month** stays the default until they change it. After the checkout that creates their schedule, the day locks for the family. You can still change it on their profile. Plans with this option show a **Family picks** badge in the **Day of month** column.
 </ParamField>
 
 <ParamField body="Start date" param-type="date" required="true" show-location="false">
-For **Standard** plans, this is the first day the plan can be chosen. For **Even split** plans, this is the first date a charge can happen on or after.
+The **Start Date** field. For **Standard** plans, the day the plan becomes available to select. For **Even Split** plans, the first charge is on or after this date.
 </ParamField>
 
 <ParamField body="End date" param-type="date" required="true" show-location="false">
-For **Standard** plans, this is the last day the plan can be chosen. For **Even split** plans with **Final payment** set to **On the end date**, this is the last date a charge can happen on or before. When **Final payment** is **Before each session starts**, helper text says: **Families can't pick this plan after this date.**
+The **End Date** field. For **Standard** plans, the plan cannot be selected on or after this date. For **Even split** plans with **Final payment** set to **On the end date**, this is the last date a charge can happen on or before. When **Final payment** is **Before each session starts**, helper text says: **Families can't pick this plan after this date.**
 </ParamField>
 
 <ParamField body="Final payment" param-type="string" show-location="false">
@@ -121,15 +119,15 @@ Available for **Even split** plans when per-session scheduling is available. Cho
 </ParamField>
 
 <ParamField body="Season" param-type="season" required="true" show-location="false">
-Required when creating a new plan. The selected season determines where the plan belongs.
+The season the plan belongs to. Once a family is using the plan, this field no longer appears.
 </ParamField>
 
 <ParamField body="Require paid by session start" param-type="boolean" show-location="false">
-Gates when the plan can be offered so the plan is fully paid before camp begins. When this is on, the plan is only available if its schedule allows the last charge to land on or before the session start date. If the remaining time is too short for the plan to finish in time, families will not see the plan.
+When checked, the plan is offered only when its last charge is on or before the session start date, so the plan is paid off before camp begins. If there is too little time left for that, families do not see the plan.
 </ParamField>
 
 <ParamField body="Show Only For These Sessions" param-type="multi-select" show-location="false">
-Restricts the plan to specific sessions. When you select one or more sessions here, the plan is offered only when the cart includes at least one of those selected sessions. Leave it empty to offer the plan for any eligible cart. The label reflects your product terminology, so it may read as **Show Only For These Sessions** or another product name.
+Restricts the plan to specific sessions. When you select one or more sessions, the plan is offered only when the cart includes at least one of them. Leave it blank to offer the plan for all sessions in the season. The label uses your camp's term for products, for example **Show only for these Sessions**.
 </ParamField>
 
 ## Choose between Standard and Even split
@@ -139,27 +137,27 @@ The plan type changes how charges are created and managed.
 | Plan type | How charges are set | What you configure | Best for |
 | --- | --- | --- | --- |
 | Standard | You define each charge manually | Schedule lines with dates and amounts or percentages | Plans with fixed installments or custom timing |
-| Even split | The system divides the remaining balance automatically | Charge cadence, dates, and monthly day if needed | Plans that should spread the balance evenly over time |
+| Even Split | Campium divides the remaining balance automatically | Charge cadence, dates, and monthly day if needed | Plans that should spread the balance evenly over time |
 
 ### Standard plans
 
-Standard plans give you full control over each charge. You create separate plan detail lines for each installment after the plan itself is saved.
+Standard plans give you full control over each charge. After you save the plan, you add a plan detail line for each installment.
 
 ### Even split plans
 
-Even split plans do not use manual schedule lines. The system calculates the charge amounts based on the balance, the date range, and the cadence you choose.
+Even Split plans do not use schedule lines. Campium calculates the charge amounts from the balance, the date range, and the cadence you choose.
 
 #### Let families choose their charge day
 
-On a **Monthly** Even Split plan, you can check **Let families choose their charge day** under **Family chooses the day**.
+On a **Monthly** Even Split plan, you can check **Let families choose their charge day** below **Day of month**.
 
 - At checkout, families see a **Payment plan** card with each plan as a choice, then **Charge day of the month** with shortcut buttons for **1st**, **15th**, and **28th**, plus a dropdown for any day from the **1st** to the **28th**, and helper text: **Your payments will run on this day each month. You will not be able to change it after you check out.**
-- The **How much today?** card sits with **Full amount**, pay-later / minimum / **Another amount** options as the form allows, plus **Total today**.
+- The **How much today?** card shows **Full amount**, plus pay-later, minimum, and **Another amount** options as the form allows, and **Total today**.
 - The schedule preview updates when they change the day.
 - After the checkout that creates their scheduled payments, the portal shows locked text such as **Charges on the 15th of each month.** with **To change this, contact the camp office.**
-- Weekly, bi-weekly, and 1st & 15th Even Split plans do not offer this option. Standard plans do not either.
+- Weekly, bi-weekly, and 1st and 15th Even Split plans do not offer this option. Neither do Standard plans.
 
-This is a per-plan setting. It is not limited to a specific payment processor.
+This is a per-plan setting and works with any payment processor.
 
 <Callout kind="tip">
 
@@ -169,7 +167,7 @@ Use the **Preview for** sample balance on the payment plans list to check how St
 
 ## Add schedule details to a Standard plan
 
-Standard plans need plan detail lines before they can work as expected.
+A Standard plan needs plan detail lines before families can use it.
 
 <Steps>
   <Step title="Expand the plan row" icon="chevron-right">
@@ -179,19 +177,19 @@ Standard plans need plan detail lines before they can work as expected.
   </Step>
   <Step title="Add a plan detail line" icon="plus">
 
-  Use **Add New Plan Detail** to create each installment.
+  Click **Add New Plan Detail** under the plan name to create each installment.
 
   </Step>
   <Step title="Set the charge date and amount" icon="edit">
 
-  For each line, choose the charge date. Then decide whether the line should charge the entire remaining balance or only part of it.
+  For each line, choose the **Date**. Then decide whether the line charges the entire remaining balance or only part of it.
 
   </Step>
   <Step title="Save additional lines as needed" icon="check-circle">
 
   Add one line for each installment in the schedule.
 
-  When you save a plan detail from the modal, use **Save and add another** to keep the modal open for the next installment instead of closing and reopening it.
+  Click **Save and add another** to keep the window open for the next installment, or **Save** to close it.
 
   You can edit a line with the pencil icon or remove it with the trash icon.
 
@@ -200,48 +198,52 @@ Standard plans need plan detail lines before they can work as expected.
 
 ### Plan detail line fields
 
-Choose these settings for each payment line:
+Each payment line has these settings:
 
-- **Date** - Pick the day that charge should run.
-- **Charge Entire Balance** - Turn this on (**Yes**) if that payment should collect whatever amount is still unpaid at that point. The schedule line then shows as **Remaining Balance**.
-- **Amount or percentage** - Use this when the line should charge only part of the balance. Depending on your setup, you can enter either a fixed dollar amount or a percentage.
-- **Per child or whole registration** - Choose whether the payment applies separately to each child or to the registration as a whole, based on the options shown in your form.
+- **Date** - The day the charge runs.
+- **Charge Entire Balance** - Set to **Yes** if the payment should collect whatever is still unpaid at that point. The schedule line then shows **Remaining Balance**.
+- **Percent or Amount** and **Amount** - Use these when the line charges only part of the balance: choose a percentage or a fixed dollar amount, then enter the value.
+- **Per Child?** - Whether the payment applies separately to each child or once for the registration.
 
 <Callout kind="info">
 
-Even split plans do not use plan detail lines. The system calculates those charges automatically from the balance and dates.
+Even Split plans do not use plan detail lines. Campium calculates those charges from the balance and dates.
 
 </Callout>
 
 ### Last payment isn't the balance
 
-On **Admin → Payment Plans** (and on the **Payment plans** step in guided season setup), a **Standard** plan can show a warning badge: **Last payment isn't the balance**.
+On **Admin → Payment Plans** (and on the **Payment plans** step of a season's **Guided setup**), a **Standard** plan can show a warning badge: **Last payment isn't the balance**.
 
-Hover the badge for: **The last payment is a set amount or percentage, not the remaining balance. Anything the earlier payments don't cover is never charged. Open the last payment and set Charge Entire Balance to Yes.**
+Hover the badge to see **The last payment is a set amount or percentage, not the remaining balance. Anything the earlier payments don't cover is never charged.**
 
-Next to the badge, click **Fix last payment**. That sets the last schedule line to **Charge Entire Balance**. Tooltip: **Sets the last payment to Charge Entire Balance. Payments already scheduled for families on this plan do not change.** While it runs, the button reads **Fixing...**. Plan details stay expanded so you can confirm the change.
+Next to the badge, click **Fix last payment** to set the last schedule line to **Charge Entire Balance**. Its tooltip reads **Sets the last payment to Charge Entire Balance. Payments already scheduled for families on this plan do not change.** While it runs, the button reads **Fixing...**. Plan details stay expanded so you can confirm the change.
 
-You can still open the latest-dated plan detail line yourself and set **Charge Entire Balance** to **Yes**. Even Split plans do not use this badge.
+You can also open the latest-dated plan detail line yourself and set **Charge Entire Balance** to **Yes**. Even Split plans do not show this badge.
 
 ## Turn plans on or off
 
-Each payment plan has a status toggle.
+Each plan has an on/off switch in the **Status** column. You can turn a plan on or off regardless of its start and end dates.
 
-- **Active** plans can be offered on forms when the other requirements are also met.
-- **Inactive** plans are not offered on forms.
+- **Active** (on) plans can be offered on forms when the other requirements are met.
+- **Inactive** (off) plans are not offered on forms.
 
 If a plan shows **Not showing on forms**, hover the badge to see the reason.
 
 ### Why a plan may not show on forms
 
-A plan may show **Not showing on forms** for one of these reasons:
+The **Not showing on forms** badge lists one or more of these reasons:
 
 - The plan is inactive.
-- The plan dates do not allow the plan to be chosen.
-- A **Standard** plan has no schedule lines.
-- No registration form in that season has payment plans enabled.
+- No season is assigned.
+- No form in the season has payment plans enabled.
+- For a **Standard** plan: today is outside the plan's start and end dates, no plan details have been added, or the latest plan detail date is in the past.
+- For an **Even Split** plan: the end date is in the past.
+
+A plan without the badge can still be hidden from a family at checkout:
+
 - **Require paid by session start** is on and there is no longer enough time for the last charge to land on or before the session start date.
-- **Show Only For These Sessions** is set and the cart does not include one of the selected sessions.
+- **Show only for these** sessions is set and the cart does not include one of the selected sessions.
 
 ## Edit or delete a plan
 
@@ -250,36 +252,36 @@ Update a plan from its row in the list.
 <Steps>
   <Step title="Open the plan options" icon="edit">
 
-  Use the row menu shown as `⋮`, then choose **Edit Payment Plan**.
+  Open the row menu, then choose **Edit Payment Plan**.
 
-  You can also click the underlined plan name to open it.
+  You can also click the underlined plan name.
 
   </Step>
   <Step title="Make your changes" icon="settings">
 
-  You can change the name, dates, description, and type. For even split plans, you can also change the cadence and monthly day setting.
+  You can change the name, dates, description, and type. For Even Split plans, you can also change the cadence and day of month.
 
   </Step>
   <Step title="Save the plan" icon="check-circle">
 
-  Save your changes to update the plan for that season.
+  Click **Save**.
 
   </Step>
 </Steps>
 
 ### Delete availability
 
-Delete appears only if no family is using that plan yet.
+**Delete Payment Plan** appears in the row menu only if no family is using the plan.
 
 <Callout kind="alert">
 
-If families are already using a plan, the delete option does not appear.
+If families are already using a plan, you cannot delete it. Turn it off in the **Status** column instead.
 
 </Callout>
 
 ## Copy plans to another season
 
-Copying saves time when the new season should use the same plan structure.
+Copy plans when a new season uses the same plan structure.
 
 ### Copy one plan
 
@@ -291,17 +293,17 @@ Copying saves time when the new season should use the same plan structure.
   </Step>
   <Step title="Choose the destination" icon="folder">
 
-  Enter a new plan name, then choose the season to copy into.
+  Enter a **New Plan Name**, then choose the season in **Copy To Season**.
 
   </Step>
   <Step title="Choose whether to shift dates" icon="calendar">
 
-  If needed, select **Increase dates by one year**.
+  To shift the dates, check **Increase dates by one year**.
 
   </Step>
   <Step title="Save the copy" icon="check-circle">
 
-  Save to create the copied plan in the selected season.
+  Click **Create Copy**.
 
   </Step>
 </Steps>
@@ -309,36 +311,36 @@ Copying saves time when the new season should use the same plan structure.
 ### What gets copied
 
 - **Standard** plans copy their schedule lines.
-- **Even split** plans copy the type, cadence, and day-of-month settings.
+- **Even Split** plans copy the type, cadence, and day-of-month settings.
 
 ### Copy all plans for a season
 
 <Steps>
   <Step title="Start the season copy" icon="folder">
 
-  Use **Copy All To Another Season**.
+  Click **Copy All To Another Season**.
 
   </Step>
   <Step title="Choose the destination season" icon="calendar">
 
-  Pick the season that should receive the copied plans.
+  In **Copy To Season**, pick the season that receives the copied plans.
 
   </Step>
   <Step title="Apply the optional date shift" icon="edit">
 
-  If needed, select the one-year date increase option.
+  To shift the dates, check **Increase dates by one year**.
 
   </Step>
   <Step title="Complete the copy" icon="check-circle">
 
-  Save to copy all plans from the current season.
+  Click **Copy**.
 
   </Step>
 </Steps>
 
 <Callout kind="alert">
 
-You cannot copy a plan into a season that already has a plan with the same name.
+**Copy Payment Plan** will not copy a plan into a season that already has a plan with the same name. **Copy All To Another Season** does not check names, so check the destination season for duplicates.
 
 </Callout>
 
@@ -349,43 +351,41 @@ Change a family's assigned plan from the Sales area on their profile.
 <Steps>
   <Step title="Open the family profile" icon="users">
 
-  Go to the family's profile and open the **Sales** section.
+  Go to the family's profile and open the **Sales** tab.
 
   </Step>
   <Step title="Select the season plan link" icon="chevron-right">
 
-  In the left column, find the season you want. If that season has a payment plan assigned, click the payment plan link beside it.
+  In the left column, find the season. If that season has a payment plan assigned, click the plan name below the season name.
 
   </Step>
   <Step title="Choose a different plan" icon="edit">
 
-  In the window that opens, select another plan from the list.
-
-  If needed, choose **Choose Plan** first to clear the current selection before picking a new one.
+  In **Modify Payment Plan**, select another plan in **Payment Plan**.
 
   </Step>
   <Step title="Adjust Charge day when needed" icon="calendar">
 
-  For a monthly Even Split plan, use **Charge day** to keep the family's day, pick **Use plan default**, or choose another day (**1st** through **31st**). Changing the day rebuilds their scheduled payments. Helper text explains when the family locked the day at checkout.
+  For a monthly Even Split plan, use **Charge Day** to keep the family's day, pick **Use plan default**, or choose another day (**1st** through **31st**). Changing the day rebuilds their scheduled payments. When the family chose the day at checkout, the helper text says so.
 
   </Step>
   <Step title="Save the change" icon="check-circle">
 
-  Click **Change Payment Plan** to save.
+  Click **Save Plan**.
 
-  If the family has upcoming scheduled charges but no primary payment method on file, Campium still saves the plan and shows a warning: the scheduled payments will not be charged until a method is added. Those families also appear on **Reports → System Reports → Scheduled Payments Potential Issues**.
+  If the family has no primary payment method on file, Campium still saves the plan and warns that the scheduled payments will not be charged until one is added. Those families also appear on **Reports → System Reports → Scheduled Payments Potential Issues**.
 
   </Step>
 </Steps>
 
 ## Remove a family's payment plan
 
-A family's payment plan is what drives their automatic billing (autopay). To take a family off automatic billing, or stop their scheduled payments, remove the plan from their profile. You can keep or delete the future scheduled payments when you do.
+A family's payment plan drives their automatic billing (autopay). To take a family off automatic billing or stop their scheduled payments, remove the plan from their profile. You can keep or delete the future scheduled payments when you do.
 
 <Steps>
   <Step title="Open the family's current plan" icon="users">
 
-  Open the family's profile and go to the **Sales** tab. Find the season, then click the payment plan name just beneath the season name. This opens **Modify Payment Plan**.
+  Open the family's profile and go to the **Sales** tab. Find the season, then click the payment plan name below the season name. This opens **Modify Payment Plan**.
 
   </Step>
   <Step title="Choose a removal option" icon="minus">
@@ -398,18 +398,18 @@ A family's payment plan is what drives their automatic billing (autopay). To tak
 ### Removal options
 
 <ParamField body="Remove and delete scheduled payments" param-type="action" show-location="false">
-Clears the payment plan and deletes its future scheduled charges. Use this to stop automatic billing for that season.
+Removes the plan and deletes its future scheduled charges. Nothing more is charged automatically for that season.
 </ParamField>
 
 <ParamField body="Remove, keep scheduled payments" param-type="action" show-location="false">
-Takes the plan off the family but leaves future charges as already scheduled, so they still run.
+Removes the plan but leaves future charges scheduled, so they still run.
 </ParamField>
 
 <ParamField body="Remove Plan" param-type="action" show-location="false">
 Shows instead of the two buttons above when the family has no scheduled payments left.
 </ParamField>
 
-Removing a plan does not change what the family owes. Collect any remaining balance as a one-time payment, or assign a different plan from the same window. Repeat for each season that has a plan.
+Removing a plan does not change what the family owes. Payments already made are not touched. Collect any remaining balance as a one-time payment, or assign a different plan from the same window. Repeat for each season that has a plan.
 
 ## Even split: pay off before each session
 
@@ -425,7 +425,7 @@ This is not limited to a specific payment processor. The option appears when per
 
 ## Even split cadence behavior
 
-Even split plans calculate charges based on the cadence and date range.
+Even Split plans calculate charges from the cadence and date range.
 
 <ParamField body="Monthly" param-type="cadence" show-location="false">
 Charges on the day of the month you set, or on the family's chosen day when **Let families choose their charge day** is on for that plan.
@@ -440,7 +440,7 @@ Charges every 14 days. The start date acts as the anchor, and charges continue e
 </ParamField>
 
 <ParamField body="1st & 15th" param-type="cadence" show-location="false">
-Charges on the 1st & 15th of each month when those dates fall within the selected date range.
+Charges on the 1st and 15th of each month when those dates fall within the date range. In the plan editor this option reads **1st and 15th each month**.
 </ParamField>
 
 ## How schedules adjust when the balance changes
@@ -453,19 +453,19 @@ When a family's season balance changes (for example you add or remove a session,
 
 ## Recalculate an even split schedule
 
-Some accounts use a **Recalc Even Split** action near the payment controls on the family profile.
+When your camp has it turned on, a **Recalc Even Split** link appears on the family profile's **Sales** tab.
 
-Use it when the family's balance or plan assignment has changed and you need the system to rebuild the even split payment schedule so it matches the current balance and dates.
+Use it after the family's balance or plan assignment changes to rebuild the Even Split schedule from the current balance and dates.
 
 <ExpandableGroup>
   <Expandable title="When does Recalc Even Split appear?">
 
-  You see **Recalc Even Split** only if your site has the setting enabled. If you do not see that link, your account may not use that option.
+  You see **Recalc Even Split** only if the setting is turned on for your camp. If you do not see the link, your camp does not have it.
 
   </Expandable>
   <Expandable title="When should staff use it?">
 
-  Use it after a balance change or a plan assignment change when the even split schedule needs to be rebuilt from the family's current balance and the plan dates. Plan-based Even Split schedules also re-spread automatically when you add or remove a session; use **Recalc Even Split** when you still need a manual rebuild.
+  Use it after a balance or plan change when the Even Split schedule needs rebuilding from the family's current balance and the plan dates. Plan-based Even Split schedules re-spread on their own when you add or remove a session. Use **Recalc Even Split** when you still need a manual rebuild.
 
   </Expandable>
 </ExpandableGroup>
@@ -474,7 +474,7 @@ Use it when the family's balance or plan assignment has changed and you need the
 
 Use this table when you need to decide which plan type to build.
 
-| Feature | Standard | Even split |
+| Feature | Standard | Even Split |
 | --- | --- | --- |
 | Amounts | Defined manually for each charge | Calculated automatically from the remaining balance |
 | Extra setup | Add and manage plan detail lines | Set cadence and, for monthly, the day of month |
@@ -486,17 +486,17 @@ Use this table when you need to decide which plan type to build.
 <ExpandableGroup>
   <Expandable title="Why do families still see a pay-in-full option when payment plans exist?">
 
-  The system always keeps a pay-in-full option available when at least one active payment plan exists for that season. You do not create a separate pay-in-full plan.
+  Campium adds a pay-in-full option whenever the season has at least one payment plan. You do not create a separate pay-in-full plan.
 
   </Expandable>
   <Expandable title="Why is my Standard plan not available yet?">
 
-  Check that the plan is active, the plan dates allow selection, the Standard plan has schedule lines, and a registration form in that season has payment plans enabled.
+  Check that the plan is active, today is between its start and end dates, it has plan detail lines with at least one future date, and a form in that season has payment plans enabled. Hover the **Not showing on forms** badge for the reason.
 
   </Expandable>
   <Expandable title="Why does my even split schedule not match what I expected?">
 
-  Check the plan's start date, end date, and cadence. Weekly and bi-weekly plans use the start date as the repeating anchor, monthly plans use the selected day of month, and 1st & 15th uses those calendar dates within the range.
+  Check the plan's start date, end date, and cadence. Weekly and bi-weekly plans repeat from the start date, monthly plans use the day of month, and 1st and 15th plans use those dates within the range.
 
   </Expandable>
 </ExpandableGroup>

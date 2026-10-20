@@ -5,108 +5,106 @@ description: Review deposit batches, summary totals, estimated bank deposit date
 
 ## Overview
 
-The Deposit Summary report shows two related views of your payments in Campium:
+The Deposit Summary report shows your payments in two parts:
 
-- **New deposits** – individual payments that are ready to be deposited but are not yet in a batch.
+- **Pending cash and check payments** - individual payments that are ready to be deposited but are not in a deposit yet.
 
-- **Deposit summary** – existing deposit batches, each showing a total and, when fee reporting is enabled, the fees and net amount reported by the processor.
+- **Deposit summary** - existing deposit batches, each with a total and, on Payabli and Finix, the fees and net amount.
 
 Use this report to reconcile check and cash activity, group payments into deposits, and compare what Campium shows to your bank and processor statements.
 
 <Callout kind="info" collapsed="false">
-  The Deposit Summary uses the **date the payment was entered in Campium**, not the date funds moved at the bank or processor.
+  On Payabli, USIO, and Finix, the Deposit Summary uses the **date the payment was entered in Campium**, not the date funds moved at the bank or processor. On other processors, card and ACH batches use the settled date, and cash and check deposits use the deposit's **Effective Date**.
 </Callout>
 
 ## Sections in the Deposit Summary
 
 The page contains two main areas:
 
-- **New deposits**\
-  A **collapsed card** that lists recent check, cash, and certain manual payments that **have not been included in any deposit yet**. It is not an always-visible table — expand the card when you want to create a new deposit from individual payments. When the canteen feature is turned on, eligible canteen payments are included here too.
+- **Pending cash and check payments**\
+  A **collapsed card** that lists check, cash, and manual adjustment payments that **are not in any deposit yet**, with a count badge beside the heading. Click the heading or **Show payment list** to expand it. The card appears only when at least one payment is waiting, and it is hidden in the **All transactions** view. When the canteen module is on, eligible canteen payments are included too.
 
 - **Deposit summary**\
-  Shows deposits that have already been grouped and sent through your normal processing. Each row represents a deposit and includes the total amount and, when fee reporting is enabled, the fees and net amount reported by the processor.
+  Shows deposits that have already been grouped and sent through your normal processing. Each row is one deposit, with the total amount and, on Payabli and Finix, the fees and net amount.
 
 <Callout kind="info" collapsed="false">
-  Think of the **New deposits** card as a staging area for money you still need to group into a deposit, and **Deposit summary** as your history of deposits that can be matched to bank and processor reports.
+  The **Pending cash and check payments** card holds money you still need to group into a deposit. The **Deposit summary** table is your history of deposits to match against bank and processor reports.
 </Callout>
 
 ### Switch between By-batch and All-transactions views
 
-The Deposit summary offers a view toggle:
+Above the table, a toggle switches between two views:
 
-- **By batch** — Groups payments into deposit batches, one row per batch. This is the reconciliation-friendly view that matches your bank and processor deposits.
+- **By batch** - One row per deposit batch. Use this view to match your bank and processor deposits.
 
-- **All transactions** — Lists every individual transaction instead of grouping them into batches, so you can drill into the underlying payments.
+- **All transactions** - One row per transaction, so you can review the underlying payments.
 
-Switch between the two views depending on whether you are reconciling whole deposits or reviewing individual transactions.
+Use **By batch** to reconcile whole deposits and **All transactions** to review individual payments.
 
 ## Summary totals above the batch table
 
 When the **By batch** view has rows for your date range, Campium shows summary totals above the table:
 
 - **Gross** - sum of batch totals in the current date range.
-- **Fees** and **Net** - shown when fee amounts are available for those batches (not for every processor).
-- **Undeposited** *(Finix)* - net from Finix settlements in the current range that are not yet confirmed deposited to your bank. Includes **In transit**, **Overdue**, and **Sent to bank** rows; excludes **Deposited** batches and ACH returns. Hover the card for the same explanation.
+- **Fees** and **Net** - shown when the batches have fee amounts (Payabli and Finix only).
+- **Undeposited** *(Finix)* - net from Finix settlements in the current range that are not yet confirmed deposited to your bank. Includes **In transit**, **Overdue**, and **Sent to bank** rows; excludes **Deposited** batches and ACH returns. Hover the card for the same explanation, and click it, or **Undeposited only** above the table, to show only those batches. **All** shows every batch again.
 - **ACH returns** - total returned ACH amount for the range, with the return count in parentheses. Hover the card for the ACH return rate against ACH volume when Campium can calculate it.
 
-These cards update with the same date range as the Deposit summary table.
+These cards use the same date range as the Deposit summary table. They appear only on Payabli, USIO, and Finix.
 
 ## Find a bank deposit
 
 Use **Find a bank deposit** when you have a dollar amount from your bank statement and need the matching Campium batch.
 
 1. Open **Financials → Deposit Summary** and stay on the **By batch** view.
-2. Set **Start date** and **End date** to cover the statement period.
+2. Set the date range picker at the top of the page to cover the statement period.
 3. In **Find a bank deposit**, enter the bank amount (for example `1,234.56`).
-4. The table filters to batches whose **Net** or **Total** matches that amount. The status text shows how many rows matched.
+4. The table filters to batches whose **Net** or **Total** matches that amount. The text beside the field shows how many rows matched, such as **1 match**.
 5. Clear the field with **×** to show the full list again.
 
-If you see **No match**, the bank line may combine more than one batch, or your bank may show a net that already withholds fees differently than Campium.
+If you see **No match. The bank amount may combine batches or reflect withheld fees.**, the bank line may combine more than one batch, or your bank may show a net that withholds fees differently than Campium.
 
 ## Filters and date range behavior
 
-The Deposit Summary includes a simple **Start date** and **End date** filter above the page.
+Choose the dates with the date range picker at the top of the page.
 
 - The **date range applies only to the Deposit summary table** (batched deposits).
 
-- The **New deposits table always shows the current list of payments that are not yet in a deposit**, no matter which dates you choose.
+- The **Pending cash and check payments card always shows every payment that is not yet in a deposit**, no matter which dates you choose.
 
-- **Start date** — First date in the range used to show batches in the Deposit summary table. By default, this is the first day of the current month.
-
-- **End date** — Last date in the range used to show batches in the Deposit summary table. By default, this is the last day of the current month.
+- The range defaults to the current month. After you pick a range, Campium keeps it for the rest of your session.
 
 <Callout kind="alert" collapsed="false">
-  The date filter looks at **when the payment was entered in Campium**. It does not use bank settlement dates or processor cut‑offs. If a payment was entered outside your chosen range, it will not appear in the Deposit summary for that period, even if it settled during those dates.
+  On Payabli, USIO, and Finix, the date filter looks at **when the payment was entered in Campium**. It does not use bank settlement dates or processor cut-offs. If a payment was entered outside your chosen range, it does not appear in the Deposit summary for that period, even if it settled during those dates.
 </Callout>
 
 <Callout kind="info" collapsed="false">
-  The New deposits list is **independent of the date range**. It always reflects the current set of check, cash, and eligible manual payments that have not yet been grouped into a deposit.
+  The **Pending cash and check payments** list is **independent of the date range**. It always shows the check, cash, and manual adjustment payments that are not yet grouped into a deposit.
 </Callout>
 
-## Columns in the New deposits table
+## Columns in the Pending cash and check payments table
 
-The **New deposits** table shows individual payments that can be added to a deposit.
+The **Pending cash and check payments** table shows individual payments that can be added to a deposit.
 
-- **Select** — Checkbox that lets you choose which payments to include in a new deposit. The header includes a **Toggle All** checkbox that selects or clears every payment currently shown in the table.
+- **Select** - Checkbox for choosing which payments go into a new deposit. The **Toggle All** link in the header selects or clears every checkbox in the table.
 
-- **Date Entered** — The date and time the payment was recorded in Campium. This reflects when staff or the system entered the payment, not when money moved between banks.
+- **Date Entered** - The date and time the payment was recorded in Campium, not when money moved between banks.
 
-- **Type** — The payment method, such as **Check**, **Cash**, or a manual payment type that is included in deposits.
+- **Type** - The payment method: **Check**, **Cash**, or **Manual Adjustment**.
 
-- **Name** — The name attached to the payment, such as the payer, family, or account holder.
+- **Name** - The name attached to the payment, such as the payer, family, or account holder.
 
-- **Description** — Any extra details about the payment, such as notes or status text, that help you recognize what the payment relates to.
+- **Description** - Extra details about the payment, such as notes or status text.
 
-- **Total** — The amount of the individual payment, shown as a currency value.
+- **Total** - The amount of the individual payment.
 
-- **Total (footer)** — The grand total of all payments currently listed in the New deposits table. Use this to see the total amount you are about to group into a new deposit.
+- **Total (footer)** - The total of all payments listed in the table, beside the **Create Deposit #** button.
 
 ## Columns in the Deposit summary table
 
-The **Deposit summary** table shows one row per deposit batch, along with totals and, when fee reporting is enabled, the fees reported by the processor.
+The **Deposit summary** table shows one row per deposit batch, with totals and, on Payabli and Finix, fees. The columns below are the Payabli, USIO, and Finix layout. On other processors the table shows **Date Settled**, **Type**, **Deposit #**, **Batch #**, **# of Items**, **Total**, and **Reconciled**, with no summary totals or **Find a bank deposit**.
 
-- **Date** - The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. This is the date you typically match to your bank or processor report.
+- **Date** - The main date shown for the deposit. When available, this is the date the deposit settled; otherwise, it is the date the deposit was created. Match this date to your bank or processor report.
 
 - **Type** - The tender for the batch, such as credit card or ACH.
 
@@ -116,14 +114,15 @@ The **Deposit summary** table shows one row per deposit batch, along with totals
 
 - **Total** - The full amount of all payments in the deposit, before fees.
 
-- **Est. deposit** *(Finix)* - Estimated date funds arrive in your bank. Card funding is typically T+2 business days from settlement; ACH is typically T+4 (or T+3 after you qualify). Hover the date for the calculation detail. Status badges can appear next to the date:
+- **Est. deposit** *(Finix)* - Estimated date funds arrive in your bank. Card funding is usually T+2 business days from settlement; ACH is usually T+4 (or T+3 after you qualify). Hover the date for the calculation detail. Status badges can appear next to the date:
   - **In transit** - Finix is transferring these funds to your bank.
   - **Sent to bank** - Finix reports the transfer has been sent; Campium has not yet marked the batch **Deposited**.
   - **Overdue** - The estimated date has passed and Campium has not confirmed the bank deposit yet. Weekends, holidays, or funding delays can push the real deposit later.
+  - **Deposited** - Finix sent these funds to your bank.
 
-- **Fees** *(shown only when enabled)* - Processing fees for the deposit. On Finix, hover for whether the figure is the actual settlement fee. On other processors with fee columns, hover can show an estimate breakdown.
+- **Fees** *(Payabli and Finix)* - Processing fees for the deposit. On Finix, hover to see whether the figure is the actual settlement fee. On Payabli, hover to see the estimate breakdown.
 
-- **Net** *(shown only when enabled)* - The deposit amount after subtracting fees. Absent from the legacy deposit view when fee columns are off.
+- **Net** *(Payabli and Finix)* - The deposit amount after subtracting fees.
 
 - **Reconciled** - Mark the batch reviewed against your bank activity.
 
@@ -148,9 +147,9 @@ With reconciliation, you can:
 
 Each row in the **Deposit summary** table includes a **Reconciled** column.
 
-- **Reconcile** button — the deposit has not been reconciled yet.
-- **Reconciled** button — the deposit has already been reconciled.
-- **Note line** — if a note was saved during reconciliation, it appears below the button.
+- **Reconcile** button - the deposit has not been reconciled yet.
+- **Reconciled** button - the deposit has already been reconciled.
+- **Note line** - if a note was saved during reconciliation, it appears below the button.
 
 ### Recommended workflow
 
@@ -192,7 +191,7 @@ Each row in the **Deposit summary** table includes a **Reconciled** column.
   </Step>
 
   <Step title="Enter a note if needed" icon="file-text" title-type="p">
-    In the pop-up, add a note if you want to save extra context. This is optional.
+    In the **Mark Deposit as Reconciled** pop-up, add a note if you want to save extra context. This is optional.
   </Step>
 
   <Step title="Save the reconciliation" icon="save" title-type="p">
@@ -215,7 +214,7 @@ If a row was reconciled by mistake:
   </Step>
 
   <Step title="Confirm removal" icon="trash-2" title-type="p">
-    Confirm that you want to remove reconciliation.
+    At **Remove reconciliation for this deposit?**, click **Yes, Remove**.
   </Step>
 </Steps>
 
@@ -237,7 +236,7 @@ After removal:
 
 - Refresh the page and try again.
 - Confirm you still have access to the report.
-- If it continues, contact your internal admin or support team.
+- If it still fails, contact your admin or Campium support.
 
 #### I reconciled the wrong row
 
@@ -246,96 +245,92 @@ After removal:
 
 #### My note is missing
 
-- Notes are saved only when you confirm the pop-up.
+- Notes are saved only when you click **Reconcile** in the pop-up.
 - Re-open the row by removing reconciliation, then reconcile it again with a note.
 
 ### Glossary
 
-- **Reconcile** — mark a deposit as reviewed and matched.
-- **Unreconciled** — a deposit that still needs review.
-- **Batch Number** — the processor identifier for a deposit group.
+- **Reconcile** - mark a deposit as reviewed and matched.
+- **Unreconciled** - a deposit that still needs review.
+- **Batch Number** - the processor identifier for a deposit group.
 
 ## Where the Fees and Net columns come from
 
-When the **Fees** and **Net** columns are shown, their values are reported by the **Finix settlement API** — they are **not** computed from processing rates you configure for card and ACH transactions.
+Where the **Fees** and **Net** values come from depends on your processor:
 
-At a high level:
+- **Finix** - Campium reads the actual settled fee for each deposit from Finix settlement data. The column tooltip reads **From Finix settlement**.
 
-- Campium reads the actual settled fee for each deposit from Finix.
+- **Payabli** - Campium estimates fees from your card and ACH processing rates (a percentage plus a per-transaction fee). The column tooltip reads **Approximate fees**, and hovering a value shows the breakdown.
 
-- The **Fees** column shows that reported fee amount.
+- The **Net** column is the **Total minus the Fees**.
 
-- The **Net** column is the **Total minus the reported Fees**.
-
-These columns appear only when fee reporting is enabled for your account. The older, legacy deposit view has no **Fees** or **Net** columns at all.
+USIO and the legacy deposit view used by other processors have no **Fees** or **Net** columns.
 
 <Callout kind="info" collapsed="false">
-  Because the fee figures come directly from Finix settlement data, they reflect what the processor actually charged rather than an estimate from your own rates. For chargebacks, refunds, or special pricing, still reconcile against your processor statement for final totals.
+  On Finix the fee figures reflect what the processor charged. On Payabli they are estimates. For chargebacks, refunds, or special pricing, reconcile against your processor statement for final totals.
 </Callout>
 
 ## Run the Deposit Summary report
 
-Use the Financial area in Campium to open and run the Deposit Summary for reconciliation.
+Open the Deposit Summary from **Financials** to reconcile deposits.
 
 <Steps>
   <Step title="Open the Deposit Summary" icon="bar-chart" title-type="p">
-    - Sign in to your Campium admin account.
+    - Click **Financials** in the left sidebar.
 
-    - Go to **Financials** in the left hand navigation area.
-
-    - Select **Deposit Summary** from the list of reports.
+    - Click **Deposit Summary**.
   </Step>
 
   <Step title="Choose your date range for deposits" icon="calendar" title-type="p">
-    - Use the **Start date** and **End date** fields to choose the period you want to review.
+    - Use the date range picker at the top of the page to choose the period you want to review.
 
-    - Keep the default month to review current activity, or set dates that match your bank or processor statement.
+    - Keep the current month to review current activity, or set dates that match your bank or processor statement.
   </Step>
 
   <Step title="Apply and review the results" icon="play-circle" title-type="p">
     - Apply the date range to refresh the **Deposit summary** table.
 
-    - Confirm that deposit totals — and, when the fee columns are shown, the reported fees and net amounts — look reasonable for the selected period.
+    - Check that deposit totals, and the fees and net amounts when shown, look right for the period.
 
-    - Review the **New deposits** table to see which recent payments are **not yet included** in any deposit.
+    - Expand **Pending cash and check payments** to see which payments are **not yet included** in any deposit.
   </Step>
 </Steps>
 
 When the page updates successfully, you see:
 
-- A **New deposits** table with current check, cash, and eligible manual payments that still need to be grouped into deposits.
+- A **Pending cash and check payments** card with the check, cash, and manual adjustment payments that still need to be grouped into deposits (when there are any).
 
 - A **Deposit summary** table listing deposits whose payments were entered within your chosen date range.
 
 ## Create a deposit from new payments
 
-Use the **New deposits** table to group selected payments into a deposit and assign a date that matches when you will deposit or have deposited the funds.
+Use the **Pending cash and check payments** table to group selected payments into a deposit and give it the date you deposit the funds.
 
 <Steps>
   <Step title="Select payments to include" icon="check-circle" title-type="p">
-    - In the **New deposits** table, use the checkboxes to select the payments you want to include.
+    - Expand **Pending cash and check payments** and use the checkboxes to select the payments you want to include.
 
-    - Use **Toggle All** in the header to quickly select or clear all listed payments.
+    - Click **Toggle All** in the header to select or clear all listed payments.
 
     - Check the **Total** at the bottom of the table to confirm it matches what you expect to deposit.
   </Step>
 
   <Step title="Open the Create Deposit window" icon="play-circle" title-type="p">
-    - Click the **Create Deposit #** button in the New deposits footer.
+    - Click the **Create Deposit #** button in the table footer.
 
-    - A window opens showing a summary of the payments you selected and a field for the deposit date.
+    - The **Check Deposit** window opens with an **Effective Date** field.
   </Step>
 
   <Step title="Set the deposit date and save" icon="calendar" title-type="p">
-    - Enter the **deposit date** you want associated with the new deposit (for example, the date you will bring the checks or cash to the bank).
+    - Enter the **Effective Date** for the new deposit (for example, the date you bring the checks or cash to the bank).
 
-    - Choose **Save** or **Submit** to create the deposit.
+    - Click **Save** to create the deposit.
   </Step>
 
   <Step title="Understand what happens to the payments" icon="info" title-type="p">
-    - Campium groups the selected payments into one or more deposits based on payment type (for example, cash and check).
+    - Campium groups the selected payments into deposits by type: cash and checks go into one deposit, and manual adjustments into another.
 
-    - Each payment is now marked as part of a deposit and no longer appears in the **New deposits** table.
+    - Each payment is now part of a deposit and no longer appears under **Pending cash and check payments**.
 
     - The deposits will appear in the **Deposit summary** section once they move through your normal processing and receive a batch number.
   </Step>
@@ -343,7 +338,7 @@ Use the **New deposits** table to group selected payments into a deposit and ass
   <Step title="Return to the Deposit Summary" icon="arrow-right" title-type="p">
     - After saving, you return to the **Deposit Summary** page.
 
-    - The payments you grouped are removed from **New deposits** and will show in deposit views as processing continues.
+    - The payments you grouped no longer appear under **Pending cash and check payments**, and show in deposit views as processing continues.
   </Step>
 </Steps>
 
@@ -353,9 +348,7 @@ Use the **New deposits** table to group selected payments into a deposit and ass
 
 ## Export, copy, and print options
 
-Both Deposit Summary tables include export and print buttons so you can share, save, or analyze the data outside of Campium.
-
-Available actions typically include:
+Both Deposit Summary tables include export and print buttons so you can share, save, or analyze the data outside Campium:
 
 <Tabs>
   <Tab title="Copy" icon="copy">
@@ -363,15 +356,15 @@ Available actions typically include:
   </Tab>
 
   <Tab title="Excel" icon="download">
-    Downloads the table as an Excel‑compatible file. This is helpful if your finance team prefers to use formulas, filters, and formatting in a spreadsheet.
+    Downloads the table as an Excel file, for finance teams that work with formulas, filters, and formatting in a spreadsheet.
   </Tab>
 
   <Tab title="CSV" icon="download">
-    Exports the table as a comma‑separated values file that you can open in Excel, Google Sheets, or import into other accounting tools.
+    Exports the table as a comma-separated values file that you can open in Excel or Google Sheets, or import into other accounting tools.
   </Tab>
 
   <Tab title="PDF (landscape legal)" icon="file-text">
-    Creates a PDF snapshot of the table in landscape orientation on legal‑size paper. Use this when you need a fixed‑layout report for records or audits.
+    Creates a PDF of the table in landscape orientation on legal-size paper, for a fixed-layout copy for records or audits.
   </Tab>
 
   <Tab title="Print" icon="printer">
@@ -380,5 +373,5 @@ Available actions typically include:
 </Tabs>
 
 <Callout kind="info" collapsed="false">
-  Use the table’s page‑size controls to adjust how many rows appear before you export or print. Increasing the page size lets you capture more data in a single file or printed report.
+  Use the table’s page-size control to set how many rows appear before you export or print. A larger page size puts more rows in a single file or printed report.
 </Callout>

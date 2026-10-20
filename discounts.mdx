@@ -6,7 +6,7 @@ description: >-
 ---
 ## What you can do with Discounts
 
-Use the Discounts page in Campium Admin to manage discount codes, sibling discounts, and multi-session discount settings for your programs. Discounts control how much families save, when they qualify, and whether staff or families can apply them at checkout.
+On the Discounts page you manage discount codes, the sibling discount, and multi-session discount rules. Discounts control how much families save, when they qualify, and whether staff or families can apply them at checkout.
 
 Use this page when you want to:
 
@@ -18,7 +18,7 @@ Use this page when you want to:
 - Let a discount cover the full checkout amount so families do not need to pay anything at checkout
 
 <Callout kind="info" collapsed="false">
-  Discounts affect how much families pay at checkout. Make changes only if you understand your pricing policies and how they appear on invoices.
+  Discounts change how much families pay at checkout. Check how a change affects your pricing and invoices before you save it.
 </Callout>
 
 ## Open the Discounts page
@@ -33,7 +33,7 @@ Use this page when you want to:
   </Step>
 </Steps>
 
-When the page loads, you see a list of discounts and any multi-session discount configurations available to your account.
+The page lists your active discounts. Use **Show Me** to switch between **Active** and **Archived** discounts. The **Code Checker**, **Multi-Session**, and **Pay In Full Default** buttons above the list each open a panel for that tool.
 
 ## Family-level discounts on a profile
 
@@ -42,7 +42,7 @@ You can also post a discount from a person's profile instead of using a checkout
 1. Open the profile and go to the **Sales** tab.
 2. Click **Add Payment**.
 3. Set **Payment Type** to a discount option (the form shows a **Discount** field once that type is selected).
-4. For **For User**, leave **Entire family** selected when the discount is not for one camper. Helper text: **Leave as Entire family when this is not for one camper.**
+4. In **For User**, leave **Entire family** selected when the discount is not for one camper.
 5. Choose a specific family member only when the discount should sit on that person alone.
 6. When you save, Campium rebuilds the payment plan from the new balance when a plan is on the sale. If there is no plan, it trims upcoming scheduled payments from the latest installment first so the remaining schedule still matches what is owed.
 
@@ -50,56 +50,60 @@ On family invoices, a camper-specific discount appears in that camper's section.
 
 ## Discount list: columns and status
 
-Each row in the discount list represents one discount. Use the columns to understand how each discount behaves.
+Each row in the discount list is one discount.
 
 <ParamField body="code" param-type="string" required="false" deprecated="false" show-location="false">
-  **Code** — The code families or staff enter at checkout. Sibling discounts show a **Sibling** badge next to the code.
+  **Code** - The code families or staff enter at checkout. Sibling discounts show a **Sibling** badge next to the code.
 </ParamField>
 
 <ParamField body="description" param-type="string" required="false" deprecated="false" show-location="false">
-  **Description** — The text that appears on invoices and receipts. Use wording that families will recognize.
+  **Description** - The text that appears on invoices and receipts. Use wording families recognize.
 </ParamField>
 
 <ParamField body="status" param-type="string" required="false" deprecated="false" show-location="false">
-  **Status** — Shows whether the discount can currently be used. Typical values include:
+  **Status** - Whether the discount can be used now:
 
-  - **In use**: Discount is active and can be applied when other conditions are met.
-  - **Not in use**: Discount is disabled or blocked by another setting.
-  - **Expired**: Discount is past its end date.
+  - **In Use**: The discount is active and applies when its other conditions are met.
+  - **Not in use**: You set **Status** to **No Longer In Use** on the discount.
+  - **Expired**: The discount is past its end date.
 </ParamField>
 
 <ParamField body="amount" param-type="number" required="false" deprecated="false" show-location="false">
-  **Amount** — Shows either a fixed dollar amount or a percentage discount, depending on how the discount was set up.
+  **Amount** - The fixed dollar amount or the percent.
 </ParamField>
 
 <ParamField body="public" param-type="boolean" required="false" deprecated="false" show-location="false">
-  **Public?** — Shows whether families can use the code in the parent portal:
+  **Public?** - Whether families can use the code in the parent portal:
 
   - **Yes**: Parents can enter this code at checkout.
   - **No**: Only staff can apply it from Admin.
 </ParamField>
 
+<ParamField body="bypassPay" param-type="boolean" required="false" deprecated="false" show-location="false">
+  **Bypass pay?** - Whether the code lets parents submit portal checkout without a card or ACH payment. This is the **Bypass payment at portal checkout?** setting.
+</ParamField>
+
 <ParamField body="allowDuplicates" param-type="boolean" required="false" deprecated="false" show-location="false">
-  **Allow duplicates?** — Controls whether the same family can receive the discount more than once:
+  **Allow Duplicates?** - Whether the same user can receive the discount more than once:
 
   - **Yes**: The same user can use this discount multiple times.
   - **No**: The user can only receive this discount once.
 </ParamField>
 
 <ParamField body="usage" param-type="integer" required="false" deprecated="false" show-location="false">
-  **Usage** — How many times the discount has been used.
+  **Usage** - How many times the discount has been used. Click the number to see who used it.
 </ParamField>
 
 <ParamField body="limit" param-type="integer" required="false" deprecated="false" show-location="false">
-  **Limit** — Maximum number of allowed uses, if you set one. Blank or zero means no limit.
+  **Limit** - The maximum number of uses, if you set one. Blank or zero means no limit.
 </ParamField>
 
 <ParamField body="maxTotal" param-type="string" required="false" deprecated="false" show-location="false">
-  **Max Total** - How much of the code's dollar budget has been given away, when you set a **Maximum Total**. Shows as used-of-cap (for example `250.00 of 500.00`). Blank when there is no dollar cap.
+  **Max Total** - How much of the code's dollar budget has been given away, when you set a **Maximum Total**. Shows as used-of-cap (for example `250.00 of 500.00`). Shows **None set** when there is no dollar cap.
 </ParamField>
 
 <ParamField body="startEndDate" param-type="string" required="false" deprecated="false" show-location="false">
-  **Start Date / End Date** — The date range when the discount is valid. Outside this window, the discount cannot be applied.
+  **Start Date / End Date** - The date range when the discount is valid. Outside this window, the discount does not apply.
 </ParamField>
 
 ### Edit fields on the Discounts list
@@ -124,7 +128,7 @@ Use the action menu on each row when you need the full editor, or to archive or 
 
 ## Create a new discount
 
-Create a new discount when you want to launch a promotion, offer financial aid, apply staff-only adjustments, offer a pay in full discount, make checkout free for the family, or set up an automatic sibling discount.
+Create a discount to run a promotion, offer financial aid, make a staff-only adjustment, reward paying in full, let a family check out without paying, or set up the automatic sibling discount.
 
 <Steps>
   <Step title="Start a new discount" icon="plus" title-type="p">
@@ -137,7 +141,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     - **Code discount**: families type a code at checkout (or staff apply it in Admin).
     - **Sibling discount**: applied automatically when a family has two or more children enrolled or registering in the same season. The highest-priced child pays full price; the second child gets the rate you set, and you can add different rates under **Third Child And Beyond**.
 
-    You can have only one sibling discount. If one already exists, **Sibling discount** is disabled and you see a link to **Edit it**.
+    You can have only one sibling discount. If one already exists, **Sibling discount** is disabled and a link to **Edit it** appears.
   </Step>
 
   <Step title="Enter code and description" icon="edit" title-type="p">
@@ -146,7 +150,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     - Fill in **Discount Code**. This is what families or staff enter at checkout.
     - Fill in **Discount Description**. This appears on invoices and receipts.
 
-    For a **Sibling discount**, the code field is hidden. Description defaults to **Sibling Discount** if you leave it blank.
+    When you choose **Sibling discount**, the code field is hidden, and an empty **Discount Description** fills in with **Sibling Discount**.
   </Step>
 
   <Step title="Set the discount value" icon="edit" title-type="p">
@@ -155,29 +159,29 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
     - **Fixed Amount** (for example, `25.00` for a twenty-five dollar discount), or
     - **Percent** (for example, `10` for ten percent off)
 
-    Leave the other field at zero. Only one value can be used at a time.
+    Leave the other field blank or at zero. Only one of the two can be greater than zero.
   </Step>
 
   <Step title="Optionally limit total uses" icon="settings" title-type="p">
-    For a **Code discount**, in **Limit**, enter the maximum number of times this discount can be used.\
+    For a **Code discount**, enter the maximum number of uses in **Limit**.\
     Leave blank or enter `0` for no limit. Sibling discounts do not use Limit.
   </Step>
 
   <Step title="Optionally cap the total dollars given away" icon="settings" title-type="p">
     For a **Code discount**, in **Maximum Total**, enter the maximum dollar amount this code can give away across all redemptions (for example `500` or `1,500.00`). Leave blank for no dollar limit.
 
-    This is the dollar sibling of **Limit**: **Limit** caps how many times the code can be used, and **Maximum Total** caps how much it can hand out. A 10% code with a `$500` maximum stops once `$500` has been discounted. Sibling discounts hide this field.
+    **Limit** caps how many times the code can be used. **Maximum Total** caps how many dollars it can give away. A 10% code with a `$500` maximum stops once `$500` has been discounted. Sibling discounts hide this field.
   </Step>
 
   <Step title="Choose how a percent discount applies across sessions" icon="settings" title-type="p">
-    Set **Apply To All Sessions**:
+    Set **Apply To All Sessions** (default **Yes**):
 
     - **Yes**: A percent discount applies to every eligible session for that child.
     - **No**: A percent discount applies only to the child's lowest-priced session.
   </Step>
 
   <Step title="Choose how sessions are counted across children" icon="settings" title-type="p">
-    For a **Code discount**, set **Combine All Children's Sessions** to control how a percent discount is calculated when a family has more than one child:
+    For a **Code discount**, set **Combine All Children's Sessions** (default **No**) to control how a percent discount is calculated when a family has more than one child:
 
     - **Yes**: The discount is computed across all children's sessions combined.
     - **No**: The discount is computed separately for each child.
@@ -186,13 +190,13 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Configure a pay in full discount" icon="check-circle" title-type="p">
-    Use a pay in full discount when you want to reward families who pay the full balance up front instead of choosing installments, or when you want checkout to be free for the family.
+    The automatic discount for families who choose pay in full is not a code. Set it with the **Pay In Full Default** button on the Discounts page: pick **Discount Type** (**Fixed Amount** or **Percent**), enter **Default Value**, and click **Save Pay In Full Default**. Then turn it on for a form with **Enable Pay In Full Discount** on that form's **Settings** tab, where you can also override the type and value.
 
-    Set the discount amount as either a **Fixed Amount** or **Percent**, then make sure the discount is visible where families check out if you want them to apply it themselves.
+    To reward paying in full with a code instead, create a code discount with a **Fixed Amount** or **Percent**.
 
-    Some discounts can also be set to skip payment completely by turning on **Bypass payment at portal checkout?**. When this setting is turned on, parents can submit their registration without entering a card or ACH payment, so the family does not need to pay anything at checkout.
+    To let a family check out without paying, set **Bypass payment at portal checkout?** to **Yes** (default **No**). Parents can then submit their registration without entering a card or ACH payment.
 
-    To make the discount work as expected:
+    For a code discount used this way:
 
     - Set **Allow On Portal?** to **Yes** if families should apply it in the parent portal.
     - Set **Start Date** and **End Date** if the discount should only apply during a specific registration window.
@@ -202,7 +206,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Control who can use the discount" icon="users" title-type="p">
-    For a **Code discount**, set **Allow On Portal?**:
+    For a **Code discount**, set **Allow On Portal?** (default **Yes**):
 
     - **Yes**: Families can enter the code during checkout in the parent portal.
     - **No**: Only staff can apply the discount in Admin.
@@ -211,7 +215,7 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Control repeat usage" icon="settings" title-type="p">
-    For a **Code discount**, set **Allow Duplicate?**:
+    For a **Code discount**, set **Allow Duplicate?** (default **No**):
 
     - **Yes**: The same user can receive the discount multiple times.
     - **No**: The discount applies at most once per user.
@@ -220,35 +224,35 @@ Create a new discount when you want to launch a promotion, offer financial aid, 
   </Step>
 
   <Step title="Choose calculation order" icon="settings" title-type="p">
-    Set **Apply After Other Discounts?**:
+    Set **Apply After Other Discounts?** (default **No**):
 
     - **Yes**: Calculate this discount after other discounts.
     - **No**: Use standard calculation order with other discounts.
   </Step>
 
   <Step title="Add optional date window" icon="calendar" title-type="p">
-    Optionally set **Start Date** and **End Date** to control when the discount is active.\
-    Leave these blank to allow use at any time (subject to other settings).
+    Set **Start Date** and **End Date** to control when the discount is active. **End Date** is the last day the discount works.\
+    Leave both blank to allow use at any time, subject to the other settings.
   </Step>
 
   <Step title="Target specific products (optional)" icon="package" title-type="p">
-    In **Apply Only To These Products**, select the products the discount should apply to.\
-    Leave this blank to allow the discount to apply across all eligible products.
+    In **Apply Only To These Products**, select the products the discount applies to. The last word of this label is your camp's term for products, such as **Sessions**.\
+    Leave it blank to apply the discount to all eligible products.
   </Step>
 
   <Step title="Save the discount" icon="check-circle" title-type="p">
-    Review your entries and click **Save**.\
-    If the save succeeds, the discount appears in the list with the updated settings.
+    Click **Save**.\
+    The page reloads and the discount appears in the list.
   </Step>
 </Steps>
 
 <Callout kind="tip" collapsed="false">
-  Test new discounts with a sample registration before promoting them to families. Confirm the discount amount, visibility, and invoice description match your expectations. For sibling discounts, try both paths: register two or more children in one checkout, and register a second child after the first is already enrolled. Confirm the highest-priced child pays full price, the second child gets the base sibling rate, and any **Third Child And Beyond** rows apply when you set them.
+  Test a new discount with a sample registration before you announce it. Confirm the amount, visibility, and invoice description. For sibling discounts, try both paths: register two or more children in one checkout, and register a second child after the first is already enrolled. Confirm the highest-priced child pays full price, the second child gets the base sibling rate, and any **Third Child And Beyond** rows apply when you set them.
 </Callout>
 
 ## Create a sibling discount
 
-A **Sibling discount** applies automatically at checkout when a family has two or more children in the same season. That includes registering them together, or registering another child after a sibling is already enrolled. Campium ranks those children by the price of the sessions this discount applies to (tuition for that scope), so transportation or other add-ons outside that scope do not change who pays full price. The highest-priced child in that ranking pays full price. The second child gets the rate you set on the discount. Families do not type a code.
+A **Sibling discount** applies automatically at checkout when a family has two or more children in the same season. That includes registering them together, or registering another child after a sibling is already enrolled. Campium ranks those children by the price of the sessions this discount applies to, so transportation or other add-ons outside that scope do not change who pays full price. The highest-priced child in that ranking pays full price. The second child gets the rate you set on the discount. Families do not type a code.
 
 Waitlisted and cancelled enrollments do not count toward the sibling ranking.
 
@@ -258,45 +262,45 @@ Waitlisted and cancelled enrollments do not count toward the sibling ranking.
   </Step>
 
   <Step title="Select Sibling discount" icon="users" title-type="p">
-    Under **Discount Type**, choose **Sibling discount**. On-screen help explains that the highest-priced child pays full price and the second child gets the rate you set here. Checkout also counts siblings who are already enrolled in the same season, so a second registration alone still qualifies.
+    Under **Discount Type**, choose **Sibling discount**. A note on the form explains that the highest-priced child pays full price and the second child gets the rate you set here. Checkout also counts siblings who are already enrolled in the same season, so a second registration alone still qualifies.
   </Step>
 
   <Step title="Set the second-child rate and description" icon="edit" title-type="p">
-    Enter a **Fixed Amount** or **Percent** for the second child, and confirm **Discount Description** (defaults to **Sibling Discount** if blank).
+    Enter a **Fixed Amount** or **Percent** for the second child, and confirm **Discount Description** (filled in as **Sibling Discount** if it was blank).
 
-    For a percent, enter `5` for 5%, not `.05`. Helper text on the form reads **Enter 5 for 5%, not .05.**
+    For a percent, enter `5` for 5%, not `.05`.
   </Step>
 
   <Step title="Set remaining rules and save" icon="check-circle" title-type="p">
     Set **Apply To All Sessions**, **Apply After Other Discounts?**, dates, and product restrictions as needed, then click **Save**.
 
-    Code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, **Limit**, and **Maximum Total**) stay hidden for sibling discounts.
+    The code-only fields (**Discount Code**, **Combine All Children's Sessions**, **Allow On Portal?**, **Bypass payment at portal checkout?**, **Allow Duplicate?**, **Limit**, and **Maximum Total**) are hidden for a sibling discount.
   </Step>
 
   <Step title="Optional: add rates for the third child and beyond" icon="users" title-type="p">
-    After you save, open the sibling discount to edit it. Use **Third Child And Beyond** to give later children different rates.
+    After you save, open the sibling discount again. Use **Third Child And Beyond** to give later children different rates.
 
     1. Click **Add another child** to add a row.
     2. Each row shows a label such as **3rd Child**, with **Amount** and **Percent** fields.
     3. Click **Remove** on a row you do not need.
-    4. Leave **Third Child And Beyond** empty if every child after the highest-priced one should use the same second-child rate.
+    4. Leave **Third Child And Beyond** empty if every child after the highest-priced one gets the second-child rate.
 
     A child only receives a discount at a level you have set up, so add a row for each deeper child you want to cover. The discount list can show more than one rate (for example `5 / 8%`) when tiers exist.
   </Step>
 
   <Step title="Optional: set amount by weeks enrolled" icon="calendar" title-type="p">
-    Still on the sibling discount editor, use **Amount By Weeks Enrolled** when a child should get a set dollar amount based on how many weeks they attend, instead of the fixed or percent rate above.
+    In the same editor, use **Amount By Weeks Enrolled** to give a child a set dollar amount based on how many weeks they attend, instead of the fixed or percent rate above.
 
     1. Click **Add a weeks range**.
     2. Each row has **Child** (which sibling tier), **From** and **To** (week counts), and **Amount**.
     3. Click **Remove** on a row you do not need.
-    4. Helper text: **Weeks are counted from the sessions this discount applies to. A child whose weeks fall outside every range gets no sibling discount.**
+    4. Weeks are counted from the sessions this discount applies to. A child whose weeks fall outside every range gets no sibling discount.
 
     On the discount list, the Amount cell can show **By weeks enrolled** when bands are set.
   </Step>
 </Steps>
 
-If you already have a sibling discount, create flow disables **Sibling discount** and links you to edit the existing one. On the discount list, sibling rows show a **Sibling** badge. When you edit a sibling discount, **Discount Type** shows **Sibling Discount** instead of a code field.
+If you already have a sibling discount, **Add New Discount** disables **Sibling discount** and links to the existing one. On the discount list, sibling rows show a **Sibling** badge. When you edit a sibling discount, **Discount Type** shows **Sibling Discount** instead of a code field.
 
 ## Edit, archive, or delete a discount
 
@@ -308,41 +312,40 @@ Use the action menu on each discount row to update or remove a discount.
   </Step>
 
   <Step title="Edit a discount" icon="edit" title-type="p">
-    Choose **Edit Discount** to update fields like amount, dates, or description.\
-    Adjust the fields, then click **Save**. Changes affect new uses of the discount.
+    Choose **Edit Discount** to change fields such as amount, dates, or description, then click **Save**. **Edit Discount** also has a **Status** field (**In Use** or **No Longer In Use**). Changes affect new uses of the discount.
   </Step>
 
   <Step title="Archive a discount" icon="archive" title-type="p">
-    Choose **Archive Discount** when you want to stop using a discount but keep its history.\
-    Archived discounts move out of the active list and no longer apply to new checkouts.
+    Choose **Archive Discount** to stop using a discount but keep its history.\
+    Archived discounts leave the active list and no longer apply to new checkouts. To see them, set **Show Me** to **Archived**.
   </Step>
 
   <Step title="Delete a discount" icon="trash" title-type="p">
     Choose **Delete Discount** to permanently remove the discount from your account.\
-    Confirm the deletion when prompted. **Delete** is only available for a discount that has never been used; a discount that has already been applied shows no **Delete Discount** option, so archive it instead.
+    Confirm the deletion when prompted. **Delete Discount** appears only for a discount that has never been used. For a discount that has been applied, archive it instead.
   </Step>
 </Steps>
 
 <Callout kind="alert" collapsed="false">
-  Deleting a discount performs a hard delete in the database and cannot be undone. Because delete is only offered for a discount that has never been used, use **Archive** to stop using a discount that already has usage history.
+  Deleting a discount removes it permanently and cannot be undone. Use **Archive Discount** to stop a discount that already has usage history.
 </Callout>
 
 ## Key settings explained
 
 ### Public vs non-public discounts
 
-Use public settings to control who can apply a discount.
+**Allow On Portal?** (the **Public?** column on the list) controls who can apply a discount.
 
-- **Public = Yes**: Parents can enter the code themselves in the parent portal during checkout.
-- **Public = No**: Staff must apply the discount from Admin; parents cannot see or use the code.
+- **Yes**: Parents can enter the code themselves in the parent portal during checkout.
+- **No**: Staff apply the discount manually from a profile; parents cannot use the code.
 
-Public discounts work well for general promotions. Non-public discounts work better for case-by-case adjustments or internal programs.
+Public discounts suit general promotions. Non-public discounts suit case-by-case adjustments and internal programs.
 
 ### Limit (capacity)
 
 Limit controls how many times a discount can be used across all families.
 
-- **Blank or 0**: No usage cap. The discount can be used indefinitely, subject to date range and other rules.
+- **Blank or 0**: No usage cap. Date range and other rules still apply.
 - **Any positive number**: The discount stops working after it reaches that many successful uses.
 
 Use limits for early-bird specials, limited-seat promotions, or grants with fixed budgets.
@@ -351,7 +354,7 @@ Use limits for early-bird specials, limited-seat promotions, or grants with fixe
 
 ### Maximum Total
 
-**Maximum Total** caps how many dollars a code discount can give away in total. It sits next to **Limit** on **Add New Discount** and **Edit Discount**.
+**Maximum Total** caps how many dollars a code discount can give away in total. It sits below **Limit** on **Add New Discount** and **Edit Discount**.
 
 - **Blank or 0**: No dollar cap.
 - **A dollar amount** (for example `500` or `1,500.00`): the code stops once that much has been discounted. `$` signs and commas are accepted when you save.
@@ -359,7 +362,7 @@ Use limits for early-bird specials, limited-seat promotions, or grants with fixe
 How it behaves:
 
 - Redeemed dollars are the net amount already credited for that code. Refunding a discount restores budget.
-- A redemption that would go over the remaining budget is refused whole. It is never trimmed to what is left, so nobody is quietly given less than the code advertises.
+- A redemption that would go over the remaining budget is refused whole. It is never trimmed to what is left, so no family gets less than the code advertises.
 - On edit, helper text shows how much has been used and how much is left (or that the code is spent out). The discount list **Max Total** column shows used-of-cap when a cap is set.
 - Families who try a spent-out or overshooting code see **Sorry. This discount is no longer valid.** (Usage-limit refusals still say **Sorry. This discount is no longer available.**) Staff who apply or raise a discount past the cap see a message that names the code, the maximum total, how much has been used, and what is left.
 
@@ -371,76 +374,76 @@ Start and end dates control when a discount is active.
 
 - If you set a **Start Date**, the code cannot be used before that date.
 - If you set an **End Date**, the code stops working after that date.
-- If you leave both blank, the discount stays active unless you archive or delete it, or it hits a usage limit.
+- If you leave both blank, the discount stays active until you archive or delete it, or it hits a limit.
 
-When a discount is outside its date range, families and staff see validation errors and the discount will not apply.
+Outside its date range, the discount does not apply and families and staff see an error.
 
 ### Product restriction
 
 Product restrictions control where a discount applies.
 
 - If you select one or more products in **Apply Only To These Products**, the discount applies only to those products.
-- If you leave this blank, the discount can apply broadly across eligible products and forms.
+- If you leave it blank, the discount can apply to all eligible products.
 
 Use product restrictions to limit discounts to certain camps, add-ons, or seasons.
 
 ### Bypass payment at portal checkout
 
-Some discounts can skip payment at checkout instead of only reducing the price. When you turn on **Bypass payment at portal checkout?** on a discount, parents can submit their registration in the parent portal without entering a card or ACH payment, so they proceed without paying the upfront amount.
+A discount can skip payment at checkout instead of only reducing the price. When **Bypass payment at portal checkout?** is **Yes**, parents can submit their registration in the parent portal without entering a card or ACH payment. The setting still respects **Allow On Portal?**, dates, **Limit**, and duplicate rules.
 
-You can combine this setting with a dollar or percent credit. Payment is bypassed at checkout and the credit is applied to the balance. This is useful for scholarships, financial aid agreements, or promotions where you want to remove the upfront barrier without changing the overall tuition.
+You can combine this setting with a dollar or percent credit: payment is bypassed at checkout and the credit is applied to the balance. Use it for scholarships, financial aid agreements, or promotions where you want to remove the upfront payment without changing tuition. With bypass on, you can leave both **Fixed Amount** and **Percent** blank.
 
-There is a single field for this behavior. **Bypass payment at portal checkout?** is the same setting sometimes referred to as skipping the deposit - there is no separate toggle.
+This is the setting people call skipping the deposit. There is no separate toggle.
 
-After a family enters a bypass code, they can still pick a payment plan or switch between card and bank. The bypass stays applied through those recalculations (the cart may show a **payment deferred** line with the code). Removing that discount from the cart ends the bypass, and checkout asks for payment again.
+After a family enters a bypass code, they can still pick a payment plan or switch between card and bank. The bypass stays applied through those recalculations. For a code with no amount or percent, the cart shows a line ending in **payment deferred**. Removing that discount from the cart ends the bypass, and checkout asks for payment again.
 
 ## Discount Calculator
 
-The Discount Calculator lets you preview exactly how a discount will apply at checkout before you save it. Pick real families and sessions, and the calculator runs the same pricing engine that checkout uses — including tiered pricing, sibling discounts, and multi-session tiers — to show you an itemized breakdown. Nothing is written to the database; the preview is read-only.
+The **Preview** panel on the right side of **Add New Discount** and **Edit Discount** shows how a discount will apply at checkout before you save it. Pick real people and sessions, and the preview runs the same pricing engine checkout uses, including tiered pricing, sibling discounts, and multi-session tiers, to show an itemized breakdown. Nothing is saved.
 
 <Callout kind="info" collapsed="false">
-  The calculator uses the real checkout calculation engine, so the amounts you see match what families will actually be charged. No sales, carts, or payment records are created during a preview.
+  The preview uses the checkout calculation engine, so the amounts match what families are charged. It creates no sales, carts, or payment records.
 </Callout>
 
 <Steps>
   <Step title="Open the discount editor" icon="edit" title-type="p">
-    Go to **Admin** > **Discounts** and click **Add New Discount** or edit an existing discount. The calculator is built into the editor form.
+    Go to **Admin → Discounts** and click **Add New Discount**, or edit an existing discount. The **Preview** panel is on the right of the form.
   </Step>
 
   <Step title="Enter your discount settings" icon="settings" title-type="p">
-    Fill in the code, amount or percent, date range, product restrictions, and other settings as you normally would. The calculator uses whatever is currently in the form — you do not need to save first.
+    Fill in the code, amount or percent, date range, product restrictions, and other settings. The preview uses what is in the form now, including unsaved changes.
   </Step>
 
   <Step title="Add people to the preview" icon="users" title-type="p">
-    In the calculator panel, search for real families by name or account number. Select up to 6 children and choose which sessions each one is enrolled in (up to 40 sessions per child). The calculator uses each person's real tiered pricing.
+    For each user block, type a name to pick a person, then choose their sessions. Click **Add another user** to add more, up to 6 people with up to 40 sessions each. The preview uses each person's real tiered pricing.
   </Step>
 
   <Step title="Review the preview" icon="calculator" title-type="p">
-    Click **Preview** to see the results. For each child, you see their sessions with real prices, each discount line applied (including the discount you are editing, sibling discounts, and multi-session tier discounts), the total discount amount, and the net amount after discounts. An order-level total shows the combined savings across all children.
+    Click **Calculate**. For each person you see their sessions total, each discount line applied (the discount you are editing, sibling discounts, and multi-session tier discounts), and the **Net** amount after discounts. An **Order total** line shows the combined totals.
   </Step>
 
   <Step title="Check for warnings" icon="alert-triangle" title-type="p">
-    The preview flags issues like a discount being outside its date range, a duplicate discount being skipped, or an archived discount that no longer applies. Address these before saving.
+    The preview flags problems such as a discount outside its start and end dates, a discount skipped as a duplicate for the family, an archived discount, or sessions the discount does not match. Fix these before you save.
   </Step>
 
   <Step title="Adjust and re-preview" icon="refresh-cw" title-type="p">
-    Change any settings in the form and run the preview again. The results update immediately so you can iterate until the discount behaves the way you want.
+    Change any setting in the form. The preview recalculates on its own after each change.
   </Step>
 
   <Step title="Save when satisfied" icon="check-circle" title-type="p">
-    Once the preview matches your expectations, click **Save** to create or update the discount.
+    When the preview looks right, click **Save**.
   </Step>
 </Steps>
 
-The calculator supports multi-product cart simulation, so you can preview discounts that target specific products or apply broadly across eligible sessions. Sibling discounts are included automatically when you add more than one child to the preview.
+You can pick several sessions per person, so you can preview discounts that target specific products or apply to all eligible sessions. The sibling discount is included when you add more than one child.
 
 ## Multi-session discounts
 
-Multi-session discounts automatically reward a registrant who enrolls in multiple qualifying sessions. These rules work on top of your regular discounts and use existing discount codes as tiers.
+Multi-session discounts reward a registrant who enrolls in several qualifying sessions. These rules work on top of your regular discounts and use existing discount codes as tiers.
 
 ### Access and permissions
 
-Multi-session discount configurations are available to all admins who have access to the Discounts page. If you do not see the Multi-Session Discount Configurations section, confirm that your role includes the Admin module.
+Anyone who can open the Discounts page can manage multi-session configurations. The **Multi-Session** button uses the same permission as the Discounts page itself.
 
 <Callout kind="info" collapsed="false">
   Multi-session configurations are global pricing rules. Limit access to staff who manage tuition policies and discounts across your organization.
@@ -451,23 +454,23 @@ Multi-session discount configurations are available to all admins who have acces
 Each multi-session configuration defines a volume-based discount rule.
 
 <ParamField body="name" param-type="string" required="false" deprecated="false" show-location="false">
-  **Name** — Internal label for the rule, such as `Summer Session Volume Discount`.
+  **Name** - Internal label for the rule, such as `Summer Session Volume Discount`.
 </ParamField>
 
 <ParamField body="form" param-type="string" required="false" deprecated="false" show-location="false">
-  **Form (optional)** — Limits the rule to one registration form, or applies it to all forms when left blank.
+  **Form (optional)** - Limits the rule to one registration form. The default, **All forms**, applies it everywhere.
 </ParamField>
 
 <ParamField body="minimumSessions" param-type="integer" required="false" deprecated="false" show-location="false">
-  **Minimum Sessions** — Minimum number of qualifying sessions required before the rule can apply a discount.
+  **Minimum Sessions** - The number of qualifying sessions required before the rule applies a discount. Defaults to `2`.
 </ParamField>
 
 <ParamField body="enabled" param-type="boolean" required="false" deprecated="false" show-location="false">
-  **Enabled** — Turns the rule on or off without deleting it. Disabled rules do not apply at checkout.
+  **Enabled** - Turns the rule on or off without deleting it. Disabled rules do not apply at checkout.
 </ParamField>
 
 <ParamField body="discountTiers" param-type="array" required="false" deprecated="false" show-location="false">
-  **Discount Tiers** — One or more tier rows. Each tier sets:
+  **Discount Tiers** - One or more tier rows. Each tier sets:
 
   - A **Session Count** threshold.
   - A **Discount** chosen from your existing discount codes that applies when the threshold is met.
@@ -475,16 +478,16 @@ Each multi-session configuration defines a volume-based discount rule.
 
 ### Before you build multi-session rules
 
-Multi-session tiers use discount codes you have already created. Add the discount codes first on the main Discounts list, then choose those codes in your multi-session tiers.
+Multi-session tiers use discount codes you have already created. Create the codes on the Discounts list first, then choose them in your tiers.
 
-This keeps invoice descriptions consistent and lets you reuse the same discount setup in more than one place.
+This keeps invoice descriptions consistent and lets you reuse a discount in more than one place.
 
 ### How tiers work
 
-Tiers are based on session counts. The system checks how many qualifying sessions a registrant has and finds the best match among your tiers.
+Tiers are based on session counts. Campium counts a registrant's qualifying sessions and picks the matching tier.
 
 - When a registrant reaches a tier's **Session Count**, they qualify for that tier's discount.
-- If multiple tiers qualify, the system uses the best match for that session count, usually the highest threshold they meet.
+- If several tiers qualify, the highest threshold they meet applies.
 
 **Example**
 
@@ -495,12 +498,11 @@ If a registrant has 5 qualifying sessions, the 4-session tier applies.
 
 ### Create a multi-session configuration
 
-Use these steps from the Multi-Session Discount Configurations section on the Discounts page.
+Use these steps from the **Multi-Session** panel on the Discounts page.
 
 <Steps>
   <Step title="Open multi-session configurations" icon="settings" title-type="p">
-    Scroll to **Multi-Session Discount Configurations** on the Discounts page.\
-    If you do not see this section, your account or role may not have access.
+    On the Discounts page, click **Multi-Session** to open the **Multi-Session Discount Configurations** panel.
   </Step>
 
   <Step title="Start a new configuration" icon="plus" title-type="p">
@@ -509,31 +511,31 @@ Use these steps from the Multi-Session Discount Configurations section on the Di
 
   <Step title="Name and scope the rule" icon="edit" title-type="p">
     - Enter a **Name** to identify the rule internally.
-    - Optionally choose a **Form** to limit where the rule applies, or leave this blank to apply across forms where eligible.
+    - Optionally choose a form in **Form (optional)** to limit where the rule applies, or leave **All forms** selected.
   </Step>
 
   <Step title="Set minimum sessions" icon="settings" title-type="p">
-    In **Minimum Sessions**, enter the minimum number of qualifying sessions required before any tier can apply.\
-    Use `1` or higher; the system rejects values less than `1`.
+    In **Minimum Sessions**, enter the number of qualifying sessions required before any tier applies.\
+    Use `1` or higher. Values below `1` are refused.
   </Step>
 
   <Step title="Enable the configuration" icon="check-circle" title-type="p">
-    Set **Enabled** to **Yes** so the rule is active once you save it.\
-    You can toggle this later without deleting the configuration.
+    Leave **Enabled** at **Yes** so the rule is active once you save it.\
+    You can change this later without deleting the configuration.
   </Step>
 
   <Step title="Add discount tiers" icon="plus" title-type="p">
-    Add one or more tier rows. For each row:
+    Click **+ Add Tier** for each extra row you need. For each row:
 
     - Enter the **Session count** threshold.
     - Select the **Discount** from your existing discount codes.
 
-    The configuration requires at least one complete tier row to save successfully.
+    You need at least one complete tier row to save.
   </Step>
 
   <Step title="Save the configuration" icon="check-circle" title-type="p">
-    Review your tiers and settings, then click **Save**.\
-    On success, the configuration appears in the multi-session list and will apply to new qualifying registrations.
+    Click **Save**.\
+    The configuration appears in the multi-session list and applies to new qualifying registrations.
   </Step>
 </Steps>
 
@@ -547,48 +549,44 @@ Use these steps from the Multi-Session Discount Configurations section on the Di
 
   <Step title="Delete a configuration" icon="trash" title-type="p">
     Click the trash icon to remove a configuration entirely.\
-    Confirm the deletion when prompted. After deletion, the rule no longer appears or applies at checkout.
+    Confirm the deletion when prompted. The rule no longer appears or applies at checkout.
   </Step>
 </Steps>
 
-You can disable a configuration temporarily by setting **Enabled** to **No**, instead of deleting it.
+To pause a configuration without deleting it, set **Enabled** to **No**.
 
 ## Best practices
 
 <Callout kind="tip" collapsed="false">
-  Use these guidelines to keep discounts clear for both staff and families.
+  These guidelines keep discounts clear for staff and families.
 </Callout>
 
-- Use clear, easy-to-type discount codes families can understand.
+- Use short, easy-to-type codes.
 - Write descriptions that make sense on invoices and statements; avoid internal shorthand.
 - Use date windows for time-limited promotions like early-bird or holiday specials.
 - Prefer **Archive** over **Delete** when you want to preserve history for reporting and audits.
 - Test discounts with a sample checkout, including multi-session rules, before announcing them.
-- For multi-session tiers, keep thresholds simple and predictable so staff can explain them easily.
+- Keep multi-session thresholds simple so staff can explain them.
 
 ## Troubleshooting
 
-Use this section when you see an error while saving a discount or multi-session configuration, or when a discount does not apply as expected.
+Use this section when you see an error saving a discount or multi-session configuration, or when a discount does not apply as expected.
 
 <ExpandableGroup>
   <Expandable title="Error: You must enter a Discount Code" default-open="false">
-    The system shows **You must enter a Discount Code** when you leave the **Discount Code** field blank while creating or editing a discount.
+    You see **You must enter a Discount Code** when you save a discount with **Discount Code** blank.
 
-    Fix it by entering a code:
-
-    - Use only letters and numbers.
-    - Make the code short and easy to type.
-    - Save again after adding the code.
+    Enter a code, keep it short and easy to type, and save again.
   </Expandable>
 
   <Expandable title="Error: Discount Code can only be letters and numbers." default-open="false">
-    The system shows **Discount Code can only be letters and numbers.** when the code includes any character that is not a letter or a number.
+    You see **Discount Code can only be letters and numbers.** when the code contains an ampersand (`&`).
 
-    Update the code to use only letters and numbers, then save the discount again.
+    Remove the `&` and save the discount again.
   </Expandable>
 
-  <Expandable title="Error: Discount code already exists" default-open="false">
-    When you try to save a discount with a code that another discount already uses, you see **Discount code already exists**.
+  <Expandable title="Error: Discount code already in use." default-open="false">
+    When you save a discount with a code another discount already uses, you see **Discount code already in use.** on **Add New Discount**, or **Code already exists. Try again.** on **Edit Discount**.
 
     To resolve this:
 
@@ -598,13 +596,13 @@ Use this section when you see an error while saving a discount or multi-session 
   </Expandable>
 
   <Expandable title="Error: You must enter a Discount Description" default-open="false">
-    If you leave the **Discount Description** blank, the system returns **You must enter a Discount Description**.
+    If you leave **Discount Description** blank, you see **You must enter a Discount Description**.
 
-    Enter a clear description that will appear on invoices, then save again.
+    Enter a description for invoices, then save again.
   </Expandable>
 
   <Expandable title="Error: Only amount or percent can be greater than zero" default-open="false">
-    The system enforces that only one of **Fixed Amount** or **Percent** is positive. When both fields are greater than zero, you see **Only amount or percent can be greater than zero**.
+    Only one of **Fixed Amount** or **Percent** can be greater than zero. When both are, **Add New Discount** and **Edit Discount** show **Only amount or percent can be greater than zero.** and the discount is not saved.
 
     Fix it by:
 
@@ -614,9 +612,9 @@ Use this section when you see an error while saving a discount or multi-session 
   </Expandable>
 
   <Expandable title="Error: Maximum Total must be a dollar amount like 500 or 1,500.00, or left blank for no limit." default-open="false">
-    The system shows this when **Maximum Total** is not blank and is not a valid dollar amount (letters, a bare decimal point, three decimal places, a negative, and similar values are refused).
+    You see this when **Maximum Total** is not blank and is not a valid dollar amount. Letters, a bare decimal point, three decimal places, and negative numbers are refused.
 
-    Fix it by entering a dollar amount such as `500` or `1,500.00`, or clear the field for no limit, then save again. Leaving an invalid value blank by accident would have meant no dollar cap, so the save is refused instead.
+    Enter a dollar amount such as `500` or `1,500.00`, or clear the field for no limit, then save again. Campium refuses the save rather than treat an invalid value as no cap.
   </Expandable>
 
   <Expandable title="Discount is not showing for families at checkout" default-open="false">
@@ -627,8 +625,8 @@ Use this section when you see an error while saving a discount or multi-session 
     - The **Limit** has not been reached. If usage equals the limit, the discount no longer applies.
     - **Maximum Total** has budget left. If the dollar cap is spent out, or the next redemption would overshoot what is left, families see **Sorry. This discount is no longer valid.**
     - Product restrictions match the items in the cart; the discount applies only to qualifying products.
-    - The discount is not archived and its status indicates it is in use.
-    - For a pay in full discount, confirm the form's new pay in full setting is enabled or overridden correctly, and verify the discount is available for the full-balance checkout path.
+    - The discount is not archived and its **Status** is **In Use**.
+    - For the pay in full discount, **Enable Pay In Full Discount** is **Yes** on the form's **Settings** tab.
 
     After adjusting settings, test again with a sample registration.
   </Expandable>
@@ -637,7 +635,7 @@ Use this section when you see an error while saving a discount or multi-session 
     If a multi-session discount does not apply when expected:
 
     - Confirm the configuration is **Enabled**.
-    - Check that the **Minimum Sessions** is met by the registrant's qualifying sessions.
+    - Confirm the registrant has at least **Minimum Sessions** qualifying sessions.
     - Make sure registrations are for products and forms that the configuration covers.
     - Verify each tier row has both a **Session count** and a valid **Discount** selected.
     - Confirm the discount codes used in tiers are active and not archived or expired.
@@ -646,13 +644,13 @@ Use this section when you see an error while saving a discount or multi-session 
   </Expandable>
 
   <Expandable title="Error: Name is required." default-open="false">
-    When saving a multi-session configuration without a **Name**, the system returns **Name is required.**
+    You see **Name is required.** when you save a multi-session configuration without a **Name**.
 
-    Enter a clear internal name for the configuration and save again.
+    Enter a name and save again.
   </Expandable>
 
   <Expandable title="Error: Minimum sessions must be at least 1." default-open="false">
-    If you set **Minimum Sessions** to zero or a negative number, the system shows **Minimum sessions must be at least 1.**
+    If you set **Minimum Sessions** to zero or a negative number, you see **Minimum sessions must be at least 1.**
 
     Update **Minimum Sessions** to `1` or higher, then save again.
   </Expandable>
@@ -669,22 +667,19 @@ Use this section when you see an error while saving a discount or multi-session 
   </Expandable>
 
   <Expandable title="Error: Access denied. when saving multi-session configuration" default-open="false">
-    If your role does not have permission to manage multi-session configurations, the system can respond with **Access denied.** when you attempt to save.
+    You see **Access denied.** when your role does not have the permission that opens the Discounts page.
 
-    In this case:
-
-    - Do not keep retrying the same action.
-    - Contact your Campium admin or system owner to request the required access or to have them create the configuration for you.
+    Ask an administrator at your camp to give your role that access, or to create the configuration for you.
   </Expandable>
 </ExpandableGroup>
 
 ## Discount Checker
 
-When a discount code does not work at checkout and the cause is not obvious, use the **Discount Checker** panel on the Discounts page to find the problem. The checker is a standalone panel on the page — not a per-row action. You pick a discount from a dropdown, pick the products involved, and optionally pick a user, then run it. It runs a series of checks against the discount and the products, then lists every issue it finds — sorted by severity so the most critical problems appear first.
+When a discount code does not work at checkout and the cause is not obvious, click **Code Checker** on the Discounts page to open the **Discount Code Checker** panel. It is a panel on the page, not a row action. You pick a discount, the products in the cart, and optionally a checkout form and a camper, then run it. It checks the discount and the products and lists every issue it finds, most severe first.
 
 ### What the tool checks
 
-The check runs three layers of checks:
+The checker runs three layers of checks:
 
 <ExpandableGroup>
   <Expandable title="Discount-level checks" default-open="false">
@@ -693,7 +688,7 @@ The check runs three layers of checks:
     - Is the discount archived?
     - Has the usage limit been reached?
     - Has the **Maximum Total** dollar budget been spent, or would this redemption overshoot what is left?
-    - Is the amount or percent set to zero?
+    - Does the discount have no amount, no percent, and no payment bypass?
     - Is the current date outside the discount's start or end date?
   </Expandable>
 
@@ -702,13 +697,13 @@ The check runs three layers of checks:
     - Is the product visible and active?
     - Has the product expired?
     - Is the product in the discount's restricted product list?
-    - Do any registration forms that include this product have discounts disabled?
+    - Is the discount code field hidden on a form that includes this product?
   </Expandable>
 
   <Expandable title="Cart simulation" default-open="false">
-    - Builds a test cart with the selected products and runs the real checkout calculation engine.
+    - Builds a test cart with the selected products and runs the checkout calculation engine.
     - Checks whether the discount would apply to that cart.
-    - If you provide a specific user, checks for duplicate-discount status and capacity limits.
+    - If you pick a camper, checks whether that camper already used the discount and whether the session is full.
     - Predicts the exact error message a parent would see at checkout.
   </Expandable>
 </ExpandableGroup>
@@ -717,27 +712,27 @@ The check runs three layers of checks:
 
 <Steps>
   <Step title="Open the Discount Checker" icon="stethoscope" title-type="p">
-    Go to **Admin** > **Discounts** and find the **Discount Checker** panel on the page.
+    Go to **Admin → Discounts** and click **Code Checker**.
   </Step>
 
   <Step title="Pick a discount" icon="tag" title-type="p">
-    Choose the discount you want to investigate from the dropdown of your existing discounts.
+    In **Discount code**, choose the discount to investigate.
   </Step>
 
   <Step title="Select products to test" icon="package" title-type="p">
-    Choose one or more session products to test the discount against. The tool checks each product individually and as part of a simulated cart.
+    In the products-in-cart field, choose one or more products to test against. The label uses your camp's term, such as **Sessions in cart**. The checker tests each product on its own and as part of a simulated cart. Optionally pick a **Checkout form**.
   </Step>
 
   <Step title="Optionally add a user" icon="users" title-type="p">
-    Select a specific family to check for duplicate-discount status and enrollment capacity. Leave this blank to test without user-specific checks.
+    In **Camper**, search for a camper by name to check whether they already used the discount and whether the session is full. Leave it blank to skip those checks.
   </Step>
 
   <Step title="Run the check and review the results" icon="clipboard-list" title-type="p">
-    Run the check. The tool returns a list of issues sorted by severity: **ERROR** items block the discount from working, **WARN** items may cause unexpected behavior, and **INFO** items are for awareness. Each issue includes a plain-language explanation and the predicted checkout message if applicable.
+    Click **Run check**. The checker lists issues by severity: **ERROR** items stop the discount from working, **WARN** items may cause unexpected behavior, and **INFO** items are for your information. When the discount would fail, the list includes the message a parent would see at checkout.
   </Step>
 
   <Step title="Fix and re-test" icon="refresh-cw" title-type="p">
-    Address each error, then run the check again to confirm the discount works. The tool reflects your saved changes, so save any edits before re-running.
+    Fix each error, then run the check again. The checker reads saved settings, so save your edits first.
   </Step>
 </Steps>
 
@@ -745,23 +740,23 @@ The check runs three layers of checks:
 
 <ExpandableGroup>
   <Expandable title="How do I create a discount?" default-open="false">
-    Go to **Admin** > **Discounts**, click **Add New Discount**, fill in the code, description, and amount or percent, then click **Save**. For the complete field-by-field walkthrough, see **Create a new discount** above.
+    Go to **Admin → Discounts**, click **Add New Discount**, fill in the code, description, and amount or percent, then click **Save**. For every field, see **Create a new discount** above.
   </Expandable>
 
   <Expandable title="How do I make a discount?" default-open="false">
-    Creating a discount starts the same way: open **Admin** > **Discounts**, click **Add New Discount**, enter the discount details, and save. The full walkthrough is in **Create a new discount** above.
+    Open **Admin → Discounts**, click **Add New Discount**, enter the discount details, and click **Save**. See **Create a new discount** above.
   </Expandable>
 
   <Expandable title="How do I edit a discount?" default-open="false">
-    Find the discount in the list on the Discounts page, open its action menu, and choose **Edit Discount**. Update the fields you need, then click **Save**.
+    On the Discounts page, open the discount's action menu and choose **Edit Discount**, or click the code. Change the fields, then click **Save**.
   </Expandable>
 
   <Expandable title="How do I delete a discount?" default-open="false">
-    Open the action menu on the discount row and choose **Delete Discount**, then confirm the deletion. This is a hard delete and cannot be undone, so use **Archive Discount** instead if you want to keep the history.
+    Open the action menu on the discount row and choose **Delete Discount**, then confirm. **Delete Discount** appears only for a discount that has never been used. Deleting cannot be undone, so use **Archive Discount** if you want to keep the history.
   </Expandable>
 
   <Expandable title="How do I archive a discount?" default-open="false">
-    Open the action menu on the discount row and choose **Archive Discount**. The discount stops applying to new checkouts, but its usage history stays available.
+    Open the action menu on the discount row and choose **Archive Discount**. The discount stops applying to new checkouts and keeps its usage history.
   </Expandable>
 
   <Expandable title="How do I make a discount available to parents in the portal?" default-open="false">
@@ -769,11 +764,11 @@ The check runs three layers of checks:
   </Expandable>
 
   <Expandable title="How do I make a discount staff-only?" default-open="false">
-    Set **Allow On Portal?** to **No**. That keeps the discount in Admin only, so parents cannot see or use the code themselves.
+    Set **Allow On Portal?** to **No**. Staff can then apply it from a profile, and parents cannot use the code.
   </Expandable>
 
   <Expandable title="How do I limit how many times a discount can be used?" default-open="false">
-    Enter a number in the **Limit** field when you create or edit the discount. After the discount reaches that many uses, it stops working; leave the field blank or set it to `0` for no limit.
+    Enter a number in **Limit** when you create or edit the discount. After that many uses, it stops working. Leave it blank or enter `0` for no limit.
   </Expandable>
 
   <Expandable title="How do I cap how many dollars a discount can give away?" default-open="false">
@@ -781,55 +776,55 @@ The check runs three layers of checks:
   </Expandable>
 
   <Expandable title="How do I set a discount to expire on a certain date?" default-open="false">
-    Set the **End Date** when you create or edit the discount. The discount will not apply after that date, and you can also set a **Start Date** if you want to control when it becomes active.
+    Set **End Date** when you create or edit the discount. The discount does not apply after that date. Set **Start Date** to control when it becomes active.
   </Expandable>
 
   <Expandable title="How do I create a percentage discount?" default-open="false">
-    Enter the percentage in the **Percent** field, such as `10` for ten percent off, and leave **Fixed Amount** at `0`. Only one of those fields can be greater than zero at a time.
+    Enter the percentage in **Percent**, such as `10` for ten percent off, and leave **Fixed Amount** blank or at `0`. Only one of the two can be greater than zero.
   </Expandable>
 
   <Expandable title="How do I set up a pay in full discount?" default-open="false">
-    Create the discount with the amount or percent you want, then turn on **Bypass payment at portal checkout?** if the discount should cover the full checkout amount. See the **Configure a pay in full discount** step in **Create a new discount** for the related settings.
+    For the automatic discount when a family chooses pay in full, click **Pay In Full Default** on the Discounts page, set the type and value, and click **Save Pay In Full Default**. Then set **Enable Pay In Full Discount** to **Yes** on the form's **Settings** tab. See the **Configure a pay in full discount** step in **Create a new discount**.
   </Expandable>
 
   <Expandable title="How do I apply a discount to only certain products?" default-open="false">
-    Use **Apply Only To These Products** to pick the products that should qualify. If you leave the product list blank, the discount can apply across all eligible products. This control is independent of **Apply To All Sessions**, which only affects how a percent discount spreads across a child's sessions.
+    Use **Apply Only To These Products** to pick the products that qualify. Leave it blank to apply the discount to all eligible products. This is separate from **Apply To All Sessions**, which only affects how a percent discount spreads across a child's sessions.
   </Expandable>
 
   <Expandable title="How do I set up a multi-session discount?" default-open="false">
-    Scroll to **Multi-Session Discount Configurations** on the Discounts page, click **Add Multi-Session Discount**, name the rule, set the minimum session count, and add tier rows that link session counts to existing discount codes. For the full process, see **Create a multi-session configuration** above.
+    On the Discounts page, click **Multi-Session**, then **Add Multi-Session Discount**. Name the rule, set **Minimum Sessions**, and add tier rows that link session counts to existing discount codes. See **Create a multi-session configuration** above.
   </Expandable>
 
   <Expandable title="How do I stop a discount from being used?" default-open="false">
-    Archive the discount, set an **End Date** in the past, or set the **Limit** to a number that has already been reached. Archiving is usually the best option because it stops new use while preserving history.
+    Archive the discount, set **Status** to **No Longer In Use** on **Edit Discount**, set an **End Date** in the past, or set **Limit** to a number already reached. Archiving stops new use and keeps the history.
   </Expandable>
 
   <Expandable title="Can the same family use a discount more than once?" default-open="false">
-    Yes, if **Allow Duplicate?** is set to **Yes** when you create or edit the discount. Set it to **No** if you want to limit the discount to one use per user.
+    Yes, if **Allow Duplicate?** is **Yes** on the discount. Set it to **No** to limit the discount to one use per user.
   </Expandable>
 
   <Expandable title="How do I preview a discount before saving?" default-open="false">
-    Open the discount editor (Add New Discount or Edit Discount), fill in your settings, then use the **Discount Calculator** panel to pick real families and sessions. Click **Preview** to see exactly how the discount will apply at checkout. See **Discount Calculator** above for full steps.
+    Open **Add New Discount** or **Edit Discount**, fill in your settings, then use the **Preview** panel to pick real people and sessions. Click **Calculate** to see how the discount applies at checkout. See **Discount Calculator** above.
   </Expandable>
 
   <Expandable title="How do I test a discount before saving?" default-open="false">
-    Use the Discount Calculator built into the discount editor. It runs the real checkout pricing engine against the families and sessions you pick, so you see the actual amounts without creating any records. See **Discount Calculator** above.
+    Use the **Preview** panel in the discount editor. It runs the checkout pricing engine against the people and sessions you pick, so you see the real amounts without creating any records. See **Discount Calculator** above.
   </Expandable>
 
   <Expandable title="Why is my discount code not working?" default-open="false">
-    Use the **Discount Checker** panel on the Discounts page. Pick the discount from the dropdown, select the products involved, and optionally pick a user, then run the check. The tool runs a full set of checks and lists every issue sorted by severity. See **Discount Checker** above.
+    Click **Code Checker** on the Discounts page. Pick the discount, select the products, optionally pick a camper, then click **Run check**. The checker lists every issue by severity. See **Discount Checker** above.
   </Expandable>
 
   <Expandable title="How do I check a discount code problem?" default-open="false">
-    Go to **Admin** > **Discounts** and use the **Discount Checker** panel. Pick the discount from the dropdown, select the session products to test against, optionally add a user, then run the check and review the results. Errors are listed first so you can fix the blocking issues. See **Discount Checker** above.
+    Go to **Admin → Discounts** and click **Code Checker**. Pick the discount, select the products to test, optionally pick a camper, then click **Run check**. Errors are listed first. See **Discount Checker** above.
   </Expandable>
 
   <Expandable title="How do I skip a deposit with a discount?" default-open="false">
-    Turn on **Bypass payment at portal checkout?** when you create or edit the discount. Parents can then submit their registration without entering a card or ACH payment, so they proceed without paying the upfront amount. You can also add a dollar or percent credit alongside it. See **Bypass payment at portal checkout** above.
+    Set **Bypass payment at portal checkout?** to **Yes** when you create or edit the discount. Parents can then submit their registration without entering a card or ACH payment. You can also add a dollar or percent credit. See **Bypass payment at portal checkout** above.
   </Expandable>
 
   <Expandable title="How do I make a discount waive the deposit?" default-open="false">
-    Same setting: turn on **Bypass payment at portal checkout?** on the discount. There is no separate "Skip Deposit?" toggle — this one field lets the family submit at checkout without paying. See **Bypass payment at portal checkout** above.
+    Set **Bypass payment at portal checkout?** to **Yes** on the discount. There is no separate "Skip Deposit?" toggle. This one field lets the family submit checkout without paying. See **Bypass payment at portal checkout** above.
   </Expandable>
 </ExpandableGroup>
 
@@ -837,11 +832,11 @@ The check runs three layers of checks:
 
 <Columns cols="2">
   <Card title="Site Settings" href="/settings" icon="settings" cta="Manage global settings" horizontal="false">
-    Configure account-wide options that work alongside discounts, such as seasons, payments, and branding.
+    Configure camp-wide options that work alongside discounts, such as seasons, payments, and branding.
   </Card>
 
   <Card title="Seasons & Sessions" href="/seasons-and-sessions" icon="calendar" cta="Review session setup" horizontal="false">
-    Review how sessions are structured so your discount and multi-session rules align with actual offerings.
+    Review how sessions are set up so your discount and multi-session rules match what you offer.
   </Card>
 </Columns>
 

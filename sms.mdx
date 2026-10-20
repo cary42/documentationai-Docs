@@ -9,17 +9,17 @@ Use SMS in Campium to send short, one-way text updates to families when you need
 
 <Callout kind="info">
 
-Campium sends SMS messages from the number `(551) 209-2312`. This is a one-way number; recipients cannot reply to your texts.
+Campium sends SMS messages from `(551) 209-2312`. This is a one-way number: recipients cannot reply to your texts.
 
 </Callout>
 
 ## Text message opt-in on forms
 
-When a portal form asks for a cell phone number, Campium shows **Can we send you text messages?** with **Yes, text me** and **No thanks**. Anyone who enters a cell number must choose one before they can submit. Error if they skip it: **Choose Yes or No for text messages.** Nothing is pre-selected unless that person has already answered.
+When a portal form asks for a cell phone number, Campium shows **Can we send you text messages?** with **Yes, text me** and **No thanks**. Anyone who enters a cell number must choose one before they can submit. If they skip it, they see **Choose Yes or No for text messages.** Nothing is pre-selected unless that person has already answered.
 
 Customize the wording under that question on **Portal → Portal Site Text** with **Text Message Opt-in** and optional **Text Message Opt-in for Staff**. See [Portal Settings](/portal-settings#text-message-opt-in-wording).
 
-Answers update **SMS Subscribed** on the profile. Campium also keeps a consent log of each answer. Staff cannot opt someone in for them by changing **SMS Subscribed** alone; the next form with a cell phone asks again. Setting someone to **Unsubscribed** is always fine. Replies of **STOP** still turn texts off automatically.
+Answers update **SMS Subscribed** on the profile, and Campium logs each answer as a consent record. Staff cannot opt someone in by changing **SMS Subscribed** alone; the next form with a cell phone asks again. Setting someone to **Unsubscribed** is always fine. Replies of **STOP** still turn texts off automatically.
 
 ## Change text preferences on the portal profile
 
@@ -37,41 +37,41 @@ Open SMS from the main navigation:
 1. Go to **Communications**.
 2. Click **SMS**.
 
-The SMS page shows three main areas: **Settings**, **Recipients**, and **Logs**.
+The SMS list opens. Each message you open has three tabs: **Settings**, **Recipients**, and **Logs**. You need the **Manage SMS** permission to see **SMS** in the menu.
 
 ## Create and send an SMS
 
-Use this workflow when you want to compose a new text and send it now or schedule it.
+Use this workflow to write a new text and send it now or schedule it.
 
 <Steps>
 
 <Step title="Open a new SMS" icon="play-circle">
 
-On the **Communications → SMS** page, start a new message if one is not already open, or open an existing draft if you want to edit and send it. Campium shows the three tabs across the top: **Settings**, **Recipients**, and **Logs**.
+On the **Communications → SMS** page, click **New SMS**, or open an existing draft to edit and send it. The tabs across the top are **Settings**, **Recipients**, and **Logs**.
 
 </Step>
 
 <Step title="Fill in Settings" icon="settings">
 
-Go to the **Settings** tab and complete the fields for your message, timing, and any additional recipients. Campium marks required fields with an asterisk `*`. Keep your SMS text short and clear so families understand the update at a glance. Use **Insert link** or **Insert account setup link** when you need a URL in the message (see [Insert link and account setup link](#insert-link-and-account-setup-link)).
+On the **Settings** tab, fill in the message, timing, and any extra phone numbers. Keep the text short so families understand the update at a glance. Use **Insert link** or **Insert account setup link** when you need a URL in the message (see [Insert link and account setup link](#insert-link-and-account-setup-link)).
 
 </Step>
 
 <Step title="Choose your recipients" icon="users">
 
-Switch to the **Recipients** tab to select who should receive the SMS. Use the search and filters to narrow down your audience, then confirm that the list matches who you intend to contact.
+Switch to the **Recipients** tab to choose who receives the SMS. Use the filters to narrow your audience, then confirm the list matches who you intend to contact.
 
 </Step>
 
 <Step title="Schedule or send now" icon="zap">
 
-Return to the **Settings** tab to decide when to send. Use **When to send** for a future time, or leave it blank to send right away. Click **Save** to keep it as a draft, or click **Send** to start sending immediately.
+Return to the **Settings** tab and set **When to send**: **Send immediately**, or **Schedule for a date and time** with a **Send at** time. Your draft saves automatically. Click **Send**, then confirm with **Send now**.
 
 </Step>
 
 <Step title="Review delivery in Logs" icon="bar-chart">
 
-After sending, open the **Logs** tab to see when messages were sent and to whom. Use this view to confirm delivery timing and to review your history of SMS communications.
+After sending, open the **Logs** tab to see when each message was sent and to whom.
 
 </Step>
 
@@ -85,7 +85,7 @@ After sending, open the **Logs** tab to see when messages were sent and to whom.
 
 ## Tabs: Settings, Recipients, Logs
 
-The SMS screen is organized into three tabs. Use each tab for a different part of your workflow.
+The SMS screen has three tabs.
 
 <Tabs>
 
@@ -119,7 +119,7 @@ Type the text you want families to receive in the **SMS message** box.
 
 <Callout kind="tip">
 
-Campium shows: up to 160 characters sends as one message; longer text sends as multiple messages, each billed at $0.01. Emoji and special characters are removed, and curly quotes and long dashes become plain ones, because any of them would split the text into more messages. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter helps you stay within one segment.
+The helper text under the box reads: up to 160 characters sends as one message; longer text sends as multiple messages, each billed at $0.01. Emoji and special characters are removed, and curly quotes and long dashes become plain ones, because any of them would split the text into more messages. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter shows when the text will send as more than one message.
 
 </Callout>
 
@@ -132,61 +132,59 @@ Above the **SMS message** box you can:
 - **Insert link** - Opens **Insert a link**. Enter a full web address that starts with `https://`, then click **Insert**. Campium shortens long links to your parent portal address when the message sends, and the character counter already counts those shorter links.
 - **Insert account setup link** - Inserts a personal setup placeholder. Each recipient gets their own short link that signs them in to set up their account. It works once and expires after 14 days.
 
-Helper text under the message box always includes: **Long links are shortened to your portal address when the message sends.** When the message includes an account setup link placeholder, an extra note explains that it becomes a personal short link for each recipient, works once, and expires after 14 days.
+Helper text under the message box always includes **Long links are shortened to your portal address when the message sends.** When the message includes an account setup link placeholder, an extra note explains that it becomes a personal short link for each recipient, works once, and expires after 14 days.
 
 ### Start with your camp name
 
-On **Settings**, leave **Start with your camp name** checked (it is on by default) so each text begins with your camp name. The hint explains that families can tell who the text is from, and that the character count includes the prefix. Uncheck it only when the message already names your camp. The same checkbox appears on **Text this group** from reports. The prefix is added when the message sends; it is not stored inside the draft body.
+On **Settings**, leave **Start with your camp name** checked (it is on by default) so each text begins with your camp name. The hint explains that families know who the text is from and that the character count includes the prefix. Uncheck it when the message already names your camp. The same checkbox appears when you text a group from a report. Campium adds the prefix when the message sends; it is not stored in the draft.
 
 ### Text families from a report
 
-On **Reports → System Reports → No Primary Payment Method** and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a **Text this group** modal. Write the message, review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need permission to manage email (the same permission used for **Email this group** on those reports). See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
+On **Reports → System Reports → No Primary Payment Method** and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a text modal for that report's list. Write the message, use **Show names** to review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need the **Manage Emails** permission (the same permission used for **Send Email** on those reports). See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
 
 When you schedule a text that started from a report, Campium rechecks who still appears on that report at send time. People who left the report are dropped. Nobody new is added. People you unchecked in **View** / **Send** stay skipped when the scheduled send runs.
 
 ### Rewrite with AI
 
-Above the message box, use **Rewrite with AI** to open **AI Text Rewriter**. The modal opens already running **Shorten**, which is usually what you want for SMS length. Other actions include **Improve**, **Simplify**, **Fix Grammar**, **Friendly**, **Professional**, **Formal**, and **Expand**. Compare **Original** and **Rewritten** (with character and message counts), then click **Use This Text** to replace the draft, or close without applying.
+Above the message box, use **Rewrite with AI** to open **AI Text Rewriter**. The modal opens already running **Shorten**, since length is what an SMS is billed on. Other actions include **Improve**, **Simplify**, **Fix Grammar**, **Friendly**, **Professional**, **Formal**, and **Expand**. Compare **Original** and **Rewritten** (with character and message counts), then click **Use This Text** to replace the draft, or close without applying.
 
 ### When to send
 
-Use **When to send** to choose whether the SMS goes out now or at a scheduled time.
+Use **When to send** to choose whether the SMS goes out now or later.
 
-- Choose to send later, then set **Send at** to the date and time. Times use your configured send timezone.
-- Leave the schedule blank and click **Send** to send as soon as you confirm.
+- Choose **Schedule for a date and time**, then set **Send at**. Times use your configured send timezone.
+- Choose **Send immediately** and click **Send** to send as soon as you confirm.
 
-Scheduling is helpful for early-morning reminders or evening updates you want to prepare in advance.
+Scheduling helps with early-morning reminders or evening updates you prepare ahead of time.
 
 ### Also send to
 
-Use **Also send to** to add any extra phone numbers that are not already in your camper or parent list.
+Use **Also send to** to add phone numbers that are not in your recipient list.
 
-- Enter phone numbers as a comma-separated list.
-- Use this for staff or special contacts who should receive the same message.
+- Enter phone numbers separated with commas.
+- Use this for staff or other contacts who should receive the same message.
 
-Check your extra numbers carefully to avoid sending to the wrong person.
+Check extra numbers carefully so you do not text the wrong person.
 
 ### Also send to campers
 
-Select **Also send to campers** if you want campers themselves to receive the SMS as well as their parents. The checkbox hint explains that Campium sends a copy to campers who have a phone number, not only their parents.
+Select **Also send to campers** when campers should receive the SMS as well as their guardians. The hint reads **Sends a copy to campers who have a phone number, not only their guardians.**
 
-If you leave this unchecked, Campium sends the SMS only to parents (Guardian 1 and Guardian 2 phone numbers for camper recipients) and any numbers you added under **Also send to**. After send, the **Settings** summary shows **Campers** as **Included** or **Parents only**.
+If you leave this unchecked, Campium sends the SMS only to guardians (Guardian 1 and Guardian 2 phone numbers for camper recipients) and any numbers you added under **Also send to**. After send, the **Delivery** panel on **Settings** shows **Campers** as **Included** or **Guardians only**.
 
 ### Save
 
-Click **Save** to store your current message and settings without sending.
+There is no **Save** button. A draft saves automatically as you type; the action bar shows **Changes save automatically.**, then **Saving...** and **All changes saved.**
 
-- Use this to create drafts ahead of time.
-- Return later to review, update, or send the saved SMS.
-
-Saving before sending is a good way to double-check wording and recipients with your team.
+- Leave a draft and come back later to review, update, or send it.
+- Click **Send me a preview** to text the current message to your own cell phone before you send.
 
 ### Send
 
-Click **Send** when you are ready for the SMS to go out.
+Click **Send** when you are ready for the SMS to go out. Campium asks you to confirm with the recipient count (for example **Send this SMS to 120 recipients now?**) and a note when the text sends as more than one message. Click **Send now** to confirm.
 
-- If you did not set **Send at**, Campium begins sending immediately.
-- If **Send at** has a value, Campium queues the SMS to send at that date and time.
+- If you chose **Send immediately**, Campium begins sending right away.
+- If you set **Send at**, Campium queues the SMS to send at that date and time.
 
 <Callout kind="alert">
 
@@ -196,39 +194,38 @@ Before you click **Send**, confirm both the **SMS message** and the **Recipients
 
 ### Sending progress
 
-After you send (or when a scheduled send is delivering), the **Settings** tab shows **Sending this SMS** with how many messages are delivered so far, a progress bar, and an estimated time left. Text messages go out in batches and keep going after you leave the page. When delivery finishes, that panel is replaced by **How this SMS performed** (how many were sent, plus a note when some were not delivered). Use the **Logs** tab for per-recipient detail.
+After you send (or while a scheduled send is delivering), the **Settings** tab shows **Sending this SMS** with how many messages are delivered so far, a progress bar, and an estimated time left. Text messages go out in batches and keep going after you leave the page. When delivery finishes, that panel is replaced by **How this SMS performed** (how many were sent, plus a note when some were not delivered). Use the **Logs** tab for per-recipient detail.
 
 ## Recipients tab
 
-Use the **Recipients** tab to control who receives your message.
+Use the **Recipients** tab to control who receives your message. To text every parent in one session, filter the recipients by that session. Campium sends to each camper's guardians unless you also check **Also send to campers**.
 
-On this tab, you generally:
+On this tab, you:
 
-- Search for specific individuals or groups.
 - Use filters to narrow the audience to the right families or sessions.
-- Review the list to ensure it matches the group you intend to notify.
+- Check the **Matches** count and click **View** to review the list.
 
-Aim for the smallest accurate group you need, such as a single session, age group, or bus route, instead of the entire camp, to keep your messages relevant.
+Target the smallest group you need, such as a single session, age group, or bus route, instead of the entire camp.
 
 ### Skip people without changing filters
 
-When you open the recipient list for a mass text, a **Send** column lets you uncheck anyone who should not get this SMS. Helper text: **Uncheck anyone who should not get this text. Unchecking a camper skips both guardians. Changes save right away.** The summary shows how many people are unchecked and will be skipped. Skipped people are left out of the send and out of the sent count.
+When you click **View** to open the recipient list, a **Send** column lets you uncheck anyone who should not get this SMS. Helper text: **Uncheck anyone who should not get this text. Unchecking a camper skips both guardians. Use the Send box in the header to check or uncheck everyone, then pick who should get it. Changes save right away.** The summary shows how many people are unchecked and will be skipped. Skipped people are left out of the send and out of the sent count.
 
 <Callout kind="info">
 
-SMS messages from Campium are one-way. Families see them as coming from `(551) 209-2312` and cannot reply, so they will follow up using your usual contact channels.
+SMS messages from Campium are one-way. Families see them as coming from `(551) 209-2312` and cannot reply, so they contact you through your usual channels.
 
 </Callout>
 
 ## Logs tab
 
-The **Logs** tab shows the history of SMS activity.
+The **Logs** tab lists each recipient with **Name** and **Sent**, plus **Status** when delivery status is available.
 
-On this tab, you can typically:
+On this tab, you can:
 
-- View when an SMS was sent or scheduled.
+- See when the SMS went to each recipient.
 - See which recipients were included.
-- Confirm that a message you expected to go out appears in the history.
+- Confirm that a message you expected to go out was sent.
 
 When people were unchecked before send, **Logs** also shows **Skipped (N)** with columns **Name**, **Unchecked by**, and **When**. Helper text: **Unchecked in the recipient list, so they did not get this text and are not counted as sent.**
 
@@ -240,13 +237,9 @@ Use Logs when:
 
 ## Best practices for SMS
 
-Thoughtful SMS use helps families stay informed without feeling overwhelmed.
-
 - **Be clear and concise.** Lead with the main point: what is happening, when, and what action (if any) families should take.
-- **Use SMS for time-sensitive updates.** Reserve texts for information that families need quickly, such as last-minute changes or urgent reminders.
-- **Respect timing.** Avoid very late-night or very early-morning messages unless truly urgent.
-- **Avoid over-sending.** If an update is not time-critical, consider email instead, or combine several minor updates into a single SMS.
+- **Use SMS for time-sensitive updates.** Save texts for information families need quickly, such as last-minute changes or urgent reminders.
+- **Respect timing.** Avoid late-night or early-morning messages unless they are urgent.
+- **Avoid over-sending.** If an update is not urgent, use email, or combine several minor updates into one SMS.
 - **Respect opt-outs and preferences.** If a family asks not to receive texts, keep a note in your records and choose other communication channels for them. When someone replies **STOP** to the carrier, Campium turns off **SMS Subscribed** on matching profiles so they are not texted again. Turning SMS off yourself in Campium is separate from a carrier opt-out. A later **START** reply can resubscribe profiles that were turned off by a carrier STOP.
 - **Match tone to the situation.** Use a calm, straightforward tone, especially for weather or safety-related updates.
-
-Used well, SMS in Campium helps families feel informed and confident about what is happening at camp.
