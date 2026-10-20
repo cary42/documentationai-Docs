@@ -5,16 +5,16 @@ description: Use Transportation in CampiumDB to manage buses and riders, view li
 
 ## Overview
 
-Use Transportation in CampiumDB to manage bus routes, assign campers as riders, track buses on a map, and review pickup privileges for dismissal.
+Use Transportation in CampiumDB to manage buses, assign campers as riders, track buses on a map, and review pickup privileges for dismissal.
 
 Transportation has two main parts:
 
-- **Buses / Vehicles**: manage bus lists, assign riders, order riders, view a live map, and optionally send messages to riders.
+- **Buses**: manage the bus list, assign and order riders, view a live map, and email riders.
 - **Pickup privileges**: see who is allowed to pick up a camper, block guardians when needed, and run the **Pickup Report**.
 
 <Callout kind="info">
 
-Transportation is available in the admin portal. Your access depends on your user role and Transportation or Bus permissions.
+Transportation appears in the admin portal when the Transportation module is on for your camp and your role has the **Transportation Management** permission.
 
 </Callout>
 
@@ -22,11 +22,11 @@ Transportation is available in the admin portal. Your access depends on your use
 
 <Callout kind="info">
 
-Transportation typically involves three groups:
+Transportation involves three groups:
 
 - **Transportation coordinators / office staff**: set up buses and riders; monitor routes.
-- **Bus staff**: check riders in, see rider lists, and communicate updates from the Riders page (if Email Riders is enabled).
-- **Admins / super users**: configure which profile field or fields represent buses and control who can access Transportation.
+- **Bus staff**: track the bus, mark riders, and log notes from **Bus Tracking** in the Campium mobile app.
+- **Admins / super users**: choose which profile field or fields represent buses and control who can access Transportation.
 
 </Callout>
 
@@ -34,34 +34,33 @@ Transportation typically involves three groups:
 
 Access Transportation features from the admin portal:
 
-- **Buses / Transportation**: open this area to work with the **Bus list**, Riders pages, and Map tab. This is commonly labeled **Bus** in the navigation.
+- **Transportation**: click **Transportation** in the left menu to open the **Bus Information** page, with the **Buses** and **Map** tabs and each bus's Riders page.
 - **Reports**: open **Reports → System Reports → Attendance → Pickup Report** when you need authorized pickups or blocked guardians.
 
 ## Buses: basics
 
 ### What is a bus in CampiumDB
 
-A bus (or vehicle/route) is a named item you assign campers to as riders and, optionally, track in real time on a map.
+A bus is a named route or vehicle you assign campers to as riders and, optionally, track live on a map.
 
 You use buses to:
 
 - Assign campers as **riders** for transportation.
 - Order riders in the sequence they will be picked up or dropped off.
-- Optionally track the bus in real time on a map when tracking is enabled.
+- Track the bus live on a map when tracking is on.
 
 ### The Bus list page
 
-The Bus list shows a summary of each bus so you can see the day at a glance.
+The **Buses** tab on the **Bus Information** page summarizes each bus. Its columns are:
 
-On the Bus list you typically see:
+- **Vehicle Name**
+- **ETA**
+- **Tracking**: **Tracking On** with a **map** link and **Turn off** while the bus is tracking; blank otherwise
+- **# Riders**
+- **Arrival Time** (optional)
+- **Default Destination** (optional)
 
-- **Vehicle name**
-- **Number of riders**
-- **Arrival time** (optional)
-- **Destination** (optional)
-- **Tracking status** (on or off) and a link to open the bus on the **Map** tab when tracking is on
-
-Use the Bus list to confirm buses exist, review rider counts, and jump into Riders or Map views.
+Use the Bus list to confirm buses exist, review rider counts, and open a bus's Riders page or the **Map** tab.
 
 #### Print Roster
 
@@ -71,9 +70,9 @@ On the Bus Information page (Buses tab) and on a bus **Riders** page, click **Pr
 - **Print Without Columns**
 - **Print With Check-In / Check-Out**
 
-The roster opens as a PDF in a new tab (same Attendance Sheets roster layout used elsewhere).
+The roster opens as a PDF in a new tab, in the same layout as Attendance Sheets.
 
-The map refreshes every 30 seconds, so location updates may lag slightly behind the bus's exact position.
+The **Tracking** column refreshes every 30 seconds. The **Map** tab refreshes bus locations every 15 seconds, so a marker can lag slightly behind the bus. After 20 minutes without activity on the map, updates pause with **Live map updates paused after 20 minutes of inactivity.** Click **Resume updates** to start them again.
 
 <Callout kind="info">
 
@@ -83,23 +82,22 @@ When tracking is on, families can view their child's assigned bus in the Campium
 
 ### The Riders page
 
-The Riders page is where staff manage the riders assigned to one bus.
+The Riders page lists the riders assigned to one bus.
 
-Open it from **Transportation** in the left menu, then open a bus.
+Open it from **Transportation** in the left menu, then click a bus name.
 
-On the Riders page, staff can typically:
+On the Riders page, staff can:
 
 - Review the rider list for that bus.
-- Check riders in as they board.
-- Mark a rider as **Passed** when the bus has already gone by that rider's stop.
-- Mark a rider as **Absent** when that rider is not present for that bus run.
+- Check riders in as they board (**Check-in** column, when Attendance is on).
+- See which riders bus staff marked **Passed** in the app, and when (**Marked At**).
 - Reorder riders.
-- Add stop times and addresses.
-- Send bus-specific messages with **Email Riders** when that option is enabled.
+- Edit stop times and addresses.
+- Email the riders on that bus with **Email Riders**.
 
 #### Filter by attendance date
 
-When the **Attendance Module** is on in **Admin → Site Settings → Modules**, the Riders page shows a **Filter by attendance date** switch. Flipping it refreshes the riders list in place (no full page reload).
+When the **Attendance Module** is on in **Admin → Site Settings → Modules**, the Riders page shows a **Filter by attendance date** switch. Flipping it refreshes the riders list without reloading the page.
 
 - **On** (default when you last left it on): the list follows the selected attendance date, with session-today and check-in style columns as before. Your preference is saved for your staff login.
 - **Off**: the page shows all active riders on this bus. Helper text reads **When off, shows all active riders on this bus.**
@@ -114,11 +112,11 @@ When the filter is on and nobody on that bus has an active session that day, the
 
 If Attendance is off for your camp, the switch does not appear.
 
-Use these rider statuses for different purposes: **Check-in** confirms the rider boarded, **Passed** shows the bus has gone past that stop, and **Absent** shows the rider was not present for that run.
+The rider statuses mean different things: **Check-in** confirms the rider boarded, **Passed** shows the bus has gone past that stop, and **Absent** shows the rider was not present for that run. Bus staff mark **Passed** and **Absent** from **Bus Tracking** in the Campium mobile app.
 
 ### Bus Notes
 
-Bus staff can log notes from **Bus Tracking** in the Campium mobile app. In admin, open **Transportation**, then click **Bus Notes** on the Bus Information page (or go to **Bus Notes** from that header button).
+Bus staff can log notes from **Bus Tracking** in the Campium mobile app. In admin, open **Transportation**, then click **Bus Notes** at the top of the **Bus Information** page.
 
 Filter with **From**, **To**, **Bus** (**All buses** or one bus), and **Type** (**All types**, **Rider behavior**, **Driver issue**, **Other**, or **For Parents**), then click **Show notes**.
 
@@ -131,17 +129,17 @@ Bus names link to that bus's riders page; rider and author names open profiles w
 
 #### Email for bus note alerts
 
-When staff bus tracking is on, set **Email for bus note alerts** under **Admin → Site Settings → Mobile App**. Staff can choose to email an alert to that address when they log a rider-behavior or driver-issue note. Separate several addresses with commas. Leave the field blank to turn alert emails off.
+When staff bus tracking is on, set **Email for bus note alerts** under **Admin → Site Settings → Mobile App**. Bus staff can choose to email an alert to that address when they log a rider-behavior or driver-issue note. Separate several addresses with commas. Leave the field blank to turn alert emails off.
 
 **For Parents** notes are about one rider. Guardians can see them in the Campium app (and may get a push). They are separate from the alert-email setting.
 
 If nothing matches, you see: **No bus notes match these filters. Bus staff add notes from Bus Tracking in the Campium app.** When many notes match, a warning can say newest notes are shown and to narrow the dates or pick a bus.
 
-You need the **Transportation** module and the **Transportation** permission (same access as the rest of **Transportation**).
+You need the Transportation module and the **Transportation Management** permission, the same access as the rest of **Transportation**.
 
 ## Day-to-day workflow
 
-Use this workflow on a typical season and bus day, from setup through communication.
+Use this workflow for a season and each bus day, from setup through communication.
 
 <Steps>
 
@@ -149,11 +147,11 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   Open the **Bus list** to confirm your buses for the season.
 
-  - Check that each expected bus or vehicle appears.
-  - Confirm the **Vehicle name** matches what staff expect to see on their lists.
-  - For each bus, optionally set:
-    - **Arrival time**
-    - **Destination**
+  - Check that each expected bus appears.
+  - Confirm the **Vehicle Name** matches what staff expect to see on their lists.
+  - For each bus, optionally click into:
+    - **Arrival Time**
+    - **Default Destination**
 
   If you do not see the buses you expect, go to the Troubleshooting section at the end of this page.
 
@@ -165,9 +163,9 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   - Click **Add Riders**.
   - Select the campers who should be on this bus.
-  - Save your changes.
+  - Click **Add**.
 
-  After you save, the Riders list shows each camper assigned to that bus as a rider.
+  The Riders list then shows each camper assigned to that bus.
 
   </Step>
 
@@ -175,19 +173,19 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   Use the **Riders** page to put riders in the order the bus will serve them.
 
-  - Drag the **sort or reorder** handle next to each rider.
+  - Drag the sort handle next to each rider.
   - Arrange riders so the list matches your planned pickup or dropoff sequence.
 
-  The order you set here guides staff and can improve coordination with your schedule and map view.
+  Riders with no position show **Unset**. When some riders have no position, the page shows **Stop order incomplete:** with a count.
 
   </Step>
 
   <Step title="Add stop times and addresses (recommended)" icon="map" title-type="p">
 
-  Still on the **Riders** page, click into fields to fill out per-rider details.
+  Still on the **Riders** page, click into a rider's fields to fill them in.
 
-  - Enter the **Pickup/Dropoff time** (the stop time) for each rider.
-  - Add the **Address** for each stop.
+  - Enter the **Pickup/Dropoff** time (the stop time) for each rider.
+  - Click the **Address** cell to change the address for that day.
 
   Tips:
 
@@ -198,13 +196,13 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   <Step title="Turn tracking on before the route starts" icon="monitor" title-type="p">
 
-  Turn tracking on when the bus is ready to begin the route.
+  Bus staff turn tracking on from **Bus Tracking** in the Campium mobile app when the bus is ready to begin the route.
 
-  - Confirm you are working with the correct bus.
-  - Turn **Tracking On**.
-  - Open the **Map** tab to watch location updates.
+  - On the **Buses** tab, confirm the bus shows **Tracking On**.
+  - Click **map**, or open the **Map** tab, to watch location updates.
+  - Use **Turn off** to stop tracking from admin.
 
-  Once tracking is on, the map updates every 30 seconds with the bus's current location.
+  While tracking is on, the map refreshes the bus's location every 15 seconds.
 
   </Step>
 
@@ -214,11 +212,10 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   - Find each camper as they arrive or board.
   - Click **Check-in** for each rider as they get on the bus.
-  - Mark **Absent** for riders who are not present for that bus run.
-  - Mark **Passed** when the bus has already gone by a rider's stop.
-  - If you select the wrong rider by mistake, use **undo** when available to reverse the check-in.
+  - If you check in the wrong rider, click **undo** next to the check-in time.
+  - Bus staff mark **Absent** and **Passed** from the Campium mobile app.
 
-  The Riders page then reflects who is on the bus for that date and which riders were absent or already passed.
+  The Riders page then shows who is on the bus for that date and which stops the bus has passed.
 
   </Step>
 
@@ -226,28 +223,27 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   Use the **Map** tab to see live location for buses with tracking enabled.
 
-  - From the Bus list, open the bus and switch to the **Map** tab, or open the Map tab directly from Bus list if available.
+  - On the **Bus Information** page or a bus's Riders page, click the **Map** tab, or click **map** next to **Tracking On** on the Buses tab.
   - Confirm that tracking is on for the bus you want to monitor.
 
-  When tracking is enabled, the map shows the bus location and refreshes every 30 seconds. Only buses with tracking enabled show as live on the map.
+  The map shows each tracking bus's location and refreshes every 15 seconds. Only buses with tracking on show as live on the map.
 
   </Step>
 
   <Step title="Email riders for a bus (optional)" icon="mail" title-type="p">
 
-  Use **Email Riders** to send optional updates or reminders to riders and their families for a specific bus.
+  Use **Email Riders** to send updates or reminders to the riders on one bus and their families.
 
   - On the **Riders** page, click **Email Riders**.
   - Fill in:
-    - **From email**
+    - **From Email Address**
     - **Subject**
-    - **Email body**
-  - Click **Save Email** first.
-  - Use **Preview** to confirm the content and formatting.
-  - Click **Send Test Email** to send a trial message to yourself or a staff address.
-  - When everything looks correct, click **Send to All Riders**.
+    - **Email Body**
+  - Click **Preview Email** to check the content and formatting.
+  - Enter an address in **Send test to** (it defaults to your login email), then click **Send Test Email**.
+  - When everything looks right, click **Send to All Riders** and confirm with **Yes, Send**.
 
-  The editor supports simple placeholders like `{first_name}`, `{last_name}`, and `{email}` when those placeholders are enabled in your template.
+  The email body supports the placeholders `{first_name}`, `{last_name}`, and `{email}`.
 
   </Step>
 
@@ -267,19 +263,19 @@ Use pickup privileges for:
 
 ### Add or update pickup people
 
-Pickup people are usually managed from the camper profile (**More → Pickup Info**) or through the family portal **Pickup privileges** page.
+Pickup people are managed from the camper profile (**More → Pickup Info**) or from the family's pickup page on the parent portal.
 
-When you add or update a pickup person, you normally enter:
+When you add or update a pickup person, you enter:
 
 - **Name**
 - **Relationship** to the camper
 - **Phone** number
 
-Keep these fields accurate so staff can quickly confirm identity and contact information during dismissal.
+Keep these fields accurate so staff can confirm identity and contact information at dismissal.
 
 On **Pickup Info**, use the **Guardians** table to mark a guardian **Allowed** or **Not allowed** for a camper. Turning pickup off asks for a staff-only **Reason** and records the change under **Pickup changes**. Blocked guardians do not appear at check-out. On the parent portal, families see **Parents and Guardians** with **Allowed** or **Not allowed for pickup**. See [Block a guardian from picking up a camper](/attendance#block-a-guardian-from-picking-up-a-camper).
 
-When you remove a pickup person, CampiumDB keeps or deletes that record based on whether it has been used before. If the person is tied to past attendance activity, the system hides them from normal use but keeps the record for history. If the person has never been used in that way, the system removes them completely.
+When you remove a pickup person, CampiumDB keeps or deletes the record depending on whether it has been used. If the person is tied to past attendance activity, CampiumDB hides them but keeps the record for history. Otherwise, CampiumDB deletes them.
 
 ### Pickup Report
 
@@ -300,18 +296,18 @@ Details: [Pickup Report](/pickup-report). Use printed or exported copies at dism
 
   <Expandable title="I do not see the Bus area in navigation" default-open="false">
 
-  If you do not see Buses, Transportation, or Bus in the admin navigation, your user role may not include Transportation or Bus permissions.
+  If you do not see **Transportation** in the admin navigation, the Transportation module may be off for your camp, or your role may not include the **Transportation Management** permission.
 
-  Ask an admin to review your role and grant Transportation or Bus access if appropriate.
+  Ask an admin to review your role and grant that permission if appropriate.
 
   </Expandable>
 
   <Expandable title="A bus is missing from the Bus list" default-open="false">
 
-  When a bus you expect is missing from the Bus list, common causes include:
+  When a bus you expect is missing from the Bus list, common causes are:
 
-  - The bus or vehicle field is not configured for your camp.
-  - The bus exists in profiles or settings but is not marked as a bus field.
+  - No bus field is set up for your camp.
+  - The bus exists as a profile field option, but that field is not selected as a bus field.
 
   Ask a super user or admin to review Bus settings and confirm which profile fields represent buses.
 
@@ -325,21 +321,22 @@ Details: [Pickup Report](/pickup-report). Use printed or exported copies at dism
   - The camper is active in your system.
   - The camper has an **active session on that date**. Some views hide riders who are not scheduled for the selected day.
 
-  Update the camper’s bus assignment or session dates as needed, then refresh the Riders page.
+  Update the camper's bus assignment or session dates as needed, then refresh the Riders page.
 
   </Expandable>
 
   <Expandable title="The map is blank or does not show my bus" default-open="false">
 
-  When the **Map** tab is blank or does not show the bus you expect, consider:
+  When the **Map** tab is blank or does not show the bus you expect, check whether:
 
-  - Tracking may not be enabled for that bus.
-  - The bus may not be sending location updates currently.
-  - Network or browser restrictions, such as ad blockers, can interfere with map tiles.
+  - Tracking is off for that bus.
+  - The bus is not sending location updates right now.
+  - Updates paused after 20 minutes of inactivity. Click **Resume updates**.
+  - Network or browser restrictions, such as ad blockers, are blocking map tiles.
 
   Try these steps:
 
-  - Confirm tracking is enabled and the bus shows **Tracking On** on the Bus list.
+  - Confirm the bus shows **Tracking On** on the Bus list.
   - Refresh the page and reopen the **Map** tab.
   - If the issue persists, check with your IT team about browser extensions or network filters.
 
@@ -349,11 +346,10 @@ Details: [Pickup Report](/pickup-report). Use printed or exported copies at dism
 
   If Email Riders messages do not send or look incorrect:
 
-  - Click **Save Email** before you preview or send.
   - Use **Send Test Email** first to see exactly what families will receive.
   - Avoid pasting content directly from Word or other rich editors. Paste as plain text if formatting becomes messy, then reapply simple formatting in the editor.
 
-  When a test email looks good and sends successfully, try sending again to all riders.
+  When a test email looks right and arrives, send to all riders again.
 
   </Expandable>
 
@@ -361,7 +357,7 @@ Details: [Pickup Report](/pickup-report). Use printed or exported copies at dism
 
 ## Glossary
 
-- **Bus / Vehicle**: a route or vehicle you assign riders to for transportation.
+- **Bus**: a route or vehicle you assign riders to.
 - **Rider**: a camper assigned to a bus.
 - **Stop time**: the planned pickup or dropoff time for a rider.
 - **Tracking**: live location sharing for a bus, displayed on the Map tab.
