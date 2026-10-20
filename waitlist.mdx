@@ -6,78 +6,79 @@ description: >-
 ---
 ## What the Waitlist Report does
 
-Use the Waitlist Report to see who is waiting for a full session and decide what to do when spots open up. It brings all waitlisted campers into one place so you can review their details and follow up quickly.
+The Waitlist Report shows who is waiting for a full or closed session, so you can decide what to do when spots open up. Every wait-listed camper is in one list, with their details and the actions to invite, accept, or remove them.
 
 ## Where to find the Waitlist Report
 
-You can open the Waitlist Report from your reports menu or directly from your sessions list.
+You can open the Waitlist Report from the **Reports** menu or straight from a session's wait list count. The report and the wait list links appear only when the **Wait List Module** is on under **Admin → Site Settings → Modules**.
 
 <Steps>
   <Step title="Open from Reports" icon="folder" title-type="p">
-    - Go to **Reports** in your menu.
+    - In the left menu, open **Reports → System Reports**.
 
-    - Look for **Wait List Management** (it may be under an **Enrollment** or **System** section).
+    - Find **Wait List Management** in the **Enrollment** group.
 
     - Click the report name to open it.
   </Step>
 
   <Step title="Open from a session Wait link" icon="arrow-right" title-type="p">
-    - Go to your **Sessions/Products** list.
+    - In the left menu, open **Seasons** and click the season name to open its **Sessions** step.
 
     - Find the session you want to review.
 
-    - Click the **Wait** or **Wait Listed** link to jump straight to that session's waitlist.
+    - Click the number in the **Wait listed** column to open that session's wait list.
   </Step>
 
   <Step title="Open from an option or subproduct" icon="arrow-right" title-type="p">
-    - If your session has options or subproducts, go to the **Subproducts/options** list.
+    - If your session has subproducts, open the session's **Subproducts** panel.
 
     - Find the option you want to review.
 
-    - Click the **Wait** or **Wait Listed** link for that specific option.
+    - Click the number in its **Wait listed** column. The report opens filtered to the parent session.
   </Step>
 </Steps>
 
 <Callout kind="info" collapsed="false">
-  The **Wait** or **Wait Listed** links only appear when a session or option is set up to allow a waitlist and is currently full.
+  The **Wait listed** column shows on every session and subproduct while the **Wait List Module** is on, including sessions with nobody waiting.
 </Callout>
 
 ## Choose what you are viewing
 
-The controls at the top of the page let you narrow the list so you only see the waitlist you care about.
+The page title reads **Waitlist For** followed by the season (and session, when you pick one). Use the dropdowns at the top of the page to narrow the list.
 
 - **Season**: Pick the season you want to review, such as Summer 2025.
 
-- **Session**: After you pick a season, choose the specific session.\
-  If the session has options, you may also see a way to pick a particular option or group.
+- **Session**: After you pick a season, choose one or more sessions.
 
-Once you set these, the list below refreshes to show only the campers waiting for that session or option.
+When you change a dropdown, the page reloads to show only the campers waiting for what you picked.
 
 ## What you will see on the list
 
-Each row on the Waitlist Report shows one waitlisted camper, along with key details to help you decide what to do next.
+Each row on the Waitlist Report shows one wait-listed registration, oldest first.
 
-Common items include:
+The columns are:
 
-- **Camper name**: The camper or participant on the waitlist, usually linked to their profile.
+- **User**: The camper, linked to their profile.
 
-- **Family or contact email**: A primary email you can use to reach the family.
+- **Status**: The current situation for that session:
 
-- **Registration Date**: When the camper was added to the waitlist, so you can see who has been waiting longest.
+  - **Full**: the session (or subproduct) has no open spots.
 
-- **Status**: A short label that tells you the current situation for that session, such as:
+  - **Open Spot**: at least one space is open for someone on the wait list.
 
-  - **Full** – the session is full and there are no open spots.
+  - **Closed**: the session's **Status** is set to **Closed**, which sends every new registration to the wait list.
 
-  - **Open Spot** – at least one space is open for someone on the waitlist.
+  - **Invite open until \[date]**: you sent an invitation and the family can accept until the listed date.
 
-  - **Closed** – the waitlist is no longer accepting new names.
+- **Session** (your term for sessions): The session the camper is waiting for.
 
-  - **Invite Open Until \[date]** – an invitation has been sent and is open until the listed date.
+- **# Waitlisted**, **# Subproduct Registered**, **# Total Registered**, **Subproduct Capacity**, and **Session Capacity**: How many campers are waiting, how many are enrolled, and the capacity, so you can see how tight the session is. Subproduct columns show `--` when the registration has no subproduct.
 
-- **Counts and capacity**: Numbers that show how many campers are enrolled, how many are on the waitlist, and the total capacity, so you can see how tight the session is.
+- **Season**, **Sibling** (Yes or No), and **Email** (the family's primary email).
 
-Some accounts also show extra columns like group, age, or other camper details, depending on what your organization tracks.
+- **Registration Date**: When the camper joined the wait list, so you can see who has been waiting longest.
+
+To add profile fields as extra columns, click **Display Columns**, check the fields you want under **Profile Fields Display Settings**, and click **Save Profile Field Settings**.
 
 ## Common actions on the Waitlist Report
 
@@ -85,7 +86,7 @@ From the Waitlist Report you can reach out to families, invite campers into the 
 
 ### Email everyone on the list
 
-Use **Send Email To All Wait Listers** when you want the same message for everyone on the current wait list view (your **Season** and **Session** filters apply).
+Use **Send Email To All Wait Listers** to send the same message to everyone on the current wait list view (your **Season** and **Session** filters apply).
 
 <Steps>
   <Step title="Email all waitlisted families" icon="mail" title-type="p">
@@ -137,7 +138,7 @@ Use the **Email me when someone joins a wait list** checkbox in the report toolb
 
 ### Accept or invite someone when a spot opens
 
-When the status shows an **Open Spot**, you can use the Wait List pop-up to accept, invite, or remove someone from the waitlist.
+When the status shows **Open Spot**, use the **Wait List** pop-up to accept, invite, or remove someone from the wait list.
 
 <Steps>
   <Step title="Open the Wait List pop-up" icon="check-circle" title-type="p">
@@ -145,63 +146,63 @@ When the status shows an **Open Spot**, you can use the Wait List pop-up to acce
 
     - Find the camper you want to work with.
 
-    - Click the **Invite**, **Accept**, or similar link or button on that camper's row to open the **Wait List** pop-up.
+    - Click the arrow icon (tooltip **Accept / Reject User Into Session**) on that camper's row to open the **Wait List** pop-up.
   </Step>
 
   <Step title="Choose an action" icon="settings" title-type="p">
     - In the **Action** dropdown, choose **Add / Accept** when you are moving the camper into the session or sending them an invitation to accept a spot.
 
-    - Choose **Remove / Reject** when you are taking the camper off the waitlist because they are not attending.
+    - Choose **Remove / Reject** when you are taking the camper off the wait list because they are not attending.
   </Step>
 
   <Step title="Update the camper status" icon="users" title-type="p">
-    - Use the **Change User Status (Current Status: ...)** dropdown if you want to update the camper or family's overall status, such as moving them to Active.
+    - Use the **Change User Status (Current Status: ...)** dropdown if you want to update the camper's overall status, such as moving them to Active.
 
-    - Leave this as-is if you only want to change their waitlist state without changing their broader account status.
+    - Leave it as is if you only want to change their wait list state.
   </Step>
 
   <Step title="Set a response window" icon="clock" title-type="p">
-    - In **Amount of time to allow user to respond**, pick how long the family has to reply to the invitation.
+    - In **Amount of time to allow user to respond**, pick how long the family has to reply. Helper text: **The user will be informed that they have a timeframe to accept or reject.**
 
-    - Choose **No Limit** if you do not want an expiration, or select **1 Day** up through **7 Days** to give them a fixed window.
+    - Choose **No Limit** (the default) to accept the camper into the session now. Choose **1 Day** through **7 Days** to send an invitation instead.
 
-    - When you set a timeframe, the family receives an email asking them to respond, and the report can show **Invite Open Until \[date]** to track how long the spot is held.
+    - With a response window, the camper stays on the wait list, the family receives an invite email, and the row's status shows **Invite open until \[date]** until they answer or the window ends.
   </Step>
 
-  <Step title="Customize and preview the email" icon="mail" title-type="p">
-    - Type any extra note in **Additional Text for Approval Email** to add a short message at the bottom of the email, such as logistics, reminders, or next steps.
-
-    - Click **Preview Accept Email** to see what the confirmation email looks like when a family is being accepted.
+  <Step title="Preview the email" icon="mail" title-type="p">
+    - Under **Email to the family**, click **Preview Accept Email** to see the email a family gets when you accept them.
 
     - Click **Preview Invite Email** to see the version that invites them to claim an open spot.
+
+    - To change the wording of these emails, go to **Admin → Automated Emails** (the pop-up links there).
   </Step>
 
   <Step title="Control who gets emailed and save" icon="check-circle" title-type="p">
-    - Use the **Send email to guardians about acceptance.** checkbox when you want guardians to receive the acceptance or invite email as part of this action.
+    - When you accept with **No Limit**, the **Send email to guardians about acceptance.** checkbox is on by default. Leave it on to send the acceptance email, or turn it off to accept the camper without notifying guardians.
 
-    - Leave the checkbox off if you are only updating the waitlist record or status without notifying guardians.
+    - The checkbox is hidden when you choose a response window, because the invite email always goes out, and when you choose **Remove / Reject**.
 
-    - Click **Save** to apply your choices. The camper's waitlist entry and any related statuses update, and any selected emails are sent.
+    - Click **Save** to apply your choices, or **Close** to leave without changes.
   </Step>
 </Steps>
 
-Invite emails give the family clear choices, including **Accept Spot** and **No Thanks** buttons they can click to respond. After you send an invite with a response window, the status on that row may change to **Invite Open Until \[date]** to show how long the family has to accept.
+Invite emails include **Accept Spot** and **No Thanks** buttons the family clicks to respond.
 
 <Callout kind="info" collapsed="false">
-  When a family clicks **Accept Spot** or **No Thanks** in the invite email, their waitlist status updates based on their choice, and the report reflects the latest state after a refresh.
+  When a family clicks **Accept Spot** or **No Thanks** in the invite email, their wait list entry updates based on their choice. Refresh the report to see the latest state.
 </Callout>
 
 ### Cancel an outstanding invitation
 
-When a camper has an active invitation that has not yet been answered, a **Cancel Invitation** action appears on their row. Use it to withdraw the open invite without taking the camper off the wait list.
+When a camper has an invitation that has not been answered, a **Cancel Invitation** icon appears on their row. Use it to withdraw the open invite without taking the camper off the wait list.
 
 <Steps>
   <Step title="Cancel an open invite" icon="x-circle" title-type="p">
-    - Find a camper whose status shows **Invite Open Until \[date]**.
+    - Find a camper whose status shows **Invite open until \[date]**.
 
-    - Click **Cancel Invitation** on that camper's row.
+    - Click the **Cancel Invitation** icon on that camper's row.
 
-    - Confirm when asked. The open invite is withdrawn and the family can no longer claim that spot from their invite email.
+    - Confirm when asked. The open invite is withdrawn and the accept and decline links in the family's email stop working.
   </Step>
 </Steps>
 
@@ -211,7 +212,7 @@ When a camper has an active invitation that has not yet been answered, a **Cance
 
 ### Remove someone from the waitlist
 
-If a family tells you they are no longer interested, or if you want to clean up old entries, you can remove a camper from the waitlist.
+If a family tells you they are no longer interested, or you want to clean up old entries, remove the camper from the wait list.
 
 <Steps>
   <Step title="Remove a camper from the waitlist" icon="trash" title-type="p">
@@ -219,14 +220,14 @@ If a family tells you they are no longer interested, or if you want to clean up 
 
     - Find the camper you want to remove.
 
-    - Click the **Remove** or **Delete from waitlist** option on that row.
+    - Click the trash icon (tooltip **Remove User From Wait List**) on that row.
 
-    - Confirm the removal when asked.
+    - Campium asks **Remove this user from the wait list?** Click **Remove** to confirm.
   </Step>
 </Steps>
 
 <Callout kind="alert" collapsed="false">
-  When you remove someone from the waitlist, they no longer hold a place in line for that session. If you need them back on the waitlist, you must add them again, and they may not get their original position.
+  Removing someone permanently deletes their wait list entry and cannot be undone. If you add them again, they go to the end of the list, because the list is ordered by when each entry was created.
 </Callout>
 
 ### Let families remove themselves
@@ -235,64 +236,58 @@ Turn on **Allow users to remove themselves from wait lists** under **Admin → S
 
 With that setting on, a wait-listed session on the parent home or **Account** page shows **remove from wait list** next to **Wait List**. The family confirms, then sees **Session removed from wait list.** If the spot is no longer wait-listed (for example staff already accepted or removed them), they see **This session is no longer on the wait list. Refresh the page.**
 
-Families cannot remove an enrolled session this way. Only wait list spots. See [Withdraw a camper](/withdraw-a-camper).
+Families can remove only wait list spots this way, not enrolled sessions. See [Withdraw a camper](/withdraw-a-camper).
 
 ### Download or print the waitlist
 
-Some accounts show **Download** or **Print** buttons on the Waitlist Report.
+The table has **Copy**, **Excel**, **CSV**, **PDF**, and **Print** buttons.
 
-- Use **Download** to save the current waitlist to a file so you can work with it outside the system.
+- Use **Excel**, **CSV**, or **PDF** to save the current wait list to a file you can work with outside Campium.
 
 - Use **Print** to create a paper copy for staff meetings or offline review.
-
-If you do not see these buttons, your account may not include them or your role may not have access.
 
 ## Troubleshooting
 
 ### The report is empty
 
-If you open the Waitlist Report and see no campers:
+If the Waitlist Report shows no campers:
 
 - Check that you picked the correct **Season**.
 
-- Make sure you selected the right **Session** or option.
+- Make sure you selected the right **Session**.
 
-- Confirm that the session actually allows a waitlist and is full or has been full.
+- Confirm that the session is full or its **Status** is **Closed**. Registrations only go to the wait list in those cases.
 
 - Try another season or session to see if you have any waitlisted campers at all.
 
-If you still see an empty list and you expect names to be there, contact your office admin or support team to review your session settings.
+If the list is still empty and you expect names there, contact support to review your session settings.
 
 ### I cannot find the email button
 
 If you do not see **Send Email To All Wait Listers**:
 
-- Confirm that you are on the Waitlist Report page, not another report.
-
-- Check that there is at least one camper on the waitlist; some accounts hide the button when there are no results.
+- Confirm that you are on the **Wait List Management** report, not another report. The button sits at the top of the table.
 
 - Ask an account owner if your role has permission to send mass emails.
 
-You can always go to the main **Mass Emails** page and filter to the same season and session as a backup.
+You can also go to **Communications → Mass Emails** and filter to the same season and session.
 
 ### An invited camper still shows on the waitlist
 
-After you invite or accept a camper, you may still see them on the waitlist for a short time.
+After you invite or accept a camper, you may still see them on the wait list.
 
 This can happen when:
 
-- The family has not finished their registration yet.
-
-- The invitation is still open until a specific date.
+- You sent an invitation with a response window and the family has not answered yet.
 
 - The camper has enrolled, but the page has not been refreshed.
 
-Try these quick checks:
+Try these checks:
 
 - Refresh the page to pull in the latest status.
 
-- Look at the **Status** column to see if it shows an invitation open until a date.
+- Look at the **Status** column to see if it shows **Invite open until \[date]**.
 
-- Check the camper's profile or the main enrollment list to confirm whether they are fully enrolled.
+- Check the camper's profile **Sales** tab to confirm whether they are enrolled.
 
-If the camper is clearly enrolled but remains on the waitlist even after a refresh, reach out to your support contact so they can review the record.
+If the camper is enrolled but still on the wait list after a refresh, contact support to review the record.
