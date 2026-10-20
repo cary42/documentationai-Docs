@@ -64,29 +64,22 @@ Subproducts/options:
 
 ### Capacity
 
-**Capacity** controls how many registrations you accept:
+**Capacity** is the maximum number of campers a session or option accepts, sometimes called an enrollment limit or a cap on registrations. Once a session reaches capacity, new registrations go to the wait list instead (see **Waitlist** below).
 
-- For Sessions (Products): the Capacity field in the create/edit modal controls the session-level capacity.
+- For Sessions (Products): set **Capacity** in the **Add New** or **Edit** session modal.
 
-- For Subproducts/options: the Capacity field in the options edit modal controls capacity per option.
+- For Subproducts/options: set **Capacity** on each option to cap that option separately.
 
-Tooltips and helper text indicate that:
-
-- For Sessions: `"Capacity:"` has a tooltip `Set to zero or leave blank for unlimited`.
-
-- For Subproducts/options: `"Capacity"` uses helper text `blank or 0 for unlimited`.
+Helper text under **Capacity** reads **0 or blank = unlimited.** Use a positive number to set a limit.
 
 ### Waitlist
 
-**Waitlist** links appear in the admin UI so you can see who is waiting when capacity is reached or when your configuration enables waitlists.
+A session or option puts new registrations on the wait list in two cases:
 
-Link patterns from the templates:
+- It has a **Capacity** above 0 and every spot is taken.
+- Its **Status** is **Closed**. The **Edit** session modal labels this field **Status - closed forces wait list**, with the options **Open** and **Closed**.
 
-- Session waitlist link from the session list: a waitlist report URL that is shown when the Session/Product is configured to show waitlists.
-
-<Callout kind="info" collapsed="false">
-  The templates confirm where waitlist links appear and which URLs they use. They do not expose deeper business logic such as how families are added to the waitlist or when they move off the waitlist. Work with your Campium support contact if you need details on waitlist behavior beyond these confirmed links.
-</Callout>
+Wait-listed registrations are added at $0 with no deposit, so the family is not charged at checkout. To see who is waiting, click the **Wait Listed** link on the sessions list, or open the [Waitlist Report](/waitlist), where you can also invite families when a spot opens.
 
 ## Work with Seasons
 
@@ -192,6 +185,8 @@ Use the New Session/Product modal to define a session that families can register
 
     <ParamField body="Price" param-type="number" required="true" deprecated="false">
       Labeled `Price: *` with placeholder `e.g. 100.50`. Enter the full price for the Session/Product.
+
+      If you change the price after families have registered, the new price applies to new registrations only. Each existing registration keeps the price it was sold at. To reprice one family, use **Switch** or an adjustment on their profile **Sales** tab. See [Profiles](/profiles#record-a-payment-or-credit).
     </ParamField>
 
     <ParamField body="Min. Deposit" param-type="number" required="true" deprecated="false">
