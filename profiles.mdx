@@ -484,7 +484,9 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     Profile fields from your field library stay visible here based on hide settings and user type, not on an old year stamp. If a field used to disappear from All User Data after you provisioned it from the library, it should appear again after the next refresh.
 
-    You need permission to view the custom profile tab. The snapshot menu appears only when at least one **Snapshot ready** season captured this person. Snapshots are created when you deactivate a season (Active to Inactive), or when you use **Freeze this season's data** on an active season. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
+    You need permission to view the custom profile tab. The snapshot menu appears only when at least one **Snapshot ready** season captured this person. Snapshots are created when you close a season (Active to Inactive), or when you use **Freeze this season's data** on an active season. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
+
+    If you try to save an email address that already belongs to someone else, Campium can say **That email address is already used by** that person's name (with a link to that profile when available) and may tip you toward [Merge Users](/merge-users) when the duplicate is clear.
   </Tab>
 
   <Tab title="Notes" icon="edit">
@@ -507,6 +509,8 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - Review current balances and filter by season.
 
+    - Summary figures can include **Paid**, **Balance**, **Scheduled**, and **Discounts**. On a season line, **Scheduled** plus the amount shows how much is still on the payment plan. A red **≠** next to the balance means **Balance and Scheduled do not match**.
+
     - When you add a **Discount** from this tab, **For User** can be left as **Entire family** so the discount applies to the whole family rather than one camper. See [Family-level discounts on a profile](/discounts#family-level-discounts-on-a-profile).
 
     <Callout kind="alert" collapsed="false">
@@ -514,6 +518,12 @@ Each tab focuses on a different part of the person’s record. Use these section
     </Callout>
 
     Pick a season at the top of the tab (in the classic layout, from the **Seasons** list on the left) to see that season's sessions, payments, and balance.
+
+    ### Add a payment with Account On File
+
+    Click **Add Payment** on the **Sales** tab. Under **Payment Type**, choose **Account On File** to charge a saved card or bank account. The **Account on File** field lists each saved method (for example name, last four, expiration, and **Primary**). Use **Remove selected account** when you need to clear the pick.
+
+    **Add surcharge** appears only when your camp has a surcharge rate and the selected on-file method is a card. It stays hidden for bank (ACH) accounts on file.
 
     ### Edit weeks on a session sale
 

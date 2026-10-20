@@ -83,7 +83,7 @@ Create a plan after you confirm the correct season.
 Use these fields when creating or editing a plan.
 
 <ParamField body="Plan name" param-type="string" required="true" show-location="false">
-The **Plan Name** field. Families see this name on the portal. You cannot use `Pay In Full`.
+The **Plan Name** field. Helper text: **Visible on the portal.** You cannot use `Pay In Full`.
 </ParamField>
 
 <ParamField body="Type of plan" param-type="string" required="true" show-location="false">
@@ -91,7 +91,7 @@ The **Type of plan** field: **Standard** or **Even Split**. Standard plans use c
 </ParamField>
 
 <ParamField body="Description" param-type="string" show-location="false">
-Optional text for **Standard** plans. Families see it on the portal, so use it to explain the timing in plain language.
+Optional text for **Standard** plans. Helper text: **Visible on the portal.** Use it to explain the timing in plain language.
 </ParamField>
 
 <ParamField body="Charge cadence" param-type="string" show-location="false">
@@ -111,7 +111,11 @@ The **Start Date** field. For **Standard** plans, the day the plan becomes avail
 </ParamField>
 
 <ParamField body="End date" param-type="date" required="true" show-location="false">
-The **End Date** field. For **Standard** plans, the plan cannot be selected on or after this date. For **Even Split** plans, the last charge is on this date.
+The **End Date** field. For **Standard** plans, the plan cannot be selected on or after this date. For **Even split** plans with **Final payment** set to **On the end date**, this is the last date a charge can happen on or before. When **Final payment** is **Before each session starts**, helper text says: **Families can't pick this plan after this date.**
+</ParamField>
+
+<ParamField body="Final payment" param-type="string" show-location="false">
+Available for **Even split** plans when per-session scheduling is available. Choose **On the end date** (charges run through the end date) or **Before each session starts**. When you choose the per-session option, set **Days before start**. Helper text: **Each session's share of the balance is paid off this many days before it starts. Deposits count toward every session by price.** Plans that use this option show a list type such as **Even Split (…, per session)**. At checkout, families see wording that each session is split evenly and paid off at least N days before that session starts (or by the day the session starts when N is 0).
 </ParamField>
 
 <ParamField body="Season" param-type="season" required="true" show-location="false">
@@ -407,6 +411,18 @@ Shows instead of the two buttons above when the family has no scheduled payments
 
 Removing a plan does not change what the family owes. Payments already made are not touched. Collect any remaining balance as a one-time payment, or assign a different plan from the same window. Repeat for each season that has a plan.
 
+## Even split: pay off before each session
+
+On an **Even Split** plan, **Final payment** can be **Before each session starts** instead of **On the end date**.
+
+1. Open **Admin → Payment Plans** and create or edit an Even Split plan.
+2. Set **Final payment** to **Before each session starts**.
+3. Enter **Days before start** (required). Example: `7` means each session's share is paid off seven days before that session starts.
+4. Set **End Date** as the last day families can still pick the plan.
+5. Save the plan. Use **Preview for** on the list to check a sample schedule. Preview notes can mention how many sessions start in the sample window.
+
+This is not limited to a specific payment processor. The option appears when per-session Even Split columns are available on your account (they are live for camps that use Payment Plans).
+
 ## Even split cadence behavior
 
 Even Split plans calculate charges from the cadence and date range.
@@ -431,8 +447,8 @@ Charges on the 1st and 15th of each month when those dates fall within the date 
 
 When a family's season balance changes (for example you add or remove a session, or apply a discount), remaining scheduled payments update as follows:
 
-- **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Preview for** sample and **Recalc Even Split** use the same rounding.
-- **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row).
+- **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Preview for** sample and **Recalc Even Split** use the same rounding. Per-session Even Split plans re-spread within each session's payoff window.
+- **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row). Recording an extra payment on an equal-percent Standard plan also re-spreads the leftover the same way (toast title **Payment plan updated**). Hand-edited installment rows stay as you left them.
 - **Standard** plans with unequal percents or fixed dollar amounts: leftover balance still flexes on the final **Charge Entire Balance** row when that row is set to **Yes**.
 
 ## Recalculate an even split schedule
