@@ -123,12 +123,12 @@ Use the **New Form** button on the Forms list to start a new form.
     - **Email settings**
       - **Send Admin Email Notification To** (pick staff users from the list)
       - **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** (leave blank to send no email)
-    - **Custom text** (registration only)
-      - **Payment Button Text For Checkout Page** (required)
+    - **Custom text** (registration and standard forms)
+      - **Payment Button Text For Checkout Page** (required, registration only)
       - **Thank You Message**
       - **Form Header Text**
-      - **Sessions Selection Header Text** (uses your product wording)
-      - **Cart Header Text**
+      - **Sessions Selection Header Text** (registration only, uses your product wording)
+      - **Cart Header Text** (registration only)
 
     The value you choose for **Form Type** controls which tabs appear (for example, Products Layout vs. Questions) and how users interact with the form.
   </Step>
@@ -377,7 +377,7 @@ Preview pages include a **Parent view** strip so you can check the same gates a 
 Use the **Settings** tab to control how the form appears, what happens after submission, and how Campium handles payments and reminders. Who can complete the form is set on the **Recipients** tab.
 
 <Callout kind="info" collapsed="false">
-  Some settings appear only for specific **Form Type** values. Registration forms show fee, payment, discount, deposit, and custom text settings that do not appear on Standard or Upload a File forms.
+  Some settings appear only for specific **Form Type** values. Registration forms show fee, payment, discount, and deposit settings that do not appear on Standard or Upload a File forms. Standard forms keep **Thank You Message** and **Form Header Text** from the custom text settings.
 </Callout>
 
 ### Basic information
@@ -762,7 +762,7 @@ These templates are most useful when staff review submissions and the recipient 
 
 ### Custom text
 
-The **Custom text** box changes labels and instructions families see on the Portal. It appears only on **Registration (With Products)** forms.
+The **Custom text** box changes labels and instructions families see on the Portal. **Thank You Message** and **Form Header Text** appear on registration and standard forms. The checkout button, session selection, and cart text appear only on **Registration (With Products)** forms. Upload forms have no custom text.
 
 #### Payment Button Text For Checkout Page
 
@@ -835,7 +835,7 @@ Changing **Form Type** changes which tabs and settings Campium shows in the edit
 | Form Type                               | Fields and tabs you should expect                                                                                      |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Registration (With Products)**        | Settings, Recipients, Questions, Responses, **Products Layout**, payment, discount, deposit, and custom text settings  |
-| **Standard (No Products for Purchase)** | Settings, Recipients, Questions, Responses, no checkout or custom text settings                                        |
+| **Standard (No Products for Purchase)** | Settings, Recipients, Questions, Responses, **Thank You Message** and **Form Header Text**, no checkout settings        |
 | **Upload a File**                       | Settings, Recipients, Responses, upload-focused behavior, no Questions tab                                             |
 
 If a field seems to be missing, check **Form Type** first.
