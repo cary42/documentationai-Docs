@@ -1,45 +1,50 @@
 ---
 title: Merge Users
 description: >-
-  Combine two duplicate user records into one, moving payments, forms,
-  contracts, and other history onto the account you keep. Merging is permanent
-  and requires the merge users permission.
+  Combine duplicate people or whole families, and move someone into the right
+  family, while keeping payments, forms, and history on the record you keep.
 ---
 ## When to merge users
 
 Use Merge Users when the same person exists twice in your system, for example a camper who was added again during a new registration or imported under a slightly different name. Merging combines the two records into one so all of their history lives in a single place.
 
+You can also merge an entire family into another family when two family accounts are duplicates.
+
 <Callout kind="alert" collapsed="false">
-  Merging is permanent and cannot be undone. Confirm you have the right two accounts before you merge. When in doubt, review each profile first.
+  Merging is permanent and cannot be undone. Confirm you have the right accounts before you merge. When in doubt, review each profile first.
 </Callout>
 
 ## Permission required
 
-Merging is limited to users with the **merge users** permission. If you do not have it, the tool tells you access is denied. Ask an admin to grant the permission through your roles and permissions setup.
+Merging is limited to users with the **merge users** permission. Open **Admin → Data Tools & Activity → Merge Users**. If you do not have access, ask an admin to grant the permission through your roles and permissions setup.
 
-## How a merge works
+## Choose what to merge
 
-A merge always has two sides:
+At the top of the page, pick a mode:
+
+- **One user** - Combine two profiles that are the same person.
+- **Whole family** - Decide what happens to every person in one family as you fold them into another family.
+
+## Merge two users (One user)
+
+A one-user merge always has two sides:
 
 - **User A** is the duplicate that is merged away. After the merge, User A is set to **Archived**.
-
-- **User B** is the record you keep. You choose the status User B ends up with (Active, Inactive, Pending, Lead, or Archived).
+- **User B** is the record you keep. You choose the status User B ends up with (**Active**, **Inactive**, **Pending**, **Lead**, or **Archived**).
 
 Campium moves User A's history onto User B and combines the two profiles into one.
 
-## Merge two users
-
 <Steps>
   <Step title="Open Merge Users" icon="git-merge" title-type="p">
-    Go to the admin area and open **Merge Users**.
+    Go to **Admin → Data Tools & Activity → Merge Users**, and leave **One user** selected.
   </Step>
 
   <Step title="Select the two accounts" icon="users" title-type="p">
-    Use the **User A** and **User B** pickers to search for and choose each person. As you select, Campium shows each one's name, account number, email, status, user type, session and season counts, and creation date so you can confirm they are the same person.
+    Use the **User A** and **User B** pickers to search for and choose each person. As you select, Campium shows each one's name, account number, email, status, user type, session and season counts, and **Created** date. When both are selected, **Created** can show **Older** and **Newer** badges so you can tell which profile was added first. Use the swap control if you picked them in the wrong order.
   </Step>
 
   <Step title="Review the comparison" icon="list" title-type="p">
-    A comparison of the two profiles appears. For fields that differ, use the **Use A** or **Use B** buttons to pick which value the merged record should keep.
+    A comparison of the two profiles appears. For fields that differ, use the **Using A** / **Using B** toggle on each row to pick which value the merged record should keep. The default keeps User B's value until you switch a field.
   </Step>
 
   <Step title="Choose the final status for User B" icon="flag" title-type="p">
@@ -47,7 +52,33 @@ Campium moves User A's history onto User B and combines the two profiles into on
   </Step>
 
   <Step title="Merge" icon="check-circle" title-type="p">
-    Click **Merge Now**. The merge runs and a results list shows what was moved.
+    Click **Merge Now**. The merge runs and a **Merge Results** list shows what was moved.
+  </Step>
+</Steps>
+
+## Merge a whole family
+
+Use **Whole family** when two family accounts are duplicates and you need a plan for every person, not only one pair.
+
+<Steps>
+  <Step title="Switch to Whole family" icon="users" title-type="p">
+    On **Merge Users**, click **Whole family**.
+  </Step>
+
+  <Step title="Pick the two families" icon="search" title-type="p">
+    Choose **Family to merge away** and **Family to keep**. Search for anyone in each family. Use the swap control if you need to reverse them.
+  </Step>
+
+  <Step title="Decide what happens to each person" icon="list" title-type="p">
+    The **What happens to each person** table lists everyone in the family you are merging away. Columns are **Person**, **Created**, **Registrations and payments**, and **What happens**. For each person, choose:
+
+    - **Merge into** a person in the kept family - Combine them into that matching person (with the same field toggles as a one-user merge).
+    - **Move into the kept family** - Keep their identity and move them as they are.
+    - **Archive** - Archive that person without merging them into someone else.
+  </Step>
+
+  <Step title="Merge the family" icon="check-circle" title-type="p">
+    Click **Merge Family**. Review **Merge results** when it finishes.
   </Step>
 </Steps>
 
@@ -56,36 +87,29 @@ Campium moves User A's history onto User B and combines the two profiles into on
 When you merge, Campium moves User A's records onto User B, including:
 
 - Emails and notes
-
 - Payments and scheduled payments
-
 - Sessions and seasons
-
 - Forms, form sends, and form product answers
-
 - Attendance records and dismissals
-
 - Medical records and medication logs
-
 - Uploaded files
-
 - Contracts
-
 - Canteen payments and purchases
-
 - Product associations and bus assignments
 
 The results panel lists the counts for each so you can confirm the merge did what you expected.
 
 <Callout kind="info" collapsed="false">
-  Profile field values are combined too. Where a value exists on User A but not User B, it carries over. Where both differ, the value you chose with **Use A** or **Use B** is kept.
+  Profile field values are combined too. Where a value exists on User A but not User B, it carries over. Where both differ, the value you chose with **Using A** or **Using B** is kept.
 </Callout>
 
-## Related tool: move a user into a family
+## Related tool: Move User Into Family
 
-Merging is for two records that are the same person. If instead you have one correct person who is simply in the wrong family, use **Move User Into Family** rather than merging.
+Merging is for two records that are the same person (or two duplicate families). If instead you have one correct person who is simply in the wrong family, use **Admin → Data Tools & Activity → Move User Into Family**.
 
-That tool re-parents a single user into an existing family, keeping their identity and moving their family-scoped records onto the target family. If the target family already has someone with the same name, Move User Into Family points you to Merge Users to combine those duplicates. Moving a user into a family uses the same **merge users** permission.
+That tool re-parents a single user into an existing family, keeping their identity and moving their family-scoped records onto the target family. Before you confirm **Move into family**, the preview can show **Comes along automatically** with counts for items that stay attached to the person without being rewritten, such as **Forms**, **Profile answers**, **Attendance records**, and **Notes**. Helper text: **These belong to the user, not the family, so they stay attached without being changed.**
+
+If the target family already has someone with the same name, Move User Into Family points you to Merge Users to combine those duplicates. Moving a user into a family uses the same **merge users** permission.
 
 ## Related guides
 
@@ -104,5 +128,9 @@ That tool re-parents a single user into an existing family, keeping their identi
 
   <Card title="Profiles" href="/profiles" icon="user" horizontal="false">
     Review a person's full record before deciding whether to merge.
+  </Card>
+
+  <Card title="Data Audit" href="/data-audit" icon="history" horizontal="false">
+    Review and restore earlier profile field values when something was overwritten.
   </Card>
 </Columns>

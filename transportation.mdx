@@ -116,6 +116,34 @@ If Attendance is off for your camp, the switch does not appear.
 
 Use these rider statuses for different purposes: **Check-in** confirms the rider boarded, **Passed** shows the bus has gone past that stop, and **Absent** shows the rider was not present for that run.
 
+### Change a rider's stop address
+
+On the **Riders** page, open a rider's address to change where they are picked up or dropped off for a given attendance day. The dialog title is **Change Address**.
+
+Door-to-door riders:
+
+1. Under **Pick up and drop off at**, choose **Parent 1**, **Parent 2**, or **Other address**.
+2. For **Other address**, type the full stop (placeholder: **Street, city, state, zip**).
+3. Optionally check weekdays under **Repeat every week on**. Leave them unticked to change that day only.
+4. Click **Save** (or **Cancel**).
+
+Express riders (when the bus field uses Express stops):
+
+1. Choose an **Express stop** from the list (placeholder **Pick a stop**).
+2. Optionally set **Repeat every week on**, then **Save**.
+
+If no Express list is linked yet, the dialog explains that you need to pick one under **Express Stops** in **Bus Settings** on the bus page. On the Bus Information page, **Express Stops** maps each bus field to the profile field that lists its stops. **No Express stops** means that bus field has none.
+
+When a weekly rule already exists, the dialog can show:
+
+- **Stop repeating on** a weekday
+- **Change the weekly rule**
+- **Remove the change for** a one-day override
+
+Saving a weekly rule over one-day changes asks you to confirm **Yes, replace** when those one-day stops would be overwritten. Press Escape to cancel a replace confirmation without leaving the dialog. Enter saves when the form is ready.
+
+You need the **Transportation** module and the **Transportation** permission.
+
 ### Bus Notes
 
 Bus staff can log notes from **Bus Tracking** in the Campium mobile app. In admin, open **Transportation**, then click **Bus Notes** on the Bus Information page (or go to **Bus Notes** from that header button).
@@ -184,15 +212,15 @@ Use this workflow on a typical season and bus day, from setup through communicat
 
   <Step title="Add stop times and addresses (recommended)" icon="map" title-type="p">
 
-  Still on the **Riders** page, click into fields to fill out per-rider details.
+  Still on the **Riders** page, fill out per-rider details.
 
   - Enter the **Pickup/Dropoff time** (the stop time) for each rider.
-  - Add the **Address** for each stop.
+  - Open **Change Address** to set the stop for a day: **Parent 1** / **Parent 2**, **Other address**, or an **Express stop**, with optional **Repeat every week on** weekdays. See [Change a rider's stop address](#change-a-riders-stop-address).
 
   Tips:
 
   - Use a consistent time format for all riders on a route.
-  - Enter full addresses (street, city, state) for best map accuracy and clearer directions for staff.
+  - Prefer parent addresses or Express stops when you can, so staff see the same place families expect.
 
   </Step>
 

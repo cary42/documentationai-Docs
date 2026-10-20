@@ -92,163 +92,47 @@ On dashboard year-over-year cards, **Pace start (optional)** lets you override w
 
 Set a season to inactive when you no longer want it treated as a current active season. This is usually something you do after the season has ended.
 
-When a season's **Season End Date** has passed and the season is still **Active**, Campium emails people with the **Administrator** role a reminder. Starting 14 days after the end date you may see a subject such as **Reminder:** followed by the season name and **is still marked active**. Starting 30 days after the end date, a last reminder can follow. The email includes an **Open Seasons** link that takes you to the Seasons page. Once you set the season to **Inactive**, those reminders stop. Campium manages the wording of that reminder for you.
+When a season's **Season End Date** has passed and the season is still **Active**, Campium emails people with the **Administrator** role a reminder. Starting 14 days after the end date you may see a subject such as **Reminder:** followed by the season name and **is still marked active**. Starting 30 days after the end date, a last reminder can follow. The email includes an **Open Seasons** link that takes you to the Seasons page. Once you close the season (**Inactive**), those reminders stop. Campium manages the wording of that reminder for you.
 
 <Callout kind="alert" collapsed="false">
-  Changing the **Status** from **Active** to **Inactive** sets campers assigned to this season to **Inactive** as long as they are not also in another **Active** season. Staff inactivation is optional (see below). Only set a season to **Inactive** if that season has passed.
+  Closing a season from **Active** to **Inactive** sets campers who are not also in another **Active** season to **Inactive**. Staff inactivation is optional on the Close season page. Only close a season after it has passed.
 </Callout>
 
-If you are unsure whether campers or season-assigned staff still rely on the season, confirm that another active season already applies before you change the status.
+If you are unsure whether campers or season-assigned staff still rely on the season, confirm that another active season already applies before you close it.
 
-## Deactivate a season
+## Close a season
 
-Use this workflow when a season has ended and you are ready to mark it inactive.
+Closing a season no longer happens only inside the **Edit Season** modal. Choosing **Inactive**, or **Close Season** from the season row menu, opens a dedicated **Close season** page. Nothing changes until you click the red **Close** button at the bottom (it includes the season name) and confirm.
 
-<Steps>
-  <Step title="Open the season you want to update" icon="folder" title-type="p">
-    - Go to the **Seasons** area.
+You can open that page from:
 
-    - Select the season from the season list.
-  </Step>
+- The season row menu → **Close Season**
+- **Edit Season** or Guided setup **Season** → set **Status** to **Inactive**
+- A **Review and close** link that includes the season name, when Campium offers it
 
-  <Step title="Review whether the season should be deactivated" icon="alert-triangle" title-type="p">
-    - Confirm that the season has passed.
+You need access to **Seasons** (the product module). Staff Hub names on the status step need **Staff Hub** access.
 
-    - Check whether affected campers and season-assigned staff are also in another **Active** season.
-  </Step>
+### What the Close season page covers
 
-  <Step title="Change the status" icon="edit" title-type="p">
-    - Find **Status** in the season settings.
+The page title area includes **What closing … does** (with the season name), **Download everything (CSV)**, and a link **How closing a season works**. Counts at the top show how many forms go offline, campers become Inactive, staff become Inactive, and Staff Hub statuses change. Helper text: counts are as of today, and nothing changes until you close.
 
-    - Change **Status** from **Active** to **Inactive**.
-  </Step>
+Read each numbered section, change the options you need, then close:
 
-  <Step title="Save the change" icon="check-circle" title-type="p">
-    - Save the season.
+1. **Forms go offline** - Checkbox like **Take 3 forms in Summer 2026 offline (sets them to Hidden)** (count and season name match your season). Uncheck to leave forms as they are. Reopening the season does not bring forms back; turn each form on from its settings.
+2. **Campers become Inactive** - Active campers who are not in another active season become Inactive (including campers with no season on their profile). Parents whose family has no active camper left become Inactive too, unless they are also staff or an admin.
+3. **Staff become Inactive** - Optional. **Inactivate staff who have** the season **on their profile** (checked by default when anyone qualifies). Separate option: **Also inactivate staff with an approved application on a form**, then **Choose a form**. Staff in another active season stay active.
+4. **Profile data snapshot** - Saves profile answers at the close for reporting. If a snapshot already exists, choose **Take a new snapshot now** or **Keep the snapshot from** the earlier capture date. If you froze early, choose **Keep it and lock it** or **Replace it with a new snapshot**.
+5. **Staff Hub application status** - Hired staff become **Returning**; others are cleared except statuses you keep in Staff Hub settings (**DNR**, **Fired**, and **Dismissed** always stay). If you keep an existing snapshot in step 4, statuses do not change. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 
-    - After saving, the season remains in your records but is no longer active.
-  </Step>
-</Steps>
+Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more before anything runs.
 
-## Staff Hub application status when you close a season
-
-When you change a season from **Active** to **Inactive** and your staff **Application Status** field has options, **Edit Season** can show a **Staff Hub application status** preview below the status field.
-
-Helper text: **After the snapshot is ready, closing this season changes these statuses. Counts use today's data.**
-
-The preview lists counts and sample names for:
-
-- Hired staff who move to **Returning**
-- Staff still **Returning** from the last close who are cleared (not rehired)
-- Staff whose status is cleared
-- Staff who keep their status (a name may show the status in parentheses)
-
-Overflow names can end with **and N more**. If the season already has a snapshot and you keep it when you save, a note says **This season already has a snapshot. If you keep it when you save, no statuses change.**
-
-**DNR**, **Fired**, and **Dismissed** always stay. Other keep-at-close choices live in **Admin → Staff Hub → Staff Hub Settings**. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
-
-## Deactivate live forms when a season goes inactive
-
-When you change a season from **Active** to **Inactive**, you can also take that season's live registration forms offline in one step. Live forms are ones currently open on the parent portal - within their date range, visible, and active.
-
-### Where to find it
-
-Go to **Admin → Seasons → Edit Season** using the icon or status link on the season row.
-
-Set **Status** to **Inactive**. If the season was previously **Active**, extra options appear below the status field in the same area as the profile-data snapshot helper text.
-
-### The checkbox
-
-The option is labeled: **Take live forms in this season offline (sets them to Hidden).**
-
-| Behavior | Detail |
-| --- | --- |
-| Default | Checked when at least one live form exists for that season |
-| Optional | Uncheck to leave forms as-is |
-| Preview | Label shows count, such as **Take 3 live forms...**. Form names are listed below the checkbox |
-| No live forms | Checkbox is hidden — nothing to deactivate |
-
-### What happens on save
-
-If the checkbox is checked when you save an **Active** to **Inactive** status change:
-
-- Every live form tied to that season is updated
-- Visibility is set to **Hidden**
-- Live status is turned off
-
-This is the same outcome as opening each form individually and setting **Visibility** to **Hidden**. Families stop seeing those forms on the portal, and they no longer appear as live on the dashboard or forms list.
-
-<Callout kind="info">
-
-Forms in other seasons are untouched. Non-live forms in this season, including forms already hidden or outside their date window, are not changed.
-
-</Callout>
-
-### When to use it
-
-Use this at season close when registration should stop but forms are still live. Typical flow:
-
-<Steps>
-  <Step title="Confirm the season has ended" icon="check" title-type="p">
-
-  Verify the season has truly ended and registration should stop.
-
-  </Step>
-  <Step title="Set season to Inactive" icon="edit" title-type="p">
-
-  Change the season status from **Active** to **Inactive**.
-
-  </Step>
-  <Step title="Leave the live forms checkbox checked" icon="check-circle" title-type="p">
-
-  The **Take live forms offline** checkbox is checked by default. Leave it checked to deactivate all live forms in one step.
-
-  </Step>
-  <Step title="Review the snapshot note" icon="settings" title-type="p">
-
-  Campium takes a profile-data snapshot when you save an Active-to-Inactive change. If a snapshot already exists, you are asked whether to keep it or override it.
-
-  </Step>
-  <Step title="Save" icon="check-circle" title-type="p">
-
-  Save the season. All live forms are set to **Hidden** and families can no longer see them.
-
-  </Step>
-</Steps>
-
-<Callout kind="alert">
-
-Uncheck **Take live forms offline** only if you need a form to stay open after the season is marked **Inactive**. This is unusual and should be done intentionally.
-
-</Callout>
-
-## Staff options when a season goes inactive
-
-When you move a season from **Active** to **Inactive**, staff controls can appear below the status field in the same area as the live-forms checkbox and snapshot helper text. Campers are always queued for inactivation (unless they belong to another active season). Staff are not changed unless you leave the matching option checked.
-
-### Also inactivate staff assigned to this season
-
-If any active staff have this season on their profile, you see a checkbox such as **Also inactivate the 12 active staff assigned to this season.** (the count matches your season).
-
-| Behavior | Detail |
-| --- | --- |
-| Default | Checked when at least one active staff member is assigned to the season |
-| Optional | Uncheck to leave all staff as they are |
-| Exception | Anyone who also belongs to another active season stays active |
-
-Leave it checked when seasonal staff should go inactive with the season. Uncheck it when those people still need admin or portal access (for example, they already work the next active season but still show this season on their profile).
-
-### Also inactivate staff with an approved application
-
-A second option can appear: **Also inactivate staff with an approved application on:** plus a form picker for the season's staff application forms.
-
-This is separate from the season-assigned checkbox above. It covers staff who are approved on that form, even when they are not the same set as profile-assigned staff. Check it when you also want those approved applicants set to **Inactive**. Leave it unchecked to keep them active.
+If the season is already Inactive, the page explains that it was closed before and nothing here runs. If it was closed and later reopened, a note says reopening did not undo that close.
 
 ## Email an invoice to families registered for the season
 
-The Edit Season modal also includes an **Email invoice to all families registered for season** checkbox. Check it when you want every family registered for the season to receive their current invoice by email as part of saving the season.
+The **Edit Season** modal still includes an **Email invoice to all families registered for season** checkbox (this is separate from closing the season). Check it when you want every family registered for the season to receive their current invoice by email as part of saving other season settings.
 
-When you check it, an optional message field appears so you can add a short note that is included with the emailed invoices. Leave the message blank to send the invoices without extra wording, or leave the checkbox unchecked to save the season without emailing anyone.
+When you check it, an optional message field appears so you can add a short note that is included with the emailed invoices. Leave the message blank to send the invoices without extra wording, or leave the checkbox unchecked to save without emailing anyone.
 
 ## Freeze a running season's data
 
@@ -273,14 +157,12 @@ You need access to manage seasons (the same permission as the **Seasons** area).
 
 ## Use profile-data snapshots for historical reporting
 
-When you change a season from **Active** to **Inactive**, Campium takes a snapshot of the profile data automatically (unless you already froze the season early). Helper text under the status field says **A snapshot of the profile data is taken when you save. It runs in the background.**
-
-If the season already has a snapshot, helper text says you already have one and can keep it or override it when you save. On save, confirm **You already have a snapshot. Do you want to override it?** with **Yes, override it** or **No, keep it**.
+When you close a season on the **Close season** page, Campium takes a snapshot of the profile data (unless you already froze the season early and choose to keep that freeze). Step **4 Profile data snapshot** lets you take a new snapshot or keep an existing one. The snapshot builds in the background after you close.
 
 Later, custom reports can use that saved snapshot to filter profile data based on what was true at the time the snapshot was taken. This is useful when profile details may change over time and you need reporting based on the earlier values.
 
 <Callout kind="alert" collapsed="false">
-  A snapshot does not happen until after you save the season, and it runs in the background. Use it when you want reporting to reflect profile data as it existed at that specific point in time.
+  A snapshot does not finish until after you close the season, and it runs in the background. Use it when you want reporting to reflect profile data as it existed at that specific point in time.
 </Callout>
 
 ### Watch snapshot status on the Seasons list
@@ -314,18 +196,18 @@ To retry a failed snapshot:
 
 ## When snapshots run
 
-Campium queues a profile-data snapshot automatically when you move a season from **Active** to **Inactive**. That is most useful when historical profile values matter for reporting, especially if family profile information may change after the season is saved. If a snapshot already exists, you choose whether to keep it or override it on save.
+Campium queues a profile-data snapshot when you close a season on the **Close season** page (Active to Inactive). That is most useful when historical profile values matter for reporting, especially if family profile information may change after the season closes. If a snapshot already exists, you choose whether to keep it or take a new one before you close.
 
 ## Summary
 
-Manage seasons from the **Seasons** area in the left hand navigation by creating new records, updating the visible season settings, and deactivating seasons only after they have passed. Deactivating an active season queues a profile-data snapshot automatically so later reports can reflect profile information as it was when you saved.
+Manage seasons from the **Seasons** area in the left hand navigation by creating new records, updating the visible season settings, and closing seasons only after they have passed. Closing an active season queues a profile-data snapshot so later reports can reflect profile information as it was when you closed.
 
 ## FAQ
 
 <ExpandableGroup>
   <Expandable title="Can I run a report using season data from a previous point in time?">
 
-  Yes. When you deactivate a season, Campium captures a profile-data snapshot (unless you keep an existing one). On a custom report, set the **Season** filter to that season, then choose its close under **Profile answers as of**. The exact historical views available depend on the reports your organization has access to.
+  Yes. When you close a season, Campium captures a profile-data snapshot (unless you keep an existing one). On a custom report, set the **Season** filter to that season, then choose its close under **Profile answers as of**. The exact historical views available depend on the reports your organization has access to.
 
   </Expandable>
 
@@ -345,7 +227,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   Yes. On a person's profile, open **All User Data** (or a custom data view). When ready snapshots exist for that person, choose a season from the **Season snapshot** menu next to **Filter by profile field**. Current answers stay editable on the left; the snapshot values appear on the right, with a **Changed** badge where they differ.
 
-  Snapshots come from deactivating a season (Active to Inactive), or from **Freeze this season's data** while the season is still active. See [Profiles](/profiles#tabs-and-sections) for the comparison view.
+  Snapshots come from closing a season (Active to Inactive), or from **Freeze this season's data** while the season is still active. See [Profiles](/profiles#tabs-and-sections) for the comparison view.
 
   </Expandable>
 
@@ -369,7 +251,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   <Expandable title="How often are season snapshots created?">
 
-  The page describes a snapshot that runs in the background after you save an Active-to-Inactive change. It does not indicate that snapshots run on a recurring schedule, so snapshot frequency depends on when you deactivate seasons.
+  The page describes a snapshot that runs in the background after you close a season. It does not indicate that snapshots run on a recurring schedule, so snapshot frequency depends on when you close seasons.
 
   </Expandable>
 
@@ -399,7 +281,7 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 
   <Expandable title="Are snapshot reports read-only, or can they change live season data?">
 
-  Most snapshots are saved history and stay read-only. If you froze a season early with **Freeze this season's data**, you can still edit that season's profile answers from a profile or custom report until you close the freeze (for example when you deactivate the season).
+  Most snapshots are saved history and stay read-only. If you froze a season early with **Freeze this season's data**, you can still edit that season's profile answers from a profile or custom report until you close the freeze (for example when you close the season).
 
   </Expandable>
 
