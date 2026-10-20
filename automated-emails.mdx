@@ -19,13 +19,15 @@ Each row can show:
 - Links such as **Forms** or **Email Templates** when the wording lives elsewhere
 - **Standard wording** (and sometimes **Preview**) when Campium keeps fixed text
 
-Footer helper: **Send Test emails the saved wording to you, filled in with sample details. To turn payment emails on or off, go to Site Settings > Payment Info.**
+Footer helper on the list: **Send Test emails the saved wording to you, filled in with sample details.**
 
 ### Payments
 
+Under the Payments group: **To turn payment emails on or off, go to Site Settings > Payment Info.**
+
 | Row | What it is |
 | --- | --- |
-| **Upcoming scheduled charge** | Sent before each scheduled payment on the days you choose under **Admin → Site Settings → Payment Info**. Turn **Charge Coming Email** on there to send it. In the editor, **See who gets the next reminder** opens the [Upcoming Charge Emails](/system-report-upcoming-charge-emails) report. |
+| **Upcoming scheduled charge** | Sent before each scheduled payment on the days you choose under **Admin → Site Settings → Payment Info**. Turn **Charge Coming Email** on there to send it. In the editor, **See who gets the next reminder** opens the [Upcoming Charge Emails](/system-report-upcoming-charge-emails) report. Under **Merge fields**, use **Profile fields** to insert a guardian-facing profile answer (placeholder **Pick a profile field**). Helper text: **Fills in from the profile of the person getting the email. Blank if they have not answered it.** Only non-signature, visible profile fields available to Guardian 1 appear in that list. |
 | **Scheduled payment receipt** | Sent after a scheduled payment goes through when **Send Scheduled Payment Receipt** is on under Payment Info. |
 | **Scheduled payment failed** | Standard wording when a scheduled payment is declined. |
 | **ACH payment returned** | Standard wording when the bank returns an ACH payment after it settled. When your camp is set up for Canada on Finix, this row reads **PAD payment returned** instead. |
@@ -73,7 +75,7 @@ These rows appear only when the matching module is on:
 1. Open **Admin → Automated Emails**.
 2. Click **Edit** on the row you want, or open a direct link such as **Edit Wording** on a form.
 3. The editor shows **Subject** (when the email has one) and **Message** or **Footer**.
-4. Use **Merge fields** on the right: click in the subject or message, then click a field to insert it. Fields marked **Required** must stay in the message.
+4. Use **Merge fields** on the right: click in the subject or message, then click a field to insert it. Fields marked **Required** must stay in the message. On **Upcoming scheduled charge**, you can also pick from **Profile fields** to insert a profile answer for the person getting the email.
 5. Click **Save**.
 6. Optionally click **Preview**, **Send Test**, or **Reset to default**.
 

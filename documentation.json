@@ -721,6 +721,11 @@
                 "icon": "users"
               },
               {
+                "title": "Data Audit",
+                "path": "data-audit",
+                "icon": "history"
+              },
+              {
                 "title": "Activity Scheduling",
                 "path": "activity-scheduling",
                 "icon": "calendar-range"
