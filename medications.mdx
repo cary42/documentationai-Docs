@@ -4,8 +4,8 @@ description: "Record a camper's medications, dispense prescribed and OTC doses, 
 ---
 
 The medication and health tools let you keep each camper's (or staff member's)
-medications on file, record every dose that gets handed out, and print a clean
-health report for the nurse's station or a doctor's visit. Families can enter and
+medications on file, record every dose handed out, and print a health report
+for the nurse's station or a doctor's visit. Families can enter and
 maintain their own camper's medications from the parent portal, so the list is
 ready before opening day.
 
@@ -13,17 +13,20 @@ ready before opening day.
 
 | Where | Who uses it | What they do |
 |-------|-------------|--------------|
-| **Profile → Health tab** (admin) | Camp staff, health office | Add/edit prescribed medications, dispense a dose, view the dispense history, download a health report |
+| **Profile → Health tab** (admin) | Camp staff, health office | Add/edit prescribed medications (**New Medication**), dispense a dose, view the dispense history (**View Log**), download a health report |
 | **Medical → Medications** (admin) | Health office | Dispense over-the-counter (OTC) doses for a camper or staff member, and dispense prescribed meds from the report |
 | **Parent portal → Medications** (`/medication/`) | Families | Add/edit their camper's medications for a season, carry meds forward, certify the list |
 | **Mobile app → Medications** | Families | Same medication management as the parent portal when the Medication Module is on |
 | **Medical → Medication Log** (admin) | Health office | See every prescribed and OTC dose recorded across camp |
-| **Combined Health Reports** (admin) | Health office | Print one PDF of health reports for everyone in a season |
+| **Reports → System Reports → Combined Health Reports** (admin) | Health office | Print one PDF of health reports for everyone in a season |
 
 <Callout type="info">
-The medication features only appear when the **Medication module** is turned on
-for your camp. Until it is enabled, the Health tab, the parent Medications page,
-and the medication settings are hidden.
+The medication features appear only when the **Medication Module** is turned on
+for your camp. Until it is on, the parent Medications page and the
+**Medical → Medications**, **Medication Log**, and **Settings** items are hidden.
+The **Medical** menu itself also needs the **Medical Notes** module. If your
+camp uses the **Health Center** hub, **Health Center** replaces the **Medical**
+menu, and its Reports and Settings tabs link to these pages.
 </Callout>
 
 ## Before you start
@@ -31,27 +34,29 @@ and the medication settings are hidden.
 Two things control who sees what:
 
 <ParamField path="Medication module" type="setting">
-  Turns the whole feature on. Enable it under your camp's medical settings
-  (**Medical → Settings**). Without it, the medication pages return
+  Turns the whole feature on. Turn on **Medication Module** under
+  **Admin → Site Settings → Modules**. Without it, the medication pages return
   "Medication module is not enabled."
 </ParamField>
 
 <ParamField path="Medical information permission" type="permission">
-  Staff need the **Medical information** permission to open the profile Health
-  tab and to run the health reports. Gate this to your health office and
+  Staff need the **Access to the Medical item on the navigation menu**
+  permission to open the **Medical** pages and to download and run health
+  reports. The profile **Health** tab and dispensing need the
+  **HIPAA field access** permission. Limit both to your health office and
   directors, since medications are sensitive.
 </ParamField>
 
 <ParamField path="Reports permission" type="permission">
-  Required (together with **Medical information**) to open **Combined Health
-  Reports**.
+  **Access To The Report Module** is required (together with the Medical
+  permission above) to open **Combined Health Reports**.
 </ParamField>
 
 ## Recording a camper's medications
 
 A medication record captures what the camper takes, how much, when, and who
-prescribed it. The same record is shared between the admin Health tab and the
-parent portal — a med a family enters shows up for your staff, and vice versa.
+prescribed it. The admin Health tab and the parent portal share the same
+record: a med a family enters shows up for your staff, and the reverse.
 
 ### The fields you capture
 
@@ -60,11 +65,11 @@ parent portal — a med a family enters shows up for your staff, and vice versa.
 </ParamField>
 
 <ParamField path="Dosage" type="text" required>
-  How much to give — "1 tablet", "5 mL", "2 puffs", and so on.
+  How much to give: "1 tablet", "5 mL", "2 puffs", and so on.
 </ParamField>
 
 <ParamField path="Medication times" type="multiselect">
-  Reusable med-pass times from **Medical Settings** (for example Breakfast or
+  Reusable med-pass times from **Medical → Settings** (for example Breakfast or
   Bedtime). On the admin Health-tab form the label is **Medication times**;
   helper text: **Med pass lists this medication at each time you pick.** Families
   see the same choices on the portal and in the app.
@@ -85,11 +90,12 @@ parent portal — a med a family enters shows up for your staff, and vice versa.
   On the parent portal (and mobile **Medications**), and on the admin Health-tab
   form, you can mark a medication as **Only as needed, not on a schedule**. An
   optional **How often, at most** note covers limits such as every 4 hours or no
-  more than 3 a day. As-needed medications do not show on med pass.
+  more than 3 a day. As-needed medications do not show on med pass; the form
+  says to give them from a health center visit.
 </ParamField>
 
 <ParamField path="Doctor / prescriber" type="text">
-  The prescribing doctor's name.
+  The prescribing doctor's name. The form label is **Doctor**.
 </ParamField>
 
 <ParamField path="Phone" type="text">
@@ -106,25 +112,25 @@ parent portal — a med a family enters shows up for your staff, and vice versa.
 </ParamField>
 
 <ParamField path="Notes" type="text">
-  Anything else staff should know — storage instructions, side effects to watch
-  for, and so on.
+  Anything else staff should know, such as storage instructions or side effects
+  to watch for. The form label is **Additional Notes**.
 </ParamField>
 
 ### Adding a medication as an admin
 
 <Steps>
   <Step title="Open the camper's profile">
-    Search for the camper (or staff member) and open their profile, then click
-    the **Health** tab.
+    Search for the camper (or staff member) and open their profile, click the
+    **Health** tab, then click **New Medication**.
   </Step>
   <Step title="Add the medication">
-    Choose the person, enter the **Medication** and **Dosage** (both required),
-    pick **Medication times** and **Days** when the camp has When options set up,
-    and fill in any of the other fields above.
+    Choose the person under **For User**, enter the **Medication** and
+    **Dosage** (both required), pick **Medication times** and **Days** when your
+    camp has When options set up, and fill in any of the other fields above.
   </Step>
   <Step title="Save">
-    The medication is added to the list. Use the row's menu to **Edit** or
-    **Delete** it later.
+    Click **Save Medication**. The medication is added to the list. Use the
+    row's menu to **Edit** or **Delete** it later.
   </Step>
 </Steps>
 
@@ -142,38 +148,38 @@ rules as the portal (active season edit, certify, soft delete).
 
 <Callout type="info">
 The **Medication times** options (for example, Breakfast, Lunch, Bedtime) are
-managed under **Medical Settings** with the **New Option for 'When' Dropdown**
-button. Setting these up gives staff and families consistent timing choices
-instead of only free text.
+managed under **Medical → Settings** with the **New Option For 'When' Dropdown**
+button. They give staff and families consistent timing choices instead of
+only free text.
 </Callout>
 
 ## Medication seasons
 
 Every medication belongs to a **season** (your camp's product group / year, such
-as "Summer 2026"). This keeps each summer's medication list separate — a camper's
-allergy meds for last year don't clutter this year's list.
+as "Summer 2026"). This keeps each summer's medication list separate, so a
+camper's allergy meds from last year don't clutter this year's list.
 
-- You pick which season is the **medication season** under **Medical Settings**.
-  If you leave it unset, the feature falls back to your default season.
+- You pick the **Current Medication Season** under **Medical → Settings**.
+  If you leave it unset, Campium uses your default season.
 - The configured season only decides the **default** season shown. Families can
   still switch to and edit **any season that is currently open (active)** for
   your camp using the season selector on the Medications page.
 - On the parent page, the default season is the active season the camper is
   actually enrolled in (usually exactly one), falling back to your configured
   medication season.
-- Older medications that were saved before seasons existed have no season
-  attached; those legacy records always show up in whichever season is being
-  viewed, so nothing gets lost.
+- Medications saved before seasons existed have no season attached. Those
+  older records show up in whichever season is being viewed, so nothing gets
+  lost.
 
 <Callout type="warning">
-When a season is **closed** (inactive), its medication list becomes read-only —
-families see "Medication entry for [season] is closed" and can no longer add or
+When a season is **closed** (inactive), its medication list becomes read-only.
+Families see "Medication entry for [season] is closed" and can no longer add or
 edit meds for it. Reopen the season if entries still need to change.
 </Callout>
 
 ### Carrying medications forward
 
-So families don't re-type the same meds every year, the parent Medications page
+So families don't retype the same meds every year, the parent Medications page
 offers a **carry-over** tool.
 
 <Steps>
@@ -196,19 +202,19 @@ name and dosage) is skipped so you don't get duplicates.
 ### Certifying the list (parent portal)
 
 For each season, a family can **certify** that their camper's medication list is
-complete and correct — a checkbox on the Medications page records who certified
+complete and correct. A checkbox on the Medications page records who certified
 it and when. Your staff see this on the profile Health tab under **Medication
 certification**.
 
 <Callout type="info">
 Adding a medication (or carrying one over) **clears** an existing certification,
-because the list changed and should be reviewed again. Simply editing or removing
-a med does **not** clear it.
+because the list changed and should be reviewed again. Editing or removing a
+med does **not** clear it.
 </Callout>
 
 ## Dispensing and the medication log
 
-When a dose is actually handed out, staff record it so you keep a running
+When a dose is handed out, staff record it so you keep a running
 **medication log** of every dose given. Prescribed medications use **Dispense**
 on the profile **Health** tab (and on **Medical → Medications**). Over-the-counter
 doses use **Dispense OTC** on **Medical → Medications**.
@@ -218,8 +224,8 @@ doses use **Dispense OTC** on **Medical → Medications**.
 <Steps>
   <Step title="Click Dispense">
     On the camper's Health tab, find the medication and click **Dispense**. The
-    dosage is pre-filled from the medication record, and the most recent dispense
-    history is shown so you can see when it was last given.
+    dosage is pre-filled from the medication record, and recent dispense
+    history (**Date Given**, **Notes**) shows when it was last given.
   </Step>
   <Step title="Confirm the details">
     Adjust the **Dosage** if needed, set the **Dispensed at** date/time (defaults
@@ -230,7 +236,8 @@ doses use **Dispense OTC** on **Medical → Medications**.
     guardians** to let the family know the dose was given.
   </Step>
   <Step title="Save">
-    The dose is written to the medication log with your name as the recorder.
+    Click **Save**. The dose is written to the medication log with your name as
+    the recorder.
   </Step>
 </Steps>
 
@@ -243,8 +250,8 @@ since they are protected health information.
 
 Use **Dispense OTC** when you give a medication that is not on the camper's
 prescribed list (for example acetaminophen for a headache). You need the
-**Medication Module** on, plus the **Medication** permission that also unlocks
-the profile **Health** tab.
+**Medication Module** on, plus the **HIPAA field access** permission that also
+unlocks the profile **Health** tab.
 
 #### Set up parent-approved OTC options (recommended)
 
@@ -290,10 +297,11 @@ dispensing.
 ### The Medication Log report
 
 **Medical → Medication Log** lists every recorded dose across camp for the
-selected season, with columns for the person, medication, dosage, date and time,
-type (**Prescribed** or **OTC**), whether guardians were notified, the notes, and
-who recorded it. Use it for end-of-day reconciliation or an audit of what was
-given. On a profile **View Log**, OTC rows show **(OTC)** next to the name.
+selected date range (the menu opens the last 30 days). Columns are **Name**,
+**Medication**, **Type** (**Prescribed** or **OTC**), **Dosage**,
+**Date & Time**, **Notified Guardians**, **Notes**, and **Recorded By**. Use it
+for end-of-day reconciliation or an audit of what was given. On a profile
+**View Log**, OTC rows show **(OTC)** next to the name.
 
 ## Health reports
 
@@ -304,13 +312,13 @@ onto a single, print-friendly PDF.
 
 - **Guardian contact blocks** for the camper (or the staff member's own contact
   line).
-- **Health information** — the profile fields you've flagged for the health
+- **Health information**: the profile fields you've flagged for the health
   report (see below), plus an **Insurance information** section when those fields
   exist.
-- **Medications** — every active medication on file, with dosage, schedule, days,
+- **Medications**: every active medication on file, with dosage, schedule, days,
   prescriber, dates, reason, and notes.
-- **Latest medical notes** — the most recent medical notes from the profile.
-- **Emergency information** — any profile field whose name or label mentions
+- **Latest medical notes**: the most recent medical notes from the profile.
+- **Emergency information**: any profile field whose name or label mentions
   "emergency."
 
 ### The "Include on health report" flag
@@ -380,8 +388,9 @@ dose and visit history so a full-group binder stays shorter.
 
 | Capability | What's required |
 |------------|-----------------|
-| See the profile Health tab, add/dispense prescribed meds, download a health report | **Medical information** permission (and the **Medication module** enabled) |
-| **Dispense OTC** on **Medical → Medications** | **Medication Module**, plus the same medication permission used for the Health tab |
-| Configure the medication season and **When** options | **Medical Settings** (module enabled) |
-| Run **Combined Health Reports** | **Reports** **and** **Medical information** permissions |
+| See the profile Health tab, add/dispense prescribed meds | **HIPAA field access** permission |
+| Download a health report from the Health tab | **Access to the Medical item on the navigation menu** permission |
+| **Dispense OTC** on **Medical → Medications** | **Medication Module**, plus **Access to the Medical item on the navigation menu** and **HIPAA field access** |
+| Configure the medication season and **When** options | **Medical → Settings** (**Medication Module** on) |
+| Run **Combined Health Reports** | **Access To The Report Module** **and** **Access to the Medical item on the navigation menu** permissions |
 | Add/edit meds and certify the list from the portal | The family, on any open (active) season |
