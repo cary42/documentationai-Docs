@@ -6,12 +6,12 @@ description: >-
 ---
 ## Overview
 
-Seasons group your sessions (called Products in the admin UI) so families can register for the right offerings in the right time frame. Sessions can also have subproducts/options for variants like time slots or age groups, each with their own price, deposit, capacity, and waitlists.
+Seasons group your sessions so families register for the right offerings in the right time frame. Some screens call sessions "products". A session can also have subproducts (options) for variants like time slots or age groups, each with its own price, deposit, capacity, and wait list.
 
-This guide walks through how Seasons, Sessions/Products, and Subproducts/options work together, and how to configure fields like capacity, dates, and waitlists using the existing admin screens.
+This page covers how seasons, sessions, and subproducts fit together, and how to set capacity, dates, and wait lists.
 
 <Callout kind="info" collapsed="false">
-  Navigation and exact menu labels can vary by deployment. This guide focuses on the modal windows and URLs that appear when you manage Seasons, Sessions/Products, and Subproducts/options in the admin area.
+  You can rename sessions with **Product Name (ie. Session)** under **Admin → Site Settings → Basic**. If you do, some labels below show your term (for example "Program" or "Class") instead of "Session".
 </Callout>
 
 ## Key definitions
@@ -26,11 +26,11 @@ A **Season** represents a registration period, such as "Summer 2025" or "School 
 
 - Payment plans
 
-When you copy a Season, Campium copies these items from an existing Season into a new one along with Forms.
+When you copy a season, Campium copies its sessions, forms, and payment plans into a new season.
 
 ### Session (Product)
 
-A **Session** is the main thing a family registers for (for example, "Week 1 Day Camp"). In the admin UI, these may appear with your own term (for example, "Session", "Program", or "Class") based on how you configure labels under **Admin → Site Settings → Basic** tab.
+A **Session** is the main thing a family registers for (for example, "Week 1 Day Camp"). If you renamed sessions under **Admin → Site Settings → Basic**, the admin shows your term instead (for example, "Program" or "Class").
 
 Sessions:
 
@@ -54,13 +54,13 @@ A **Subproduct/Option** is a variant under a Session, for example:
 
 Subproducts/options:
 
-- Inherit the parent Session context
+- Belong to their parent session
 
 - Have their own name, description, price, deposit, capacity, and status
 
 - Can have their own staff assignment
 
-- Show separate registration and waitlist links in the options list
+- Have their own registration and wait list links in the **Subproducts** panel
 
 ### Capacity
 
@@ -79,42 +79,42 @@ A session or option puts new registrations on the wait list in two cases:
 - It has a **Capacity** above 0 and every spot is taken.
 - Its **Status** is **Closed**. The **Edit** session modal labels this field **Status - closed forces wait list**, with the options **Open** and **Closed**.
 
-Wait-listed registrations are added at $0 with no deposit, so the family is not charged at checkout. To see who is waiting, click the **Wait Listed** link on the sessions list, or open the [Waitlist Report](/waitlist), where you can also invite families when a spot opens.
+Wait-listed registrations are added at $0 with no deposit, so the family is not charged at checkout. To see who is waiting, click the **Wait listed** link on the **Sessions** table, or open the [Waitlist Report](/waitlist), where you can also invite families when a spot opens.
 
 ## Work with Seasons
 
 ### Copy an existing Season
 
-Copying a Season lets you reuse all of the Sessions (Products), forms, and payment plans from one Season in another, which is useful when you run the same structure each year.
+Copying a Season reuses all of the sessions, forms, and payment plans from one Season in another. Use it when you run the same structure each year.
 
 To fill an empty season that Guided setup already created, use **Copy last season's setup** on the Guided setup **Sessions** step instead. That path does not create a second season. See [Guided Season Setup](/guided-season-setup#copy-last-seasons-setup).
 
 <Steps>
   <Step title="Open the Copy Season modal" icon="folder" title-type="p">
 
-    - Go to the Seasons area in the admin.
+    - In the left menu, open **Seasons**.
     - Find the Season you want to copy.
-    - Open that Season's row menu and select **Copy Season** to open the copy modal.
+    - Open that Season's row menu and select **Copy Season**. In season setup, **New season** → **Copy of** the current season opens the same modal.
 
   </Step>
 
   <Step title="Review the copy note" icon="info" title-type="p">
-    The Copy Season modal includes an alert describing what the copy does. The text from the template is:
+    The Copy Season modal opens with this note:
 
-    > **Note:** This feature will create a copy of all sessions/products, forms, and payment plans from the selected season to a new season. This operation may take a few moments to complete. Please do not close this window until the process is finished.
+    > **Note:** This feature will create a copy of all sessions, Forms, and Payment Plans from the selected season to a new season. This operation may take a few moments to complete. Please do not close this window until the process is finished.
 
-    The exact label used for sessions/products is configurable under **Admin → Site Settings → Basic**.
+    The word "sessions" shows your camp's term from **Admin → Site Settings → Basic**.
   </Step>
 
   <Step title="Fill in copy fields" icon="edit" title-type="p">
     The Copy Season modal includes:
 
     <ParamField body="Copy From Season" param-type="string" required="true" deprecated="false">
-      Read-only label showing the name of the Season you are copying from, displayed as `Copy From Season` with the selected Season name.
+      Read-only. Shows the name of the Season you are copying from.
     </ParamField>
 
     <ParamField body="New Season Name" param-type="string" required="true" deprecated="false">
-      The name for the new Season that will receive the copied Sessions/Products, forms, and payment plans. For example, `Summer 2026`.
+      The name for the new Season that receives the copied sessions, forms, and payment plans. For example, `Summer 2026`.
     </ParamField>
 
     <ParamField body="Move Dates" param-type="string" required="true" deprecated="false">
@@ -132,93 +132,93 @@ To fill an empty season that Guided setup already created, use **Copy last seaso
     </ParamField>
 
     <ParamField body="New Season End Date" param-type="date" required="true" deprecated="false">
-      The end date for the new Season. It follows the **Move Dates** option you picked. Change it if this season should end on a different date. Helper text: **Follows the option above. Change it if this season ends on a different date.** Must come after **New Season Start Date**.
+      The end date for the new Season. It follows the **Move Dates** option you picked. Helper text: **Follows the option above. Change it if this season ends on a different date.** Must come after **New Season Start Date**.
     </ParamField>
   </Step>
 
   <Step title="Start the copy" icon="play-circle" title-type="p">
 
     - Click **Save** to start copying the Season.
-    - Leave the window open until the process finishes, as the note indicates.
+    - Leave the window open until the copy finishes.
     - Click **Cancel** if you decide not to copy.
 
-    When the copy completes, the new Season appears in your Seasons list with copied Sessions/Products, forms, and payment plans that you can then adjust.
+    When the copy completes, the new Season appears in your Seasons list with copied sessions, forms, and payment plans that you can then adjust.
 
     Form layout groups copy with their session assignments. Each group on the new season’s registration forms keeps the same sessions (in the same order) as the season you copied from, matched to the new season’s copied sessions. A session that has no matching copy in the new season is left out of the group rather than carried over as a broken link.
 
-    Still open the registration form’s layout tab (labeled **Sessions Layout**, **Products Layout**, or similar based on your site wording) after a copy and confirm every session families should see is in the right group. Sessions left in the holding area do not appear on the form for families. On that tab you can also set **How this group appears** to a dropdown when a group has many options. See [Forms](/forms#how-a-layout-group-appears).
+    After a copy, open the registration form’s **Sessions Layout** tab (it uses your camp's term for sessions) and confirm every session families should see is in the right group. Sessions left in the holding area do not appear on the form for families. On that tab you can also set **How this group appears** to a dropdown when a group has many options. See [Forms](/forms#how-a-layout-group-appears).
   </Step>
 </Steps>
 
 ## Work with Sessions (Products)
 
-Sessions are created and managed within a Season. The admin UI uses your configured labels (for example, "Session" or "Program") based on **Admin → Site Settings → Basic**, but the behavior described here is the same regardless of the label text.
+You create and manage sessions on the season's **Sessions** step in season setup. In the left menu, open **Seasons** and click the season name. The steps below work the same whatever you call your sessions.
 
-On season setup **Sessions**, click **Start-End**, **Capacity**, **Price**, and **Min. Dep.** to edit them in the table (empty capacity, price, or deposit shows **None set**). After you save from **Edit Session**, those same click-to-edit controls stay on the row so you do not need to reload the page. Food / per-day sessions also keep the **Weeks** button under the dates. See [Guided Season Setup](/guided-season-setup#sessions).
+On the **Sessions** table, click **Dates**, **Capacity**, **Price**, and **Minimum deposit** to edit them in place (empty capacity, price, or deposit shows **None set**). After you save from **Edit session**, those click-to-edit controls stay on the row, so you do not need to reload the page. Food / per-day sessions also keep the **Weeks** button under the dates. See [Guided Season Setup](/guided-season-setup#sessions).
 
 ### Create a new Session/Product
 
-Use the New Session/Product modal to define a session that families can register for.
+Use the new session modal to define a session that families can register for.
 
 <Steps>
   <Step title="Open the new session modal" icon="plus" title-type="p">
 
-    - Navigate to the Products/Sessions list within the Season.
-    - Click the button that opens the New Session/Product modal (the exact label varies based on **Admin → Site Settings → Basic**).
+    - Open the season's **Sessions** step.
+    - Click **Add session**.
 
   </Step>
 
   <Step title="Fill required naming and pricing fields" icon="edit" title-type="p">
-    The create modal uses the following fields, based on the `new-product.html` template. Some labels may vary depending on how you configure your terminology under **Admin → Site Settings → Basic**.
+    The create modal has the following fields. Labels that name the session use your camp's term from **Admin → Site Settings → Basic**.
 
     <ParamField body="Session/Product Name" param-type="string" required="true" deprecated="false">
-      Labeled as the name field for the Session/Product (often marked with an asterisk). Tooltip: `This will appear as the name in CampiumDB.` Use this for internal/admin reporting and CampiumDB.
+      Labeled **Session Name** (with your term), marked with a red asterisk. Placeholder `e.g. Week 1`. Helper text: **Internal name shown in CampiumDB.** Staff see this name in the admin and in reports.
     </ParamField>
 
     <ParamField body="Public Name" param-type="string" required="false" deprecated="false">
-      Labeled `Public Name:`. Tooltip: `This will appear as the name on the parent site as well as on any invoices.` Use this when you want a different display name for families.
+      Labeled **Public Name**, with placeholder `Shown to families and on invoices`. Helper text: **Appears on the portal and invoices. Defaults to the name above.** If you leave it empty, Campium fills it with the session name when you leave the name field. Change it when you want families to see a different name.
     </ParamField>
 
     <ParamField body="Description" param-type="string" required="false" deprecated="false">
-      Text area with placeholder `Enter description here (e.g., June 16 - 20)`. This description appears on the parent site to help families understand the session details.
+      Text area with placeholder `e.g. June 16 - 20`. The description appears on the parent site to help families understand the session details.
     </ParamField>
 
     <ParamField body="Price" param-type="number" required="true" deprecated="false">
-      Labeled `Price: *` with placeholder `e.g. 100.50`. Enter the full price for the Session/Product.
+      Labeled **Price** (required) with placeholder `e.g. 100.50`. Enter the full price for the session.
 
       If you change the price after families have registered, the new price applies to new registrations only. Each existing registration keeps the price it was sold at. To reprice one family, use **Switch** or an adjustment on their profile **Sales** tab. See [Profiles](/profiles#record-a-payment-or-credit).
     </ParamField>
 
     <ParamField body="Min. Deposit" param-type="number" required="true" deprecated="false">
-      Labeled `Min. Deposit: *`. Tooltip: `Fixed amount like $100`. Enter the minimum amount a family must pay at registration if deposit-based payment plans apply.
+      Labeled **Min. Deposit** (required) with placeholder `e.g. 25`. On the **Edit** modal the tooltip reads `Fixed amount like $100`. Enter the minimum amount a family must pay at registration when deposit-based payment plans apply.
     </ParamField>
   </Step>
 
   <Step title="Set capacity and purchase rules" icon="settings" title-type="p">
-    Control how many registrations you accept and whether a child can register multiple times.
+    Control how many registrations you accept and whether a child can register more than once.
 
     <ParamField body="Capacity" param-type="integer" required="false" deprecated="false">
-      Labeled `Capacity:` with tooltip `Set to zero or leave blank for unlimited`. Use a positive integer to cap registrations, or `0`/blank for unlimited. On the season setup Sessions table, unlimited capacity shows as **None set**.
+      Labeled **Capacity**, with helper text **0 or blank = unlimited.** Use a positive whole number to cap registrations. On the season setup **Sessions** table, unlimited capacity shows as **None set**.
     </ParamField>
 
-    <ParamField body="Allow Discounts To Be Applied?" param-type="boolean" required="false" deprecated="false">
-      Yes/No field labeled `Allow Discounts To Be Applied?`. Choose Yes to allow discount rules to impact this Session/Product; choose No to prevent discounts from applying.
+    <ParamField body="Allow discounts to be applied?" param-type="boolean" required="false" deprecated="false">
+      Yes/No field labeled **Allow discounts to be applied?**, default **Yes**. Choose **Yes** to let discount rules apply to this session; choose **No** to keep discounts off it.
     </ParamField>
 
     <ParamField body="Can this be purchased twice for the same child?" param-type="boolean" required="false" deprecated="false">
-      Yes/No field labeled `Can this be purchased twice for the same child?` with default `No`. Set to Yes if a child may register for this session more than once (for example, multiple weeks).
+      Yes/No field labeled **Can this be purchased twice for the same child?**, default **No**. Set it to **Yes** if a child may register for this session more than once (for example, multiple weeks).
     </ParamField>
   </Step>
 
   <Step title="Configure schedule and stats fields" icon="bar-chart" title-type="p">
-    These fields set the Session's schedule and internal statistics without changing how the Session/Product appears on the parent site, unless otherwise noted.
+    These fields set the session's schedule and internal statistics. Unless noted, they do not change how the session appears on the parent site.
 
     <ParamField body="Staff" param-type="array" required="false" deprecated="false">
       Multi-select field labeled **Staff**. Helper text: **Staff you pick can only open profiles of campers registered in this session.** (On an option: **…in this option.**) Staff with no session assignments remain unrestricted. Admins are not limited by this list.
     </ParamField>
 
     <ParamField body="Days of Week" param-type="array" required="false" deprecated="false">
-      Multi-select dropdown labeled `Days of Week`. It appears only after you enable the **Schedule** dates below. Use it to pick which days of the week this Session runs. On the **New** and **Edit** session forms, if you set both a start and end date, you must also set **Days of Week**. Campium shows: **You must set the Days of Week if you set a start and end date.** Inline date edits on the sessions table do not require days of week (those cells have no Days of Week control).
+      Multi-select dropdown labeled **Days of Week**. It appears only when the **Attendance Module** is on under **Admin → Site Settings → Modules**. Use it to pick which days of the week this session runs. On the **New** and **Edit** session forms, if you set both a start and end date, you must also set **Days of Week**. Campium shows: **You must set the Days of Week if you set a start and end date.** Inline date edits on the sessions table do not require days of week (those cells have no Days of Week control).
     </ParamField>
 
     <ParamField body="Number of Weeks" param-type="integer" required="false" deprecated="false">
@@ -226,49 +226,49 @@ Use the New Session/Product modal to define a session that families can register
     </ParamField>
 
     <ParamField body="Start Date" param-type="date" required="false" deprecated="false">
-      Labeled `Start Date` under the **Schedule** heading. Helper text: **For attendance.** Set the day this Session begins. Enabling the schedule dates reveals the **Days of Week** dropdown above.
+      Labeled **Start Date** under the **Schedule** heading. Helper text: **For attendance.** Set the day this session begins.
     </ParamField>
 
     <ParamField body="End Date" param-type="date" required="false" deprecated="false">
-      Labeled `End Date` under the **Schedule** heading. Use it with the start date to define the Session's date range. End date must be after start date for attendance.
+      Labeled **End Date** under the **Schedule** heading. Use it with the start date to define the session's date range. If the end date is before the start date, Campium shows **End date must be after start date for attendance.**
     </ParamField>
 
-    <ParamField body="Hide From Attendance" param-type="boolean" required="false" deprecated="false">
-      Checkbox labeled `Hide From Attendance`. Check this when you do not want this Session/Product to appear in attendance screens.
+    <ParamField body="Hide from attendance" param-type="boolean" required="false" deprecated="false">
+      Checkbox labeled **Hide from attendance**, with helper text **Keep this item off attendance sheets and rosters.**
     </ParamField>
 
     <ParamField body="Non-revenue session" param-type="boolean" required="false" deprecated="false">
-      Checkbox labeled `Non-revenue session`, shown under **Start Date** next to **Hide From Attendance**. Check this when you want the Session/Product excluded from **Net Revenue** calculations in the [Revenue Summary report](/revenue-summary) while leaving pricing and charges unchanged.
+      Checkbox labeled **Non-revenue session**, under the **Options** heading next to **Hide from attendance**. Helper text: **Charges still run as usual. Revenue Summary lists this separately and subtracts it from net.** Check it to exclude the session from **Net Revenue** in the [Revenue Summary report](/revenue-summary) while leaving pricing and charges unchanged.
     </ParamField>
 
     <ParamField body="Expiration Date" param-type="date" required="false" deprecated="false">
-      Labeled `Expiration Date Can't be purchased after this date`. This date controls the last day families can purchase/register for the Session/Product.
+      Labeled **Expiration Date - can't be purchased after**, with a date and a time field. Families cannot purchase or register for the session after this date and time.
     </ParamField>
 
     <Callout kind="info" collapsed="false">
-      Marking a Session/Product as **Non-revenue session** does not change what families are charged. It only affects how qualifying registration lines are presented in the Revenue Summary report.
+      Marking a session as **Non-revenue session** does not change what families are charged. It only affects how qualifying registration lines are presented in the Revenue Summary report.
     </Callout>
   </Step>
 
   <Step title="Save the new Session/Product" icon="check-circle" title-type="p">
 
     - Review all fields for accuracy.
-    - Click **Save** to create the Session/Product.
+    - Click **Save** to create the session.
     - Click **Cancel** to close without saving.
 
-    After saving, the new Session/Product appears in the list for that Season, and registration and reporting links will be available according to your configuration.
+    After saving, the new session appears on the season's **Sessions** table, with links to its registration and wait list reports.
   </Step>
 </Steps>
 
 ### Copy an existing Session/Product
 
-Copying a Session/Product lets you reuse most settings from an existing session while changing the name or Season.
+Copying a session reuses most settings from an existing session while you change the name or Season.
 
 <Steps>
   <Step title="Open the copy session modal" icon="copy" title-type="p">
 
-    - In the Sessions/Products list, locate the item you want to copy.
-    - Use the copy action to open the copy modal (often labeled `Copy` or similar).
+    - On the **Sessions** table, find the session you want to copy.
+    - Open its row menu and select **Copy session**.
 
   </Step>
 
@@ -276,11 +276,11 @@ Copying a Session/Product lets you reuse most settings from an existing session 
     The copy modal includes:
 
     <ParamField body="New Session/Product Name" param-type="string" required="true" deprecated="false">
-      Labeled as the new name for the copied Session/Product. Enter the new name for the copied Session/Product. The exact label can vary based on **Admin → Site Settings → Basic**.
+      Labeled **New Session Name** (with your term). Enter the name for the copied session.
     </ParamField>
 
     <ParamField body="Season" param-type="string" required="true" deprecated="false">
-      Dropdown labeled `Season`. Choose which Season should contain the copied Session/Product.
+      Dropdown labeled **Season**. Choose which Season should contain the copied session.
     </ParamField>
 
     <ParamField body="Move Dates" param-type="string" required="false" deprecated="false">
@@ -296,26 +296,26 @@ Copying a Session/Product lets you reuse most settings from an existing session 
 
   <Step title="Create the copy" icon="play-circle" title-type="p">
 
-    - Click **Copy** to create the new Session/Product with the provided name in the selected Season.
+    - Click **Copy** to create the new session with the name you entered in the selected Season.
     - Click **Close** to exit without copying.
 
-    The new Session/Product will then appear in the chosen Season's Sessions/Products list.
+    The new session then appears on the chosen Season's **Sessions** table.
   </Step>
 </Steps>
 
 ## Cancellation fees
 
-Cancellation fees let you create a dedicated fee session inside a Season and reuse it whenever you need to charge the same cancellation amount. You manage them from the **Cancellation Fees** panel on a Season's Products/Sessions page: enter a **Name**, **Amount**, and **Description**, then select **Save Cancellation Fee** to add the fee. To change an existing fee, select **Edit** on its row, update the fields, and select **Save Cancellation Fee** again — or **Cancel Edit** to leave without saving.
+Cancellation fees let you create a dedicated fee session inside a Season and reuse it whenever you charge the same cancellation amount. You manage them from the **Cancellation Fees** panel on the season's **Sessions** step: enter a **Name**, **Amount**, and **Description**, then select **Save Cancellation Fee**. To change an existing fee, select **Edit** on its row, update the fields, and select **Save Cancellation Fee** again, or **Cancel Edit** to leave without saving.
 
 <Callout kind="alert" collapsed="false">
-  Cancellation fees are **not** applied automatically when a registration is cancelled. Creating a fee here only makes it available to reuse — to actually charge it, open the family's profile and add the fee from the **Sales** tab.
+  Cancellation fees are **not** applied automatically when a registration is cancelled. Creating a fee here only makes it available to reuse. To charge it, open the family's profile and add the fee from the **Sales** tab.
 </Callout>
 
-For the full walkthrough — creating, editing, deleting, naming conventions, and troubleshooting — see the [Cancellation Fees](/cancellation-fees) guide.
+For the full walkthrough, including deleting fees, naming conventions, and troubleshooting, see the [Cancellation Fees](/cancellation-fees) guide.
 
 ## Manage Subproducts/options
 
-Subproducts/options let you offer one Session in different ways (by grade, age band, time slot, or another profile answer), each with its own price, deposit, capacity, wait list, and status. Add one with the **New Subproduct** button, and adjust the `Price`, `Min. Dep.`, and `Capacity` columns inline directly in the options list, or open the edit modal for name, description, staff, and status changes. Drag the handle column (**Drag to reorder**) to set display order on that page. Empty price, deposit, or capacity cells show **None set**. The wait-list column is labeled **Waitlisted**.
+Subproducts/options let you offer one session in different ways (by grade, age band, time slot, or another profile answer), each with its own price, deposit, capacity, wait list, and status. On the season's **Sessions** step, open a session's row menu and select **Subproducts** (or **Add subproducts** when it has none). A panel opens under the sessions table. Use **Add subproducts** to create options, click **Price**, **Minimum deposit**, or **Capacity** on a row to edit it in place, or click the pencil (**Edit subproduct**) for name, description, staff, and status changes. Drag the handle (**Drag to reorder**) to set display order. Empty price, deposit, or capacity cells show **None set**. The wait list column is labeled **Wait listed**.
 
 Each option's **Status** uses **Open** and **Closed**: leave it **Open** to accept registrations, or set it to **Closed** to place new users on the wait list instead.
 
@@ -323,64 +323,62 @@ For the full walkthrough of setting up and using subproducts, see the [Subproduc
 
 ## View registrations and waitlists
 
-Use the links in the Sessions/Products list and the Subproducts/options list to open detailed reports for registrations and waitlists.
+Use the links on the **Sessions** table and in the **Subproducts** panel to open registration and wait list reports.
 
 ### Session-level registrations and waitlist
 
-From the main Sessions/Products list:
+From the **Sessions** table:
 
-- **Registered** link:
+- **# registered** link:
 
-  - Opens a report showing users registered for that Session/Product.
+  - Opens a report showing campers registered for that session.
 
-- **Wait Listed** link:
+- **Wait listed** link:
 
-  - Uses a waitlist report URL generated from your configuration.
-
-  - Opens the waitlist report associated with that Session/Product.
+  - Opens the [Waitlist Report](/waitlist) filtered to that session.
 
 <Callout kind="info" collapsed="false">
-  The exact content, filters, and URL of these reports depend on your Campium configuration. The patterns shown here confirm where to click from the Sessions/Products list; the Wait Listed link path can vary.
+  The **Wait listed** column appears only when the **Wait List Module** is on under **Admin → Site Settings → Modules**.
 </Callout>
 
 ### Subproduct/option registrations and waitlist
 
-From the Subproducts/options list (`product-options.html`):
+From the **Subproducts** panel:
 
-- **Wait** column:
+- **Wait listed** column:
 
-  - Each option row links to the waitlist report for these users.
+  - Each option row links to the Waitlist Report.
 
-  - Opens the waitlist list for that Session/Product.
+  - The report opens filtered to the parent session, not to the single option.
 
-- **# Reg.** column:
+- **# registered** column:
 
-  - Each option row links to an enrollment report for these users.
+  - Each option row links to a registration report.
 
-  - Opens a registration report for that specific Subproduct/option under the Session/Product.
+  - The report shows campers registered for that specific option.
 
-These links let you quickly jump from configuring options to monitoring who is registered or waiting at both the Session and Subproduct levels.
+These links take you from configuring options to checking who is registered or waiting, at both the session and subproduct level.
 
 ## Season management overview
 
-Admins can create and manage Seasons from the Seasons area, including adding new Seasons for upcoming registration periods and updating older ones after they end.
+You create and manage Seasons from **Seasons** in the left menu, including adding Seasons for upcoming registration periods and closing older ones after they end.
 
-- **Create a new Season** using the **Add New Season** action in the Seasons area, then enter the Season name and any related settings your setup requires.
+- **Create a new Season** with **Add New Season** on the Seasons page (or **New season** → **Blank season** in season setup), then enter the Season name and dates.
 
-- **Set a Season to Inactive** after it has passed so it no longer functions as a current registration period.
+- **Set a Season to Inactive** after it has ended. Open the season's row menu, select **Edit Season**, and set **Status** to **Inactive**. Choosing **Inactive** opens the **Close season** page, which lists everything a close does and who it reaches before anything changes.
 
-- **Use the profile-data snapshot option when needed** to save profile information as it existed when you saved the Season. This process runs in the background and can later support historical filtering in custom reports.
+- **Freeze a season's profile data early** when you open next season before this one ends. In **Edit Season**, select **Freeze this season's data**. Campium builds the snapshot in the background while the season stays active, and you can choose it under Profile data when you build a custom report.
 
 <Callout kind="alert" collapsed="false">
-  Change a Season from Active to Inactive only after that Season has passed. Setting a Season to Inactive can also set users to Inactive unless they are part of another Active Season.
+  Only close a season after it has ended. Closing sets every active camper and staff member to Inactive unless they are in another Active Season.
 </Callout>
 
 ## Summary
 
-- **Seasons** group Sessions/Products, forms, and payment plans and can be copied with the Copy Season modal.
+- **Seasons** group sessions, forms, and payment plans, and you can copy them with the Copy Season modal.
 
-- **Sessions/Products** are created and copied using modals that define names, prices, deposits, capacities, and schedule fields.
+- **Sessions/Products** are created and copied with modals that set names, prices, deposits, capacities, and schedule fields.
 
-- **Subproducts/options** extend Sessions with variants, managed through the options list and edit modal with inline editing for price, deposit, and capacity.
+- **Subproducts/options** add variants to a session. You manage them in the **Subproducts** panel, with inline editing for price, deposit, and capacity.
 
-- **Registrations and waitlists** are accessed through consistent report links from both the Sessions/Products list and the Subproducts/options list.
+- **Registrations and waitlists** open from the same report links on the **Sessions** table and in the **Subproducts** panel.
