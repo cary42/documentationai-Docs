@@ -127,7 +127,7 @@ Door-to-door riders:
 
 Express riders (when the bus field uses Express stops):
 
-1. Choose an **Express stop** from the list (placeholder **Pick a stop**).
+1. Choose an **Express stop**, or pick **Parent 1**, **Parent 2**, or **Other address** the same way door-to-door riders do.
 2. Optionally set **Repeat every week on**, then **Save**.
 
 If no Express list is linked yet, the dialog explains that you need to pick one under **Express Stops** in **Bus Settings** on the bus page. On the Bus Information page, **Express Stops** maps each bus field to the profile field that lists its stops. **No Express stops** means that bus field has none.
@@ -137,6 +137,10 @@ When a weekly rule already exists, the dialog can show:
 - **Stop repeating on** a weekday
 - **Change the weekly rule**
 - **Remove the change for** a one-day override
+
+A new weekly rule starts on the day you save it (it does not rewrite earlier roster days). Unticking every weekday under **Change the weekly rule** asks you to confirm, then stops the rule. Removing a one-day override can toast **Change removed**.
+
+If a typed **Other address** cannot be placed on the map, the address still saves and Campium warns: **We couldn't find this address on the map. Check the spelling.**
 
 Saving a weekly rule over one-day changes asks you to confirm **Yes, replace** when those one-day stops would be overwritten. Press Escape to cancel a replace confirmation without leaving the dialog. Enter saves when the form is ready.
 
