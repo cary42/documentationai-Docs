@@ -442,6 +442,11 @@
                 "icon": "pill"
               },
               {
+                "title": "Health Center",
+                "path": "health-center",
+                "icon": "briefcase-medical"
+              },
+              {
                 "title": "Immunization",
                 "path": "immunization",
                 "icon": "shield-check"

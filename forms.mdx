@@ -273,10 +273,12 @@ On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
 - Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses**.
-- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice:
+- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
   - **Compact**: *Smaller type and tighter spacing. Keeps answers on fewer pages when possible.*
-  - **Expanded**: *Text answers print under the question. Other answers stay on the same line.*
-  Campium saves your layout choice to your admin account, so it follows you across browsers. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
+  - **Expanded**: *Larger type and more spacing. Each answer follows its question on the same line.*
+  - **Hide** → **Section headers and instructions**: *Leaves out the form's headings and instruction text. Signatures still print.*
+  - **Hide** → **Questions with no answer**: *Question numbers still match the form.*
+  Campium saves your layout and hide choices to your admin account, so they follow you across browsers. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** and **Hide** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
 
 When the form has reference submissions, the table also shows a **Reference For** column (the applicant, linked to their profile), and **Primary Email** shows the reference's invitation email.
 
@@ -297,14 +299,16 @@ Clearing the text and saving removes the note. Parents do not see these notes.
 
 ## Print form responses
 
-Use the **Print** controls on the **Responses** tab (or the print icon on a profile / Staff Hub completed form) to generate a PDF. Choose **Layout** before you confirm:
+Use the **Print** controls on the **Responses** tab (or the print icon on a profile / Staff Hub completed form) to generate a PDF. Choose **Layout** and optional **Hide** options before you confirm:
 
 - **Compact**: smaller type and tighter spacing when you want fewer pages.
-- **Expanded**: text answers print under the question; other answers stay on the same line.
+- **Expanded**: larger type and more spacing; each answer follows its question on the same line.
+- **Section headers and instructions**: omit headings and instruction text (signatures still print).
+- **Questions with no answer**: omit blank questions; question numbers still match the form.
 
-Campium saves your choice to your admin account and uses it the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
+Campium saves your layout and hide choices to your admin account and uses them the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
 
-You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
+You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout** and **Hide**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
 
 When a form completion email attaches a PDF, each staff recipient gets the layout they last chose in the admin portal.
 

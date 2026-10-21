@@ -147,6 +147,11 @@ The signature is only complete when the question includes the legal text the use
   Optionally turn on **Show legal terms as a link**. That replaces the scrolling text box with a **Review the terms** button above the signature box. The signature box stays locked until they open the terms. Leave it off to keep the classic scrollable legal text above the signature field.
 
   </Step>
+  <Step title="Optionally ask the camper to sign too" icon="users" title-type="p">
+
+  Turn on **Also ask the camper to sign** when you want a second, optional typed name from the camper on the same question. On the portal, families see **Camper signature (optional)** under the guardian signature box, with placeholder **Camper: type your full name**. The camper signature is not required to submit.
+
+  </Step>
   <Step title="Adjust the question label if needed" icon="settings" title-type="p">
 
   Optionally update **Question Text**. This label appears above the terms (or above the **Review the terms** control) and helps families understand what they are signing. If you turn on link mode and your question text still says the terms appear above, reword it.
@@ -252,14 +257,18 @@ Open the profile when you need to see the signature record, legal text, and sign
 
 | Column | What it shows |
 | --- | --- |
-| Name | Who signed |
+| Name | Who signed (optional camper cosigns show as **Camper (optional)**) |
 | Signature | Typed name |
 | Date | When the form was signed |
 | Form Name | Source form |
 | Question Text | Signature question label |
 | Legal Text | Full legal text, expandable with **Show More** |
+| Keep Until | How long Campium keeps the frozen record (the later of 7 years from signing and 3 years past the subject's 18th birthday) |
+| Record Intact | **Yes** when the stored hash still matches what was signed; **NO - altered** if the frozen record no longer matches |
 | IP Address | Signer IP |
 | Browser/OS Info | Browser and operating system details |
+
+Each signing freezes the legal text (with merge fields already filled in), the typed name, and related audit details so a later edit to the form question cannot change what a past signature shows. **Keep Until** and **Record Intact** appear on those frozen rows.
 
 Use the export buttons on this tab to download the records as PDF or Excel. The Signatures tab shows signatures for all family members tied to that profile context.
 

@@ -419,7 +419,12 @@ On an **Even Split** plan, **Final payment** can be **Before each session starts
 2. Set **Final payment** to **Before each session starts**.
 3. Enter **Days before start** (required). Example: `7` means each session's share is paid off seven days before that session starts.
 4. Set **End Date** as the last day families can still pick the plan.
-5. Save the plan. Use **Preview for** on the list to check a sample schedule. Preview notes can mention how many sessions start in the sample window.
+5. Set **Start Date** no later than the final payment date of your last session. If the Start Date is after that cutoff, Campium refuses to save with: **The Start Date is after …, the final payment date of the last session. Charges begin on the Start Date, so move it earlier.**
+6. Save the plan. Use **Preview for** on the list to check a sample schedule. Preview notes can mention how many sessions start in the sample window.
+
+When a family signs up late relative to a session's final-payment date, the preview can note that the session's share is **charged in full** on the late-charge date (or today once that date has passed), for example: **Final payment due … so that share is charged in full on ….**
+
+Plans never create installments before the plan **Start Date**. When the season balance is already paid or on a credit ($0 or less owed), Campium does not create zero or negative scheduled charges.
 
 This is not limited to a specific payment processor. The option appears when per-session Even Split columns are available on your account (they are live for camps that use Payment Plans).
 
