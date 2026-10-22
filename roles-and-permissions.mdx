@@ -49,9 +49,9 @@ The roles list shows every role for your account. Next to each role name, you ma
 
 Use the list to review your existing access profiles before you create a new one or update an existing role. When you have many roles, the search box helps you find the one you want to edit.
 
-Each role also offers a few actions:
+Each role also offers a few actions (account administrators see **Members** and related controls):
 
-- **Members** opens a list of the staff users who currently hold that role, so you can see exactly who is affected before you change or remove it.
+- **Members** opens **Members of** that role, with a count of distinct people who hold it. From the modal you can **Add a staff member** (search placeholder **Search staff by name**, then **Add**). If everyone already has the role, you see **Every active staff member already has this role.** Adding someone who already has a different role asks you to confirm with **Yes, move them**. You can also remove a member from the list when you are an administrator.
 - **Delete** removes a role. This button stays disabled while any users are still assigned to the role. Reassign those users to a different role first, and then the Delete button becomes available.
 
 <Callout kind="info">
@@ -120,6 +120,7 @@ Permissions are grouped into categories so you can turn on just the access a job
 - **Transportation** - manage transportation and route assignments.
 - **Custom fields** - view and edit custom profile fields.
 - **Site settings** - change account-wide settings and configuration.
+- **Admin** - includes **Billing**, which opens Campium subscription billing (your name menu → **Billing**) and related pay actions. Administrators receive it by default; grant it when another role should manage what your camp pays Campium. See [Billing](/billing).
 - **Users** - view, edit, create, and merge user records. Includes **View the 'Sales' tab**, which opens the profile **Sales** tab for enrollment and balances.
 - **Roles** - manage roles and permissions themselves.
 - **Contracts** - view and manage contracts.
@@ -167,7 +168,7 @@ Previewing is useful before assigning a role to staff, especially after you make
 
 ## Give someone a role
 
-Assign roles from CampiumDB Users, not from the Roles & Permissions screen. Roles define the access profile, and the user record is where you apply that profile to a person.
+You can assign a role from a person's record under **Admin → CampiumDB Users**, or (as an account administrator) from **Members** on **Admin → Roles & Permissions**. Roles define the access profile; the person keeps one role at a time.
 
 <Steps>
   <Step title="Open the user record" icon="users" titleType="p">
