@@ -54,7 +54,7 @@ Each row under that column shows the sample schedule for that plan, Standard and
 
 If a plan cannot be previewed yet, the cell explains why, for example a missing final payment date, no plan details, every charge date in the past, or nothing due on that sample balance. Changing the sample balance refreshes every row.
 
-Use **Copy All To Another Season** to copy every plan in the current season. When the page shows **Preview Cart**, it opens a cart preview in a new tab. That button is separate from the **Preview for** column.
+Use **Copy All To Another Season** to copy every plan in the current season. When the page shows **Preview Cart**, it opens a cart preview in a new tab so you can try real payment plans and paying-today choices without signing in as a parent. That button is separate from the **Preview for** column. The preview needs one season that has a registration form; otherwise you see **Cart preview unavailable.** with a note to open Payment Plans for a season that has a registration form. The built-in **Custom** plan is left out of the preview list.
 
 ## Create a new plan
 
@@ -87,7 +87,7 @@ The **Plan Name** field. Helper text: **Visible on the portal.** You cannot use 
 </ParamField>
 
 <ParamField body="Type of plan" param-type="string" required="true" show-location="false">
-The **Type of plan** field: **Standard** or **Even Split**. Standard plans use charge lines you define. Even Split plans divide the remaining balance across charges between the start and end dates.
+The **Type of plan** field when you create a plan: **Standard** or **Even Split**. Standard plans use charge lines you define. Even Split plans divide the remaining balance across charges between the start and end dates. Each season also has a built-in **Custom** plan (see below). You do not create that type from **Add New Payment Plan**.
 </ParamField>
 
 <ParamField body="Description" param-type="string" show-location="false">
@@ -130,7 +130,7 @@ When checked, the plan is offered only when its last charge is on or before the 
 Restricts the plan to specific sessions. When you select one or more sessions, the plan is offered only when the cart includes at least one of them. Leave it blank to offer the plan for all sessions in the season. The label uses your camp's term for products, for example **Show only for these Sessions**.
 </ParamField>
 
-## Choose between Standard and Even split
+## Choose between Standard, Even Split, and Custom
 
 The plan type changes how charges are created and managed.
 
@@ -138,6 +138,16 @@ The plan type changes how charges are created and managed.
 | --- | --- | --- | --- |
 | Standard | You define each charge manually | Schedule lines with dates and amounts or percentages | Plans with fixed installments or custom timing |
 | Even Split | Campium divides the remaining balance automatically | Charge cadence, dates, and monthly day if needed | Plans that should spread the balance evenly over time |
+| Custom | No automatic charges | Plan Name and Description only (staff rename) | Families you bill by hand on the Sales tab |
+
+### Custom (staff only)
+
+Each season gets a built-in **Custom** plan. It shows a **Staff only** badge. Tooltip: **Parents never see this plan. Choose it on a family's Sales tab when they pay on their own schedule. Families also move here when you edit one of their scheduled payments.**
+
+- Parents never see it at checkout. When a family is already on Custom, checkout shows a note that the camp office arranged a custom schedule and they should contact the office to change it.
+- On the plans list, the preview cell says there are no automatic charges and that you manage these families' payments.
+- You can rename **Plan Name** and **Description**. You cannot delete it, copy it, or turn its status off the way you do for Standard and Even Split plans.
+- Assign it from a family's profile **Sales** tab (**Modify Payment Plan**). Editing a scheduled payment by hand can also move the family onto Custom.
 
 ### Standard plans
 
@@ -361,7 +371,12 @@ Change a family's assigned plan from the Sales area on their profile.
   </Step>
   <Step title="Choose a different plan" icon="edit">
 
-  In **Modify Payment Plan**, select another plan in **Payment Plan**.
+  In **Modify Payment Plan For** that person, select another plan in **Payment Plan**.
+
+  </Step>
+  <Step title="Review Scheduled Charges" icon="list">
+
+  **Scheduled Charges** shows what the chosen plan would charge for this family's current balance (for example **Based on a balance of $X…**). For **Custom**, the preview explains that the plan schedules nothing automatically.
 
   </Step>
   <Step title="Adjust Charge day when needed" icon="calendar">

@@ -215,6 +215,7 @@ Use the **Recipients** tab to set who the form is for and who can see it.
   - Other forms: **Who is this form for?** with helper text **Pick who the form is about. Add Guardians only if they are the ones attending.**
 - Under **How to apply this form**, choose **To all the Active/Inactive/Pending user types selected above** or **Only people who match the filters below**.
 - If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type.
+- When the Season filter is exactly one season with a ready snapshot, **Profile answers as of** appears under it (**Today** or that season's **close** / **frozen**), the same control as on custom reports. It changes which profile answers the recipient filters use. Editing notes from reports are omitted here.
 - When the recipient setup needs attention, a warning icon appears next to **Recipients** on the tab.
 
 Set up recipients before you open the form or tell families about it, so the right people can see and complete it.
@@ -225,7 +226,7 @@ The **Questions** tab holds the questions users answer when they complete the fo
 
 - Add, edit, and order questions.
 - Question types include text fields, **Choose One**, **Choose Many**, and other input types.
-- Toolbar: **New Question**, **Add from Library**, **Add Section Header**, **Preview Form**.
+- Toolbar: **New Question**, **Add Signature**, **Add from Library**, **Add Section Header**, and **Preview Form** (when it still appears on the Questions tab). Use **Add Signature** for signature questions.
 - Each row starts with a drag grip (**Drag to reorder**), then the question number, then an **Actions** menu (vertical dots) with **Edit**, **Move to position**, and **Delete**. The question text is also a clickable **Edit** link.
 - When a question has follow-ups, a chip such as **Shows 2 follow-ups** appears on the parent. Each follow-up shows a chip such as **Shown if Q4 is Yes**. Hover highlights the related rows; click jumps to the first related question.
 
@@ -333,16 +334,22 @@ An empty Guardian 2 section stays valid, so single-guardian families are not blo
 
 ## Preview a form without saving
 
-Use **Preview Form** to walk through the form on the parent portal without creating a real submission.
+Use the orange **Preview** menu at the top of the form editor (same control as on a season's Guided setup Forms step) to walk through the form on the parent portal without creating a real submission. The menu header reads **Opens in a new tab**.
 
-This is different from [Test Mode](/test-mode). Test Mode lets staff open the live form on the portal and can create real responses. **Preview Form** never saves answers.
+- **Questions** - what people see when they open this form
+- On registration forms only: **Sessions selection** and **Cart**
+
+You can still open previews from **Settings** links such as **Preview Form**, **Preview Sessions Selection Page**, and **Preview Cart Header**.
+
+This is different from [Test Mode](/test-mode). Test Mode lets staff open the live form on the portal and can create real responses. Preview never saves answers.
 
 ### Open the preview
 
 1. Open **Forms** in the left navigation.
 2. Open the form you want to review.
 3. Choose one of these entry points:
-   - On the **Questions** tab, click **Preview Form**.
+   - Click **Preview**, then **Questions** (or **Sessions selection** / **Cart** on a registration form).
+   - On the **Questions** tab, click **Preview Form** when that button is shown.
    - On a registration form's **Settings** tab, under **Form Header Text**, click **Preview Form**.
    - On a registration form's **Settings** tab, under **Sessions Selection Header Text**, click **Preview Sessions Selection Page** (both labels use your camp's product wording).
 
@@ -418,6 +425,12 @@ The blank PDF offer is available whenever you create or edit an immunization-sty
 **Season** connects the form to the seasonal setup used elsewhere in Campium. For registration forms, the selected season determines which products, fees, discounts, and payment plans are available to the form.
 
 If a product or fee is missing from a registration form, confirm that the item exists in the same season selected on the form.
+
+#### Required
+
+**Required** appears on camper registration, re-enrollment, and update forms that have a season. Helper text: **Counts toward the "to do" number families see on the Portal, and toward Camper Hub's required forms.** The switch label is **Every camper in this season must finish this form**.
+
+Turning it on adds this form to the same list you manage under **Admin → Camper Hub → Camper Hub Settings → Required forms by season**. Leave it off when the form is optional. See [Camper Hub](/camper-hub#choose-which-fields-and-forms-count).
 
 #### Staff season assignment
 

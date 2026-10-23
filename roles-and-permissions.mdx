@@ -77,9 +77,12 @@ Create a new role when you need a new job type or a different access level.
 
   - Enter the role details requested on screen.
   - Turn permissions on or off for the new role based on the access that job needs.
+  - Only administrators can create a role named **Administrator**. If you try without that access, you see **Only administrators can create a role named Administrator.**
 
   </Step>
 </Steps>
+
+When you are not an administrator, you can only turn on permissions that your own role already has. Checking one you do not hold shows **You can only give a role permissions that you have yourself.** Administrators are not limited this way.
 
 A new role works best when it reflects a real staff responsibility. If two job functions need different access, create separate roles rather than sharing one broad role.
 
@@ -191,9 +194,18 @@ After assignment, that user's day-to-day access follows the permissions configur
 
 ## Who can use this screen
 
-Only people whose own access includes managing roles and permissions can use this screen. Staff without that access will not see **Roles & permissions** under **Admin**.
+Only people whose own access includes managing roles and permissions can use this screen. Staff without that access will not see **Roles & Permissions** under **Admin**.
 
 If you need to change roles but cannot open this page, contact an account owner or administrator.
+
+## When an action needs a permission you do not have
+
+Some admin actions that check permissions show a dialog titled **You need a permission for this**. The message names your role and the missing permission (for example under its category).
+
+- If you can manage roles, it says **You can turn it on in Roles & Permissions.** and offers **Open Roles & Permissions** (or **Exit preview and open Roles** while you are previewing a role).
+- If you cannot manage roles, it says **Ask an Administrator to add it to your role.** and **Close**.
+
+Opening Roles from that link can highlight the permission with a **Needed** badge. After you tick it (changes save immediately), the badge becomes **Already allowed**. Soft hide-or-show checks that never run that deny path do not show this coach.
 
 ## Limit staff to campers in certain sessions
 
