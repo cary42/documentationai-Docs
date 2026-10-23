@@ -26,7 +26,7 @@ When it loads, you see a **Season** filter, five summary tiles (six when **Retur
 
 Each hire can belong to one or more seasons. Use the **Season** filter at the top left to choose seasons, then click **Filter**. **Clear** returns you to the default view. The season list includes past and inactive seasons.
 
-The roster lists staff who have started a configured staff form (registration or standard) for the seasons you selected, plus anyone marked **Returning**. Returning staff stay on the roster for any season filter, even before they reapply or get a contract. If you do not choose a season, Staff Hub uses your default season.
+The roster lists staff who have started a configured staff form (registration or standard) for the seasons you selected, staff who already have a contract for those seasons, and anyone whose **Application Status** is set to something other than **Unsubmitted** or **Incomplete** (including **Returning**). Staff with a real status stay on the roster for any season filter, even before they reapply or get a contract. If you do not choose a season, Staff Hub uses your default season.
 
 ## Filter by application status
 
@@ -39,9 +39,9 @@ Above the roster, tiles summarize the current season filter:
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
   - **Returning** - staff marked **Returning**. This tile appears only when your **Application Status** field has a Returning option. Active filter note: **Showing N staff marked Returning. Click the tile again to show everyone.**
 
-  - **Ready for Offer** - staff who have completed at least one form but have no contract yet, plus **Returning** staff with no contract for the seasons in the filter (or, with no season filter, for any season that has not ended).
+  - **Ready for Offer** - staff whose **Application Status** is one you marked as ready, and who still have no contract for the seasons in the filter (or, with no season filter, for any season that has not ended). Use the gear on this tile (**Choose which statuses count as Ready for Offer**) to open **Ready for Offer statuses**. Helper text: **Staff with one of these statuses and no contract for the season count as Ready for Offer.** Pick statuses, then **Save**. Until you save at least one status, the tile stays at zero and clicking it opens the same modal. Active filter note: **Showing N staff with a Ready for Offer status and no contract yet. Click the tile again to show everyone.**
 
-  - **Awaiting Forms** - staff who have not finished every form they started. Returning staff already counted in Ready for Offer are not counted here.
+  - **Awaiting Forms** - staff who already have a signed contract and still have required staff forms unfinished. Required forms are the ones you connect for each season in **Staff Hub Settings**. In the Forms panel, those forms show a **Required** badge. Red statuses such as Rejected, DNR, or Fired are left out of this count. Active filter note: **Showing N staff with a signed contract who still have required forms to finish. Click the tile again to show everyone.**
 
   - **Contracts Sent** - the number of contracts sent to staff in the filter.
 
@@ -50,7 +50,7 @@ Above the roster, tiles summarize the current season filter:
   - **Signed This Week** - contracts signed in the last seven days.
 </Card>
 
-Tile counts reflect the full season filter until you apply a profile-field filter (below). Name search does not change the tiles. Click a tile to filter the roster to that group, and click it again to show everyone. With no tile filter on, the note above the roster says **Click a tile above to filter this list.** With one on, the note says who you are seeing (for example **Showing N staff who have completed a form and have no contract yet. Click the tile again to show everyone.**). This browser remembers your tile choice.
+Tile counts reflect the full season filter until you apply a profile-field filter (below). Name search does not change the tiles. Click a tile to filter the roster to that group, and click it again to show everyone. With no tile filter on, the note above the roster says **Click a tile above to filter this list.** This browser remembers your tile choice. Clicking **Ready for Offer** or **Returning** also sets the **Application status** filter to match.
 
 ## Filter by profile fields
 
