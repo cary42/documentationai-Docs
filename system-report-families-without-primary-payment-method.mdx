@@ -26,7 +26,7 @@ Use this workflow whenever you want a current list of families missing a primary
 - On the dashboard, open the **Payment Issues** card and select **No Primary Payment Method**.
 - Confirm the page title shows **Families Without Primary Payment Method - [selected season]**.
 
-When the page loads successfully, you see a **Season** dropdown in the page header and a results table with columns for **Primary Contact**, **Campers**, **Email**, **Active Registrations**, and **Balance**.
+When the page loads successfully, you see a **Season** dropdown in the page header and a results table with columns for **Primary Contact**, **Email**, **Campers**, **Payment Plan**, **Active Registrations**, and **Balance**.
 
 </Step>
 
@@ -35,6 +35,7 @@ When the page loads successfully, you see a **Season** dropdown in the page head
 - In the page header, locate the **Season** dropdown.
 - Choose the season you want to review (for example, the current camp season).
 - Use **Accounts with a balance** (default) or **Accounts with a $0 or less balance** to narrow the list. **Send Email** and **Send Text** only reach families on the balance view.
+- Use **Excluded plans** to leave families on certain payment plans off this report, its dashboard count, and its emails. A summary can show **Leaving out families on:** followed by the plan names. **Custom** is left out by default. In the modal, check the plans to exclude, then **Save** (or **Cancel**). Helper text: **Families on a checked plan are left off this report, its dashboard count and its emails.**
 
 After applying the filter, the results table updates and the page title includes the chosen season.
 
@@ -91,6 +92,10 @@ If you manage multiple seasons at once, run this report separately for each acti
 
 </Callout>
 
+### Excluded plans
+
+**Excluded plans** is camp-wide. Families on a checked plan do not appear on this report, do not count on the dashboard **No Primary Payment Method** tile, and are not included when you **Send Email** or **Send Text** from the report. **Custom** starts checked. Named plans for the selected season (or every active season when you are on All Seasons) appear as additional checkboxes.
+
 ## Columns in the results table
 
 Each row in the report represents one family account without a primary payment method defined for the selected season.
@@ -112,6 +117,10 @@ Camper names for the family (linked to profiles). Use this to see who is enrolle
 ### Email
 
 Primary email address associated with the family account. Use this to send reminders about adding a primary payment method or to follow up on outstanding balances.
+
+### Payment Plan
+
+The family's payment plan for the selected season, when one is assigned. Families on plans you left out under **Excluded plans** do not appear in the table.
 
 ### Active Registrations
 
