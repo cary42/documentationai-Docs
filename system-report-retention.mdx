@@ -23,13 +23,14 @@ Description on System Reports: **Everyone registered in the previous season, spl
 | --- | --- |
 | **Lost** / **Retained** | Toggle which list you are viewing. Badges show the counts. |
 | **Compared to** | Choose an earlier season in retention. Defaults to the immediate previous season in that set. |
+| **Grade** | When your camp has a Grade field, pick **All grades** or one grade. The filter uses the grade they had in the **Compared to** season (the value saved when that season closed, when a snapshot is ready). Tooltip examples: **The grade saved when [season] closed.** or **[season] has no saved answers, so this is today's grade.** Choosing a grade keeps those people on the list even when their current grade is normally left out of retention. |
 | **Only campers who paid** | Leaves out people whose charges came to $0 after discounts in the prior season (uses your camper plural label). |
 | **Display Columns** | Opens **Profile fields to show**. Filter with **Type to filter fields...**, check fields, then **Save Columns**. |
-| **Send Text** / **Send Email** | Reach the list currently on screen. You need **Manage Email**. Audiences carry the compare season and paying filter. |
+| **Send Text** / **Send Email** | Reach the list currently on screen. You need **Manage Email**. Audiences carry the compare season, grade, and paying filter. |
 
 When there is no earlier season to compare, the page explains that there is no earlier season in retention for the current season.
 
-Intro text matches the dashboard card: everyone registered in the prior season, split by whether they registered again. When grades are left out of retention, a note can list those grades.
+Intro text matches the dashboard card: everyone registered in the prior season, split by whether they registered again. It also says **Grade is the grade they had in** the compare season. When that season has no saved answers, it notes that the grade shown is today's grade. When grades are left out of retention and **Grade** is **All grades**, a note can list those grades. With a specific grade selected, the note can say the list includes people whose current grade is normally left out.
 
 ## Columns
 
@@ -37,7 +38,7 @@ Intro text matches the dashboard card: everyone registered in the prior season, 
 | --- | --- |
 | Camper (your singular label) | Profile name |
 | **Status** | Current profile status |
-| **Grade** | When grades exist |
+| **[season] grade** or **Grade** | When grades exist. Header uses the compare season name (for example **Summer 2025 grade**). Same tooltip as the **Grade** filter. |
 | Prior season products | Sessions or products from the compare season |
 | Current season products | Sessions or products for the report season, or **Not registered** |
 | **Years** | Years at camp |
@@ -45,7 +46,7 @@ Intro text matches the dashboard card: everyone registered in the prior season, 
 
 ## How this relates to the dashboard card
 
-The dashboard **Retention** card uses the same season pool and grade rules. The card's **Email This List** drill-in is a quick composer for the retained or lost list. **Open full report** from the drill-in keeps the compare season and paying filter you were viewing, so the report opens with the same **Compared to** and **Only campers who paid** choices. The full report also adds **Display Columns**, **Send Text**, and a standing page you can bookmark.
+The dashboard **Retention** card uses the same season pool and grade rules. The card's **Email This List** drill-in is a quick composer for the retained or lost list. **Open full report** from the drill-in keeps the compare season and paying filter you were viewing, so the report opens with the same **Compared to** and **Only campers who paid** choices. The full report also adds the **Grade** filter, **Display Columns**, **Send Text**, and a standing page you can bookmark.
 
 Configure seasons and grades from the card's **Configure retention** gear, or from **Reports → System Reports → Product YoY Comparison**. See [Chart Reports](/system-report-charts#retention-dashboard-card).
 

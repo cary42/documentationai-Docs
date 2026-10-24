@@ -177,7 +177,7 @@ To send a contract:
 To send the same template to several people, use the roster checkboxes instead of opening each row.
 
 1. Check the box on each staff row you want, use the header checkbox for **Select all staff on this page**, or (when offered) **Select all N matching** for everyone in the current filter across pages.
-2. A bar appears with **N selected** (or **N selected across all pages**), **Send contracts**, **Clear**, and an export for the selected staff. Depending on your permissions and modules, it also shows **Send email**, **Resend references**, **Request W-4**, and **Request I-9**. When your **Application Status** profile field has options, the bar also includes **Set Application Status**.
+2. A bar appears with **N selected** (or **N selected across all pages**), **Send contracts**, **Clear**, and an export for the selected staff. Depending on your permissions and modules, it also shows **Send email**, **Send text**, **Resend references**, **Request W-4**, and **Request I-9**. When your **Application Status** profile field has options, the bar also includes **Set Application Status**. **Send email** and **Send text** need **Manage Email**.
 3. Click **Send contracts**. The **Send contract** modal opens (title becomes **Send contracts** when more than one person is selected). With everyone matching selected, confirm sending that template to N people across all pages, with **Send contracts** / **Cancel**.
 4. Choose a **Contract template** and **Season**.
 5. Review **Will be emailed** (across-pages wording when applicable). Anyone who already has that template for that season appears under **Already have this contract for this season** and is skipped.
@@ -187,6 +187,10 @@ To send the same template to several people, use the roster checkboxes instead o
 **Sent** means the contract was created and emailed. **Skipped** means the person already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People who still need a retry stay checked, the bar can show **Still selected from the last send:** with a count, and **Send contracts** retries them. Someone whose contract was created but whose email did not go out is removed from the selection, so a retry does not skip them as a duplicate.
 
 Contract history and the **Contracts Sent** tile update without a page reload. You need the same access used to generate contracts elsewhere, and at least one active contract template. Click **Clear** when you are done.
+
+## Send text to several staff
+
+With the same roster selection, click **Send text** on the bulk bar to open the shared **Text this group** composer for the selected staff. The message can start with your camp name (**Start with your camp name**). You need **Manage Email**, the same permission as **Send email**. See [SMS](/sms).
 
 ## Set Application Status for several staff
 
