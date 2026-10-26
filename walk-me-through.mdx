@@ -1,6 +1,6 @@
 ---
 title: "Walk me through"
-description: "Start an in-app walkthrough from the page title row, rate whether it helped, and open related guides from the footer."
+description: "Start an in-app walkthrough from the page title row, rate whether it helped, open related guides, and continue setup after booking training."
 ---
 
 Some admin pages offer a **Walk me through** control in the page title row (near that page's own actions). Use it when you want step-by-step guidance for a task that starts on the page you are already on.
@@ -12,19 +12,23 @@ Some admin pages offer a **Walk me through** control in the page title row (near
 - One walkthrough: the button starts it. The accessible name is **Walk me through:** plus the guide title.
 - More than one: the button opens a menu. Pick a guide title to start that walkthrough.
 
+Some guides also start from a link that includes `?walkthrough=` plus the guide id (for example the Batch Edit walkthrough from **Custom Reports**). You still need the permission and module for that page. The walkthrough does not unlock screens you cannot open on your own.
+
 Guides that only pass through the page later do not earn this header button.
 
 ## What happens next
 
 The walkthrough highlights the controls named in each step and advances as you complete them. Follow the on-screen prompts until the last step.
 
-When you finish, Campium asks **Did this help?** with **Yes** / **No**. Choosing **No** can open **What was missing?** for optional feedback. After you respond, you see **Thanks for the feedback.**
-
-You still need whatever permission or module the underlying page already requires. The walkthrough does not unlock screens you cannot open on your own.
+When you reach the last step, Campium asks **Did this help?** with **Yes** / **No**. You do not need every earlier checkbox ticked first. Choosing **No** can open **What was missing?** for optional feedback. After you respond, you see **Thanks for the feedback.**
 
 ## Related guides in the footer
 
 When related walkthroughs exist for the page, the admin footer can list them next to the other footer links. The first two titles show as links. If there are more, a **N more** link reveals the rest.
+
+## After you book training
+
+If your camp still has open items on **Your Campium checklist** (dashboard card or **Open** / **See all** to the checklist page), and **Book your first training** has just checked itself off, Campium can offer the next open checklist item that has a walkthrough. You see **Your training is booked**, a short line about getting a head start, then **Walk me through it** or **Not now**. Choosing either hides the offer on that browser for that training item so you are not asked again.
 
 <Callout kind="info" collapsed="false">
   Support Ticket can also offer walkthrough links when Preview new layout is on. That ticket offer is separate from the header **Walk me through** button, which is available without Preview.

@@ -58,11 +58,9 @@ Key parts of the list:
 
   - **Archive** / **Unarchive** - Hide older emails from the Active view without deleting their stats or logs.
 
-Use these tools to keep your communication organized and to find past campaigns.
-
 ## Create and send a new mass email
 
-Use these steps when you want to send a new communication to a group of families or users.
+Use these steps to send a new email to a group of families or users.
 
 <Steps>
   <Step title="Start a new email" icon="plus" title-type="p">
@@ -71,13 +69,13 @@ Use these steps when you want to send a new communication to a group of families
 
     - The email composer opens on the **Settings** tab with a new Draft.
 
-    - The status stays as **Draft** until you send now or schedule it.
+    - The status stays **Draft** until you send or schedule it.
 
   </Step>
 
   <Step title="Complete the Settings tab" icon="settings" title-type="p">
 
-    - Fill in sender details, subject, and content.
+    - Fill in the sender address, subject, and email body.
 
     - Choose whether this is a marketing email and set when it should send.
 
@@ -87,7 +85,7 @@ Use these steps when you want to send a new communication to a group of families
 
     Draft emails auto-save while you edit (see [Draft auto-save](#draft-auto-save)). You can still click **Save** any time.
 
-    You can find details on each field in the [Email settings reference](#email-settings-reference) below.
+    See the [Email settings reference](#email-settings-reference) below for each field.
 
   </Step>
 
@@ -95,19 +93,19 @@ Use these steps when you want to send a new communication to a group of families
 
     - Go to the **Recipients** tab.
 
-    - Build or select filters to target the right families or users.
+    - Build or load filters to target the right families or users.
 
-    - Confirm the **recipient count** before sending.
+    - Confirm the **Matches** count before sending.
 
-    If you skip this step, Campium warns you that no recipients are selected.
+    If you skip this step, the **Recipients** tab shows a warning icon and Campium will not send.
 
   </Step>
 
   <Step title="Test and preview your email" icon="play-circle" title-type="p">
 
-    - On the **Settings** tab, use **Send Test Email** to send a copy to yourself or a colleague.
+    - In the action bar at the bottom of the **Settings** tab, click **Send preview** to open **Send Test Email** and send a copy to yourself or a colleague.
 
-    - Use **Preview Email** to see how the email will look in a typical inbox.
+    - Click **Preview** to see the email in a new tab.
 
     Confirm that links, merge fields, and formatting look correct before sending to families.
 
@@ -115,11 +113,11 @@ Use these steps when you want to send a new communication to a group of families
 
   <Step title="Send or schedule the email" icon="rocket" title-type="p">
 
-    - If you want to send immediately, leave **When To Send** blank or set it to the current time, then click **Send Now**.
+    - To send now, leave **When to send** on **Send immediately**, then click **Send**.
 
-    - If you want to send later, set **When To Send** to your future date/time. The email shows as **Scheduled** until it is sent.
+    - To send later, choose **Schedule for a date and time**, set **Send at** to a future date and time, then click **Save**. The email shows as **Scheduled** until it is sent.
 
-    - For emails using dynamic filters, you may see **Send To Updated Recipients** when filters or recipients change.
+    - After an email has been sent, the **Send** button becomes **Send to updated recipients**.
 
     After sending, the email moves to **Sent** (or continues as **Auto-Sending** if you enabled auto-send).
 
@@ -127,7 +125,7 @@ Use these steps when you want to send a new communication to a group of families
 </Steps>
 
 <Callout kind="alert" collapsed="false">
-  Before you send, double-check both the **recipient count** and the **When To Send** time. Mass emails cannot be unsent once they have gone out.
+  Before you send, double-check the **Matches** count and the **When to send** setting. Mass emails cannot be unsent once they have gone out.
 </Callout>
 
 ## Composer tabs: Settings, Recipients, Logs
@@ -137,21 +135,21 @@ Use the tabs at the top of the composer to move between content, audience, and h
 <Tabs>
   <Tab title="Settings" icon="settings">
 
-    The **Settings** tab controls the content, sender information, timing, and core email options.
+    The **Settings** tab controls the content, sender, timing, and email options.
 
-    Typical tasks on this tab:
+    On this tab you:
 
-    - Set the **From** name and address.
+    - Set the **From email address**.
 
     - Enter the **Subject** line.
 
-    - Pick a **Template** and edit the message body.
+    - Use **Insert template** if you want a starting point, then edit the **Email body**.
 
-    - Mark the email as a **Marketing Email** (to include an unsubscribe link).
+    - Check **Marketing email** to include an unsubscribe link.
 
-    - Configure **When To Send**, test sends, and previews.
+    - Set **When to send**, and use **Preview** and **Send preview**.
 
-    - Add **Attachments** if needed.
+    - Add an **Attachment** if needed.
 
     - Use **Campaign tracking** to generate a tracked registration link for this email.
 
@@ -161,25 +159,23 @@ Use the tabs at the top of the composer to move between content, audience, and h
 
   <Tab title="Recipients" icon="users">
 
-    The **Recipients** tab defines who will receive the email.
+    The **Recipients** tab defines who receives the email.
 
     On this tab you can:
 
-    - Use the **dynamic filter builder** to target specific groups (by session, status, payment state, and other criteria).
+    - Use the filter builder to target specific groups (by session, status, payment state, and other criteria).
 
-    - Select from **saved filters** you use frequently.
+    - Load one of your **Saved Filters**.
 
-    - Choose to **display all users** when you want to send broadly.
+    - See the **Matches** count and click **View** to review the list.
 
-    - View the **estimated recipient count** and click **View Recipients** to review the list in more detail.
-
-    Campium shows a warning if you have not set any recipients so you do not accidentally schedule or send an email to zero people.
+    Until you set recipients, the tab shows a warning: **You must set the filter below or there will be no recipients.**
 
   </Tab>
 
   <Tab title="Logs" icon="bar-chart">
 
-    The **Logs** tab shows delivery and engagement details after you send. Columns include **Name**, **Email**, **Sent**, **Opened** (when available), and **View**.
+    The **Logs** tab shows who received the email and who opened it. Columns include **Name**, **Email**, **Sent**, **Opened** (when available), and **View**. To follow up with people who did not open it, see [Resend a mass email to non-openers](/resend-email-to-non-openers).
 
     The **Sent** column can show:
 
@@ -193,11 +189,11 @@ Use the tabs at the top of the composer to move between content, audience, and h
 
     Empty state: **No emails sent yet**, with the note that delivery and open details appear here after you send.
 
-    When people were unchecked in **View Recipients** before send, **Logs** also shows **Skipped (N)** with **Name**, **Unchecked by**, and **When**. Helper text: **Unchecked in the recipient list, so they did not get this email and are not counted as sent.**
+    When people were unchecked in the **Recipients** list (**View** on the **Recipients** tab) before send, **Logs** also shows **Skipped (N)** with **Name**, **Unchecked by**, and **When**. Helper text: **Unchecked in the recipient list, so they did not get this email and are not counted as sent.**
 
-    High-level **Sent**, **Opened**, **Clicked**, **Registered**, and **Time Sent** cards appear on the **Settings** tab after the email is sent (see [Review send and campaign stats](#review-send-and-campaign-stats)).
+    **Sent**, **Opened**, **Clicked**, and **Registered** appear on the **Settings** tab under **How this email performed** after the email is sent (see [Review send and campaign stats](#review-send-and-campaign-stats)).
 
-    For some emails, you may also see a **Resend to non-openers** option, which lets you follow up only with families who did not open the first message.
+    When some recipients did not open the email, the **Sent** card shows **Resend to N non-openers**, which follows up only with people who did not open the first message.
 
   </Tab>
 </Tabs>
@@ -221,13 +217,15 @@ Auto-save runs only when all of these are true:
 
 If you turn on **Auto-send**, fill in **When To Send**, or open a sent email, the note goes back to asking you to save yourself, and you use **Save** (with its usual confirms) before changes stick. Buttons such as **Preview**, **Send preview**, **Save**, and **Send** stay available either way.
 
+If you leave the composer with unsaved work, Campium asks before navigating away. Titles include **Your latest changes are not saved**, **This email is not saved yet**, or **This email has no subject**. Actions can include **Leave without saving**, **Stay**, **Save**, **Keep draft**, and **Discard**. A draft that already auto-saved with a body but no subject can be kept with **Keep draft**.
+
 ## Track registrations from a mass email
 
-Use **Campaign tracking** on the **Settings** tab when the email should send people to register and you want clicks and signups attributed to that send.
+Use **Campaign tracking** on the **Settings** tab when the email sends people to register and you want clicks and signups credited to that send.
 
 1. Open the email from **Communications → Mass Emails**.
 2. On the **Settings** tab, confirm the draft has saved (see [Draft auto-save](#draft-auto-save)), or click **Save** if you are on a scheduled or Auto-send draft.
-3. Under **Campaign tracking** / **Registration link**, click **Generate campaign link**.
+3. Under **Campaign tracking**, click **Generate campaign link**.
 4. Choose **Website** or **Parent portal**, then click **Insert into email** (or copy the link).
 5. If you have access to Campaigns, open **View campaign results** to review performance.
 
@@ -235,26 +233,27 @@ Use **Campaign tracking** on the **Settings** tab when the email should send peo
 
 ## Review send and campaign stats
 
-After you send an email, open it from **Communications → Mass Emails** and stay on the **Settings** tab. Summary cards appear at the top:
+After you send an email, open it from **Communications → Mass Emails** and stay on the **Settings** tab. **How this email performed** appears at the top:
 
 - **Sent** - How many recipients received the message.
-- **Opened** - How many unique recipients opened it, with the open rate percentage underneath.
-- **Time Sent** - When the email went out.
+- **Opened** - How many unique recipients opened it, with the open rate.
+
+The **Delivery** panel on the right shows **Sent at**, the time the email went out.
 
 If you generated a campaign link for that email, two more cards appear:
 
 - **Clicked** - How many different visitors used your tracked link. The line under the number shows total clicks (for example, **12 total clicks**).
 - **Registered** - How many people who clicked the link finished registering. The line under the number shows total registrations. Hover the info icon for the matching rule: a registration counts when someone who clicked your link finishes registering within 30 days on the same device. If they clicked links from more than one campaign, the registration counts toward each.
 
-Use **View campaign results** under **Campaign tracking** when you need the full campaign analytics page. The Mass Emails list **Stats** column still shows opens and sends only.
+Use **View campaign results** under **Campaign tracking** for the full campaign analytics page. The **Opens / Sends** column on the Mass Emails list shows opens and sends only.
 
 ## Email settings reference
 
 Use these field descriptions as a quick reference while you work on the **Settings** tab.
 
-### From (required)
+### From email address (required)
 
-Display name and email address that appear to recipients as the sender. Use a recognizable camp address so families trust and recognize your messages.
+The address that appears to recipients as the sender. Use a camp address families recognize.
 
 ### Subject (required)
 
@@ -262,17 +261,21 @@ The email subject line shown in recipients' inboxes. Keep it clear and specific,
 
 ### BCC (optional)
 
-Enter one or more email addresses to blind-copy on the send. Recipients on the To line do not see the BCC addresses. Use this to keep an internal mailbox, a colleague, or an archive address on record for the message without exposing them to families.
+Enter one or more email addresses to blind-copy on the send, separated with commas. Recipients do not see the BCC addresses. Use this to copy an internal mailbox, a colleague, or an archive address without exposing them to families.
 
 ### Template (optional)
 
-Optional layout or content template to start from. Choose a template to reuse a standard header, footer, or structure, then edit the message body as needed.
+A saved template to start from. Choose one to reuse a standard header, footer, or structure, then edit the message body.
 
 ### Insert Template
 
-Use **Insert Template** above the email body to start from a saved subject and body. Choose a template from the dropdown, then edit the message before sending.
+Use **Insert template** above the email body to start from a saved subject and body. Choose a template from the dropdown (**Search or choose a template**), then edit the message before sending. **Manage templates** opens **Admin → Email Templates** in a new tab.
 
 The visual **Template Library** (or **Library**) thumbnail browser is temporarily off. Per-template **Preview** on **Admin → Email Templates** still works, and you can still insert from the dropdown.
+
+### Import HTML
+
+Click **Import HTML** near the email body to paste (or upload) HTML from another tool, such as Mailchimp or Constant Contact. Campium keeps the layout, inlines styles for Gmail and Outlook, and maps common name and email tags to Campium merge fields. After import, use **Preview** and **Edit HTML** to review the full design. The same flow is available under **Admin → Email Templates**. See [Email Templates](/email-templates#import-html-from-another-email-tool).
 
 ### Save as template
 
@@ -289,23 +292,23 @@ See also [Email Templates](/email-templates#mass-emails).
 
 ### Show Default Header (optional)
 
-Toggle that controls whether your default invoice header appears at the top of the mass email. If you set this to **Yes**, Campium adds your default invoice header, including logo, above the email content so the message matches your official documents.
+In the composer the checkbox label is **Show default header**, with the hint **Puts your default header and logo at the top of the email.** Turn it on so the message matches your official documents.
 
-Use this when you want the email to look more formal or transactional, such as billing notices or policy updates.
+Use it when you want the email to look formal or transactional, such as billing notices or policy updates.
 
 <Callout kind="tip">
-  Turn on **Show Default Header** and use **Preview Email** or **Send Test Email** to confirm the header and body work well together, since the header can change spacing and overall layout.
+  After you turn on **Show default header**, use **Preview** or **Send preview** to check the layout, since the header can change spacing.
 </Callout>
 
 ### Display Login Button? (optional)
 
-Toggle that controls whether a login button is added to the email. In the composer the checkbox label is **Display login button**. New mass emails default to **Yes** (including drafts started from group email). Turn it on when the message asks families to sign in and take action, such as completing a form or making a payment, so recipients get a clear button that takes them straight to their portal login. Turn it off when the message does not need a login button.
+Adds a login button to the email. In the composer the checkbox label is **Display login button**, with the hint **Adds a button that takes families straight to the parent portal.** New mass emails start with it on (including drafts started from group email). Keep it on when the message asks families to sign in and act, such as completing a form or making a payment. Turn it off when the message does not need a login button.
 
 ### Account setup merge fields
 
 When someone has never signed in, you can email them a setup link from a mass email.
 
-In the composer, use **Insert merge field** (or **Merge Fields**) and choose **Account Setup URL**. It inserts `{magic_login}`, which is the bare setup link (the token is attached when the email sends). Wrap that URL in your own link text or an **Insert button** label. There is no separate merge field that auto-writes **Set up your account** link copy.
+In the composer, use **Insert merge field** and choose **Account Setup URL**. It inserts `{magic_login}`, which is the bare setup link (the token is attached when the email sends). Wrap that URL in your own link text or an **Insert button** label. There is no separate merge field that auto-writes **Set up your account** link copy.
 
 These merge fields are available on mass emails. They are not on **Admin → Email Templates**. Recipients open the link on **Set up your account**, create a password (or continue with Google or Apple), and finish setup. When your payment processor has a self-service payment methods page, they land there next; otherwise they land on the portal home. Setup links from welcome-style sends stop working after 14 days; the expired page lets them request a new one.
 
@@ -313,11 +316,11 @@ You can also send a one-off setup email from a profile. See [Profiles](/profiles
 
 ### Also send to campers (optional)
 
-Turn on **Also send to campers** when you want campers who have their own email address to receive a copy, not only their guardians.
+Turn on **Also send to campers** when campers who have their own email address should get a copy, not only their guardians.
 
-- Campers in the recipient list still deliver to Guardian 1 and Guardian 2 email addresses by default.
+- Campers in the recipient list deliver to the Guardian 1 and Guardian 2 email addresses by default.
 - With this checkbox on, Campium also sends a copy to each camper who has an email on their profile.
-- After the email is sent, the **Settings** summary shows **Campers** as **Included** or **Guardians only**.
+- After the email is sent, the **Delivery** panel on **Settings** shows **Campers** as **Included** or **Guardians only**.
 
 Leave it off when only parents or guardians should receive the message.
 
@@ -337,15 +340,15 @@ In the email body toolbar (right side), open **AI Rewrite** (tooltip **Rewrite t
 
 ### Marketing Email (optional)
 
-Set to **Yes** for promotional or marketing-style emails. In the composer the checkbox label is **Marketing email**. When you mark an email as marketing, Campium adds an unsubscribe link for compliance and recipient preferences.
+Turn on for promotional or marketing emails. In the composer the checkbox label is **Marketing email**, with the hint **Adds an unsubscribe link at the bottom and honors opt-outs. Required for anything promotional.**
 
 <Callout kind="info" collapsed="false">
-  Use **Marketing Email = Yes** for newsletters, promotions, or announcements families might want to opt out of. Use **No** for strictly operational notices where unsubscribes are not appropriate.
+  Check **Marketing email** for newsletters, promotions, or announcements families might want to opt out of. Leave it off for operational notices where unsubscribing does not apply.
 </Callout>
 
 ### When To Send (optional)
 
-Select a date and time to schedule the email. If you leave this blank or set it to now, the email sends immediately when you click **Send Now**. If you pick a future time, the email shows as **Scheduled** until that time.
+Choose **Send immediately** to send when you click **Send**. Choose **Schedule for a date and time**, then set **Send at** to a future date and time and click **Save**. The email shows as **Scheduled** until that time. A time in the past is rejected with **Sent Date must be in the future.**
 
 <Callout kind="info" collapsed="false">
   Send times shown on the composer, the Mass Emails list, and the Logs tab are displayed in your configured send timezone, not in each recipient's local time. Set your scheduled time against that timezone.
@@ -353,67 +356,63 @@ Select a date and time to schedule the email. If you leave this blank or set it 
 
 ### Auto-send Emails To New Matching Recipients (optional)
 
-When set to **Yes**, Campium continues sending this email automatically to any new users who match the recipient filters in the future. The email status changes to **Auto-Sending** and remains active until you disable or archive it.
+In the composer the checkbox label is **Auto-send to new matching recipients**. When it is on, Campium keeps sending this email to new people who match the recipient filters later. The email status changes to **Auto-Sending** and stays active until you turn it off or archive the email.
 
 <Callout kind="alert" collapsed="false">
-  If you enable **Auto-send Emails To New Matching Recipients**, treat this email like an ongoing campaign. Review the filters carefully so new families do not receive outdated content.
+  If you turn on **Auto-send to new matching recipients**, treat this email as an ongoing campaign. Review the filters so new families do not receive outdated content.
 </Callout>
 
 After the email has already gone out with Auto-send still on, the **Recipients** tab locks the filters and shows **Recipient filters are locked.** The banner explains that Auto-send is on and new people who match an edited list would get this email within about 2 minutes. Click **Change recipient filters**, then confirm **Change the recipient filters anyway?** to unlock editing for your session. Unlock only when you intend new matching people to receive this same email.
 
 ### Attachments (optional)
 
-Upload files to include with your email, such as JPG or PNG images, PDF documents, or QuickTime videos. Each file can be up to **10MB**, and you can upload multiple files per email.
+Under **Attachment**, click **Choose file** to attach files such as JPG, PNG, or GIF images, PDF documents, or QuickTime videos. Each file can be up to **10MB**, and you can attach several files per email.
 
 ## Work with recipients and filters
 
 The **Recipients** tab is where you decide who receives your message.
 
-- **Dynamic filter builder**
+- **Filter builder**
 
-  - Add one or more conditions (for example, enrolled in a session, outstanding balance, camper age).
+  - Pick a field under **Choose a Field**, then click **Add Another Filter** for more conditions (for example, enrolled in a session, outstanding balance, camper age).
 
-  - Combine filters to narrow down to exactly the group you need.
+  - Join filters with **and** or **or** to narrow to the group you need.
 
-  - Save filters you use frequently so you can apply them quickly to future emails.
+  - When the Season filter is exactly one season with a ready snapshot, **Profile answers as of** appears under it (**Today** or that season's **close** / **frozen**). It chooses which profile answers the filters match against. The same control appears on form Recipients and custom reports (recipient screens omit the report editing notes). See [Custom Reports](/custom-reports#look-at-another-year-with-the-season-filter).
 
-- **Saved filters**
+  - Click **Save as New** to save filters you reuse.
 
-  - Apply previously saved audience definitions in a single click.
+- **Saved Filters**
+
+  - Choose a saved filter from **-- Select a Saved Filter --**, then click **Load Template**.
 
   - Useful for regular sends like "All current-season families" or "Staff members."
 
-- **Show all users**
-
-  - Use the option to **display all users** when you truly mean to send camp-wide.
-
-  - Combine with additional filters if you start broad and then refine.
-
 - **Recipient count and list**
 
-  - Review the **record count** displayed for your current filters.
+  - Review the **Matches** count for your current filters.
 
-  - Click **View Recipients** to see the list of individual recipients when you need to verify who will receive the email.
+  - Click **View** to see each recipient when you need to verify who will receive the email.
 
   - On that list, use the **Send** column to uncheck anyone who should not get this email. Helper text: **Uncheck anyone who should not get this email. Unchecking a camper skips both guardians. Use the Send box in the header to check or uncheck everyone, then pick who should get it. Changes save right away.** (For SMS the helper says **text** instead of **email**.) The header **Send** checkbox (aria-label **Send to everyone in this list**) checks or unchecks the whole list. Checking everyone asks **Check all N people? Everyone in this list will get it.** with **Yes, check all**. The summary shows how many people are unchecked and will be skipped. Unchecks also apply when a scheduled email or text sends later.
 
 <Callout kind="tip" collapsed="false">
-  Always check the **recipient count** and, when sending to a sensitive group, use **View Recipients** to spot-check the list before sending.
+  Check the **Matches** count and, when sending to a sensitive group, click **View** to spot-check the list before sending.
 </Callout>
 
-Campium shows a **warning** on the Recipients tab if no recipients are set. Resolve this warning before you test, schedule, or send the email.
+Campium shows a **Warning** on the Recipients tab if no recipients are set. Resolve it before you schedule or send the email.
 
 ### Recipients locked from a Send Email button
 
 When you start from a report or roster **Send Email** / **Email this group** control and choose **Open in full editor**, Mass Emails opens on **Settings** with that audience already set.
 
-On **Recipients**, filters stay hidden so the list cannot change by accident. You see a banner such as **This email goes to the [count] [people] from [label].** The side panel also notes that everyone came from the button you used.
+On **Recipients**, filters stay hidden so the list cannot change by accident. You see a banner such as **This email goes to the [count] [people] from [label].**, which explains that the **Send Email** button you used set this list.
 
 When that message was started from a report and you schedule it for later, Campium rechecks who still appears on that report at send time. People who left the report are dropped. Nobody new is added.
 
-To pick a different audience, click **Replace with a filter**, then confirm **Replace with a filter**. After that, the normal filter builder is available again. Until you replace the list, changing recipients another way is blocked.
+To pick a different audience, click **Replace with a filter**, then confirm **Replace with a filter**. The filter builder then comes back. Until you replace the list, you cannot change recipients another way.
 
-You need **Manage Email** permission for these group sends. The same full-editor handoff is used from bunks, sessions, wait list, tipping reminders, retention **Email This List**, and other **Email this group** entry points.
+You need the **Manage Emails** permission for these group sends. The same full-editor handoff is used from bunks, sessions, wait list, tipping reminders, retention **Email This List**, and other **Email this group** entry points.
 
 ### Preview before a group send
 
@@ -433,33 +432,37 @@ Use these actions in the composer to control how and when your email goes out.
 
 ### Send Test Email
 
-- From the **Settings** tab, click **Send Test Email**.
+- In the action bar on the **Settings** tab, click **Send preview**. The **Send Test Email** dialog opens.
 
-- Enter one or more test addresses (often your own or staff).
+- Enter one or more test addresses (often your own or a colleague's).
+
+- If the draft still has unsaved edits, Campium can ask you to **Save and send preview** before the test goes out.
+
+- On success, a toast reads **Preview sent.**
 
 - Review formatting, links, and merge fields in a real inbox before sending to families.
 
 ### Preview Email
 
-- Click **Preview Email** to see how the email looks on screen.
-- Merge fields are filled from **one random recipient** in your campaign audience when recipients are selected. A notice at the top of the preview says it is test data and names that sample person. Use **Pick another** when you want a different sample. If nobody is selected yet, merge fields use your own profile (or another fallback) instead.
+- Click **Preview** to see the email in a new tab.
+- Merge fields are filled from **one random recipient** in your audience when recipients are selected. A notice at the top of the preview says it is test data and names that sample person. Use **Pick another** when you want a different sample. If nobody is selected yet, merge fields use your own profile (or another fallback) instead.
 - The notice can also say who the real send would address (for example a guardian) when that differs from the sample recipient.
 - Addresses you enter for a test send still only go to those addresses. The sample person is for fill-in only.
-- Use this preview to catch spacing issues, long subject lines, or missing content.
+- Use the preview to catch spacing issues, long subject lines, or missing content.
 
 ### Send Now vs scheduled send
 
-- **Send Now**
+- **Send**
 
   - Use when you are ready to send immediately.
 
-  - Works best when **When To Send** is blank or set to the current time.
+  - Leave **When to send** on **Send immediately**.
 
   - After you confirm (**Yes, Send!**), Campium queues recipients, then delivers messages in batches. You can leave the page; delivery keeps going.
 
   - On the **Settings** tab, a **Sending this email** panel shows progress while the send is in flight:
 
-    - **Preparing recipients** - Campium is still building the recipient list. No X of Y count yet.
+    - **Preparing recipients** - Campium is still building the recipient list (**Working out who this email goes to.**). No X of Y count yet.
 
     - **Delivering** - Shows **X of Y messages delivered**, plus tallies for **failed** and **skipped** when those apply.
 
@@ -467,39 +470,33 @@ Use these actions in the composer to control how and when your email goes out.
 
   - If the queue job fails before any messages go out, the panel shows **This email did not send**. Check the **Recipients** tab, then send again.
 
-  - Very large recipient lists may need a second **Send Now** click to finish queueing. A red message on the **Settings** tab explains that more recipients were queued, that those messages will still send, and that you should click **Send Now** again to queue the rest. Recipients already queued are not emailed twice.
-
 - **Scheduled**
 
-  - Set **When To Send** to a future date and time.
+  - Under **When to send**, choose **Schedule for a date and time**, set **Send at**, and click **Save**.
 
   - The email status shows as **Scheduled** on the list page.
 
-  - Campium automatically sends the email at the scheduled time; you can usually edit or cancel it while it is still in Scheduled status.
+  - Campium sends the email at the scheduled time.
 
-While delivery is in progress, the performance funnel (**How this email performed**) stays hidden so the page shows one send readout at a time. After delivery finishes, the funnel returns with **Sent**, **Opened**, and related metrics.
+While delivery is in progress, **How this email performed** stays hidden so the page shows one send readout at a time. After delivery finishes, it returns with **Sent**, **Opened**, and related metrics.
 
 ### Resend to non-openers
 
-For some emails, Campium offers a **Resend to non-openers** option after the initial send:
-
-- Available when enough data is present to identify who did not open the original email.
+After the first send, the **Sent** card under **How this email performed** shows **Resend to N non-openers** when some recipients did not open the email:
 
 - Sends a follow-up only to recipients who did not open the first message.
 
 - Useful for reminders about forms, payments, or upcoming dates.
 
-Use the **Logs** tab and **Stats** on the list page to decide whether a resend is necessary.
+Use the **Logs** tab and the **Opens / Sends** column on the list page to decide whether to resend.
 
 ## Attachments best practices
 
-Attachments help you share detailed information such as schedules, forms, or flyers.
-
-Keep in mind:
+Use attachments to share schedules, forms, or flyers.
 
 - Supported file types:
 
-  - Images such as JPG or PNG for visual materials.
+  - JPG, PNG, or GIF images.
 
   - PDFs for documents, forms, and handouts.
 
@@ -509,13 +506,13 @@ Keep in mind:
 
   - Each attachment can be up to **10MB**.
 
-  - If you have multiple large files, consider linking to a shared folder or website instead of attaching everything.
+  - For several large files, link to a shared folder or website instead of attaching them.
 
-Check that attachments open correctly from your **Send Test Email** before you send to families.
+Open the attachments in your test email (**Send preview**) before you send to families.
 
 ## After sending: stats and logs
 
-Once your email is sent (or auto-sending), monitor performance from the list and the composer.
+After your email is sent (or while it is auto-sending), check results from the list and the composer.
 
 - On the Mass Emails list, use **Opens / Sends** and **Date Sent** for a quick read.
 

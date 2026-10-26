@@ -121,7 +121,7 @@ A note under the toggle explains editing:
 
 When you open a saved report's results, the record count can show a chip for which answers you are looking at (**Profile answers as of Today**, or **Profile answers as of** the season **close** / **frozen**). If that season's answers are editable from the report, an info note says **Edits in this report change** the season **data. Current data isn't touched.**
 
-There is no separate **Search historical data** link. Recipient filters for email and SMS always use today's answers so messages go to current contacts. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
+There is no separate **Search historical data** link. On form Recipients and mass email / news Recipients, the same **Profile answers as of** control appears when one season with a snapshot is selected, so audience filters can match that season's answers. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
 
 ### Filter operators explained
 
@@ -283,6 +283,8 @@ Use **Camper** when you need a label for every camper in the report (for example
 
 Batch Edit sets one profile field to the same answer for every row you tick in a report, such as a cabin, bus route, or t-shirt size. Build a report whose filters find exactly the people you want to change first.
 
+You need the same permission that lets you edit profiles. Without it, Batch Edit will not run. Campium also refuses a batch that includes people outside your camp.
+
 <Callout kind="tip" collapsed="false">
   Want to be guided through it in Campium? [Start the Batch Edit walkthrough](https://campiumdb.com/report/?walkthrough=batch-edit-report). It opens your custom reports and shows each step on the page as you go.
 </Callout>
@@ -292,6 +294,8 @@ Batch Edit sets one profile field to the same answer for every row you tick in a
     - In the results table, tick the box beside each person you want to change. Tick the box in the header to select every row, or hold Shift and click to tick a range.
 
     - Check the **matches** count and your ticks. Only the rows you tick are changed.
+
+    <Image src="https://raw.githubusercontent.com/cary42/documentationai-Docs/main/images/walkthroughs/report-rows-ticked.png" width="1006" height="896" alt="Report results with four rows ticked and the Batch Edit button at the bottom" />
   </Step>
 
   <Step title="Open Batch Edit and choose the field" icon="settings" title-type="p">
@@ -300,6 +304,8 @@ Batch Edit sets one profile field to the same answer for every row you tick in a
     - Under **Select Field**, choose the profile field to change. Tags and User Type are not in this list.
 
     - **Save** stays off until the field options finish loading. If loading fails, you see **Could not load the options for this field. Choose it again to retry.** Some fields show **This field can't be batch edited.**
+
+    <Image src="https://raw.githubusercontent.com/cary42/documentationai-Docs/main/images/walkthroughs/batch-edit-dialog.png" width="600" height="338" alt="The Batch Edit dialog with Cabin chosen as the field and Blue as the answer" />
   </Step>
 
   <Step title="Set the answer and save" icon="alert-triangle" title-type="p">

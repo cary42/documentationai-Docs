@@ -6,52 +6,55 @@ description: >-
 ---
 ## Overview
 
-Forms in Campium help you collect structured information from your community and keep those responses connected to your existing data. Typical examples include collecting registrations, preferences, acknowledgments, or other structured inputs that you need to track over time.
+Forms collect information from families and staff and keep each response connected to the person's profile. Use them for registrations, preferences, acknowledgments, and anything else you need to track over time.
 
-Open Forms from the main navigation as a top-level left hand navigation item labeled **Forms**.
+Open **Forms** from the left navigation. It is its own top-level item.
 
 On the parent portal, registration forms, standard forms, and reference forms use a stepped layout (sections, **Continue**, and the same preview strip you see in admin). That layout is on for every camp.
 
 <Callout kind="info" collapsed="false">
-  Some tabs and options inside a form are conditional based on the **Form Type** you select. For example, Registration forms include a Products Layout tab, and Upload a File forms hide the Questions tab.
+  Some tabs and options depend on the **Form Type** you select. For example, Registration forms have a Products Layout tab, and Upload a File forms hide the Questions tab.
 </Callout>
 
 ## Read the Status column on the Forms list
 
-On the **Forms** list, the **Status** column shows whether each form is available right now:
+On the **Forms** list, the **Status** column shows whether each form is available right now. It uses the same badges as the form editor:
 
-| Badge or line                                       | Meaning                                                                                                            |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Live**                                            | The form is within its **Start Date** and **End Date**, and **Visibility** is **Visible**.                         |
-| **Hidden**                                          | The form is within its date window, but **Visibility** is **Hidden**.                                              |
-| **Inactive**                                        | The form is outside its date window (before **Start Date** or after **End Date**).                                 |
-| **Opens** followed by a date (and time when needed) | The form's **Start Date** is still in the future. Use this to confirm when an inactive form will become available. |
+| Badge            | Meaning                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------- |
+| **Open**         | **Visibility** is **Visible** and today is between **Start Date** and **End Date**.                       |
+| **Scheduled**    | **Visibility** is **Visible** and the **Start Date** is still in the future.                              |
+| **Closed**       | **Visibility** is **Visible** and the **End Date** has passed.                                            |
+| **No dates set** | **Visibility** is **Visible** but the form is missing a **Start Date** or **End Date**.                   |
+| **Hidden**       | **Visibility** is **Hidden**. This wins over the dates.                                                   |
 
-If a form shows **Inactive** and **Opens**, families cannot see it on the portal until that open date, even when recipients and other settings look correct.
+Under **Open**, **Scheduled**, and **Closed**, a line shows the timing, for example **Opens Tue 9:00 AM**, **Closes Jun 30, 5:00 PM**, or **Closed yesterday 11:59 PM**.
+
+If a form shows **Scheduled** with an **Opens** line, families cannot see it on the portal until that time, even when recipients and other settings look correct.
 
 <Callout kind="info">
-  One family cannot find the form on the parent site, and the Forms list still says **Live**? Open their profile and click **Check Permissions**. The result tells you whether dates, Visibility, or a Recipients field is hiding it. See [Can't find a form on the parent portal](/user-cant-see-the-form-on-their-portal).
+  One family cannot find the form on the parent site, and the Forms list still says **Open**? Open their profile and click **Check Permissions**. The result tells you whether dates, Visibility, or a Recipients field is hiding it. See [Can't find a form on the parent portal](/user-cant-see-the-form-on-their-portal).
 </Callout>
 
 ### Edit Open / Close on the Forms list
 
-The **Open / Close** column shows when the form window starts and ends. Click the cell to edit without opening the form. Lines are labeled **Opens** and **Closes**. Empty cells show **No dates set**. Enter the date and time, then **Save** (or **Cancel**). After you save, the **Status** badge on that row refreshes to match the new window. You still need the **Manage Forms** permission. You can also set **Start Date** and **End Date** on the form **Settings** tab.
+The **Open / Close** column shows when the form window starts and ends. Click the cell to edit without opening the form. Lines are labeled **Opens** and **Closes**. Empty cells show **No dates set**. Enter the date and time, then **Save** (or **Cancel**). After you save, the **Status** badge on that row updates to match the new window. You need the **Manage Forms** permission. You can also set **Start Date** and **End Date** on the form **Settings** tab.
 
 ### Recently deleted forms
 
-Deleting a form from the Forms list, or removing one person's copy of a form from their profile **Forms** tab, moves it to trash instead of erasing it right away.
+Deleting a form from the Forms list, or removing one person's copy of a form from their profile **Forms** tab, moves it to trash instead of erasing it.
 
 1. Confirm the delete. Whole-form delete asks: **Are you sure you want to delete this form? Every response to it is deleted too. You can restore it from Recently deleted for 30 days.** Removing one person's copy asks: **Are you sure you want to remove this form? You can restore it from Recently deleted for 30 days.**
-2. After delete, a toast can include **Undo** so you can restore immediately.
+2. After you delete, a toast can include **Undo** so you can restore it right away.
 3. On the Forms list, click **Recently deleted**. On a profile **Forms** tab, use the **Recently deleted** link.
 4. The **Recently deleted forms** dialog lists **Form**, what was deleted (the whole form with every response, or one person's response), **Deleted**, and **Restore**. Empty state: **Nothing was deleted in the last 30 days.**
-5. Helper text: deleted forms stay for **30 days**, then they are gone for good.
+5. Helper text: **Deleted forms stay here for 30 days, then they are gone for good.**
 
 If you restore a person's response while they already have a newer copy of the same form, Campium asks whether to replace their current copy (the current copy then moves to **Recently deleted**).
 
 ## Read the availability badge in the form editor
 
-When you open a form, an availability badge appears beside the form name on every tab (and as the leading chip on the status row in Guided Season Setup). It reflects whether the form would show on the Portal right now, based on **Visibility** and **Start Date** / **End Date**:
+When you open a form, an availability badge appears beside the form name on every tab (and as the leading chip on the status row in Guided Season Setup). It shows whether the form would appear on the Portal right now, based on **Visibility** and **Start Date** / **End Date**:
 
 | Badge | Meaning |
 | --- | --- |
@@ -65,7 +68,7 @@ After you click **Save Settings**, the badge updates without a full page reload.
 
 ## Create a new form
 
-Use the **New Form** button on the Forms list to start a new form and configure its core behavior.
+Use the **New Form** button on the Forms list to start a new form.
 
 <Steps>
   <Step title="Open the Forms list" icon="folder" title-type="p">
@@ -76,57 +79,56 @@ Use the **New Form** button on the Forms list to start a new form and configure 
 
   <Step title="Start a new form" icon="plus" title-type="p">
     - Click the **New Form** button at the top of the list.
-    - Enter a **Form Name**, choose a **Season**, and set **Form Type**.
+    - Enter a **Form Name**, choose a season under **Select Season**, and pick a **Form Type**. In this dialog the types read **Registration (With Products For Sale)**, **Standard (Nothing for sale, just a form)**, and **Allow an upload of a File**. In the editor they read **Registration (With Products)**, **Standard (No Products for Purchase)**, and **Upload a File**.
     - When the form name looks like an immunization form (for example it contains "immunization" or "immunisation"), Campium offers **Include our immunization form?** Parents download Campium's blank fillable PDF, take it to their doctor, and upload the completed copy. Checking it sets **Form Type** to **Allow an upload of a File**. Use **Preview the form** to open the PDF. The same offer appears when you create a form from Guided Season Setup.
-    - Campium opens the form editor with the **Settings** tab active.
+    - Click **Create**. Campium creates the form and opens the form editor with the **Settings** tab active.
 
     The editor shows additional tabs such as **Recipients**, **Questions**, and **Responses**, and may show **Products Layout** depending on the Form Type.
   </Step>
 
   <Step title="Complete required Settings fields" icon="settings" title-type="p">
-    In the **Settings** tab, fill out all required fields before saving:
+    In the **Settings** tab, fill out the required fields (marked with a red asterisk). Items marked "registration only" appear only when **Form Type** is **Registration (With Products)**.
 
-    - **Core details**
+    - Core details
       - **Form Name** (required)
       - **Form Type** (required)
       - **Season** (required)
-      - **Description** (optional text that appears beneath the form name on the Portal)
+      - **Description** (optional; helper: **Shows up beneath the name of the form on the Portal.**)
 
     Who the form is for is set on the **Recipients** tab, not here.
-    - **Basics / Availability**
+    - Availability
       - **Start Date** and **End Date** (required; control when the form is available on the Portal)
-      - **Cutoff Date** (optional age gate; helper: people born after this date can't register, using your camper plural)
+      - **Cutoff Date** (registration only; optional age gate; helper: **If set, the user will not be able to continue if the child was born after the cutoff date (too young).**)
       - **Show Question Numbers?**
-      - **Visibility** (Visible or Hidden; helper: **Hidden takes this form off the portal for everyone.**)
-      - **Lock Form After Completion** (helper: **Users can't change their answers after they submit.**)
-    - **Statuses after completion**
+      - **Visibility** (**Visible** or **Hidden**; helper: **Setting this to hidden will hide access to the form.**)
+      - **Lock Form After Completion** (helper: **Will prevent changes to a form once it has been submitted.**)
+    - Statuses after completion
       - **Form Status After Completion** (required)
       - **User Status After Completion** (required)
-    - **Fees and payments**
-      - **Application Fee** and **Manage Fees** options
-      - **Show # of spots left** on the form
+    - Fees and payments (registration only)
+      - **Application Fee** and the **Manage Fees** button
+      - **Show # of spots left**
       - **Enable Payment Plan**
-      - **Allow User To Pay Later** (helper: **Users can register without paying a deposit. Use this mainly for testing.**)
-      - **Pay In Full Upon Registration** (own **Deposits** grouping; when **Yes**, deposit rows hide with: **Users pay the full amount, so Default Payment To and the minimum deposit settings are hidden.**)
-      - **Default Payment To** (helper: **The payment option already picked when users reach checkout.**)
-      - **Minimum deposit settings** including override amount and scope
-      - **Due Date** (helper: **Users see this date on the portal.**)
-    - **Discounts**
-      - **Discount settings panel**, including:
-        - **Allow Discounts**
-        - **Multiple Discounts**
-        - **Auto-Apply Discounts**
-        - **Pay In Full Discount** settings for enabling the discount and overriding the default amount or percent on a per-form basis
+      - **Allow User To Pay Later** (helper: **No deposit necessary if set to Yes. Typically used for testing purposes.** When the Pending Registrations module is on, the choices are **No** and **Save for later (pending)**, which holds the spot as pending until you approve it from the profile.)
+      - **Pay In Full Upon Registration** (helper: **If set to yes, minimum deposits will be ignored. You may want to set this to yes when camp is about to begin.**)
+      - **Default Payment To** (helper: **When the user gets to the checkout screen, payment will default to this option.**)
+      - **Minimum Deposit Override**, **Minimum Deposit Scope**, and **Charge Deposit On Approval**
+    - **Due Date** (helper: **Displayed on Portal for user.**)
+    - **Discount settings** (registration only)
+      - **Allow For Discounts To Be Applied**
+      - **Allow Multiple Discounts**
+      - **Auto Apply These Discounts**
+      - **Enable Pay In Full Discount**, with **Pay In Full Discount Type** and **Pay In Full Discount Value** to override the default amount or percent for this form
+    - **Send Reminder Emails** (helper: **Users with a form status of "in progress" or "not started" will receive an email asking them to complete the form.** A warning under it says to avoid reminders on a primary registration form or on any form where a large audience could receive these emails.)
     - **Email settings**
-      - **Send Reminder Emails** (helper: **Users who haven't started or finished this form get an email asking them to complete it.** Warn note: avoid reminders on a primary registration form or a large audience)
-      - **Send Admin Email Notification To** (searchable staff chips; placeholder **Search staff**)
-      - **Approved Template**, **Pending Template**, and **Rejected Template** (blank option **Don't send an email**)
-    - **Custom text**
-      - **Button Text** (required label for the submit button)
+      - **Send Admin Email Notification To** (pick staff users from the list)
+      - **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** (leave blank to send no email)
+    - **Custom text** (registration and standard forms)
+      - **Payment Button Text For Checkout Page** (required, registration only)
       - **Thank You Message**
       - **Form Header Text**
-      - **Product Selection Header**
-      - **Cart Header** text areas
+      - **Sessions Selection Header Text** (registration only, uses your product wording)
+      - **Cart Header Text** (registration only)
 
     The value you choose for **Form Type** controls which tabs appear (for example, Products Layout vs. Questions) and how users interact with the form.
   </Step>
@@ -134,38 +136,34 @@ Use the **New Form** button on the Forms list to start a new form and configure 
   <Step title="Choose a Form Type" icon="play-circle" title-type="p">
     Select a **Form Type** based on what you are collecting:
 
-    - **Registration (With Products)** — used when families or users need to register and optionally purchase products; shows the **Products Layout** tab.
-    - **Standard (No Products for Purchase)** — used for typical questionnaires, acknowledgments, or preference forms without products to buy.
-    - **Upload a File** — used when the primary action is uploading documents; hides the **Questions** tab.
+    - **Registration (With Products)**: for registrations where families pick and pay for sessions or products. Shows the **Products Layout** tab.
+    - **Standard (No Products for Purchase)**: for questionnaires, acknowledgments, and preference forms with nothing to buy.
+    - **Upload a File**: for collecting documents. Hides the **Questions** tab.
 
     Changing the Form Type changes which configuration tabs appear in the editor.
   </Step>
 
-  <Step title="Save Settings to create the form" icon="check-circle" title-type="p">
-    - After completing the required fields and initial settings, click the **Save Settings** button.
-    - Campium saves the form record and keeps you in the editor so you can configure Recipients, Questions, and other options.
-
-    When the save is successful, the current tab stays active and additional tabs remain available for further configuration.
+  <Step title="Save Settings" icon="check-circle" title-type="p">
+    - Click **Save Settings**.
+    - Campium saves your changes and keeps you in the editor so you can set up Recipients, Questions, and other options.
   </Step>
 </Steps>
 
 ## Tabs inside a form
 
-Each form opens in a tabbed editor with consistent tab labels and order. Some tabs appear only for specific Form Types.
+Each form opens in a tabbed editor. Some tabs appear only for specific Form Types.
 
 ### Settings tab
 
-Use **Settings** to define the core behavior and lifecycle of the form.
+Use **Settings** to define how the form behaves.
 
 - Sets the **Form Name**, **Form Type**, and **Season**.
-- Defines the **Start Date**, **End Date**, and optional **Cutoff Date** for when the form is available and when business actions stop.
-- Controls **Visibility** (Visible or Hidden) so you can prepare forms in advance or hide completed workflows.
-- Lets you enable or disable **Lock Form After Completion**, which prevents users from changing responses once submitted.
-- Sets **Form Status After Completion** and **User Status After Completion**, which determine back-office status values after a user finishes the form.
-- Includes fee, payment, discount, email, and custom text panels that control how the form behaves for registrations and payments.
-- Includes a bottom sticky action bar with **Save Settings**. The bar shows **Your settings save automatically.** Changing a Settings control also saves on its own. Typing in a text field saves after a short pause (you do not need to leave the field). After a save the status becomes **Saved just now.**, then **Last saved a moment ago.** While a save is in progress, the button reads **Saving...** Typing saves update the status bar only; they do not show a separate success toast. Errors still show a toast.
-
-You must complete Settings and save before the form behaves correctly for recipients.
+- Sets the **Start Date** and **End Date** that control when the form is available, and on registration forms the optional **Cutoff Date** age gate.
+- Controls **Visibility** (**Visible** or **Hidden**) so you can prepare forms in advance or take them down.
+- Turns **Lock Form After Completion** on or off. When it is on, users cannot change responses after they submit.
+- Sets **Form Status After Completion** and **User Status After Completion**, the statuses Campium applies after a user finishes the form.
+- Includes fee, payment, discount, email, and custom text settings for registrations and payments.
+- Ends with a sticky action bar with **Save Settings**. The bar shows **Your settings save automatically.** Changing a Settings control saves on its own. Text fields save when you stop typing (you do not need to leave the field). After a save the status reads **Saved just now.**, then **Last saved a moment ago.** While a save is in progress, the button reads **Saving...** Saves from typing update the status bar only and do not show a success toast. Errors still show a toast.
 
 ### Products Layout tab (conditional)
 
@@ -175,8 +173,8 @@ The **Products Layout** tab appears only when the **Form Type** is **Registratio
   The label on this tab is dynamic. It reflects the product terminology configured for your camp, so it may read as **Sessions Layout** (or another product name) rather than **Products Layout**.
 </Callout>
 
-- Lets you configure how products appear within the registration workflow.
-- Aligns products with the registration form so families can select and purchase items as part of completion.
+- Sets which sessions or products appear on the registration form and how they are grouped.
+- Families select and pay for those items as part of completing the form.
 
 On the live products selection page (list and grid layouts, and admin layout preview), sessions and products that have start and end dates show that range under the name (for example `Jun 22 - Jun 26, 2026`). Dropdown options can include the same range in parentheses after the name. Rows without dates show the name only. When Special Weeks is on, week choices can show their dates under each week label the same way. See [Special Weeks](/special-weeks#week-choices-on-registration).
 
@@ -210,24 +208,26 @@ Admin **Preview** of the product selection page keeps **Continue** review-only (
 
 ### Recipients tab
 
-Use the **Recipients** tab to control who the form is for and who can see it.
+Use the **Recipients** tab to set who the form is for and who can see it.
 
 - At the top, choose who the form is about:
-  - Registration forms: **Who is this registration for?** with helper text **Pick who attends, not who fills the form out. Guardians already complete it for campers.** (Your camper wording may differ.)
+  - Registration forms: **Who is this registration for?** with helper text **Pick who attends, not who fills the form out.** (Your camper wording may differ.)
   - Other forms: **Who is this form for?** with helper text **Pick who the form is about. Add Guardians only if they are the ones attending.**
+- On a **Registration** form, the audience list only offers user types turned on in **Admin → Site Settings → Basic → Session signup user types**. Types already on the form still appear so you can remove them. Adding a type that is not allowed returns: **That user type is not turned on in Session signup user types.** Standard and upload forms are not limited by that setting. See [Site Settings](/settings).
 - Under **How to apply this form**, choose **To all the Active/Inactive/Pending user types selected above** or **Only people who match the filters below**.
-- If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type.
-- Shows any warnings related to missing or incomplete recipient configuration, and uses a warning icon next to **Recipients** when there is a configuration issue.
+- If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type. When a form includes Guardians as its audience, adults on the parent portal see their own form cards even if your camp has no Staff forms (for adult programs where the guardian attends).
+- When the Season filter is exactly one season with a ready snapshot, **Profile answers as of** appears under it (**Today** or that season's **close** / **frozen**), the same control as on custom reports. It changes which profile answers the recipient filters use. Editing notes from reports are omitted here.
+- When the recipient setup needs attention, a warning icon appears next to **Recipients** on the tab.
 
-Configure recipients before publishing or communicating about the form so your target audience can see and complete it.
+Set up recipients before you open the form or tell families about it, so the right people can see and complete it.
 
 ### Questions tab (conditional)
 
-The **Questions** tab controls the structured prompts users see when they complete the form.
+The **Questions** tab holds the questions users answer when they complete the form.
 
-- Lets you add, edit, and order questions that collect the data you need.
-- Supports different question types depending on your Campium configuration, such as text fields, choices, or other input types.
-- Toolbar: **New Question**, **Add from Library**, **Add Section Header**, **Preview Form**.
+- Add, edit, and order questions.
+- Question types include text fields, **Choose One**, **Choose Many**, and other input types.
+- Toolbar: **New Question**, **Add Signature**, **Add from Library**, **Add Section Header**, and **Preview Form** (when it still appears on the Questions tab). Use **Add Signature** for signature questions.
 - Each row starts with a drag grip (**Drag to reorder**), then the question number, then an **Actions** menu (vertical dots) with **Edit**, **Move to position**, and **Delete**. The question text is also a clickable **Edit** link.
 - When a question has follow-ups, a chip such as **Shows 2 follow-ups** appears on the parent. Each follow-up shows a chip such as **Shown if Q4 is Yes**. Hover highlights the related rows; click jumps to the first related question.
 
@@ -235,9 +235,13 @@ The **Questions** tab controls the structured prompts users see when they comple
 
 Click **Add from Library** to open **Add from Field Library**. Search fields (placeholder example: allergies, doctor, emergency), pick packs and fields, then **Add Selected to Form**. Missing profile fields are created or matched automatically. The catalog filters packs by the form's user types (camper, parent, or staff). Packs include areas such as Camper Info, Parent / Guardian, Medical, Emergency Contacts, Transportation, Permissions, and Staff Application.
 
-For **Upload a File** forms, Campium hides the **Questions** tab. In those forms, the primary interaction is file upload rather than answering questions.
+For **Upload a File** forms, Campium hides the **Questions** tab, because families upload a file instead of answering questions.
 
-On the parent portal, file uploads show helper text **JPG, PNG, or PDF · up to 16 MB**. Files larger than 16 MB are rejected with a clear error that names the size limit. Supported formats are JPG, PNG, and PDF. After a successful upload, the row status badge updates to **Received** right away (it does not stay on **Not Started** until the page reloads).
+On the parent portal, file uploads show helper text **JPG, PNG, or PDF · up to 16 MB**. Files larger than 16 MB are rejected with an error that names the size limit. After a successful upload, the row status badge changes to **Received** without a page reload.
+
+Profile photo questions on the parent portal show **JPG, PNG, or GIF. Maximum size is 15 MB.** Oversized photos are rejected with a message such as **This photo is X MB. The maximum size is 15 MB. Please choose a smaller photo.** Large JPEGs are compressed before that size check. iPhone HEIC photos are converted to JPEG on upload; if conversion fails, families see **We could not read this iPhone photo (HEIC). Please save it as a JPG and try again. On iPhone, you can go to Settings > Camera > Formats and choose Most Compatible.**
+
+On the crop step, helper text reads **Click the image to choose the center of the crop square. If it is sideways, press Rotate.** Use **Rotate** to turn the photo before you save.
 
 #### Move a question to a position
 
@@ -253,7 +257,7 @@ Drag the grip to reorder, or jump a question by number:
 
 When you **Edit** a text question (not a signature), **Field Size** offers **Regular** or **Large**. Helper text: **Large shows a bigger box. This is the same size as the profile field, so changing it updates the profile and every form that uses this field.**
 
-This is the visual size of the input (regular single-line vs a larger multi-line box), not a character limit. The same control lives on **Admin → Profile Fields**. See [Profile Fields](/profile-fields).
+This is the size of the input box (a single line or a larger multi-line box), not a character limit. The same control lives on **Admin → Profile Fields**. See [Profile Fields](/profile-fields).
 
 Click **Save Question** to apply.
 
@@ -266,29 +270,31 @@ Use the **Responses** tab to track progress and work with submitted data.
   - **In Progress**
   - **Pending**
   - **Approved**
-- Loads a responses table that lists individual responses for the current form.
-- Provides a central place to review who has completed the form, who still needs to respond, and which submissions you have approved.
+- Lists each response to the form in a table.
+- Shows who has completed the form, who still needs to respond, and which submissions you have approved.
 
 #### Change status and open a response
 
 On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
-- Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu still includes **View Responses** as well.
-- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice:
+- Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses**.
+- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
   - **Compact**: *Smaller type and tighter spacing. Keeps answers on fewer pages when possible.*
-  - **Expanded**: *Text answers print under the question. Other answers stay on the same line.*
-  Your layout choice is saved for you as an admin (it follows you across browsers). Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
+  - **Expanded**: *Larger type and more spacing. Each answer follows its question on the same line.*
+  - **Hide** → **Section headers and instructions**: *Leaves out the form's headings and instruction text. Signatures still print.*
+  - **Hide** → **Questions with no answer**: *Question numbers still match the form.*
+  Campium saves your layout and hide choices to your admin account, so they follow you across browsers. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** and **Hide** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
 
 When the form has reference submissions, the table also shows a **Reference For** column (the applicant, linked to their profile), and **Primary Email** shows the reference's invitation email.
 
 ### Question type labels
 
-When you add a question, the multiple-choice types are labeled **Choose One** and **Choose Many** (not the longer "Multiple Choice" names). The same short labels appear in the Field Library and related type lists.
+When you add a question, the multiple-choice types are labeled **Choose One** and **Choose Many**. The Field Library and other type lists use the same labels.
 
 ### Add a note on a form response
 
-Use the **Note** column on the responses table when you need a short staff-only reminder about a submission (for example, a follow-up call or an exception).
+Use the **Note** column on the responses table for a short staff-only reminder about a submission (for example, a follow-up call or an exception).
 
 1. Open **Forms** in the left navigation.
 2. Open the form, then select the **Responses** tab.
@@ -299,24 +305,28 @@ Clearing the text and saving removes the note. Parents do not see these notes.
 
 ## Print form responses
 
-Use the **Print** controls on the **Responses** tab (or the print icon on a profile / Staff Hub completed form) to generate a PDF. Choose **Layout** before you confirm:
+Use the **Print** controls on the **Responses** tab (or the print icon on a profile / Staff Hub completed form) to generate a PDF. Choose **Layout** and optional **Hide** options before you confirm:
 
 - **Compact**: smaller type and tighter spacing when you want fewer pages.
-- **Expanded**: text answers print under the question; other answers stay on the same line.
+- **Expanded**: larger type and more spacing; each answer follows its question on the same line.
+- **Section headers and instructions**: omit headings and instruction text (signatures still print).
+- **Questions with no answer**: omit blank questions; question numbers still match the form.
 
-Your choice is saved for you as an admin and is used the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
+Campium saves your layout and hide choices to your admin account and uses them the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
 
-You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
+You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout** and **Hide**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
 
 When a form completion email attaches a PDF, each staff recipient gets the layout they last chose in the admin portal.
 
+In the **Basic Information** block on a response view, printout, or completion email, **Birthday** shows the date and the person's current age when the date can be read (for example `2011-05-09 (age 15)`). Blank, unreadable, or future dates stay as the date only.
+
 ## What families see when a form save fails
 
-On the parent portal, if answers cannot be saved, the form does **not** claim success. Families see a clear error at the top of the page, their answers stay on the form, and the submit button changes to **Try Again**.
+On the parent portal, if answers cannot be saved, the form does **not** report success. Families see an error at the top of the page, their answers stay on the form, and the submit button changes to **Try Again**.
 
 Typical messages include:
 
-- **We could not save part of this form.** with the section that failed (for example **Guardian 1 information**, **Guardian 2 information**, or camper information), plus **Nothing you typed is lost.** and a short **Reference** code for support.
+- **We could not save part of this form.** with the section that failed (for example **Guardian 1 information**, **Guardian 2 information**, or camper information), plus **Nothing you typed is lost.** and a **Reference** code for support.
 - A generic **We could not save this form.** message when the portal cannot reach the server or gets an unexpected response (instead of leaving the button stuck on **Saving...**).
 
 Families can press **Try Again**, refresh the page, or come back later and continue. The message also links to **contact the camp** if the problem keeps happening.
@@ -331,18 +341,24 @@ An empty Guardian 2 section stays valid, so single-guardian families are not blo
 
 ## Preview a form without saving
 
-Use **Preview Form** when you want to walk through the form layout on the parent portal without creating a real submission.
+Use the orange **Preview** menu at the top of the form editor (same control as on a season's Guided setup Forms step) to walk through the form on the parent portal without creating a real submission. The menu header reads **Opens in a new tab**.
 
-This is different from [Test Mode](/test-mode). Test Mode lets staff open the live form on the portal and can create real responses. **Preview Form** never saves answers.
+- **Questions** - what people see when they open this form
+- On registration forms only: **Sessions selection** and **Cart**
+
+You can still open previews from **Settings** links such as **Preview Form**, **Preview Sessions Selection Page**, and **Preview Cart Header**.
+
+This is different from [Test Mode](/test-mode). Test Mode lets staff open the live form on the portal and can create real responses. Preview never saves answers.
 
 ### Open the preview
 
 1. Open **Forms** in the left navigation.
 2. Open the form you want to review.
 3. Choose one of these entry points:
-   - On the **Questions** tab, click **Preview Form**.
-   - On the **Settings** tab, under **Form Header Text**, click **Preview Form**.
-   - For a registration form, under the product selection header text, click **Preview Sessions Selection Page** (the label uses your camp's product wording, such as **Sessions**).
+   - Click **Preview**, then **Questions** (or **Sessions selection** / **Cart** on a registration form).
+   - On the **Questions** tab, click **Preview Form** when that button is shown.
+   - On a registration form's **Settings** tab, under **Form Header Text**, click **Preview Form**.
+   - On a registration form's **Settings** tab, under **Sessions Selection Header Text**, click **Preview Sessions Selection Page** (both labels use your camp's product wording).
 
 The preview opens on the parent portal with a banner that says you are viewing a **PREVIEW** and that nothing is saved.
 
@@ -376,21 +392,19 @@ Preview pages include a **Parent view** strip so you can check the same gates a 
 
 ## Form settings reference
 
-Use the **Settings** tab to control how the form appears, who can complete it, what happens after submission, and how Campium handles payments, reminders, and follow-up workflows.
+Use the **Settings** tab to control how the form appears, what happens after submission, and how Campium handles payments and reminders. Who can complete the form is set on the **Recipients** tab.
 
 <Callout kind="info" collapsed="false">
-  Some settings appear only for specific **Form Type** values. Registration forms show product, payment, discount, and deposit settings that do not appear on Standard or Upload a File forms.
+  Some settings appear only for specific **Form Type** values. Registration forms show fee, payment, discount, and deposit settings that do not appear on Standard or Upload a File forms. Standard forms keep **Thank You Message** and **Form Header Text** from the custom text settings.
 </Callout>
 
 ### Basic information
 
-The top of the Settings tab defines what the form is, who it applies to, and which seasonal setup Campium should use behind the scenes.
+The top of the Settings tab defines what the form is and which season it belongs to.
 
 #### Form Name
 
-Use **Form Name** for the internal and Portal-facing name of the form. Pick a name that families and staff can recognize without opening it, especially if you publish multiple forms for the same season.
-
-Clear names also make the **Responses** tab easier to use because staff can quickly tell which workflow a submission belongs to.
+**Form Name** is the name staff see in admin and families see on the Portal. Pick a name people recognize without opening the form, especially when a season has several forms.
 
 #### Form Type
 
@@ -402,14 +416,14 @@ Clear names also make the **Responses** tab easier to use because staff can quic
 | **Standard (No Products for Purchase)** | Surveys, waivers, contracts, acknowledgments, preference forms | Shown         | Hidden              | Hidden                   |
 | **Upload a File**                       | Document collection where the main action is file submission   | Hidden        | Hidden              | Hidden                   |
 
-If you change **Form Type** after starting configuration, Campium changes which tabs and fields are available. Review the Settings tab again after any type change so you do not miss required fields.
+If you change **Form Type** later, Campium changes which tabs and fields are available. Review the Settings tab after any type change so you do not miss required fields.
 
 ### Immunization blank form (upload forms)
 
-On an **Allow an upload of a File** form, **Settings** can show an **Immunization Records** block:
+On an **Upload a File** form, **Settings** can show an **Immunization Records** block:
 
 1. Turn on **This form collects immunization records** when uploads should be read for vaccine doses (paid immunization add-on). Leave it off for other uploads such as insurance cards.
-2. Until Campium's blank PDF is attached, you also see **Include our immunization form?** with **Add our form** and **Preview**. That attaches Campium's fillable immunization PDF so families can download it from the portal, complete it with a doctor, and upload the finished copy.
+2. Until Campium's blank PDF is attached, you also see **Include our immunization form?** with **Add our form** and **Preview**. **Add our form** attaches Campium's fillable immunization PDF so families can download it from the portal, complete it with a doctor, and upload the finished copy.
 
 The blank PDF offer is available whenever you create or edit an immunization-style upload form. Turning on immunization *reading* still requires the paid Immunization add-on. See [Immunization](/immunization).
 
@@ -419,32 +433,36 @@ The blank PDF offer is available whenever you create or edit an immunization-sty
 
 If a product or fee is missing from a registration form, confirm that the item exists in the same season selected on the form.
 
+#### Required
+
+**Required** appears on camper registration, re-enrollment, and update forms that have a season. Helper text: **Counts toward the "to do" number families see on the Portal, and toward Camper Hub's required forms.** The switch label is **Every camper in this season must finish this form**.
+
+Turning it on adds this form to the same list you manage under **Admin → Camper Hub → Camper Hub Settings → Required forms by season**. Leave it off when the form is optional. See [Camper Hub](/camper-hub#choose-which-fields-and-forms-count).
+
 #### Staff season assignment
 
-If your team uses forms for staff workflows, **Staff season assignment** controls whether the form is tied to staff in a specific season.
+**Staff season assignment** appears only when the form's recipients include a staff or volunteer user type. The label reads **Volunteer season assignment** when the form is for volunteers only. Helper: **When Yes, completing this form adds the Staff to their season on their profile.**
 
-| Setting | Behavior                                                                                                                             |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **Yes** | Campium treats the form as tied to a season-based staff workflow. Use this when staff records and assignments are managed by season. |
-| **No**  | Campium does not apply season-based staff assignment behavior. Use this for forms that should stay more general.                     |
+| Setting | Behavior                                                                                       |
+| ------- | ---------------------------------------------------------------------------------------------- |
+| **Yes** | Completing the form adds the person to the form's season on their profile.                     |
+| **No**  | Completing the form does not change the person's seasons. This is the default.                 |
 
-Choose the option that matches how your staff records are organized. If your organization hires or tracks staff by season, use **Yes** so the form stays aligned with that structure.
+The on-screen advice: **Use for your main hiring form; leave as 'No' for references or supplemental forms.**
 
 #### Description
 
-**Description** appears beneath the form name on the Portal. Use it to tell recipients what the form is for, when they need to complete it, or what will happen after they submit.
-
-Keep the description short and specific. One or two sentences usually works better than a long paragraph.
+**Description** appears beneath the form name on the Portal. Use it to tell recipients what the form is for, when to complete it, or what happens after they submit. One or two sentences work better than a long paragraph.
 
 ### Scheduling
 
-Scheduling settings control when the form is visible, when reminders can talk about it as due, and when business rules such as age cutoffs apply.
+Scheduling settings control when the form is visible, when it is due, and, on registration forms, the age cutoff.
 
 #### Start Date
 
-**Start Date** is when the form shows up on the Portal, assuming the form is also set to **Visible** and recipients are configured. The field is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
+**Start Date** is when the form shows up on the Portal, as long as **Visibility** is **Visible** and recipients are set. Helper: **When the form shows up on the Portal.** The field is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
 
-If families say they cannot see a form yet, check whether the current date is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Inactive** with an **Opens** line under **Status** so you can see the scheduled open date without opening the form editor. In the form editor, the availability badge shows **Scheduled** with the open date.
+If families say they cannot see a form yet, check whether today is before **Start Date**. On the **Forms** list, forms that have not opened yet show **Scheduled** with an **Opens** line under **Status**. In the form editor, the availability badge shows **Scheduled** with the open date.
 
 #### Form opening email for administrators
 
@@ -457,27 +475,27 @@ Each form card can include:
 - **Notes** such as **Ready**, **Hidden on Portal**, **Test form**, or **No items for purchase**
 - Links **Open form settings →** and **View forms →**
 
-Use those notes to fix **Visibility**, clear a test form flag, or add products before families expect the form.
+Use those notes to fix **Visibility**, turn off Test Mode, or add products before families expect the form.
 
-Administrators control this digest under your name (top right) → **Settings → Email Notifications** as **Form opening digest** (toggle **Email me this digest**). It defaults on unless you turn it off. Organization-wide on/off lives on **Admin → Email Notifications**. See [Account](/account#email-notifications).
+Administrators control this digest under your name (top right) → **Settings → Email Notifications** as **Form opening digest** (toggle **Email me this digest**). It is on unless you turn it off. Organization-wide on/off lives on **Admin → Email Notifications**. See [Account](/account#email-notifications).
 
 #### End Date
 
-**End Date** is when the form disappears from the Portal. Like **Start Date**, it is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
+**End Date** is when the form disappears from the Portal (helper: **When the form disappears from the Portal.**). Like **Start Date**, it is a date and time. If you enter a date without a time, Campium asks you to add the time before you can save.
 
 Use **End Date** when you want a form to disappear completely after a deadline or event window passes.
 
 #### Due Date
 
-**Due Date** tells recipients when the form should be completed, but it does **not** hide the form. A form can stay visible after the due date as long as the current date is still on or before **End Date**.
+**Due Date** tells recipients when the form should be completed (helper: **Displayed on Portal for user.**), but it does **not** hide the form. A form stays visible after the due date until its **End Date**.
 
-Campium also uses **Due Date** for reminder emails. If you want automated reminders to send, you must set a due date.
+Campium also uses **Due Date** to schedule reminder emails. Reminders do not send without one.
 
 | Configuration             | What recipients see                                                                               | Reminder email behavior                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | **End Date only**         | Form stays available until End Date, with no due-date messaging                                   | No due-date reminders                                 |
 | **Due Date and End Date** | Form can show as due or past due while still remaining available until End Date                   | Reminder emails can reference due and past-due status |
-| **Due Date only**         | Due messaging exists, but form availability still depends on other visibility rules in your setup | Reminder logic can use the due date                   |
+| **Due Date only**         | The form shows **No dates set** and does not open on the Portal                                   | Reminders are scheduled, but recipients cannot open the form |
 
 <Callout kind="tip" collapsed="false">
   Use **Due Date** when you want accountability and reminders. Use **End Date** when you want the form to disappear.
@@ -485,33 +503,33 @@ Campium also uses **Due Date** for reminder emails. If you want automated remind
 
 ### Visibility and editing rules
 
-These settings control whether recipients can see the form at all and whether they can change it after submission.
+These settings control whether recipients can see the form and whether they can change it after they submit.
 
 #### Visibility
 
-**Visibility** is the manual on or off switch for the form.
+**Visibility** is the manual on/off switch for the form.
 
 | Visibility  | Behavior                                                                                             |
 | ----------- | ---------------------------------------------------------------------------------------------------- |
 | **Visible** | Eligible recipients can see the form when the current date is within the form's availability window. |
-| **Hidden**  | No recipients can see the form on the Portal, even if dates and recipients are configured correctly. Helper: **Hidden takes this form off the portal for everyone.** |
+| **Hidden**  | No recipients can see the form on the Portal, even if dates and recipients are set correctly. Helper: **Setting this to hidden will hide access to the form.** |
 
 Use **Hidden** while building or testing a form. Switch to **Visible** only when content, recipients, and dates are ready.
 
 #### Lock Form After Completion
 
-**Lock Form After Completion** controls whether recipients can edit a form after they submit it. Helper: **Users can't change their answers after they submit.**
+**Lock Form After Completion** controls whether recipients can edit a form after they submit it. Helper: **Will prevent changes to a form once it has been submitted.**
 
 | Setting | Behavior                                                                                              | Best use                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | **Yes** | Recipients cannot reopen and change answers after submission.                                         | Registration forms, contracts, waivers, and any form that should become a fixed record |
 | **No**  | Recipients can return and update answers after submitting, subject to the form still being available. | Surveys, preference forms, and forms where answers may change over time                |
 
-For registrations, **Yes** is usually the safer choice because families should not be able to change key enrollment details after checkout without staff review. For lightweight surveys or preference collection, **No** may be more practical.
+For registrations, **Yes** is the safer choice, because families should not change enrollment details after checkout without staff review. For surveys and preference forms, **No** lets people update their answers.
 
 ### What happens when someone finishes
 
-These settings determine how Campium classifies the submission itself and, if you choose, how it updates the user record.
+These settings set the status of the submission and, if you choose, update the person's status.
 
 #### Form Status After Completion
 
@@ -521,13 +539,13 @@ These settings determine how Campium classifies the submission itself and, if yo
 | -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | **Pending Approval** | Submission is complete, but staff must review it before treating it as finalized.           | Staff-reviewed registrations, contracts, or approvals        |
 | **Approved**         | Submission is treated as completed and approved immediately.                                | Self-service forms that do not need review                   |
-| **In Progress**      | Submission remains open or unfinished from a workflow perspective after save or completion. | Special internal workflows that need additional staff action |
+| **In Progress**      | Submission stays marked unfinished after the recipient submits it.                          | Internal workflows that need more staff action               |
 
 If staff approval is part of your process, set **Form Status After Completion** to **Pending Approval** so submissions do not count as fully approved the moment a family clicks submit.
 
 #### User Status After Completion
 
-**User Status After Completion** updates the person's user record after they finish the form.
+**User Status After Completion** updates the person's status after they finish the form. Helper: **If this is a registration form, you'll want to set this to Active or Pending.**
 
 | Status        | Effect                                                |
 | ------------- | ----------------------------------------------------- |
@@ -537,7 +555,7 @@ If staff approval is part of your process, set **Form Status After Completion** 
 | **Inactive**  | Marks the user as inactive after completion.          |
 | **Lead**      | Marks the user as a lead after completion.            |
 
-Use this setting carefully. Automatic status changes are helpful for structured enrollment workflows, but they can create confusion if staff are not expecting the update.
+Automatic status changes help in enrollment workflows, but they can confuse staff who are not expecting the update.
 
 ### Registration and payment settings
 
@@ -549,38 +567,32 @@ These settings appear only when **Form Type** is **Registration (With Products)*
 
 #### Application Fee
 
-Use **Application Fee** when you want to charge an upfront fee as part of the registration workflow.
+Use **Application Fee** to charge an upfront fee with the registration. Helper: **Automatically added to cart. This is not part of the deposit - it's an additional fee.**
 
 Set it up in this order:
 
 1. Create or confirm the fee item in the correct season.
 2. Select that fee in **Application Fee**.
-3. Review any related settings in **Manage Fees**.
+3. Review the fee list with the **Manage Fees** button.
 4. Save the form and test the checkout flow with a sample user.
 
-When configured correctly, the fee appears as part of the registration cost structure for the form.
+The fee is then added to the cart on every registration through this form.
 
 #### Show number of spots left
 
-**Show # of spots left** displays remaining capacity information on the form. Use it when you want families to see how many spaces remain before they register.
-
-Only turn this on when your capacity data is current. Outdated capacity settings create confusion faster than not showing counts at all.
+**Show # of spots left** shows families how many spaces remain (helper: **Displays spots left on the Portal.**). Turn it on only when your capacity numbers are current.
 
 #### Enable Payment Plan
 
-**Enable Payment Plan** allows families to pay over time instead of paying the full balance immediately.
-
-This setting works with the selected season, available payment plan setup, and any **Due Date** or deposit rules that apply to the registration.
+**Enable Payment Plan** lets families pay over time instead of paying the full balance at checkout. Helper: **Display a list of your payment plans for the user to select from.** The plans come from **Admin → Payment Plans** for the form's season.
 
 #### Require User To Add A Payment Method
 
-**Require User To Add A Payment Method** is available only for organizations using Finix. It requires the payer to save a payment method during registration.
-
-Use this when your payment workflow depends on keeping a card or bank method on file for future scheduled payments.
+**Require User To Add A Payment Method** appears only when your payment processor is Finix. Helper: **When the amount due today is $0, require a card or ACH account to be added and stored.** Turn on **Require payment method at $0 checkout** when you need a card or bank account on file for future scheduled payments.
 
 #### Allow User To Pay Later
 
-**Allow User To Pay Later** lets the user complete registration without paying at the time of checkout.
+**Allow User To Pay Later** lets the user complete registration without paying at checkout. When the Pending Registrations module is on, the choices are **No** and **Save for later (pending)**: the spot is held as pending, with no balance and no enrollment, until you approve it from the profile.
 
 On the parent checkout page, families choose how much to pay under **How much today?**:
 
@@ -593,48 +605,42 @@ On the parent checkout page, families choose how much to pay under **How much to
 When payment plans are offered, a **Payment plan** card lists each plan as a selectable option. Families who can pick their charge day still see **Charge day of the month**.
 
 <Callout kind="alert" collapsed="false">
-  Use **Allow User To Pay Later** carefully. Helper text: **Users can register without paying a deposit. Use this mainly for testing.** It lets users finish registration without collecting payment immediately.
+  Use **Allow User To Pay Later** carefully. Helper text: **No deposit necessary if set to Yes. Typically used for testing purposes.** Users finish registration without paying anything.
 </Callout>
 
 #### Pay In Full Upon Registration
 
-**Pay In Full Upon Registration** requires the full amount due at checkout instead of allowing installment behavior. When it is **Yes**, **Default Payment To** and the minimum deposit settings are hidden, with note: **Users pay the full amount, so Default Payment To and the minimum deposit settings are hidden. Set Pay In Full Upon Registration to No to change them.**
+**Pay In Full Upon Registration** requires the full amount at checkout. Helper: **If set to yes, minimum deposits will be ignored. You may want to set this to yes when camp is about to begin.** With **Preview new layout** on, setting it to **Yes** also hides **Default Payment To** and the minimum deposit settings, with the note **Users pay the full amount, so Default Payment To and the minimum deposit settings are hidden. Set Pay In Full Upon Registration to No to change them.**
 
 Use this when you want registration to count only after the full amount is paid.
 
 #### Default Payment To
 
-**Default Payment To** sets which payment option is already picked when users reach checkout.
-
-Pick the correct destination before you publish the form. Correcting misapplied payment routing after families have paid is much harder than confirming it upfront.
+**Default Payment To** sets which payment option, **Minimum Deposit** or **Pay in Full**, is already picked when users reach checkout. Helper: **When the user gets to the checkout screen, payment will default to this option.**
 
 #### Cutoff Date
 
-**Cutoff Date** acts as an age gate for registration logic. Campium uses the cutoff date when calculating age-based eligibility tied to the form (people born after this date can't register).
+**Cutoff Date** is an age gate. Helper: **If set, the user will not be able to continue if the child was born after the cutoff date (too young).**
 
 For example, if a program requires campers to be a certain age by a specific date, set that date in **Cutoff Date** so age validation uses the correct rule.
 
 ### Discount settings
 
-Discount settings control whether families can use discounts during registration and how Campium applies those discounts.
+The **Discount settings** box controls whether families can use discounts during registration and how Campium applies them.
 
 #### Allow For Discounts To Be Applied
 
-Turn on **Allow For Discounts To Be Applied** to let the registration form accept discount rules that exist for the selected season.
-
-Leave it off when the form should always charge the standard rate.
+Set **Allow For Discounts To Be Applied** to **Yes** to add a discount box to checkout (helper: **Adds a discount box to checkout so codes can be entered**). Set it to **No** when the form should always charge the standard rate.
 
 #### Allow Multiple Discounts
 
 **Allow Multiple Discounts** lets more than one discount apply in the same checkout when your pricing rules allow it.
 
-Use this carefully. Stacked discounts can create totals that staff did not expect if the discount strategy is not documented.
+Stacked discounts can produce totals staff did not expect, so decide your stacking rules before you turn this on.
 
 #### Auto Apply These Discounts
 
-**Auto Apply These Discounts** applies eligible discounts automatically instead of requiring the payer or staff to add them manually.
-
-Automatic discounts work best when eligibility is unambiguous and you want a consistent checkout experience.
+**Auto Apply These Discounts** lists discounts to apply automatically. Helper: **Applies these discounts to every registration.**
 
 #### Enable Pay In Full Discount
 
@@ -643,39 +649,37 @@ Automatic discounts work best when eligibility is unambiguous and you want a con
 | Setting                           | What it does                                                       |
 | --------------------------------- | ------------------------------------------------------------------ |
 | **Pay In Full Upon Registration** | Requires full payment at checkout.                                 |
-| **Pay In Full Discount**          | Rewards the payer for choosing full payment by reducing the price. |
+| **Enable Pay In Full Discount**   | Rewards the payer for choosing full payment by reducing the price. |
 
-These settings solve different problems. One is a payment requirement, and the other is a pricing incentive.
+One is a payment requirement. The other is a pricing incentive.
 
-When you enable the pay-in-full discount, you can override the season default for this form using two fields:
+When you enable the pay-in-full discount, two fields let you override your default for this form. The helper under each shows your default.
 
-- **Pay In Full Discount Type** — Choose whether the incentive is a flat dollar amount or a percentage.
-- **Pay In Full Discount Value** — Enter the amount or percent to apply on this specific form. Leave these at the default if the form should use the standard season-wide pay-in-full discount.
+- **Pay In Full Discount Type**: **Fixed Amount** or **Percent**.
+- **Pay In Full Discount Value**: the amount or percent for this form. Leave both at the default to use your standard pay-in-full discount.
 
 ### Minimum deposit settings
 
-Minimum deposit settings control how much a payer must submit when full payment is not required.
+The **Minimum deposit settings** box controls how much a payer must pay at checkout when full payment is not required.
 
 #### Minimum Deposit Override
 
-**Minimum Deposit Override** lets you replace the standard deposit amount for this specific form.
-
-Use it when a form needs a different minimum than the season default.
+**Minimum Deposit Override** replaces the minimum deposit for this form. Helper: **This will override the minimum deposits set for the sessions.**
 
 #### Minimum Deposit Scope
 
-**Minimum Deposit Scope** controls how Campium applies the minimum deposit amount.
+**Minimum Deposit Scope** sets whether the override applies per user or for the entire checkout.
 
-| Scope               | Behavior                                                                      |
-| ------------------- | ----------------------------------------------------------------------------- |
-| **Entire checkout** | Campium applies one minimum deposit requirement across the whole order total. |
-| **Per user**        | Campium applies the minimum deposit separately for each user in the checkout. |
+| Scope                     | Behavior                                                             |
+| ------------------------- | -------------------------------------------------------------------- |
+| **For Entire Checkout**   | One minimum deposit applies to the whole order.                      |
+| **Per User**              | The minimum deposit applies separately to each user in the checkout. |
 
-Use **Per user** when each registrant should meet a minimum commitment individually. Use **Entire checkout** when one combined deposit is enough for the transaction.
+Use **Per User** when each registrant should pay their own minimum. Use **For Entire Checkout** when one combined deposit is enough.
 
 #### Charge Deposit On Approval
 
-**Charge Deposit On Approval** prompts you to charge a deposit from a payment method on file when you manually approve a response. Helper text: **When you manually approve a response, you'll be prompted to charge a deposit to a payment method on file. Only applies to manual approvals.** Check **Prompt to charge a deposit when approving**.
+**Charge Deposit On Approval** (in the **Approval deposit settings** box) prompts you to charge a deposit to a payment method on file when you manually approve a response. Helper text: **When you manually approve a response, you'll be prompted to charge a deposit to a payment method on file. Only applies to manual approvals.** Check **Prompt to charge a deposit when approving**.
 
 Set **Default Deposit Amount** so the prompt is prefilled. Helper: **Prefilled when you approve a response. You can change the amount or skip the charge each time.**
 
@@ -688,13 +692,13 @@ When you approve, the **Charge Deposit On Approval** dialog lets you:
 
 Helper under **On a date**: **The form is approved now and the deposit is charged automatically at this date and time. Leave the time blank to charge just after midnight.** You can schedule for today if the time is still later than now.
 
-Use this when you review registrations before committing families to a charge, but still want a deposit collected when you approve.
+Use this when you review registrations before charging families, but still want a deposit collected when you approve.
 
 ### Send reminder emails
 
-Reminder emails help you follow up with recipients who still need to complete a form before or after its due date. Settings helper: **Users who haven't started or finished this form get an email asking them to complete it.** A warn note also says to avoid reminders on a primary registration form or on any form where a large audience could receive these emails.
+Reminder emails follow up with recipients who still need to complete a form, before or after its due date. Helper under **Send Reminder Emails**: **Users with a form status of "in progress" or "not started" will receive an email asking them to complete the form.** A warning below it says: **Avoid using reminders on a primary registration form or on any form where a large audience - potentially thousands of people - could receive these emails.**
 
-Campium sends reminder emails based on the form's progress tracking, not just whether the form exists.
+Who gets a reminder depends on each recipient's form status:
 
 | Form progress status | Included in reminder audience |
 | -------------------- | ----------------------------- |
@@ -703,20 +707,20 @@ Campium sends reminder emails based on the form's progress tracking, not just wh
 | **Pending**          | No                            |
 | **Approved**         | No                            |
 
-Reminders only go to recipients who are **Not Started** or **In Progress**. Once a submission moves to **Pending** or **Approved**, Campium stops reminding that recipient.
+Once a submission moves to **Pending** or **Approved**, Campium stops reminding that recipient.
 
-Reminder emails are most useful for deadline-driven forms that people must complete after registration or onboarding, such as medical forms, waivers, contracts, and staff paperwork.
+Reminders work best for deadline-driven forms people complete after registration or onboarding, such as medical forms, waivers, contracts, and staff paperwork.
 
 #### How reminders are enabled
 
-There is no single on/off toggle for reminders. Instead, you enable them by choosing which days should send a reminder in two multi-select controls:
+There is no on/off switch for reminders. You turn them on by picking days in two lists:
 
-- **Before due date** — Select the number of days before the **Due Date** that a "due soon" reminder should send. Each day you add is another reminder. Leaving this empty means no pre-due reminders go out.
-- **After due date** — Select the number of days after the **Due Date** that a past-due reminder should send. This is a separate control from the before-due reminders, so you can nudge recipients who miss the deadline without touching the pre-due schedule. Leaving it empty means no past-due reminders go out.
+- **Before due date**: helper **Days before the due date to email users who haven't submitted the form.** Each day you pick sends a "due soon" reminder. Leave it empty for no pre-due reminders.
+- **After due date**: helper **Days after the due date to email users who still haven't submitted the form.** Each day you pick sends a past-due reminder. Leave it empty for no past-due reminders.
 
-Selecting at least one day in either multi-select is what turns reminders on for the form.
+Picking at least one day in either list turns reminders on for the form. When you save, Campium schedules one reminder per day you picked, counted from the **Due Date**. Days that already fall in the past are skipped.
 
-Next to **Preview Before-Due Email** and **Preview Past-Due Email**, use **Edit Wording** to open **Admin → Automated Emails** for **Form reminder: due soon** or **Form reminder: past due**. See [Automated Emails](/automated-emails).
+Use **Preview Before-Due Email** and **Preview Past-Due Email** to see each message. **Edit Wording**, next to each preview, opens **Admin → Automated Emails** at **Form reminder: due soon** or **Form reminder: past due**. See [Automated Emails](/automated-emails).
 
 <Steps>
   <Step title="How to turn on form reminder emails" icon="mail" title-type="p">
@@ -724,24 +728,24 @@ Next to **Preview Before-Due Email** and **Preview Past-Due Email**, use **Edit 
     2. Go to the **Settings** tab.
     3. Confirm the form has a recipient list configured in the **Recipients** tab.
     4. Enter a **Due Date**.
-    5. Choose one or more days in the **Before due date** multi-select, and, if you want past-due nudges, one or more days in the **After due date** multi-select.
-    6. Save the form using **Save Settings**.
-    7. Wait for the daily reminder job to process eligible recipients, then review completions in **Responses**.
+    5. Pick one or more days in **Before due date**, and, for past-due reminders, one or more days in **After due date**.
+    6. Click **Save Settings**.
+    7. Reminders go out on each scheduled day when the daily reminder job runs. Review completions on the **Responses** tab.
   </Step>
 </Steps>
 
 The reminder message changes depending on timing. Days chosen in **Before due date** send a "due soon" message. Days chosen in **After due date** send an overdue or past-due message.
 
-Campium sends reminder emails through a daily automated job. That means reminders are not always immediate after you save the form. Plan for the next automated run when testing.
+Campium sends reminder emails from a job that runs once a day, so a reminder never goes out the moment you save. Plan for the next run when you test.
 
 <Callout kind="alert" collapsed="false">
   Important limitations for reminder emails:
 
-  - **Due Date is required**. Without a due date, Campium has no date to reference in the reminder logic.
-  - **Registration forms are skipped** by the automated reminder job, even if reminder settings are configured.
-  - **Large recipient audiences** can create heavy outbound email volume. Use caution before turning reminders on for very large groups.
-  - **Recipients still matter**. Campium can only remind users who are actually assigned to the form.
-  - **Unsubscribe rules apply**. Recipients can opt out of reminder emails.
+  - **Due Date is required**. Without one, Campium keeps the days you picked but schedules no reminders.
+  - **Registration forms are skipped** by the reminder job, even when reminder days are set.
+  - **Large audiences** mean a lot of email. Think twice before turning reminders on for very large groups.
+  - **Recipients still matter**. Campium only reminds people the form applies to.
+  - **Unsubscribes apply**. People who unsubscribed from form notifications do not get reminders.
 </Callout>
 
 Use reminder emails for:
@@ -758,69 +762,57 @@ Avoid reminder emails for:
 
 ### Email settings
 
-Email settings control who gets notified internally and which templates Campium sends when the form workflow changes state.
+The **Email settings** box controls which staff get notified and which emails Campium sends when a response changes status.
 
 #### Send Admin Email Notification To
 
-Use **Send Admin Email Notification To** to enter the staff email address or addresses that should receive an internal notification when someone submits the form.
+Use **Send Admin Email Notification To** to pick the staff users who get an email when someone submits the form. Helper: **The selected users will receive an email with a summary of responses and a copy of the invoice.** The helper also notes that sending health-related answers this way means you can no longer say you are HIPAA compliant.
 
-This notification is for administrators, not for families. Use it when staff need to know right away that a submission arrived.
+This notification goes to staff, not families.
 
 #### Also Notify When Additional Sessions Are Added
 
-**Also Notify When Additional Sessions Are Added** extends the admin notification so staff are alerted not only on the first submission but also when a family comes back and adds more sessions to an existing registration.
-
-Turn this on when later additions to a registration matter to your team as much as the original submission. Leave it off if you only want to be notified once, when the form is first completed.
+**Also Notify When Additional Sessions Are Added** appears on registration forms. Turn on **Email the same people when extra sessions are purchased later** to email the people above when someone who already completed the form comes back and buys more sessions. That email lists only the new sessions. Leave it off to be notified only when the form is first completed.
 
 #### Email Template When Approved, Pending, or Rejected
 
-Use **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** to choose which message Campium sends to the recipient when staff update the submission status.
+Use **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** to choose the email Campium sends when a response changes to that status. Leave a template blank to send nothing. Each has a **Click here** link to manage templates on **Admin → Email Templates**.
 
-These templates are especially useful when your form includes a review process and the recipient needs a clear outcome message.
+These templates are most useful when staff review submissions and the recipient needs to hear the outcome.
 
 <Callout kind="alert" collapsed="false">
-  Be careful with health-related or highly sensitive forms. If the form may contain medical or other private information, make sure your notification and status email templates do not include protected details that should not be sent by email.
+  Be careful with health-related or other sensitive forms. Make sure your notification and status emails do not include medical or private details that should not go by email.
 </Callout>
 
 ### Custom text
 
-Custom text settings let you change labels and instructional content on the Portal form experience.
+The **Custom text** box changes labels and instructions families see on the Portal. **Thank You Message** and **Form Header Text** appear on registration and standard forms. The checkout button, session selection, and cart text appear only on **Registration (With Products)** forms. Upload forms have no custom text.
 
-#### Payment Button Text
+#### Payment Button Text For Checkout Page
 
-**Payment Button Text** changes the label on the action button used to complete payment or checkout.
-
-Use a short action phrase that matches your workflow, such as confirming registration or submitting payment.
+**Payment Button Text For Checkout Page** (required) sets the label on the button families click to pay at checkout. Use a short action phrase, such as confirming registration or submitting payment.
 
 #### Thank You Message
 
-**Thank You Message** appears after successful submission. Use it to confirm what happened and tell the user what comes next.
-
-A good thank-you message answers two questions: was the submission successful, and should the user expect any follow-up.
+**Thank You Message** appears after the form is completed and in the invoice email the family receives. Use it to confirm the submission went through and say what happens next. When **Preview Confirmation Page** appears under the label, use it to see the message.
 
 #### Form Header Text
 
-**Form Header Text** adds instructional or contextual text at the top of the form.
+**Form Header Text** adds text at the top of the registration form. Use it for deadline notes, brief instructions, or reminders about required documents.
 
-Use it for deadline notes, brief instructions, or reminders about required documents.
+#### Sessions Selection Header Text
 
-#### Session Selection Header Text
-
-**Session Selection Header Text** customizes the heading shown above session or product selection areas in registration flows.
-
-Use it when the default heading is too generic for your enrollment process.
+**Sessions Selection Header Text** (the label uses your product wording) sets the text families see while they pick sessions or products.
 
 #### Cart Header Text
 
-**Cart Header Text** customizes the heading shown above the cart or summary area during checkout.
+**Cart Header Text** sets the text families see on the final checkout page.
 
-This is useful when you want to reinforce what the payer is reviewing before submission.
-
-Under the field label, click **Preview Cart Header** to open a preview of how that text appears on the final checkout page. The preview marks itself as a preview, shows sample checkout content below your header, and includes the **Parent view** checkout-rules strip so you can check payment-plan and paying-today gates without signing in as a parent.
+Under the field label, click **Preview Cart Header** to see that text on the checkout page. The preview is labeled as a preview, shows sample checkout content below your header, and includes the **Parent view** checkout-rules strip so you can check payment-plan and paying-today rules without signing in as a parent.
 
 ### Ask for References
 
-Turn on **Ask for References?** when an application needs people other than the applicant to fill out a recommendation or reference questionnaire.
+Turn on **Ask for References?** when an application needs other people to fill out a reference form for the applicant.
 
 Set **Ask for References?** to **Yes**, then choose one **Reference Form**. Everyone the applicant names fills out that same form. Use **References Required**, **Where References Appear**, **Reference Instructions**, and **Remind References After** to control the count, placement, intro copy, and reminder cadence.
 
@@ -832,45 +824,42 @@ Full steps for applicants, the portal **My References** page, and the profile **
 
 #### Show Question Numbers
 
-Turn on **Show Question Numbers** when numbered questions make the form easier to follow. This is often helpful for long compliance forms, contracts, and multi-part questionnaires.
-
-Leave it off when the form is short or conversational and numbering would add visual noise.
+Set **Show Question Numbers?** to **Yes** to number each question (1, 2, 3). Numbers help on long compliance forms, contracts, and multi-part questionnaires. Leave it on **No** for short forms.
 
 ## Saving and warnings
 
-Saving a form does more than store text on the page. **Save Settings** updates the current Settings values and can change which tabs, warnings, and workflows are available in the editor.
+**Save Settings** stores the Settings values and can change which tabs and warnings appear in the editor.
 
-On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form. The bar stays in view while you scroll. Next to the button, Campium shows **Your settings save automatically.** Changing a Settings control also saves on its own. Typing in text fields saves after a short pause without leaving the field; those saves update **Saved just now.** / **Last saved a moment ago.** on the bar and skip the success toast. Errors still toast.
+On the **Settings** tab, **Save Settings** sits in a sticky bar at the bottom of the form that stays in view while you scroll. Next to the button, Campium shows **Your settings save automatically.** Changing a Settings control saves on its own. Text fields save when you stop typing, without leaving the field. Those saves update **Saved just now.** / **Last saved a moment ago.** on the bar and skip the success toast. Errors still show a toast.
 
-After you click **Save Settings**, Campium keeps you in the form editor and refreshes the availability badge. Use that save point to confirm that conditional tabs, payment settings, and recipient-related warnings now match the form you intended to build.
+After you click **Save Settings**, Campium keeps you in the form editor and refreshes the availability badge. Check that the tabs, payment settings, and warnings match the form you meant to build.
 
 ### Save Settings behavior
 
-- **Creates the form record** the first time you save.
-- **Updates conditional fields and tabs** based on **Form Type**.
+- **Updates conditional fields and tabs** based on **Form Type**. (The form itself is created when you click **Create** in the **New Form** dialog.)
 - **Keeps you in the editor** so you can continue with Recipients, Questions, Products Layout, or Responses.
-- **Preserves the current workflow** without sending the form automatically.
+- **Sends nothing**: saving does not email the form to anyone.
 - **Blocks incomplete date-times** when **Start Date** or **End Date** has a date but no time.
 
 ### Yellow warning banners
 
-Campium may show yellow warning banners when a form is not currently visible on the Portal.
+Campium shows a yellow **Note:** banner at the top of the Settings tab when the form is not visible on the Portal.
 
-| Banner or warning state   | Likely cause                                                | What to fix                                                                                                                                                |
-| ------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Hidden** warning        | **Visibility** is set to **Hidden**                         | Change **Visibility** to **Visible** and save settings                                                                                                     |
-| **Outside dates** warning | Current date is before **Start Date** or after **End Date** | Review the form's availability window and update the dates if needed. On the Forms list, a future **Start Date** also shows as **Opens** under **Status**. |
+| Banner text                                                                                                              | What to fix                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **This form is not visible on the Portal because the Visibility setting below is set to Hidden.**                       | Change **Visibility** to **Visible**.                                                                                                               |
+| **This form is not visible on the Portal because today's date does not fall between the Start Date and End Date listed below.** | Update **Start Date** or **End Date**. On the Forms list, a future **Start Date** shows as **Scheduled** with an **Opens** line under **Status**. |
 
-These warnings are useful because they explain why a correctly configured form may still not be visible to recipients.
+These banners explain why a form with correct recipients still does not show to anyone.
 
 ### Form Type controls which fields appear
 
-Changing **Form Type** changes more than the label on the form. It changes which tabs and field groups Campium shows in the editor.
+Changing **Form Type** changes which tabs and settings Campium shows in the editor.
 
 | Form Type                               | Fields and tabs you should expect                                                                                      |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Registration (With Products)**        | Settings, Recipients, Questions, Responses, **Products Layout**, payment settings, discount settings, deposit settings |
-| **Standard (No Products for Purchase)** | Settings, Recipients, Questions, Responses, no product checkout settings                                               |
+| **Registration (With Products)**        | Settings, Recipients, Questions, Responses, **Products Layout**, payment, discount, deposit, and custom text settings  |
+| **Standard (No Products for Purchase)** | Settings, Recipients, Questions, Responses, **Thank You Message** and **Form Header Text**, no checkout settings        |
 | **Upload a File**                       | Settings, Recipients, Responses, upload-focused behavior, no Questions tab                                             |
 
 If a field seems to be missing, check **Form Type** first.
@@ -898,7 +887,7 @@ Use the checklist that matches the kind of form you are building.
 1. Set **Form Type** to **Standard (No Products for Purchase)** unless file upload is the primary action.
 2. Enter a clear **Form Name** and a short **Description** explaining the deadline.
 3. Set **Start Date**, **Due Date**, and **End Date**.
-4. Choose reminder days in the **Before due date** and **After due date** multi-selects.
+4. Pick reminder days in **Before due date** and **After due date**.
 5. Add the correct recipients.
 6. Set **Lock Form After Completion** to **Yes** if responses should not change after submission.
 7. Choose the right admin notification and approval templates.
@@ -909,7 +898,7 @@ Use the checklist that matches the kind of form you are building.
 
 1. Set **Form Type** to **Standard (No Products for Purchase)**.
 2. Enter **Form Name**, **Description**, **Start Date**, and **End Date**.
-3. Leave payment, discount, and deposit settings out of scope.
+3. Payment, discount, and deposit settings do not appear on this form type.
 4. Decide whether **Lock Form After Completion** should be **Yes** or **No**.
 5. Set **Form Status After Completion** to match whether staff review is needed.
 6. Add survey questions in the **Questions** tab.
@@ -920,14 +909,14 @@ Use the checklist that matches the kind of form you are building.
 
 <ExpandableGroup>
   <Expandable title="Why can't families see my form on the Portal?" default-open="false">
-    Check the four most common causes first:
+    Check the four most common causes:
 
     - **Visibility** is set to **Hidden**.
     - Today's date is before **Start Date** or after **End Date**.
     - The family was not added through the **Recipients** tab.
     - The family is using the wrong Portal URL or account context.
 
-    If all four are correct, open the form again and review any warning banners shown in the editor.
+    If all four are correct, open the form and read any warning banner on the Settings tab. For one family, run **Check Permissions** from their profile. See [Can't find a form on the parent portal](/user-cant-see-the-form-on-their-portal).
   </Expandable>
 
   <Expandable title="What's the difference between Hidden and End Date?" default-open="false">
@@ -940,13 +929,13 @@ Use the checklist that matches the kind of form you are building.
   </Expandable>
 
   <Expandable title="Does Due Date hide the form?" default-open="false">
-    No. **Due Date** does not hide the form. It supports deadline messaging and reminder logic, but **End Date** is the setting that removes the form from availability.
+    No. **Due Date** shows a deadline on the Portal and schedules reminders. **End Date** is what removes the form.
 
-    If the form should disappear after the deadline, set **End Date** accordingly.
+    If the form should disappear after the deadline, set **End Date** to the deadline.
   </Expandable>
 
   <Expandable title="Will reminders go out for my main registration form?" default-open="false">
-    You can configure reminder settings on some forms, but the automated reminder job skips **Registration (With Products)** forms. Use reminders for follow-up forms such as medical forms, waivers, contracts, and staff paperwork instead.
+    No. You can pick reminder days on a registration form, but the reminder job skips **Registration (With Products)** forms. Use reminders on follow-up forms such as medical forms, waivers, contracts, and staff paperwork.
   </Expandable>
 
   <Expandable title="What's the difference between reminder emails and admin notification emails?" default-open="false">
@@ -955,14 +944,14 @@ Use the checklist that matches the kind of form you are building.
     | **Reminder emails**           | Recipients who still need to complete the form | Daily automated reminder process |
     | **Admin notification emails** | Staff administrators                           | Form submission activity         |
 
-    Reminder emails prompt incomplete recipients. Admin notification emails tell staff that something happened.
+    Reminder emails nudge people who have not finished. Admin notification emails tell staff a submission arrived.
   </Expandable>
 
   <Expandable title="What's the difference between Pay In Full Upon Registration and Pay In Full Discount?" default-open="false">
     | Setting                           | Purpose                                     |
     | --------------------------------- | ------------------------------------------- |
     | **Pay In Full Upon Registration** | Requires full payment                       |
-    | **Pay In Full Discount**          | Offers a discount for choosing full payment |
+    | **Enable Pay In Full Discount**   | Offers a discount for choosing full payment |
 
     One setting enforces payment timing. The other changes pricing.
   </Expandable>
@@ -972,15 +961,15 @@ Use the checklist that matches the kind of form you are building.
   </Expandable>
 
   <Expandable title="How do I automatically activate campers when they register?" default-open="false">
-    Set **User Status After Completion** to **Active** if your workflow should mark the user active automatically after form completion.
+    Set **User Status After Completion** to **Active**. Campium marks the person active when they finish the form.
   </Expandable>
 
   <Expandable title="How do I prevent families from editing after they submit?" default-open="false">
-    Set **Lock Form After Completion** to **Yes**. This is usually the right choice for registrations, contracts, and other forms that should become a fixed record after submission.
+    Set **Lock Form After Completion** to **Yes**. Use it for registrations, contracts, and other forms that should become a fixed record after submission.
   </Expandable>
 
   <Expandable title="Can families opt out of form reminders?" default-open="false">
-    Yes. Recipients can unsubscribe from reminder emails, so do not assume every assigned recipient will continue receiving those messages indefinitely.
+    Yes. People who unsubscribe from form notifications stop getting reminders, so not every recipient gets every reminder.
   </Expandable>
 
   <Expandable title="A family says the form failed to save. What should they do?" default-open="false">

@@ -5,13 +5,11 @@ description: Create and manage cancellation fee sessions for your seasons.
 
 ## Cancellation fees guide for camp staff
 
-This guide is written in everyday language for office and registration staff.
-
-Use **Cancellation Fees** to create a dedicated fee session in a season. You can then use that session consistently when charging a cancellation fee. You can manage the same panel from a season's products page or from the **Sessions** step in [Guided Season Setup](/guided-season-setup).
+Use **Cancellation Fees** to create a dedicated fee session in a season, then add that same session whenever you charge a cancellation fee. The panel is on the **Sessions** step in [Guided Season Setup](/guided-season-setup).
 
 <Callout kind="alert">
 
-Cancellation fees are **not** applied automatically when a registration is cancelled. Creating a cancellation fee here only defines the fee session. To actually charge it, you add the fee to a family through their profile's **Sales** tab. For the full cancellation workflow, see [Withdraw a camper or cancel a registration](/withdraw-a-camper).
+Cancellation fees are **not** applied automatically when a registration is cancelled. Creating a cancellation fee here only defines the fee session. To charge it, add the fee to the family from their profile's **Sales** tab. For the full cancellation workflow, see [Withdraw a camper or cancel a registration](/withdraw-a-camper).
 
 </Callout>
 
@@ -21,7 +19,7 @@ Cancellation fees are **not** applied automatically when a registration is cance
 
 Use this guide if you:
 
-- manage products/sessions in the staff admin website
+- manage sessions in the admin
 - handle cancellations and fee adjustments
 - need a consistent way to track cancellation-fee charges
 
@@ -32,23 +30,23 @@ Use this guide if you:
 <Steps>
   <Step title="Open the season" icon="home">
 
-Sign in to your staff admin website.
+In the left menu, open **Seasons**.
 
-Open your products/sessions page for the season you are managing.
+Click the name of the season you are managing. Season setup opens on the **Sessions** step.
 
   </Step>
   <Step title="Find the Cancellation Fees panel" icon="settings">
 
-Find the **Cancellation Fees** button near the top of the page.
+Find the **Cancellation Fees** button at the top of the **Sessions** card, next to **Table** and **Calendar**.
 
-Select it to expand the panel.
+Select it to expand the panel. The panel repeats the reminder: **Cancellation fees are not applied automatically when a registration is cancelled. You add the fee via a profile's sales tab.**
 
   </Step>
 </Steps>
 
 <Callout kind="info">
 
-If you do not see **Cancellation Fees**, the feature is likely not enabled for your account yet. Ask your administrator or support contact.
+If you do not see **Cancellation Fees**, contact support.
 
 </Callout>
 
@@ -58,29 +56,32 @@ If you do not see **Cancellation Fees**, the feature is likely not enabled for y
 
 In the expanded **Cancellation Fees** panel, enter:
 
-- **Name**: clear session name (example: `Cancellation Fee`)
-- **Amount**: fee amount (example: `150.00`)
-- **Description**: short explanation shown with the fee
+- **Name**: clear session name (placeholder: `Cancellation Fee`)
+- **Amount**: fee amount greater than 0 (example: `150.00`)
+- **Description**: short explanation shown with the fee (placeholder: `Fee charged when a registration is cancelled`)
+
+All three fields are required.
 
 Then select **Save Cancellation Fee**.
 
 ### What happens after save
 
 - The fee appears in **Existing Cancellation Fees**.
-- It is saved for the current season.
-- The amount is set as the fee amount for that cancellation-fee session.
+- It is saved to the season you are setting up.
+- The amount becomes both the price and the minimum deposit of the fee session, so the family owes the full fee.
+- Discounts do not apply to the fee session.
 
 ---
 
 ## Apply a cancellation fee to a family
 
-Creating the fee does not charge anyone. Cancelling a registration also does not charge the fee on its own. When you decide to charge a cancellation fee, you add it manually:
+Creating the fee does not charge anyone, and neither does cancelling a registration. When you decide to charge a cancellation fee, add it yourself:
 
 - Open the family's profile.
 - Go to the **Sales** tab.
-- Add the cancellation-fee session you created to that family so the amount is charged.
+- Select **Add Session** (the button uses your camp's term for sessions) and add the cancellation-fee session you created.
 
-This keeps you in control of when a cancellation fee applies, rather than charging it automatically on every cancellation.
+You decide when a cancellation fee applies, instead of Campium charging it on every cancellation.
 
 ---
 
@@ -103,7 +104,7 @@ Select **Save Cancellation Fee** again.
   </Step>
 </Steps>
 
-Use **Cancel Edit** if you want to leave edit mode without saving.
+Use **Cancel Edit** to leave edit mode without saving.
 
 ---
 
@@ -117,14 +118,14 @@ In **Existing Cancellation Fees**, select **Delete**.
   </Step>
   <Step title="Confirm deletion" icon="check-circle">
 
-Confirm deletion when prompted.
+Campium asks **Are you sure you want to delete this cancellation fee session?** Select **Yes, delete**.
 
   </Step>
 </Steps>
 
 ### When delete is blocked
 
-You cannot delete a cancellation fee session that is already in use by registrations. In that case:
+You cannot delete a cancellation fee session that already has registrations. Its **Delete** button is grayed out. In that case:
 
 - keep the existing session for historical records
 - create a new one if you need a different amount/name going forward
@@ -145,27 +146,27 @@ You cannot delete a cancellation fee session that is already in use by registrat
 <ExpandableGroup>
   <Expandable title="Name is required">
 
-Add a session name and try again.
+Enter a **Name** and save again.
 
   </Expandable>
   <Expandable title="Amount must be greater than 0">
 
-Enter a positive dollar amount.
+Enter an **Amount** greater than 0.
 
   </Expandable>
   <Expandable title="Description is required">
 
-Add a short description and save again.
+Enter a short **Description** and save again.
 
   </Expandable>
   <Expandable title="Session name already exists in this season">
 
-Use a different name, or edit the existing session instead of creating a duplicate.
+Another session in this season already has that name. Use a different name, or edit the existing session instead of creating a duplicate.
 
   </Expandable>
   <Expandable title="Delete button does not work">
 
-The session is likely already in use. Keep it and create a new cancellation fee session if needed.
+The session is already in use, and Campium shows **This cancellation fee session is in use and cannot be deleted.** Keep it and create a new cancellation fee session if needed.
 
   </Expandable>
 </ExpandableGroup>

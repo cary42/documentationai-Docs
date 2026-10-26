@@ -32,6 +32,11 @@
                 "icon": "home"
               },
               {
+                "title": "Features Overview",
+                "path": "features",
+                "icon": "layout-grid"
+              },
+              {
                 "title": "Quickstart",
                 "path": "quickstart",
                 "icon": "zap"
@@ -45,6 +50,11 @@
                 "title": "Account",
                 "path": "account",
                 "icon": "user"
+              },
+              {
+                "title": "Favorite pages",
+                "path": "favorite-pages",
+                "icon": "heart"
               },
               {
                 "title": "Billing",
@@ -65,6 +75,11 @@
                 "title": "Mobile App",
                 "path": "mobile-app",
                 "icon": "smartphone"
+              },
+              {
+                "title": "Sign In and Passwords",
+                "path": "help-center/guides/sign-in-and-passwords",
+                "icon": "key-round"
               }
             ],
             "public": true
@@ -245,6 +260,10 @@
                   {
                     "title": "Retention",
                     "path": "system-report-retention"
+                  },
+                  {
+                    "title": "Organization Snapshot",
+                    "path": "organization-snapshot"
                   },
                   {
                     "title": "Chronological User Registration Report",
@@ -440,6 +459,11 @@
                 "title": "Payment Issues",
                 "path": "payment-issues",
                 "icon": "circle-dollar-sign-icon"
+              },
+              {
+                "title": "Organization Snapshot",
+                "path": "organization-snapshot",
+                "icon": "building-2"
               }
             ],
             "public": true
@@ -479,7 +503,7 @@
               {
                 "title": "Health Center",
                 "path": "health-center",
-                "icon": "heart-pulse"
+                "icon": "briefcase-medical"
               },
               {
                 "title": "Incident Reports",
@@ -535,6 +559,18 @@
                 "title": "Bunk Summary",
                 "path": "group-summary",
                 "icon": "table"
+              }
+            ],
+            "public": true
+          },
+          {
+            "group": "Canteen",
+            "icon": "lucide-glass-water",
+            "pages": [
+              {
+                "title": "Canteen",
+                "path": "canteen",
+                "icon": "lucide-glass-water"
               }
             ],
             "public": true
@@ -608,11 +644,6 @@
                 "icon": "lucide-mail"
               },
               {
-                "title": "System Emails",
-                "path": "system-emails",
-                "icon": "lucide-mail"
-              },
-              {
                 "title": "Email Overview",
                 "path": "email",
                 "icon": "lucide-mail"
@@ -647,6 +678,11 @@
                 "title": "Form Recipients & Permissions",
                 "path": "permissions-recipients",
                 "icon": "user-check"
+              },
+              {
+                "title": "Direct Access Links",
+                "path": "recipients",
+                "icon": "link"
               }
             ],
             "public": true
@@ -716,11 +752,6 @@
                 "icon": "shield-check"
               },
               {
-                "title": "Canteen",
-                "path": "canteen",
-                "icon": "lucide-glass-water"
-              },
-              {
                 "title": "Email Templates",
                 "path": "email-templates",
                 "icon": "lucide-mail"
@@ -761,11 +792,6 @@
                 "icon": "video"
               },
               {
-                "title": "Favorite pages",
-                "path": "favorite-pages",
-                "icon": "heart"
-              },
-              {
                 "title": "Walk me through",
                 "path": "walk-me-through",
                 "icon": "footprints"
@@ -786,6 +812,11 @@
                 "icon": "history"
               },
               {
+                "title": "Data Audit",
+                "path": "data-audit",
+                "icon": "history"
+              },
+              {
                 "title": "Activity Scheduling",
                 "path": "activity-scheduling",
                 "icon": "calendar-range"
@@ -794,16 +825,6 @@
                 "title": "Note Types",
                 "path": "note-types",
                 "icon": "tags"
-              },
-              {
-                "title": "Legal Documents",
-                "path": "legal-documents",
-                "icon": "scale"
-              },
-              {
-                "title": "Portal Settings",
-                "path": "portal-settings",
-                "icon": "panels-top-left"
               }
             ],
             "public": true
@@ -868,6 +889,11 @@
             "group": "Portal",
             "pages": [
               {
+                "title": "Portal Settings",
+                "path": "portal-settings",
+                "icon": "panels-top-left"
+              },
+              {
                 "title": "Portal Site Text",
                 "path": "portal-site-text",
                 "icon": "type"
@@ -928,6 +954,10 @@
               {
                 "title": "Managing multiple email addresses",
                 "path": "managing-multiple-email-addresses"
+              },
+              {
+                "title": "Can I log in as a parent?",
+                "path": "help-center/faq/can-i-login-as-a-parent"
               }
             ]
           },
@@ -941,6 +971,10 @@
               {
                 "title": "Email users that have not completed a form",
                 "path": "email-users-who-have-not-completed-a-form"
+              },
+              {
+                "title": "Let staff email their assigned sessions",
+                "path": "help-center/faq/allowing-staff-to-quickly-send-an-email-to-their-sessions"
               }
             ]
           },
@@ -989,7 +1023,7 @@
             ]
           },
           {
-            "group": "General", 
+            "group": "General",
             "pages": [
               {
                 "title": "How to create data views for profiles",

@@ -57,7 +57,7 @@ The bottom bar shows what the status means, then actions such as **Copy to anoth
 
 ### Emails tab
 
-Each email is a card with its timing, optional **Only** badge naming one session, subject, and a preview of the message. Cards that have already sent show a line such as **N sent · N opened · N clicked** (people, not scanners). Click **N clicked** to open the **People** tab filtered to people who clicked a link in that email. Use **Edit** to change it, or **Add Email** under the list.
+Each email is a card with its timing, optional **Only** badge naming one session, subject, and a preview of the message. Cards that have already sent show a line such as **N sent · N opened · N clicked** (people, not scanners). Click **N clicked** to open the **People** tab filtered to people who clicked a link in that email. On a closed card, **Send test to me** sits next to **Edit** so you can send yourself a copy without opening the editor. Use **Edit** to change it, or **Add Email** under the list.
 
 The side **Progress** panel can show **Clicked a link** among its counts.
 
@@ -68,10 +68,15 @@ When you edit:
 - **When it goes out** - Days plus one of: **days after they are enrolled**, **days before the session starts**, **days after the session starts**, or **days after the session ends** (session sequences). Lead and list sequences only use days after enrollment.
 - For session sequences, choose **for every session** or a single session option labeled **for** that session **only**.
 - **Subject** and **Message** (required). Optionally **Start from a saved template**.
+- Next to **Message**, **Import HTML** opens the same import flow as Mass Emails and Email Templates: paste or upload HTML from another tool, then **Import**. After import, use **Preview** and **Edit HTML** for the full design, or **Switch to the simple editor**. See [Email Templates](/email-templates#import-html-from-another-email-tool).
+- When Import HTML leaves merge tags Campium does not recognize, a panel titled **Match the merge tags from your old email** lists each leftover tag. Helper text: **These are not Campium fields. Pick a field for each one. A tag you leave as written goes out exactly as typed.** For each tag, choose **Leave as written**, **Remove it**, or a Campium merge field / profile field, then **Replace tags** or **Not now**. Sequence imports map first and last name tags to `{first_name}` and `{last_name}` for the person in the sequence.
 - Next to **Message**, **AI Rewrite** opens rewrite styles, then **Original** vs **Rewritten**. Choose **Use This Text** or cancel. It does not save until you click **Save Email**.
+- **Preview as…** opens **Preview as**. Pick a person to fill merge fields. Badges can read **Blank**, **Not a field**, or **Filled**. Leftover tags from another email tool show as **Not a field**. A line such as **Filled in for** that person appears above the preview. Unsaved edits note that **Send test** still uses the saved version. **Send test to me** asks you to confirm first when the saved email still has unrecognized merge tags.
 - **Send test to me**, **Cancel**, **Save Email**, or **Delete**. Leaving with unsaved edits asks **Discard your changes to this email?** (**Yes, discard** / **Keep editing**).
 
 The side column **How it runs** shows **Starts when**, **Sessions** (or **Pick sessions**), **Sends at** (**9am your time**), **Replies go to**, and **Stop when they reply**. **Progress** counts link into the **People** tab. **Merge fields** insert tags such as `{first_name}`, `{campers}`, `{session_name}`, `{session_start_date}`, `{session_end_date}`, `{days_until_session}`, `{agency_name}` (your camp's name), and `{magic_login}` where you are typing.
+
+Under **Merge fields**, **Profile fields** lets you insert a custom profile answer. Placeholder: **Pick a profile field**. Fields are grouped for the person in the sequence, **Family**, **Guardian 1**, and **Guardian 2**. The value fills in the subject and message when that person has answered the field, and stays blank when they have not.
 
 Helper note: if someone joins after an email's day has passed, they skip that email. Changes apply to everyone's future emails.
 
@@ -82,6 +87,8 @@ If a reply could not be forwarded, **Replies we could not deliver** appears abov
 Shows who is in the sequence: **Name**, optional **Session**, **Status**, **Enrolled**, **Emails sent**, and **Remove from sequence** while in progress.
 
 Statuses include **In progress**, **Finished**, **Converted** (lead sequences), **Replied**, **Stopped (no longer registered)**, and **Removed**.
+
+When reply tracking is on, the People hint includes **You can read replies here for 1 year.** Row links read **Read reply** or **Read replies (N)**. Opening a reply shows the message that was also forwarded to your parent contact email, with a footer note that you can read it here for 1 year after it arrived.
 
 For **Added from a list** sequences, helper text points you to **Add to Sequence** in the **Email this group** window on a report or group.
 

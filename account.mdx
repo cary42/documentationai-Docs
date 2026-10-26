@@ -177,13 +177,23 @@ Status badges include **Two-step sign-in is on**, **Text message only**, or **No
    - **Authenticator app**: Google Authenticator, Microsoft Authenticator, 1Password, and similar apps
    - **Text message** under **Other options** (labeled less safe). Super users are not offered text message as their only method
 3. Follow the on-screen steps for that method.
-4. On **Save your recovery codes**, download or copy the codes, then confirm **I saved them** (or **I saved these codes**) and finish.
+4. If you chose **Passkey** and you do not already have a text message or authenticator app, the wizard opens **Add a backup** before you finish. See [Add a backup for your passkey](#add-a-backup-for-your-passkey).
+5. On **Save your recovery codes**, download or copy the codes, then confirm **I saved them** (or **I saved these codes**) and finish.
 
 The methods table lists **Method**, **Added**, and **Last used**. You can add more than one method later from the same tab.
 
+#### Add a backup for your passkey
+
+A passkey often stays on the computer where you created it. Campium asks for a **Text message** or **Authenticator app** backup so you can still sign in on a phone or another computer.
+
+- After you create a passkey with no backup yet, the setup wizard shows **Add a backup**. Helper text: **Your passkey may only work on the computer where you created it. Add a text message or authenticator app so you can sign in on your phone or another computer.**
+- Choose **Text message** (badge **Easiest**) or **Authenticator app**, then finish that method's steps.
+- If you already have a passkey and no backup, the next successful sign-in holds you on that same **Add a backup** step until you add one.
+- You cannot remove your last text message or authenticator app while a passkey remains (when two-step policy covers your account). You also need a backup before you can generate recovery codes.
+
 #### Recovery codes
 
-Use a recovery code if you lose your phone or passkey. Each code works once. The tab shows how many of **10** are left. Click **Generate new codes** when you need a fresh set, then **Download** or **Copy**.
+Use a recovery code if you lose your phone or passkey. Each code works once. The tab shows how many of **10** are left. Click **Generate new codes** when you need a fresh set, then **Download** or **Copy**. Generate codes only after you have a text message or authenticator app backup for your passkey.
 
 #### Remembered browsers
 
@@ -196,15 +206,15 @@ On **Sign-in security**, **Sign out all browsers** clears every remembered brows
 Turn on **Require a passkey to sign in** to stop password sign-in for your account. Google and Apple sign-in still work. You need at least one passkey before you can turn this on.
 
 <Callout kind="alert" collapsed="false">
-  Before you turn on **Require a passkey to sign in**, register a passkey on at least one device you reliably have access to. If you lose access to all of your passkeys, use Google or Apple sign-in, or contact Campium support to regain access.
+  Before you turn on **Require a passkey to sign in**, register a passkey on at least one device you reliably have access to, and add a **Text message** or **Authenticator app** backup. If you lose access to all of your passkeys, use a backup method, Google or Apple sign-in, or contact Campium support to regain access.
 </Callout>
 
 #### Sign-in challenge
 
-After your password (or Google sign-in, when two-step is on), Campium asks for the second step.
+After your password (or Google sign-in, when two-step is on), Campium asks for the second step. Other first-step options (**Sign in with a passkey**, **Sign in with Google**, **Sign in with Apple**) stay hidden on this challenge screen.
 
-- If you have a passkey and this browser supports it, the challenge leads with **Use a passkey**. Helper text: *Use the passkey saved on this device, your phone, or your password manager.* Clicking the button starts the passkey prompt.
-- Switch among **Use your authenticator app**, **Text me a code**, **Use a passkey**, and **Use a recovery code** as needed. For a text code, use **Verify** and **Send a new text**.
+- If you have a passkey and this browser supports it, the challenge leads with **Use a passkey**. Subtitle: **Confirm with a passkey**. Helper text explains that passkeys often stay on the computer where you created them, and that on a phone or another computer you should use a text message or authenticator app instead.
+- The primary button is **Use a passkey** or **Verify** (for a code). Alternate methods appear as full-width buttons below it: **Use your authenticator app**, **Text me a code**, **Use a passkey**, and **Use a recovery code**. For a text code, use **Verify** and **Send a new text**.
 - Leave **Remember this browser for 30 days** checked (it stays available when a passkey leads) so this browser can skip the second step for 30 days.
 
 #### Require two-step for all staff

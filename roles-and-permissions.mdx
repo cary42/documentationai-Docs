@@ -49,9 +49,9 @@ The roles list shows every role for your account. Next to each role name, you ma
 
 Use the list to review your existing access profiles before you create a new one or update an existing role. When you have many roles, the search box helps you find the one you want to edit.
 
-Each role also offers a few actions:
+Each role also offers a few actions (account administrators see **Members** and related controls):
 
-- **Members** opens a list of the staff users who currently hold that role, so you can see exactly who is affected before you change or remove it.
+- **Members** opens **Members of** that role, with a count of distinct people who hold it. From the modal you can **Add a staff member** (search placeholder **Search staff by name**, then **Add**). If everyone already has the role, you see **Every active staff member already has this role.** Adding someone who already has a different role asks you to confirm with **Yes, move them**. You can also remove a member from the list when you are an administrator.
 - **Delete** removes a role. This button stays disabled while any users are still assigned to the role. Reassign those users to a different role first, and then the Delete button becomes available.
 
 <Callout kind="info">
@@ -77,9 +77,12 @@ Create a new role when you need a new job type or a different access level.
 
   - Enter the role details requested on screen.
   - Turn permissions on or off for the new role based on the access that job needs.
+  - Only administrators can create a role named **Administrator**. If you try without that access, you see **Only administrators can create a role named Administrator.**
 
   </Step>
 </Steps>
+
+When you are not an administrator, you can only turn on permissions that your own role already has. Checking one you do not hold shows **You can only give a role permissions that you have yourself.** Administrators are not limited this way.
 
 A new role works best when it reflects a real staff responsibility. If two job functions need different access, create separate roles rather than sharing one broad role.
 
@@ -120,6 +123,7 @@ Permissions are grouped into categories so you can turn on just the access a job
 - **Transportation** - manage transportation and route assignments.
 - **Custom fields** - view and edit custom profile fields.
 - **Site settings** - change account-wide settings and configuration.
+- **Admin** - includes **Billing**, which opens Campium subscription billing (your name menu → **Billing**) and related pay actions. Administrators receive it by default; grant it when another role should manage what your camp pays Campium. See [Billing](/billing).
 - **Users** - view, edit, create, and merge user records. Includes **View the 'Sales' tab**, which opens the profile **Sales** tab for enrollment and balances.
 - **Roles** - manage roles and permissions themselves.
 - **Contracts** - view and manage contracts.
@@ -167,7 +171,7 @@ Previewing is useful before assigning a role to staff, especially after you make
 
 ## Give someone a role
 
-Assign roles from CampiumDB Users, not from the Roles & Permissions screen. Roles define the access profile, and the user record is where you apply that profile to a person.
+You can assign a role from a person's record under **Admin → CampiumDB Users**, or (as an account administrator) from **Members** on **Admin → Roles & Permissions**. Roles define the access profile; the person keeps one role at a time.
 
 <Steps>
   <Step title="Open the user record" icon="users" titleType="p">
@@ -190,9 +194,24 @@ After assignment, that user's day-to-day access follows the permissions configur
 
 ## Who can use this screen
 
-Only people whose own access includes managing roles and permissions can use this screen. Staff without that access will not see **Roles & permissions** under **Admin**.
+Only people whose own access includes managing roles and permissions can use this screen. Staff without that access will not see **Roles & Permissions** under **Admin**.
 
 If you need to change roles but cannot open this page, contact an account owner or administrator.
+
+## When an action needs a permission you do not have
+
+Some admin actions that check permissions show a dialog titled **You need a permission for this**. The message names your role and the missing permission (for example under its category).
+
+- If you can manage roles, it says **You can turn it on in Roles & Permissions.** and offers **Open Roles & Permissions** (or **Exit preview and open Roles** while you are previewing a role).
+- If you cannot manage roles, it says **Ask an Administrator to add it to your role.** and **Close**.
+
+Opening Roles from that link can highlight the permission with a **Needed** badge. After you tick it (changes save immediately), the badge becomes **Already allowed**. Soft hide-or-show checks that never run that deny path do not show this coach.
+
+## Limit staff to campers in certain sessions
+
+A role controls which screens a staff member can open. It does not limit which campers they see. To let a counselor open only the profiles of campers in their own session, add them to that session's **Staff** field in the **Edit** session modal. The helper text reads **Staff you pick can only open profiles of campers registered in this session.** Staff with no session assignments stay unrestricted, and admins are never limited by this list. See [Seasons and sessions](/seasons-and-sessions#create-a-new-sessionproduct).
+
+For a helper who only takes attendance, use the **my groups only** login mode instead. See [My Groups](/my-groups#restrict-a-login-to-my-groups-only).
 
 ## Best practices
 

@@ -6,16 +6,16 @@ description: >-
 ---
 ## Overview
 
-Process refunds and voids for credit card and ACH payments from the **Sales** tab in an individual user’s profile. You can also remove scheduled or future payments from the same place.
+You refund and void credit card and ACH payments from the **Sales** tab of a user’s profile. You also remove scheduled or future payments there.
 
-Refunds are available only after a payment settles. Before settlement, you may see a **Void** or **Remove** option instead of **Refund**, depending on whether the payment has already run or is still scheduled.
+Use a refund after a payment settles. Before then, a payment that has already run shows **void**, and a payment that is still scheduled shows **remove**.
 
 ### Who can refund or void
 
-On **Admin → Roles & permissions**, staff need:
+On **Admin → Roles & Permissions**, staff need:
 
 - **View the 'Sales' tab** (**Users** category) to open the profile **Sales** tab
-- **Process Payments** (**Financial** category) to see **Refund** and **Void**, and to use **Add Payment**
+- **Process Payments** (**Financial** category) to see **refund** and **void**, and to use **Add Payment**
 
 Without **Process Payments**, those payment action links stay hidden. If someone still reaches a refund or void action without that access, Campium shows: **You do not have permission to record payments, refunds or voids.** Removing a session from **Sales** only needs **View the 'Sales' tab**; without it, Campium shows: **You do not have permission to remove sessions.**
 
@@ -23,31 +23,31 @@ Without **Process Payments**, those payment action links stay hidden. If someone
 
 Refunds become available once the original charge has fully settled to your merchant account.
 
-- For **credit card payments**, this is typically the next day.
+- For **credit card payments**, this is usually the next day.
 
-- For **ACH payments**, settlement typically takes **3-5 business days**. Until an ACH payment settles, Campium does not offer **refund**. Use **void** to cancel the debit instead.
+- For **ACH payments**, settlement usually takes **3-5 business days**. Until an ACH payment settles, the row shows **Refund (after settle)** in place of the **refund** link. Use **void** to cancel the debit instead.
 
-Before settlement, the payment is still pending and you will see a **Void** option instead of **Refund**. Voiding cancels the payment before it completes.
+Before settlement, the payment is pending and the row shows **void**. Voiding cancels the payment before it completes. A card payment can show **void** and **refund** side by side during this window.
 
 <Callout kind="info" collapsed="false">
   If you open **refund** on an ACH payment that has not settled yet, Campium shows: **This ACH payment has not settled yet. Void it to cancel the debit. You can refund only after it settles.** Use **Void this payment** (or **Close**), then issue a refund after settlement. The same message appears on profile payments and on **Canteen** → **Deposits**.
 </Callout>
 
 <Callout kind="info" collapsed="false">
-  If the transaction has not settled yet, you see a **Void** option that cancels the pending payment. Depending on your daily batching cutoff, you may see a message indicating you can no longer void the transaction. When that message appears, wait for the payment to settle, then issue a refund instead of a void.
+  The **void** link disappears after your daily batch cutoff. If you open **void** on an ACH payment that has already settled, Campium shows **This transaction has already been settled and can't be voided. You must refund at this point.** Click **Refund this payment instead**.
 </Callout>
 
-Once the payment settles, the **Void** option is no longer available and a **Refund** option appears for that transaction.
+Once the void window closes, only **refund** remains for that transaction.
 
 ## Imported payments
 
-Payments brought in from another system (for example a CampMinder or markdown import) do not show **Refund** or **Void** on the profile. Those rows have no processor transaction behind them, so Campium cannot reverse them the usual way.
+Payments brought in from another system (for example a CampMinder import) do not show **refund** or **void** on the profile. Those rows have no processor transaction behind them, so Campium cannot reverse them the usual way.
 
 If someone still tries to refund or void an imported payment, Campium shows: **This payment was imported from another system, so it can't be refunded or voided here. Record a credit instead.**
 
 ## How to issue a refund
 
-Use the Sales tab in a user’s profile to refund completed credit card or ACH payments.
+Refund completed credit card or ACH payments from the **Sales** tab of a user’s profile.
 
 <Steps>
   <Step title="Open the user's Sales tab" icon="users" title-type="p">
@@ -59,31 +59,31 @@ Use the Sales tab in a user’s profile to refund completed credit card or ACH p
   <Step title="Select the completed payment" icon="search" title-type="p">
     - In the payment list, find the completed **credit card** or **ACH** payment you want to refund.
 
-    - Hover over the payment row until a **Refund** link appears.
+    - Hover over the payment row until a **refund** link appears.
   </Step>
 
   <Step title="Enter refund details" icon="edit" title-type="p">
-    - Click the **Refund** link.
+    - Click the **refund** link.
 
-    - Enter the **amount** you want to refund. You can issue a full or partial refund.
+    - Enter the **Amount** you want to refund. You can issue a full or partial refund.
 
-    - Enter a **reason** for the refund.
+    - Enter a **Reason** for the refund.
   </Step>
 
   <Step title="Confirm the refund" icon="check-circle" title-type="p">
-    - Review the refund amount and reason, then confirm the refund.
+    - Review the amount and reason, then click **Refund**.
 
-    - The refund appears on the family’s invoice along with the reason you entered, so they can clearly see why the adjustment was made.
+    - The refund and the reason you entered appear on the family’s invoice.
   </Step>
 </Steps>
 
 <Callout kind="info" collapsed="false">
-  As of December 2, 2025, the **Also Refund Surcharge** checkbox is available when refunding credit card payments that included a surcharge. See the sections below for full details on how this works.
+  When a credit card payment included a surcharge, the refund form also handles the surcharge: an **Also Refund Surcharge** checkbox on most processors, and an automatic refund on Finix. See the sections below.
 </Callout>
 
 ## Canceling scheduled or future payments
 
-Cancel scheduled or future payments from the same Sales tab in the user’s profile.
+Cancel scheduled or future payments from the same **Sales** tab.
 
 <Steps>
   <Step title="Open the user's Sales tab" icon="users" title-type="p">
@@ -95,19 +95,19 @@ Cancel scheduled or future payments from the same Sales tab in the user’s prof
   <Step title="Remove the future payment" icon="trash" title-type="p">
     - Find the scheduled or future payment you want to cancel.
 
-    - Follow the same steps you use to access refunds and voids. Instead of a **Refund** or **Void** link, you see a **Remove** option.
+    - Hover over the payment row. A scheduled payment shows a **remove** link instead of **refund** or **void**.
 
-    - Click **Remove** to cancel the scheduled or future payment.
+    - Click **remove**, then confirm.
   </Step>
 </Steps>
 
-The payment will no longer process on the scheduled date once you remove it.
+After you remove it, the payment does not run on its scheduled date.
 
 <Iframe uid="1c6ae5af-715c-4aaa-b536-7e4787db8d3c" src="https://share.layerpath.com/e/cm19txkzc0014jp0daq2qw6i2/tour" title="Embedded content" height="400" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
 
 ## Refunds and credit card surcharges
 
-When you refund a credit card payment that included a surcharge, the **Amount** field represents the camp balance portion only, not the full amount charged to the card. By default, **Also Refund Surcharge** is checked so the fee is returned proportionally with the refund. Uncheck it only when you intentionally want to keep the surcharge (not available on Finix; see below). A **Void** works differently: it cancels the full original card charge before settlement and always reverses both the payment amount and the surcharge.
+When you refund a credit card payment that included a surcharge, the **Amount** field represents the camp balance portion only, not the full amount charged to the card. By default, **Also Refund Surcharge** is checked so the fee is returned proportionally with the refund. Uncheck it only when you want to keep the surcharge (not possible on Finix; see below). A **Void** works differently: it cancels the full original card charge before settlement and always reverses both the payment amount and the surcharge.
 
 ## How a credit card payment is stored
 
@@ -119,7 +119,7 @@ Campium stores each credit card payment as two separate parts so the camp balanc
 | Surcharge | Card processing fee added on top | $2.50 |
 | Total charged to card | Applied amount + surcharge | $102.50 |
 
-On the profile **Payments** tab, you see the applied amount on the main payment line and **Surcharge** as a separate line underneath when a fee was charged. ACH and debit card payments usually do not include a surcharge, so the **Also Refund Surcharge** checkbox does not appear for those payments.
+In the **Payments** list on the profile **Sales** tab, the main payment line shows the applied amount, and a **Surcharge:** line underneath shows the fee when one was charged. ACH and debit card payments are never surcharged, so the **Also Refund Surcharge** checkbox does not appear for them.
 
 ## Refund vs void
 
@@ -128,17 +128,17 @@ Use a void for same-day or not-yet-settled card payments when you need to cancel
 | Action | When to use it | What it does | Surcharge behavior |
 | --- | --- | --- | --- |
 | Void | Same day or before settlement | Cancels the entire original transaction | Always reverses the full surcharge automatically; no checkbox |
-| Refund | After settlement or when returning only part of the payment | Sends money back after the original transaction has settled | **Also Refund Surcharge** is checked by default; on Finix it is required and locked |
+| Refund | After settlement or when returning only part of the payment | Sends money back after the original transaction has settled | **Also Refund Surcharge** is checked by default; on Finix there is no checkbox and the surcharge is always refunded |
 
 <Callout kind="info" collapsed="false">
 
-The **Amount** you type is always the camp balance portion. Whether the surcharge is also returned depends on **Also Refund Surcharge** (checked by default, and required on Finix).
+The **Amount** you type is always the camp balance portion. Whether the surcharge is also returned depends on **Also Refund Surcharge** (checked by default). On Finix the surcharge is always returned.
 
 </Callout>
 
 ## Also Refund Surcharge: what it does
 
-The **Also Refund Surcharge** checkbox appears only when you are issuing a refund, not a void, and only if the original payment included a surcharge. If the payment had no surcharge, there is no fee to return and the checkbox does not appear. ACH and debit card payments usually do not include a surcharge.
+The **Also Refund Surcharge** checkbox appears only on a refund, not a void, only if the original payment included a surcharge, and only on processors other than Finix. If the payment had no surcharge, there is no fee to return and the checkbox does not appear. ACH and debit card payments are never surcharged.
 
 When the checkbox is checked (the default), Campium calculates an additional surcharge refund from the **original surcharge** on that payment, then credits the card for the entered **Amount** plus the surcharge refund. When you uncheck it (processors other than Finix), Campium refunds only the amount you enter and your organization keeps the surcharge.
 
@@ -149,13 +149,15 @@ Under the checkbox, a live helper line updates as you change the **Amount**. Exa
 - **Keeps the full $2.50 surcharge.**
 - **Enter an amount to see how much of the $2.50 surcharge comes back.**
 
+While the surcharge is included, a breakdown below the **Amount** shows **Refund amount**, **Surcharge refund**, and **Total refund**.
+
 ### Finix
 
-On Finix, card-network rules require the surcharge to be refunded with the payment. The checkbox shows as **Also Refund Surcharge (required)**, stays checked, and cannot be turned off. A note on the refund form explains that the surcharge is included automatically.
+On Finix, card-network rules require the surcharge to be refunded with the payment. The refund form has no checkbox. A note at the top reads **Card-network rules require the surcharge to be refunded with the payment, so it is included automatically.**, and the breakdown shows the surcharge added to the total.
 
 ### Other processors
 
-On Payabli, USIO, and similar processors, the checkbox starts checked with a note that the surcharge is refunded proportionally by default. Uncheck it only if the surcharge should be kept.
+On Payabli, USIO, and similar processors, the checkbox starts checked, with the note **The surcharge is refunded proportionally by default. Uncheck it only if the surcharge should be kept.**
 
 The calculation is:
 
@@ -165,7 +167,7 @@ Campium rounds the surcharge refund to the nearest cent. The fee comes from what
 
 ## Examples (original payment had a 2.5% surcharge)
 
-Assume a family paid **$100.00** toward camp and **$2.50** in surcharge, for a total card charge of **$102.50**. On Finix, only the **Checked** rows apply (the checkbox cannot be turned off).
+Assume a family paid **$100.00** toward camp and **$2.50** in surcharge, for a total card charge of **$102.50**. On Finix, only the **Checked** rows apply, because the surcharge is always included.
 
 ### Full refund of the camp portion
 
@@ -189,11 +191,11 @@ If the original camp portion was **$200.00** and the surcharge was **$5.00**, th
 
 - The **Reason** you enter appears on the family invoice.
 - Refund rows show the applied amount and, when applicable, a separate **Surcharge** line.
-- Parent portal terms may state that processing fees are non-refundable. Your staff choice with **Also Refund Surcharge** (or Finix's required inclusion) controls whether the fee is returned on that refund.
+- Parent portal terms may state that processing fees are non-refundable. **Also Refund Surcharge** (or, on Finix, the automatic inclusion) decides whether the fee is returned on that refund.
 
 ## Reporting and QuickBooks
 
-Revenue Summary reporting includes **Refunds - Credit Card Surcharge (Refunds & Voids)** so you can track surcharge income that was reversed. When QuickBooks sync is enabled, refund rows are treated as the principal refund amount for camp charges plus a separate surcharge or convenience fee reversal when the surcharge was refunded.
+The Revenue Summary report includes a **Refunds - Credit Card Surcharge (Refunds & Voids)** row, so you can track surcharge income that was reversed. When QuickBooks sync is on, a refund syncs as the principal refund for camp charges plus a separate surcharge or convenience fee reversal when the surcharge was refunded.
 
 ## Canteen payments
 
@@ -204,7 +206,7 @@ Canteen refunds use a separate workflow in **Canteen** → **Deposits**. The can
 <ExpandableGroup>
   <Expandable title="If I refund the full amount shown on the card, do I get the surcharge back?">
 
-The **Amount** field is the camp portion, not the full card total. For a $102.50 card charge made up of $100.00 camp charges and a $2.50 surcharge, enter **$100.00**. With **Also Refund Surcharge** checked (the default, and required on Finix), the family receives the full $102.50.
+The **Amount** field is the camp portion, not the full card total. For a $102.50 card charge made up of $100.00 camp charges and a $2.50 surcharge, enter **$100.00**. With **Also Refund Surcharge** checked (the default, and automatic on Finix), the family receives the full $102.50.
 
   </Expandable>
   <Expandable title="If I refund 50% of the total, is only 50% of the surcharge refunded?">
@@ -214,7 +216,7 @@ Refund 50% of the camp amount, not 50% of the full card charge. For a $100.00 ca
   </Expandable>
   <Expandable title="What if I leave the checkbox unchecked?">
 
-On processors other than Finix, the family receives only the **Amount** you entered and your camp keeps the surcharge. On Finix you cannot uncheck the box.
+On processors other than Finix, the family receives only the **Amount** you entered and your camp keeps the surcharge. On Finix there is no checkbox: the surcharge is always refunded.
 
   </Expandable>
   <Expandable title="Does void always refund the surcharge?">
@@ -224,7 +226,7 @@ Yes. A void cancels the entire original transaction and automatically reverses t
   </Expandable>
   <Expandable title="Why don't I see the checkbox?">
 
-The original payment probably did not include a surcharge. This is common for ACH, debit card, cash, check, or card payments processed without a fee. The checkbox appears only for refunds of credit card payments that recorded a surcharge.
+The original payment probably did not include a surcharge. This is common for ACH, debit card, cash, check, or card payments processed without a fee. The checkbox appears only for refunds of credit card payments that recorded a surcharge. On Finix it never appears, because the surcharge is always refunded.
 
   </Expandable>
 </ExpandableGroup>
@@ -236,12 +238,12 @@ The original payment probably did not include a surcharge. This is common for AC
 | Refund amount seems too high | **Also Refund Surcharge** is checked by default. Uncheck it on non-Finix processors if you meant to keep the fee. |
 | Refund amount seems too low | Confirm you entered the full camp portion you intended. On Finix the surcharge is always included when the original payment had one. |
 | Refunded fee doesn't match original fee | Surcharge refunds prorate the **original** fee on that payment. Confirm the original surcharge line on the payment, and that you entered the camp **Amount** you intended. |
-| Can't refund | The payment may be outside the processor's refund window or may not be settled yet. If it is still pending, try a void. Otherwise contact support. |
-| ACH refund warning (USIO) | Follow the instructions in the warning modal. Large ACH refunds may be issued as a separate credit. |
+| Can't refund | Payments more than 365 days old cannot be refunded: the form shows **This transaction is more than 365 days old and can not be refunded.** An ACH payment that has not settled yet cannot be refunded; void it instead. Otherwise contact support. |
+| ACH refund warning | On USIO, Finix, and Paysafe, **Heads up before refunding this ACH** means the debit already went to the bank, so the refund posts as a separate ACH credit. Read the warning before you click **Refund**. |
 
 ## Related settings
 
-- **Credit Card Surcharge** in [Site Settings](/settings): the percentage used when charging cards. Surcharge refunds use the fee recorded on the original payment, not a fresh percentage from settings.
+- **Credit Card Surcharge** on **Admin → Site Settings → Payment Info** ([Site Settings](/settings)): the percentage used when charging cards. Surcharge refunds use the fee recorded on the original payment, not a fresh percentage from settings.
 - Debit, prepaid, and HSA/FSA cards and ACH/e-check are never surcharged, so those payments do not show the checkbox.
 - [Payment Methods](/payment-methods) for which methods families can use at checkout and which ones you record by hand.
 

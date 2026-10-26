@@ -16,7 +16,7 @@ This page is not family registration billing. Family payments, refunds, and paym
 1. Click your name in the top right of the admin.
 2. Choose **Billing**.
 
-The page title is **Billing Information**.
+You need the **Billing** permission (under the **Admin** category on **Admin → Roles & Permissions**), or Campium staff access. Administrators receive **Billing** by default. The page title is **Billing Information**.
 
 ## Subscription
 
@@ -31,7 +31,7 @@ The **Subscription** panel shows:
 
 Enter one address, or several separated by commas (or semicolons). Helper text under the field says **Separate multiple addresses with commas.** Campium invoices and billing notices go to every address you save. Saving one address confirms **Billing email updated successfully.** Saving more than one confirms how many addresses were stored.
 
-When Campium payment processing is configured for your organization and you are signed in as an admin, you also see subscription payment controls such as **Subscription billing** or **Automatic payments**, including options to update the card or bank account on file.
+When Campium payment processing is configured for your organization and your role has **Billing**, you also see subscription payment controls such as **Subscription billing** or **Automatic payments**, including options to update the card or bank account on file.
 
 To store a card or bank account for subscription charges, follow the hint **Enter your card or bank details below, then save your account**, then select **Save account**. Authorization copy explains the first charge (for example **You will be charged $X on [date].**) and that Campium stores the method for future subscription charges. Balance-due and SMS invoice pay flows still use **Pay now** where those unpaid invoices appear.
 
@@ -64,7 +64,7 @@ If nothing is outstanding, the table shows **No balance is due.**
 3. Click **Pay [amount]**.
 4. Complete the payment modal with **Card** or **Bank account**, then submit.
 
-**Pay** buttons appear when Campium’s Payabli billing is configured for your organization and you are signed in as an admin. Other staff can still open **Billing** to review the list; they may not see the pay action.
+**Pay** buttons appear when Campium’s Payabli billing is configured for your organization and your role has **Billing**. Staff without that permission do not see **Billing** in the name menu.
 
 A balance invoice email can deep-link you to **Billing** with the matching unpaid invoice ready to pay.
 

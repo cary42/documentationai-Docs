@@ -9,7 +9,7 @@ Collect a signed federal Form W-4 from each hire on the staff portal, then downl
 
 1. Open **Admin → Site Settings → Modules**.
 2. Under the **Staff** section, find the **W-4 collection** card.
-3. Click **Turn on** (or **Turn on for $X** when the add-on has a price). Campium charges your saved subscription payment method when one is on file. If payment is still owed, use **Go to Billing** and pay the balance invoice. Paying that invoice turns the module on.
+3. Click **Turn on** (or **Turn on for $X** when the add-on has a price). Campium charges your saved subscription payment method when one is on file. If payment is still owed, the card shows **Try my payment method again** and **Go to Billing**. Paying the invoice on the Billing page turns the module on.
 
 You need an **admin** login to turn the module on or off. Turning it off stops new requests. Staff can still finish forms already sent. There is no refund.
 
@@ -19,7 +19,7 @@ When the module is off, **Admin → Staff Hub** can show an upsell titled **Coll
 
 1. Open **Admin → Staff Hub**.
 2. Open **Staff Hub Settings**.
-3. Under **Request a W-4 automatically**, pick one or more **Application Status** values. Empty text on the control is **By hand only**.
+3. Under **Request a W-4 automatically**, pick one or more **Application Status** values. With nothing picked, the control reads **By hand only**.
 4. Helper text: when you set someone's Application status to a selected choice, they get an email asking them to fill out a W-4 for their Staff Hub season. Moving them to an unselected choice cancels a W-4 they have not signed yet. Leave it empty to request W-4s only by hand.
 5. Click **Save Settings**.
 
@@ -29,31 +29,32 @@ You need a staff profile field named **Application Status** (any capitalization)
 
 Still in **Staff Hub Settings**, check **Also collect New York Form IT-2104**. Helper text: **For staff who work in New York. Every W-4 request then also asks for an IT-2104, and you download it from the same cell.**
 
-This is an opt-in for your camp, not an automatic geo setting. Staff then choose **Form IT-2104** (withhold New York tax) or **Form IT-2104-E** (claim exemption) on the portal page titled **New York tax withholding**.
+Campium does not turn this on by location; your camp opts in. Staff then choose **Form IT-2104** (withhold New York tax) or **Form IT-2104-E** (claim exemption) on the portal page titled **New York tax withholding**.
 
 ## Request a W-4 by hand
 
 1. On **Staff Hub**, select one or more staff rows.
 2. Click **Request W-4** in the selection bar.
-3. Confirm. When New York collection is on, the confirm mentions a W-4 and a New York IT-2104.
+3. In the confirmation, click **Request W-4**. When New York collection is on, the confirmation asks to request a W-4 and a New York IT-2104.
 
 Each selected person gets an email with a link to fill out the form(s).
 
 ## Track status in Staff Hub
 
-When W-4 collection is on, the roster shows a **W-4** column (or **W-4 & I-9** when I-9 is also visible). Status badges include **Requested**, **In progress**, **Signed, SSN pending**, **Signed**, **Downloaded**, and **Signed, SSN deleted**. An empty cell means **Not requested**.
+When W-4 collection is on, the roster shows a **W-4** column (or **W-4 & I-9** when I-9 is also visible). Status badges include **Requested**, **In progress**, **Signed, SSN pending**, **Signed**, **Downloaded**, and **Signed, SSN deleted**. A person with no W-4 shows **Not requested**.
 
-When New York collection is on, a second line under the cell shows **IT-2104** or **IT-2104-E**. Download the filled PDF from the cell after the form is signed.
+When New York collection is on, a second line under the cell shows **IT-2104** or **IT-2104-E**. After the form is signed, click the PDF icon in the cell to download the filled form.
 
 ## What staff see on the portal
 
-Staff open **Fill out your W-4** (or similar home card copy) and land on **Form W-4**. They complete and sign the federal form. When New York collection is on, they also see **Fill out your New York IT-2104** / **Fill out IT-2104**.
+On the portal home, staff see a **Fill out your W-4** card and click **Fill out W-4** to open **Form W-4**. They complete and sign the federal form. When New York collection is on, they also see a **Fill out your New York IT-2104** card with a **Fill out IT-2104** button.
 
 ### Sign the form
 
-1. Under **Type your full name to sign**, type the legal name.
-2. Optionally use **Draw your signature (optional)** with a finger or mouse. Helper text: **Use your finger or mouse. It goes in the signature box of the form your camp downloads. Your typed name is your signature either way.** Use **Clear** to redraw.
-3. Click **Sign my W-4** (or the matching button on the New York form).
+1. Under **First, confirm it is you.**, click **Email me a code**, then enter the **6-digit code** from the email.
+2. Under **Type your full name to sign**, type the legal name.
+3. Optionally use **Draw your signature (optional)** with a finger or mouse. Helper text: **Use your finger or mouse. It goes in the signature box of the form your camp downloads. Your typed name is your signature either way.** Use **Clear** to redraw.
+4. Click **Sign my W-4** (on the New York form, **Sign my New York form**).
 
 The typed name is always the legal signature. The drawn image is optional and appears in the signature box on the PDF your camp downloads.
 

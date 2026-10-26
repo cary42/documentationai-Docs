@@ -11,7 +11,7 @@ description: >-
 
 Use this page when a family cannot find a form on the parent portal. They may say the form is not there, the portal is empty, nothing is showing, or they cannot see the registration form after they log in.
 
-**Check Permissions** is the staff tool that explains why that form is missing for one person. It does not change settings. It compares that person to the form and prints the result in the same window.
+**Check Permissions** is the staff tool that explains why a form is missing for one person. It does not change settings. It compares that person to the form and shows the result in the **Check Form Permissions** window.
 
 Find it on the **admin site**: open a **profile**, then click **Check Permissions** in the top action row, next to **Login**.
 
@@ -54,7 +54,7 @@ The tool checks two things only:
 1. The form is **Visible**, and today is inside **Start Date** and **End Date**.
 2. This person's profile matches every **Recipients** filter on the form.
 
-It does not check who the form is for (user type), guardian **Allowed access to financials**, the portal web address, or whether they are logged into the right account. Those come later, only after the result says the form should be visible.
+It does not check who the form is for (user type), the guardian's financials access, the portal web address, or whether they are logged into the right account. Check those only after the result says the form should be visible.
 
 ### Result: Form should be visible
 
@@ -82,15 +82,15 @@ That means, for the person you selected:
 
 ### Result: Problem Found
 
-You see the heading **Problem Found**. Keep reading. The lines under that heading are the reasons. There can be more than one.
+You see the heading **Problem Found**. The lines under it are the reasons, and there can be more than one.
 
-Work from the top. Fix the first reason, save, then run **Check Permissions** again. Repeat until the heading is gone and you see **Form should be visible.**
+Work from the top. Fix the first reason, save, then run **Check Permissions** again. Repeat until you see **Form should be visible.**
 
 ### Result: dates or Visibility
 
-You see a sentence that the current date does not fall within the start and end dates of the form, or that visibility is set to hidden.
+You see a sentence that starts **The current date doesn't fall within the start and end dates of the form** and ends **OR the visibility is set to hidden.**
 
-The form is hidden from everyone on the parent site, not only this family. The same sentence covers both causes. The tool does not say which one it is.
+The form is hidden from everyone on the parent site, not only this family. The same sentence covers both causes, and the tool does not say which one it is.
 
 <Steps>
   <Step title="Open the form Settings tab" icon="settings" title-type="p">
@@ -104,7 +104,7 @@ The form is hidden from everyone on the parent site, not only this family. The s
   <Step title="Put today inside the date window" icon="calendar" title-type="p">
     Set **Start Date** and **End Date** so today is inside the range. A future start date or a past end date hides the form on the parent portal for everyone. **Due Date** does not hide it.
 
-    Exception: a **Get direct access link** still works before the **Start Date** for early registration. It does not work after the **End Date**, or when the form is Hidden or inactive. See [Recipients](/recipients#before-you-send-the-link).
+    Exception: a link from **Get direct access link** on the **Recipients** tab still works before the **Start Date**, for early registration. It does not work after the **End Date**, or when the form is Hidden. See [Recipients](/recipients#before-you-send-the-link).
   </Step>
 
   <Step title="Run Check Permissions again" icon="play-circle" title-type="p">
@@ -112,11 +112,11 @@ The form is hidden from everyone on the parent site, not only this family. The s
   </Step>
 </Steps>
 
-You can also confirm this on the **Forms** list. **Hidden** means Visibility is off. **Inactive** or **Opens** plus a date means the window has not started or has already ended. **Live** means dates and Visibility are not the reason this person cannot find the form.
+You can also confirm this on the **Forms** list. **Hidden** means Visibility is off. **Scheduled** means the window has not started, **Closed** means it has ended, and **No dates set** means a date is missing. **Open** means dates and Visibility are not the reason this person cannot find the form.
 
 ### Result: the comparison table
 
-Under **Problem Found** you may see a table. Read each row. A green check means that field matches. A red X means that field is why the form is hidden for this person.
+Under **Problem Found** you may see a table. A green check means that field matches. A red X means that field is why the form is hidden for this person.
 
 | Column | What it means |
 | --- | --- |
@@ -129,7 +129,7 @@ Ignore rows with a check. Only rows with an X need a change.
 
 If every row has a check and you still see **Problem Found**, the table is not the blocker. The date or Visibility sentence above the table is. Fix that on **Settings**, then run the check again.
 
-Under the table, **Why this form is hidden** restates each red X in a sentence. Use those sentences to decide what to edit. There are two patterns.
+Under the table, **Why this form is hidden** restates each red X as a sentence. There are two patterns.
 
 ### Result: no value on the profile
 
@@ -183,11 +183,11 @@ Use this only after **Check Permissions** says **Form should be visible** and th
 
 | Check | Where | What to do |
 | --- | --- | --- |
-| Guardian **Allowed access to financials** | Parent profile, account access | If this is off, the whole forms area is hidden for that login. Check Permissions does not test it. |
+| Guardian financials access | Parent profile (reads **Allowed access to financials** or **NOT allowed access to financials**) | If it is not allowed, the whole forms area is hidden for that login. Check Permissions does not test it. |
 | **Who is this form for** | Form → **Recipients** | The person's type (camper, staff, guardian) must be selected. The result table does not test user type. |
 | Correct parent site | Profile → **Login** | They must be on your parent portal, logged in as this family. |
 | Status | Profile | Deleted, Removed, or Archived people do not get portal forms. |
-| Adult cards with no forms | Parent site forms list | Parent, guardian, staff, and volunteer cards with no active forms are hidden. A camper card can still show "There are currently no active forms for this person." |
+| Adult cards with no forms | Parent site forms list | Parent, guardian, staff, and volunteer cards with no active forms are hidden. A camper card can still show "There are currently no active forms for [name]. Please come back later." |
 
 ## When to use Check Permissions
 
@@ -200,7 +200,7 @@ Use this only after **Check Permissions** says **Form should be visible** and th
 | Are they eligible? | The camper, before you change Recipients for everyone |
 | They say it ended or never started | The camper. Read the date sentence |
 
-Office staff, registrars, and directors use this most often. Anyone who can open profiles can run it. Parents cannot. Before a form launches, run it once on a test camper after you set dates and Recipients.
+Anyone on your staff who can open profiles can run it. Parents cannot. Before a form launches, run it once on a test camper after you set dates and Recipients.
 
 ## FAQ
 

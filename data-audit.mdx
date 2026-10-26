@@ -1,0 +1,47 @@
+---
+title: Data Audit
+description: >-
+  Review who changed profile field values and restore an earlier answer when
+  something was overwritten by mistake.
+---
+
+## What Data Audit shows
+
+**Data Audit** lists changes to profile field values for people in your camp. Use it when you need to see what a field used to be, who changed it, and when.
+
+Open **Admin → Data Tools & Activity → Audit**. The page title is **Data Audit**.
+
+You need the custom module / Data Tools access that grants **Audit** in the sidebar (the same permission that opens this page).
+
+## Read the list
+
+Each row typically shows:
+
+- The person's name
+- The date of the change
+- The field that changed
+- The **old** and **new** values
+- Who made the change
+
+Use the date range and search controls to narrow the list. Empty state: **No audit records found** (or **No matching records found** when filters exclude everything).
+
+## Restore an old value
+
+When a row can be restored, an undo button appears with tooltip and accessible name **Restore old value**. Restorable rows are text-style profile answers (including dropdown and multi-select) where the old value is still readable and was not truncated, and was not part of a season snapshot restore path.
+
+1. Find the change you want to undo.
+2. Click **Restore old value**.
+3. Confirm with wording like Set Grade for Jordan back to "5th"? (field, name, and old value filled in) and **Yes, restore it**.
+4. On success, Campium shows a message such as Grade is back to "5th". and the list refreshes.
+
+If the value cannot be restored, the button is missing for that row, or you see a warning that it could not be restored.
+
+<Callout kind="alert" collapsed="false">
+  Restoring writes the old answer back onto the live profile. Confirm you have the right person and field before you click **Yes, restore it**.
+</Callout>
+
+## Related guides
+
+- [Profile Fields](/profile-fields) for how fields are set up
+- [Profiles](/profiles) for editing answers on a person
+- [Merge Users](/merge-users) when duplicate people caused the wrong edits

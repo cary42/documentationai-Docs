@@ -6,17 +6,17 @@ description: >-
 ---
 ## Overview
 
-Use the **Account Balance** report (Accounts Receivable) to see which families still owe money for a selected season or program group and how those balances compare to their scheduled payments.
+Use the **Accounts Receivable** report (**Financials → Accounts Receivable**) to see which families still owe money for a season and how those balances compare to their scheduled payments.
 
-The report lists all families with a non-zero balance for the selected season, along with contact details, registration information, revenue, scheduled payments, and current balance. Summary cards at the top of the report show your **Overall balance**, **Overall scheduled**, and the **Difference** between them.
+The report lists every family with a non-zero balance for the selected season, with contact details, registration information, revenue, scheduled payments, and current balance. Summary cards at the top show your **Overall balance**, **Overall scheduled**, and the **Difference** between them.
 
 <Callout kind="info" collapsed="false">
-  Use this report when you want a collections view by family: who owes money, how much they owe, how much is already scheduled to be paid, and where those numbers do not line up.
+  Use this report for a collections view by family: who owes money, how much, how much is already scheduled, and where those numbers do not match.
 </Callout>
 
 ## What the report shows
 
-The Account Balance report is scoped by **season/program group**. It includes only families with a **non-zero balance** for the selected season or program group(s).
+The report is scoped by **season**. It includes only families with a **non-zero balance** for the selected season.
 
 Each row represents a **family account** and includes:
 
@@ -30,31 +30,29 @@ Each row represents a **family account** and includes:
 
 - A per-family note you can edit inline
 
-Use it alongside your scheduled payments and deposit reports to monitor whether what is owed is actually planned to be collected.
+Use it with your scheduled payments and deposit reports to check that what is owed is scheduled to be collected.
 
 ## Filters
 
 ### Season / program group
 
-The primary filter is **Season / program group**.
+The main filter is the season selector at the top of the page.
 
-- **Season / program group**: Select the season or program group you want to review. The report then shows families with non-zero balances for that selection.
-
-If you use multiple program groups within a season, run the report once per group if you want to focus on a specific camp or program.
+- Select the season you want to review, or **All Seasons**. The report shows families with non-zero balances for that selection.
 
 ## Summary cards
 
-Above the family list, the report shows three summary cards for the current selection:
+Above the family list, three summary cards total every row in the report. Click a card to filter the list:
 
-- **Overall balance**: The combined outstanding balance across every family in the report.
+- **Overall balance**: The combined balance across every family in the report. Click it to show the families with a balance.
 
-- **Overall scheduled**: The combined total of future scheduled payments across those families.
+- **Overall scheduled**: The combined total of future scheduled payments across those families. Click it to show the families with a schedule.
 
-- **Difference**: **Overall balance** minus **Overall scheduled**, so you can see at a glance how much of what is owed is not yet planned to be collected.
+- **Difference**: **Overall balance** minus **Overall scheduled**, which shows how much of what is owed is not yet scheduled. Click it to show the families where balance and scheduled differ.
 
 ## Columns in the Account Balance report
 
-This section describes the main columns you will see for each family row.
+Each family row has these columns.
 
 ### Family and registration details
 
@@ -62,101 +60,94 @@ This section describes the main columns you will see for each family row.
 
 - **Users**: The users linked to this family’s registration for the selected season.
 
-- **Products**: The camp sessions, add-ons, or other products tied to the family’s registration. (Your column header may use your product plural label, such as **Sessions**.) When the list is long enough to wrap past two lines, the cell clamps and shows a **more** control; click it to expand the full list, then **less** to collapse again. Search, sort, and exports still use the full list.
+- **Products**: The sessions, add-ons, or other products on the family’s registration. The header uses your camp's term for products, such as **Sessions**. When the list wraps past two lines, the cell shows a **more** link; click it to expand the list, then **less** to collapse it. Search, sort, and exports use the full list.
 
-- **Reg. Date**: The date the family completed registration for that season or program group.
+- **Reg. Date**: The date of the family's most recent registration for the season.
 
 ### Contact information
 
-- **Email**: The primary contact’s email address, so you can reach out about outstanding balances or payment plan changes.
+- **Email**: The primary contact’s email address, with their phone number below it when one is on file.
 
 ### Financial totals
 
-- **Revenue**: The total revenue for this family for the selected season or program group. This is what the family owes before payments.
+- **Revenue**: The family's total charges for the selected season, before payments.
 
-- **Balance**: The current outstanding balance for the family for the selected season or program group, after payments and credits.
+- **Balance**: The family's current balance for the selected season, after payments and credits. The cell is tinted red when the family owes money and green when they have a credit.
 
-- **Scheduled**: The total amount of **future scheduled payments** for this family that have not yet been completed for the relevant charges.
+- **Scheduled**: The total of the family's **future scheduled payments** that have not run yet.
 
 ### Notes and optional columns
 
-- **Note**: A free-text note for the family that you can edit inline directly in the report. Use it to record collection status, promises to pay, or other context that stays with the row.
+- **Note**: A free-text note for the family. Click the cell (**Click to add note** when empty) to edit it. Use it to record collection status, promises to pay, or other context.
 
-- **School** and **profile-field columns** (optional): You can add a **School** column and columns for your profile fields using the **Display Columns** selector. These appear only when you choose to show them.
+- **Profile-field columns** (optional): Columns for profile fields you choose with **Display Columns**. They appear only when you select them.
 
 <Callout kind="info" collapsed="false">
-  Use **Revenue** vs **Balance** to see how much of the family’s total fees remain unpaid, and compare **Scheduled** vs **Balance** to confirm whether future scheduled payments will fully cover what is still owed.
+  Compare **Revenue** with **Balance** to see how much of the family’s fees remain unpaid, and **Scheduled** with **Balance** to see whether future scheduled payments cover what is still owed.
 </Callout>
 
 ## Choose which columns to show
 
-Use the **Display Columns** selector to tailor the report to what you need to see.
+Click **Display Columns** above the table to add profile-field columns.
 
-- Turn on a **School** column to show each family’s school.
+- Check the profile fields you want (type in the box to filter the list), then click **Save Display Columns**.
 
-- Turn on columns for your profile fields to pull that data into the report.
-
-- Columns you do not select stay hidden so the report stays focused.
+- Fields you do not select stay hidden.
 
 ## Filter to mismatched balances
 
-Above the family table, use the **All** / **Mismatched** toggle to focus the list:
+Click the **Difference** card to show only families whose scheduled payments do not equal their balance (the families with a red **Scheduled** cell). The line above the table changes from **Showing all** to the filter you picked. Click **Show all** to clear it.
 
-- **All** shows every family in the report (with the total row count on the button).
-- **Mismatched** shows only families whose scheduled payments do not equal their outstanding balance (the same families with red **Balance** and **Scheduled** cells). The button is disabled when there are no mismatches.
-
-When **Mismatched** is selected, a note reminds you that column totals below still reflect **all** rows, not only the filtered ones. The primary contact column stays visible while you scroll horizontally.
+While a filter is on, a note reminds you that the cards always total every row, while the column totals below follow the filter. The first column stays visible while you scroll sideways.
 
 ## Send an email from the report
 
-The Account Balance report includes a **Send Email** action so you can contact families about their balances without leaving the report.
+The **Send Email** button at the top of the report lets you email families about their balances.
 
-1. Optionally set the view to **All** or **Mismatched** so the email list matches the families you are working with.
-2. Select **Send Email** and write your message.
-3. Select **Send Email** again in the composer. Campium loads the real recipient list for the selected season and view, then asks **Send account balance email?**
-4. Review the season name, **Mismatched only** when that filter is on, how many **families** and **email addresses** will receive the message, a short sample of names with balances, and any note about families skipped because neither guardian has an email on file.
-5. Confirm with **Send Email**, or choose **Cancel**.
+1. Optionally click a summary card so the email list matches the families you are working with.
+2. Click **Send Email** and write your message. The default draft can include `[balance]` (that family's balance) and `[payment_method_button]` (a button that opens Payment Methods on the parent portal). Those tags fill in per family when the email sends.
+3. Click **Send Email** again in the composer. Campium loads the recipient list for the selected season and filter, then asks **Send account balance email?**
+4. Review the season name, the filter (**Mismatched only** or **Scheduled payments only**) when one is on, how many families and email addresses will receive the message, a short sample of names with balances, and any note about families skipped because neither guardian has an email address on file.
+5. Click **Send Email** to send, or **Cancel**.
 
-Only families with a positive balance in the current view are emailed. If nobody qualifies, you see a warning instead of the confirm dialog.
+Only families with a positive balance in the current filter are emailed. If nobody qualifies, you see a warning instead of the confirmation.
 
 ## Red-cell mismatch warning
 
 <Callout kind="alert" collapsed="false">
-  When a family’s scheduled payments do **not** equal their outstanding balance, the **Balance** and **Scheduled** cells for that family are highlighted in red. Only those two cells turn red, not the whole row. Hovering over a highlighted cell shows the tooltip **Scheduled amount does not equal the balance.**
+  When a family’s scheduled payments do **not** equal their balance, that family's **Scheduled** cell is highlighted in red with a warning icon. Only that cell turns red, not the whole row. Hover the icon to see **Scheduled amount does not equal the balance.** The red tint on a **Balance** cell only means the family owes money.
 </Callout>
 
-When you see red **Balance** and **Scheduled** cells:
+When you see a red **Scheduled** cell:
 
-- Switch the view to **Mismatched** to work only that priority list.
+- Click the **Difference** card to work only that list.
 - Review the family’s scheduled payments and payment plan.
-- Confirm whether additional payments need to be scheduled, or if charges, discounts, or manual payments need adjustment.
+- Decide whether more payments need to be scheduled, or whether charges, discounts, or manual payments need adjusting.
 - Follow up with the family if the plan does not fully cover the remaining balance.
 
 ## Run the report
 
 <Steps>
   <Step title="Open the Financial reports menu" icon="folder" title-type="p">
-    - Sign in to your Campium admin portal.
+    - Sign in to Campium.
 
-    - Open the **Financials** navigation.
+    - In the sidebar, open **Financials**.
 
-    - Select **Accounts Receivable**.
+    - Click **Accounts Receivable**.
   </Step>
 
   <Step title="Choose the season / program group" icon="settings" title-type="p">
-    - In the **Season / program group** filter, select the season or program group you want to review.
-
-    - If needed, repeat the report for other program groups within the same season.
+    - In the season selector at the top of the page, choose the season you want to review, or **All Seasons**.
   </Step>
 </Steps>
 
 ## How to use this report in your workflow
 
-Use the Account Balance report regularly during your season to:
+Use the report during your season to:
 
-- Identify families with outstanding balances that are **not fully covered** by scheduled payments (red **Balance** and **Scheduled** cells).
+- Find families whose balances are **not fully covered** by scheduled payments (red **Scheduled** cells).
 
 - Confirm that families on plans have enough future payments scheduled to cover their balances.
 
-- Prioritize outreach to families who need updated payment plans or additional payments before session start dates.
+- Contact families who need updated payment plans or more payments before their sessions start.
 

@@ -10,6 +10,53 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-10-26" description="Organization Snapshot, Health Center, Import HTML, Staff Hub Ready, Finix billing address, Close season" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Organization Snapshot** - Linked multi-camp organizations see combined revenue, paying campers, average, and retention on the dashboard, plus **Organization Summary** under **Reports → System Reports → Money**. See [Organization Snapshot](/organization-snapshot).
+  - **Health Center (beta)** - Turn on **Health Center (beta)** under **Admin → Site Settings → Modules** for hub tabs **Today**, **Med Pass**, **Dose log**, **Visits**, **Campers**, **Reports**, and **Settings**. See [Health Center](/health-center).
+  - **Import HTML** - Paste or upload full email designs on **Admin → Email Templates**, **Mass Emails**, and **Sequences**, then **Preview** / **Edit HTML**. See [Email Templates](/email-templates#import-html-from-another-email-tool).
+  - **Data Audit** - Under **Admin → Data Tools & Activity → Audit**, review profile field changes and **Restore old value**. See [Data Audit](/data-audit).
+  - **Close season page** - **Seasons → Close Season** walks through forms offline, Inactive people, snapshots, and Staff Hub statuses. See [Manage Seasons](/manage-seasons).
+
+  ## Updates
+
+  - **Sequences Import HTML** - Remap leftover merge tags (**Match the merge tags from your old email**, **Replace tags** / **Not now**). See [Sequences](/email-sequences).
+  - **Registration Recipients** - Audience types follow **Session signup user types** in Site Settings. See [Forms](/forms#recipients-tab).
+  - **Custom payment plan note** - Optional **Note** when you move a family onto **Custom**. See [Payment Plans](/payment-plans#custom-staff-only).
+  - **Form profile photos** - **Rotate** on the crop step; HEIC converts to JPEG; large JPEGs compress before the 15 MB limit. See [Forms](/forms).
+  - **Staff Hub** - **Ready for Offer** gear, **Awaiting Forms**, **Select all N matching**, **Send text**, Application Status colors, pagination. See [Staff Hub](/staff-hub).
+  - **Contracts** - Templates stay editable after signatures; **When sent** Application Status; **Save for this template**. See [Contracts](/contracts).
+  - **Passkey backup** - After a passkey, add **Text message** or **Authenticator app** as backup. See [Account](/account#sign-in-security).
+  - **Finix billing address** - Verify on save without charging; **Card Billing Address Did Not Verify** family email; rejected address stays off the card; re-add same card carries a corrected address. See [Payment Methods](/payment-methods).
+  - **No Primary Payment Method** - **Excluded plans** summary shows how many families are left out. See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
+  - **Merge Users** - **Whole family** flow with **Review Steps**, resume, and post-run summary. See [Merge Users](/merge-users).
+  - **Bunk Reports** - **Print All**, **Saved reports**, guardian columns, bus check-in. See [Bunk Assignments](/bunk-assignments).
+  - **Digital signatures** - **Also ask the camper to sign** is required when on; **Keep Until** / **Record Intact**. See [Digital Signatures](/digital-signatures).
+  - **Inquiry Forms** - **Ask about a camper**; website embeds no longer blocked by admin framing. See [Inquiry Forms](/inquiry-forms).
+  - **Transportation Change Address** - Express riders, parent/other addresses, weekly rules. See [Transportation](/transportation).
+  - **Walk me through** - Rating on the last step; offer next guide after **Book your first training**. See [Walk me through](/walk-me-through).
+  - **Forms** - Response **Birthday** shows current age; PDF **Hide** options; Registration **Required** switch; orange **Preview** menu. See [Forms](/forms).
+  - **Pre-Launch Checklist** - Removed from Site Settings; Guided Season Setup and walkthroughs replace it. See [Guided Season Setup](/guided-season-setup).
+  - **Finix Processing limits** - Read-only **Max card amount** / **Max ACH amount** on **Business Info & Logo**. See [Business Info & Logo](/business-info-and-logo).
+  - **Retention** - **Grade** filter on the report. See [Retention](/system-report-retention).
+  - **Payment Plans** - Even Split **Before each session starts** / **Days before start**; built-in **Custom** (**Staff only**). See [Payment Plans](/payment-plans).
+  - **Roles** - Permission coach dialog; **Already allowed** hint; **Billing** permission. See [Roles and Permissions](/roles-and-permissions).
+
+  ## Fixes
+
+  - **USIO card iframe** - New card checkout loads the processor frame again.
+  - **Check Refunds** - Check refund payments show under **Check Refunds** in revenue and payment lists.
+  - **Guardian form cards** - Adults see Guardian-audience forms on the parent portal without needing Staff forms.
+  - **Staff Hub Send text** - Copy talks about staff, not families, when you text selected staff.
+  - **Potential Issues** - Unfixed address-verify cards stay flagged until the family updates the card.
+  - **Form preview** - Staff preview without a family no longer errors on answer lookups.
+  - **Portal headshots** - Profile photos use fresh signed links instead of stale public URLs.
+  - **Bounced Emails** - Long addresses and SMTP reasons stay inside the card.
+  - **Future Payments email preview** - Additional message text appears live in the preview.
+  - **Address-verify email** - Fix steps no longer include a time estimate.
+</Update>
+
 <Update label="2026-10-19" description="Inquiry Forms, Staff Hub select-all, contract email per template, Canada PAD, email footers, SSN mask" tags={["feature","improvement","bugfix"]}>
   ## New
 
