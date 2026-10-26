@@ -52,6 +52,11 @@
                 "icon": "user"
               },
               {
+                "title": "Favorite pages",
+                "path": "favorite-pages",
+                "icon": "heart"
+              },
+              {
                 "title": "Billing",
                 "path": "billing",
                 "icon": "credit-card"
@@ -519,6 +524,18 @@
             "public": true
           },
           {
+            "group": "Canteen",
+            "icon": "lucide-glass-water",
+            "pages": [
+              {
+                "title": "Canteen",
+                "path": "canteen",
+                "icon": "lucide-glass-water"
+              }
+            ],
+            "public": true
+          },
+          {
             "group": "Fundraising",
             "icon": "hand-heart",
             "pages": [
@@ -584,11 +601,6 @@
               {
                 "title": "Automated Emails",
                 "path": "automated-emails",
-                "icon": "lucide-mail"
-              },
-              {
-                "title": "System Emails",
-                "path": "system-emails",
                 "icon": "lucide-mail"
               },
               {
@@ -690,11 +702,6 @@
                 "icon": "shield-check"
               },
               {
-                "title": "Canteen",
-                "path": "canteen",
-                "icon": "lucide-glass-water"
-              },
-              {
                 "title": "Email Templates",
                 "path": "email-templates",
                 "icon": "lucide-mail"
@@ -735,11 +742,6 @@
                 "icon": "video"
               },
               {
-                "title": "Favorite pages",
-                "path": "favorite-pages",
-                "icon": "heart"
-              },
-              {
                 "title": "Walk me through",
                 "path": "walk-me-through",
                 "icon": "footprints"
@@ -763,16 +765,6 @@
                 "title": "Note Types",
                 "path": "note-types",
                 "icon": "tags"
-              },
-              {
-                "title": "Legal Documents",
-                "path": "legal-documents",
-                "icon": "scale"
-              },
-              {
-                "title": "Portal Settings",
-                "path": "portal-settings",
-                "icon": "panels-top-left"
               }
             ],
             "public": true
@@ -836,6 +828,11 @@
           {
             "group": "Portal",
             "pages": [
+              {
+                "title": "Portal Settings",
+                "path": "portal-settings",
+                "icon": "panels-top-left"
+              },
               {
                 "title": "FAQ",
                 "path": "faq",
@@ -956,7 +953,7 @@
             ]
           },
           {
-            "group": "General", 
+            "group": "General",
             "pages": [
               {
                 "title": "How to create data views for profiles",
