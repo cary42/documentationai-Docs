@@ -241,6 +241,10 @@
                     "path": "system-report-retention"
                   },
                   {
+                    "title": "Organization Snapshot",
+                    "path": "organization-snapshot"
+                  },
+                  {
                     "title": "Chronological User Registration Report",
                     "path": "system-report-chronological-user-registration"
                   },
@@ -425,6 +429,11 @@
                 "title": "Payment Issues",
                 "path": "payment-issues",
                 "icon": "circle-dollar-sign-icon"
+              },
+              {
+                "title": "Organization Snapshot",
+                "path": "organization-snapshot",
+                "icon": "building-2"
               }
             ],
             "public": true

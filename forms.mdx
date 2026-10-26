@@ -213,8 +213,9 @@ Use the **Recipients** tab to set who the form is for and who can see it.
 - At the top, choose who the form is about:
   - Registration forms: **Who is this registration for?** with helper text **Pick who attends, not who fills the form out.** (Your camper wording may differ.)
   - Other forms: **Who is this form for?** with helper text **Pick who the form is about. Add Guardians only if they are the ones attending.**
+- On a **Registration** form, the audience list only offers user types turned on in **Admin → Site Settings → Basic → Session signup user types**. Types already on the form still appear so you can remove them. Adding a type that is not allowed returns: **That user type is not turned on in Session signup user types.** Standard and upload forms are not limited by that setting. See [Site Settings](/settings).
 - Under **How to apply this form**, choose **To all the Active/Inactive/Pending user types selected above** or **Only people who match the filters below**.
-- If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type.
+- If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type. When a form includes Guardians as its audience, adults on the parent portal see their own form cards even if your camp has no Staff forms (for adult programs where the guardian attends).
 - When the Season filter is exactly one season with a ready snapshot, **Profile answers as of** appears under it (**Today** or that season's **close** / **frozen**), the same control as on custom reports. It changes which profile answers the recipient filters use. Editing notes from reports are omitted here.
 - When the recipient setup needs attention, a warning icon appears next to **Recipients** on the tab.
 
@@ -238,7 +239,9 @@ For **Upload a File** forms, Campium hides the **Questions** tab, because famili
 
 On the parent portal, file uploads show helper text **JPG, PNG, or PDF · up to 16 MB**. Files larger than 16 MB are rejected with an error that names the size limit. After a successful upload, the row status badge changes to **Received** without a page reload.
 
-Profile photo questions on the parent portal show **JPG, PNG, or GIF. Maximum size is 15 MB.** Oversized photos are rejected with a message such as **This photo is X MB. The maximum size is 15 MB. Please choose a smaller photo.**
+Profile photo questions on the parent portal show **JPG, PNG, or GIF. Maximum size is 15 MB.** Oversized photos are rejected with a message such as **This photo is X MB. The maximum size is 15 MB. Please choose a smaller photo.** Large JPEGs are compressed before that size check. iPhone HEIC photos are converted to JPEG on upload; if conversion fails, families see **We could not read this iPhone photo (HEIC). Please save it as a JPG and try again. On iPhone, you can go to Settings > Camera > Formats and choose Most Compatible.**
+
+On the crop step, helper text reads **Click the image to choose the center of the crop square. If it is sideways, press Rotate.** Use **Rotate** to turn the photo before you save.
 
 #### Move a question to a position
 
