@@ -1,0 +1,120 @@
+---
+title: Accounting office reports
+description: >-
+  Three discount reports formatted for your accounting office: every discount,
+  financial aid discounts only, and non-financial aid discounts only, each with
+  one row per discount applied.
+---
+Open **Financials** in the left menu to find these three reports. They appear only for camps that have them set up; contact Campium support if you want them.
+
+## What these reports are for
+
+These reports list discounts **one row per discount applied**, with the person, their primary contact, the season, and the amount, so you can hand your accounting office a line-by-line record. They differ from the standard [Discount reports](/discount-reports), which roll usage up to one row per discount with a quantity and total.
+
+<Callout kind="info" collapsed="false">
+  You need the **Access To financial reports and financials in profiles** permission (in the **Financial** group on **Admin → Roles & Permissions**). The **Financials** menu is hidden on the free plan.
+</Callout>
+
+All three reports share the same season filter:
+
+<ParamField body="Season" param-type="selector" required="false" deprecated="false">
+  Opening a report from the menu starts with your default season. Use the season picker at the top of the page to choose another season, or pick **All Seasons** to include every season.
+</ParamField>
+
+In every report, the **Name** and **Primary Contact** columns link to that person's profile, the footer totals the **Amount** column, and you can use the table export buttons to copy or download the rows.
+
+## Discount Summary - For your accounting office
+
+Open **Financials → Discount Summary - For your accounting office** in the left menu.
+
+This report, titled **Discount Summary For Accounting** on screen, lists every discount applied in the season you choose, whatever the discount is.
+
+### Columns
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  The person the discount was applied to, shown last name first.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  The primary contact on that person's family account.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  The season the discount belongs to.
+</ParamField>
+
+<ParamField body="School" param-type="text" required="false" deprecated="false">
+  The person's school, when it is on file in their profile.
+</ParamField>
+
+<ParamField body="Code" param-type="text" required="true" deprecated="false">
+  The discount's **Code**, as shown on **Admin → Discounts**.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The amount of this discount line. The footer totals the column.
+</ParamField>
+
+## Financial Aid Report - For your accounting office
+
+Open **Financials → Financial Aid Report - For your accounting office** in the left menu.
+
+This report, titled **Financial Aid Breakdown for** followed by the season name, lists only financial aid discounts. It has the same columns as the accounting discount summary: **Name**, **Primary Contact**, **Season**, **School**, **Code**, and **Amount**.
+
+A discount counts as financial aid when its **Code** on **Admin → Discounts** contains **FA** as its own word, with a space on each side (for example, `SUMMER FA 500`). Upper or lower case does not matter.
+
+<Callout kind="alert" collapsed="false">
+  Because the match needs a space on both sides of FA, a code that starts or ends with FA, or runs it into other characters (for example `FA500`, `SUMMER FA`, or `SUMMERFA`), is not included. Name financial aid codes with FA in the middle, surrounded by spaces, so they show up here.
+</Callout>
+
+## Non-Financial Aid Discount Report - For your accounting office
+
+Open **Financials → Non-Financial Aid Discount Report - For your accounting office** in the left menu.
+
+This report, titled **Non-Financial Aid Breakdown for** followed by the season name, lists discounts that are not financial aid.
+
+A discount is included when its **Description** on **Admin → Discounts** does not start with the letters **FA**. Upper or lower case does not matter.
+
+### Columns
+
+<ParamField body="Name" param-type="text" required="true" deprecated="false">
+  The person the discount was applied to, shown last name first.
+</ParamField>
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  The primary contact on that person's family account.
+</ParamField>
+
+<ParamField body="Season" param-type="text" required="true" deprecated="false">
+  The season the discount belongs to.
+</ParamField>
+
+<ParamField body="Amount" param-type="currency" required="true" deprecated="false">
+  The amount of this discount line. The footer totals the column.
+</ParamField>
+
+<Callout kind="alert" collapsed="false">
+  This report checks the start of the **Description**, so any description beginning with those two letters is left out, including words such as "Family" or "Fall". The Financial Aid Report checks the **Code** instead. Because the two reports look at different fields, a discount can appear on both or on neither. Keep your financial aid codes and descriptions consistent so each discount lands on the report you expect.
+</Callout>
+
+## Pull a report for your accounting office
+
+<Steps>
+  <Step title="Open the report" icon="folder" title-type="p">
+    Choose the accounting office report you need from the **Financials** menu.
+  </Step>
+
+  <Step title="Pick the season" icon="calendar" title-type="p">
+    Use the season picker at the top of the page to choose one season or **All Seasons**.
+  </Step>
+
+  <Step title="Export" icon="download" title-type="p">
+    Check the total in the footer, then use the table export buttons to copy or download the rows for your accounting office.
+  </Step>
+</Steps>
+
+## Related guides
+
+- [Discount reports](/discount-reports)
+- [Discounts](/discounts)
+- [Revenue Summary report](/revenue-summary)

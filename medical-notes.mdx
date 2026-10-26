@@ -1,0 +1,112 @@
+---
+title: Medical Notes
+description: >-
+  See every note marked Medical across your camp in one list, add a medical
+  note for a camper, and optionally email or text it to their guardians.
+---
+Open **Medical → Notes** in the left menu.
+
+## What Medical Notes is for
+
+**Medical Notes** brings together every note saved with the **Medical** note type, so your health office can see recent health notes for all campers in one place instead of opening each profile. You can also add a new medical note for a camper from the same page and let their guardians know by email or text.
+
+Notes saved with the **Medical** note type from a person's profile appear here too, and notes you add here appear on the camper's profile.
+
+## Who can see it
+
+The **Medical** menu appears only when all of these are true:
+
+- The **Medical Notes** toggle is on in **Admin → Site Settings → Modules**.
+- Your role includes the **Access to the Medical item on the navigation menu** permission (on **Admin → Roles & Permissions**).
+- Your camp is not using the Health Center. When the Health Center is turned on, it replaces the **Medical** menu, and you reach this page from the Health Center's report links as **Medical notes**. See [Health Center](/health-center).
+
+To see the notes in the list, your role also needs the **HIPAA field access** permission, which covers the profile **Health** tab and medical notes. Without it, the page opens but medical notes are left out of the list.
+
+<Callout kind="info" collapsed="false">
+  **Notes** is always in the **Medical** menu. **Medications**, **Medication Log**, and **Settings** appear above it only when the Medication module is on. See [Medications & health](/medications).
+</Callout>
+
+## What is on the page
+
+### Date range
+
+Use the date picker at the top of the page to choose which notes to list. Opening the page from the menu shows the last 30 days. The list shows up to 300 notes, newest first, so narrow the range if you are looking for an older note.
+
+### Add Note
+
+The **Add Note** panel at the top lets you write a new medical note:
+
+<ParamField body="Start Typing Name" param-type="search" required="true" deprecated="false">
+  Search for the camper the note is about. Only active campers appear in the search.
+</ParamField>
+
+<ParamField body="Note" param-type="text" required="true" deprecated="false">
+  The note itself.
+</ParamField>
+
+<ParamField body="Email this note to the guardians." param-type="checkbox" required="false" deprecated="false">
+  Emails the note to the camper's guardians from your email address, with the subject **Note From** followed by your camp name.
+</ParamField>
+
+<ParamField body="Send SMS to the guardians." param-type="checkbox" required="false" deprecated="false">
+  Texts the note to the primary guardian's cell phone, and to the secondary guardian's cell phone when there is one. The text starts with **Note from** and your camp name. If the primary guardian has no cell phone on file, no text is sent.
+</ParamField>
+
+### Notes table
+
+<ParamField body="Name" param-type="link" required="true" deprecated="false">
+  The person the note is about. Click the name to open their profile.
+</ParamField>
+
+<ParamField body="Note" param-type="text" required="true" deprecated="false">
+  The note text.
+</ParamField>
+
+<ParamField body="Date" param-type="date and time" required="true" deprecated="false">
+  When the note was saved.
+</ParamField>
+
+<ParamField body="Created By" param-type="link" required="true" deprecated="false">
+  The staff member who wrote the note, linked to their profile. Notes Campium created automatically show **System**.
+</ParamField>
+
+Export buttons above the table let you copy, download, or print the list.
+
+## Add a medical note
+
+<Steps>
+  <Step title="Open Medical Notes" icon="clipboard" title-type="p">
+    Go to **Medical → Notes**.
+  </Step>
+
+  <Step title="Choose the camper" icon="search" title-type="p">
+    In **Add Note**, click **Start Typing Name** and type part of the camper's name, then pick them from the results.
+  </Step>
+
+  <Step title="Write the note" icon="edit" title-type="p">
+    Type the note in the **Note** box.
+  </Step>
+
+  <Step title="Notify guardians if you want to" icon="mail" title-type="p">
+    Check **Email this note to the guardians.**, **Send SMS to the guardians.**, or both. Leave them unchecked to keep the note internal.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Click **Save Note**. The note is added to the top of the table and saved on the camper's profile with the **Medical** note type.
+  </Step>
+</Steps>
+
+## Notes
+
+- If you click **Save Note** without choosing a camper or writing a note, Campium tells you what is missing and nothing is saved.
+- This page does not edit or delete notes. Open the person's profile to manage an existing note.
+
+## Related guides
+
+- [Medications & health](/medications)
+- [Health Report](/health-report)
+- [Health Center](/health-center)
+- [Note Types](/note-types)
+- [Profiles](/profiles)
+- [Site Settings](/settings)
+- [Roles & Permissions](/roles-and-permissions)

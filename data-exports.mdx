@@ -1,0 +1,106 @@
+---
+title: Data Exports
+description: >-
+  Download your staff, campers and guardians, sessions, purchased sessions, and
+  payment transactions as CSV files from Admin → Data Tools & Activity →
+  Export.
+---
+Open **Admin → Data Tools & Activity → Export** in the left menu, then choose the export you want.
+
+## How exports work
+
+Each item under **Export** downloads a CSV file straight away. There is no page to fill in and no filters to set: click the menu item and your browser saves the file. Open it in Excel, Google Sheets, or any spreadsheet program.
+
+Every export covers your whole account at the moment you click. None of them can be limited by season or date range before download; filter or sort the file in your spreadsheet instead.
+
+<Callout kind="info" collapsed="false">
+  The **Export** menu appears for users whose role includes the **Access To Profile Fields under Admin** permission on the Roles & Permissions screen. The same permission controls **Logins**, **Who's Online?**, and **Audit** in this menu. See [Roles & Permissions](/roles-and-permissions).
+</Callout>
+
+## Staff
+
+Open **Admin → Data Tools & Activity → Export → Staff** in the left menu.
+
+Downloads one row per staff member whose status is **Active**. Inactive, pending, and archived staff are left out.
+
+- **File name:** `Export of Active Staff - MM-DD-YYYY.csv`
+- **Columns:** **Account Number**, then one column for each profile field that applies to staff. Each column is named after its profile field. Fields your role is not allowed to see are left out.
+
+If you have no active staff, the file is empty.
+
+## Campers & Guardians
+
+Open **Admin → Data Tools & Activity → Export → Campers & Guardians** in the left menu.
+
+Downloads one row per camper whose status is **Active**, with their guardians' details on the same row.
+
+- **File name:** `Export of Active Campers and their Guardians - MM-DD-YYYY.csv`
+- **Columns:**
+  - **Account Number** and **Camper user ID**
+  - One column for each camper profile field, named after the field
+  - One **Guardian 1** column for each guardian profile field, for example `Guardian 1 Email`
+  - One **Guardian 2** column for each guardian profile field. These cells are blank when a camper has no second guardian.
+
+As with the staff export, fields your role is not allowed to see are left out.
+
+## Sessions
+
+Open **Admin → Data Tools & Activity → Export → Sessions** in the left menu.
+
+<Callout kind="info" collapsed="false">
+  This menu item uses your camp's own word for sessions. It reads whatever you entered in **Product Name Plural (ie. Sessions)** on **Admin → Site Settings → Basic**, so you may see **Programs**, **Weeks**, or another term instead of **Sessions**.
+</Callout>
+
+Downloads one row for every session in your account, from every season.
+
+- **File name:** `Export of Products - MM-DD-YYYY.csv`
+- **Columns:** **Name**, **Description**, **Season**, **Price**, **Minimum Deposit**, **Capacity**, **Start Date**, **End Date**
+
+**Start Date** and **End Date** use your camp's date and time format.
+
+## Purchased sessions by season
+
+Open **Admin → Data Tools & Activity → Export → Purchased sessions by season** in the left menu.
+
+Downloads one row for each active session purchase, across all seasons. Cancelled, waitlisted, and pending sessions are left out. Rows are grouped by season, then listed in the order the sessions were added.
+
+- **File name:** `Purchased-sessions-by-season-YYYY-MM-DD.csv`
+- **Columns:**
+  - **Season**
+  - **Date** - when the session was added, as `YYYY-MM-DD HH:MM:SS`
+  - **User ID** and **Family ID**
+  - **Camper name**
+  - **Session name** - the session's display name if it has one, otherwise its name
+  - **Price** - the price on that purchase
+
+## Payment transactions
+
+Open **Admin → Data Tools & Activity → Export → Payment transactions** in the left menu.
+
+Downloads one row for each successful transaction on your account, newest first, across all seasons. Declined or failed attempts and zero-amount rows are left out.
+
+- **File name:** `Payment-transactions-YYYY-MM-DD.csv`
+- **Columns:**
+  - **Family name** - the family's primary contact, or the name on the payment if the family has none
+  - **Family ID**
+  - **Date** - as `YYYY-MM-DD HH:MM:SS`
+  - **Payment type** - for example **Credit Card**, **ACH**, **Check**, **Cash**, or **Adjustment**
+  - **Transaction type (code)** - the short code, for example `SA`, `RE`, or `VO`
+  - **Transaction type** - the label for that code, for example **Payment**, **Refund**, **Void**, or **Credit**
+  - **Amount**
+  - **Season**
+
+## Notes
+
+- The **Purchased sessions by season** and **Payment transactions** files are saved as UTF-8, so accented names open correctly in Excel.
+- In the **Staff**, **Campers & Guardians**, and **Sessions** files, double quotes inside a value are changed to single quotes.
+- For filtered lists, such as one season's campers or payments in a date range, use a report instead. See [Create and use custom reports](/custom-reports) and [Transaction Report](/transaction-report).
+
+## Related guides
+
+- [Import Users](/import-users)
+- [Merge Users](/merge-users)
+- [Logins and Audit](/logins-and-audit)
+- [Profile Fields](/profile-fields)
+- [Seasons and sessions](/seasons-and-sessions)
+- [Roles & Permissions](/roles-and-permissions)

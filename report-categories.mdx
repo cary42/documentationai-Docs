@@ -1,0 +1,107 @@
+---
+title: Report Categories
+description: >-
+  Create, rename, reorder, and delete the categories you use to group your
+  custom reports, and see how many reports are in each one.
+---
+Open **Reports → Report Categories** in the left menu.
+
+## What report categories are
+
+A report category is a label that groups related custom reports, such as "Registration", "Finance", or "Health". Every custom report belongs to one category. On **Reports → All Custom Reports**, the **Category** column shows each report's category and the **Filter by Category** dropdown narrows the list to one category at a time.
+
+The Report Categories page is where you manage the list of categories itself. You assign a report to a category when you save the report or from the report list. See [Create and use custom reports](/custom-reports).
+
+<Callout kind="info" collapsed="false">
+  **Report Categories** appears in the **Reports** menu only when your role has the **Access To The Report Module** permission (in the **Reports** group on the Roles & Permissions screen).
+</Callout>
+
+## What is on the page
+
+The page lists your camp's categories in a table with a search box and a page length selector.
+
+<ParamField body="Category Name" param-type="text" required="true" deprecated="false">
+  The name of the category, as it appears in the **Category** column and the **Filter by Category** dropdown on All Custom Reports.
+</ParamField>
+
+<ParamField body="Times Used" param-type="number" required="true" deprecated="false">
+  How many custom reports are in the category. A category can be deleted only when this is 0.
+</ParamField>
+
+Each row has a menu icon on the left with **Edit** and, for unused categories, **Delete**.
+
+## Add a category
+
+<Steps>
+  <Step title="Open the New Category window" icon="plus-circle" title-type="p">
+    Click **Add New Category** at the top of the page.
+  </Step>
+
+  <Step title="Name the category" icon="edit" title-type="p">
+    Enter a **Category Name**.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Click **Save**. The page reloads with the new category in the list.
+  </Step>
+</Steps>
+
+Category names must be unique. If the name is already taken, you see **Category name already exists. Please try another name.**
+
+You can also create a category while saving a report: in the **Category** dropdown of the save window, choose **+ Create New Category** and type the name.
+
+## Rename a category
+
+<Steps>
+  <Step title="Open the row menu" icon="menu" title-type="p">
+    Click the menu icon on the category's row and choose **Edit**.
+  </Step>
+
+  <Step title="Change the name" icon="edit" title-type="p">
+    In **Edit Category Name**, update the **Category** field.
+  </Step>
+
+  <Step title="Save" icon="check-circle" title-type="p">
+    Click **Save**. The new name shows in the list right away, and every report in the category now shows the new name.
+  </Step>
+</Steps>
+
+## Reorder categories
+
+Drag a row up or down by its left edge to change the order of the list on this page. The new order saves as soon as you drop the row.
+
+## Delete a category
+
+<Steps>
+  <Step title="Check that the category is empty" icon="list" title-type="p">
+    **Delete** appears only when **Times Used** is 0. If the category still has reports, move them to another category first (see below).
+  </Step>
+
+  <Step title="Delete it" icon="trash" title-type="p">
+    Click the menu icon on the row, choose **Delete**, and confirm.
+  </Step>
+</Steps>
+
+If a report was added to the category after the page loaded, Campium stops the delete and shows **This report group cannot be deleted because it has reports associated with it.**
+
+## Move a report to a different category
+
+You change a report's category from **Reports → All Custom Reports**, not from this page. Either:
+
+- Click the category name in the report's **Category** column and pick a new category from the dropdown that appears, or
+
+- Click the report's row menu, choose **Edit Info**, pick a new **Category** in **Edit Report Information**, and click **Save**.
+
+## Notes
+
+- When you save a report, the **Category** dropdown starts on **Uncategorized** if your camp has a category with that name. If your camp has no categories yet, Campium creates **Uncategorized** for you.
+
+- Categories are shared by everyone at your camp. Renaming or deleting one affects every staff member's report list.
+
+## Related guides
+
+- [Create and use custom reports](/custom-reports)
+
+- [Allow a staff user to see a report](/allow-a-staff-user-to-see-a-report)
+
+- [Roles & Permissions](/roles-and-permissions)

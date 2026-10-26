@@ -1,0 +1,63 @@
+---
+title: No Payment Since report
+description: >-
+  Find families who still owe a balance and have not made a successful payment
+  since a date you choose, along with the payment plan on their profile.
+---
+Open **Financials → No Payment Since** in the left menu.
+
+## What the No Payment Since report shows
+
+Use the No Payment Since report to find families who owe money but have gone quiet on payments. It lists a contact for each family that still has a balance and has not made a successful payment after the date you pick, along with the payment plan recorded on their profile. Use it as a follow-up list for collections.
+
+This report lives in the **Financials** menu. It is a different screen from **Admin → Payment Plans**, where you set up the payment plans families can choose.
+
+<Callout kind="info" collapsed="false">
+  This item appears only for camps that have it turned on. It is built around a payment plan profile field that Campium sets up for your camp, so contact Campium support if you want it. You also need the **Access To financial reports and financials in profiles** permission (in the **Financial** group on **Admin → Roles & Permissions**), and the **Financials** menu is hidden on the free plan.
+</Callout>
+
+## Choose the date
+
+The report opens with the date set to 60 days before today, and the page title reads **No Payments Since** followed by that date. Pick a different date in the date box at the top of the page to change the cutoff; the list reloads for the new date.
+
+## Who appears on the list
+
+A family appears when it still owes a balance in your newest season (the season created most recently) and one of the following is true:
+
+- The family has a payment plan on its profile and either has no saved payment method on file or has no successful payment recorded after the date you chose.
+
+- The family has no payment plan on its profile. These families appear whenever they owe a balance in the newest season, whatever their payment history.
+
+Families whose payment plan is **Checks** are left off when they have a successful check payment recorded after the date you chose. Families with a zero or credit balance in the newest season never appear.
+
+## Columns
+
+<ParamField body="Primary Contact" param-type="text" required="true" deprecated="false">
+  The family member on the list, shown last name first. Links to their profile.
+</ParamField>
+
+<ParamField body="Payment Plan" param-type="text" required="false" deprecated="false">
+  The payment plan chosen on the family's profile. Blank when the family has none.
+</ParamField>
+
+## Follow up with families
+
+<Steps>
+  <Step title="Set the cutoff date" icon="calendar" title-type="p">
+    Pick the date you want to measure from in the date box at the top of the page, for example the start of the month.
+  </Step>
+
+  <Step title="Review the list" icon="search" title-type="p">
+    Open a family's profile from the **Primary Contact** column to check their balance and payment history before you reach out.
+  </Step>
+
+  <Step title="Export" icon="download" title-type="p">
+    Use the table export buttons to copy or download the list for your follow-up.
+  </Step>
+</Steps>
+
+## Related guides
+
+- [Aging Account Balance report](/account-balance-aging)
+- [Account Balance report](/account-balance)
+- [Payments report](/payments)
