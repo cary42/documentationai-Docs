@@ -604,11 +604,6 @@
                 "icon": "lucide-mail"
               },
               {
-                "title": "System Emails",
-                "path": "system-emails",
-                "icon": "lucide-mail"
-              },
-              {
                 "title": "Email Overview",
                 "path": "email",
                 "icon": "lucide-mail"
@@ -770,11 +765,6 @@
                 "title": "Note Types",
                 "path": "note-types",
                 "icon": "tags"
-              },
-              {
-                "title": "Legal Documents",
-                "path": "legal-documents",
-                "icon": "scale"
               }
             ],
             "public": true
