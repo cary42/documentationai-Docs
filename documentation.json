@@ -775,11 +775,6 @@
                 "title": "Legal Documents",
                 "path": "legal-documents",
                 "icon": "scale"
-              },
-              {
-                "title": "Portal Settings",
-                "path": "portal-settings",
-                "icon": "panels-top-left"
               }
             ],
             "public": true
@@ -843,6 +838,11 @@
           {
             "group": "Portal",
             "pages": [
+              {
+                "title": "Portal Settings",
+                "path": "portal-settings",
+                "icon": "panels-top-left"
+              },
               {
                 "title": "FAQ",
                 "path": "faq",
