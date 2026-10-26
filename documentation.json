@@ -52,6 +52,11 @@
                 "icon": "user"
               },
               {
+                "title": "Favorite pages",
+                "path": "favorite-pages",
+                "icon": "heart"
+              },
+              {
                 "title": "Billing",
                 "path": "billing",
                 "icon": "credit-card"
@@ -519,6 +524,18 @@
             "public": true
           },
           {
+            "group": "Canteen",
+            "icon": "lucide-glass-water",
+            "pages": [
+              {
+                "title": "Canteen",
+                "path": "canteen",
+                "icon": "lucide-glass-water"
+              }
+            ],
+            "public": true
+          },
+          {
             "group": "Fundraising",
             "icon": "hand-heart",
             "pages": [
@@ -690,11 +707,6 @@
                 "icon": "shield-check"
               },
               {
-                "title": "Canteen",
-                "path": "canteen",
-                "icon": "lucide-glass-water"
-              },
-              {
                 "title": "Email Templates",
                 "path": "email-templates",
                 "icon": "lucide-mail"
@@ -733,11 +745,6 @@
                 "title": "Training Videos",
                 "path": "training-videos",
                 "icon": "video"
-              },
-              {
-                "title": "Favorite pages",
-                "path": "favorite-pages",
-                "icon": "heart"
               },
               {
                 "title": "Walk me through",
@@ -956,7 +963,7 @@
             ]
           },
           {
-            "group": "General", 
+            "group": "General",
             "pages": [
               {
                 "title": "How to create data views for profiles",
