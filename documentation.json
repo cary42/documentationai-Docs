@@ -647,6 +647,11 @@
                 "title": "Email Overview",
                 "path": "email",
                 "icon": "lucide-mail"
+              },
+              {
+                "title": "Campaign Tracking",
+                "path": "campaigns",
+                "icon": "file-text"
               }
             ],
             "public": true
@@ -735,11 +740,6 @@
                 "title": "Payment Plans",
                 "path": "payment-plans",
                 "icon": "badge-dollar-sign-icon"
-              },
-              {
-                "title": "Campaigns",
-                "path": "campaigns",
-                "icon": "file-text"
               },
               {
                 "title": "CampiumDB Users",
