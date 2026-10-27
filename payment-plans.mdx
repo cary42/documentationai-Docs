@@ -147,7 +147,7 @@ Each season gets a built-in **Custom** plan. It shows a **Staff only** badge. To
 - Parents never see it at checkout. When a family is already on Custom, checkout shows a note that the camp office arranged a custom schedule and they should contact the office to change it.
 - On the plans list, the preview cell says there are no automatic charges and that you manage these families' payments.
 - You can rename **Plan Name** and **Description**. You cannot delete it, copy it, or turn its status off the way you do for Standard and Even Split plans.
-- Assign it from a family's profile **Sales** tab (**Modify Payment Plan**). Editing a scheduled payment by hand can also move the family onto Custom.
+- Assign it from a family's profile **Sales** tab (**Modify Payment Plan**). Editing a scheduled payment by hand, or removing one with **Recalculate remaining scheduled payments** on an Even Split family, can also move the family onto Custom.
 - When you change a family onto **Custom**, **Modify Payment Plan** shows a **Note** field (placeholder **Why is this family on a custom plan?**). Helper text: **This note is added to the Notes tab.** The saved note starts with **Payment plan changed to** the plan name and season.
 
 ### Standard plans
@@ -477,6 +477,15 @@ When a family's season balance changes (for example you add or remove a session,
 - **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Preview for** sample and **Recalc Even Split** use the same rounding. Per-session Even Split plans re-spread within each session's payoff window.
 - **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row). Recording an extra payment on an equal-percent Standard plan also re-spreads the leftover the same way (toast title **Payment plan updated**). Hand-edited installment rows stay as you left them.
 - **Standard** plans with unequal percents or fixed dollar amounts: leftover balance still flexes on the final **Charge Entire Balance** row when that row is set to **Yes**.
+
+## Remove a scheduled payment
+
+On a family's profile **Sales** tab, remove one upcoming installment when you confirm **Remove this scheduled payment?**
+
+- Checkbox **Recalculate remaining scheduled payments** (on by default). Helper: **Spreads this season's balance across what is still scheduled. Turn off to remove this row only.**
+- Confirm with **Yes, remove it**.
+
+When recalculate is on for an **Even Split** family, Campium moves them onto that season's **Custom** plan and spreads the remaining balance evenly across the installments that are left. It does not rebuild the deleted row from the old Even Split dates. Families already on **Custom** get the same even spread across what remains. Turn recalculate off when you only want that one row gone.
 
 ## Recalculate an even split schedule
 

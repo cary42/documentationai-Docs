@@ -1,44 +1,38 @@
 ---
 title: Pickup Report
 description: >-
-  Review authorized pickup people and guardians blocked from pickup for a season
-  and session so staff can verify identity at dismissal.
+  Review authorized pickup people, guardians blocked from pickup, and families
+  with no pickups listed, and send reminder emails when the Pickup Module is on.
 ---
 
 ## Overview
 
-Use the **Pickup Report** to see who each family has authorized to pick up a camper, and which guardians are blocked from pickup (with the staff-only reason). Needs the **Pickup Module** and Attendance report access.
+Use the **Pickup Report** to see who each family has authorized to pick up a camper, which guardians are blocked from pickup (with the staff-only reason), and which families still have no authorized pickup people listed. Needs Attendance report access. Reminder emails also need the **Pickup Module** on under **Admin → Site Settings → Modules**.
 
 Open **Reports → System Reports**. Under **Attendance**, open **Pickup Report**.
 
-The report has two views:
+The report has three views:
 
 | View | What it shows |
 | --- | --- |
 | **Authorized pickups** | People families listed as allowed to pick up each camper |
 | **Blocked guardians** | Guardians marked **Not allowed** for pickup, with staff reason and history |
+| **No pickups listed** | Families with a registered camper who has no authorized pickup person besides parents and guardians |
 
-Use the season and session filters at the top for either view.
+Use the season and session filters at the top for any view.
+
+When the **Pickup Module** is on, the toolbar also shows **Remind everyone to check** (emails every family registered in the season to review their pickup list). When the module is off, reminder buttons stay hidden and the missing view explains that reminder emails are off because families cannot see **Pickup privileges** in the parent portal.
 
 ## Authorized pickups
 
 Each row lists an authorized pickup person for a camper.
 
-<ParamField body="Camper" param-type="text" show-location="false">
-The camper being picked up. This is a link to the full profile.
-</ParamField>
-
-<ParamField body="Pickup Name" param-type="text" show-location="false">
-The name of the person the family has authorized to pick up the camper.
-</ParamField>
-
-<ParamField body="Relationship" param-type="text" show-location="false">
-How the pickup person is related to the camper, for example parent, grandparent, or family friend.
-</ParamField>
-
-<ParamField body="Phone" param-type="text" show-location="false">
-A contact phone number for the pickup person.
-</ParamField>
+| Column | What it shows |
+| --- | --- |
+| Camper | The camper being picked up (link to the profile) |
+| **Pickup Name** | The person the family authorized |
+| **Relationship** | How that person is related to the camper |
+| **Phone** | Contact phone for the pickup person |
 
 Select **Display Columns** above the table to add extra profile fields (cabin, group, bunk, and so on). Your selection is remembered.
 
@@ -63,6 +57,21 @@ Empty state: **No guardians are blocked from pickup.**
 
 To turn pickup off or back on for a guardian, use **More → Pickup Info** on the profile. See [Block a guardian from picking up a camper](/attendance#block-a-guardian-from-picking-up-a-camper).
 
+## No pickups listed
+
+Click **No pickups listed** to see families who still need an authorized pickup person for a registered camper in the season and sessions above. Helper text explains that parents and guardians alone do not count as the authorized list for this view.
+
+| Column | What it shows |
+| --- | --- |
+| **Family** | Family name |
+| **Parents and guardians** | Linked contacts and emails. Badge **No parent email** when nobody has an email on file |
+| Camper with no pickups | Campers who still need an authorized pickup person |
+| **Last reminded** | When a pickup reminder last went out, or badge **Never** |
+
+When the **Pickup Module** is on, select families (or use select all), then **Send reminder email**. That opens the shared group email flow with a default subject such as **Please add who can pick up your camper**. Families without an email address cannot be selected.
+
+Empty state: **Every family has someone listed for pickup.**
+
 ## Filters
 
 <Steps>
@@ -77,6 +86,7 @@ To turn pickup off or back on for a guardian, use **More → Pickup Info** on th
 
 ## Troubleshooting
 
-- **No authorized pickup data yet**: Families have not entered any authorized pickup people. Ask them to add at least one on their profile.
-- **A camper is missing from Authorized pickups**: Check the season and session filters, and confirm that family has entered a pickup person.
+- **No authorized pickup data yet**: Families have not entered any authorized pickup people. Ask them to add at least one on their profile, or use **No pickups listed** and **Send reminder email**.
+- **A camper is missing from Authorized pickups**: Check the season and session filters, and confirm that family has entered a pickup person. Otherwise they appear under **No pickups listed**.
 - **Blocked guardians is empty**: No guardians are marked **Not allowed** for the filters you chose. Blocks are set on **Pickup Info**.
+- **Reminder buttons missing**: Turn on the **Pickup Module** under **Admin → Site Settings → Modules** so families can see **Pickup privileges** and you can send reminders.
