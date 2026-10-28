@@ -56,10 +56,12 @@ The **Upcoming charge emails** table columns:
 | **Family** | Family name (links to the profile when available) |
 | **Recipient** | Person and email. **Will not send** when there is no email address, with a **Fix** link to that person's profile |
 | **Reminder** | Which reminder day this is |
-| **Amount** | Payment amount |
+| **Amount** | Payment amount. When several payments for the same person share that send day, the amount cell can show **One email, N payments, $X** so you see they ride in one combined message. |
 | **Season** | Season for the payment |
 | **Payment method** | Method on file, or **No payment method** with a **Fix** link to the family profile at **Payment Methods on File** |
-| **Preview** | Eye button opens **Email preview** with the subject and message for that row |
+| **Preview** | Eye button opens **Email preview** with the subject and message for that row (including combined same-day lines when they apply) |
+
+Each guardian gets at most one upcoming charge email per send day. When more than one payment for that person shares the send day, Campium combines them into that one email.
 
 If payments were scheduled after today's email already went out, a note titled **Added after today's email** explains that nothing has been sent for them and that this page does not send email.
 

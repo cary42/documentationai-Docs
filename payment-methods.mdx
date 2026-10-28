@@ -36,6 +36,18 @@ Logged-in families manage cards and bank accounts from **Account** or **My Accou
 - Scheduled charges and retries use a method on file. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
 - You can find households with nothing on file using [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
 
+### Payment method alerts on the parent portal
+
+Signed-in families can see one danger or warning banner at a time on home, Account History, account pay, and Payment Methods:
+
+- **Bank returned a payment** - Headline such as **Your bank returned your $540.00 payment**. CTA **Update payment method**. See [What is an ACH return?](/what-is-an-ach-return#what-families-see-on-the-portal).
+- **Plan needs a method** - Headline **Your payment plan needs a payment method** when they have a non-Custom plan balance and no primary method. CTA **Add payment method**. Exclusions follow [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
+- **Billing address needs a fix** (Finix cards only) - Headline such as **The billing address on your card ending 4675 needs a fix**. CTA **Fix billing address**. On Payment Methods, a flagged address can show **(your bank says this does not match)**.
+
+On Payment Methods itself the ACH / plan banner has no button (they are already on the page). CTA destinations depend on your processor (Finix, Payabli, USIO, Paysafe, and others).
+
+When your camp uses **Finix**, adding a bank account that fails Finix's bank validation shows: **That bank account could not be used. Please double-check the routing and account numbers, or try a different bank account.** The account is not saved for charging.
+
 When your camp uses **Finix**, the **Accounts on File** list can also show billing address for each method. Cards can show **No billing address on file.**, a ZIP-only note, or the full address, with **Add address** or **Edit**. The **Billing address** form asks for **Street address**, optional **Apt, suite**, **City**, **State**, **ZIP / postal code**, and **Country**, then **Save**. Saving checks the address with the card issuer without charging the card. Success: **Billing address updated.** When the address does not match what the bank has on file, the family sees **This payment could not be completed because your billing address did not verify. Check that the address matches what your bank has on file, then try again or use a different payment method.** Campium keeps the previous address on the card instead of saving the failed one. After a good address save, Campium can put that card back on unfunded scheduled payments that were waiting on a verified address. If a family adds the same card again with a corrected billing address instead of using **Edit**, Campium updates the card already on file with that verified address so scheduled charges use it. Bank accounts show the address when present but are not editable there. Camps on other processors do not see this billing-address editor.
 
 Staff can also open **Payment method settings** on a family's **Payment Methods on File** list. On Finix, that gear modal edits the same billing address fields and verifies them on save (**Payment method updated.**). On Paysafe, the modal says **This address is shared. Update it under Billing Address on File.** instead of letting you edit the address there. See [Profiles](/profiles#header-area).

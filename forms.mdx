@@ -40,6 +40,10 @@ If a form shows **Scheduled** with an **Opens** line, families cannot see it on 
 
 The **Open / Close** column shows when the form window starts and ends. Click the cell to edit without opening the form. Lines are labeled **Opens** and **Closes**. Empty cells show **No dates set**. Enter the date and time, then **Save** (or **Cancel**). After you save, the **Status** badge on that row updates to match the new window. You need the **Manage Forms** permission. You can also set **Start Date** and **End Date** on the form **Settings** tab.
 
+### Email people on a form from the list
+
+On a form's row **Actions** menu, click **Email** to pick **Form status** (and optional sessions), then continue into **Email this group**. **In Progress** starts checked. You need **Manage Email**. For the full steps, see [Email users that have not completed a form](/email-users-who-have-not-completed-a-form).
+
 ### Recently deleted forms
 
 Deleting a form from the Forms list, or removing one person's copy of a form from their profile **Forms** tab, moves it to trash instead of erasing it.
@@ -592,7 +596,7 @@ The fee is then added to the cart on every registration through this form.
 
 #### Require User To Add A Payment Method
 
-**Require User To Add A Payment Method** appears when your payment processor is **Finix** or **Payabli**. Helper: **When the amount due today is $0, require a card or ACH account to be added and stored.** Turn on **Require payment method at $0 checkout** when you need a card or bank account on file for future scheduled payments. At checkout, the family sees **Please add a payment method before completing checkout.** if the setting is on and nothing is due today yet.
+**Require User To Add A Payment Method** appears when your payment processor is **Finix** or **Payabli**. Helper: **When the amount due today is $0, require a card or ACH account to be added and stored.** Turn on **Require payment method at $0 checkout** when you need a card or bank account on file for future scheduled payments. At checkout, when nothing is due today, families see a note: **You won't be charged today.** Body: **We ask for a card or bank account to finish signing up. It's saved to your account for future payments, and you can change it anytime in Manage Accounts.** If they try to finish without a method, they see: **Add a card or bank account to finish. You won't be charged today. It's saved to your account for future payments.**
 
 #### Allow User To Pay Later
 
