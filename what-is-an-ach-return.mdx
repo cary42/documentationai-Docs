@@ -26,13 +26,18 @@ On this report you see:
 
 A common return reason is **No account/unable to locate**, which means the bank could not find an account matching the account number that was used.
 
+## What families see on the portal
+
+When a bank returned a recent payment, signed-in families see a danger banner on home, **My Account → Account History**, account pay, and Payment Methods. Headlines look like **Your bank returned your $540.00 payment** or **Your bank returned 2 of your payments**. Detail explains the date and account ending, may include a plain-language reason (never the raw bank code), and ends with **Add a new payment method so your payments go through.** The button is **Update payment method**.
+
+If the family has a payment plan with a balance but no primary method, they can see **Your payment plan needs a payment method** instead (one banner at a time; ACH return wins when both apply). Custom plans and plans you exclude from **Families Without Primary Payment Method** do not trigger that plan banner. See [Payment Methods](/payment-methods#payment-method-alerts-on-the-parent-portal).
+
 ## Optional: email the family
 
 If you want Campium to email the family when an ACH charge fails:
 
-- Go to **Admin**.
-- Click **Site Settings**.
+- Go to **Admin → Site Settings**.
 - Open **Payment Info**.
 - Enable the setting to send an email about failed ACH charges.
 
-After you turn this on, families receive an email automatically when an ACH return occurs.
+After you turn this on, families receive an email automatically when an ACH return occurs. The portal banner still appears whether or not that email is on.
