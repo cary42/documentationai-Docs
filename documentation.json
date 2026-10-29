@@ -926,7 +926,12 @@
           {
             "title": "Release History",
             "path": "changelog",
-            "icon": "history"
+            "icon": "history",
+            "show-sidebar": false,
+            "show-toc": false,
+            "show-parent-label": false,
+            "show-page-navigation": false,
+            "ask-feedback": false
           }
         ]
       },
