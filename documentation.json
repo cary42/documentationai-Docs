@@ -921,6 +921,7 @@
       },
       {
         "tab": "Changelog",
+        "public": false,
         "icon": "clock",
         "pages": [
           {
