@@ -286,13 +286,15 @@ Use the **Responses** tab to track progress and work with submitted data.
 On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
-- Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses**.
-- Use the filled primary **Print** dropdown for **Print All**, **Print Approved**, or **Print Pending**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
+- Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses** and **Delete**. Deleting one response asks **Are you sure you want to remove this form?** Confirm with **Yes, remove.** You can restore it from **Recently deleted** for 30 days.
+- Use **Bulk Delete** when rows are selected. Confirm **Delete N responses? You can restore them from Recently deleted for 30 days.** with **Yes, delete.**
+- Use the filled primary **Print Responses** dropdown for **Print All**, **Print Approved**, **Print Pending**, or **Print In Progress**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
   - **Compact**: *Smaller type and tighter spacing. Keeps answers on fewer pages when possible.*
   - **Expanded**: *Larger type and more spacing. Each answer follows its question on the same line.*
   - **Hide** → **Section headers and instructions**: *Leaves out the form's headings and instruction text. Signatures still print.*
   - **Hide** → **Questions with no answer**: *Question numbers still match the form.*
-  Campium saves your layout and hide choices to your admin account, so they follow you across browsers. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** and **Hide** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog.
+  Campium saves your layout and hide choices to your admin account, so they follow you across browsers. Single-response print (**Print Responses** → **Open PDF**) uses the same **Layout** and **Hide** block, plus optional **Include uploaded files** / **Print files at full page size**. Profile **Forms** print and Staff Hub completed-form print use the same dialog. **Print In Progress** builds a PDF of unfinished responses; blank answers are expected.
+- Use the separate **Export** menu for **Excel**, **CSV**, **PDF**, **Print**, **Copy to clipboard**, and **Mailing labels** when that export is available. **Print Responses** stays outside **Export**.
 
 When the form has reference submissions, the table also shows a **Reference For** column (the applicant, linked to their profile), and **Primary Email** shows the reference's invitation email.
 
@@ -322,13 +324,15 @@ Use the **Print** controls on the **Responses** tab (or the print icon on a prof
 
 Campium saves your layout and hide choices to your admin account and uses them the next time you print. Confirm bulk jobs with **Yes, Generate PDF**.
 
-You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout** and **Hide**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab.
+You can also print from the dashboard **Quick Access Forms** card. Open the form's menu and choose **Print** (Registration and Standard forms only; **Upload a File** forms do not show **Print**). The **Print Responses** dialog lets you choose **Approved and Pending** (default), **Approved only**, or **Pending only**, plus **Layout** and **Hide**. Intro: **Build one PDF of this form's responses. You will get an email when it is ready.** Helper: **In Progress responses are not included.** Confirm with **Print**. This uses the same background job as **Print All** on the Responses tab. To print unfinished answers from the form itself, use **Print Responses → Print In Progress** on the **Responses** tab.
 
 When a form completion email attaches a PDF, each staff recipient gets the layout they last chose in the admin portal.
 
 In the **Basic Information** block on a response view, printout, or completion email, **Birthday** shows the date and the person's current age when the date can be read (for example `2011-05-09 (age 15)`). Blank, unreadable, or future dates stay as the date only.
 
-## What families see when a form save fails
+## What families see when answers are missing or a save fails
+
+On stepped parent forms, missing required answers show in a danger summary at the top of the page, with a pinned strip that counts what is left and a **Next** link to jump to the next problem. Question numbers in those messages match the numbers on the page.
 
 On the parent portal, if answers cannot be saved, the form does **not** report success. Families see an error at the top of the page, their answers stay on the form, and the submit button changes to **Try Again**.
 
@@ -357,6 +361,10 @@ Use the orange **Preview** menu at the top of the form editor (same control as o
 You can still open previews from **Settings** links such as **Preview Form**, **Preview Sessions Selection Page**, and **Preview Cart Header**.
 
 This is different from [Test Mode](/test-mode). Test Mode lets staff open the live form on the portal and can create real responses. Preview never saves answers.
+
+### Preview as a person
+
+In the preview drawer, use **Preview as** and type a name. Campium does not auto-pick a camper. On a sessions preview, **Show all sessions** (your product wording) starts on so every session on the layout appears. Turn it off to preview only the sessions that person's answers qualify for. When sessions are hidden, the alert explains that those sessions stay off because that person's profile answers match none of their pricing options.
 
 ### Open the preview
 
@@ -565,6 +573,10 @@ If staff approval is part of your process, set **Form Status After Completion** 
 
 Automatic status changes help in enrollment workflows, but they can confuse staff who are not expecting the update.
 
+#### Email The Invoice
+
+On registration forms, **Email The Invoice** controls whether Campium emails the family an invoice after they complete the form. The switch label is **Email users an invoice when they complete this form**. Helper: **Users get an invoice by email after they complete this form. Turn this off to stop that email. You can still send an invoice yourself from a profile.** It is on by default.
+
 ### Registration and payment settings
 
 These settings appear only when **Form Type** is **Registration (With Products)**.
@@ -609,6 +621,8 @@ On the parent checkout page, families choose how much to pay under **How much to
 - Minimum deposit option (label from your minimum deposit text) with helper **The rest stays on your account balance.** when a minimum is offered
 - **Another amount** when custom amounts are allowed (at least the minimum)
 - **Credit card surcharge** line when a surcharge applies, then **Total today**
+
+When the deposit covers the full amount, the amount choices hide and families see **Your deposit is the full amount, so you pay it in full today.** When account credit covers the balance, they see **Your account credit covers this. Nothing is due today.**
 
 When payment plans are offered, a **Payment plan** card lists each plan as a selectable option. Families who can pick their charge day still see **Charge day of the month**.
 
