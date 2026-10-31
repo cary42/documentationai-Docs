@@ -298,6 +298,10 @@
                     "path": "system-report-paying-vs-non-paying"
                   },
                   {
+                    "title": "Pricing Mismatches",
+                    "path": "pricing-mismatches"
+                  },
+                  {
                     "title": "Form Status Summary",
                     "path": "form-status-summary"
                   },
@@ -841,6 +845,11 @@
                 "title": "Guided Season Setup",
                 "path": "guided-season-setup",
                 "icon": "list-checks"
+              },
+              {
+                "title": "Ask when picked",
+                "path": "ask-when-picked",
+                "icon": "circle-help"
               },
               {
                 "title": "Subproducts",

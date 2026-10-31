@@ -47,6 +47,15 @@ Payments brought in from another system (for example a CampMinder import) do not
 
 If someone still tries to refund or void an imported payment, Campium shows: **This payment was imported from another system, so it can't be refunded or voided here. Record a credit instead.**
 
+## Previous processor payments
+
+After your camp moves to a new processor, older payments can show a **Previous processor** badge (for example **Previous processor (USIO)**). Hover for guidance:
+
+- When Campium can still route the refund: **Taken on USIO, your previous processor. Refunds here still go through USIO.** (the badge uses the old processor name)
+- When it cannot: **Taken on USIO, your previous processor. Refund it in your USIO portal.**
+
+If you open **refund** on a payment Campium cannot reverse here, the modal explains that you must refund it in that processor's portal, then add an **Adjustment** on the **Sales** tab so the balance stays right.
+
 ## How to issue a refund
 
 Refund completed credit card or ACH payments from the **Sales** tab of a user’s profile.

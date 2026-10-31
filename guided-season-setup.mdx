@@ -1,12 +1,12 @@
 ---
 title: Guided Season Setup
 description: >-
-  Walk through Season, Sessions, Form, Payment plans, Discounts, and Review to
+  Walk through Season, Sessions, Forms, Payment plans, Discounts, and Review to
   get a season ready for registration.
 ---
 ## Overview
 
-Season setup takes you through six steps to get a season ready for registration: **Season**, **Sessions**, **Form**, **Payment plans**, **Discounts**, and **Review**. Every camp uses this workspace. Older separate session and subproduct pages redirect into the **Sessions** step.
+Season setup takes you through six steps to get a season ready for registration: **Season**, **Sessions**, **Forms**, **Payment plans**, **Discounts**, and **Review**. Every camp uses this workspace. Older separate session and subproduct pages redirect into the **Sessions** step.
 
 It ties sessions, the registration form, plans, and discounts together in one place, then checks what families will see before you open registration.
 
@@ -24,7 +24,9 @@ It ties sessions, the registration form, plans, and discounts together in one pl
   </Step>
 </Steps>
 
-Use **Back** and **Next** at the top of the workspace to move between steps. The stepper across the top shows which step you are on.
+Click a step name in the stepper across the top (**Season**, **Sessions**, **Forms**, **Payment plans**, **Discounts**, or **Review**) to move between steps. There is no separate **Back** or **Next** button.
+
+If an active season is missing its start or end date, a banner can ask you to **Add dates so reports can order this season.** It explains that a season with no start date is counted as your oldest season in Retention and other comparisons. Enter **Start date** and **End date**, then **Save dates**. Someone who cannot edit seasons sees: **Someone who can edit seasons can add them on the Season step.**
 
 ## Season
 
@@ -40,15 +42,14 @@ The **Season** step opens **Season details**.
 8. Optionally enter **Invoice footer**, which is printed at the bottom of every invoice for this season. Leave it empty for no footer.
 9. Select **Save and continue**.
 
-If an active season is missing its start or end date, the admin header can show a nudge: **At least one active season is missing its Season Start Date or Season End Date.**
-
 ## Sessions
 
 On the **Sessions** step you manage the season's sessions in **Table** or **Calendar** view.
 
 - Select **Add session** to create a session with dates, capacity, price, and minimum deposit.
 - Use **Table** / **Calendar** to switch how sessions are listed.
-- In **Calendar** view, each day shows session chips. When a day has more than three, a **+N more** / **Show less** control lets you collapse or expand the extras.
+- In **Calendar** view, each day shows session chips. When a day has more than three, a **+N more** / **Show less** control lets you collapse or expand the extras. Use **Print calendar** to print **This month** or **All season months**.
+- On **Edit session** or **Add session**, use **Ask when picked** to require profile answers under that item when a family selects it. See [Ask when picked](/ask-when-picked).
 - If **Cancellation Fees** appears, expand it to define reusable cancellation-fee sessions for the season. Fees are not charged automatically. You add them from a profile **Sales** tab. See [Cancellation Fees](/cancellation-fees).
 - If **Special Weeks** appears for your camp, open it to manage week schedules. See [Special Weeks](/special-weeks). When a session's **Number of Weeks** is higher than the dated week count for the season, a red mismatch alert appears on this step with **Set special week dates** and **Lower Number of Weeks to N on…**. See [Session weeks vs dated weeks warning](/special-weeks#session-weeks-vs-dated-weeks-warning).
 
@@ -102,9 +103,9 @@ If an active subproduct under a session has a **$0** minimum deposit, a warning 
 
 Manage subproducts only from this panel. See [Subproducts](/subproducts).
 
-## Form
+## Forms
 
-The **Form** step builds or links the registration form for the season. Use it to set who can register, when the form opens and closes, which sessions appear, and form settings such as discounts and payment plans.
+The **Forms** step builds or links the registration form for the season. Use it to set who can register, when the form opens and closes, which sessions appear, and form settings such as discounts and payment plans.
 
 Choose a form from the toolbar dropdown, or select **New form** to create one without leaving season setup. The **New Form** dialog asks for **Form name**, shows the season you are setting up, and lets you pick **Form type**:
 
@@ -114,7 +115,9 @@ Choose a form from the toolbar dropdown, or select **New form** to create one wi
 
 Then select **Create**.
 
-The Form toolbar also shows the form's availability chip and a **Test Mode** switch next to it. Turn **Test Mode** on so staff and admin users can open the form on the parent portal before families can. When the form is already **Open**, Test Mode turns off automatically and the switch stays locked until the form is no longer in its live window. See [Test Mode](/test-mode).
+The Forms toolbar also shows the form's availability chip and a **Test Mode** switch next to it. Turn **Test Mode** on so only the form's recipients can see it from a staff login before the form opens to families. Helper text names how many recipients that is and links **Check a person**. When the form is already **Open**, Test Mode turns off automatically and the switch stays locked until the form is no longer in its live window. See [Test Mode](/test-mode).
+
+On form **Settings**, under **Files and records**, you can upload optional files (PDF or image, 25 MB max) with **Choose file to upload**. Families can download them from the portal. A just-uploaded file gets the same trash control as the others.
 
 After you choose a form, open **Preview** for a menu of parent-facing pages:
 
@@ -123,11 +126,14 @@ After you choose a form, open **Preview** for a menu of parent-facing pages:
 
 On a wide screen (about 1400px and up), choosing a Preview item opens a side drawer beside the form editor instead of leaving season setup. The drawer includes:
 
+- **Preview as** so you can type a person's name and see the form as they would
 - **Phone** / **Desktop** width toggles
 - **Refresh** to reload the preview
 - **New tab** if you still want the page on its own tab
 
-After you save a change on the Form step, an open drawer refreshes on its own. If the portal cannot load inside the panel, you see **This preview cannot be shown here** with **Open in new tab**. On narrower screens, or when you use a modifier click (for example Ctrl/Cmd+click), Preview opens each page in a new tab.
+On a sessions preview, **Show all sessions** (your product wording) is on by default so every session on the layout appears. Turn it off to hide sessions the previewed person's answers do not qualify for. The alert explains which view you are in.
+
+After you save a change on the Forms step, an open drawer refreshes on its own. If the portal cannot load inside the panel, you see **This preview cannot be shown here** with **Open in new tab**. On narrower screens, or when you use a modifier click (for example Ctrl/Cmd+click), Preview opens each page in a new tab.
 
 On the form's **Responses** tab, use **Email** (title **Email the people on this form**) when your role includes **Manage Email**. That opens the same status and session audience picker as the Forms list **Email** action, then the shared **Email this group** composer. See [Email users that have not completed a form](/email-users-who-have-not-completed-a-form).
 
@@ -140,7 +146,7 @@ The **Payment plans** step is optional. Add or edit plans families can choose at
 - With at least one plan listed, families also see a **Pay in Full** option on the portal.
 - Use **Copy all to another season** when you want the same plans on a different season.
 - Use **Preview cart** when a preview link is available.
-- If you see **Plans will not show on the portal until a form has payment plans enabled**, open the **Form** step, then **Settings**, and turn on payment plans.
+- If you see **Plans will not show on the portal until a form has payment plans enabled**, open the **Forms** step, then **Settings**, and turn on payment plans.
 
 For payment plan details outside season setup, see [Payment plans](/payment-plans).
 
@@ -150,14 +156,14 @@ The **Discounts** step is optional. Discounts are shared across seasons. A code 
 
 - Create or edit discounts from this step, including a **Sibling discount** when you offer automatic multi-child savings. See [Discounts](/discounts#create-a-sibling-discount).
 - Use **More discount tools** to open the full **Admin → Discounts** page.
-- If you see a warning that discount codes will not show on the portal, open the **Form** step, then **Settings**, and turn on discounts.
+- If you see a warning that discount codes will not show on the portal, open the **Forms** step, then **Settings**, and turn on discounts.
 
 ## Review
 
 The **Review** step shows whether registration is ready and what families will see.
 
 - Status banner and **Opens** / **Closes** dates (and times when set) for the registration window
-- **Recipients** summary when the form has audience rules, with **Edit recipients** to jump back to the Form step
+- **Recipients** summary when the form has audience rules, with **Edit recipients** to jump back to the Forms step
 - A checklist of blockers and warnings, with jump buttons to the step that needs attention
 - **Preview the form** when a preview link is available
 
@@ -167,6 +173,7 @@ Fix blockers before families register. Warnings do not block registration by the
 
 - [Manage Seasons](/manage-seasons)
 - [Seasons & Sessions](/seasons-and-sessions)
+- [Ask when picked](/ask-when-picked)
 - [Forms](/forms)
 - [Test Mode](/test-mode)
 - [Payment plans](/payment-plans)
