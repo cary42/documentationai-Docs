@@ -114,7 +114,7 @@ You need access to **Seasons** (the product module). Staff Hub names on the stat
 
 ### What the Close season page covers
 
-The page title area includes **What closing … does** (with the season name), **Download everything (CSV)**, and a link **How closing a season works**. Counts at the top show how many forms go offline, campers become Inactive, staff become Inactive, and Staff Hub statuses change. Helper text: counts are as of today, and nothing changes until you close.
+The page title area includes **What closing … does** (with the season name), **Download everything (CSV)**, and a link **How closing a season works**. Counts at the top show how many forms go offline, campers become Inactive, staff become Inactive, and Staff Hub statuses change. A fifth count, **campers change grade**, appears when you check step 6. Helper text: counts are as of today, and nothing changes until you close.
 
 Read each numbered section, change the options you need, then close:
 
@@ -123,10 +123,41 @@ Read each numbered section, change the options you need, then close:
 3. **Staff become Inactive** - Optional. **Inactivate staff who have** the season **on their profile** (checked by default when anyone qualifies). Separate option: **Also inactivate staff with an approved application on a form**, then **Choose a form**. Staff in another active season stay active.
 4. **Profile data snapshot** - Saves profile answers at the close for reporting. If a snapshot already exists, choose **Take a new snapshot now** or **Keep the snapshot from** the earlier capture date. If you froze early, choose **Keep it and lock it** or **Replace it with a new snapshot**.
 5. **Staff Hub application status** - Hired staff become **Returning**; others are cleared except statuses you keep in Staff Hub settings (**DNR**, **Fired**, and **Dismissed** always stay). If you keep an existing snapshot in step 4, statuses do not change. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
+6. **Move campers up a grade** - Optional and off by default. Check **Move campers up a grade when you close** the season to see a table with **Current grade**, **Campers** (click the count for names), and **After you close**. See [Move campers up a grade](#move-campers-up-a-grade).
 
 Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more before anything runs.
 
 If the season is already Inactive, the page explains that it was closed before and nothing here runs. If it was closed and later reopened, a note says reopening did not undo that close.
+
+### Move campers up a grade
+
+Use this at the end of your season so next season starts with the right grades. It moves every camper with an answer in the field to the next grade, including Inactive campers. Deleted and Archived accounts, staff, and parents do not change.
+
+1. On the **Close season** page, go to step 6 and check **Move campers up a grade when you close** the season.
+2. If you have more than one grade field, choose one under **Field to move**. Only single-choice fields with "grade" in the name are offered.
+3. Check each row. For any grade, choose another grade, **Blank**, or **Leave as is**. To see who a row covers, click its count.
+4. Close the season.
+
+Campium fills in each row from your option names:
+
+- Each grade starts at the next one up (for example **2nd** to **3rd**).
+- Your highest grade starts at **Blank**.
+- Options that do not read as a single grade (such as **Not in school** or **8th And 9th Grade**) start at **Leave as is**.
+- If your options skip a grade (such as **5** then **7**), that row starts at **Leave as is** and asks you to choose.
+- Retired options that stay as they are sit behind **Show retired options that stay as they are**.
+
+You set this per grade, not per camper. To hold one camper back, change that camper's grade on their profile after the move.
+
+The move runs in the background once the snapshot in step 4 is ready, so the snapshot keeps the grades the season ended with. If the snapshot fails, the move waits until a retry succeeds. A camper whose grade changes after you close and before the move is skipped. **Download everything (CSV)** includes each camper's current and new grade.
+
+**Undo grade changes:** After the move, use this button on the same page to send campers back to the grade they had. Anyone whose grade was edited after the move keeps the edit. Reopening the season does not undo the move.
+
+**Good to know:**
+
+- A grade you already changed by hand moves up again, so check the table before you close.
+- If you already moved grades when closing another season, the page warns you. Moving them again moves every camper another grade.
+- Prices do not change on their own. Registrations in active seasons that no longer match appear on the **Pricing Mismatches** report.
+- Fields you linked to the grade field follow the new grade.
 
 ## Email an invoice to families registered for the season
 
