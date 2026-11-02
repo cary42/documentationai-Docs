@@ -10,6 +10,38 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-11-02" description="Availability, Ask when picked, Pricing Mismatches, Close season grades, Portal links, signatures" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Availability** - On a camper or parent **Sales** tab, open **Availability** to see what that person would be offered on a registration form. See [Profiles](/profiles).
+  - **Ask when picked** - Session questions that appear only after a family picks that session, with Missing Answers follow-up. See [Ask when picked](/ask-when-picked).
+  - **Pricing Mismatches** - Money system report for answer-priced sessions whose checkout price does not match the form rule. See [Pricing Mismatches](/pricing-mismatches).
+  - **Move campers up a grade** - Optional step 6 on **Close season** advances grade answers when you close. See [Manage Seasons](/manage-seasons#move-campers-up-a-grade).
+  - **Portal links menu** - Top-bar **Portal** opens or copies **Sign in**, **Create account** (`/new`), and **Staff account** (`/staff`). See [Portal link](/where-can-i-find-a-link-for-the-portal-/-parent-site).
+  - **Ask for a new signature every time** - On signature questions, require a fresh typed name on every submission. See [Digital Signatures](/digital-signatures).
+  - **Accounts Receivable mailing labels** - **Export → Mailing labels** on **Financials → Accounts Receivable**. See [Account Balance](/account-balance#print-mailing-labels).
+  - **Pickup Report reminders** - **No pickups listed**, **Send reminder email**, and **Remind everyone to check** when the Pickup Module is on. See [Pickup Report](/pickup-report).
+
+  ## Updates
+
+  - **Guided Season Setup** - Stepper-only navigation; step label **Forms**; form opening digest links open that step when the form has a season. See [Guided Season Setup](/guided-season-setup) and [Forms](/forms).
+  - **User Stats** - Gear checkboxes pick which statuses you see; Active counting stays camp-wide. See [Dashboard](/dashboard#user-stats).
+  - **New Campers** - **New** / **Returning** pills on every camp, same rule as Chronological. See [Dashboard](/dashboard#new-campers).
+  - **Chronological** - **Filter by profile field** for season counts (for example 5th graders), plus **New** / **Returning** toggles. See [Chronological User Registration](/system-report-chronological-user-registration).
+  - **Forms** - **Email The Invoice**, response **Bulk Delete**, **Print Responses** with **Print In Progress**, **Ask for a new photo every time**. See [Forms](/forms).
+  - **Finix membership address declines** - Banner, Sales alert, and family email (with a staff copy) when a membership charge fails address verification. See [Payment Methods](/payment-methods).
+  - **Parent Home default**, **Forms Email** audience, Finix **Change payout bank account**, payment-plan remove timing, and related money/email polish from the week. See [Portal Settings](/portal-settings), [Forms](/forms), and [Payment Methods](/payment-methods).
+
+  ## Fixes
+
+  - **Scheduled Payments - Missing** - On **All Seasons**, each row and the footer total use that season's balance instead of an inflated family-wide sum. See [Scheduled Payments - Missing](/system-report-scheduled-payments-missing).
+  - **New Payment** - After you pick a **Payment Type**, the modal still scrolls so **Email Invoice To** and **Save Payment** stay reachable.
+  - **Parent scheduled payments** - The **Status** column shows when a payment failed, instead of a blank label.
+  - **Checkout** - A failed charge keeps the previous primary method; saved Payabli cards stay usable after a failed attempt.
+  - **Edit session** - Shared-price subproducts no longer double **Price** / **Min. deposit** when you save.
+  - **Weekly membership** - Cadence no longer slips a day around daylight saving time.
+</Update>
+
 <Update label="2026-10-26" description="Organization Snapshot, Health Center, Import HTML, Staff Hub Ready, Finix billing address, Close season" tags={["feature","improvement","bugfix"]}>
   ## New
 
