@@ -22,7 +22,15 @@ On your parent portal login page, families use a single card:
 - **Sign in** - **Email**, **Password**, **Forgot password?**, then **Sign in**.
 - **Create account** - Shown when **Allow New Registrations** is on under **Admin → Site Settings → Modules**. Fields include **Your first name**, **Last name**, **Email**, **Create a password**, account-type chips under **I am a**, and agreement to the Terms of Service and EULA, then **Create account**.
 
-Below both forms, **Continue with Google** and **Continue with Apple** appear once for the whole card. Deep links such as `#create` or a staff registration URL open the **Create account** tab. When new registrations are off, the page shows **Sign in** only (no tabs).
+Below both forms, **Continue with Google** and **Continue with Apple** appear once for the whole card. Deep links that open the **Create account** tab:
+
+- `#create` on the login page
+- `/new` (or `?type=new`) for a new family account
+- `/staff` (or `?type=staff`) for a staff invitation; also selects **Staff** under **I am a**
+
+When new registrations are off, the page shows **Sign in** only (no tabs), and those create links are not useful.
+
+From the admin top bar, the **Portal** menu can **Open** or **Copy** the **Sign in**, **Create account**, and **Staff account** links. See [Where can I find a link for the Portal / parent site?](/where-can-i-find-a-link-for-the-portal-/-parent-site).
 
 Password helper text on create: **At least 8 characters. Longer is stronger, and a phrase is easy to remember. Tap the eye to check what you typed.**
 

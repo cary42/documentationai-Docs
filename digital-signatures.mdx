@@ -118,7 +118,7 @@ After the field exists, add it to the form that needs the signature.
 
 <Callout kind="info" collapsed="false">
 
-Signature questions appear with an orange highlight. Campium treats them as required, so families cannot submit the form without typing a name. The **do not auto-populate** option does not appear for signature fields because each submission creates a new audit record.
+Signature questions appear with an orange highlight. Campium treats them as required, so families cannot submit the form without typing a name.
 
 </Callout>
 
@@ -150,6 +150,11 @@ The signature is only complete when the question includes the legal text the use
   <Step title="Also ask the camper to sign" icon="users" title-type="p">
 
   Under **Camper signature**, turn on **Also ask the camper to sign** when you want a second typed name from the camper on the same question. Helper text: **Adds a second signature box under the guardian's for the camper to type their name. The camper must sign whenever the guardian signs. It is saved as its own signed record with the same legal terms.** On the portal, families see **Camper signature** under the guardian signature box, with placeholder **Camper: type your full name**. They cannot submit until the camper signs (error: **Please have the camper sign.**). In the Campium mobile app (when the **Mobile App** module is on), the same required camper signature box appears on forms that use this setting. Older app builds cannot submit when camper cosign is required. Signature rows freeze on final submit (not while the form is still a draft), and profile **Signatures** columns such as **Keep Until** and **Record Intact** apply the same way as portal signatures.
+
+  </Step>
+  <Step title="Ask for a new signature every time" icon="refresh-cw" title-type="p">
+
+  Turn on **Ask for a new signature every time** when the waiver must be re-signed on every submission, even if the family already signed the same legal text this season. Helper text: **For waivers that must be re-signed. Asks on every submission, even if they already signed these terms this season.** Leave it off to reuse a prior signing for the same terms in the same season (see [What families see on the Portal](#what-families-see-on-the-portal)).
 
   </Step>
   <Step title="Adjust the question label if needed" icon="settings" title-type="p">
@@ -206,7 +211,7 @@ They still cannot submit until they type a name. If they try to submit while the
 
 Families type their name for form signature fields. They do not draw a signature on screen. Link mode is available on every camp's portal forms; it is not limited to a newer form layout.
 
-If the same legal text was already signed this season, the portal shows **You signed this on** the prior date **as** the name they typed. The terms stay readable, and the family does not need to type their name again for that text.
+If the same legal text was already signed this season and **Ask for a new signature every time** is off, the portal shows **You signed this on** the prior date **as** the name they typed. The terms stay readable, and the family does not need to type their name again for that text. Form Responses and PDFs can show a reuse note such as **Signature on file from October 3, 2026 (Jane Doe)**. When **Ask for a new signature every time** is on, the family must type a name on every submission and each one creates a new signed record.
 
 </Callout>
 
