@@ -15,26 +15,28 @@ You need the custom module / Data Tools access that grants **Audit** in the side
 
 ## Read the list
 
+The date range at the top defaults to the last 30 days and limits every search and the **Field** list. Each page of results loads from the server as you page or filter.
+
 Each row typically shows:
 
-- The person's name
-- The date of the change
-- The field that changed
-- The **old** and **new** values
-- Who made the change
+- The person's **Name** (opens their profile)
+- The **Date** of the change
+- The **Field** that changed
+- The **Old Value** and **New Value**
+- **Changed By** (opens that staff profile when it is a person)
 
-Use the date range and search controls to narrow the list. Empty state: **No audit records found** (or **No matching records found** when filters exclude everything).
+Use the search box (**Name, field or value**) and the **Field** dropdown (default **All fields**, plus every field name that changed in the selected dates) to narrow the list. Empty state: **No changes match these filters and dates.**
 
 ## Restore an old value
 
-When a row can be restored, an undo button appears with tooltip and accessible name **Restore old value**. Restorable rows are text-style profile answers (including dropdown and multi-select) where the old value is still readable and was not truncated, and was not part of a season snapshot restore path.
+Every row shows a **Restore old value** button. When a restore is not allowed, the button stays visible but disabled, and the hover tip explains why. Restorable rows are text-style profile answers (including dropdown and multi-select) where the old value is still readable and was not truncated, and was not part of a season snapshot restore path.
 
 1. Find the change you want to undo.
 2. Click **Restore old value**.
 3. Confirm with wording like Set Grade for Jordan back to "5th"? (field, name, and old value filled in) and **Yes, restore it**.
 4. On success, Campium shows a message such as Grade is back to "5th". and the list refreshes.
 
-If the value cannot be restored, the button is missing for that row, or you see a warning that it could not be restored.
+If the value cannot be restored, leave the button disabled or, after you try, you may see **The value could not be restored.**
 
 <Callout kind="alert" collapsed="false">
   Restoring writes the old answer back onto the live profile. Confirm you have the right person and field before you click **Yes, restore it**.

@@ -41,6 +41,16 @@ On a Finix ACH payment that has not settled, the **Sales** tab also shows a **Pe
 
 Once the void window closes, only **refund** remains for that transaction.
 
+### Finix card Auth and Refund (after capture)
+
+On Finix, many card payments authorize first and capture later (around **9 PM Eastern**). While the charge is authorized:
+
+- An **Auth** badge appears on the profile **Sales** tab. Hover for: **Card authorized. The funds are held but not yet captured. Captured automatically around 9 PM Eastern, ahead of the 10 PM settlement cutoff.**
+- **refund** is replaced by a grey **Refund (after capture)** label. Hover for: **Refund unlocks once this charge is captured. Until then, use Void to cancel the charge, or Capture to capture it now.**
+- Use **void** to cancel the hold, or **capture** if you need the funds captured before the nightly job.
+
+After capture, **refund** works as usual. See [Payment Processors](/payment-processors#auth-only-card-flow-in-campium).
+
 ## Imported payments
 
 Payments brought in from another system (for example a CampMinder import) do not show **refund** or **void** on the profile. Those rows have no processor transaction behind them, so Campium cannot reverse them the usual way.
