@@ -159,6 +159,17 @@ The move runs in the background once the snapshot in step 4 is ready, so the sna
 - Prices do not change on their own. Registrations in active seasons that no longer match appear on the **Pricing Mismatches** report.
 - Fields you linked to the grade field follow the new grade.
 
+## Delete a season
+
+You can delete a season only when it is empty: no sessions, and nobody has ever signed up for it. Delete is for a season made by mistake or a test season. For a season that already ran, close it instead (see [Close a season](#close-a-season)) so its history stays.
+
+Open **Seasons**, then the season row menu. Only administrators see **Delete Season**.
+
+- **Delete Season is grayed out:** hover it to see why.
+  - **This season has sessions in it. Delete its sessions first.** If nobody has signed up, the menu also shows **Delete All Sessions** in red. Click it, type **I understand**, then click **Delete sessions**. Every session in the season is deleted with its prices and options, and the page reloads. Then choose **Delete Season**.
+  - **People have signed up for this season. Remove their sessions from their Sales tab first.** You can't delete a season people signed up for, even if they later cancelled. Close the season instead.
+- **Delete Season is available:** click it, type **delete**, then click **Delete**. The season is removed from the list. This can't be undone.
+
 ## Email an invoice to families registered for the season
 
 The **Edit Season** modal still includes an **Email invoice to all families registered for season** checkbox (this is separate from closing the season). Check it when you want every family registered for the season to receive their current invoice by email as part of saving other season settings.
@@ -236,6 +247,12 @@ Manage seasons from the **Seasons** area in the left hand navigation by creating
 ## FAQ
 
 <ExpandableGroup>
+  <Expandable title="How do I delete a season?">
+
+  Open **Seasons**, then the season row menu, and choose **Delete Season** (administrators only). If it is grayed out, hover it for the reason. A season with sessions but no sign-ups shows **Delete All Sessions**: type **I understand** to delete them all, then delete the season. A season anyone signed up for can't be deleted; close it instead. See [Delete a season](#delete-a-season).
+
+  </Expandable>
+
   <Expandable title="Can I run a report using season data from a previous point in time?">
 
   Yes. When you close a season, Campium captures a profile-data snapshot (unless you keep an existing one). On a custom report, set the **Season** filter to that season, then choose its close under **Profile answers as of**. The exact historical views available depend on the reports your organization has access to.
