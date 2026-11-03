@@ -34,6 +34,9 @@ Logged-in families manage cards and bank accounts from **Account** or **My Accou
 
 - They can add, update, or replace a card or bank account.
 - Scheduled charges and retries use a method on file. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
+- When a failed scheduled payment is open, the button that normally says **Register Card**, **Save Credit Card**, **Add Bank Account**, or similar can instead read **Save and retry $X** (oldest failed amount). Saving the method retries that charge. Success: **Payment Retry Successful!** Failure: **Payment Retry Failed** (plus the processor message).
+- On **Finix**, if a saved card failed because the security code (CVV) did not match, the list can show **Enter Card Again** with **Security code did not match. This card can't be charged until you enter it again.** Guidance tells them to add the card again under **Add New Account** with the correct code, then retry.
+- On **Finix**, a new card is verified with a $1 authorization before it is saved (including when they add a card without paying today). If verification fails, they see **We could not verify this card right now, so it was not saved. Please try again, or use a different payment method.** Paid checkout that already charges the card skips that separate verify step.
 - You can find households with nothing on file using [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
 
 ### Payment method alerts on the parent portal
@@ -42,7 +45,7 @@ Signed-in families can see one danger or warning banner at a time on home, Accou
 
 - **Bank returned a payment** - Headline such as **Your bank returned your $540.00 payment**. CTA **Update payment method**. See [What is an ACH return?](/what-is-an-ach-return#what-families-see-on-the-portal).
 - **Plan needs a method** - Headline **Your payment plan needs a payment method** when they have a non-Custom plan balance and no primary method. CTA **Add payment method**. Exclusions follow [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
-- **Billing address needs a fix** (Finix cards only) - Headline such as **The billing address on your card ending 4675 needs a fix**. CTA **Fix billing address**. On Payment Methods, a flagged address can show **(your bank says this does not match)**. When a **membership** recurring charge failed the address check (membership dues have no scheduled-payment row), the detail can add **Your $X.XX membership payment on M j was declined because of this.** Saving a verified address clears the banner; it does **not** charge the missed membership payment automatically.
+- **Billing address needs a fix** (Finix cards only) - Headline such as **The billing address on your card ending 4675 needs a fix**. CTA **Fix billing address**. On Payment Methods, a flagged address can show **(your bank says this does not match)**. When a **membership** recurring charge failed the address check (membership dues have no scheduled-payment row), the detail can add **Your $X.XX membership payment on M j was declined because of this.** Saving a verified address clears the banner; it does **not** charge the missed membership payment automatically. After the address (or another chargeable method) is ready, Payment Methods can show **Your $X membership payment on** the charge date **was not collected.** with **Pay the missed $X membership payment now**.
 
 On Payment Methods itself the ACH / plan banner has no button (they are already on the page). CTA destinations depend on your processor (Finix, Payabli, USIO, Paysafe, and others).
 

@@ -1,15 +1,15 @@
 ---
 title: SMS
-description: Send one-way SMS updates to families from Campium, including where to find SMS, how to compose messages, choose recipients, schedule, and review logs.
+description: Send SMS updates to families from Campium, including one-way blasts, optional camp texting numbers, and the Texts inbox.
 ---
 
 ## Overview
 
-Use SMS in Campium to send short, one-way text updates to families when you need their attention quickly.
+Use SMS in Campium to send short text updates to families when you need their attention quickly.
 
 <Callout kind="info">
 
-Campium sends SMS messages from `(551) 209-2312`. This is a one-way number: recipients cannot reply to your texts.
+By default, Campium sends SMS messages from `(551) 209-2312`. That shared number is one-way: recipients cannot reply to your texts. When Campium has turned on **Texting Number** for your camp and your number is **active**, families can reply to your camp's number and staff can answer in **Texts** (see below).
 
 </Callout>
 
@@ -38,6 +38,25 @@ Open SMS from the main navigation:
 2. Click **SMS**.
 
 The SMS list opens. Each message you open has three tabs: **Settings**, **Recipients**, and **Logs**. You need the **Manage SMS** permission to see **SMS** in the menu.
+
+When Campium has enabled the texting-number module for your camp, the SMS page also shows **Texting Number**. After your number is **active** and your role has **Read and reply to text messages from families**, you also see **Texts**.
+
+## Texting Number (your camp's number)
+
+Campium turns on **Texting Number** for your camp when you are ready for a dedicated sender. It is not a self-serve Site Settings toggle.
+
+1. Open **Communications → SMS**.
+2. Click **Texting Number**. The page title is **Texting Number**.
+3. Complete the application (**Submit application** or **Save and finish later**), including the opt-in wording placeholders the form asks for.
+4. Track status on that page until the number is **active**.
+
+Once active, administrators can read and answer replies under **Texts**. To give another role access, turn on **Read and reply to text messages from families** on **Admin → Roles & Permissions**.
+
+## Texts inbox
+
+Open **Communications → SMS → Texts** when your number is active and you have the inbox permission. Empty state: **Texts you start and replies from families show up here.** Staff can start a conversation with a phone on file and reply from the web (and from the Campium mobile app when that route is available). Group-only families that should not appear in this inbox stay out of the list.
+
+One-way blasts from **New SMS** still use your camp's outbound path. The shared one-way number story above applies only when you do not have an active camp number.
 
 ## Create and send an SMS
 
@@ -213,7 +232,7 @@ When you click **View** to open the recipient list, a **Send** column lets you u
 
 <Callout kind="info">
 
-SMS messages from Campium are one-way. Families see them as coming from `(551) 209-2312` and cannot reply, so they contact you through your usual channels.
+Without an active camp texting number, SMS blasts are one-way from `(551) 209-2312` and families cannot reply on that thread. With an active **Texting Number**, replies land in **Texts**.
 
 </Callout>
 

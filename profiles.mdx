@@ -315,6 +315,8 @@ The profile includes a **My Quick View** card that shows an at-a-glance summary 
 
 When **Birth Date** is in the Quick View layout and Campium can parse the saved date, the age appears next to the value as `(age N)` (for example, `Birth Date: 2014-10-21 (age 11)`). The same age shows in the hover mini-profile that uses Quick View fields. If the date is missing, unparseable, or not a plausible age, only the date (or blank) appears.
 
+When **Hebrew Dates** is on under **Admin → Site Settings → Modules**, the Hebrew birthday appears under **Birth Date** on the profile (plain helper text under the date). See [Site Settings](/settings).
+
 Hovering a person's name (the mini-profile Quick View) shows a larger headshot next to the name when a profile photo exists. Without a photo, the tooltip still shows the name, status badge, and Quick View fields. Click the photo or the name in the hover card to open that person's full profile.
 
 When the camper **Group** profile field is in Quick View, its value is a link (or **None set**). Click it to open a modal titled with that field's label and the person's name. You can:
@@ -553,14 +555,15 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     When your camp has an active season with sessions priced from profile answers, camper and parent profiles show **Availability** (hover tip: **What this person can sign up for**). Staff profiles do not. You need **View User Profiles** and the Sales tab permission.
 
-    Click **Availability** to open a read-only modal titled **Available** plus your camp's product label (for example **Available Sessions**). Intro text: **This is what this camper's family will see on the portal to purchase.**
+    Click **Availability** to open a modal titled **Available** plus your camp's product label (for example **Available Sessions**). Intro text: **This is what this camper's family will see on the portal to purchase.**
 
     - **Camper** and **Form** pickers when more than one applies
     - Sessions the family would be offered on that form, with prices when your camp is not free (**Discounts apply at checkout.**)
-    - **Not available (N)** for sessions the form would hide, with reasons such as **Needs an answer: Grade**
+    - **Not available (N)** for sessions the form would hide, with reasons such as **Needs an answer: Grade** or **Doesn't match:** plus the rule
+    - On a **Not available** reason, a **Fix** link (or **Fix** plus the field name when more than one field is involved) lets you change that answer in place when you have **Edit User Data** for that field. Family-level fields and health fields without medical access do not get **Fix**. **Save** writes the answer; you may then see **Update pricing to match?** if a sale price should change. **Cancel** closes the inline editor without saving
     - If the camper cannot open the form yet: their first name plus **can't open this form right now.**, with what they would see once they can
 
-    Close the modal with **Close**. Nothing on the Sales tab changes from this view.
+    Close the modal with **Close**.
 
     ### Add a payment with Account On File
 
@@ -676,6 +679,12 @@ Each tab focuses on a different part of the person’s record. Use these section
     ### Refund, void, or remove a payment
 
     Payment rows on the Sales tab can include action links labeled **refund**, **void**, or **remove** depending on the type and age of the payment. Rows taken on an earlier processor can show a **Previous processor** badge. See [Processing Refunds and Voids](/processing-refunds-and-voids#previous-processor-payments). An ACH **Notice of Change** can show a **Bank update** chip; see [What is an ACH return?](/what-is-an-ach-return).
+
+    A charge that is still waiting on the processor shows **Awaiting processor** (hover: **We have not heard back from the payment processor. This charge is not in the balance yet.**). With **Process Payments**, you may also see **Check with processor**. Until the processor answers, refund, void, and edit stay off that row. On the parent portal the same row can show **Processing** with **This payment is not in your balance yet. We will email you when it is confirmed. You do not need to pay again.**
+
+    On Finix, a same-day card payment that is still authorized (not yet captured) can show an **Auth** badge and a grey **Refund (after capture)** label instead of an active **refund** link. Hover **Refund (after capture)** for: **Refund unlocks once this charge is captured. Until then, use Void to cancel the charge, or Capture to capture it now.** See [Payment Processors](/payment-processors#auth-only-card-flow-in-campium) and [Processing Refunds and Voids](/processing-refunds-and-voids).
+
+    When a Finix membership recurring charge was declined for a billing-address mismatch and never collected, the Sales tab can show **Membership payment declined, not collected.** With **Process Payments** and a chargeable method on file, use **Charge it now**, then confirm **Yes, charge it**. See [Memberships](/memberships) and [Payment Methods](/payment-methods).
 
     <Steps>
       <Step title="Identify the payment and available actions" icon="search" title-type="p">
@@ -912,6 +921,8 @@ Each tab focuses on a different part of the person’s record. Use these section
     - **Draft**: The contract was created but has not been sent yet.
 
     ### What you can do from this tab
+
+    Use **New Contract** at the top of the tab to create and email a contract for someone in this family. The modal title is the person's name plus **New Contract**. Choose **Contract** and **Season**, then **Create & Send** (or **Cancel**). The same Contracts module and permission rules apply as on **Admin → Contracts**.
 
     Use **Preview** on any contract to open it in a new browser tab. Signed contracts open the signed PDF, while unsigned contracts open the document with a note that it has not been signed yet.
 

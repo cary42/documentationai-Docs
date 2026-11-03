@@ -116,7 +116,7 @@ Use the **New Form** button on the Forms list to start a new form.
       - **Allow User To Pay Later** (helper: **No deposit necessary if set to Yes. Typically used for testing purposes.** When the Pending Registrations module is on, the choices are **No** and **Save for later (pending)**, which holds the spot as pending until you approve it from the profile.)
       - **Pay In Full Upon Registration** (helper: **If set to yes, minimum deposits will be ignored. You may want to set this to yes when camp is about to begin.**)
       - **Default Payment To** (helper: **When the user gets to the checkout screen, payment will default to this option.**)
-      - **Minimum Deposit Override**, **Minimum Deposit Scope**, and **Charge Deposit On Approval**
+      - **Minimum Deposit Override Type**, **Minimum Deposit Override**, **Minimum Deposit Scope**, and **Charge Deposit On Approval**
     - **Due Date** (helper: **Displayed on Portal for user.**)
     - **Discount settings** (registration only)
       - **Allow For Discounts To Be Applied**
@@ -689,20 +689,24 @@ When you enable the pay-in-full discount, two fields let you override your defau
 
 The **Minimum deposit settings** box controls how much a payer must pay at checkout when full payment is not required.
 
+#### Minimum Deposit Override Type
+
+**Minimum Deposit Override Type** is **Fixed Amount** or **Percent**. Helper: **A percent is taken from what they owe after discounts and credit. Scope does not apply to a percent.**
+
 #### Minimum Deposit Override
 
-**Minimum Deposit Override** replaces the minimum deposit for this form. Helper: **This will override the minimum deposits set for the sessions.**
+**Minimum Deposit Override** replaces the minimum deposit for this form (a dollar amount or a percent, matching the type). Helper: **This will override the minimum deposits set for the sessions.**
 
 #### Minimum Deposit Scope
 
-**Minimum Deposit Scope** sets whether the override applies per user or for the entire checkout.
+**Minimum Deposit Scope** sets whether a fixed-amount override applies per user or for the entire checkout. The scope control is hidden when the type is **Percent**.
 
 | Scope                     | Behavior                                                             |
 | ------------------------- | -------------------------------------------------------------------- |
 | **For Entire Checkout**   | One minimum deposit applies to the whole order.                      |
 | **Per User**              | The minimum deposit applies separately to each user in the checkout. |
 
-Use **Per User** when each registrant should pay their own minimum. Use **For Entire Checkout** when one combined deposit is enough.
+Use **Per User** when each registrant should pay their own fixed minimum. Use **For Entire Checkout** when one combined deposit is enough.
 
 #### Charge Deposit On Approval
 
