@@ -38,8 +38,19 @@ Every row shows a **Restore old value** button. When a restore is not allowed, t
 
 If the value cannot be restored, leave the button disabled or, after you try, you may see **The value could not be restored.**
 
+## Restore several changes at once
+
+Use bulk restore when a bad import or mass edit touched many rows.
+
+1. Tick the checkbox on each change you want to undo, or use the page checkbox (**Select the changes on this page**). Ticks carry across pages and clear when you change **Field**, Filter, or the date range.
+2. Click **Restore selected** (the badge shows how many you picked), or **Restore all matching** for every row that matches the current dates, **Field**, and Filter.
+3. Review the preview of how many will restore and how many will be skipped, then confirm with **Yes, restore them** (or **Yes, restore it** for a single row).
+4. Watch **Restoring…** until you see **Restore finished** (or **Restore stopped** if you cancel).
+
+A text, date, or dropdown field that changed several times goes back to its oldest old value. If that oldest row cannot be restored, later rows for the same field are skipped too, so a restore never puts the import's own value back. Multi-select rows each re-add their option. Preview is capped at 5,000 matching rows. Empty selection shows **Nothing to restore**.
+
 <Callout kind="alert" collapsed="false">
-  Restoring writes the old answer back onto the live profile. Confirm you have the right person and field before you click **Yes, restore it**.
+  Restoring writes the old answer back onto the live profile. Confirm you have the right people and fields before you click **Yes, restore it** or **Yes, restore them**.
 </Callout>
 
 ## Related guides

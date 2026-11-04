@@ -25,14 +25,21 @@ The direct URL is `/report/birthday.php`.
 
 ## What the report shows
 
-Birthday Report lists every **active camper** and **active staff member** with a birthday on file. The report is **not season-specific**, so it covers your full active roster regardless of enrollment.
+Birthday Report lists every **active camper** and **active staff member** with a birthday on file. With **All birthdays** selected (the default), it covers your full active roster regardless of enrollment.
+
+When your season has sessions, a **Session** control appears. Choose **All birthdays**, or **During** a session name to list only people registered in that session whose birthday falls between the session's dates. Empty state for a session: **No one registered in this session has a birthday during it.**
 
 | Column | Description |
 |--------|-------------|
 | **Name** | Links to the person's profile and opens a mini-profile when clicked. |
-| **Birthday** | Month and day, such as `Jun 24`. |
+| **Birthday** | Month and day, such as `Jun 24`. When you sort **By Hebrew date**, this column shows the civil date that Hebrew birthday lands on. |
+| **Hebrew Birthday** | Appears when **Admin → Site Settings → Modules → Hebrew Dates** is on. Shows the Hebrew date label for the person's birthday. |
 | **Age** | The person's current age. On their actual birthday this equals the age they are turning; before then it is their age today, not the age of the upcoming birthday. |
 | **Type** | Shows whether the person is a Camper or Staff member. |
+
+### English or Hebrew date
+
+When **Hebrew Dates** is on, use **By English date** or **By Hebrew date** above the table. That choice decides which birthday counts for the list and session filter. Adar births land on Adar II in a leap year, and Adar I births on Adar in a common year.
 
 ### How the report sorts birthdays
 
@@ -134,6 +141,7 @@ Your Campium account ID.
 | `first_name` | Birthday person's first name |
 | `age` | Ordinal age they are turning, such as `7th` |
 | `age_num` | Numeric age, such as `7` |
+| `hebrew_birthday` | Their Hebrew birth date (listed in Automated Emails only while **Hebrew Dates** is on; left blank if you turn the module off later) |
 | `agency_name` | Your camp name |
 | `agency_logo` | Your logo URL from portal settings |
 | `agency_url` | Your website or portal URL |
