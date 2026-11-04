@@ -84,7 +84,7 @@ A template includes:
   </Step>
 
   <Step title="Set the header and body" icon="file-text" title-type="p">
-    Edit **Contract header** and **Contract body** in the rich text editors. Merge tags in the header (for example camp name and logo placeholders) fill in per camp. The signature block is added at the bottom of the body automatically.
+    Edit **Contract header** and **Contract body** in the rich text editors. Merge tags in the header (for example camp name and logo placeholders) fill in per camp. The signature block is added at the bottom of the body automatically. If you paste content from another contract tool that used images for merge fields, Campium inserts the field name in brackets (for example `[first_name]`) instead of a broken image.
   </Step>
 
   <Step title="Choose what happens when sent and after signing" icon="settings" title-type="p">
@@ -260,9 +260,18 @@ Emailing a contract sends the recipient a personalized link they use to access t
   </Step>
 
   <Step title="Resend if needed" icon="repeat" title-type="p">
-    If the recipient cannot find the email, open the same contract and choose **Resend Email**. Confirm the email address is correct before resending.
+    If the recipient cannot find the email, open the same contract and choose **Resend Email**, or use **Resend** on the person's profile **Contracts** tab (see [Profiles](/profiles)). Confirm the email address is correct before resending. A manual resend counts as a send for automatic reminders.
   </Step>
 </Steps>
+
+### Automatic reminders for unsigned contracts
+
+When the Contracts module is on, Campium re-emails unsigned contracts for you. There is no separate setting to turn this off.
+
+- Reminders go out about every 3 days after the contract was created (around days 3, 6, and 9), up to 3 reminders.
+- The email subject is prefixed with **Reminder:**. The body and signing link stay the same as the last send.
+- Contracts older than 14 days, already signed or cancelled contracts, and inactive camps are skipped.
+- A manual **Resend** (from **Admin → Contracts** or the profile **Contracts** tab) counts as a send and pushes the next reminder out.
 
 When the recipient clicks the contract link, they arrive at the signing page in the parent portal.
 

@@ -894,9 +894,11 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - **Created**: When the contract was created or sent.
 
+    - **Last Sent**: When Campium last emailed this contract, or a dash if it has not been sent yet.
+
     - **Signed**: When the contract was signed, if it has been signed.
 
-    - **Actions**: Available actions such as **Preview** and, for signed contracts, **Download**.
+    - **Actions**: Available actions such as **Preview**, **Resend** for unsigned contracts that can still be sent, and **Download** for signed contracts.
 
     If the family has no contracts yet, the table shows `No contracts for this family yet.`
 
@@ -922,11 +924,15 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     ### What you can do from this tab
 
-    Use **New Contract** at the top of the tab to create and email a contract for someone in this family. The modal title is the person's name plus **New Contract**. Choose **Contract** and **Season**, then **Create & Send** (or **Cancel**). The same Contracts module and permission rules apply as on **Admin → Contracts**.
+    Use **New Contract** at the top of the tab to create and email a contract for someone in this family. The modal title is the person's name plus **New Contract**. Choose **Contract** and **Season**. Optionally click **Edit email** to change the **Email subject** and **Email body** for this send, then **Create & Send** (or **Cancel**). The same Contracts module and permission rules apply as on **Admin → Contracts**.
+
+    Use **Resend** on an unsigned contract that still has a signing link. The modal title is **Resend** plus the template name. It shows **Sending to** the person and email, plus **Last sent** the date or **Not sent yet.** Optionally click **Edit email**, then **Resend** (or **Cancel**). Success: **Contract sent.**
 
     Use **Preview** on any contract to open it in a new browser tab. Signed contracts open the signed PDF, while unsigned contracts open the document with a note that it has not been signed yet.
 
     Use **Download** when you need a copy of a signed contract for records or review. Download is only available for signed contracts, so you cannot download unsigned contracts from this tab.
+
+    Campium also sends automatic reminder emails for unsigned contracts. See [Contracts](/contracts#automatic-reminders-for-unsigned-contracts).
 
     ### How this relates to other areas
 

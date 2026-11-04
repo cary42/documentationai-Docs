@@ -26,6 +26,8 @@ At registration checkout, canteen add-funds, and other parent-portal payments, f
 
 Debit, prepaid, and HSA/FSA cards run through the same card option as credit cards. They are not a separate choice on the checkout screen.
 
+When your camp uses **Finix** and a card is declined, families can see: **Your card was declined. Call the number on the back of your card and ask for the exact reason it was declined, or try another card. HSA and FSA cards can decline a new camp until you ask them to allow it.**
+
 Families can also pay in full or choose a [payment plan](/payment-plans) when the season has one. The plan controls _when_ charges run. The method on file controls _how_ they run.
 
 ### Saved methods on the parent portal
@@ -35,6 +37,8 @@ Logged-in families manage cards and bank accounts from **Account** or **My Accou
 - They can add, update, or replace a card or bank account.
 - Scheduled charges and retries use a method on file. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
 - When a failed scheduled payment is open, the button that normally says **Register Card**, **Save Credit Card**, **Add Bank Account**, or similar can instead read **Save and retry $X** (oldest failed amount). Saving the method retries that charge. Success: **Payment Retry Successful!** Failure: **Payment Retry Failed** (plus the processor message).
+- When a scheduled payment is only waiting for you to approve a pending camper, the family panel can read **Pending Payments** instead of **Failed Payments**, with **Not charged yet. This payment will run once the camp approves your camper.** and **No action needed** (no **Retry**).
+- If your camp moved from USIO to Finix and still has legacy USIO methods on some accounts, staff can charge those from the admin portal, but a family paying in the parent portal with that old method falls through and declines. Ask them to add a new card or bank account on **Payment Methods**.
 - On **Finix**, if a saved card failed because the security code (CVV) did not match, the list can show **Enter Card Again** with **Security code did not match. This card can't be charged until you enter it again.** Guidance tells them to add the card again under **Add New Account** with the correct code, then retry.
 - On **Finix**, a new card is verified with a $1 authorization before it is saved (including when they add a card without paying today). If verification fails, they see **We could not verify this card right now, so it was not saved. Please try again, or use a different payment method.** Paid checkout that already charges the card skips that separate verify step.
 - You can find households with nothing on file using [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).

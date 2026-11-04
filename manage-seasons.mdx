@@ -114,7 +114,7 @@ You need access to **Seasons** (the product module). Staff Hub names on the stat
 
 ### What the Close season page covers
 
-The page title area includes **What closing … does** (with the season name), **Download everything (CSV)**, and a link **How closing a season works**. Counts at the top show how many forms go offline, campers become Inactive, staff become Inactive, and Staff Hub statuses change. A fifth count, **campers change grade**, appears when you check step 6. Helper text: counts are as of today, and nothing changes until you close.
+The page title area includes **What closing … does** (with the season name), **Download everything (CSV)**, and a link **How closing a season works**. Counts at the top show how many forms go offline, campers become Inactive, staff become Inactive, and Staff Hub statuses change. Extra counts appear when you turn on step 6 (**campers change grade**) or step 7 (**answers left blank for next season**). Helper text: counts are as of today, and nothing changes until you close.
 
 Read each numbered section, change the options you need, then close:
 
@@ -122,10 +122,11 @@ Read each numbered section, change the options you need, then close:
 2. **Campers become Inactive** - Active campers who are not in another active season become Inactive (including campers with no season on their profile). Parents whose family has no active camper left become Inactive too, unless they are also staff or an admin.
 3. **Staff become Inactive** - Optional. **Inactivate staff who have** the season **on their profile** (checked by default when anyone qualifies). Separate option: **Also inactivate staff with an approved application on a form**, then **Choose a form**. Staff in another active season stay active.
 4. **Profile data snapshot** - Saves profile answers at the close for reporting. If a snapshot already exists, choose **Take a new snapshot now** or **Keep the snapshot from** the earlier capture date. If you froze early, choose **Keep it and lock it** or **Replace it with a new snapshot**.
-5. **Staff Hub application status** - Hired staff become **Returning**; others are cleared except statuses you keep in Staff Hub settings (**DNR**, **Fired**, and **Dismissed** always stay). If you keep an existing snapshot in step 4, statuses do not change. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
+5. **Staff Hub application status** - Hired staff become **Returning**; others are cleared except statuses you keep in Staff Hub settings (**Full Time**, **DNR**, **Fired**, and **Dismissed** always stay). If you keep an existing snapshot in step 4, statuses do not change. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 6. **Move campers up a grade** - Optional and off by default. Check **Move campers up a grade when you close** the season to see a table with **Current grade**, **Campers** (click the count for names), and **After you close**. See [Move campers up a grade](#move-campers-up-a-grade).
+7. **Blank fields for next season** - Optional. Empties profile fields you pick (for example bunk or division) for everyone in the season so next season starts blank. See [Blank fields for next season](#blank-fields-for-next-season).
 
-Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more before anything runs.
+Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more before anything runs. Steps 6 and 7 appear only while the season is still **Active**.
 
 If the season is already Inactive, the page explains that it was closed before and nothing here runs. If it was closed and later reopened, a note says reopening did not undo that close.
 
@@ -158,6 +159,24 @@ The move runs in the background once the snapshot in step 4 is ready, so the sna
 - If you already moved grades when closing another season, the page warns you. Moving them again moves every camper another grade.
 - Prices do not change on their own. Registrations in active seasons that no longer match appear on the **Pricing Mismatches** report.
 - Fields you linked to the grade field follow the new grade.
+
+### Blank fields for next season
+
+Use step 7 when answers such as bunk, division, or cabin should not carry into the next season. Campium saves each answer in the season snapshot first (step 4), so reports and profiles can still show what was true for that season. Next season, the fields you blank start empty.
+
+1. On the **Close season** page, go to step **7 Blank fields for next season**.
+2. Check **Blank fields when you close** the season.
+3. Under **Fields to blank**, pick the profile fields to clear. Family fields, signatures, Application Status, and the grade field you are moving in step 6 are not offered.
+4. For each field you pick, choose who to blank:
+   - If you froze the season earlier: **Blank only answers not changed since** the freeze date, or **Blank everyone**.
+   - If you did not freeze: **Skip people also in another active season**, or **Blank everyone in** the season.
+5. Close the season.
+
+The blanking runs in the background once the snapshot in step 4 is ready, so the snapshot keeps every answer first. Reopening the season does not undo the blanks.
+
+**Undo blanked fields:** After the close, use this button on the same page. Confirm **Undo the blanked fields?** with **Yes, undo them** (or **Not now**). Each answer comes back from the snapshot. A field filled in since the blank keeps the new answer.
+
+If you have no profile fields that can be blanked, the step shows **You do not have profile fields that can be blanked, so nothing changes here.**
 
 ## Delete a season
 
