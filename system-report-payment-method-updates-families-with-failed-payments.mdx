@@ -68,6 +68,7 @@ If no rows appear, the page shows: `No payment method updates found for families
 - On the report, use **Email me when a family here updates their card**. Success: **Saved.**
 - If the camp has turned the alert off organization-wide, the control is disabled and helper text says **This email is turned off for your organization.**
 - The same preference appears under your name (top right) → **Settings → Email Notifications** as **Card update alerts**, with **Email me when one of these families updates their card**. Administrators control the camp-wide allow switch on **Admin → Email Notifications**.
+- The alert email and the report can include **Retry failed payment ($X due since M/D/YYYY)**. That opens this report with the retry modal ready (needs **Process Payments**). It targets the oldest failed scheduled payment for that camp, not a payment held by a pending camper, and preselects the card the family just updated when possible. The report still links to **Scheduled Payments** for the full list.
 
 </Step>
 

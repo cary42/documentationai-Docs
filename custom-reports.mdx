@@ -87,7 +87,9 @@ Filters define **who** appears in the report. You can add one filter or many, de
   <Step title="Add more filters to narrow results" icon="settings" title-type="p">
     - Use **Add Another Filter** again to stack additional conditions.
 
-    - On each extra filter row, choose **and** or **or** (control label: **Join with the filter above**). Helper text: **Choose "or" to match this filter or the one above it. Filters joined with "or" form a group, and every group must match.**
+    - On each extra filter row, choose **and** or **or** (control label: **Join with the filter above**).
+
+    - You can add the same field more than once (for example, one **Season is** row and separate **Season is not** rows). Each extra copy of a field is its own filter row.
 
     - Combine filters to answer specific questions, such as "Status is Active" **and** "Balance is not 0", or group alternatives with **or**.
 
@@ -107,10 +109,12 @@ The same **and** / **or** joining and summary appear when you build recipient fi
 
 The **Season** filter is the place to look at another year. While it is set to your current season only, a helper line under the row says **Your current season. Change it to see another year.** The same hint appears on Season filter rows when you build recipients for mass email, SMS, and push.
 
-When the Season filter is set to exactly one season that has a ready snapshot, **Profile answers as of** appears under that row:
+When the Season filter is set to exactly one season that has a ready snapshot (**Season is** that season), **Profile answers as of** appears under that row:
 
 - **Today** - current profile answers (the default whenever you change the season)
 - **`{Season} close`** - answers from that season's snapshot (or **`{Season} frozen`** when the season was frozen early while still active)
+
+On custom reports you can keep additional **Season is not** rows beside that **is** row (for people who never returned in later seasons). Those **is not** rows always use today's answers, because a season-close snapshot predates later sign-ups. Recipients filters still need exactly one Season row for the as-of control.
 
 If that closed season has no snapshot yet, Campium keeps today's answers and shows **`{Season} has no saved answers, showing today's.`**
 
@@ -201,7 +205,9 @@ Above the results table, **Group by** sections the report by one of your current
 
 On a new unsaved report that already has rows, a one-time tip titled **Group your report into sections** can point at **Group by**. Click **Got it** to dismiss it.
 
-Each section header shows the grouped answer and count (for example **Grade: 3rd (12)**). Use the collapse control (**Collapse** / **Expand**) to hide or show that section on screen. Collapse is display only: **Print** and exports still include every row. When you have **Manage Email**, each section also shows **Email** and **Text** so you can message just the people in that section with the same group email and SMS modals used elsewhere.
+Each section header shows the grouped answer and count (for example **Grade: 3rd (12)**). Use the collapse control (**Collapse** / **Expand**) to hide or show that section on screen. Collapse is display only: the full-report **Print** and toolbar exports still include every row. When you have **Manage Email**, each section also shows **Email** and **Text** so you can message just the people in that section with the same group email and SMS modals used elsewhere.
+
+Each section also has **Export**, with **Copy**, **CSV**, **Excel**, **PDF**, **Print**, and **Mailing Labels** for that section only (after the Filter box, with the columns you are showing).
 
 ## Save your custom report
 

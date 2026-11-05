@@ -29,8 +29,19 @@ Under the Payments group: **To turn payment emails on or off, go to Site Setting
 | --- | --- |
 | **Upcoming scheduled charge** | Sent before each scheduled payment on the days you choose under **Admin → Site Settings → Payment Info**. Turn **Charge Coming Email** on there to send it. In the editor, **See who gets the next reminder** opens the [Upcoming Charge Emails](/system-report-upcoming-charge-emails) report. Under **Merge fields**, use **Profile fields** to insert a guardian-facing profile answer (placeholder **Pick a profile field**). Helper text: **Fills in from the profile of the person getting the email. Blank if they have not answered it.** Only non-signature, visible profile fields available to Guardian 1 appear in that list. |
 | **Scheduled payment receipt** | Sent after a scheduled payment goes through when **Send Scheduled Payment Receipt** is on under Payment Info. |
-| **Scheduled payment failed** | Standard wording when a scheduled payment is declined. |
-| **ACH payment returned** | Standard wording when the bank returns an ACH payment after it settled. When your camp is set up for Canada on Finix, this row reads **PAD payment returned** instead. |
+| **Scheduled payment failed** | Editable wording when a scheduled payment is declined. Turn the auto-send on or off with **Send Email To User When Scheduled Payment Fails** under Payment Info. On this row you can also turn on **Send it again 3 and 6 days later if the payment is still unpaid** so Campium resends while the installment is still unpaid. |
+| **ACH payment returned** | Editable wording when the bank returns an ACH payment after it settled. Turn the auto-send on or off with **Send Email When ACH Return Is Received** under Payment Info. When your camp is set up for Canada on Finix, this row reads **PAD payment returned** instead. |
+
+### Sent by you from Scheduled Payments
+
+These four emails are the ones you send from the email icon on [Scheduled Payments](/system-report-scheduled-payments#send-payment-notifications). Edit them here; the send modal shows a live preview and an **Edit this email** link back to the matching row.
+
+| Row | What it is |
+| --- | --- |
+| **No payment method on file** | Family has an upcoming scheduled payment but no card or bank account. |
+| **Payment issue** | Follow-up when a scheduled payment has a problem. |
+| **Card billing address did not verify** | Finix billing-address follow-up that steers the family to **Payment Methods** → **Edit**. |
+| **Payment reminder** | Friendly reminder about an upcoming scheduled payment. |
 
 ### Wait list
 
