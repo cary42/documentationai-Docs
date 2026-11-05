@@ -50,6 +50,8 @@ Create a new season from the Seasons list when you need a new registration perio
 
     Reports and season windows use start through end, so both dates are required and the end date must come after the start date. If either date is missing, Campium shows **You must enter a season start date.** or **You must enter a season end date.**
 
+    If the start date is more than three months out, Campium asks **The season start date should be when registration first begins. Is this the correct date?** with **Yes, save it** or **Change date**. The same confirm appears when you copy a season with a far-off start.
+
     <Callout kind="info" collapsed="false">
       The financial-snapshot, dropdown, and status settings do not appear when you first create a season. They become available in the **Edit Season** modal after the season exists.
     </Callout>
@@ -119,14 +121,14 @@ The page title area includes **What closing … does** (with the season name), *
 Read each numbered section, change the options you need, then close:
 
 1. **Forms go offline** - Checkbox like **Take 3 forms in Summer 2026 offline (sets them to Hidden)** (count and season name match your season). Uncheck to leave forms as they are. Reopening the season does not bring forms back; turn each form on from its settings.
-2. **Campers become Inactive** - Active campers who are not in another active season become Inactive (including campers with no season on their profile). Parents whose family has no active camper left become Inactive too, unless they are also staff or an admin.
+2. **Campers become Inactive** - Active campers in this season who are not in another active season become Inactive. Optionally check **Also inactivate campers who are in no active season** (on by default). Helper text: **They have no active season on their profile, not even** this season. **Uncheck to leave them as they are.** Parents whose family has no active camper left become Inactive too, unless they are also staff or an admin.
 3. **Staff become Inactive** - Optional. **Inactivate staff who have** the season **on their profile** (checked by default when anyone qualifies). Separate option: **Also inactivate staff with an approved application on a form**, then **Choose a form**. Staff in another active season stay active.
 4. **Profile data snapshot** - Saves profile answers at the close for reporting. If a snapshot already exists, choose **Take a new snapshot now** or **Keep the snapshot from** the earlier capture date. If you froze early, choose **Keep it and lock it** or **Replace it with a new snapshot**.
 5. **Staff Hub application status** - Hired staff become **Returning**; others are cleared except statuses you keep in Staff Hub settings (**Full Time**, **DNR**, **Fired**, and **Dismissed** always stay). If you keep an existing snapshot in step 4, statuses do not change. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 6. **Move campers up a grade** - Optional and off by default. Check **Move campers up a grade when you close** the season to see a table with **Current grade**, **Campers** (click the count for names), and **After you close**. See [Move campers up a grade](#move-campers-up-a-grade).
 7. **Blank fields for next season** - Optional. Empties profile fields you pick (for example bunk or division) for everyone in the season so next season starts blank. See [Blank fields for next season](#blank-fields-for-next-season).
 
-Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more before anything runs. Steps 6 and 7 appear only while the season is still **Active**.
+The page header links to **How closing a season works** (this section). Footer actions: **Cancel** and the red **Close** button with the season name. You confirm once more with a danger prompt (**Yes, close it** / **Not yet**) that names the counts that will change. While closing, the button can read **Closing...**. After close, a failed profile snapshot shows **Needs attention** (not Done) with a retry path through Season Setup. Steps 6 and 7 appear only while the season is still **Active**.
 
 If the season is already Inactive, the page explains that it was closed before and nothing here runs. If it was closed and later reopened, a note says reopening did not undo that close.
 
@@ -186,7 +188,7 @@ Open **Seasons**, then the season row menu. Only administrators see **Delete Sea
 
 - **Delete Season is grayed out:** hover it to see why.
   - **This season has sessions in it. Delete its sessions first.** If nobody has signed up, the menu also shows **Delete All Sessions** in red. Click it, type **I understand**, then click **Delete sessions**. Every session in the season is deleted with its prices and options, and the page reloads. Then choose **Delete Season**.
-  - **People have signed up for this season. Remove their sessions from their Sales tab first.** You can't delete a season people signed up for, even if they later cancelled. Close the season instead.
+  - **People have signed up for this season. Remove their sessions from their Sales tab first.** You can't delete a season people signed up for, even if they later cancelled. Close the season instead. When sign-ups block delete, the confirm can open as **N sign-ups block this** / **1 sign-up blocks this**, with **Open profile** for each person, **Cancel/move**, and **Re-check** after you clear them.
 - **Delete Season is available:** click it, type **delete**, then click **Delete**. The season is removed from the list. This can't be undone.
 
 ## Email an invoice to families registered for the season
@@ -201,8 +203,10 @@ Use this when you open the next season for registration before the current seaso
 
 On an **Active** season that does not already have a snapshot, **Edit Season** shows **Opening next season before this one ends?** with **Freeze this season's data**. Helper text: **Take a snapshot of this season's profile data now so you can keep editing it after next season's registration opens, while the season stays active.**
 
-1. Open **Seasons**, then **Edit Season** for the active season.
-2. Click **Freeze this season's data**.
+When next summer's registration is already open while this summer is still running (both seasons keep every session inside May to September), Season Setup and form editing can show an alert such as **Freeze Summer 2026's data now that Summer 2027 registration is open.** with a matching **Freeze …'s data** button. School-year, fall, or other non-summer overlaps do not show that nudge.
+
+1. Open **Seasons**, then **Edit Season** for the active season (or use the Season Setup nudge).
+2. Click **Freeze this season's data** (or the freeze button on the nudge).
 3. Confirm **Freeze this season's profile data now? From then on, every profile and custom report asks which season you are editing.** with **Yes, freeze it**.
 4. Campium shows **Snapshot queued. It builds in the background, and you can edit this season's data once it is ready.**
 

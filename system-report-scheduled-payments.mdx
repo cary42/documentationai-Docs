@@ -33,7 +33,15 @@ The Scheduled Payments Report includes season and payment-type filters, a month 
 
 ### Season and Payment type
 
-Use the season control and the **Payment type** dropdown in the header to narrow the list. Payment type options are **All Payments**, **Credit Card Only**, **ACH Only**, and **No Account on File**. Changes update the table and chart right away.
+Use the season control and the **Payment type** dropdown in the header to narrow the list. Payment type options include **All Payments**, **Credit Card Only**, **ACH Only**, **No Account on File**, and **Held by pending camper**. Changes update the table and chart right away.
+
+### Held by pending camper
+
+Open **Held by pending camper** from the dashboard **Payment Issues** card (with a count badge when there are any), or choose that option in **Payment type**.
+
+Those rows wait because a camper on the sale is still pending. They show a **Held by pending camper** badge, who they are **Waiting on**, plus **Approve camper** and **Open profile**. After you approve the camper, the row can show **Camper approved** / **Not charged yet** with **Charge now**. Approving a pending camper can also open **Charge the held payment?** (or **Charge the N held payments?**) with **Charge now**, **Remove it** / **Remove them**, or **Decide later**. Helper text: **Remove keeps the amount owed and moves it to the remaining payments.** You need **Sales** tab access and **Process Payments** for those charge actions. Held rows do not re-run on their own until you charge them.
+
+Open ACH returns of plan charges can also appear on this report as display-only failed rows with an **ACH returned** badge. Their email icon opens the ACH return notice.
 
 ### Profile Fields Display Settings
 
@@ -161,18 +169,22 @@ From the Scheduled Payments Report, send a payment-related email for a specific 
 
 ### Modal fields
 
-The **Send Payment Notification** modal includes two main fields that control the email content.
+The **Send Payment Notification** modal includes the email type, an optional note, a live preview, and a link to edit the wording.
 
 #### Email Type
 
-Choose a predefined email template or type to control the subject, base wording, and overall framing of the notification. Options include **No Account**, **Payment Issue**, **Card Billing Address Did Not Verify** (Finix billing-address follow-up; steers the family to **Payment Methods** → **Edit**), and **Reminder**.
+Choose which notice to send. Options: **No Payment Account on File**, **Payment Issue/Error**, **Card Billing Address Did Not Verify** (Finix billing-address follow-up; steers the family to **Payment Methods** → **Edit**), **Payment Reminder**, and **ACH Payment Returned** (used for open ACH return rows). With **Site Settings** permission, **Edit this email** opens the matching row on [Automated Emails](/automated-emails#sent-by-you-from-scheduled-payments).
 
 #### Additional Message (optional)
 
-Enter extra text you want to include in the email body, such as a personalized note or specific instructions about this payment. Leave it blank to send only the standard email content for the selected Email Type.
+Enter extra text you want under the camp's wording. Leave it blank to send only the saved email for the selected Email Type.
+
+#### Email Preview
+
+The modal shows a live **Email Preview** of what the family will receive, including your camp logo and the optional note.
 
 <Callout kind="alert">
-  Review the **Email Type** and any **Additional Message (optional)** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.
+  Review the **Email Type**, **Email Preview**, and any **Additional Message (optional)** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.
 </Callout>
 
 ### Send the notification
