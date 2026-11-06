@@ -43,6 +43,17 @@ Those rows wait because a camper on the sale is still pending. They show a **Hel
 
 Open ACH returns of plan charges can also appear on this report as display-only failed rows with an **ACH returned** badge. Their email icon opens the ACH return notice.
 
+### Decline reminder timeline and Pause reminders
+
+When **Send Email To User When Scheduled Payment Fails** is on under **Admin → Site Settings → Payment Info**, and the Automated Emails switch **Send it again 3 and 6 days later if the payment is still unpaid** is on for **Scheduled payment failed**, declined rows can show a reminder timeline such as:
+
+- **Reminded** on a date, **next** on a later date
+- **Reminded** on two dates
+- **Next reminder** on a date
+- **Reminders paused** on a date (alone or after an earlier reminder)
+
+Use **Pause reminders** to stop the day-3 / day-6 follow-ups for that installment, or **Resume reminders** to turn them back on. You need **Process Payments** for those links. See [Automated Emails](/automated-emails#payment-and-receipt-notices).
+
 ### Profile Fields Display Settings
 
 Use Profile Fields Display Settings to choose which profile fields you want to see as additional columns in the results table.

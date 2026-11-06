@@ -109,12 +109,16 @@ The same **and** / **or** joining and summary appear when you build recipient fi
 
 The **Season** filter is the place to look at another year. While it is set to your current season only, a helper line under the row says **Your current season. Change it to see another year.** The same hint appears on Season filter rows when you build recipients for mass email, SMS, and push.
 
-When the Season filter is set to exactly one season that has a ready snapshot (**Season is** that season), **Profile answers as of** appears under that row:
+When the Season filter is set to exactly one season that has a ready snapshot (**Season is**, **contains any**, or **last attended is** that season), **Profile answers as of** appears under that row:
 
 - **Today** - current profile answers (the default whenever you change the season)
 - **`{Season} close`** - answers from that season's snapshot (or **`{Season} frozen`** when the season was frozen early while still active)
 
-On custom reports you can keep additional **Season is not** rows beside that **is** row (for people who never returned in later seasons). Those **is not** rows always use today's answers, because a season-close snapshot predates later sign-ups. Recipients filters still need exactly one Season row for the as-of control.
+**Profile answers as of** stays available when you also keep **Season is not** rows or empty Season rows beside that picked season. Those **is not** and empty rows are ignored for the as-of choice (they always use today's answers). You can add the same field more than once (for example three Season rows); each extra copy is its own filter row on reports and on email, SMS, and form Recipients.
+
+### last attended is
+
+On **Season** only, choose operator **last attended is** and pick a season. That matches people whose newest attended season is that one (live answers, not a season-close snapshot). The same operator appears on Recipients filters and on the **Didn't Return** starter's second Season row (the starter still preselects **is not** for this season on the first row).
 
 If that closed season has no snapshot yet, Campium keeps today's answers and shows **`{Season} has no saved answers, showing today's.`**
 

@@ -9,6 +9,8 @@ Retry a failed scheduled payment when a payment-plan installment or other automa
 
 A retry runs the same scheduled charge again right away with the payment method you choose. It does not create a new installment or change the payment plan schedule.
 
+When decline follow-up emails are on, the [Scheduled Payments](/system-report-scheduled-payments#decline-reminder-timeline-and-pause-reminders) report can show a reminder timeline on the failed row, with **Pause reminders** / **Resume reminders** (needs **Process Payments**).
+
 ## What this is
 
 Campium runs scheduled payments on the dates in a payment plan. If a charge fails because of a declined card, insufficient funds, an expired card, a missing payment method, an ACH return, or a similar processor error, Campium marks the scheduled payment as failed and shows an error message.

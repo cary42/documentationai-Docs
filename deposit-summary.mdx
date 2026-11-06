@@ -114,13 +114,13 @@ The **Deposit summary** table shows one row per deposit batch, with totals and, 
 
 - **Total** - The full amount of all payments in the deposit, before fees.
 
-- **Est. deposit** *(Finix)* - Estimated date funds arrive in your bank. Card funding is usually T+2 business days from settlement; ACH is usually T+4 (or T+3 after you qualify). Hover the date for the calculation detail. Status badges can appear next to the date:
+- **Est. deposit** *(Finix)* - The day Finix plans to send this deposit to your bank. Column tip: **The day Finix plans to send this deposit to your bank. Weekends and bank holidays move it to the next business day.** When Finix has a scheduled payout day, hover the date for **Finix plans to send this deposit to your bank on** that date. When Finix has not scheduled it yet, the fallback tip is the older business-day estimate from the payment date. Each Finix row is one whole settlement (total, items, fees, and net match Finix), dated by the newest payment in that settlement. Status badges can appear next to the date:
   - **In transit** - Finix is transferring these funds to your bank.
   - **Sent to bank** - Finix reports the transfer has been sent; Campium has not yet marked the batch **Deposited**.
   - **Overdue** - The estimated date has passed and Campium has not confirmed the bank deposit yet. Weekends, holidays, or funding delays can push the real deposit later.
   - **Deposited** - Finix sent these funds to your bank.
 
-- **Fees** *(Payabli and Finix)* - Processing fees for the deposit. On Finix, hover to see whether the figure is the actual settlement fee. On Payabli, hover to see the estimate breakdown.
+- **Fees** *(Payabli and Finix)* - Processing fees for the deposit. On Finix, hover to see whether the figure is the actual settlement fee. On Payabli, hover to see the estimate breakdown. While Finix is still adding payments and fees to an open settlement, **Fees** and **Net** show a **Pending** badge. Tip: **Finix is still adding payments and fees to this deposit. Fees and net are final once it closes, usually the day before it reaches your bank.**
 
 - **Net** *(Payabli and Finix)* - The deposit amount after subtracting fees.
 

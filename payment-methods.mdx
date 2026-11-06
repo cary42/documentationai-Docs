@@ -2,7 +2,7 @@
 title: Payment Methods
 description: >-
   Choose which methods families can use at checkout, record cash and check by
-  hand, and set ACH, American Express, and credit card surcharge options.
+  hand, and set ACH and credit card surcharge options.
 ---
 ## How families pay, and how you record the rest
 
@@ -20,13 +20,13 @@ At registration checkout, canteen add-funds, and other parent-portal payments, f
 
 | Method               | When it appears                                                                                            |
 | -------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Credit card**      | Always available for online checkout. Visa, MasterCard, and Discover do not have a separate on/off switch. |
-| **American Express** | Only when **Accept AMEX** is on.                                                                           |
+| **Credit card**      | Always available for online checkout. Visa, MasterCard, Discover, and American Express (unless your camp previously turned American Express off). |
+| **American Express** | Accepted by default. Camps that earlier turned American Express off still reject it. Checkout then shows muted **American Express cards are not accepted** next to the card number. |
 | **ACH / e-check** (or **Bank account (PAD)** / **Pay by PAD** when your camp is set up for Canada on Finix) | Only when **Accept ACH Payments** is on. Families enter a bank account, or pick a saved one. US camps use routing and account numbers. Canada Finix camps use **Transit number** and **Institution number**, with a **Pre-authorized debit (PAD) agreement** at checkout. When a credit card surcharge is configured, the bank option can show **No Fee** next to your bank label, and the credit card option shows the surcharge rate. Selecting ACH on a US camp can show a sample check diagram that labels **Routing number** (9 digits), **Account number**, and **Check number** (marked **not needed**). |
 
 Debit, prepaid, and HSA/FSA cards run through the same card option as credit cards. They are not a separate choice on the checkout screen.
 
-When your camp uses **Finix** and a card is declined, families can see: **Your card was declined. Call the number on the back of your card and ask for the exact reason it was declined, or try another card. HSA and FSA cards can decline a new camp until you ask them to allow it.**
+When a card is declined with a bare processor **DECLINED** result, families see: **Your bank declined this card. Try a different card or call your bank.** When your camp uses **Finix** and the processor returns a fuller decline message, families can still see that longer wording (including the HSA and FSA note when it applies).
 
 Families can also pay in full or choose a [payment plan](/payment-plans) when the season has one. The plan controls _when_ charges run. The method on file controls _how_ they run.
 
@@ -64,7 +64,7 @@ From **Scheduled Payments** or **Scheduled Payments Potential Issues**, you can 
 For Finix **membership** address declines, Campium also emails the family once per card per day (subject like **Action needed: the billing address on your card ending 6260 needs a fix**, button **Fix My Billing Address**). The address in your failed-payment email setting gets a **Copy:** of that message, with a note that the missed membership charge stays uncollected until someone charges it. The same **Fix billing address** alert can appear on the family's profile **Sales** tab. See [Memberships](/memberships).
 
 <Callout kind="tip" collapsed="false">
-  If a family says checkout would not take their card, confirm **Accept AMEX** if it is an American Express card, and confirm they are not hitting a surcharge or processor decline. The last four digits appear as `x####` (for example, `Visa x1234`) on failed-attempt lists.
+  If a family says checkout would not take their American Express card, check whether checkout shows **American Express cards are not accepted**. Otherwise confirm they are not hitting a surcharge or processor decline. The last four digits appear as `x####` (for example, `Visa x1234`) on failed-attempt lists.
 </Callout>
 
 ## Methods you record by hand
@@ -83,26 +83,21 @@ Canteen deposits taken at the office have their own **Add Funds** flow. The **Ac
 
 ## ACH and American Express
 
-Turn these two options on or off in **Admin → Site Settings → Payment Info**. Changes save as soon as you toggle them.
+### Accept ACH Payments
 
-<Steps>
-  <Step title="Open Site Settings" icon="settings" title-type="p">
-    From the left sidebar, click **Admin**, then **Site Settings**.
-  </Step>
+Turn ACH on or off in **Admin → Site Settings → Payment Info**. Changes save as soon as you toggle them.
 
-  <Step title="Open the Payment Info tab" icon="credit-card" title-type="p">
-    Click **Payment Info**.
-  </Step>
-
-  <Step title="Set Accept AMEX and Accept ACH Payments" icon="check-circle" title-type="p">
-    - **Accept AMEX** controls whether American Express cards are accepted.
-    - **Accept ACH Payments** controls whether families can pay by bank transfer (ACH / e-check) in addition to card.
-  </Step>
-</Steps>
+1. From the left sidebar, click **Admin**, then **Site Settings**.
+2. Click **Payment Info**.
+3. Set **Accept ACH Payments** to control whether families can pay by bank transfer (ACH / e-check) in addition to card.
 
 When **Accept ACH Payments** is off, families do not see a bank-account option at checkout, and no new ACH rows appear in [Payments](/payments) or [ACH Returns](/ach-returns).
 
-When **Accept AMEX** is off, checkout rejects an American Express card with **We do not accept American Express**, even if other cards work.
+### American Express
+
+American Express is accepted by default for every camp. There is no **Accept AMEX** switch in Site Settings.
+
+If your camp previously turned American Express off, that setting still applies: checkout shows muted **American Express cards are not accepted**, and American Express cards are rejected while Visa, Mastercard, and Discover still work. Ask Campium support if you need that turned back on.
 
 <Callout kind="info" collapsed="false">
   ACH timing, returns, and refund rules depend on your processor (Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe). See [Payment Processors](/payment-processors) and [What is an ACH return?](/what-is-an-ach-return).
@@ -126,7 +121,6 @@ When you refund a card payment that included a surcharge, the refund form includ
 Site Settings save as soon as you change them. There is no separate Save button.
 
 - Turning **Accept ACH Payments** off hides the bank-account option at checkout. Scheduled ACH charges can fail until the family uses a card instead.
-- Turning **Accept AMEX** off stops American Express at checkout. Other card brands are unchanged.
 - Changing **Credit Card Surcharge** changes the percentage used on **new** card charges. Refunds of an earlier payment still prorate the surcharge that was recorded on that payment.
 
 **Payment Method Updated (families with failed payments)** on the same tab is the address that gets a notice when a family with failed or locked scheduled payments updates their card. Leave it blank to use the **Failed Scheduled Payment Email Address (for admin)** instead.
@@ -139,7 +133,7 @@ Site Settings save as soon as you change them. There is no separate Save button.
   </Expandable>
 
   <Expandable title="An American Express card is declined" default-open="false">
-    Confirm **Accept AMEX** is on. If it is on, the decline is from the processor or the card issuer, not from that toggle.
+    If checkout shows **American Express cards are not accepted**, your camp still has American Express turned off from an earlier setting. Otherwise the decline is from the processor or the card issuer.
   </Expandable>
 
   <Expandable title="A family was charged a surcharge on a debit card" default-open="false">
@@ -157,7 +151,7 @@ Site Settings save as soon as you change them. There is no separate Save button.
 
 ## Related pages
 
-- [Site Settings](/settings) for **Accept AMEX**, **Accept ACH Payments**, and **Credit Card Surcharge**
+- [Site Settings](/settings) for **Accept ACH Payments** and **Credit Card Surcharge**
 - [Payment Processors](/payment-processors) for Finix, Payabli, USIO, and settlement windows
 - [Payment Plans](/payment-plans) for spreading fees over time versus paying in full
 - [Processing Refunds and Voids](/processing-refunds-and-voids) for reversing a payment, including the surcharge
