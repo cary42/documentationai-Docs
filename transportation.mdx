@@ -156,7 +156,9 @@ The table columns are **Date**, **Bus**, **Type**, **Rider**, **Note**, **Logged
 
 - **Emailed** when an alert email went out for that note
 - **Parents notified** when a **For Parents** note was pushed to guardians
-- **Parents texted** when a **For Parents** note was also texted to guardians from Bus Tracking
+- A text summary such as **Texted 14 of 16 (2 opted out)** when Bus Tracking texted guardians for a **For Parents** note (warning style when anyone was missed). Under the badge, each missed guardian can list **Name (rider): phone, opted out** or **failed** so you know who to call. Older notes without that count still show **Parents texted**.
+
+Each successful parent text can also add an **SM** note on the guardian's profile.
 
 Bus names link to that bus's riders page; rider and author names open profiles when available.
 
@@ -166,7 +168,7 @@ When staff bus tracking is on, set **Email for bus note alerts** under **Admin â
 
 On the same **Mobile App** tab, **Morning bus leave time** and **Afternoon bus leave time** drive the start-tracking reminder and the bus list **Not tracking** state. Helper text explains that a bus with rider stop times uses its first stop instead, and that leaving a time blank turns that reminder off. Example format: **7:15 AM**.
 
-**For Parents** notes are about one rider. Guardians can see them in the Campium app (and may get a push). From Bus Tracking, staff can also text parents for those notes; admin **Bus Notes** then shows **Parents texted**. They are separate from the alert-email setting.
+**For Parents** notes are about one rider. Guardians can see them in the Campium app (and may get a push). From Bus Tracking, staff can also text parents for those notes; admin **Bus Notes** then shows the **Texted N of M** summary (or **Parents texted** on older notes). They are separate from the alert-email setting.
 
 If nothing matches, you see: **No bus notes match these filters. Bus staff add notes from Bus Tracking in the Campium app.** When many notes match, a warning can say newest notes are shown and to narrow the dates or pick a bus.
 

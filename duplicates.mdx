@@ -1,11 +1,11 @@
 ---
 title: Potential Duplicate Users Report
-description: Find accounts that look like duplicates of each other based on matching names, review each column in the Potential Duplicate Users Report, and open the profiles to compare and merge.
+description: Review same-name account pairs, merge them, mark Not a duplicate, or delete an empty family from the Potential Duplicates report.
 ---
 
 ## Overview
 
-Use the Potential Duplicate Users Report to spot accounts that may be duplicates of one another, so you can review them and clean up your records. Duplicate accounts split a person's history, payments, and communication across two profiles, which makes reporting and follow-up harder.
+Use the Potential Duplicate Users Report to spot pairs of accounts that share the same first and last name, compare them side by side, and clean them up. Duplicate accounts split a person's history, payments, and communication across two profiles, which makes reporting and follow-up harder.
 
 Campium also catches an exact first-and-last-name match when you add a camper:
 
@@ -15,69 +15,46 @@ Campium also catches an exact first-and-last-name match when you add a camper:
 
 <Callout kind="info">
 
-This report groups accounts that share the same first and last name so you can compare them side by side. Matching names are a signal, not proof, so always review the other details before merging. This report does not include filters or export options.
+Matching names are a signal, not proof. Always compare email, phone, birth date, and sessions before you merge. A pair whose families also share another member's name shows **Higher confidence** and sorts first.
 
 </Callout>
 
 ## Open the Potential Duplicate Users Report
 
-Access the report directly from the Data Check reports area.
+1. Sign in with an admin account.
+2. Go to **Reports → System Reports**.
+3. Under **Data Check**, choose **Potential Duplicates**.
+4. Confirm the page title reads **Potential Duplicate Users**.
 
-<Steps>
+The report lists one row per pair. Columns: **Name**, **User Type**, **Older account**, **Newer account**, and actions.
 
-  <Step title="Go to the Potential Duplicate Users Report" icon="folder">
+## Compare a pair
 
-  - Sign in with an admin account.
-  - In the main navigation, go to **Reports** and select **System**.
-  - Under **Data Check**, choose **Potential Duplicate Users**.
-  - Confirm the page title reads `Potential Duplicate Users`.
+Each side of the pair shows:
 
-  When the page loads, you see a table with the columns **Name**, **Family ID**, **Status**, **User Type**, **Email**, and **Date Registered**, sorted by name so likely matches sit next to each other.
+- Name and status (linked to the profile)
+- Email and cell when on file
+- Active sessions line
+- **Born** date (when known) and **Added** date
 
-  </Step>
+When both families include another shared name, the row shows badge **Higher confidence** and a line such as **Both families include** that name.
 
-  <Step title="Compare and resolve duplicates" icon="check-circle">
+## Resolve a pair
 
-  - Look for rows that share the same name and appear to be the same person.
-  - Compare the **Family ID**, **Email**, and **Date Registered** to confirm whether the accounts are truly duplicates.
-  - Select each **Name** to open the profiles and review the full details before merging or archiving the extra record.
+Actions on the row (you need the matching permission):
 
-  Make all changes from the profiles. The report identifies possible duplicates but does not merge them for you.
+| Action | What it does | Permission |
+| --- | --- | --- |
+| **Merge** | Opens [Merge Users](/merge-users) with the newer account into the older one | **Merge Users** |
+| **Not a duplicate** | Confirms **Mark these two as different people?** They leave this list and stop showing as a possible duplicate (including the dashboard chip) | Anyone who can open the report |
+| **Delete family** | Archives an empty family (tooltip: **Nothing on this family: no sales, payments, forms or email addresses**). Confirm with **Delete family** | **Family Actions** |
 
-  </Step>
+### Recently deleted families
 
-</Steps>
-
-## Report columns
-
-Each row is an account that shares a name with at least one other account.
-
-### Name
-
-Account name, shown as `Last, First` and linked to the profile. Two rows with the same name are the pair to compare.
-
-### Family ID
-
-The family the account belongs to. Two accounts with the same Family ID are the same household; different Family IDs may point to separate people who happen to share a name.
-
-### Status
-
-Account status, such as Active, Inactive, or Pending. Use it to decide which record to keep and which to retire.
-
-### User Type
-
-Whether the account is a camper, parent, or another user type. Duplicates are usually the same user type.
-
-### Email
-
-Email address on file. A shared email is a strong sign the accounts are duplicates; different emails may mean they are different people.
-
-### Date Registered
-
-The date and time the account was created, which helps you decide which record is the original to keep.
+When you have deleted empty families from this page, a **Recently deleted families** card lists **Family of**, **People**, **Deleted**, **By**, and **Undo**. **Undo** restores each archived member to the status they had before the delete.
 
 <Callout kind="alert">
 
-Matching names alone do not confirm a duplicate. Always compare the Family ID, email, and other profile details before merging, so you do not combine two different people.
+Matching names alone do not confirm a duplicate. Always open both profiles (or use **Merge**) and compare email, phone, birth date, and sessions before you combine two people.
 
 </Callout>

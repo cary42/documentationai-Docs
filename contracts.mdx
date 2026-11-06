@@ -90,6 +90,8 @@ A template includes:
   <Step title="Choose what happens when sent and after signing" icon="settings" title-type="p">
     When your staff **Application Status** profile field has options, the **When sent** panel appears. Set that field for when the contract is emailed, or leave **No Change**. Helper text: **Sets this profile field when the contract is emailed. It never moves someone back from Hired or from a status a signed contract set.**
 
+    In the **Before signing** panel, set **Form to finish first** (or leave **None**). Helper text: **They see a link to this form and can't sign until they submit it.** See [Form to finish before signing](#form-to-finish-before-signing).
+
     In the **After signing** panel, set **User status** (and the application-status control when it appears). Leave either on **No Change** to keep the signer's current value. See [Optional status changes on signing](#optional-status-changes-on-signing).
 
     Under **Notify when signed**, search and pick staff who should get an email when someone signs (placeholder **Choose staff**). You can select more than one person.
@@ -326,6 +328,16 @@ Admins can see when a contract was viewed, signed, and downloaded.
 <Callout kind="tip" collapsed="false">
   Download PDFs for long-term storage outside the system or to share signed contracts internally with HR or leadership.
 </Callout>
+
+### Form to finish before signing
+
+On a contract template, the **Before signing** panel lets you require a portal form first.
+
+1. Open **Admin → Contracts**, then open the template.
+2. Under **Before signing**, choose **Form to finish first**, or leave **None**.
+3. Helper text: **They see a link to this form and can't sign until they submit it.**
+
+When a form is set, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
 
 ### Optional status changes on signing
 

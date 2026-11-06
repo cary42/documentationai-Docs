@@ -510,6 +510,11 @@
                 "icon": "briefcase-medical"
               },
               {
+                "title": "Health documents",
+                "path": "health-documents",
+                "icon": "file-text"
+              },
+              {
                 "title": "Incident Reports",
                 "path": "incident-reports",
                 "icon": "clipboard-list"
