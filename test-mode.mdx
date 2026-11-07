@@ -97,12 +97,20 @@ Test Mode lets recipient staff open the form before its open window. It does not
 | --- | --- | --- |
 | Visibility set to Hidden | No | Hidden forms stay hidden |
 | Family access rules | No | Families do not get Test Mode access |
-| Payment processing | No | Charges are real unless your payment processor is in sandbox mode |
 | Form content | No | Test Mode does not change fields, logic, or form behavior |
+| Enrollment and responses | No | Submissions are real and can trigger emails and status changes |
+
+### Submit without a card (staff checkout)
+
+When Test Mode is on and you are signed into the parent portal with a staff or admin login, checkout can offer **Submit - test mode** ($0.00). Description: **Test mode only. Nothing is charged and no card is needed.** Membership checkout also shows **How much today?** so you can pick that option instead of paying in full.
+
+That path does not charge a card and does not set up a payment schedule. The enrollment is still real and adds to the family's balance. The receipt warns: **This was a test-mode submit. Nothing was charged and no payment schedule was set up, but the enrollment is real and adds to this family's balance. Remove it from the camper's profile in the admin portal when you finish testing.**
+
+If the form already allows normal pay later, that option is used instead of **Submit - test mode**. Families never see this staff-only option.
 
 <Callout kind="alert">
 
-Submissions made during testing are **real submissions**. They appear in **Responses** and can trigger real emails, status changes, and payments. Payments are real unless your payment processor is in sandbox mode.
+Submissions made during testing are **real submissions**. They appear in **Responses** and can trigger real emails and status changes. Use **Submit - test mode** when you need a $0 staff checkout with no card. Otherwise, card charges follow your live or sandbox processor settings. Remove test enrollments from the camper's profile when you finish.
 
 </Callout>
 
@@ -152,7 +160,7 @@ Use this workflow to preview safely and avoid accidental family access.
 
   Submit the form only when you are ready to create a real response.
 
-  A successful test submission appears in **Responses** and may send emails, change statuses, or process payment.
+  A successful test submission appears in **Responses** and may send emails or change statuses. Prefer **Submit - test mode** at checkout when you want enrollment without a card charge, then remove the enrollment from the camper's profile when you finish.
 
   </Step>
 </Steps>
@@ -226,7 +234,8 @@ Use this table to understand what each setting controls.
 | Visibility | Whether the form is shown at all | Yes (Hidden stays hidden) | Yes |
 | Start Date and End Date | When the form is live | Softened for recipient staff while Test Mode is on | Yes |
 | Recipients | Which users the form is assigned to | Still required in Test Mode | Yes |
-| Payment processor mode | Whether charges are test or live | Yes | Yes |
+| Submit - test mode | Staff $0 checkout with no card on a Test Mode form | Yes (staff only) | No |
+| Payment processor mode | Whether card charges are test or live when you do charge a card | Yes | Yes |
 
 ## Quick checklist before going live
 

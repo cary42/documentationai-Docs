@@ -95,9 +95,15 @@ When **Accept ACH Payments** is off, families do not see a bank-account option a
 
 ### American Express
 
-American Express is accepted by default for every camp. There is no **Accept AMEX** switch in Site Settings.
+American Express is accepted by default for every camp. There is no on/off **Accept AMEX** switch in Site Settings.
 
-If your camp previously turned American Express off, that setting still applies: checkout shows muted **American Express cards are not accepted**, and American Express cards are rejected while Visa, Mastercard, and Discover still work. Ask Campium support if you need that turned back on.
+If your camp previously turned American Express off, that setting still applies until you turn it back on:
+
+1. Open **Admin → Site Settings → Payment Info**.
+2. You see an **American Express** row with help text: **Not accepted. Parents see a note at checkout that American Express is not accepted.**
+3. Click **Start accepting AMEX**, then confirm with **Yes, accept AMEX**. Success: **You now accept American Express.** The row then disappears.
+
+You cannot turn American Express off again from Site Settings. While it is still off, checkout shows muted **American Express cards are not accepted**, and American Express cards are rejected while Visa, Mastercard, and Discover still work. Camps that already accept American Express do not see this row.
 
 <Callout kind="info" collapsed="false">
   ACH timing, returns, and refund rules depend on your processor (Payabli, USIO, Finix, Payconex, Paysafe, NMI, or Stripe). See [Payment Processors](/payment-processors) and [What is an ACH return?](/what-is-an-ach-return).
@@ -133,7 +139,7 @@ Site Settings save as soon as you change them. There is no separate Save button.
   </Expandable>
 
   <Expandable title="An American Express card is declined" default-open="false">
-    If checkout shows **American Express cards are not accepted**, your camp still has American Express turned off from an earlier setting. Otherwise the decline is from the processor or the card issuer.
+    If checkout shows **American Express cards are not accepted**, open **Admin → Site Settings → Payment Info** and use **Start accepting AMEX** if that row is there. Otherwise the decline is from the processor or the card issuer.
   </Expandable>
 
   <Expandable title="A family was charged a surcharge on a debit card" default-open="false">
