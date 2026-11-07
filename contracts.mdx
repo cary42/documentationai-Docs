@@ -337,7 +337,12 @@ On a contract template, the **Before signing** panel lets you require a portal f
 2. Under **Before signing**, choose **Form to finish first**, or leave **None**.
 3. Helper text: **They see a link to this form and can't sign until they submit it.**
 
-When a form is set, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
+When a form is set:
+
+- On the portal, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
+- On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while the form is still owed.
+- Contract emails (generate and resend) insert a short note that they must fill out the form first, plus a **Fill out** button ahead of **Sign Contract**. After the form is submitted, a later resend drops that button.
+- After the form is submitted, the form receipt can show that their contract is ready to sign, with **Now sign your contract**, for each sent, unsigned family contract that was waiting on that form.
 
 ### Optional status changes on signing
 
