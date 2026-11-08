@@ -104,13 +104,25 @@ Test Mode lets recipient staff open the form before its open window. It does not
 
 When Test Mode is on and you are signed into the parent portal with a staff or admin login, checkout can offer **Submit - test mode** ($0.00). Description: **Test mode only. Nothing is charged and no card is needed.** Membership checkout also shows **How much today?** so you can pick that option instead of paying in full.
 
-That path does not charge a card and does not set up a payment schedule. The enrollment is still real and adds to the family's balance. The receipt warns: **This was a test-mode submit. Nothing was charged and no payment schedule was set up, but the enrollment is real and adds to this family's balance. Remove it from the camper's profile in the admin portal when you finish testing.**
+That path does not charge a card and does not set up a payment schedule. The enrollment is still real and adds to the family's balance. The receipt warns: **This was a test-mode submit. Nothing was charged and no payment schedule was set up, but the enrollment is real and adds to this family's balance. When you finish testing, remove it from Test enrollments on the form's settings in the admin portal.**
 
 If the form already allows normal pay later, that option is used instead of **Submit - test mode**. Families never see this staff-only option.
 
+### Remove test enrollments
+
+When staff check out with **Submit - test mode** (or another $0 checkout on a Test Mode form), Campium keeps those enrollments on the form so you can clear them before families register.
+
+- On the form's settings (and on the **Forms** step in Guided setup), a **Test enrollments (N)** chip appears when any remain. Tip: **Real enrollments made in test mode. They add to the family balance until you remove them.**
+- Open the chip for the **Test enrollments** list. Each row was submitted in test mode: nothing was charged, but each one is a real enrollment.
+- Use **Remove** on one row, or **Remove all N**, then confirm with **Yes, remove it** or **Yes, remove them**. **Close** leaves them in place.
+- Listing the chip needs **Manage Forms**. Removing needs **View the 'Sales' tab** as well. Without Sales access, Campium shows that you need access to the Sales tab to remove these.
+- Turning Test Mode off while enrollments remain warns you to remove them from **Test enrollments** on the form's settings before families register. The form-opening digest can also note how many are left to remove.
+
+A card charge made on a Test Mode form is real money and is not listed under **Test enrollments**.
+
 <Callout kind="alert">
 
-Submissions made during testing are **real submissions**. They appear in **Responses** and can trigger real emails and status changes. Use **Submit - test mode** when you need a $0 staff checkout with no card. Otherwise, card charges follow your live or sandbox processor settings. Remove test enrollments from the camper's profile when you finish.
+Submissions made during testing are **real submissions**. They appear in **Responses** and can trigger real emails and status changes. Use **Submit - test mode** when you need a $0 staff checkout with no card. Otherwise, card charges follow your live or sandbox processor settings. Clear leftover enrollments from **Test enrollments** on the form's settings when you finish.
 
 </Callout>
 
@@ -160,7 +172,7 @@ Use this workflow to preview safely and avoid accidental family access.
 
   Submit the form only when you are ready to create a real response.
 
-  A successful test submission appears in **Responses** and may send emails or change statuses. Prefer **Submit - test mode** at checkout when you want enrollment without a card charge, then remove the enrollment from the camper's profile when you finish.
+  A successful test submission appears in **Responses** and may send emails or change statuses. Prefer **Submit - test mode** at checkout when you want enrollment without a card charge, then clear it from **Test enrollments** on the form's settings when you finish.
 
   </Step>
 </Steps>
