@@ -97,6 +97,8 @@ A template includes:
     Under **Notify when signed**, search and pick staff who should get an email when someone signs (placeholder **Choose staff**). You can select more than one person.
 
     For staff contracts, you can also check **Require a guardian signature under 18**. Helper text: **Staff under 18, or with no birth date on file, must have a guardian sign this contract too.** When that applies, the portal shows a required **Guardian Signature** field (placeholder **Guardian full name**) before the staff member can finish signing.
+
+    In the **Attachments** panel, under **Files to read** (hint: **PDF or Word, up to 5**), use **Attach file** to add a letter or handout people should read, not sign. Helper text: **A letter or handout to read, not sign. It goes with the contract email and shows on the contract page.** You can attach up to 5 PDF or Word files, each up to 10 MB. Attachments save on their own (not with the template autosave). Until the template has a name and body, the chooser stays disabled with **Add a name and contract text first**. See [Attachments on a template](#attachments-on-a-template).
   </Step>
 
   <Step title="Let the template save" icon="check-circle" title-type="p">
@@ -125,6 +127,20 @@ Use **Make a copy** when you want a second version to edit separately, or when y
 3. Edit the copy, set **Status** to **Active** when you are ready to send it, then generate new contracts from the copy.
 
 If the copy fails, you see **Could not copy the template.**
+
+### Attachments on a template
+
+Use **Attachments** when people need a PDF or Word file to read alongside the contract (a handbook, schedule, or other handout). These files are for reading, not for signing.
+
+1. Open **Admin → Contracts**, then open the template.
+2. In **Attachments**, under **Files to read**, click **Attach file** and choose a PDF or Word file.
+3. The file appears in the list with its name and size. Use the remove control (**Remove** that file name) when you need to take it off. Confirm with **Remove this attachment? It comes off every contract from this template, including ones already sent.**
+
+Limits and behavior:
+
+- Up to **5** files per template, **PDF** or **Word**, each up to **10 MB**.
+- Attached files go out with the contract email (generate, resend, reminder, and test sends) and appear on the portal contract page under **Attached for you to read**, where the recipient can download them.
+- Removing a file updates the template for every contract from that template, including ones already sent.
 
 ### Activate or deactivate templates
 
@@ -198,7 +214,9 @@ Instances track:
 
 ### Open instances for a template
 
-On **Admin → Contracts**, click the template **Name** (or the **Usage** count) to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, and **Signed**. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
+On **Admin → Contracts**, click the template **Name** (or the **Usage** count) to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, **Signed**, and **Waiting on form** (with a live count) when the template has a **Form to finish first** and anyone still owes that form. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
+
+While **Waiting on form** is selected, **Email the form link (N)** appears. Confirm with **Email the form link to N person/people? Only the form link goes out, not the contract again.**, then **Send**. That nudge emails only the form link (subject starts with **Reminder: please fill out** the form name **before signing your** template name). It does not resend the contract, and automatic contract reminders keep their schedule. Drafts, people without an email, and people who already submitted the form are skipped. After a send, the row can show **Form link emailed** with the date (and a send count when you nudge more than once).
 
 On each template row you can **Edit template**, **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
 
@@ -339,10 +357,12 @@ On a contract template, the **Before signing** panel lets you require a portal f
 
 When a form is set:
 
-- On the portal, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
-- On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while the form is still owed.
+- On the portal **Contracts** list (**My Account → Contracts**), an unsigned card that still owes the form shows a **Waiting on** badge with the form name, a primary **Fill out** button for that form, and **Review & Sign** as a secondary action. After the form is done, the card goes back to a single primary **Review & Sign**.
+- On the portal contract page, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
+- On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while the form is still owed. Use the **Waiting on form** chip and **Email the form link** on the instances list to nudge people who still owe the form (form link only; the contract is not resent).
 - Contract emails (generate and resend) insert a short note that they must fill out the form first, plus a **Fill out** button ahead of **Sign Contract**. After the form is submitted, a later resend drops that button.
 - After the form is submitted, the form receipt can show that their contract is ready to sign, with **Now sign your contract**, for each sent, unsigned family contract that was waiting on that form.
+- If the template has **Attachments**, the contract page also lists them under **Attached for you to read**.
 
 ### Optional status changes on signing
 

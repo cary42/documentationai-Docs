@@ -102,6 +102,7 @@ Use **Void** only while the original payment is still inside its allowed process
 
 - **Credit card payments** - Void them the same day, before the batch settles. After that window closes, use **Refund** instead.
 - **ACH payments** - Void unsettled ACH deposits to cancel the debit. **refund** appears only after the ACH payment settles. If you open **refund** too early, Campium shows that the ACH payment has not settled yet and offers **Void this payment**.
+- **ACH after settle** - For a few banking days after settlement, the deposit row can still show a **Pending** badge. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. **refund** is available in that window. Opening **refund** then shows: **This bank payment can still be returned until** the clear date. **If you refund now and it's returned, you're out both.**
 - **Eastern timezone** - The system uses Eastern time to determine when a void window closes.
 - **Past the void window** - If **Void** no longer appears, the payment has passed its allowed window and staff should use **Refund** instead.
 
