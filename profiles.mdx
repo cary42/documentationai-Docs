@@ -87,7 +87,7 @@ The Profiles screen is split into a header at the top and tabs below.
 
 ### Header area
 
-On a camper profile, under the card header, a strip can show **New**, **Returning**, or **Not back yet**, with a short detail such as **first season, Summer 2026**, **2nd summer, since Summer 2024**, or **last here Summer 2025**. The summer wording appears when your season names include "summer"; otherwise the detail uses **since** / **last here** with the season name.
+On a camper profile, under the card header, a strip can show **New**, **Returning**, or **Not back yet**, with a short detail such as **first season, Summer 2026**, **2nd year, since Summer 2024**, or **last here Summer 2025**. When your camp has at least four years of seasons in Campium, the Returning line can show an ordinal such as **3rd year** or **5th year** (with **since** / **last here** and the season name). The same years-at-camp label can appear as a badge on the name hover card (title **Years at camp**). Custom reports and email merge fields can use **Years at camp** / **Camper Years at camp (5)** / **Camper Years at camp (5th)** even before the four-year label turns on.
 
 The header gives you a quick snapshot of who you are looking at:
 
@@ -141,7 +141,7 @@ Use **Email** or **Actions** when you need to do something specific for this per
 
     Use this option when you want to send a one-off message related to this person, such as a question about a form, a reminder about a payment, or a follow-up after a conversation.
 
-    After you click **Email**, a composer opens where you choose the recipient, enter a subject and message, and send the email. The message usually appears later in the Email history for the profile.
+    After you click **Email**, a composer opens where you choose the recipient, enter a subject and message, and send the email. Campium requires a subject (**Please enter a subject.**) before it sends. The message usually appears later in the Email history for the profile. Older rows with no subject show **(no subject)** as the history link text.
 
     <Callout kind="info" collapsed="false">
       The **Email** button only appears when the profile is linked to at least one email address. If you do not see it, check the contact info in the header.
@@ -320,6 +320,8 @@ When **Birth Date** is in the Quick View layout and Campium can parse the saved 
 When **Hebrew Dates** is on under **Admin → Site Settings → Modules**, the Hebrew birthday appears under **Birth Date** on the profile (plain helper text under the date). See [Site Settings](/settings).
 
 Hovering a person's name (the mini-profile Quick View) shows a larger headshot next to the name when a profile photo exists. Without a photo, the tooltip still shows the name, status badge, and Quick View fields. Click the photo or the name in the hover card to open that person's full profile.
+
+With **View the 'Sales' tab** permission, the hover card also lists this season's registrations under **This season** (or **Latest season**) and the season name, with product names and optional **(pending)** / **(waitlist)** suffixes. After eight sessions it shows **, +N more**.
 
 When the camper **Group** profile field is in Quick View, its value is a link (or **None set**). Click it to open a modal titled with that field's label and the person's name. You can:
 
@@ -661,10 +663,11 @@ Each tab focuses on a different part of the person’s record. Use these section
         - **Cash**: add an optional **Reason**.
         - **Adjustment**: gives the family a credit without recording money received. The **Reason** shows on the invoice.
         - **Account On File**: charges a saved card or bank account. Choose it under **Account on File**, and leave **Charge On** blank to charge now or pick a date to schedule it.
+        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). There is no **Charge On** date; the charge runs when you save.
         - **Discount**: applies one of your discounts to this family.
         - **Check Refund**: records a refund you paid by check.
 
-        **ACH**, **Credit Card**, and **Account On File** appear only when your payment processor supports them.
+        **ACH**, **Credit Card**, **Card (one time)**, and **Account On File** appear only when your payment processor supports them. You need **Process Payments** for those charge types.
       </Step>
 
       <Step title="Enter the amount and season" icon="dollar-sign" title-type="p">

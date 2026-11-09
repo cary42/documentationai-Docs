@@ -26,8 +26,8 @@ Refunds become available once the original charge has fully settled to your merc
 - For **credit card payments**, this is usually the next day.
 
 - For **ACH payments**, settlement usually takes **3-5 business days**. Until an ACH payment settles, the row shows **Refund (after settle)** in place of the **refund** link. Use **void** to cancel the debit instead.
-- After an ACH debit settles, the profile **Sales** tab can still show a **Pending** badge for three banking days. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. **refund** is available in that window (the bank can still return the debit until then).
-- If you open **refund** during that return window, the refund modal shows an amber note: **This bank payment can still be returned until** the clear date. **If you refund now and it's returned, you're out both.** The same note appears on **Canteen → Deposits**. You can still refund; the note is a warning.
+- After an ACH debit settles, the profile **Sales** tab can still show a **Pending** badge for three banking days. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. **refund** stays blocked until that clear date so you are not out both the return and a refund.
+- If you try **refund** during that return window, Campium shows a modal (Close only): **The bank can still return this payment until** the clear date. **You can refund it on that day.** On **Canteen → Deposits**, the row shows muted **Refund on** that date instead of a refund link.
 
 Before settlement, the payment is pending and the row shows **void**. Voiding cancels the payment before it completes. A card payment can show **void** and **refund** side by side during this window.
 

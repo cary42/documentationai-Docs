@@ -98,7 +98,7 @@ A template includes:
 
     For staff contracts, you can also check **Require a guardian signature under 18**. Helper text: **Staff under 18, or with no birth date on file, must have a guardian sign this contract too.** When that applies, the portal shows a required **Guardian Signature** field (placeholder **Guardian full name**) before the staff member can finish signing.
 
-    In the **Attachments** panel, under **Files to read** (hint: **PDF or Word, up to 5**), use **Attach file** to add a letter or handout people should read, not sign. Helper text: **A letter or handout to read, not sign. It goes with the contract email and shows on the contract page.** You can attach up to 5 PDF or Word files, each up to 10 MB. Attachments save on their own (not with the template autosave). Until the template has a name and body, the chooser stays disabled with **Add a name and contract text first**. See [Attachments on a template](#attachments-on-a-template).
+    In the **Attachments** panel, under **Files to read** (hint: **PDF or Word, up to 5**), use **Attach file** to add a letter or handout people should read, not sign. Helper text: **A letter or handout to read, not sign. It is attached to the contract email.** You can attach up to 5 PDF or Word files, each up to 10 MB. Attachments save on their own (not with the template autosave). Until the template has a name and body, the chooser stays disabled with **Add a name and contract text first**. See [Attachments on a template](#attachments-on-a-template).
   </Step>
 
   <Step title="Let the template save" icon="check-circle" title-type="p">
@@ -130,17 +130,17 @@ If the copy fails, you see **Could not copy the template.**
 
 ### Attachments on a template
 
-Use **Attachments** when people need a PDF or Word file to read alongside the contract (a handbook, schedule, or other handout). These files are for reading, not for signing.
+Use **Attachments** when people need a PDF or Word file to read with the contract email (a handbook, schedule, or other handout). These files are for reading, not for signing. They go out with the email only; they do not appear on the portal contract page.
 
 1. Open **Admin → Contracts**, then open the template.
 2. In **Attachments**, under **Files to read**, click **Attach file** and choose a PDF or Word file.
-3. The file appears in the list with its name and size. Use the remove control (**Remove** that file name) when you need to take it off. Confirm with **Remove this attachment? It comes off every contract from this template, including ones already sent.**
+3. The file appears in the list with its name and size. Use the remove control (**Remove** that file name) when you need to take it off. Confirm with **Remove this attachment? Contract emails sent from now on will not include it.**
 
 Limits and behavior:
 
 - Up to **5** files per template, **PDF** or **Word**, each up to **10 MB**.
-- Attached files go out with the contract email (generate, resend, reminder, and test sends) and appear on the portal contract page under **Attached for you to read**, where the recipient can download them.
-- Removing a file updates the template for every contract from that template, including ones already sent.
+- Attached files go out with the contract email (generate, resend, reminder, and test sends).
+- Removing a file stops future emails from that template from including it. Emails already sent keep the file they had.
 
 ### Activate or deactivate templates
 
@@ -362,8 +362,6 @@ When a form is set:
 - On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while the form is still owed. Use the **Waiting on form** chip and **Email the form link** on the instances list to nudge people who still owe the form (form link only; the contract is not resent).
 - Contract emails (generate and resend) insert a short note that they must fill out the form first, plus a **Fill out** button ahead of **Sign Contract**. After the form is submitted, a later resend drops that button.
 - After the form is submitted, the form receipt can show that their contract is ready to sign, with **Now sign your contract**, for each sent, unsigned family contract that was waiting on that form.
-- If the template has **Attachments**, the contract page also lists them under **Attached for you to read**.
-
 ### Optional status changes on signing
 
 On a contract template, you can set what happens to the signer after they finish signing.

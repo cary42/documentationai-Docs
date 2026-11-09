@@ -10,6 +10,47 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-11-09" description="Years at camp, health documents, contracts attachments, payment-method warnings, canteen clear balances" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Years at camp** - Camper profile strip, hover badge, and New Campers pills can show **2nd year** / **3rd year** (and so on) once your camp has four years of seasons. Custom reports and email merge fields include **Years at camp**. See [Profiles](/profiles) and [Custom Reports](/custom-reports).
+  - **Health documents** - Turn on **Health documents** under **Admin → Site Settings → Modules** (on by default). Staff use the **Documents** card; families use **Health Center → Documents**.
+  - **Card (one time)** - On Finix and Payabli, **Add Payment** can charge a card once without keeping it on file (**Save to family**). See [Profiles](/profiles).
+  - **Canteen Clear balances** - Refund leftover balances to the card or bank, move them to tuition credit, and optionally **Email each family what happened to their balance**. See [Canteen](/canteen#clear-many-balances-at-once).
+  - **Extended care** - Mark a session **Early care** / **After care** / **Early and after care**; My Groups shows **EC** / **AC** badges. See [My Groups](/my-groups#extended-care-badges).
+  - **Update payment method before next charge** - Families get a warning email when a scheduled charge would fail because of an expired or missing method. Staff digests list **Charges in the next 30 days that will fail as scheduled**. See [Payment Issues](/payment-issues).
+  - **Activity Scheduling** - When the module is on, open **Admin → Activity Scheduling**. See [Activity Scheduling](/activity-scheduling).
+  - **Pickup Signature** - Module setting plus **View signature** / **Pickup log** on attendance. See [Attendance](/attendance).
+  - **Potential Duplicates** - Pair rows with **Older account** / **Newer account**, **Merge**, **Not a duplicate**, and empty-family **Delete family**. See [Duplicates](/duplicates).
+
+  ## Updates
+
+  - **Contract attachments** - Template **Attachments** / **Files to read** go out with the contract email only (not on the portal page). See [Contracts](/contracts#attachments-on-a-template).
+  - **Contracts form-first** - **Waiting on** form badges, portal **Fill out**, and **Email the form link** from the instances list. See [Contracts](/contracts).
+  - **American Express** - Default on. Camps still stored off see **Start accepting AMEX** / **Yes, accept AMEX** on **Payment Info** (one-way on). See [Payment Methods](/payment-methods).
+  - **Sequences** - **Next email** menu (**Preview**, **Send now**, **Skip this email**); leave out campers beside their guardian on **Add to Sequence**; each address gets a step only once. See [Sequences](/email-sequences).
+  - **Test Mode checkout** - Staff **Submit - test mode** ($0, no card) with a receipt warning that enrollment is real. See [Test Mode](/test-mode).
+  - **Test enrollments** - Form settings **Test enrollments** chip with **Remove** / **Remove all**. See [Test Mode](/test-mode).
+  - **Chronological** - **Filter by profile field** includes text and date fields with **Has an answer** / **No answer**. See [Chronological User Registration](/system-report-chronological-user-registration).
+  - **Pricing Mismatches** - **No match** filter for lines where **None fits their answers**. See [Pricing Mismatches](/pricing-mismatches).
+  - **Organization Snapshot** - Retention is paying campers only; this camp's row **Y% retention** links to Retention on paying only. See [Organization Snapshot](/organization-snapshot).
+  - **Potential Issues** - Expired / expiring cards (45-day window), Balance vs Scheduled red rings, and a one-line why under each issue. See [Scheduled Payments Potential Issues](/system-report-family-scheduled-payments).
+  - **Hover card** - Lists this season's registrations for staff with Sales tab access. See [Profiles](/profiles#quick-view).
+  - **Automated Emails** - Payment failed, ACH return, and scheduled-payment notices stay editable under **Admin → Automated Emails**. See [Automated Emails](/automated-emails).
+  - **Close season** - Blank fields for next season, Full Time status kept, optional move campers up a grade, and related season close polish. See [Manage Seasons](/manage-seasons).
+
+  ## Fixes
+
+  - **ACH refunds** - After settle, refunds stay blocked until the bank return window ends (**You can refund it on that day** / **Refund on** that date). See [Processing Refunds and Voids](/processing-refunds-and-voids).
+  - **Canteen same-day card** - **refund** waits until the day after the charge; **void** still works same day.
+  - **Checkout with expired card** - A $0 or pay-later finish refuses an already-expired primary card so scheduled payments are not left on it. See [Forms](/forms#allow-user-to-pay-later).
+  - **Multi-session discount tiers** - You cannot delete a discount that is still used as a multi-session tier. See [Discounts](/discounts).
+  - **Even Split per session** - Session-start dates on cart lines no longer break plan preview or checkout.
+  - **Profile email** - Subject is required; empty-subject history links show **(no subject)**.
+  - **Deposit Summary / Finix fees** - Settlement straddle and fractional fee cents round correctly on deposit views.
+  - **Sales / SMS / pickup / Scheduled Payments** - Unlinked void fold, saved-filter revert, signature image access, Type card brand, and related silent reliability fixes from the week.
+</Update>
+
 <Update label="2026-11-02" description="Availability, Ask when picked, Pricing Mismatches, Close season grades, Portal links, signatures" tags={["feature","improvement","bugfix"]}>
   ## New
 

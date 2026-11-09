@@ -36,7 +36,7 @@ When a sequence has replies that could not be forwarded, its row shows a chip su
 2. Enter a **Name** (required).
 3. Choose **Starts when**:
    - **Session registration** - Helper: **Families join this sequence when they register for the sessions you pick.**
-   - **New lead** - Helper: **People join this sequence when their status is set to Lead, including inquiries from your website form.** On an inquiry form you can also pick a specific sequence under **Start this email sequence**. When a Lead family has both a Lead camper and a Lead guardian, only the guardian joins, so the guardian is not emailed twice. The **Also enroll** count on **Turn On** matches that rule. Each email address also gets a given step only once per day, even if more than one enrollment would have sent it.
+   - **New lead** - Helper: **People join this sequence when their status is set to Lead, including inquiries from your website form.** On an inquiry form you can also pick a specific sequence under **Start this email sequence**. When a Lead family has both a Lead camper and a Lead guardian, only the guardian joins, so the guardian is not emailed twice. The **Also enroll** count on **Turn On** matches that rule. Each email address also gets a given step only once (any day), even if more than one enrollment would have sent it.
    - **Added from a list** - Helper: **You add people from a report or a group, and they join this sequence that day.**
 4. Save. The sequence opens as a **Draft**. Nobody gets these emails until you turn it on.
 
@@ -98,11 +98,11 @@ The menu only appears while the sequence is **Active**, the person is **In progr
 
 Statuses include **In progress**, **Finished**, **Converted** (lead sequences), **Replied**, **Stopped (no longer registered)**, and **Removed**.
 
-On lead sequences, if older enrollments left a Lead camper beside a Lead guardian, the **People** tab can show a banner such as **N campers are enrolled beside their Lead guardian.** (or **1 camper is enrolled beside their Lead guardian.**). Use **End these enrollments**, then confirm with **Yes, end them**. The campers move to **Removed**; their guardians stay and keep getting each email once. Campium also skips a step when that address already received it today; the **Sent** tab records status **Already sent** with detail **Already sent to this address**.
+On lead sequences, if older enrollments left a Lead camper beside a Lead guardian, the **People** tab can show a banner such as **N campers are enrolled beside their Lead guardian.** (or **1 camper is enrolled beside their Lead guardian.**). Use **End these enrollments**, then confirm with **Yes, end them**. The campers move to **Removed**; their guardians stay and keep getting each email once. Campium also skips a step when that address already received it from another enrollment (any day); the **Sent** tab records status **Already sent** with detail **Already sent to this address**. Session sequences still send a shared step once per session enrollment.
 
 When reply tracking is on, the People hint includes **You can read replies here for 1 year.** Row links read **Read reply** or **Read replies (N)**. Opening a reply shows the message that was also forwarded to your parent contact email, with a footer note that you can read it here for 1 year after it arrived.
 
-For **Added from a list** sequences, helper text points you to **Add to Sequence** in the **Email this group** window on a report or group.
+For **Added from a list** sequences, helper text points you to **Add to Sequence** in the **Email this group** window on a report or group. When you add people, Campium leaves out a camper whose guardian is already in the sequence (or in the same add), and the confirmation can say **N campers left out: their guardian is already in this sequence.**
 
 ### Sent tab
 
