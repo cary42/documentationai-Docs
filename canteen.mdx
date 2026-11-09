@@ -102,7 +102,8 @@ Use **Void** only while the original payment is still inside its allowed process
 
 - **Credit card payments** - Void them the same day, before the batch settles. After that window closes, use **Refund** instead.
 - **ACH payments** - Void unsettled ACH deposits to cancel the debit. **refund** appears only after the ACH payment settles. If you open **refund** too early, Campium shows that the ACH payment has not settled yet and offers **Void this payment**.
-- **ACH after settle** - For a few banking days after settlement, the deposit row can still show a **Pending** badge. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. **refund** is available in that window. Opening **refund** then shows: **This bank payment can still be returned until** the clear date. **If you refund now and it's returned, you're out both.**
+- **ACH after settle** - For a few banking days after settlement, the deposit row can still show a **Pending** badge. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. Instead of **refund**, the row shows muted **Refund on** that date. Opening a blocked refund shows: **The bank can still return this payment until** the clear date. **You can refund it on that day.**
+- **Same-day card deposits** - **refund** is not offered on a card deposit charged today. Use **void** while the void window is open; **refund** appears the next day.
 - **Eastern timezone** - The system uses Eastern time to determine when a void window closes.
 - **Past the void window** - If **Void** no longer appears, the payment has passed its allowed window and staff should use **Refund** instead.
 
@@ -152,9 +153,12 @@ Use this at the end of a session when many small leftover balances should be clo
 3. Click **Clear balances** (the button shows the total when anyone is selected).
 4. In **Clear canteen balances**, choose **What happens to the money?**:
    - **Keep it as camp income**
+   - **Refund to the card or bank they paid with** (skips cash, same-day card charges, ACH still in its return window, and deposits from a prior processor)
+   - **Move to tuition credit** (pick a **Season**)
    - **Paid out to families**
-5. Optionally set **Only clear balances up to** a dollar amount, and pick a **Season** when you keep the money as income.
-6. Confirm with **Clear balances** (or **Clear $X**). This cannot be undone.
+5. Optionally set **Only clear balances up to** a dollar amount, and pick a **Season** when you keep the money as income or move it to tuition credit.
+6. Optionally check **Email each family what happened to their balance** (confirm: **Each family gets an email.**).
+7. Confirm with **Clear balances** (or **Clear $X**). This cannot be undone.
 
 Use **Clear selection** to drop the ticks without clearing anything.
 

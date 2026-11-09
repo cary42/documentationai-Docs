@@ -623,6 +623,8 @@ The fee is then added to the cart on every registration through this form.
 
 **Allow User To Pay Later** lets the user complete registration without paying at checkout. When the Pending Registrations module is on, the choices are **No** and **Save for later (pending)**: the spot is held as pending, with no balance and no enrollment, until you approve it from the profile.
 
+When nothing is due today but a balance remains for scheduled payments, checkout refuses an already-expired card on file (pay later, or a $0 finish that would keep that card for later charges). Families see a message such as **Your primary card ending in** the last four **expired** MM/YY. **Pay later puts your scheduled payments on that card. Please add a new card before finishing.** (or the matching wording when they selected a different expired card). Expiring-but-not-yet-expired cards are not blocked here; bank accounts and charges due today are unchanged.
+
 On the parent checkout page, families choose how much to pay under **How much today?**:
 
 - **Full amount** with helper **Pay the whole balance today.**

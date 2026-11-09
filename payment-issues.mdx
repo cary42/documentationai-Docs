@@ -77,7 +77,9 @@ At the bottom of the Payment Issues card, you may see the checkbox for **Email m
 
 When the checkbox is on, CampiumDB sends a payment health digest ahead of upcoming automatic charges. The digest is designed to surface families who may have trouble when the next charge runs.
 
-The reminders are sent when the next charge is 10 days away and again when it is 5 days away. When relevant, the digest can also summarize open ACH returns or rejects and families who owe a balance but do not have a primary payment method on file.
+The reminders are sent when the next charge is 10 days away and again when it is 5 days away. When relevant, the digest can also summarize open ACH returns or rejects, families who owe a balance but do not have a primary payment method on file, and a section titled **Charges in the next 30 days that will fail as scheduled** (expired cards, cards that expire before the charge within 45 days, or no method on file).
+
+Families can also get a separate email asking them to update a payment method before a scheduled charge that would fail. Subject: **Update your payment method before your next payment**. CTA: **Update Payment Details**. That email uses the same send switch as the payment decline email, covers charges up to 14 days ahead (and locked rows with no method), and sends at most once per family every 14 days. It is not an editable Automated Emails template.
 
 ## How you control it
 
