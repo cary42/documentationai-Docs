@@ -102,7 +102,7 @@ Use the **New Form** button on the Forms list to start a new form.
     Who the form is for is set on the **Recipients** tab, not here.
     - Availability
       - **Start Date** and **End Date** (required; control when the form is available on the Portal)
-      - **Cutoff Date** (registration only; optional age gate; helper: **If set, the user will not be able to continue if the child was born after the cutoff date (too young).**)
+      - **Cutoff Date (too young)** and **Cutoff Date (too old)** (registration only; optional age gates). Too-young helper: **If set, the user will not be able to continue if the child was born after this date.** Too-old helper: **If set, the user will not be able to continue if the child was born before this date.** (New layout short helpers use your camper wording: born after / before this date can't register.) An age readout under each date shows **Someone born on this date is N years, M months old today.**
       - **Show Question Numbers?**
       - **Visibility** (**Visible** or **Hidden**; helper: **Setting this to hidden will hide access to the form.**)
       - **Lock Form After Completion** (helper: **Will prevent changes to a form once it has been submitted.**)
@@ -162,7 +162,7 @@ Each form opens in a tabbed editor. Some tabs appear only for specific Form Type
 Use **Settings** to define how the form behaves.
 
 - Sets the **Form Name**, **Form Type**, and **Season**.
-- Sets the **Start Date** and **End Date** that control when the form is available, and on registration forms the optional **Cutoff Date** age gate.
+- Sets the **Start Date** and **End Date** that control when the form is available, and on registration forms the optional **Cutoff Date (too young)** and **Cutoff Date (too old)** age gates.
 - Controls **Visibility** (**Visible** or **Hidden**) so you can prepare forms in advance or take them down.
 - Turns **Lock Form After Completion** on or off. When it is on, users cannot change responses after they submit.
 - Sets **Form Status After Completion** and **User Status After Completion**, the statuses Campium applies after a user finishes the form.
@@ -288,6 +288,7 @@ Use the **Responses** tab to track progress and work with submitted data.
 On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
+- **Approve** (and **Bulk Approve**) opens **Approve this form?** with **Set their account status to**: **Active** (default), **Pending**, **Inactive**, or **Leave as is**. Confirm with **Yes, approve**.
 - Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses** and **Delete**. Deleting one response asks **Are you sure you want to remove this form?** Confirm with **Yes, remove.** You can restore it from **Recently deleted** for 30 days.
 - Use **Bulk Delete** when rows are selected. Confirm **Delete N responses? You can restore them from Recently deleted for 30 days.** with **Yes, delete.**
 - Use the filled primary **Print Responses** dropdown for **Print All**, **Print Approved**, **Print Pending**, or **Print In Progress**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
@@ -651,11 +652,16 @@ Use this when you want registration to count only after the full amount is paid.
 
 **Default Payment To** sets which payment option, **Minimum Deposit** or **Pay in Full**, is already picked when users reach checkout. Helper: **When the user gets to the checkout screen, payment will default to this option.**
 
-#### Cutoff Date
+#### Cutoff Date (too young) and Cutoff Date (too old)
 
-**Cutoff Date** is an age gate. Helper: **If set, the user will not be able to continue if the child was born after the cutoff date (too young).**
+Registration forms can use two age gates:
 
-For example, if a program requires campers to be a certain age by a specific date, set that date in **Cutoff Date** so age validation uses the correct rule.
+- **Cutoff Date (too young)** - Helper: **If set, the user will not be able to continue if the child was born after this date.** (New layout: your camper wording **born after this date can't register.**)
+- **Cutoff Date (too old)** - Helper: **If set, the user will not be able to continue if the child was born before this date.** (New layout: **born before this date can't register.**)
+
+Under each date, Campium shows how old someone born on that day is today (for example **Someone born on this date is 7 years, 4 months old today.**), so you can set the gate by age instead of guessing the calendar date.
+
+For example, if a program requires campers to be at least a certain age by a specific date, set that date in **Cutoff Date (too young)**. If they must also be under a maximum age, set **Cutoff Date (too old)** as well.
 
 ### Discount settings
 

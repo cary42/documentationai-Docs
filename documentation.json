@@ -146,6 +146,10 @@
                     "path": "family-ledger"
                   },
                   {
+                    "title": "Family Audit",
+                    "path": "family-audit"
+                  },
+                  {
                     "title": "Ledger Summary",
                     "path": "ledger-summary"
                   },
