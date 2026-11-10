@@ -87,7 +87,7 @@ The Profiles screen is split into a header at the top and tabs below.
 
 ### Header area
 
-On a camper profile, under the card header, a strip can show **New**, **Returning**, or **Not back yet**, with a short detail such as **first season, Summer 2026**, **2nd year, since Summer 2024**, or **last here Summer 2025**. When your camp has at least four years of seasons in Campium, the Returning line can show an ordinal such as **3rd year** or **5th year** (with **since** / **last here** and the season name). The same years-at-camp label can appear as a badge on the name hover card (title **Years at camp**). Custom reports and email merge fields can use **Years at camp** / **Camper Years at camp (5)** / **Camper Years at camp (5th)** even before the four-year label turns on.
+On a camper profile, under the card header, a strip can show **New**, **Returning**, or **Not back yet**, with a short detail such as **first season, Summer 2026**, **2nd year, since Summer 2024**, or **last here Summer 2025**. When your camp has at least four years of seasons in Campium, the Returning line can show an ordinal such as **3rd year** or **5th year** (with **since** / **last here** and the season name). The same years-at-camp label can appear as a badge on the name hover card (title **Years at camp**). Custom reports and email merge fields can use **Years at camp** / **Camper Years at camp (5)** / **Camper Years at camp (5th)** even before the four-year label turns on. A form's required fee alone does not count as a season for these labels (or for Chron **New** / **Returning**), unless that form sells nothing else.
 
 The header gives you a quick snapshot of who you are looking at:
 
@@ -571,9 +571,9 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     ### Add a payment with Account On File
 
-    Click **Add Payment** on the **Sales** tab. Under **Payment Type**, choose **Account On File** to charge a saved card or bank account. The **Account on File** field lists each saved method (for example name, last four, expiration, and **Primary**). Use **Remove selected account** when you need to clear the pick.
+    Click **Add Payment** on the **Sales** tab. Under **Payment Type**, choose **Account On File** to charge a saved card or bank account. The **Account on File** field lists each saved method with name, last four, and expiration when known (for example **Visa x1234 (exp 01/27)** or **(exp 01/25, expired)**), plus **- Primary** on the primary method. Use **Remove selected account** when you need to clear the pick. When the selected card is already expired, a hint reads **This card has expired. Use Card (one time) or ask the family for a new card.** The expired card stays selectable.
 
-    **Add surcharge** appears only when your camp has a surcharge rate and the selected on-file method is a card. It stays hidden for bank (ACH) accounts on file.
+    **Add surcharge** appears only when your camp has a surcharge rate and the selected on-file method is a credit card. It stays hidden for bank (ACH) accounts and for debit cards on file.
 
     ### Edit weeks on a session sale
 
@@ -663,7 +663,7 @@ Each tab focuses on a different part of the person’s record. Use these section
         - **Cash**: add an optional **Reason**.
         - **Adjustment**: gives the family a credit without recording money received. The **Reason** shows on the invoice.
         - **Account On File**: charges a saved card or bank account. Choose it under **Account on File**, and leave **Charge On** blank to charge now or pick a date to schedule it.
-        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). There is no **Charge On** date; the charge runs when you save.
+        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). Optional **Receipt to** (placeholder **Optional**) emails the cardholder a receipt for this charge (helper: **Email the cardholder a receipt for this charge.**). Leave it blank to skip the receipt. There is no **Charge On** date; the charge runs when you save.
         - **Discount**: applies one of your discounts to this family.
         - **Check Refund**: records a refund you paid by check.
 
@@ -725,9 +725,9 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - See which forms are complete, pending, or missing.
 
-    - Open the gear menu on a form row to **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, or **Delete**.
+    - Open the gear menu on a form row to **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, or **Delete**. **Approve** asks **Approve this form?** with **Set their account status to** (**Active**, **Pending**, **Inactive**, or **Leave as is**), then **Yes, approve**. See [Forms](/forms#change-status-and-open-a-response).
 
-    - Filter by season to see forms related to a specific year.
+    - Use **Season:** at the top of the tab. It starts on your signed-in **Default Season** (from **Admin → Site Settings → Basic**). Pick **All Seasons** to see every form for this person.
 
     When the person named references on an application, a **References** card appears above the forms list. Use it to check invitation status, **Resend invitation**, **Change email address**, or **Remove** a reference. See [References](/references#track-references-on-a-profile).
 

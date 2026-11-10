@@ -22,12 +22,12 @@ Use the **Filters** card, then **Apply Filters**. **Reset** clears filters back 
 
 | Filter | Options |
 | --- | --- |
-| **Email Type** | **All Types**, **No Account**, **Payment Issue**, **Address Did Not Verify**, **Reminder** |
+| **Email Type** | **All Types**, **No Account**, **Payment Issue**, **Address Did Not Verify**, **Card expired / expires before payment**, **Reminder** |
 | **Sent By** | **Everyone**, individual staff, or **Automated** (system sends such as upcoming payment reminders) |
 
 Search placeholder: **Name, email or account**. Empty state: **No emails match these filters and dates.**
 
-Automatic upcoming charge reminders appear as type **Reminder**, with subject **Upcoming payment reminder**, and **Sent By** **Automated**. Staff-sent issue emails keep the staff name under **Sent By**.
+Automatic upcoming charge reminders appear as type **Reminder**, with subject **Upcoming payment reminder**, and **Sent By** **Automated**. Automatic card warnings (subject like **Update your payment method before your next payment**) appear as **Card expired / expires before payment** with badge **Auto: card warning**. Staff-sent issue emails keep the staff name under **Sent By**.
 
 ## Future Payment Email History
 
@@ -35,7 +35,7 @@ Automatic upcoming charge reminders appear as type **Reminder**, with subject **
 | --- | --- |
 | **Date/Time** | When the email was sent or queued |
 | **Recipient** | Who received it |
-| **Type** | **No Account**, **Payment Issue**, **Address Did Not Verify**, or **Reminder** |
+| **Type** | **No Account**, **Payment Issue**, **Address Did Not Verify**, **Card expired / expires before payment** (**Auto: card warning**), or **Reminder** |
 | **Subject** | Subject line (automatic reminders show **Upcoming payment reminder**) |
 | **Payment Info** | Installment details for that email. **Payment removed** when the scheduled payment row is gone but the log entry remains |
 | **Sent By** | Staff name, or **Automated** |

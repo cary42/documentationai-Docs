@@ -34,7 +34,10 @@ Families can also pay in full or choose a [payment plan](/payment-plans) when th
 
 Logged-in families manage cards and bank accounts from **Account** or **My Account**, then **Payment Methods**.
 
+Until the family has at least one purchase or payment on file, **My Account** hides **Total balance**, the **Account History** card, and **Payment Methods**. After the first sale or payment, those links appear as usual.
+
 - They can add, update, or replace a card or bank account.
+- On **Payment Methods**, a stored card can show chips **Expired** MM/YY or **Expires** MM/YY when the card has already expired or expires inside the next 45 days. Bank accounts do not show those chips. A card that charged successfully after its stored expiry is treated as honored and does not show as expired.
 - Scheduled charges and retries use a method on file. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment).
 - When a failed scheduled payment is open, the button that normally says **Register Card**, **Save Credit Card**, **Add Bank Account**, or similar can instead read **Save and retry $X** (oldest failed amount). Saving the method retries that charge. Success: **Payment Retry Successful!** Failure: **Payment Retry Failed** (plus the processor message).
 - When a scheduled payment is only waiting for you to approve a pending camper, the family panel can read **Pending Payments** instead of **Failed Payments**, with **Not charged yet. This payment will run once the camp approves your camper.** and **No action needed** (no **Retry**).
@@ -50,6 +53,7 @@ Signed-in families can see one danger or warning banner at a time on home, Accou
 - **Bank returned a payment** - Headline such as **Your bank returned your $540.00 payment**. CTA **Update payment method**. See [What is an ACH return?](/what-is-an-ach-return#what-families-see-on-the-portal).
 - **Plan needs a method** - Headline **Your payment plan needs a payment method** when they have a non-Custom plan balance and no primary method. CTA **Add payment method**. Exclusions follow [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method).
 - **Billing address needs a fix** (Finix cards only) - Headline such as **The billing address on your card ending 4675 needs a fix**. CTA **Fix billing address**. On Payment Methods, a flagged address can show **(your bank says this does not match)**. When a **membership** recurring charge failed the address check (membership dues have no scheduled-payment row), the detail can add **Your $X.XX membership payment on M j was declined because of this.** Saving a verified address clears the banner; it does **not** charge the missed membership payment automatically. After the address (or another chargeable method) is ready, Payment Methods can show **Your $X membership payment on** the charge date **was not collected.** with **Pay the missed $X membership payment now**.
+- **Card expired or expires before a charge** - Headline such as **Your card ending** the last four **expired** MM/YY, or that it **expires before** an upcoming payment. CTA **Add a card**. At checkout, an expired primary can also show **Your primary card ending** the last four **expired** MM/YY. **Add a new card below.** Cards that charged successfully after their stored expiry, and bank accounts, are not treated as expired here.
 
 On Payment Methods itself the ACH / plan banner has no button (they are already on the page). CTA destinations depend on your processor (Finix, Payabli, USIO, Paysafe, and others).
 
@@ -114,7 +118,7 @@ You cannot turn American Express off again from Site Settings. While it is still
 **Credit Card Surcharge** on the same **Payment Info** tab is the percentage added when a family pays with a **credit** card, to help offset your card-processing cost.
 
 - Enter the percentage as a number with or without the percent sign.
-- Debit, prepaid, and HSA/FSA cards, plus ACH / e-check, are **never** surcharged.
+- Debit, prepaid, and HSA/FSA cards, plus ACH / e-check, are **never** surcharged. On admin **Add Payment** with **Account On File**, **Add surcharge** stays hidden for debit cards and bank accounts the same way.
 - Most camps show a **Credit Card Surcharge** line and a label such as **(2% Surcharge)** or, when a small fixed amount is also configured for your processor, **(2% + $0.15 Surcharge)** next to the credit card option.
 - In New York (and any other state that requires two-tier pricing), checkout shows two totals before a method is chosen: **Total with ACH/e-check or debit card** and **Total with credit card (includes the X% surcharge)**.
 - On the parent **Pay** page (**Pay Now**), when a card on file is already selected, the **Credit Card Surcharge** line appears as soon as the page loads. Families do not need to click the card first to see the fee before they pay.
