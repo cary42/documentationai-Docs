@@ -57,7 +57,7 @@ Use the parent portal when a family fixes a declined or returned scheduled payme
 
   If your account has failed scheduled payments, a **Failed Payments** section appears below your saved payment methods.
 
-  The table has **Date**, **Amount**, **Error**, **Method**, and **Action** columns. **Method** shows the payment method on the original attempt, or **None**. On Finix and Payabli, the **Error** column can also show a short next-step line under the processor message (for example, update the card on file, then retry).
+  The table has **Date**, **Amount**, **Error**, **Method**, and **Action** columns. **Method** shows the payment method on the original attempt, or **None**. The **Error** column shows a plain decline reason (for example **Not enough funds** or **Card expired**) instead of raw processor text when Campium has an approved match. On Finix and Payabli, it can also show a short next-step line under that reason.
 
   When every row is only waiting for the camp to approve a pending camper (nothing actually failed), the panel title is **Pending Payments** instead. Those rows show a **Details** message such as **Not charged yet. This payment will run once the camp approves your camper.** and **No action needed** in place of **Retry**.
 
@@ -76,7 +76,7 @@ If the **Retry** button is disabled, add a payment method in **Payment Methods**
 
 </Callout>
 
-If the saved card is expired or was declined, add a new method or update the existing one before you retry. Retrying with the same invalid method fails again. When Campium blocks repeats of the same decline, follow the on-screen message to use a different method or contact the camp office.
+If the saved card is expired, closed, or otherwise cannot be charged again, that method is left out of the **Retry** picker. Families see: **This payment method can't be used for this payment. Choose a different one, or add it again.** Add a new method or update the existing one before you retry.
 
 While a failed scheduled payment is still open, the control that adds a card or bank account can read **Save and retry $X** instead of **Register Card** or **Save Credit Card**. Saving that method also retries the oldest failed charge. On Finix, a card that failed CVV verification shows **Enter Card Again** and cannot be used for **Retry** until the family enters the card again with the correct security code.
 
@@ -131,7 +131,7 @@ Use the family profile to retry one family's failed scheduled charge.
 <Steps>
   <Step title="Open the retry modal" icon="refresh-cw">
 
-  Click **retry** on the failed scheduled charge.
+  Click **retry** on the failed scheduled charge. Staff see a plain decline reason with an info hover that can include next steps and **Processor said:** the original processor text. Methods that cannot be charged again are left out of the picker, with guidance such as **The payment method on file can't be charged again. Ask the parent for a different one, or add it again, before retrying.**
 
   </Step>
   <Step title="Select a payment method" icon="credit-card">
@@ -151,7 +151,7 @@ Use the family profile to retry one family's failed scheduled charge.
   Review the result in the window or the refreshed sales list.
 
   - **Success** - the payment processes and the sales list refreshes.
-  - **Declined** - the window shows the processor message. Choose another method or ask the family to update their card or bank account.
+  - **Declined** - the window shows the plain decline reason. Choose another method or ask the family to update their card or bank account.
 
   </Step>
 </Steps>

@@ -2,23 +2,25 @@
 title: ACH Returns and Rejects report
 description: >-
   Review ACH payments that have been returned or rejected, understand each
-  column, and manage follow-up using email and archive actions.
+  column, and manage follow-up using email and dismiss actions.
 ---
 ## Overview
 
 Use the ACH Returns and Rejects report to see ACH payments that your processor has come back as returned or rejected, so finance staff can follow up with families and keep your receivables list accurate.
 
+Open it from **Financials → ACH Returns & Rejects** (also linked from the Payment Issues card when ACH is in use).
+
 The report only includes ACH payments that match all of the following:
 
-- The payment has a return response (internal response code 4).
-- The payment method is ACH (payment type code AC).
-- The payment belongs to your current agency.
+- The payment has a return response.
+- The payment method is ACH.
+- The payment belongs to your camp.
 - Optionally, the payment is in the Season you select.
 
 Results default to the most recent returns first, sorted by **Return Date** in descending order.
 
 <Callout kind="info" collapsed="false">
-  Use this report as your working list of unresolved ACH returns. Once you receive a valid replacement payment, archive the original return so the list stays focused and current.
+  Use this report as your working list of unresolved ACH returns. Once you receive a valid replacement payment, dismiss the original return so the list stays focused and current.
 </Callout>
 
 ## What the report shows
@@ -34,24 +36,24 @@ Each row represents one returned ACH payment and includes:
 - The date the return was posted.
 - Whether a later successful payment has since been received from the family, so you can tell at a glance which returns are already resolved.
 
-By default, the report shows **Active** returns (unarchived items). Use the **Active / Archive** toggle at the top of the page to switch to the **Archive** view and review archived returns separately from your active queue.
+By default, the report shows **Active** returns. Use the **Active / Dismissed** toggle at the top of the page to switch to the **Dismissed** view and review resolved returns separately from your active queue.
 
 ## Filters
 
 The report has a focused set of filters so you can quickly see current issues without over-configuring the view.
 
-### Status (Active / Archive)
+### Status (Active / Dismissed)
 
-Use the **Status** toggle at the top of the report to switch between active and archived ACH returns.
+Use the **Status** toggle at the top of the report to switch between active and dismissed ACH returns.
 
 - **Active** is the default view when you open the report.
-- **Active** shows all **unarchived** ACH returns that match your other filters.
-- **Archive** shows **archived** ACH returns that you have already resolved.
+- **Active** shows open ACH returns that match your other filters.
+- **Dismissed** shows returns you have already resolved.
 - When you change the toggle, the report reloads with the selected view.
-- When you click the **Archive** row action on an item, the item moves out of the Active view and appears in the Archive view.
+- When you click **Dismiss** on a row, the item moves out of the Active view and appears under **Dismissed**.
 
 <Callout kind="info" collapsed="false">
-  Use the Archive view as your reference for resolved ACH returns, while the Active view stays focused on items that still need follow-up.
+  Use the Dismissed view as your reference for resolved ACH returns, while the Active view stays focused on items that still need follow-up.
 </Callout>
 
 ### Season
@@ -59,13 +61,13 @@ Use the **Status** toggle at the top of the report to switch between active and 
 You can optionally limit the report to a specific Season.
 
 - When you select a Season, the report only shows ACH returns tied to that Season.
-- When you leave it blank, the report includes ACH returns across all seasons for your agency.
+- When you leave it blank, the report includes ACH returns across all seasons for your camp.
 
 ### **Date Range**
 
 This report does **not** include a configurable date-range filter.
 
-- The list always reflects all matching ACH returns for your agency (and optional Season), with the newest returns at the top.
+- The list always reflects all matching ACH returns for your camp (and optional Season), with the newest returns at the top.
 - You can still sort by Transaction Date or Return Date in the table header to focus on a particular time window.
 
 If you need date-bounded totals, combine this report with your other financial reports such as Deposit Summary or Revenue Summary.
@@ -77,7 +79,7 @@ Each column in the ACH Returns and Rejects table provides specific information t
 - **Actions**\
   Quick tools for handling the return directly from the row:
   - **Send Email** (envelope icon) to notify the family.
-  - **Archive** (archive or hide icon) to remove the row once resolved.
+  - **Dismiss** to clear the row once resolved.
 - **Name**\
   The account holder or family name. Click the name to open their profile in a new view. The link is tied to the family’s account number so you can review their full balance and history.
 - **Amount**\
@@ -89,7 +91,7 @@ Each column in the ACH Returns and Rejects table provides specific information t
 - **Return Date**\
   The date the return was recorded. The report uses this column for its default sorting (newest returns first).
 - **Payment since?**\
-  Shows whether the family has made a later successful payment since this ACH was returned. Use it to spot returns that may already be resolved (a valid replacement payment has come in) versus those that still need follow-up before you archive them.
+  Shows whether the family has made a later successful payment since this ACH was returned. Use it to spot returns that may already be resolved (a valid replacement payment has come in) versus those that still need follow-up before you dismiss them.
 
 The table is configured for a large page size and can display up to roughly 1000 rows at once, so you can work through a backlog of returns without constantly paging through results.
 
@@ -112,25 +114,23 @@ When you click **Send Email**:
 - Helper text: **Preview, with your note added under the camp's wording from Automated Emails.**
 - Optionally fill **Additional Message (optional)**, review the preview, then **Send Email**.
 
-Sending the email does **not** remove or hide the row. The return stays visible in the report until you explicitly archive it after you receive a valid payment.
+Sending the email does **not** remove or hide the row. The return stays visible in the report until you explicitly dismiss it after you receive a valid payment.
 
 <Callout kind="info" collapsed="false">
-  Use Send Email as many times as needed for follow-up. Archiving is a separate action so you keep a clear separation between communication attempts and final resolution.
+  Use Send Email as many times as needed for follow-up. Dismiss is a separate action so you keep a clear separation between communication attempts and final resolution.
 </Callout>
 
-### Archive
+### Dismiss
 
-Use **Archive** to mark a returned ACH payment as resolved once you have collected a valid replacement payment or otherwise handled the situation.
+Use **Dismiss** to mark a returned ACH payment as resolved once you have collected a valid replacement payment or otherwise handled the situation. Confirm with **Dismiss this ACH return?**
 
-When you click **Archive**:
+When you click **Dismiss**:
 
-- Campium marks the underlying payment record as hidden for this list.
-- The row disappears from the report, helping keep the list focused on open items.
-
-Internally, the payment’s visibility flag is updated so it no longer appears as an active ACH return.
+- Campium marks the underlying payment record as resolved for this list.
+- The row leaves the Active view and appears under **Dismissed**.
 
 <Callout kind="alert" collapsed="false">
-  Archiving permanently removes the row from the active ACH Returns and Rejects report. Only click Archive after you have fully resolved the return and recorded any replacement payment.
+  Only click Dismiss after you have fully resolved the return and recorded any replacement payment.
 </Callout>
 
 ## Sorting and working the list
@@ -141,7 +141,7 @@ The ACH Returns and Rejects table is optimized for working through a queue of is
 - You can click **Transaction Date** or **Return Date** column headers to change the sort order.
 - With up to about **1000 rows per page**, you can scan or filter in your browser to find a specific transaction, family, or date.
 
-Many finance teams work this report regularly (daily or weekly), emailing families for any new entries and archiving rows once valid payments are posted.
+Many finance teams work this report regularly (daily or weekly), emailing families for any new entries and dismissing rows once valid payments are posted.
 
 ## Run the report
 
@@ -150,15 +150,14 @@ Use this quick workflow to open and work with the ACH Returns and Rejects report
 <Steps>
   <Step title="Open the ACH Returns and Rejects report" icon="terminal" title-type="p">
     - Sign in to the Campium admin portal with a finance or admin account.
-    - Go to the **Reports** section, then open the **Financial** reports.
-    - Click **ACH Returns and Rejects** to load the report.
+    - Go to **Financials → ACH Returns & Rejects**.
 
-    Your browser displays the ACH returns table for your agency, sorted by the most recent Return Date.
+    Your browser displays the ACH returns table for your camp, sorted by the most recent Return Date.
   </Step>
 
-  <Step title="Choose Active or Archive view" icon="settings" title-type="p">
-    - Locate the **Active / Archive** toggle at the top of the report.
-    - Leave it on **Active** to work your current unresolved returns, or switch to **Archive** to review resolved items.
+  <Step title="Choose Active or Dismissed view" icon="settings" title-type="p">
+    - Locate the **Active / Dismissed** toggle at the top of the report.
+    - Leave it on **Active** to work your current unresolved returns, or switch to **Dismissed** to review resolved items.
 
     When you change the toggle, the report reloads with rows from the selected view.
   </Step>
@@ -167,7 +166,7 @@ Use this quick workflow to open and work with the ACH Returns and Rejects report
     - Use the **Season** dropdown to select the season you want to review.
     - Wait for the report to refresh with the filtered results.
 
-    If you leave this filter blank, the report shows ACH returns across all seasons for your agency.
+    If you leave this filter blank, the report shows ACH returns across all seasons for your camp.
   </Step>
 
   <Step title="Review returns and contact families" icon="users" title-type="p">
@@ -178,12 +177,11 @@ Use this quick workflow to open and work with the ACH Returns and Rejects report
     The report keeps all rows visible after sending emails so you still see the full list of unresolved returns.
   </Step>
 
-  <Step title="Archive resolved returns" icon="check-circle" title-type="p">
+  <Step title="Dismiss resolved returns" icon="check-circle" title-type="p">
     - Once you receive a valid replacement payment or otherwise resolve a returned ACH, return to the report row.
     - Confirm the replacement payment is recorded in the family’s profile.
-    - Click **Archive** on the original returned payment row to hide it from the list.
+    - Click **Dismiss** on the original returned payment row.
 
     Your list now reflects only unresolved ACH returns, making it easier to spot new issues as they come in.
   </Step>
 </Steps>
-
