@@ -134,6 +134,10 @@
                     "path": "revenue-summary"
                   },
                   {
+                    "title": "Revenue Transaction Detail",
+                    "path": "revenue-transaction-detail"
+                  },
+                  {
                     "title": "Aging Account Balance",
                     "path": "account-balance-aging"
                   },

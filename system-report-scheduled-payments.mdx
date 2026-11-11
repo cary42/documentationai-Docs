@@ -84,7 +84,11 @@ The main table lists one row per scheduled payment. Each row includes a blank Ac
 
 #### Actions
 
-Use this first column to access row-level actions, such as a button or link to **Send Payment Notification** for that scheduled payment.
+Use this first column for row-level actions such as **Send Payment Notification**, **Retry**, and **Dismiss** when a declined scheduled charge is resolved (for example after a later successful payment covers what was owed).
+
+#### Payment Since
+
+**Payment Since** shows whether the family has made a successful payment after this scheduled charge was due. Use it with **Dismiss** when a later payment already covered the missed amount.
 
 #### Name
 
@@ -180,32 +184,28 @@ From the Scheduled Payments Report, send a payment-related email for a specific 
 
 ### Modal fields
 
-The **Send Payment Notification** modal includes the email type, an optional note, a live preview, and a link to edit the wording.
+The **Send Payment Notification** modal loads the real email for the type you pick so you can edit it before it goes out.
 
 #### Email Type
 
 Choose which notice to send. Options: **No Payment Account on File**, **Payment Issue/Error**, **Card Billing Address Did Not Verify** (Finix billing-address follow-up; steers the family to **Payment Methods** → **Edit**), **Payment Reminder**, and **ACH Payment Returned** (used for open ACH return rows). With **Site Settings** permission, **Edit this email** opens the matching row on [Automated Emails](/automated-emails#sent-by-you-from-scheduled-payments).
 
-#### Additional Message (optional)
+#### Subject and Message
 
-Enter extra text you want under the camp's wording. Leave it blank to send only the saved email for the selected Email Type.
-
-#### Email Preview
-
-The modal shows a live **Email Preview** of what the family will receive, including your camp logo and the optional note.
+Edit **Subject** and **Message** in the modal. Helper: **You can change any of the wording before you send it.** Links in the message point families to update payment methods when that fits the notice type.
 
 <Callout kind="alert">
-  Review the **Email Type**, **Email Preview**, and any **Additional Message (optional)** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.
+  Review the **Email Type**, **Subject**, and **Message** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.
 </Callout>
 
 ### Send the notification
 
 <Steps>
   <Step title="Configure the email content" icon="edit" titleType="p">
-    In the **Send Payment Notification** modal, select the appropriate **Email Type** and, if needed, add context in **Additional Message (optional)** to clarify why you are reaching out.
+    In the **Send Payment Notification** modal, select the appropriate **Email Type**, then edit **Subject** and **Message** as needed.
   </Step>
 
   <Step title="Send and confirm" icon="send" titleType="p">
-    Click the modal's send or confirm button to send the email. After sending, close the modal and return to the table to continue reviewing other scheduled payments or sending additional notifications.
+    Click **Send Email**. After sending, close the modal and return to the table to continue reviewing other scheduled payments or sending additional notifications.
   </Step>
 </Steps>

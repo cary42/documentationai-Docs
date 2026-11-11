@@ -1,0 +1,46 @@
+---
+title: "Revenue Transaction Detail"
+description: "List every payment, credit, refund, and related money line for a season, with a running balance, from Financials."
+---
+
+Use **Revenue Transaction Detail** when you want a chronological money trail for one season: payments, credits, refunds, voids, adjustments, and similar lines, with a running balance down the page.
+
+This is different from [Transaction Detail](/transaction-detail), which has one row per session added to an account. Revenue Transaction Detail has one row per money movement.
+
+## Open the report
+
+1. Go to **Financials → Revenue Transaction Detail**.
+2. Pick the season in the header season control.
+3. Optionally pick a date range in the header date picker.
+
+You need Financials access (your camp is not on a free plan that hides money tools).
+
+## Date range
+
+The header date picker filters rows by when each line was created.
+
+- Until you pick a range, the report shows every matching line for the selected season.
+- After you pick start and end dates, the page title includes that range, and only lines created in that window appear.
+- If the dates are reversed, Campium swaps them so the title, picker, and rows agree.
+
+## Columns
+
+| Column | What it shows |
+| --- | --- |
+| **Type** | The payment or credit type (for example **Payment**, **ACH**, **Refund credit card**, **Adjustment**, **Balance transfer**) |
+| **Category** | **Payment** or **Credit** |
+| **Date** | When the line was created |
+| **Family** | The family account |
+| **Camper** | The person on the line when it applies |
+| **Reason** | The note or reason on the line |
+| **Slip / batch** | Deposit or batch reference when present |
+| **Amount** | Net amount for the line |
+| **Running balance** | Season running total as you read top to bottom |
+
+Do not re-sort the table if you need the running balance to stay meaningful. The balance only reads correctly in the order the rows are built.
+
+## Related reports
+
+- [Revenue Summary](/revenue-summary) for rolled-up totals by product and payment type
+- [Transaction Detail](/transaction-detail) for one row per session line
+- [Payments](/payments) for payment-focused lists

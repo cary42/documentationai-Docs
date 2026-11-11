@@ -564,10 +564,20 @@ Each tab focuses on a different part of the person’s record. Use these section
     - **Camper** and **Form** pickers when more than one applies
     - Sessions the family would be offered on that form, with prices when your camp is not free (**Discounts apply at checkout.**)
     - **Not available (N)** for sessions the form would hide, with reasons such as **Needs an answer: Grade** or **Doesn't match:** plus the rule
-    - On a **Not available** reason, a **Fix** link (or **Fix** plus the field name when more than one field is involved) lets you change that answer in place when you have **Edit User Data** for that field. Family-level fields and health fields without medical access do not get **Fix**. **Save** writes the answer; you may then see **Update pricing to match?** if a sale price should change. **Cancel** closes the inline editor without saving
+    - On a **Not available** reason, a **Fix** link (or **Fix** plus the field name when more than one field is involved) lets you change that answer in place when you have **Edit User Data** for that field. Family-level fields and health fields without medical access do not get **Fix**. **Save** writes the answer. A parent's answer change never moves a sale price on its own. When a line no longer matches, the **Sales** tab can show **Doesn't match profile** (tooltip can invite you to update), and [Pricing Mismatches](/pricing-mismatches) lists lines staff can update. **Cancel** closes the inline editor without saving
     - If the camper cannot open the form yet: their first name plus **can't open this form right now.**, with what they would see once they can
 
     Close the modal with **Close**.
+
+    ### Payment timeline
+
+    On the **Sales** tab, open the payments area and click the history icon titled **Payment timeline** (needs **View the 'Sales' tab**). The modal title is **Payment timeline** or **Payment timeline:** plus the season name.
+
+    Totals at the top: **Season total**, **Paid and credited**, and **Still owed**. Sort with **Newest first** (default) or **Oldest first**. Each row uses plain-language wording and badges such as **Paid** with a date, **Not paid**, **Skipped**, **Removed**, **Returned**, **Covered the** date **missed charge**, or **Not for this season**. Empty state: **No payments or scheduled charges for this season yet.**
+
+    ### Declined scheduled charges
+
+    A declined scheduled charge can appear as one plain-language line on **Sales**, with an info hover that includes staff next steps and **Processor said:** the original processor text when available. Beside the reason, use the mail icon **Email the parent about this decline**. A short note can read like **2 attempts, no automatic retry** when Campium will not keep retrying that method. Families see the same plain decline wording on the parent portal, not the raw processor text.
 
     ### Add a payment with Account On File
 
@@ -663,7 +673,7 @@ Each tab focuses on a different part of the person’s record. Use these section
         - **Cash**: add an optional **Reason**.
         - **Adjustment**: gives the family a credit without recording money received. The **Reason** shows on the invoice.
         - **Account On File**: charges a saved card or bank account. Choose it under **Account on File**, and leave **Charge On** blank to charge now or pick a date to schedule it.
-        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). Optional **Receipt to** (placeholder **Optional**) emails the cardholder a receipt for this charge (helper: **Email the cardholder a receipt for this charge.**). Leave it blank to skip the receipt. There is no **Charge On** date; the charge runs when you save.
+        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). Optional **Receipt to** (placeholder **Optional**) emails the cardholder a receipt for this charge (helper: **Email the cardholder a receipt for this charge.**). Leave it blank to skip the receipt. There is no **Charge On** date; the charge runs when you save. When **Add surcharge** is checked and Finix classifies the typed card as debit, Campium drops the fee and can show **Debit card: no surcharge was added.**
         - **Discount**: applies one of your discounts to this family.
         - **Check Refund**: records a refund you paid by check.
 
