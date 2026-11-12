@@ -51,9 +51,10 @@ Use the **Status** toggle at the top of the report to switch between active and 
 - **Dismissed** shows returns you have already resolved.
 - When you change the toggle, the report reloads with the selected view.
 - When you click **Dismiss** on a row, the item moves out of the Active view and appears under **Dismissed**.
+- On **Dismissed**, tip: **Use the Restore action on a row to move it back to Active.** Confirm with **Move this ACH return back to Active?** / **Restore**.
 
 <Callout kind="info" collapsed="false">
-  Use the Dismissed view as your reference for resolved ACH returns, while the Active view stays focused on items that still need follow-up.
+  Use the Dismissed view as your reference for resolved ACH returns, while the Active view stays focused on items that still need follow-up. Use **Restore** if you dismissed one by mistake.
 </Callout>
 
 ### Season
@@ -79,19 +80,25 @@ Each column in the ACH Returns and Rejects table provides specific information t
 - **Actions**\
   Quick tools for handling the return directly from the row:
   - **Send Email** (envelope icon) to notify the family.
-  - **Dismiss** to clear the row once resolved.
+  - **Dismiss** when a later payment fully covers the return (see **Payment since?**).
+  - On **Dismissed**: **Restore** to move the row back to **Active**.
 - **Name**\
   The account holder or family name. Click the name to open their profile in a new view. The link is tied to the family’s account number so you can review their full balance and history.
 - **Amount**\
   The gross amount of the original ACH payment that was returned.
 - **Reason**\
-  A short description of why the ACH was returned or rejected, based on the processor response text.
+  A plain-language decline reason (not the raw processor text). Open it for staff next steps and **Processor said:** when available, then **Email parent**.
 - **Transaction Date**\
   The date the original ACH payment was attempted.
 - **Return Date**\
   The date the return was recorded. The report uses this column for its default sorting (newest returns first).
 - **Payment since?**\
-  Shows whether the family has made a later successful payment since this ACH was returned. Use it to spot returns that may already be resolved (a valid replacement payment has come in) versus those that still need follow-up before you dismiss them.
+  Shows whether a later successful payment covers this return:
+  - **Covered by $X on** a date (green) with **Dismiss** when later payments fully cover it. Tooltip: **Payments since this return cover it.**
+  - **Partial: $X of $Y** (amber) with **Email parent**. Tooltip explains that money came in since the return, but not enough.
+  - No later payment: a red mark / **No successful payment since**.
+
+  **Dismiss** appears only when the return is fully covered.
 
 The table is configured for a large page size and can display up to roughly 1000 rows at once, so you can work through a backlog of returns without constantly paging through results.
 
@@ -110,9 +117,10 @@ Use **Send Email** to notify the family that their ACH payment was returned and 
 When you click **Send Email**:
 
 - Campium opens **Send ACH Return Notification**, targeted to the account's primary email.
-- The preview uses your camp's **ACH payment returned** wording from [Automated Emails](/automated-emails#payments) (including your logo).
-- Helper text: **Preview, with your note added under the camp's wording from Automated Emails.**
-- Optionally fill **Additional Message (optional)**, review the preview, then **Send Email**.
+- The modal loads your camp's **ACH payment returned** wording from [Automated Emails](/automated-emails#payments).
+- Edit **Subject** and **Message**. Helper: **You can change any of the wording before you send it.**
+- While the wording loads, the modal can show **Loading the email...**
+- Click **Send Email**.
 
 Sending the email does **not** remove or hide the row. The return stays visible in the report until you explicitly dismiss it after you receive a valid payment.
 

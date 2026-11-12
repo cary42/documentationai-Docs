@@ -153,7 +153,7 @@ Use **Email** or **Actions** when you need to do something specific for this per
 
     Use this when you need to reach someone quickly with a short update, such as a pickup change, late bus notice, or urgent reminder that is better by text than email.
 
-    When you click **Send SMS**, a small window opens where you confirm the mobile number, type your message, and send it. Without an active camp texting number, the message already ends with **Do not reply directly to this message.**, and Campium warns that this will be a one-way message. With an active camp number, replies can reach **Texts** instead. The message may also appear in your messaging history depending on how your site is configured.
+    When you click **Send SMS**, a small window opens. Under **Send to**, check one or more people by name (or role when no name is on file), with the phone number shown beside each name. Empty state: **No cell phone is on file for this profile or its guardians.** The menu appears when this profile or a guardian has a cell number on file, even if only a guardian has one. Type your message and send. Without an active camp texting number, the message already ends with **Do not reply directly to this message.**, and Campium warns that this will be a one-way message. With an active camp number, replies can reach **Texts** instead. The message may also appear in your messaging history depending on how your site is configured.
 
     <Callout kind="alert" collapsed="false">
       Only send SMS messages for time-sensitive or important updates and follow your camp’s policies around texting families. The **Send SMS** option may be hidden if your site does not have texting enabled or if the profile does not include a mobile number that can receive messages.
@@ -575,9 +575,15 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     Totals at the top: **Season total**, **Paid and credited**, and **Still owed**. Sort with **Newest first** (default) or **Oldest first**. Each row uses plain-language wording and badges such as **Paid** with a date, **Not paid**, **Skipped**, **Removed**, **Returned**, **Covered the** date **missed charge**, or **Not for this season**. Empty state: **No payments or scheduled charges for this season yet.**
 
+    Act from the row when a charge still needs work:
+
+    - On an open **Not paid** row: **Pay now** (needs **Process Payments**), **Email parent**, and **Text parent** when a cell number is on file.
+    - On a payment that took money: **View receipt**.
+    - On the still-owed end row: **Add Payment for** the amount still owed (needs **Process Payments**).
+
     ### Declined scheduled charges
 
-    A declined scheduled charge can appear as one plain-language line on **Sales**, with an info hover that includes staff next steps and **Processor said:** the original processor text when available. Beside the reason, use the mail icon **Email the parent about this decline**. A short note can read like **2 attempts, no automatic retry** when Campium will not keep retrying that method. Families see the same plain decline wording on the parent portal, not the raw processor text.
+    A declined scheduled charge can appear as one plain-language line on **Sales**. The reason looks like a link. Open it (hover on desktop, or click / tap) for staff next steps and **Processor said:** the original processor text when available. From the popover, use **Email parent** or **Text parent** (Text parent only on a profile with a cell number). A short note can read like **2 attempts, no automatic retry** when Campium will not keep retrying that method. Families see the same plain decline wording on the parent portal, not the raw processor text.
 
     ### Add a payment with Account On File
 
@@ -673,7 +679,9 @@ Each tab focuses on a different part of the person’s record. Use these section
         - **Cash**: add an optional **Reason**.
         - **Adjustment**: gives the family a credit without recording money received. The **Reason** shows on the invoice.
         - **Account On File**: charges a saved card or bank account. Choose it under **Account on File**, and leave **Charge On** blank to charge now or pick a date to schedule it.
-        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). Optional **Receipt to** (placeholder **Optional**) emails the cardholder a receipt for this charge (helper: **Email the cardholder a receipt for this charge.**). Leave it blank to skip the receipt. There is no **Charge On** date; the charge runs when you save. When **Add surcharge** is checked and Finix classifies the typed card as debit, Campium drops the fee and can show **Debit card: no surcharge was added.**
+        - **Card (one time)** (Finix and Payabli): charge a card now through the processor's hosted fields without keeping it on file by default. Enter **First Name** and **Last Name**, complete the card fields, optionally add a billing address, and leave **Save to family** off unless you want the card stored (helper: **Leave this off to charge the card once without keeping it on file.**). Optional **Receipt to** (placeholder **Optional**) emails the cardholder a receipt for this charge (helper: **Email the cardholder a receipt for this charge.**). Leave it blank to skip the receipt. There is no **Charge On** date; the charge runs when you save. When **Add surcharge** is checked, helper text can read **If this card is debit, the surcharge comes off automatically.** If Finix or Payabli classifies the typed card as debit, Campium drops the fee and can show **Debit card: no surcharge was added.**
+
+        When a successful payment finishes covering a missed scheduled charge, Campium can note **This payment also cleared the** date and amount **missed charge** (or list several).
         - **Discount**: applies one of your discounts to this family.
         - **Check Refund**: records a refund you paid by check.
 

@@ -214,13 +214,14 @@ Admin **Preview** of the product selection page keeps **Continue** review-only (
 
 ### Recipients tab
 
-Use the **Recipients** tab to set who the form is for and who can see it.
+Use the **Recipients** tab to set who the form is for and who can see it. The tab leads with plain questions over the filter rows:
 
-- At the top, choose who the form is about:
-  - Registration forms: **Who is this registration for?** with helper text **Pick who attends, not who fills the form out.** (Your camper wording may differ.)
-  - Other forms: **Who is this form for?** with helper text **Pick who the form is about. Add Guardians only if they are the ones attending.**
+- **Who is this for?** (person-type buttons). On a registration form, helper text still steers you to pick who attends, not who fills the form out.
 - On a **Registration** form, the audience list only offers user types turned on in **Admin → Site Settings → Basic → Session signup user types**. Types already on the form still appear so you can remove them. Adding a type that is not allowed returns: **That user type is not turned on in Session signup user types.** Standard and upload forms are not limited by that setting. See [Site Settings](/settings).
-- Under **How to apply this form**, choose **To all the Active/Inactive/Pending user types selected above** or **Only people who match the filters below**.
+- **All or Filtered?** choose **All** or **Filtered**.
+- **Season**, sessions checklist, and **Status**, then **Add a filter** for anything else.
+- **Your saved lists** sits beside the questions (rename and delete). Autocomplete tabs show **All changes saved.**
+- A summary card describes who it goes to in plain English. Use **See the list** to open the people modal. That modal uses the house **Export** menu (Copy / Excel / CSV / PDF / Print).
 - If you add a Parent or Guardian type, Campium asks **Will guardians be attending these sessions?** (or your product wording). Choose **Yes, they attend** to keep them, or **No** to remove that type. When a form includes Guardians as its audience, adults on the parent portal see their own form cards even if your camp has no Staff forms (for adult programs where the guardian attends).
 - When the Season filter is exactly one season with a ready snapshot, **Profile answers as of** appears under it (**Today** or that season's **close** / **frozen**), the same control as on custom reports. It changes which profile answers the recipient filters use. Editing notes from reports are omitted here.
 - When the recipient setup needs attention, a warning icon appears next to **Recipients** on the tab.
@@ -628,7 +629,7 @@ The fee is then added to the cart on every registration through this form.
 
 When nothing is due today but a balance remains for scheduled payments, checkout refuses an already-expired card on file (pay later, or a $0 finish that would keep that card for later charges). Families see a message such as **Your primary card ending in** the last four **expired** MM/YY. **Pay later puts your scheduled payments on that card. Please add a new card before finishing.** (or the matching wording when they selected a different expired card). Expiring-but-not-yet-expired cards are not blocked here; bank accounts and charges due today are unchanged.
 
-On the parent checkout page, families choose how much to pay under **How much today?**:
+On the parent checkout page, the **Order Summary** lists each line with the camper's picked weeks (**Weeks:** …) and any product option answers under that line when those answers are on the sale. Families choose how much to pay under **How much today?**:
 
 - **Full amount** with helper **Pay the whole balance today.**
 - Pay-later option (label comes from your portal pay-later text) with helper **Nothing is charged today.** when pay later is allowed
@@ -828,6 +829,8 @@ This notification goes to staff, not families.
 #### Email Template When Approved, Pending, or Rejected
 
 Use **Email Template When Approved**, **Email Template When Pending**, and **Email Template When Rejected** to choose the email Campium sends when a response changes to that status. Leave a template blank to send nothing. Each has a **Click here** link to manage templates on **Admin → Email Templates**.
+
+Beside the approved template, **Also Send To Campers** turns on **Send campers a copy of the approval email**. Helper: **Campers who have their own email address get a copy of the approval email, along with their guardians.** Leave it off when only guardians should get the approval email.
 
 These templates are most useful when staff review submissions and the recipient needs to hear the outcome.
 
