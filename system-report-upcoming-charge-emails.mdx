@@ -3,7 +3,7 @@ title: "Upcoming Charge Emails"
 description: "Preview who will get the next upcoming charge reminder, by send date, without sending the email."
 ---
 
-The **Upcoming Charge Emails** system report shows the next upcoming charge reminders that have not been sent yet: who will receive each one, and a preview of what it will say. The report does not send or queue email.
+The **Upcoming Charge Emails** system report shows the next upcoming charge reminders that have not been sent yet: who will receive each one, and a preview of what it will say. It does not queue the real overnight send. From a preview, you can **Send test to me** so a copy goes only to your signed-in admin email (subject prefixed **[Test]**). Confirm: **Test sent to** your address. If your account has no email: **There is no email address on your account.**
 
 You need **Reports** and **Financial** access, with the financial module on. It is not available on the free plan.
 
@@ -59,13 +59,13 @@ The **Upcoming charge emails** table columns:
 | **Amount** | Payment amount. When several payments for the same person share that send day, the amount cell can show **One email, N payments, $X** so you see they ride in one combined message. |
 | **Season** | Season for the payment |
 | **Payment method** | Method on file, or **No payment method** with a **Fix** link to the family profile at **Payment Methods on File** |
-| **Preview** | Eye button opens **Email preview** with the subject and message for that row (including combined same-day lines when they apply) |
+| **Preview** | Eye button opens **Email preview** with the subject and message for that row (including combined same-day lines when they apply). Footer: **Close** and **Send test to me**. |
 
 Each guardian gets at most one upcoming charge email per send day. When more than one payment for that person shares the send day, Campium combines them into that one email.
 
-If payments were scheduled after today's email already went out, a note titled **Added after today's email** explains that nothing has been sent for them and that this page does not send email.
+If payments were scheduled after today's email already went out, a note titled **Added after today's email** explains that nothing has been sent for them yet and that this page does not queue the overnight send.
 
-When a family already got today's upcoming charge email for another payment on the same day, a note titled **A second payment for a family already emailed today** (or **Second payments for families already emailed today**) explains that each guardian gets one upcoming charge email a day, so the email for that later payment goes out with tomorrow morning's emails. This page does not send email.
+When a family already got today's upcoming charge email for another payment on the same day, a note titled **A second payment for a family already emailed today** (or **Second payments for families already emailed today**) explains that each guardian gets one upcoming charge email a day, so the email for that later payment goes out with tomorrow morning's emails.
 
 Empty states: **No upcoming charge emails are waiting for this day.** or **The upcoming charge email for this day has already been sent.**
 

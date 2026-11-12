@@ -33,7 +33,9 @@ The Scheduled Payments Report includes season and payment-type filters, a month 
 
 ### Season and Payment type
 
-Use the season control and the **Payment type** dropdown in the header to narrow the list. Payment type options include **All Payments**, **Credit Card Only**, **ACH Only**, **No Account on File**, and **Held by pending camper**. Changes update the table and chart right away.
+Use the season control and the **Payment type** dropdown in the header to narrow the list. Payment type options include **All Payments**, **Credit Card Only**, **ACH Only**, **No Account on File**, **Held by pending camper**, and **Cleared by a payment (last 7 days)**. Changes update the table and chart right away.
+
+**Cleared by a payment (last 7 days)** lists missed charges that a later successful payment covered in the last week. Those rows can show a **Cleared by a payment** badge with the date.
 
 ### Held by pending camper
 
@@ -88,7 +90,13 @@ Use this first column for row-level actions such as **Send Payment Notification*
 
 #### Payment Since
 
-**Payment Since** shows whether the family has made a successful payment after this scheduled charge was due. Use it with **Dismiss** when a later payment already covered the missed amount.
+**Payment Since** shows whether a later successful payment covers this missed charge:
+
+- **Covered by $X on** a date (green check) with **Dismiss**. Tooltip: **Payments since this failed cover it.**
+- **Partial: $X of $Y** (amber) with **Email parent**. Tooltip: paid since the failure, but not enough to cover it.
+- No later payment: red mark / **No successful payment since**.
+
+**Dismiss** appears only when the amount is fully covered. Confirm with **Dismiss this declined charge?** (or the ACH wording when the row is a return).
 
 #### Name
 
@@ -192,10 +200,12 @@ Choose which notice to send. Options: **No Payment Account on File**, **Payment 
 
 #### Subject and Message
 
-Edit **Subject** and **Message** in the modal. Helper: **You can change any of the wording before you send it.** Links in the message point families to update payment methods when that fits the notice type.
+Edit **Subject** and **Message** in the modal. Helper: **You can change any of the wording before you send it.** With **Site Settings** permission, a link can also say **edit your camp's default wording** and open [Automated Emails](/automated-emails) for that notice. Links in the message point families to update payment methods when that fits the notice type.
+
+When the family has an active **Guardian 2** with a different email, check **Also send to** that person's name and email. The main send still goes to the account-holder email shown in the modal. Success can read **Email sent successfully to** both addresses.
 
 <Callout kind="alert">
-  Review the **Email Type**, **Subject**, and **Message** carefully before sending, especially for time-sensitive or high-value payments. Emails send to the guardian email addresses listed in the row.
+  Review the **Email Type**, **Subject**, and **Message** carefully before sending, especially for time-sensitive or high-value payments. If the account has no email, Campium asks you to add one on the profile first.
 </Callout>
 
 ### Send the notification
