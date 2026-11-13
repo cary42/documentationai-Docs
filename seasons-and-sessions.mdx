@@ -87,7 +87,9 @@ Wait-listed registrations are added at $0 with no deposit, so the family is not 
 
 ### Copy an existing Season
 
-Copying a Season reuses all of the sessions, forms, and payment plans from one Season in another. Use it when you run the same structure each year.
+Copying a Season reuses all of the sessions, forms, and payment plans from one Season in another. Use it when you run the same structure each year. **Add New Season** on **Seasons** opens this path by default (**Start from** set to **Copy of** your current season). You can still pick **Blank season (nothing copied)** there, or open a season's row menu and choose **Copy Season**.
+
+On **Seasons**, use the banner link **Walk me through it** for **Copy a season and close the old one** when you are rolling into next year. Copy first, then **Close Season** on the old one. See [Manage Seasons](/manage-seasons#create-a-new-season).
 
 To fill an empty season that Guided setup already created, use **Copy last season's setup** on the Guided setup **Sessions** step instead. That path does not create a second season. See [Guided Season Setup](/guided-season-setup#copy-last-seasons-setup).
 
@@ -95,8 +97,7 @@ To fill an empty season that Guided setup already created, use **Copy last seaso
   <Step title="Open the Copy Season modal" icon="folder" title-type="p">
 
     - In the left menu, open **Seasons**.
-    - Find the Season you want to copy.
-    - Open that Season's row menu and select **Copy Season**. In season setup, **New season** → **Copy of** the current season opens the same modal.
+    - Select **Add New Season** (defaults to a copy), or find the Season you want to copy and open that Season's row menu → **Copy Season**. In season setup, **New season** → **Copy of** the current season opens the same modal. **New season** → **Blank season** still opens a blank season.
 
   </Step>
 
@@ -111,8 +112,8 @@ To fill an empty season that Guided setup already created, use **Copy last seaso
   <Step title="Fill in copy fields" icon="edit" title-type="p">
     The Copy Season modal includes:
 
-    <ParamField body="Copy From Season" param-type="string" required="true" deprecated="false">
-      Read-only. Shows the name of the Season you are copying from.
+    <ParamField body="Start from" param-type="string" required="true" deprecated="false">
+      Searchable pick of **Copy of** a season or **Blank season (nothing copied)**. When you opened **Copy Season** from a row menu, this shows the season you are copying from.
     </ParamField>
 
     <ParamField body="New Season Name" param-type="string" required="true" deprecated="false">
@@ -369,7 +370,7 @@ These links take you from configuring options to checking who is registered or w
 
 You create and manage Seasons from **Seasons** in the left menu, including adding Seasons for upcoming registration periods and closing older ones after they end.
 
-- **Create a new Season** with **Add New Season** on the Seasons page (or **New season** → **Blank season** in season setup), then enter the Season name and dates.
+- **Create a new Season** with **Add New Season** on the Seasons page. It starts as a **Copy of** your current season; pick **Blank season (nothing copied)** under **Start from** when you want an empty season. In season setup, **New season** → **Blank season** still opens blank.
 
 - **Set a Season to Inactive** after it has ended. Open the season's row menu, select **Edit Season**, and set **Status** to **Inactive**. Choosing **Inactive** opens the **Close season** page, which lists everything a close does and who it reaches before anything changes.
 

@@ -55,7 +55,7 @@ For several links, CampiumDB shows a count on the right when there is something 
 
 ## Held by pending camper
 
-When scheduled payments are waiting because a camper is still pending, the card can show **Held by pending camper** with a count. Open it to jump to the [Scheduled Payments](/system-report-scheduled-payments#held-by-pending-camper) report already filtered to those rows. Approve the camper, then charge or remove the held installment from there.
+When **Admin → Site Settings → Payment Info** has **Run scheduled payments normally when there is a pending enrollee** turned off, scheduled payments wait only when every camper the installment pays for is still pending. The card can show **Held by pending camper** with a count. Open it to jump to the [Scheduled Payments](/system-report-scheduled-payments#held-by-pending-camper) report already filtered to those rows. Approve the camper, then charge or remove the held installment from there. A payment for an approved camper still runs even if a sibling is pending.
 
 ## ACH returns and rejects
 
