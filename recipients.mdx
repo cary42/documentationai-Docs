@@ -9,7 +9,7 @@ Use **Get direct access link** when a specific family needs access to a form but
 
 <Callout kind="info">
 
-The direct access link bypasses recipient filters, but it does not bypass parent portal login or the form's selected user type rules. It also works before the form's start date, so you can offer early registration to selected families.
+The direct access link bypasses recipient filters, but it does not bypass parent portal login or the form's selected user type rules. Helper text: **Offer early registration to specific families. The link ignores the form's start and end dates and its Visibility, so it works even when the form is Hidden or closed. Families must log in to use it.**
 
 </Callout>
 
@@ -20,9 +20,8 @@ The direct access link helps you give selected families access to a form in spec
 - Gives selected families a direct path to the form
 - Still requires login on the parent portal
 - Still follows the form's selected user types
-- Works before the form's **Start Date** (early registration), while the form is still Active and Visible
-- Still respects the form's **End Date** (a link will not open a form that has already closed)
-- Expires automatically after the timeframe you pick
+- Ignores the form's **Start Date** and **End Date**, and its **Visibility** (works when the form is **Hidden** or closed)
+- Expires automatically after the timeframe you pick, or when you revoke the link
 
 ## Where to find it
 
@@ -43,7 +42,7 @@ Find the link option from inside the form's **Recipients** area.
 
   - Click **Get direct access link** at the bottom of the **Recipients** area.
 
-  - Helper text: **For specific families; they must log in. Bypasses filters, not user types. Works before the form opens, so you can offer early registration.**
+  - Helper text: **Offer early registration to specific families. The link ignores the form's start and end dates and its Visibility, so it works even when the form is Hidden or closed. Families must log in to use it.**
 
   </Step>
 </Steps>
@@ -81,13 +80,12 @@ After you create the link, the card shows the expiration date and time so you ca
 
 Check these items before you share the link:
 
-- Form is **Active** and **Visible** (not Hidden)
-- Form **End Date** has not passed (the link cannot open a form that has already closed)
-- Correct user type or user types are selected in **Recipients**
+- Correct user type or user types are selected in **Recipients** (the link still requires an allowed type)
+- The family can log in on your parent portal
 
-You do **not** need today to fall on or after the form's **Start Date**. The link is meant for early registration before the form opens for everyone else.
+You do **not** need the form to be **Visible**, open, or inside its date window. The link is meant for early registration, late access, and one-off exceptions while the form stays closed or hidden for everyone else.
 
-Wrong form settings can still prevent access, even when the link was created successfully. If generation fails, Campium shows: **This form is inactive, hidden, or past its end date. Save settings and confirm dates before generating a link.**
+If generation fails, Campium shows: **This form could not be found, or your portal address is not set up yet.**
 
 ## What families experience
 
@@ -101,8 +99,8 @@ From the family's side, the process is straightforward:
 
 Use a direct access link when you need an exception without changing your main recipient rules.
 
-- early registration before the form's public **Start Date**
-- late registrant needs immediate access to one form
+- early registration before the form's public **Start Date**, or while **Visibility** is **Hidden**
+- late registrant needs access after the form's public **End Date**
 - one-off exception where filters are too narrow
 - support team needs a quick access path without changing the main filter rules
 
@@ -111,7 +109,7 @@ Use a direct access link when you need an exception without changing your main r
 <ExpandableGroup>
   <Expandable title="Could not generate link" default-open="false">
 
-  Confirm the form is **Active** and **Visible**, and that its **End Date** has not passed. A future **Start Date** is fine for early registration. If the settings look correct, save the form and try again.
+  Confirm the form still exists and that your parent portal address is set up. The link no longer requires the form to be Visible or inside its date window. If the settings look correct, save the form and try again.
 
   </Expandable>
   <Expandable title="Family says link does not work" default-open="false">

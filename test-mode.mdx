@@ -3,23 +3,24 @@ title: Test Mode
 description: Preview forms on the parent portal before launch using Test Mode, including who can see it and how to test safely.
 ---
 
-Test Mode lets staff open a form on the parent portal before the form's open window. While it is on, the form shows for everyone of its user type from a staff login, whatever your recipient filters say. Use it to check the form experience and catch issues before launch.
+Test Mode lets staff open a form on the parent portal before the form's open window. While it is on, the form shows for everyone of its user type from a staff login or a profile's **Login** button, whatever your recipient filters say. Use it to check the form experience and catch issues before launch.
 
 You can turn on Test Mode from **Forms** in the left navigation, then open the form and use the **TEST MODE** toggle in the form toolbar. You can also use the **Test Mode** toggle next to the availability chip on the **Forms** step in **Guided setup**.
 
-Helper text beside the switch: **In test mode, this form shows for everyone of its user type, whatever your recipient filters, and only from a staff login. Turns off once the form opens.** Use **Check a person** to confirm whether a specific account can see it.
+Helper text beside the switch: **In test mode, this form shows for everyone of its user type, whatever your recipient filters, and only from a staff login or a profile's Login button. Turns off once the form opens.** Use **Check a person** to confirm whether a specific account can see it.
 
 <Callout kind="info" collapsed="false">
-Test Mode does **not** open the form to family-only logins. Staff must sign in with a staff login on the parent portal. It also ignores the form's **Recipients** filters while it is on, so every staff login of that user type can open it for testing.
+Test Mode does **not** open the form to family-only logins. Sign in with a staff login on the parent portal, or use **Login** on a profile (under the photo) to open the portal as that person while still counting as a staff session. It also ignores the form's **Recipients** filters while it is on, so every staff login of that user type can open it for testing.
 </Callout>
 
 ## Who can use Test Mode
 
-Only people who are signed into the **parent portal** with a staff or admin role can see a Test Mode form. Regular family accounts still follow the form's normal visibility rules and do not get Test Mode access.
+Only people who are signed into the **parent portal** with a staff or admin role, or who opened the portal from a profile's **Login** button, can see a Test Mode form. Regular family accounts still follow the form's normal visibility rules and do not get Test Mode access.
 
 | Person | Can use Test Mode? | What happens |
 | --- | --- | --- |
 | Staff or admin user signed into the parent portal | Yes | Can view the form before it opens, for that form's user type |
+| Staff using a profile's **Login** button | Yes | Same as a staff login for Test Mode |
 | Family-only login | No | Does not get Test Mode access |
 
 A red **Test Mode** badge appears on the admin Forms list and next to the form on the portal while Test Mode is active.
@@ -50,7 +51,7 @@ A red **Test Mode** badge appears on the admin Forms list and next to the form o
   <Step title="Turn on Test Mode" icon="play-circle">
   Use the **Test Mode** toggle next to the form availability chip in the Forms toolbar.
 
-  The helper explains that everyone of the form's user type can see it from a staff login, and that Test Mode turns off once the form opens. While the form is already **Open**, the switch is locked off. Clicking the locked switch can show: **Test mode is off because this form is open. Families can already see it on the portal.**
+  The helper explains that everyone of the form's user type can see it from a staff login or a profile's **Login** button, and that Test Mode turns off once the form opens. While the form is already **Open**, the switch is locked off. Clicking the locked switch can show: **Test mode is off because this form is open. Families can already see it on the portal.**
   </Step>
 </Steps>
 
@@ -64,8 +65,8 @@ Test Mode lets staff open the form before its open window. It does not change ev
 | --- | --- | --- |
 | Before the Start Date | Allowed for staff | Staff of that user type can open the form |
 | After the End Date | Allowed for staff | Same as above while Test Mode is still on |
-| Recipients filters | Bypassed | Everyone of the form's user type can open it from a staff login |
-| Staff login on the parent portal | Required | Family-only logins do not get Test Mode |
+| Recipients filters | Bypassed | Everyone of the form's user type can open it from a staff login or profile **Login** |
+| Staff login on the parent portal | Required | Family-only logins do not get Test Mode. A profile **Login** counts as staff. |
 
 ### What Test Mode does not bypass
 

@@ -173,7 +173,7 @@ If the family has no payment methods on file, the retry window asks you to add o
 
 ## Held by a pending camper
 
-Some scheduled payments wait because a camper is still pending. Those are not failed charges. Open them from **Payment Issues → Held by pending camper**, or filter Scheduled Payments to **Held by pending camper**. Approve the camper, then **Charge now** or remove the hold. See [Scheduled Payments](/system-report-scheduled-payments#held-by-pending-camper).
+Some scheduled payments wait when every camper the installment pays for is still pending (**Admin → Site Settings → Payment Info** → **Run scheduled payments normally when there is a pending enrollee** is off). Those are not failed charges. Open them from **Payment Issues → Held by pending camper**, or filter Scheduled Payments to **Held by pending camper**. Approve the camper, then **Charge now** or remove the hold. See [Scheduled Payments](/system-report-scheduled-payments#held-by-pending-camper).
 
 Card update alerts can also offer **Retry failed payment ($X due since …)** for the oldest failed installment after a family updates their card. That path needs **Process Payments** and does not target held-by-pending rows.
 
