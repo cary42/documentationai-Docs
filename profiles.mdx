@@ -255,6 +255,8 @@ Use **Login** to see exactly what a parent or staff member sees in their portal.
   </Step>
 </Steps>
 
+A strip under the portal header explains the staff session. By default it names the family and says **test-mode forms show because you came from a staff profile.** Turn on **See exactly what they see** to hide staff extras (including Test Mode forms) so the portal matches the family; the strip then says you are viewing **exactly as they see it.** Use **Back to profile** to return. A fresh **Login** resets the switch. You can also turn on **Show where to edit** to pin chips that open the Campium screens that change each part of the page (see [Test Mode](/test-mode#staff-view-from-profile-login)).
+
 On a family profile, each adult in the family list also has a small **Login** badge next to their name.
 
 <Callout kind="info" collapsed="false">
@@ -514,13 +516,13 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - Use **Filter by profile field** to narrow the list.
 
-    - When ready season snapshots exist for this person, use the **Season snapshot** menu (default **Current data**) to compare side by side, or to edit a season you froze early. The right column shows the snapshot values; a **Changed** badge marks fields that differ. User-link fields that were never stored in snapshots show **Not saved in snapshots**. Blank snapshot cells mean that field was not answered when the snapshot was taken. On an editable freeze, seasons and products can show **Updates when this season's sessions change**; other read-only snapshot fields show **Can't be changed for this season**.
+    - When ready season snapshots exist for this person, use the **Season snapshots** multi-select (empty label **Current data only**) to compare up to three seasons side by side, or to edit a season you froze early. Each selected season gets its own snapshot column (for example **Summer 2025 snapshot**). A **Changed** badge marks fields that differ from current data. User-link fields that were never stored in snapshots show **Not saved in snapshots**. Blank snapshot cells mean that field was not answered when the snapshot was taken. Comparing several seasons is view-only; to edit a frozen season, leave only that season checked. On an editable freeze, seasons and products can show **Updates when this season's sessions change**; other read-only snapshot fields show **Can't be changed for this season**.
 
     Fields on this tab often update as soon as you change them, without needing to click a separate save button.
 
     Profile fields from your field library stay visible here based on hide settings and user type, not on an old year stamp. If a field used to disappear from All User Data after you provisioned it from the library, it should appear again after the next refresh.
 
-    You need permission to view the custom profile tab. The snapshot menu appears only when at least one **Snapshot ready** season captured this person. Snapshots are created when you close a season (Active to Inactive), or when you use **Freeze this season's data** on an active season. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
+    You need permission to view the custom profile tab. The snapshot control appears only when at least one **Snapshot ready** season captured this person. Snapshots are created when you close a season (Active to Inactive), or when you use **Freeze this season's data** on an active season. See [Manage Seasons](/manage-seasons#freeze-a-running-seasons-data).
 
     If you try to save an email address that already belongs to someone else, Campium can say **That email address is already used by** that person's name (with a link to that profile when available) and may tip you toward [Merge Users](/merge-users) when the duplicate is clear.
   </Tab>

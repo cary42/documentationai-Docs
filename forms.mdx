@@ -72,7 +72,7 @@ After you click **Save Settings**, the badge updates without a full page reload.
 
 ## Create a new form
 
-Use the **New Form** button on the Forms list to start a new form.
+Use the **New Form** button on the Forms list to start a new form. Beside **Recently deleted** and **New Form**, use **Test your registration** for a dry run before families register (see [Test your registration](#test-your-registration)).
 
 <Steps>
   <Step title="Open the Forms list" icon="folder" title-type="p">
@@ -85,7 +85,8 @@ Use the **New Form** button on the Forms list to start a new form.
     - Click the **New Form** button at the top of the list.
     - Enter a **Form Name**, choose a season under **Select Season**, and pick a **Form Type**. In this dialog the types read **Registration (With Products For Sale)**, **Standard (Nothing for sale, just a form)**, and **Allow an upload of a File**. In the editor they read **Registration (With Products)**, **Standard (No Products for Purchase)**, and **Upload a File**.
     - When the form name looks like an immunization form (for example it contains "immunization" or "immunisation"), Campium offers **Include our immunization form?** Parents download Campium's blank fillable PDF, take it to their doctor, and upload the completed copy. Checking it sets **Form Type** to **Allow an upload of a File**. Use **Preview the form** to open the PDF. The same offer appears when you create a form from Guided Season Setup.
-    - Click **Create**. Campium creates the form and opens the form editor with the **Settings** tab active.
+    - Or click **Import from a PDF** to create the form and open the packet import flow. Helper text: **Import from a PDF: upload the registration packet you send families, and we turn it into this form's questions for you. You check every question before anything is added.** See [Import from a PDF](#import-from-a-pdf).
+    - Click **Create**. Campium creates the form and opens the form editor with the **Settings** tab active (unless you chose **Import from a PDF**).
 
     The editor shows additional tabs such as **Recipients**, **Questions**, and **Responses**, and may show **Products Layout** depending on the Form Type.
   </Step>
@@ -121,7 +122,7 @@ Use the **New Form** button on the Forms list to start a new form.
     - **Discount settings** (registration only)
       - **Allow For Discounts To Be Applied**
       - **Allow Multiple Discounts**
-      - **Auto Apply These Discounts**
+      - **Auto Apply These Discounts** (helper: **Applies these discounts to every registration.** Discounts that have no end date stay available in this list.)
       - **Enable Pay In Full Discount**, with **Pay In Full Discount Type** and **Pay In Full Discount Value** to override the default amount or percent for this form
     - **Send Reminder Emails** (helper: **Users with a form status of "in progress" or "not started" will receive an email asking them to complete the form.** A warning under it says to avoid reminders on a primary registration form or on any form where a large audience could receive these emails.)
     - **Email settings**
@@ -152,6 +153,38 @@ Use the **New Form** button on the Forms list to start a new form.
     - Campium saves your changes and keeps you in the editor so you can set up Recipients, Questions, and other options.
   </Step>
 </Steps>
+
+## Import from a PDF
+
+Use **Import from a PDF** when you already have a registration packet and want Campium to draft the form's questions from that file. You need **Manage Forms**. Imported forms start in Test Mode so families do not see them until you are ready. There is a daily read limit of 20 packet reads per camp.
+
+1. On **Forms**, click **New Form**, fill in the name, season, and type, then click **Import from a PDF** (instead of **Create** alone).
+2. On the import page (subtitle **Import from a PDF**), under **Your packet**, choose the PDF and click **Read this file**.
+3. Review **Here is what we found**. Untick anything you do not want. Helper text reminds you that nothing is added until you click **Add to the form**, and that a form in test mode stays in test mode.
+4. Click **Add to the form**.
+
+### Undo your last import
+
+After an import, the same page can show **Undo your last import** with each added item checked. Helper text: **Untick anything you want to keep.** Remove takes the ticked items off the form (with their follow-up rules). Answers already saved stay on each profile, and any new profile fields stay in your field list. You can do this once until the deadline shown. The button reads **Remove this item**, **Remove all N items**, or **Remove K of N items** when you leave some unticked. Confirm with **Yes, remove them** or **Keep them**.
+
+While undo is still available, the form editor can also note how many items you added from that PDF.
+
+## Test your registration
+
+Use **Forms → Test your registration** (also offered from Go Live / checklist when those apply) to walk a registration form the way a family will, then confirm what Campium recorded. You need **Manage Forms**. The page title is **Test your registration**. Subtitle: **Walk through your form the way a family will, then check what Campium recorded.**
+
+Pick a form under **Form to test**, then work the **Steps** list. States show as **Done**, **To do**, or **Check this**. Typical steps:
+
+1. **Put your sessions on the form** (**Open form settings**)
+2. **Check your questions** (**Open questions**)
+3. **Make sure you can see the form** (camps not live yet) or **Turn on Test mode for this form** (live camps)
+4. **Open the form on your portal** (**Open your portal**). Sign in with your staff email. In the staff bar, turn on **Show where to edit** so each part of the page gets a link to the Campium screen that changes it.
+5. **Register a test camper and check out**. Use **Show me how** for the detailed parent steps (add a camper, **Start** the form, pick a session, check out). Camps not live yet use the test card `4111 1111 1111 1111`. Live camps with Test Mode on use **Submit - test mode**.
+6. **Find the registration in Campium** (**Open responses**)
+7. **Check the confirmation email** (**Open recipients**)
+8. **Clean up before families register** (remove test enrollments, turn off Test Mode when you are ready)
+
+See [Test Mode](/test-mode) for who can see Test Mode forms and the staff view strip from a profile **Login**.
 
 ## Tabs inside a form
 

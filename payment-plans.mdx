@@ -48,13 +48,15 @@ When the season has no plans yet, the page shows **No payment plans yet**, with:
 
 ## Preview a sample schedule on the list
 
-In the plans table, the **Preview for** column header has a `$` sample balance box (default `$1,000`). Hover the label to see **What a family owing this sample balance would be charged, and when**. The same control appears on the **Payment plans** step of a season's **Guided setup** (from **Seasons**).
+In the plans table, the **Sample balance** label sits next to a `$` sample amount box (default `$1,000`). Hover the label to see **What a family owing this sample balance would be charged, and when**. Under it: **Example only. No family is charged from this list.** The same control appears on the **Payment plans** step of a season's **Guided setup** (from **Seasons**).
 
-Each row under that column shows the sample schedule for that plan, Standard and Even Split alike. Rows can show **per camper** or **balance** badges. Long schedules use **Show N more** / **Show fewer**.
+The **Sample charges** column shows the sample schedule for that plan, Standard and Even Split alike. Hover the column header for the same example-only note. Rows can show **per camper** or **balance** badges. Long schedules use **Show N more** / **Show fewer**.
 
 If a plan cannot be previewed yet, the cell explains why, for example a missing final payment date, no plan details, every charge date in the past, or nothing due on that sample balance. Changing the sample balance refreshes every row.
 
-Use **Copy All To Another Season** to copy every plan in the current season. When the page shows **Preview Cart**, it opens a cart preview in a new tab so you can try real payment plans and paying-today choices without signing in as a parent. That button is separate from the **Preview for** column. The preview needs one season that has a registration form; otherwise you see **Cart preview unavailable.** with a note to open Payment Plans for a season that has a registration form. The built-in **Custom** plan is left out of the preview list.
+When you create or edit an **Even Split** plan, the preview panel reads **Sample charges for a family owing $1,000** with **Example only. No family is charged from this preview.**
+
+Use **Copy All To Another Season** to copy every plan in the current season. When the page shows **Preview Cart**, it opens a cart preview in a new tab so you can try real payment plans and paying-today choices without signing in as a parent. That button is separate from the **Sample charges** column. The preview needs one season that has a registration form; otherwise you see **Cart preview unavailable.** with a note to open Payment Plans for a season that has a registration form. The built-in **Custom** plan is left out of the preview list.
 
 ## Create a new plan
 
@@ -172,7 +174,7 @@ This is a per-plan setting and works with any payment processor.
 
 <Callout kind="tip">
 
-Use the **Preview for** sample balance on the payment plans list to check how Standard and Even Split charges fall between the start and end dates before families use a plan.
+Use the **Sample balance** / **Sample charges** controls on the payment plans list to check how Standard and Even Split charges fall between the start and end dates before families use a plan.
 
 </Callout>
 
@@ -442,7 +444,7 @@ On an **Even Split** plan, **Final payment** can be **Before each session starts
 3. Enter **Days before start** (required). Example: `7` means each session's share is paid off seven days before that session starts.
 4. Set **End Date** as the last day families can still pick the plan.
 5. Set **Start Date** no later than the final payment date of your last session. If the Start Date is after that cutoff, Campium refuses to save with: **The Start Date is after …, the final payment date of the last session. Charges begin on the Start Date, so move it earlier.**
-6. Save the plan. Use **Preview for** on the list to check a sample schedule. Preview notes can mention how many sessions start in the sample window.
+6. Save the plan. Use **Sample balance** / **Sample charges** on the list to check a sample schedule. Preview notes can mention how many sessions start in the sample window.
 
 When a family signs up late relative to a session's final-payment date, the preview can note that the session's share is **charged in full** on the late-charge date (or today once that date has passed), for example: **Final payment due … so that share is charged in full on ….**
 
@@ -478,7 +480,7 @@ Charges on the 1st and 15th of each month when those dates fall within the date 
 
 When a family's season balance changes (for example you add or remove a session, or apply a discount), remaining scheduled payments update as follows:
 
-- **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Preview for** sample and **Recalc Even Split** use the same rounding. Per-session Even Split plans re-spread within each session's payoff window.
+- **Even Split** (plan-based): remaining installments re-spread evenly across the rest of the schedule. Early installments use whole dollars; any leftover cents land on the last installment. The list **Sample charges** preview and **Recalc Even Split** use the same rounding. Per-session Even Split plans re-spread within each session's payoff window.
 - **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row). Recording an extra payment on an equal-percent Standard plan also re-spreads the leftover the same way (toast title **Payment plan updated**). Hand-edited installment rows stay as you left them.
 - **Standard** plans with unequal percents or fixed dollar amounts: leftover balance still flexes on the final **Charge Entire Balance** row when that row is set to **Yes**.
 
