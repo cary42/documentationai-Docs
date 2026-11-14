@@ -90,7 +90,7 @@ A template includes:
   <Step title="Choose what happens when sent and after signing" icon="settings" title-type="p">
     When your staff **Application Status** profile field has options, the **When sent** panel appears. Set that field for when the contract is emailed, or leave **No Change**. Helper text: **Sets this profile field when the contract is emailed. It never moves someone back from Hired or from a status a signed contract set.**
 
-    In the **Before signing** panel, set **Form to finish first** (or leave **None**). Helper text: **They see a link to this form and can't sign until they submit it.** See [Form to finish before signing](#form-to-finish-before-signing).
+    In the **Before signing** panel, set **Forms to finish first** (multi-select, or leave **None**). Helper text: **They see a link to each form and can't sign until they submit all of them.** See [Forms to finish before signing](#forms-to-finish-before-signing).
 
     In the **After signing** panel, set **User status** (and the application-status control when it appears). Leave either on **No Change** to keep the signer's current value. See [Optional status changes on signing](#optional-status-changes-on-signing).
 
@@ -140,6 +140,7 @@ Limits and behavior:
 
 - Up to **5** files per template, **PDF** or **Word**, each up to **10 MB**.
 - Attached files go out with the contract email (generate, resend, reminder, and test sends).
+- When you attach a Word file (`.doc` / `.docx`), Campium asks **Convert** that filename **to PDF? Families can open a PDF on any phone.** Choose **Convert to PDF** or **Keep as Word**.
 - Removing a file stops future emails from that template from including it. Emails already sent keep the file they had.
 
 ### Activate or deactivate templates
@@ -214,11 +215,11 @@ Instances track:
 
 ### Open instances for a template
 
-On **Admin → Contracts**, click the template **Name** (or the **Usage** count) to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, **Signed**, and **Waiting on form** (with a live count) when the template has a **Form to finish first** and anyone still owes that form. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
+On **Admin → Contracts**, the template list includes **Sent** and **Unsigned** count columns (click a count to open those instances). Click the template **Name** to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, **Signed**, and **Waiting on form** (with a live count) when the template has **Forms to finish first** and anyone still owes a form. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
 
 While **Waiting on form** is selected, **Email the form link (N)** appears. Confirm with **Email the form link to N person/people? Only the form link goes out, not the contract again.**, then **Send**. That nudge emails only the form link (subject starts with **Reminder: please fill out** the form name **before signing your** template name). It does not resend the contract, and automatic contract reminders keep their schedule. Drafts, people without an email, and people who already submitted the form are skipped. After a send, the row can show **Form link emailed** with the date (and a send count when you nudge more than once).
 
-On each template row you can **Edit template**, **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
+On each template row, a pencil control (**Edit template**) sits to the left of the row menu. The menu still offers **Edit template**, **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists.
 
 On **Preview**, a **Sample person** control lets you pick anyone on your staff to see the contract with their real details. Changing the selection reloads the preview.
 
@@ -234,7 +235,7 @@ On **Preview**, a **Sample person** control lets you pick anyone on your staff t
   </Step>
 
   <Step title="Optionally email them" icon="mail" title-type="p">
-    Leave **Email user that they have a contract waiting on the portal** checked to write an **Email Subject** and **Email Body**, or clear it to create without sending mail. Merge fields include `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}`. Saving keeps this email for the next contract you send from this template. Buttons: **Preview Email**, **Reset to Default**, and **Save for this template** (success: **Email saved for this template.**). The same **Save for this template** control appears when you send from [Staff Hub](/staff-hub#send-contracts-to-several-staff-at-once).
+    Leave **Email user that they have a contract waiting on the portal** checked to write an **Email Subject** and **Email Body**, or clear it to create without sending mail. Merge fields include `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}`. Saving keeps this email for the next contract you send from this template. Buttons: **Preview Email**, **Reset to Default**, **Send test**, and **Save for this template** (success: **Email saved for this template.**). **Send test** needs a **Contract Template** picked first; otherwise you see **Pick a contract template first. The test uses its name and attachments.** The same **Save for this template** control appears when you send from [Staff Hub](/staff-hub#send-contracts-to-several-staff-at-once).
   </Step>
 
   <Step title="Send" icon="check-circle" title-type="p">
@@ -347,21 +348,21 @@ Admins can see when a contract was viewed, signed, and downloaded.
   Download PDFs for long-term storage outside the system or to share signed contracts internally with HR or leadership.
 </Callout>
 
-### Form to finish before signing
+### Forms to finish before signing
 
-On a contract template, the **Before signing** panel lets you require a portal form first.
+On a contract template, the **Before signing** panel lets you require one or more portal forms first.
 
 1. Open **Admin → Contracts**, then open the template.
-2. Under **Before signing**, choose **Form to finish first**, or leave **None**.
-3. Helper text: **They see a link to this form and can't sign until they submit it.**
+2. Under **Before signing**, choose **Forms to finish first** (multi-select), or leave **None**.
+3. Helper text: **They see a link to each form and can't sign until they submit all of them.**
 
-When a form is set:
+When forms are set:
 
-- On the portal **Contracts** list (**My Account → Contracts**), an unsigned card that still owes the form shows a **Waiting on** badge with the form name, a primary **Fill out** button for that form, and **Review & Sign** as a secondary action. After the form is done, the card goes back to a single primary **Review & Sign**.
-- On the portal contract page, the signer sees **One step before you sign**, **Please fill out** the form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until the form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
-- On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while the form is still owed. Use the **Waiting on form** chip and **Email the form link** on the instances list to nudge people who still owe the form (form link only; the contract is not resent).
-- Contract emails (generate and resend) insert a short note that they must fill out the form first, plus a **Fill out** button ahead of **Sign Contract**. After the form is submitted, a later resend drops that button.
-- After the form is submitted, the form receipt can show that their contract is ready to sign, with **Now sign your contract**, for each sent, unsigned family contract that was waiting on that form.
+- On the portal **Contracts** list (**My Account → Contracts**), an unsigned card that still owes a form shows a **Waiting on** badge with that form name, a primary **Fill out** button for the next owed form, and **Review & Sign** as a secondary action. After every required form is done, the card goes back to a single primary **Review & Sign**.
+- On the portal contract page, the signer sees **One step before you sign**, **Please fill out** the next form name **first. Once you submit it, come back here to sign.**, then **Fill out** that form name (and **Back to contracts**). Signing stays blocked until every required form is finished (pending, approved, or completed statuses count). Trying to sign early shows **Please fill out** the form name **before you sign.**
+- On **Admin → Contracts** (instances) and the person's profile **Contracts** tab, a **Waiting on** badge with the form name sits beside the status while a form is still owed. Use the **Waiting on form** chip and **Email the form link** on the instances list to nudge people who still owe a form (form link only; the contract is not resent).
+- Contract emails (generate and resend) insert a short note that they must fill out the form first, plus a **Fill out** button ahead of **Sign Contract**. After the forms are submitted, a later resend drops that button.
+- After a required form is submitted, the form receipt can show that their contract is ready to sign, with **Now sign your contract**, for each sent, unsigned family contract that was waiting on that form.
 ### Optional status changes on signing
 
 On a contract template, you can set what happens to the signer after they finish signing.

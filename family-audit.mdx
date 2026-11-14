@@ -1,46 +1,46 @@
 ---
 title: Family Audit
 description: >-
-  See one row per family for a season as of a date you pick: charges, refunds,
-  credits, card and non-card payments, and the balance left.
+  See one row per family for a season or All Seasons over a date range you
+  pick: charges, refunds, credits, card and non-card payments, and balance.
 ---
 
-Use **Family Audit** when you need a season snapshot for auditors or your bookkeeping team: every family that had activity in that season, with money totals as of a date you choose.
+Use **Family Audit** when you need a season money snapshot for auditors or your bookkeeping team: every family that had activity in that season, with money totals for a date range you choose.
 
 You need **Financials** access (financial module on). The report is not on the free plan. It also appears under **Reports → System Reports → Money**.
 
 ## Open the report
 
 1. Go to **Financials → Family Audit** (next to **Family Ledger**), or open **Family Audit** under **Reports → System Reports → Money**.
-2. Pick a **Season** in the page header.
-3. Set **As of** to the date you want. Totals include charges, payments, refunds, and credits recorded through the end of that day.
+2. Pick a **Season** in the page header, or choose **All Seasons**.
+3. Set the date range in the header (**start** and **end**). Leave the start blank to include everything through the end date (an as-of style snapshot). Older links that only had a single date still work as the end date.
 4. If no season is selected, the page shows **Pick a season to run the audit.**
 
-The page title includes the season name. The subtitle reads like **Every family's charges, refunds, credits, payments and balance as of** the long date.
+The page title includes the season name (or **All Seasons**). The subtitle covers charges, refunds, credits, payments, and balance. When you set a start date, the subtitle also notes that each column counts only what was entered in the range, so **Balance** is the change over the range rather than a true remaining balance.
 
 ## Columns
 
-Each row is one family.
+Each row is one family. Hover the info icon on a column header for the same wording Campium shows in the report.
 
 | Column | What it shows |
 | --- | --- |
 | **Family** | Last name(s) for the household. Click to open the primary guardian's profile. |
 | **Adults** | First names of the primary and secondary guardians. |
-| **Children** | First names of children in the family. A sibling with no enrollment in that season shows **(Not Enrolled)** after their name. Enrolled children have no extra label. |
+| **Children** | First names of children in the family. Anyone with no charge for this season in the date range is marked **Not Enrolled**. |
 | **City/State** | City and state from the primary guardian. |
-| **Charges** | Sale lines for the season that were active as of the date (not yet cancelled by then). |
-| **Refunds** | Card or bank refunds recorded by that date. |
-| **Credits** | Credits, discounts, and adjustments applied by that date. |
-| **Paid Non-CC** | Payments other than card (cash, check, ACH, and similar) by that date. |
-| **Paid CC** | Card payments by that date. |
+| **Charges** | Sessions and items bought in the date range that were not cancelled by the end date. |
+| **Refunds** | Money sent back to the family by card, bank, check, or cash. |
+| **Credits** | Discounts, scholarships, credits, and manual adjustments. |
+| **Paid Non-CC** | Bank (ACH), check, cash, and balance transfers, less fees. |
+| **Paid CC** | Card payments, less fees. |
 | **Paid Total** | **Paid Non-CC** plus **Paid CC**. |
-| **Balance** | What the family still owed for that season as of the date (charges minus credits and payments, plus refunds). |
+| **Balance** | Charges minus Credits minus Paid Total, plus Refunds. A negative number means the family has a credit. With a start date set, this is the change over the range. |
 
 A **Totals** footer sums the money columns across every family on the list.
 
 ## Export
 
-Use the table toolbar **Copy**, **Excel**, **CSV**, **PDF**, or **Print** controls. PDF and Print include the as-of date and page numbers. The list is built for a short PDF of the whole season.
+Use the table toolbar **Copy**, **Excel**, **CSV**, **PDF**, or **Print** controls. PDF and Print include the date range and page numbers.
 
 ## Related pages
 

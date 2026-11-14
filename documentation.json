@@ -154,6 +154,10 @@
                     "path": "family-audit"
                   },
                   {
+                    "title": "Revenue Year Over Year",
+                    "path": "revenue-year-over-year"
+                  },
+                  {
                     "title": "Ledger Summary",
                     "path": "ledger-summary"
                   },
