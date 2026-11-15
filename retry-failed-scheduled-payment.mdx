@@ -267,6 +267,10 @@ Use these checks when retry is unavailable or the result is not what you expect.
 - Retry with the new method after the update.
 - For ACH returns, use a different bank account if needed.
 
+### Retry is missing after a generic bank decline
+
+When the reason is **Bank declined, no reason given**, Campium hides **Retry** on that saved method. Families see: **Your bank declined this payment and didn't say why. Call the number on the back of your card, or use a different payment method.** Staff guidance: trying the same card again almost never works; once the bank clears it, have them enter the card again, or take another method. Entering the card again (or choosing a different method) restores **Retry**.
+
 ### Failed payment is not listed
 
 - Check whether the scheduled payment is still pending and has not reached its processing date yet.

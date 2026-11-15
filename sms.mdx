@@ -56,11 +56,13 @@ Camps with a texting-number application also have a public opt-in and terms page
 
 ## Texts inbox
 
-Open **Communications → SMS → Texts** when your number is active and you have the inbox permission. You can also open **Texts** from the top bar (phone and desktop) when you have inbox access. A red unread badge on that control shows how many family replies are unread for your camp. Empty state: **Texts you start and replies from families show up here.** Staff can start a conversation with a phone on file and reply from the web (and from the Campium mobile app when that route is available). Group-only families that should not appear in this inbox stay out of the list.
+Open **Communications → SMS → Texts** when your number is active and you have the inbox permission. You can also open **Texts** from the top bar (phone and desktop) when you have inbox access. A red unread badge on that control shows how many family replies are unread for your camp (it updates while the page is open). Empty state: **Texts you start and replies from families show up here.** Staff can start a conversation with a phone on file and reply from the web (and from the Campium mobile app when that route is available). Opening a conversation loads that thread without a full page reload. Group-only families that should not appear in this inbox stay out of the list.
+
+On an open conversation, use **Mark as unread** to put a family reply back in the unread count (flash: **Marked as unread.**). After someone reads the latest inbound reply, a line under that reply can show **Read by** that staff member's first name **at** a time (or **on** a date **at** a time when it was another day), or **Read by you** when you were the reader.
 
 ### Who gets alerted
 
-On **Texts**, under **Reply Settings**, use **Who gets alerted** to pick staff (placeholder **Pick staff**). Helper text: **When a family replies, these people get an email and the app alert. The staff member who last texted that family gets them too. Everyone who can open Texts sees the unread count at the top of the page.** Click **Save settings**. The staff list is people who have the inbox permission.
+On **Texts**, under **Reply Settings**, use **Who gets alerted** to pick staff (placeholder **Pick staff**). Helper text: **When a family replies, these people get an email and the app alert. The staff member who last texted that family gets them too. Everyone who can open Texts sees the unread count at the top of the page.** Click **Save settings**. The staff list is people who have the inbox permission. Texts you send from the Campium app (including **Text parents** on Bus Notes) also record you as the last sender, so replies alert you even when you are not on the **Who gets alerted** list.
 
 One-way blasts from **New SMS** still use your camp's outbound path. The shared one-way number story above applies only when you do not have an active camp number.
 
@@ -272,5 +274,5 @@ Use Logs when:
 - **Use SMS for time-sensitive updates.** Save texts for information families need quickly, such as last-minute changes or urgent reminders.
 - **Respect timing.** Avoid late-night or early-morning messages unless they are urgent.
 - **Avoid over-sending.** If an update is not urgent, use email, or combine several minor updates into one SMS.
-- **Respect opt-outs and preferences.** If a family asks not to receive texts, keep a note in your records and choose other communication channels for them. When someone replies **STOP** to the carrier, Campium turns off **SMS Subscribed** on matching profiles so they are not texted again. Turning SMS off yourself in Campium is separate from a carrier opt-out. A later **START** reply can resubscribe profiles that were turned off by a carrier STOP.
+- **Respect opt-outs and preferences.** If a family asks not to receive texts, keep a note in your records and choose other communication channels for them. When someone replies **STOP** to your camp's number (or to the carrier), Campium treats them as opted out. The conversation can show **This family replied STOP, so you can't text them until they reply START.** Trying to text them again can show **This person has opted out of SMS messages.** Campium also turns off **SMS Subscribed** on matching profiles. Turning SMS off yourself in Campium is separate from a carrier opt-out. A later **START** reply can resubscribe profiles that were turned off by a STOP.
 - **Match tone to the situation.** Use a calm, straightforward tone, especially for weather or safety-related updates.
