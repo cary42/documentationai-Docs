@@ -209,7 +209,7 @@ You can also delete a failed scheduled payment with the **Delete This Record** i
 
 | Related report | Use |
 | --- | --- |
-| **Scheduled Payments Potential Issues** | Find families whose scheduled charges may need attention |
+| **Payment Follow-up → Schedule at risk** | Find families whose scheduled charges may need attention |
 | **Card Updates – Families with Failed Payments** | Find families who updated payment methods after failures |
 
 ## What happens when you retry
@@ -267,9 +267,11 @@ Use these checks when retry is unavailable or the result is not what you expect.
 - Retry with the new method after the update.
 - For ACH returns, use a different bank account if needed.
 
-### Retry is missing after a generic bank decline
+### Retry after a bank decline
 
-When the reason is **Bank declined, no reason given**, Campium hides **Retry** on that saved method. Families see: **Your bank declined this payment and didn't say why. Call the number on the back of your card, or use a different payment method.** Staff guidance: trying the same card again almost never works; once the bank clears it, have them enter the card again, or take another method. Entering the card again (or choosing a different method) restores **Retry**.
+When Campium maps the decline to **Bank declined, no reason given** (or another reason that blocks the same method), **Retry** stays hidden on that saved method until the family enters the card again or picks another way to pay. Families see plain guidance such as: **Your bank declined this card. Enter it again once your bank clears it, or pick another way to pay.** On **Payment Methods → Failed Payments**, the declined card can stay listed in grey with **Enter this card again**.
+
+If the processor text is not yet mapped to a known reason, staff and families still see **Bank declined, no reason given**, but **Retry** stays available. Mapped reasons that block retry (closed account, expired card, and similar) still hide **Retry** until the method is fixed.
 
 ### Failed payment is not listed
 

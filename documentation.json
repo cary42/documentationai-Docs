@@ -294,11 +294,11 @@
                     "path": "system-report-payment-plans"
                   },
                   {
-                    "title": "Family Scheduled Payments report",
+                    "title": "Payment Follow-up - Schedule at risk",
                     "path": "system-report-family-scheduled-payments"
                   },
                   {
-                    "title": "Families Without Primary Payment Method report",
+                    "title": "Payment Follow-up - No payment method",
                     "path": "system-report-families-without-primary-payment-method"
                   },
                   {
@@ -338,7 +338,7 @@
                     "path": "system-report-upcoming-charge-emails"
                   },
                   {
-                    "title": "Scheduled Payments - Missing report",
+                    "title": "Payment Follow-up - Nothing scheduled",
                     "path": "system-report-scheduled-payments-missing"
                   },
                   {

@@ -1,17 +1,17 @@
 ---
-title: Scheduled Payments - Missing report
-description: Identify families without scheduled payments for a selected season, understand each column in the Scheduled Payments - Missing report, and interpret no-data results.
+title: Payment Follow-up - Nothing scheduled
+description: Find families who owe money with no scheduled payments, review the Payment Plan column, and follow up from Payment Follow-up.
 ---
 
-## Purpose of the Scheduled Payments - Missing report
+## Purpose of the Nothing scheduled tab
 
-Use the **Scheduled Payments - Missing** report to find families that do not have any scheduled payments set up for a given season. This helps you close gaps in payment plans before balances become overdue.
+**Nothing scheduled** is one tab of **Payment Follow-up**. Use it to find families that owe money for a season and do not have any scheduled payments covering that balance. Most already have a card or bank account on file. Set up a plan or charge the balance.
 
-When a family appears on this report, at least one student tied to that family has a balance for the selected season and no active scheduled payments covering that balance.
+Families with no payment method on file appear on **No payment method** instead. See [Payment Issues](/payment-issues#payment-follow-up).
 
 <Callout kind="info">
 
-Run this report regularly during enrollment and early in the season to catch families who still need to set up scheduled payments.
+The page title is **Payment Follow-up for** the selected season. The active tab is **Nothing scheduled**. For any one season, each family shows on one Payment Follow-up tab only.
 
 </Callout>
 
@@ -21,9 +21,10 @@ Access the report from the system menu and choose the season you want to review.
 
 <Steps>
 
-  <Step title="Open the Scheduled Payments - Missing report" icon="folder">
+  <Step title="Open Payment Follow-up" icon="folder">
 
-  - On the dashboard, open the **Payment Issues** card and select **Scheduled Payments - Missing** (or the matching missing-payments label on that card).
+  - On the dashboard, open the **Payment Issues** card and select **Payment Follow-up**, or go to **Reports → System Reports → Money → Payment Follow-up**.
+  - Click the **Nothing scheduled** tab.
 
   </Step>
 
@@ -31,14 +32,14 @@ Access the report from the system menu and choose the season you want to review.
 
   - Use the **Season** selector at the top of the page.
   - Choose a specific season (for example, **2024–2025**) or select **All Seasons**.
-  - The page title updates to show **Scheduled Payments - Missing for** the season name or **Scheduled Payments - Missing for All Seasons** so you always know which data you are viewing.
+  - The page title stays **Payment Follow-up for** the season name (or All Seasons).
 
   </Step>
 
   <Step title="Review the results" icon="bar-chart">
 
-  - After you select a season, the system loads all families missing scheduled payments into the table.
-  - Scan the **Balance** and **Primary Payment** columns first to gauge urgency and how each family should be contacted.
+  - After you select a season, the system loads families missing scheduled payments into the table.
+  - Scan the **Balance**, **Primary Payment**, and **Payment Plan** columns first to gauge urgency and how each family should be contacted.
   - Export or print the page if you want to share it with your finance or billing team.
 
   </Step>
@@ -53,10 +54,11 @@ When the report loads successfully with matching criteria, you see a table of fa
 
 ## When a family appears on this report
 
-A family appears on the **Scheduled Payments - Missing** report when:
+A family appears on the **Nothing scheduled** tab when:
 
 - The family has an outstanding **Balance** for the selected season, and  
-- The family does not have scheduled payments configured to pay down that balance.
+- The family does not have scheduled payments configured to pay down that balance, and  
+- The family is not already listed on **No payment method** for that season.
 
 Families that have fully configured scheduled payments for their seasonal charges do not appear here.
 
@@ -101,6 +103,10 @@ Email address for Guardian 1. Use this for sending reminders, payment plan offer
 ### Primary Payment
 
 Current default payment method on file for the family, such as a card or bank account. If this field is empty or out of date, help the guardian add or update a valid method before you create scheduled payments.
+
+### Payment Plan
+
+The family's payment plan for the selected season, when one is assigned. Use this to see which plan they picked even though nothing is scheduled yet.
 
 ### User Type
 
@@ -148,7 +154,7 @@ Turn the report results into a concrete follow-up plan.
   <Step title="Set up or confirm payment plans" icon="check-circle">
 
   - Work with each family to configure scheduled payments that cover their **Balance**.
-  - After scheduled payments are active and saved in Campium Money, the family should drop off the **Scheduled Payments - Missing** report the next time you refresh it.
+  - After scheduled payments are active and saved, the family should drop off the **Nothing scheduled** tab the next time you refresh it.
 
   </Step>
 
