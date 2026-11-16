@@ -10,6 +10,47 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-11-16" description="Payment Follow-up, Texts inbox, Test my registration, contracts Drafts, Family Audit, payment timeline" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Payment Follow-up** - One Money report with tabs **No payment method**, **Nothing scheduled**, and **Schedule at risk** (replaces three separate Payment Issues links). See [Payment Issues](/payment-issues#payment-follow-up).
+  - **Test my registration** - Preview menu on registration forms runs an automated portal signup and emails a findings report (10 successful runs per year, **Manage Forms**). See [Forms](/forms#test-my-registration).
+  - **Family Audit** - **Financials → Family Audit** and **Reports → System Reports → Money**, with a date range and **All Seasons**. See [Family Audit](/family-audit).
+  - **Revenue Year Over Year** and **Revenue Transaction Detail** - Money / chart reports for year-over-year pace and transaction detail. See [Revenue Year Over Year](/revenue-year-over-year) and [Revenue Transaction Detail](/revenue-transaction-detail).
+  - **Import from a PDF** - Available for every camp with **Manage Forms** (daily read cap). See [Forms](/forms#import-from-a-pdf).
+  - **Payment timeline** - Sales history icon with **Season total** / **Paid and credited** / **Still owed**, plus row **Pay now** / **Email parent** / **Text parent**. See [Profiles](/profiles).
+
+  ## Updates
+
+  - **Texts** - **All** / **Unread** / **Mine** / **Upset**, search, **New Texts** dropdown, conversation unread badge, **Saved Replies**, reply without reload, **Mark as unread** / **Read by**. See [SMS](/sms#texts-inbox).
+  - **Test your registration** - Confirmation email step updates itself; last step **Want our AI to try it too?** offers **Test my registration**. See [Forms](/forms#test-your-registration).
+  - **Contracts** - **Drafts** column, multi-form progress (**Finish N more forms** / **Form X of Y**), Word **Convert to PDF**, **Forms to finish first**. See [Contracts](/contracts).
+  - **Add New Season** - Defaults to **Copy of** the current season via **Start from**. See [Manage Seasons](/manage-seasons).
+  - **Direct access links** - Ignore start/end dates and Visibility. See [Recipients](/recipients).
+  - **ACH Returns** - Editable **Subject** / **Message**, **Dismiss** / **Dismissed** with **Restore**. See [ACH Returns](/ach-returns).
+  - **Send Payment Notification** - Editable **Subject** / **Message**, **Also send to** Guardian 2. See [Scheduled Payments](/system-report-scheduled-payments).
+  - **Parent Payment Methods** - Visible before the first purchase; declined cards can stay listed with **Enter this card again**. See [Payment Methods](/payment-methods).
+  - **Nothing scheduled** - **Payment Plan** column on that Payment Follow-up tab. See [Nothing scheduled](/system-report-scheduled-payments-missing).
+  - **Plain decline reasons** - Staff and families see dictionary wording on Sales, Financials, donations, and the parent app. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment#retry-after-a-bank-decline).
+  - **Chronological Registration** - Open from **Reports** or **View Profiles**. See [Chronological User Registration](/system-report-chronological-user-registration).
+  - **Custom reports** - **Choose Display Fields** opens on **New Custom Report**. See [Custom Reports](/custom-reports).
+  - **Payments** - **Successful only** / **All outcomes** applies on click. See [Payments](/payments).
+  - **Portal** - **Public Availability Page for** open session-layout forms; Test Mode helper **Only you and your staff…**. See [Test Mode](/test-mode).
+
+  ## Fixes
+
+  - **Move session** - Moving a session to another family member keeps scheduled payments and plan dates (including Even Split). See [Profiles](/profiles#move-a-session-to-another-family-member).
+  - **Bank decline Retry** - Unmapped processor text no longer hides **Retry**; mapped bank-declined cards stay visible with **Enter this card again**. See [Retry Failed Scheduled Payment](/retry-failed-scheduled-payment#retry-after-a-bank-decline).
+  - **Close season step 7** - **Undo blanked fields** restores answers for the correct camp; empty field picks block close. See [Manage Seasons](/manage-seasons#blank-fields-for-next-season).
+  - **Authorized Pickup** - Adding more than one pickup no longer creates duplicate rows.
+  - **Form approve** - Approving a form no longer flips staff to Active by itself.
+  - **Custom Report** - Visiting **New Custom Report** no longer leaves a blank Report row every time.
+  - **Door To Door** - Requires a Transportation pick when that field is configured.
+  - **Answer-required groups** - No longer block on a section the page cannot show.
+  - **Parent Pay Now** - Other amount must be greater than $0.
+  - **YoY dashboard pace** - Works when seasons are not exactly one year apart.
+</Update>
+
 <Update label="2026-11-09" description="Years at camp, health documents, contracts attachments, payment-method warnings, canteen clear balances" tags={["feature","improvement","bugfix"]}>
   ## New
 

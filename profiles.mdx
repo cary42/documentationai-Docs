@@ -585,7 +585,7 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     ### Declined scheduled charges
 
-    A declined scheduled charge can appear as one plain-language line on **Sales**. The reason looks like a link. Open it (hover on desktop, or click / tap) for staff next steps and **Processor said:** the original processor text when available. From the popover, use **Email parent** or **Text parent** when a cell number is on file. The same **Text parent** action is available from decline rows on **Reports → System Reports → Scheduled Payments**. A short note can read like **2 attempts, no automatic retry** when Campium will not keep retrying that method. For **Bank declined, no reason given**, **Retry** stays hidden until the family enters the card again or uses another method. Families see the same plain decline wording on the parent portal, not the raw processor text.
+    A declined scheduled charge can appear as one plain-language line on **Sales**. The reason looks like a link. Open it (hover on desktop, or click / tap) for staff next steps and **Processor said:** the original processor text when available. From the popover, use **Email parent** or **Text parent** when a cell number is on file. The same **Text parent** action is available from decline rows on **Reports → System Reports → Scheduled Payments**. A short note can read like **2 attempts, no automatic retry** when Campium will not keep retrying that method. When a decline is mapped to a reason that blocks the same method (including mapped **Bank declined, no reason given**), **Retry** stays hidden until the family enters the card again or uses another method. Unmapped processor text can still display as **Bank declined, no reason given** while **Retry** remains available. Families see the same plain decline wording on the parent portal, not the raw processor text. The same plain wording appears on **Financials → Payments**, donations, and membership charge lists when a charge fails.
 
     ### Add a payment with Account On File
 
@@ -640,6 +640,16 @@ Each tab focuses on a different part of the person’s record. Use these section
     <Callout kind="alert" collapsed="false">
       Switching a session can change what the family owes or create a credit. Check **Price Difference** carefully and review the resulting balance so you can explain the change to the family.
     </Callout>
+
+    ### Move a session to another family member
+
+    Use the **move** link on a sale row to move a session from one person in the family to another (for example, from one sibling to another).
+
+    1. On the **Sales** tab, hover the session row and click **move**.
+    2. In **Move to user**, pick the family member who should receive the session.
+    3. Click **Move**.
+
+    Scheduled payments and plan dates for that family stay in place when you move the session. Campium does not rebuild an Even Split or hand-built schedule just because the session changed owners inside the family.
 
     ### Remove a session
 

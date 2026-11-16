@@ -56,9 +56,28 @@ Camps with a texting-number application also have a public opt-in and terms page
 
 ## Texts inbox
 
-Open **Communications → SMS → Texts** when your number is active and you have the inbox permission. You can also open **Texts** from the top bar (phone and desktop) when you have inbox access. A red unread badge on that control shows how many family replies are unread for your camp (it updates while the page is open). Empty state: **Texts you start and replies from families show up here.** Staff can start a conversation with a phone on file and reply from the web (and from the Campium mobile app when that route is available). Opening a conversation loads that thread without a full page reload. Group-only families that should not appear in this inbox stay out of the list.
+Open **Communications → SMS → Texts** when your number is active and you have the inbox permission. You can also open **Texts** from the top bar (phone and desktop) when you have inbox access. A red unread badge on that control counts unread **conversations** (not individual messages) and updates while the page is open. Click **Texts** in the top bar to open a **New Texts** dropdown of unread conversations, then **View all** for the full unread list. Empty state: **Texts you start and replies from families show up here.** Staff can start a conversation with a phone on file and reply from the web (and from the Campium mobile app when that route is available). Opening a conversation, sending a **Reply**, and changing the list filters all update in place without a full page reload. Group-only families that should not appear in this inbox stay out of the list.
+
+### Conversations list
+
+The left card title is **Conversations**. Filter chips:
+
+- **All**
+- **Unread**
+- **Mine** (conversations you last texted)
+- **Upset** (family replies Campium read as upset or angry)
+
+Use **Search name or number** to narrow the list. If a search cannot run, the page stays open with **That search did not go through. Please change it and try again.** Rows can show **Last texted by** a staff name. Empty filter state: **No conversations match.**
+
+Mood badges **Upset** or **Angry** can appear on a conversation. Inside the thread, a line can read **Sounds upset** or **Sounds angry** with a short reason when Campium has one.
+
+### Mark as unread and Read by
 
 On an open conversation, use **Mark as unread** to put a family reply back in the unread count (flash: **Marked as unread.**). After someone reads the latest inbound reply, a line under that reply can show **Read by** that staff member's first name **at** a time (or **on** a date **at** a time when it was another day), or **Read by you** when you were the reader.
+
+### Saved Replies
+
+On **Texts**, the **Saved Replies** card lets everyone with inbox access share short replies. Use **Insert a saved reply** (or **Add saved replies** when the list is empty), then fill **Name** and **Text** and click **Add saved reply**. Inserting a reply puts the saved text into your draft as written. Save and delete happen in place. Deleting asks to remove that named saved reply for everyone, with **Yes, delete it** / **Cancel**.
 
 ### Who gets alerted
 
@@ -167,7 +186,7 @@ On **Settings**, leave **Start with your camp name** checked (it is on by defaul
 
 ### Text families from a report
 
-On **Reports → System Reports → No Primary Payment Method** and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a text modal for that report's list. Write the message, use **Show names** to review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need the **Manage Emails** permission (the same permission used for **Send Email** on those reports). See [Families Without Primary Payment Method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
+On **Reports → System Reports → Payment Follow-up** (**No payment method** tab) and **Wait List Management**, use **Send Text** (or **Send Text To All Wait Listers**) to open a text modal for that report's list. Write the message, use **Show names** to review who has a cell phone, then click **Send Text** and confirm with **Yes, send it**. **Open in full editor** continues in **Communications → SMS**. You need the **Manage Emails** permission (the same permission used for **Send Email** on those reports). See [No payment method](/system-report-families-without-primary-payment-method) and [Waitlist Report](/waitlist#email-everyone-on-the-list).
 
 When you schedule a text that started from a report, Campium rechecks who still appears on that report at send time. People who left the report are dropped. Nobody new is added. People you unchecked in **View** / **Send** stay skipped when the scheduled send runs.
 

@@ -1,30 +1,31 @@
 ---
-title: Families Without Primary Payment Method report
-description: Identify families without a primary payment method on file, review their balances and active registrations, and plan follow-up actions.
+title: Payment Follow-up - No payment method
+description: Find families who owe money with no card or bank account on file, review balances and plans, and follow up from Payment Follow-up.
 ---
 
 ## Purpose of this report
 
-Use the **Families Without Primary Payment Method** report to find families that do not have a primary payment method on file for a given season, along with how many active registrations and how much balance each family has outstanding.
+**No payment method** is one tab of **Payment Follow-up**. Use it to find families that owe money for a season and do not have a card or bank account on file, along with how many active registrations and how much balance each family has outstanding.
 
-This report helps you prioritize outreach to families who still need to add a payment method, especially when they have active registrations and unpaid balances.
+This tab helps you prioritize outreach to families who still need to add a payment method, especially when they have active registrations and unpaid balances. Families with a method on file but nothing scheduled appear on **Nothing scheduled** instead. See [Payment Issues](/payment-issues#payment-follow-up).
 
 <Callout kind="info">
 
-The UI title of the report includes the selected season, for example: `Families Without Primary Payment Method - Summer 2025`.
+The page title is **Payment Follow-up for** the selected season. The active tab is **No payment method**. For any one season, each family shows on one Payment Follow-up tab only.
 
 </Callout>
 
 ## Run the report
 
-Use this workflow whenever you want a current list of families missing a primary payment method.
+Use this workflow whenever you want a current list of families missing a payment method.
 
 <Steps>
 
 <Step title="Open the report" icon="folder">
 
-- On the dashboard, open the **Payment Issues** card and select **No Primary Payment Method**.
-- Confirm the page title shows **Families Without Primary Payment Method - [selected season]**.
+- On the dashboard, open the **Payment Issues** card and select **Payment Follow-up**, or go to **Reports → System Reports → Money → Payment Follow-up**.
+- Stay on the **No payment method** tab (or click it if you landed on another tab).
+- Confirm the page title shows **Payment Follow-up for** the selected season.
 
 When the page loads successfully, you see a **Season** dropdown in the page header and a results table with columns for **Primary Contact**, **Email**, **Campers**, **Payment Plan**, **Active Registrations**, and **Balance**.
 
@@ -58,10 +59,10 @@ At the bottom of the page, use the footer totals to understand your overall expo
 
 <Step title="Email families from the report" icon="mail">
 
-1. Click **Send Email** in the page header. That opens the shared **Email this group** modal titled **Email Families Without Primary Payment Method**.
-2. The audience line names how many families and addresses are **on the Families Without Primary Payment Method report.** Use **Show names** to review the list (households with no email are badged).
+1. Click **Send Email** in the page header. That opens the shared **Email this group** modal for families on this tab.
+2. The audience line names how many families and addresses are on the list. Use **Show names** to review (households with no email are badged).
 3. Edit **Subject** (default **Please Add a Payment Method to Your Account**; your last subject is remembered) and **Message**.
-4. Optionally click **Open in full editor** to continue in **Mass Emails**, where the draft is named **Email: Families Without Primary Payment Method**. Recipients stay locked to that report list until you **Replace with a filter**.
+4. Optionally click **Open in full editor** to continue in **Mass Emails**. Recipients stay locked to that report list until you **Replace with a filter**.
 5. Click **Send Email**, then confirm with the sample message preview and **Yes, send it**.
 
 The send becomes a normal mass email (Guardian 1 and Guardian 2 routing, login button when enabled, and a trail in Mass Emails). Use **Close** to dismiss the modal without sending.
@@ -70,7 +71,7 @@ The send becomes a normal mass email (Guardian 1 and Guardian 2 routing, login b
 
 <Step title="Text families from the report" icon="message-square">
 
-1. Click **Send Text** in the page header (next to **Send Email**). That opens a modal titled **Text Families Without Primary Payment Method**.
+1. Click **Send Text** in the page header (next to **Send Email**). That opens a text modal for families on this tab.
 2. Review the audience line (families and phones). Use **Show names** to see who will be skipped for no cell phone or texts turned off.
 3. Edit **Message** (a payment-method reminder is prefilled; your last text for this report is remembered). Optionally type a full `https://` link or an account setup placeholder. Long links are shortened when the message sends. See [SMS](/sms#insert-link-and-account-setup-link).
 4. Optionally click **Open in full editor** to continue in **Communications → SMS**.
@@ -98,7 +99,7 @@ If you manage multiple seasons at once, run this report separately for each acti
 
 ### Excluded plans
 
-**Excluded plans** is camp-wide. Families on a checked plan do not appear on this report, do not count on the dashboard **No Primary Payment Method** tile, and are not included when you **Send Email** or **Send Text** from the report. **Custom** starts checked. Named plans for the selected season (or every active season when you are on All Seasons) appear as additional checkboxes.
+**Excluded plans** is camp-wide. Families on a checked plan do not appear on this tab, do not count toward the **No payment method** badge, and are not included when you **Send Email** or **Send Text** from the report. **Custom** starts checked. Named plans for the selected season (or every active season when you are on All Seasons) appear as additional checkboxes.
 
 ## Columns in the results table
 
@@ -189,7 +190,7 @@ This is a common workflow admins use after running the report.
 
 - Use the **Email** address to send reminders or payment method instructions.
 - Add internal notes in the profile on the outcome of each contact.
-- Re-run the **Families Without Primary Payment Method** report periodically to confirm the list is shrinking as families add payment methods.
+- Re-open **Payment Follow-up → No payment method** periodically to confirm the list is shrinking as families add payment methods.
 
 </Step>
 
