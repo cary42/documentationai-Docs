@@ -5,14 +5,14 @@ description: Configure tiered pricing for Campium products so prices and minimum
 
 ## What tiered pricing does
 
-Tiered pricing lets you define multiple prices for the same product or priced option over time. Each tier has an effective date, an optional minimum deposit override, and an optional **Description**. Campium uses the tier in effect on the pricing date for both the price and, when you set one, the description families and staff see.
+Tiered pricing lets you define multiple prices for the same product or priced option over time. Each tier has an effective date, an optional **Subproduct** name, an optional minimum deposit override, and an optional **Description**. Campium uses the tier in effect on the pricing date for the price and, when you set them, the subproduct name and description families and staff see.
 
 Use tiers to:
 
 - Schedule price increases ahead of a season.
 - Offer early-bird discounts that expire on a specific date.
 - Adjust required deposits for certain date ranges.
-- Swap in a different product or option description while a tier is in effect.
+- Swap in a different subproduct name or product description while a tier is in effect.
 
 <Callout kind="info">
 
@@ -26,21 +26,17 @@ On season setup **Sessions**, **Tiers** (or **Tiers (n)**) appears in the **Pric
 
 Each tier is a row in the pricing editor. Campium evaluates these fields together to decide which price to use.
 
+The editor table columns are **Effective**, **Subproduct**, **Description**, **Price**, and **Min. deposit**.
+
 <ParamField body="effectiveDate" param-type="date" required="true" show-location="false">
 
-**Effective date** — the first calendar date this tier applies. Campium treats this date as inclusive and uses the tier from that day forward until a newer tier with a later effective date replaces it.
+**Effective date** - the first calendar date this tier applies. Campium treats this date as inclusive and uses the tier from that day forward until a newer tier with a later effective date replaces it.
 
 </ParamField>
 
-<ParamField body="price" param-type="money" required="true" show-location="false">
+<ParamField body="subproductName" param-type="string" show-location="false">
 
-**Price** — the amount to charge when this tier is in effect. You can type the value with or without currency symbols or commas; Campium normalizes the format when you save.
-
-</ParamField>
-
-<ParamField body="minimumDeposit" param-type="money" show-location="false">
-
-**Minimum deposit (optional)** — overrides the usual minimum deposit for this product or priced option while the tier applies. If you leave this blank, Campium uses your normal minimum deposit rules for that product or option.
+**Subproduct (optional)** - when set, replaces the subproduct (priced option) name on lines bought while this tier is in effect. Helper text in the editor: **If set, this replaces the subproduct name on lines bought while this tier is in effect.** Leave it blank to keep the usual option name. A blank value shows as **-** in the table.
 
 </ParamField>
 
@@ -49,6 +45,18 @@ Each tier is a row in the pricing editor. Campium evaluates these fields togethe
 **Description (optional)**: text that replaces the product or option description while this tier is in effect. Helper text in the editor: **If set, this replaces the description above while this tier is in effect.** Leave it blank to keep the usual description.
 
 On the parent portal checkout **Order Summary**, that description appears under the priced line as a note for the active tier. Waitlisted lines do not show a tier note.
+
+</ParamField>
+
+<ParamField body="price" param-type="money" required="true" show-location="false">
+
+**Price** - the amount to charge when this tier is in effect. You can type the value with or without currency symbols or commas; Campium normalizes the format when you save.
+
+</ParamField>
+
+<ParamField body="minimumDeposit" param-type="money" show-location="false">
+
+**Minimum deposit (optional)** - overrides the usual minimum deposit for this product or priced option while the tier applies. If you leave this blank, Campium uses your normal minimum deposit rules for that product or option.
 
 </ParamField>
 
