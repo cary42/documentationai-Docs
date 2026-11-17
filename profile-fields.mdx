@@ -216,6 +216,8 @@ Choose One, Choose Many, and Ranked Choice fields depend on an option list. Afte
 
 Each option shows how many people in the selected season have that answer (**No answers**, **1 person**, or **N people**; tooltip starts with **People in** and the season name). Use **Answers in** at the top of the list to switch between the current season and a ready season snapshot when snapshots exist.
 
+When the list is long, use **Type to filter...** beside **Answers in** to narrow options by name. Empty filter result: **No options match.** While a filter is active, **Select all** ticks only the options currently on screen.
+
 ### Application Status colors
 
 For the staff **Application Status** field only, each option in **Edit Options** has a color control. Click the dot to pick a color. Helper text: **Click a dot to pick a color for that status on Staff Hub and the staff profile. Until you pick one, the color comes from the name: Hired is green, Returning is orange, DNR and Fired are red.** After you pick a custom color, the option's ⋮ menu offers **Reset to default color**. The same colors appear in **Admin → Staff Hub → Staff Hub Settings** under **Application Status colors**.
@@ -241,7 +243,16 @@ This is separate from setting the whole field to **Active** or **Inactive**.
 
 ## Edit a field without losing data
 
-Use **Edit** from the row menu to update an existing field's settings. You can rename the field, change user types, adjust size, update question text, change formatting, toggle the health report setting, and revise role access.
+Use **Edit Profile Field** from the row menu to update an existing field's settings. You can rename the field, change user types, adjust size, update question text, change formatting, toggle the health report setting, and revise role access. A name that is only spaces is refused.
+
+### Switch Choose One and Choose Many
+
+On camp-created **Choose One** and **Choose Many** fields (not built-in system fields), **Edit Profile Field** includes **Type of Field** so you can switch between **Multiple Choice - Choose One** and **Multiple Choice - Choose Many**. Helper text: **Going from Choose Many to Choose One keeps the first option each person chose. You'll see how many people that affects before anything changes.**
+
+- **Choose One → Choose Many**: the type flips. Existing single answers stay.
+- **Choose Many → Choose One**: Campium warns how many people have more than one option and how many selections would be removed. On confirm, each person keeps their first pick and the extras are removed.
+- Fields that are part of a **Linked Fields** pair must stay **Choose One**. Remove the link first if you need **Choose Many**.
+- You still cannot convert into or out of **Ranked Choice** from this picker. Create a new Ranked Choice field instead.
 
 You can also change the field status between **Active** and **Inactive**. The **Status** column header has an info icon with the same explanation as in the table above. Inactive fields are hidden from profiles and reports in every season, but Campium keeps the existing answers so setting the field back to Active restores them.
 

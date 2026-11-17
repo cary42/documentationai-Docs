@@ -14,6 +14,8 @@ Use Camper Hub to see who still needs forms, email guardians a reminder, open on
 
 Camper Hub is the camper version of [Staff Hub](/staff-hub). Staff Hub tracks people who started a staff application. Camper Hub tracks campers who already have an active enrollment for a season.
 
+On first visits, **Walk me through** in the page title row can offer **Get started with Camper Hub** (seasons, required forms, tiles, **View forms**, reminders, and export). See [Walk me through](/walk-me-through).
+
 <Callout kind="info" collapsed="false">
   You need the **Camper Hub** permission (under the **Admin** category) to open this page. Administrators get it by default. It appears under **Admin → Camper Hub** (the menu item may show a **New** badge).
 </Callout>
@@ -61,6 +63,13 @@ Use **Filters** (next to **Search campers**) to narrow the roster by profile ans
 2. In a row, **Pick a field**, choose an operator, then enter or pick a value (**Pick one or more**, **Type to filter**, or a date).
 3. The roster updates as you go (status shows **Updating...**). Add more rows with **Add filter**. Every complete row must match. Incomplete rows are ignored until you finish them.
 4. Remove one row with the trash control, remove one chip with **×** when the panel is closed, or click **Clear all**.
+
+When the filter names exactly one season (with a ready snapshot), **Profile answers as of** appears under that Season row:
+
+- **Today** - current profile answers (the default when you change the season)
+- **`{Season} close`** - answers from that season's snapshot (or **`{Season} frozen`** when the season was frozen early)
+
+If that season has no saved answers yet, a note can say the season **has no saved answers, showing today's.** Roster columns and the Season row itself stay on live data. The choice rides with the filter (URLs, last-used, and saved filters keep it). The same control exists on [Staff Hub](/staff-hub#filter-by-profile-fields), custom reports, and Recipients. See [Custom Reports](/custom-reports#look-at-another-year-with-the-season-filter).
 
 Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators depend on the type (for example **is**, **contains any**, **contains all**, **contains**, **is on or after**, **is empty**). You can add up to 20 filter rows. Role-hidden fields do not appear in the picker.
 

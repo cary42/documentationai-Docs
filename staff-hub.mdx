@@ -13,7 +13,7 @@ Staff Hub shows where each staff member is in your hiring process. One table lis
 You still build and review the staff application itself on **Forms**. See [Staff Applications](/staff) for creating the form and how applicants log in and complete it. Use Staff Hub to track many people at once and move hires forward.
 
 <Callout kind="info" collapsed="false">
-  Staff Hub reads from the staff forms you connect to each season. If the table is empty, open **Staff Hub Settings** (top right of the page), choose at least one staff form for each season, then save. Until a season has a form, no one from that season appears. When another season is already set up, **Copy from another season** reuses its forms.
+  Staff Hub reads from the staff forms you connect to each season. If the table is empty, open **Staff Hub Settings** (top right of the page) and choose at least one staff form for each season. Changes in that panel save automatically. Until a season has a form, no one from that season appears. When another season is already set up, **Copy from another season** reuses its forms.
 </Callout>
 
 ## Open Staff Hub
@@ -61,6 +61,13 @@ Use **Filters** (top right of the roster) to narrow the roster by staff profile 
 3. Only matching rows stay in the roster, and the tile counts update to match. Status shows **Updating...** while the filter applies.
 4. **Add filter** for more rows (every complete row must match). **Clear all** removes every row and chip.
 
+When the filter names exactly one season (with a ready snapshot), **Profile answers as of** appears under that Season row, the same control used on custom reports and Recipients:
+
+- **Today** - current profile answers (the default when you change the season)
+- **`{Season} close`** - answers from that season's snapshot (or **`{Season} frozen`** when the season was frozen early)
+
+If that season has no saved answers yet, a note can say the season **has no saved answers, showing today's.** Roster columns and the Season row itself stay on live data. The as-of choice is stored with the filter, so URLs, last-used, and saved filters keep it. See [Custom Reports](/custom-reports#look-at-another-year-with-the-season-filter).
+
 Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators match the Camper Hub filter (for example **is**, **contains any**, **contains**, **is on or after**, **is empty**). You can add up to 20 rows. Fields hidden from your role are not offered.
 
 **Save as...** / **Saved filters** / **Delete** work the same as on Camper Hub: named filters are shared with everyone at your camp who uses Staff Hub, and your last-used filter is restored when you return.
@@ -72,7 +79,7 @@ Above the table, the toolbar includes:
 - **Filter by staff name** - searches staff names only. Tile counts stay on the full season filter.
 - **Application status** - see [Filter by application status](#filter-by-application-status).
 - Export buttons (`Copy`, `Excel`, `CSV`, `PDF`, `Print`, `Email`) - tooltip: **Exports every staff member in the current filter, not just this page**.
-- **Rows per page** - **50**, **100**, **200**, **500**, or **All**, with **Previous** / **Next** and **Showing first-last of total** (and **Page n of pages** when there is more than one page).
+- **Rows per page** - **50**, **100**, **200**, **500**, or **All**, with **Previous** / **Next** and **Showing first-last of total** (and **Page n of pages** when there is more than one page). Staff Hub always opens at **50** rows; a larger choice is for this visit only.
 
 The header checkbox (**Select all staff on this page**) checks every row on the page. When every row on the page is checked and more pages match your filters, the bar offers **Select all N matching**. While that runs, the button reads **Selecting...**. With everyone matching selected, the bulk bar shows **N selected across all pages**, and confirmations say **across all pages**. **Clear** drops the selection. Your filters (season, status, name, profile fields, tiles) decide who counts as matching. If a page fails to load, you see **The list could not be loaded. Try again.**
 
@@ -126,13 +133,27 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
   </Step>
 
   <Step title="Reveal other or past seasons when needed" icon="calendar" title-type="p">
-    When your season filter covers only some seasons, click **Load all seasons** to list the rest so you can set staff forms for them too. Helper text: **Seasons outside the current filter. Their staff-form choices are kept when you save.** Otherwise, past seasons (end date already passed) sit behind the same **Load all seasons** control, with helper text: **Seasons whose end date has passed. Their staff-form choices are kept when you save.** Click **Hide other seasons** to collapse the list.
+    When your season filter covers only some seasons, click **Load all seasons** to list the rest so you can set staff forms for them too. Helper text: **Seasons outside the current filter. Their staff-form choices are kept.** Otherwise, past seasons (end date already passed) sit behind the same **Load all seasons** control, with helper text: **Seasons whose end date has passed. Their staff-form choices are kept.** Click **Hide other seasons** to collapse the list.
   </Step>
 
-  <Step title="Save" icon="check-circle" title-type="p">
-    Click **Save Settings**. Your choices apply the next time the roster loads.
+  <Step title="Turn on Interview scheduling (optional)" icon="calendar" title-type="p">
+    Check **Interview scheduling**. Helper text: **Adds a Request interview link to each staff member. It opens the email you pick here so you can review it and send.** Pick an **Interview request email** from your camp's email templates. Optionally set **After sending, set Application Status to** (for example **Interview Invitation Sent**). Helper text: **Add a choice such as Interview Invitation Sent to Application Status in Profile Fields if you do not have one. Someone on DNR, Fired or Dismissed keeps that status.** Leave the status on leave-it if you do not want the send to change status.
+  </Step>
+
+  <Step title="Settings save automatically" icon="check-circle" title-type="p">
+    Status under the panel reads **Changes save automatically.** After a change it can show **Saved**, or **Saved. Pick an interview request email to turn on Interview scheduling.** if the box is ticked without a template. Closing the panel reloads the roster so columns, season forms, and colors match. Empty-state copy when forms are missing: **Choose staff forms by season in Staff Hub Settings.**
   </Step>
 </Steps>
+
+## Request an interview from the roster
+
+When **Interview scheduling** is on and an **Interview request email** is picked, each staff row can show **Request interview**.
+
+1. Click **Request interview** for that person.
+2. The **Request interview** modal opens with the template filled in for them. Edit **Email subject** and **Email body** if you need to. Attached files from the template are noted when present. A status note explains whether sending will set, leave, or keep a locked **Application Status**.
+3. Click **Send**. Campium emails them and, when configured, moves Application Status through the same save path as the status menu (so W-4 / I-9 automatic requests still fire). Locked statuses such as **DNR**, **Fired**, or **Dismissed** stay put.
+
+The person needs a valid email on their profile. You need the **Staff Hub** permission and at least one active email template under **Admin → Email Templates**.
 
 ## See form progress for one person
 
