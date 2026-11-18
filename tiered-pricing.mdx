@@ -36,13 +36,13 @@ The editor table columns are **Effective**, **Subproduct**, **Description**, **P
 
 <ParamField body="subproductName" param-type="string" show-location="false">
 
-**Subproduct (optional)** - when set, replaces the subproduct (priced option) name on lines bought while this tier is in effect. Helper text in the editor: **If set, this replaces the subproduct name on lines bought while this tier is in effect.** Leave it blank to keep the usual option name. A blank value shows as **-** in the table.
+**Subproduct (optional)** - when set, replaces the subproduct (priced option) name on sessions bought while this tier is in effect. Helper text in the editor: **If set, this replaces the subproduct name on sessions bought while this tier is in effect. It shows on the profile Sales tab and in admin reports. Parents do not see it.** A live **What staff see:** preview updates as you type. Leave it blank to keep the usual option name. A blank value shows as **-** in the table.
 
 </ParamField>
 
 <ParamField body="description" param-type="string" show-location="false">
 
-**Description (optional)**: text that replaces the product or option description while this tier is in effect. Helper text in the editor: **If set, this replaces the description above while this tier is in effect.** Leave it blank to keep the usual description.
+**Description (optional)**: text that replaces the product or option description while this tier is in effect. Helper text in the editor: **If set, this replaces the regular description while this tier is in effect. Parents see it on the portal session list, in the checkout Order Summary, and on invoices.** A live **What parents see:** preview updates as you type. Leave it blank to keep the usual description.
 
 On the parent portal checkout **Order Summary**, that description appears under the priced line as a note for the active tier. Waitlisted lines do not show a tier note.
 
@@ -133,18 +133,20 @@ Use these steps to create, edit, or remove tiered pricing rows.
 <Step title="Open the Tiers control for the price you want" icon="settings">
 
 - For the **base product**, click the **Tiers** button on that product's row in the Products list (this may show as **Tiers (n)** if tiers already exist).
-- For a **priced option**, go to the **subproducts** page or open the option's edit modal, then open its **Tiers** control.
+- For a **priced option**, go to the **subproducts** page or open the option's edit modal, then open its **Tiers** control (or **Pricing tiers (this option)**).
+- The editor opens in a modal titled **Pricing tiers:** with the session name in bold, then the subproduct name when you are editing an option.
 
 </Step>
 
 <Step title="Review existing tiers" icon="monitor">
 
-- In the inline panel, review the list of tiers showing:
-  - **Effective date**
+- In the modal, review the list of tiers showing:
+  - **Effective**
+  - **Subproduct**
+  - **Description**
   - **Price**
   - **Min. deposit**
-  - **Description** (when set)
-- Confirm which row is currently in effect by comparing effective dates with today or the pricing date scenario you care about.
+- Confirm which row is currently in effect by comparing effective dates with today or the pricing date scenario you care about. Use **Close** when you are done.
 
 </Step>
 

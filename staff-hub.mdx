@@ -152,8 +152,15 @@ When **Interview scheduling** is on and an **Interview request email** is picked
 1. Click **Request interview** for that person.
 2. The **Request interview** modal opens with the template filled in for them. Edit **Email subject** and **Email body** if you need to. Attached files from the template are noted when present. A status note explains whether sending will set, leave, or keep a locked **Application Status**.
 3. Click **Send**. Campium emails them and, when configured, moves Application Status through the same save path as the status menu (so W-4 / I-9 automatic requests still fire). Locked statuses such as **DNR**, **Fired**, or **Dismissed** stay put.
+4. After a send, the row shows **Interview requested** with the date and **Request again** instead of the first **Request interview** link.
+
+To request interviews for several people at once, check the roster rows (or select matching across pages) and use **Request interview** on the bulk bar. The modal title is **Request interview:** with the template name. Progress reads **Sending interview requests**, with results **Sent**, **Skipped**, or **Failed**.
+
+If anyone already received a request, Campium warns (for example **N of them already got an interview request.**) and offers **Skip the N who already got one** (or **Skip** `{Name}` for one person), checked by default. Uncheck it only when you mean to send again.
 
 The person needs a valid email on their profile. You need the **Staff Hub** permission and at least one active email template under **Admin → Email Templates**.
+
+Setting **Application Status** to **Hired** or **Full Time** also makes the person's account **Active** (and assigns a staff season when one is available), whether you change status on the roster, in bulk, or on the profile.
 
 ## See form progress for one person
 
