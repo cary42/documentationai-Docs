@@ -191,15 +191,15 @@ See [Test Mode](/test-mode) for who can see Test Mode forms and the staff view s
 
 ## Test my registration
 
-**Test my registration** is the automated twin of the guided walkthrough. Open a **registration** form, then use the Preview menu item **Test my registration**. You can also finish **Test it yourself** and use the last step **Want our AI to try it too?**, or use **Let Campium test it for you** / **Start the test** on Season Setup **Review**. Season Setup's Forms card Preview menu can offer **Test your registration** for the automated run as well. The subtitle shows how many runs you have left, such as **8 of 10 tests left this year**. You need **Manage Forms**. Your staff login must have an email address so Campium can send the report.
+**Test my registration** (and **Test this form** on standard forms) is the automated twin of the guided walkthrough. Open a **registration** form, then use the Preview menu item **Test my registration**. On a **standard** form the same menu item reads **Test this form**. You can also finish **Test it yourself** and use the last step **Want our AI to try it too?**, or use **Let Campium test it for you** / **Start the test** on Season Setup **Review**. Season Setup's Forms card Preview menu can offer **Test your registration** for the automated run as well. The subtitle shows how many runs you have left, such as **8 of 10 tests left this year**. You need **Manage Forms**. Your staff login must have an email address so Campium can send the report.
 
-Confirm with: **Test this registration form? A test family signs up on your portal, answers every question, picks a session and goes through checkout without paying, then is removed. We email you what to fix.** The dialog also notes that the run uses 1 of your remaining tests for the year. Buttons: **Start the test** / **Not now**.
+Confirm with: **Test this registration form? A test family signs up on your portal, answers every question, picks a session and goes through checkout without paying, then is removed. We email you what to fix.** On a standard form the confirm is: **Test this form? A test family signs up on your portal, answers every question and submits the form…** The dialog also notes that the run uses 1 of your remaining tests for the year. Buttons: **Start the test** / **Not now**.
 
-When a run starts: **Your registration test has started. We will email the report to** your address **when it finishes.** The emailed report lists findings in the message body. Limits:
+When a run starts: **Your registration test has started. We will email the report to** your address **when it finishes.** The emailed report (subject **Your registration test report**) lists findings in the message body and is also stored in the email log for your staff login. Draft and not-yet-live forms can be tested; drafts are not reported as “not live” findings. Limits:
 
 - **10** successful runs per calendar year per camp (failed or errored runs do not count against the limit)
 - One queued or running test at a time for your camp
-- Registration forms only (form type RG)
+- Registration forms (**RG**) and standard forms (**RE**)
 
 ## Tabs inside a form
 
@@ -341,6 +341,7 @@ On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
 - **Approve** (and **Bulk Approve**) opens **Approve this form?** with **Set their account status to**: **Active** (default), **Pending**, **Inactive**, or **Leave as is**. Confirm with **Yes, approve**.
+- Open a response to use **Save Only**, **Save & Approve**, **Save & Pending Approval**, or **Save & Reject**. **Save & Reject** matches the profile **Forms** tab: if the person still has removable sessions for that season, confirm with **Reject this form?** and **Remove any of their** `{season}` **sessions?** (checkboxes for each session). Helper: **Removing all of them also cancels the season's payment plan.** Confirm with **Yes, reject** or **Cancel**. With no sessions: **Are you sure you want to reject this form?** / **Yes, reject.**
 - Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses** and **Delete**. Deleting one response asks **Are you sure you want to remove this form?** Confirm with **Yes, remove.** You can restore it from **Recently deleted** for 30 days.
 - Use **Bulk Delete** when rows are selected. Confirm **Delete N responses? You can restore them from Recently deleted for 30 days.** with **Yes, delete.**
 - Use the filled primary **Print Responses** dropdown for **Print All**, **Print Approved**, **Print Pending**, or **Print In Progress**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
@@ -690,6 +691,18 @@ When the deposit covers the full amount, the amount choices hide and families se
 
 When payment plans are offered, a **Payment plan** card lists each plan as a selectable option. Families who can pick their charge day still see **Charge day of the month**.
 
+#### Ask For A Donation
+
+When your payment processor is **Finix**, registration forms show **Ask For A Donation** under Settings (Preview new layout: **Ask for a donation** under **Checkout and payment**). Helper: **Checkout shows a gift box with your suggested amount. Families can change it or enter 0. The gift is charged separately to the same card (card payments only) and shows under Donations, with a donor receipt.**
+
+Choices:
+
+- **Don't ask**
+- One of your donation pages
+- If you have no pages yet: **Donations (we will create this donation page for you)** (creates the page and turns on the Donor module when you save)
+
+Set **Suggested gift amount** for the default. At checkout families see **Add a gift to** the donation page title, with help: **Optional. Your gift is charged separately to the same card, right after your payment. Enter 0 to skip. Gifts are taken only when you pay by card today.** Gifts appear under **Donor → Donations**. The admin Cart preview shows the same gift box for display only.
+
 <Callout kind="alert" collapsed="false">
   Use **Allow User To Pay Later** carefully. Helper text: **No deposit necessary if set to Yes. Typically used for testing purposes.** Users finish registration without paying anything.
 </Callout>
@@ -784,6 +797,8 @@ When you approve, the **Charge Deposit On Approval** dialog lets you:
 2. Edit **Deposit amount**.
 3. Choose **When to charge**: **Charge now**, or **On a date** with a date and optional time.
 4. Confirm with **Charge & Approve** (or **Schedule & Approve** when you chose a date), **Skip charge & approve**, or **Cancel**.
+
+Charging or scheduling the deposit needs **Process Payments**. Without it you see: **You need permission to process payments to charge or schedule the deposit. You can approve without charging it.** **Skip charge & approve** still works.
 
 Helper under **On a date**: **The form is approved now and the deposit is charged automatically at this date and time. Leave the time blank to charge just after midnight.** You can schedule for today if the time is still later than now.
 
@@ -898,6 +913,12 @@ The **Custom text** box changes labels and instructions families see on the Port
 #### Thank You Message
 
 **Thank You Message** appears after the form is completed and in the invoice email the family receives. Use it to confirm the submission went through and say what happens next. When **Preview Confirmation Page** appears under the label, use it to see the message.
+
+#### Show Remaining Forms
+
+On registration and standard forms, **Show Remaining Forms** lists other open forms the person still needs after they finish this one. Helper: **After this form is completed, list the other forms this person still needs to fill out, with a link to each.** Switch: **Show the forms still to complete on the thank-you page**.
+
+When it is on, the thank-you page shows **You can fill out these forms next:** with links to each remaining form (same open and access rules as the portal home list; upload forms and Test Mode forms are skipped).
 
 #### Form Header Text
 

@@ -106,6 +106,15 @@ Refund completed credit card or ACH payments from the **Sales** tab of a user’
   </Step>
 </Steps>
 
+### When the processor does not answer
+
+If Finix or Payabli times out or returns a temporary error while you refund or void, Campium does **not** treat that as a bank decline. The payment row shows **Refund not confirmed** or **Void not confirmed** (hover: the processor never answered). Click the label to choose:
+
+- **I checked: it did not go through**, then **Clear and allow a retry** (only after you confirm at the processor that nothing went through).
+- **It went through**, then optionally enter **Processor transaction id (optional)** and **Record it** (only after you see the refund or void at the processor). Success: **The refund or void was recorded as approved.**
+
+Until you clear or record it, the family’s balance does not change from that attempt, and a new refund or void of the same payment stays blocked. The same labels appear on tip refunds and canteen deposit reversals when those paths use the unconfirmed flow. You need **Process Payments**.
+
 <Callout kind="info" collapsed="false">
   When a credit card payment included a surcharge, the refund form also handles the surcharge: an **Also Refund Surcharge** checkbox on most processors, and an automatic refund on Finix. See the sections below.
 </Callout>
