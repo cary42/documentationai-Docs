@@ -341,7 +341,7 @@ On the responses table:
 
 - Click the **Status** value on a row to change it. The menu includes **Reset to In Progress**, **Approve**, **Pending Approval**, **Reject**, and **Delete**.
 - **Approve** (and **Bulk Approve**) opens **Approve this form?** with **Set their account status to**: **Active** (default), **Pending**, **Inactive**, or **Leave as is**. Confirm with **Yes, approve**.
-- Open a response to use **Save Only**, **Save & Approve**, **Save & Pending Approval**, or **Save & Reject**. **Save & Reject** matches the profile **Forms** tab: if the person still has removable sessions for that season, confirm with **Reject this form?** and **Remove any of their** `{season}` **sessions?** (checkboxes for each session). Helper: **Removing all of them also cancels the season's payment plan.** Confirm with **Yes, reject** or **Cancel**. With no sessions: **Are you sure you want to reject this form?** / **Yes, reject.**
+- Open a response to use **Save Only**, **Save & Approve**, **Save & Pending Approval**, or **Save & Reject**. **Save & Reject** matches the profile **Forms** tab: if the person still has removable sessions for that season, confirm with **Reject this form?** and **Remove any of their** `{season}` **sessions?** (checkboxes for each session). Helper: **Removing all of them also cancels the season's payment plan.** When the family has already paid toward that season, the dialog also shows **This family has paid $X.XX toward** that season, with **Leave it as a credit** or **Open the Sales tab to refund after rejecting**. Confirm with **Yes, reject** or **Cancel**. With no sessions: **Are you sure you want to reject this form?** / **Yes, reject.**
 - Use the **View** column (eye icon) to open that person's responses in a new tab. The row menu also includes **View Responses** and **Delete**. Deleting one response asks **Are you sure you want to remove this form?** Confirm with **Yes, remove.** You can restore it from **Recently deleted** for 30 days.
 - Use **Bulk Delete** when rows are selected. Confirm **Delete N responses? You can restore them from Recently deleted for 30 days.** with **Yes, delete.**
 - Use the filled primary **Print Responses** dropdown for **Print All**, **Print Approved**, **Print Pending**, or **Print In Progress**. **Bulk Approve** stays beside it. Those dialogs include a **Layout** choice and optional **Hide** checkboxes:
@@ -693,7 +693,7 @@ When payment plans are offered, a **Payment plan** card lists each plan as a sel
 
 #### Ask For A Donation
 
-When your payment processor is **Finix**, registration forms show **Ask For A Donation** under Settings (Preview new layout: **Ask for a donation** under **Checkout and payment**). Helper: **Checkout shows a gift box with your suggested amount. Families can change it or enter 0. The gift is charged separately to the same card (card payments only) and shows under Donations, with a donor receipt.**
+When your payment processor is **Finix**, registration forms show **Ask For A Donation** under Settings (Preview new layout: **Ask for a donation** under **Checkout and payment**). Helper: **Checkout shows a gift box with your suggested amount. Families can change it or enter 0. The gift is charged separately to the same card or bank account and shows under Donations, with a donor receipt.**
 
 Choices:
 
@@ -701,7 +701,7 @@ Choices:
 - One of your donation pages
 - If you have no pages yet: **Donations (we will create this donation page for you)** (creates the page and turns on the Donor module when you save)
 
-Set **Suggested gift amount** for the default. At checkout families see **Add a gift to** the donation page title, with help: **Optional. Your gift is charged separately to the same card, right after your payment. Enter 0 to skip. Gifts are taken only when you pay by card today.** Gifts appear under **Donor → Donations**. The admin Cart preview shows the same gift box for display only.
+Set **Suggested gift amount** for the default. At checkout families see **Add a gift to** the donation page title, with help: **Optional. Your gift is a separate payment from the same card or bank account, taken right after your registration payment. Enter 0 to skip.** When they pay by bank and enter a gift above 0, checkout also shows a one-time debit authorization for that gift amount. Gifts appear under **Donor → Donations**. The admin Cart preview shows the same gift box for display only.
 
 <Callout kind="alert" collapsed="false">
   Use **Allow User To Pay Later** carefully. Helper text: **No deposit necessary if set to Yes. Typically used for testing purposes.** Users finish registration without paying anything.
@@ -916,9 +916,9 @@ The **Custom text** box changes labels and instructions families see on the Port
 
 #### Show Remaining Forms
 
-On registration and standard forms, **Show Remaining Forms** lists other open forms the person still needs after they finish this one. Helper: **After this form is completed, list the other forms this person still needs to fill out, with a link to each.** Switch: **Show the forms still to complete on the thank-you page**.
+On registration and standard forms, **Show Remaining Forms** lists other open forms still to fill out after this one. Helper: **After this form is completed, list the other forms still to fill out, with a link to each. On the registration receipt, the list includes every child.** Switch: **Show the forms still to complete on the thank-you page**.
 
-When it is on, the thank-you page shows **You can fill out these forms next:** with links to each remaining form (same open and access rules as the portal home list; upload forms and Test Mode forms are skipped).
+When it is on, the thank-you page shows **You can fill out these forms next:** with links to each remaining form (same open and access rules as the portal home list; upload forms and Test Mode forms are skipped). On a registration receipt, a **Still to do** card lists each child's open forms and **Go to my forms**.
 
 #### Form Header Text
 
