@@ -159,10 +159,10 @@ When you choose a filter, you also choose an operator. These control **how** Cam
   Use this to find records where a field **has any value at all** (not blank).\
   Example: `Emergency contact is not null` returns everyone with at least one emergency contact entered.
 
-- **is greater than** / **is at least** / **is less than** / **is at most**\
-  Use these on text and choice fields when answers start with a number (for example Grade **5th** reads as 5). Answers with no leading number never match. On a choice field the threshold is the first selected option. These operators are not offered on multi-select (MM) fields, **Season**, or **Status**.\
-  Example: `Grade is greater than 3`.\
-  The same operators are available in mass Email / SMS / push recipients and in Camper Hub / Staff Hub profile filters.
+- **is greater than** / **is at least** / **is less than** / **is at most** / **is between**\
+  Use these on text and choice fields when answers start with a number (for example Grade **5th** reads as 5). Answers with no leading number never match. Number comparisons use one value; **is between** uses **From** and **To**. On a choice field the picker is a single select for these operators. A hint under the row can name how many answers have no leading number and so cannot match. These operators are not offered on multi-select (MM) fields, **Season**, or **Status**.\
+  Example: `Grade is greater than 3`, or `Grade is between 3 and 5`.\
+  The same operators are available in form Recipients, mass Email / SMS / push recipients, and in Camper Hub / Staff Hub profile filters.
 
 <Callout kind="info" collapsed="false">
   If you are ever unsure which operator to use, try **is** for simple single-value fields (like Status) and **contains any** for fields where people can have more than one selection (like sessions or tags).
