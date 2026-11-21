@@ -138,21 +138,36 @@ The last 10 people whose profiles you opened, with their status and user type. R
 
 Custom reports that someone shared with your role or with you directly. Each name opens a read-only view of the report. The card appears only when at least one report is shared with you. See [Allow a staff user to see a report](/allow-a-staff-user-to-see-a-report).
 
-### New Campers
+### Camper Hub (or New Campers)
 
-The 10 people who most recently registered for a session in the past month, newest first, with the registration date. Each name shows a **New** or **Returning** pill, using the same rule as the Chronological report (**New** has no earlier-season registration that counts toward retention; **Returning** has an active registration in an earlier season). When your camp has at least four years of seasons in Campium and the person is enrolled now with more than one year of history, the Returning pill can show an ordinal such as **3rd year** or **5th year** instead. The title uses your camp's label for campers. **See All New Campers** opens the [Chronological User Registration report](/system-report-chronological-user-registration#filter-by-new-or-returning). That report allows **View User Profiles** as well as **Access To The Report Module**, so the link works for staff who can see this card even when they do not have the full Reports module.
+When you have the **Camper Hub** permission, this card is titled **Camper Hub**. A segmented toggle switches the list:
 
-When a new camper's first and last name already match someone in another family, the row can show **Possible duplicate of** that person, with **Merge** when your role can open Merge Users. See [Duplicates](/duplicates).
+- **New** - the 10 people who most recently registered for a session in the past month, newest first, with the registration date. Each name shows a **New** or **Returning** pill, using the same rule as the Chronological report (**New** has no earlier-season registration that counts toward retention; **Returning** has an active registration in an earlier season). When your camp has at least four years of seasons in Campium and the person is enrolled now with more than one year of history, the Returning pill can show an ordinal such as **3rd year** or **5th year** instead.
+- **Missing forms** - campers who still need a required form. Empty state: **No one is missing forms.**
+- **Pending approval** - responses waiting for your approval (shown only when pending registration is on for your camp). Empty state: **Nothing is waiting for your approval.**
 
-Requires the **View User Profiles** and **New Users Section on Dashboard** permissions.
+The footer button follows the toggle: **See All New** campers opens the [Chronological User Registration report](/system-report-chronological-user-registration#filter-by-new-or-returning), or **Open in Camper Hub** / **Open all N in Camper Hub** for the other lists. Your browser remembers the toggle you last used.
 
-### New Staff Applicants
+With Admin access, a gear opens **Camper Hub Settings**. When required forms are not picked yet, a note can say **Choose required forms so Missing forms counts only what campers must finish.** with **Choose required forms**.
 
-People whose Application Status is still **Submitted** (not reviewed yet), newest first. When Application Status is visible on Staff Hub, the card header can show a count such as **3 not reviewed**, and each row shows that person's status pill in the same colors as Staff Hub. Each name also shows a **New** or **Returning** pill (**Returning** already had a staff season before the one on the application). Empty state: **No new applications waiting for review.** **See All in Staff Hub** opens [Staff Hub](/staff-hub) with the Application status filter set to **Submitted**.
+When a new camper's first and last name already match someone in another family, the **New** list can show **Possible duplicate of** that person, with **Merge** when your role can open Merge Users. See [Duplicates](/duplicates).
 
-If Application Status is not visible for your camp, the card lists recent finishers without the **not reviewed** count or status pills.
+Without Camper Hub access, the card stays titled **New** with your camp's label for campers and only shows the new-registration list. Requires the **View User Profiles** and **New Users Section on Dashboard** permissions. See [Camper Hub](/camper-hub).
 
-The card appears when you can open Staff Hub, your camp has at least one staff form picked for Staff Hub, and you have **View User Profiles**. It defaults under **New Campers** until you move it in **Customize**.
+### Staff Hub
+
+The card is titled **Staff Hub**. When Staff Hub is set up, a segmented toggle switches the list:
+
+- **New** - people whose Application Status is still **Submitted** (not reviewed yet), newest first. A badge can show how many are not reviewed. Each name shows a **New** or **Returning** pill (**Returning** already had a staff season before the one on the application). Empty state: **No new applications waiting for review.**
+- **Ready for offer** - Empty state: **No one is ready for an offer.**
+- **Awaiting forms** - Empty state: **No signed staff are waiting on forms.**
+- **Contracts sent** - Empty state: **No contracts sent yet.**
+
+The footer button follows the toggle (**See All in Staff Hub**, or **Open in Staff Hub** / **Open all N in Staff Hub**). Your browser remembers the toggle.
+
+With Admin access, a gear opens **Staff Hub Settings**. If your camp already has staff form submissions but no staff forms are picked for Staff Hub yet, Administrators see a setup prompt: **Track every applicant's forms, contracts and status in one place. Pick your staff forms to start.** with **Set up Staff Hub**.
+
+The card appears when you can open Staff Hub and you have **View User Profiles**. It defaults under the Camper Hub / New Campers card until you move it in **Customize**. See [Staff Hub](/staff-hub).
 
 ### Reminder Emails
 

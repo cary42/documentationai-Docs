@@ -13,7 +13,7 @@ Staff Hub shows where each staff member is in your hiring process. One table lis
 You still build and review the staff application itself on **Forms**. See [Staff Applications](/staff) for creating the form and how applicants log in and complete it. Use Staff Hub to track many people at once and move hires forward.
 
 <Callout kind="info" collapsed="false">
-  Staff Hub reads from the staff forms you connect to each season. If the table is empty, open **Staff Hub Settings** (top right of the page) and choose at least one staff form for each season. Changes in that panel save automatically. Until a season has a form, no one from that season appears. When another season is already set up, **Copy from another season** reuses its forms.
+  Staff Hub reads from the staff forms you connect to each season. If the table is empty, open **Staff Hub Settings** (top right of the page) and choose at least one staff form for each season. Changes in that panel save automatically. Until a season has a form, no one from that season appears. When another season is already set up, **Copy from another season** reuses its forms. That copy button (and **Staff Hub Settings**) needs Admin access. Without it, the button stays hidden.
 </Callout>
 
 ## Open Staff Hub
@@ -70,7 +70,7 @@ If that season has no saved answers yet, a note can say the season **has no save
 
 Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators match the Camper Hub filter (for example **is**, **contains any**, **contains**, **is on or after**, **is empty**). You can add up to 20 rows. Fields hidden from your role are not offered.
 
-**Save as...** / **Saved filters** / **Delete** work the same as on Camper Hub: named filters are shared with everyone at your camp who uses Staff Hub, and your last-used filter is restored when you return. Saved filter names also appear as buttons in the roster card header (beside **Filters**), so you can apply one without opening the panel.
+**Save as...** / **Saved filters** / **Delete** work the same as on Camper Hub: named filters are shared with everyone at your camp who uses Staff Hub, and your last-used filter is restored when you return. Saved filter names also appear as buttons in the roster card header (beside **Filters**), so you can apply one without opening the panel. After the page loads, each button can show how many staff it matches in the seasons you have selected (tooltip such as **N staff match**). The buttons work even while the counts are still loading.
 
 ## Page, search, and export the roster
 
@@ -128,8 +128,14 @@ Open **Staff Hub Settings** (top right) to control the dashboard:
     When **W-4 collection** is on, use **Request a W-4 automatically** to pick the Application Status values that send a W-4 request (it reads **By hand only** when empty). Moving someone to an unselected value cancels a W-4 they have not signed. Optionally check **Also collect New York Form IT-2104**. When **I-9 verification** is on and you have **I-9 Records**, use **Request an I-9 automatically** the same way. See [W-4 collection](/w4-collection) and [I-9 verification](/i9-verification).
   </Step>
 
-  <Step title="Hire when the main staff form is completed (optional)" icon="check-circle" title-type="p">
-    Check **Staff are hired when they complete your main staff form** when you do not review each application by hand. Helper: **Turn this on if you do not review each application. Completing the form sets their Application Status to Hired and adds them to that form's season. Leave it off to review each application and mark them Hired yourself.** The same setting appears under **Admin → Site Settings → Modules** in the Staff group. Mark the main form when you create it with **Is this your main staff registration form?** set to **Yes** (see [Forms](/forms#create-a-new-form)). A status you already set by hand stays as it is.
+  <Step title="Choose when staff are hired" icon="check-circle" title-type="p">
+    Under **When are staff hired?**, pick one option:
+
+    - **You mark them Hired** - finishing the main form sets **Submitted** until you hire them yourself
+    - **They finish the main form** - completing the main form sets **Hired** and adds them to that form's season
+    - **You approve the main form** - approving their response to the main form sets **Hired** and adds the season
+
+    Helper: **Hired sets their Application Status to Hired and adds them to the main staff form's season. Until then, finishing the form sets Submitted. Approving means approving their response to that form.** The same choice appears under **Admin → Site Settings → Modules** in the Staff group. Mark the main form when you create it with **Is this your main staff registration form?** set to **Yes** (see [Forms](/forms#create-a-new-form)).
   </Step>
 
   <Step title="Connect staff forms to each season" icon="folder" title-type="p">
