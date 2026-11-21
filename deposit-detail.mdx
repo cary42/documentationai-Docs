@@ -74,6 +74,8 @@ Each row is one payment.
 
 For **Payabli** batches, Deposit Detail can show estimated **Fees** and **Net** with a note such as: **Fees are estimated from your rates: card [rate], ACH [rate]. Payabli bills actual processing fees monthly, not per batch.** Finix camps continue to show settlement fees from the processor.
 
+On a Finix batch, when settlement fees exist that are not tied to any payment row (for example card authorizations or the bank payout), Deposit Detail adds a `$0` row with reason **Finix fees not tied to a payment (card authorizations, bank payout)**. That row carries the leftover fee amount so the **Fee** column adds up to the settlement total. Like other unmatched settlement rows, it has no **Reconcile** button.
+
 <ParamField body="Reconciled" param-type="action" required="false" deprecated="false">
   A per-payment reconcile toggle. See below.
 </ParamField>

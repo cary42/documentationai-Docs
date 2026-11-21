@@ -290,7 +290,7 @@ Opposite the **Email body** heading, click **Save as template** to store the cur
 1. Enter a **Template name** (prefilled from the subject) and optional **Category** (first option **No category**).
 2. Helper text: **Saves the subject and body as they are now. Recipients and send settings are not included.**
 3. Click **Save template**. Success toast: **Saved "..." to your templates.**
-4. If that name already matches one of your organization's templates (including after you reopen a draft), Campium asks **Choose how you want to save changes to "..."** with **Overwrite "..."**, **Save as new**, or **Cancel**. Overwrite toast: **Updated "..." in your templates.**
+4. If that name already matches one of your organization's templates (including after you reopen a draft), Campium asks **Choose how you want to save changes to "..."** with **Overwrite "..."**, **Save as new**, or **Cancel**. Overwrite toast: **Updated "..." in your templates.** **Cancel** leaves the draft unlinked, so the next **Save as template** asks for a name again instead of jumping straight to Overwrite.
 
 If you inserted one of your organization's templates (not a Campium system template), the next **Save as template** click offers the same **Overwrite "..."** / **Save as new** choice.
 
@@ -477,6 +477,8 @@ Use these actions in the composer to control how and when your email goes out.
   - Use when you are ready to send immediately.
 
   - Leave **When to send** on **Send immediately**.
+
+  - If anyone on the send has Application Status **DNR**, **Fired**, **Do Not Rehire**, **Dismissed**, or **Terminated**, Campium asks first. One person: **Alex is marked DNR. Send to them anyway?** Several people: **3 people on this send are marked DNR, Fired or similar. Send to them anyway?** with a short list of names and statuses (up to 10, then **and N more.**). Choose **Send anyway** or **Cancel**. The same confirm appears on group email and profile **Send Email**.
 
   - After you confirm (**Yes, Send!**), Campium queues recipients, then delivers messages in batches. You can leave the page; delivery keeps going.
 
