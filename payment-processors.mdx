@@ -79,15 +79,19 @@ US camps are unchanged. Canada setup is not a self-serve Site Settings toggle fo
 
 #### Daily settlement accrual (Finix)
 
-ACH debits use a **separate, earlier cutoff: 8:00 PM Eastern**. ACH does not use the card authorize/capture flow. Campium creates an immediate debit transfer when the payment is submitted. For Canada camps, the same bank-debit path uses PAD labels instead of ACH.
+ACH debits use a **separate, earlier cutoff: 8:00 PM Eastern**. ACH does not use the card authorize/capture flow. For Canada camps, the same bank-debit path uses PAD labels instead of ACH.
 
-ACH submitted after the 8:00 PM Eastern cutoff typically accrues into the **next** business day's settlement.
+Campium queues Finix ACH payments, canteen deposits, and tips during the day and sends them between **7 and 8 PM Eastern**, before Finix's cutoff. Until then the payment can show **Queued (sends tonight)** / a **Queued** badge, and **void** cancels it with no money moving. Donations still debit at once. See [Processing Refunds and Voids](/processing-refunds-and-voids#finix-ach-queued-before-the-evening-send).
+
+ACH that is sent after the 8:00 PM Eastern cutoff typically accrues into the **next** business day's settlement.
 
 #### ACH void window in Campium
 
-For ACH voids, Campium enforces a **same-calendar-day window until 6:00 PM Eastern** on some flows (for example canteen). After that, or on a later day, void may no longer be available and a refund/reversal path may apply.
+While a Finix ACH payment is still **Queued**, **void** cancels it before any debit reaches the bank. After the evening send, Finix ACH cannot be voided; wait for settlement, then use **refund**.
 
-Before voiding or refunding ACH on Finix, Campium checks whether the transfer is already attached to a Finix settlement. If it is, the UI warns that a reversal becomes a separate ACH credit (often 3–5 business days) rather than canceling the original debit in place.
+On some other processors or older flows (for example canteen), Campium may also enforce a **same-calendar-day window until 6:00 PM Eastern**. After that, or on a later day, void may no longer be available and a refund/reversal path may apply.
+
+Before voiding or refunding ACH on Finix after it has been sent, Campium checks whether the transfer is already attached to a Finix settlement. If it is, the UI warns that a reversal becomes a separate ACH credit (often 3–5 business days) rather than canceling the original debit in place.
 
 ### Bank deposit timing (payouts)
 
