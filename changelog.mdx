@@ -10,6 +10,37 @@ description: >-
   Campium releases updates regularly to enhance camp management features like registration, billing, attendance, and reporting. Check this page for the latest changes and migration guidance.
 </Callout>
 
+<Update label="2026-11-23" description="Finix ACH evening queue, mass email and news templates, contract staff copies, Forms No dates" tags={["feature","improvement","bugfix"]}>
+  ## New
+
+  - **Finix ACH evening queue** - Bank payments, canteen deposits, and tips wait until **7-8 PM Eastern**. **Queued** / **Queued (sends tonight)**; **void** cancels before money moves. See [Processing Refunds and Voids](/processing-refunds-and-voids#finix-ach-queued-before-the-evening-send).
+  - **When are staff hired?** - Staff Hub Settings / Site Settings Modules: mark Hired yourself, when they finish the main form, or when you approve it. See [Staff Hub](/staff-hub).
+  - **Family Registration Report** - **Reports → System Reports → Enrollment** for every camp. See [Family Registration Report](/family-registration).
+
+  ## Updates
+
+  - **New Email / New News** - Blank or template, with **Your recent templates**, preview, and a clear load failure. See [Mass Emails](/mass-emails#create-and-send-a-new-mass-email) and [Portal News](/portal-news#create-and-publish-a-news-item).
+  - **Contract CC** - Staff get their own copy without the signing link; profile shows **Copied:** names. See [Profiles](/profiles) and [Contracts](/contracts#send-and-resend-contract-emails).
+  - **Forms list** - Status filter **No dates** (No dates set + Hidden). See [Forms](/forms#filter-the-forms-list-by-status).
+  - **Remembered table sort** - Header sort sticks for your login; **Sorted by…** chip with **Reset** on Mass Emails, Pending Registrations, Contracts, and other column-picker tables.
+  - **Credits / custom reports / hubs** - Credits **Email this family** opens Send Email on the report; custom reports **Send Message** and **Email as CSV**; hub saved filters clear on second click with a named **Delete** confirm.
+  - **Ask For A Donation** - Finix registration gifts by card or bank; receipt **Give $X now** when the gift is not charged. See [Forms](/forms#ask-for-a-donation).
+  - **Group Field** - Picker accepts Camper + Parent + Staff (same as All Users). See [My Groups](/my-groups).
+  - **People → All People** - **Guardian** column only for Campers / All Users. See [Profiles](/profiles#browse-all-people).
+  - **Tiered pricing** - Plain message when a second tier uses the same start date. See [Tiered Pricing](/tiered-pricing#managing-tiers).
+  - **Email the signer a copy** - On by default for signed PDF after signing. See [Contracts](/contracts).
+
+  ## Fixes
+
+  - **Buses missing from Transportation** - Re-saving bus fields creates missing bus rows for options added earlier. See [Transportation](/transportation#troubleshooting).
+  - **Form profile photo crop** - Default crop square starts at the top of a tall photo so faces are not cut off.
+  - **Suggested gift amount** - Inline validation when Ask For A Donation amount is invalid.
+  - **Discounts Auto Apply** - Only one Auto Apply discount can occupy a given slot.
+  - **Mass Emails / Pending Registrations sort** - Sort keeps across the full list; Pending Camper and Session sorts ignore case.
+  - **Contracts Columns** - Columns menu on both contract lists.
+  - **Blank date questions**, invite-token reopen, profile refund response, canteen CSRF, empty payment plans list, Revenue Summary untiered row, whitespace profile field names, guardian email one-login, Sessions Layout whole-row drag, Form Status Alerts bell, Test dialog focus return, Payabli settled status, iOS Billing Pay modal, contract test-email preview, Reject double-prompt, Make Inactive in groups of 25, and related list polish from the week.
+</Update>
+
 <Update label="2026-11-16" description="Payment Follow-up, Texts inbox, Test my registration, contracts Drafts, Family Audit, payment timeline" tags={["feature","improvement","bugfix"]}>
   ## New
 

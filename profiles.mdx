@@ -25,7 +25,7 @@ Use the admin search tools, family views, or **People → All People** to open a
 2. Optionally filter by **Status**, user type, and **season** (defaults to your signed-in **Default Season**, or pick **All Seasons**), then click **Filter List**. Those filters use the page URL, so you can bookmark or share the filtered list.
 3. When you pick a deactivated season that has a ready profile snapshot, a note appears: **People and extra columns for this season come from the snapshot saved when you deactivated it.** Extra columns then show snapshot values for that season, not live answers.
 4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Selected fields appear as extra columns on this list. When finance reporting is on, you can add **Family Balance** (or **Camper Family Balance** on camper-style lists). That amount is calculated from payments.
-5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. **Seasons** lists the seasons that person is registered in.
+5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. **Seasons** lists the seasons that person is registered in. The **Guardian** column appears only when the person-type filter is **All Users** or **Campers** (other types have no guardians, so the column would be blank). A **Guardian** hide you saved in **Display Columns** still applies on camper lists.
 6. Use the export toolbar beside the list filter (**Copy**, **Excel**, **CSV**, **PDF**, **Print**) to download every person who matches your filters, including your **Display Columns**. The file matches the filters and display columns on screen, including snapshot values when you selected a deactivated season with a ready snapshot. On the new layout, those formats fold into one **Export** menu.
 7. Click the person’s name to open their profile.
 
@@ -724,6 +724,8 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     On Finix, a same-day card payment that is still authorized (not yet captured) can show an **Auth** badge and a grey **Refund (after capture)** label instead of an active **refund** link. Hover **Refund (after capture)** for: **Refund unlocks once this charge is captured. Until then, use Void to cancel the charge, or Capture to capture it now.** See [Payment Processors](/payment-processors#auth-only-card-flow-in-campium) and [Processing Refunds and Voids](/processing-refunds-and-voids).
 
+    On Finix, a bank (ACH) payment that has not yet gone to the bank can show a **Queued** badge (status **Queued (sends tonight)**). Hover: **This bank (ACH) payment goes to the bank tonight between 7 and 8 PM Eastern. Until then, Void cancels it and no money moves.** See [Processing Refunds and Voids](/processing-refunds-and-voids#finix-ach-queued-before-the-evening-send).
+
     When a Finix membership recurring charge was declined for a billing-address mismatch and never collected, the Sales tab can show **Membership payment declined, not collected.** With **Process Payments** and a chargeable method on file, use **Charge it now**, then confirm **Yes, charge it**. See [Memberships](/memberships) and [Payment Methods](/payment-methods).
 
     <Steps>
@@ -964,9 +966,11 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     ### What you can do from this tab
 
-    Use **New Contract** at the top of the tab to create and email a contract for someone in this family. The modal title is the person's name plus **New Contract**. Choose **Contract** and **Season**. Leave the **Email** … **the contract now** checkbox checked to send right away (submit reads **Create & Send**), or clear it to create without emailing (submit reads **Create**). While email is on, optionally use **CC** (**Search your staff**) to copy people who have a role at your camp; helper text: **Each person picked gets a copy of the email.** Optionally click **Edit email** to change the **Email subject** and **Email body** for this send, then **Create & Send** or **Create** (or **Cancel**). The same Contracts module and permission rules apply as on **Admin → Contracts**. Staff Hub send does not offer **CC**.
+    Use **New Contract** at the top of the tab to create and email a contract for someone in this family. The modal title is the person's name plus **New Contract**. Choose **Contract** and **Season**. Leave the **Email** … **the contract now** checkbox checked to send right away (submit reads **Create & Send**), or clear it to create without emailing (submit reads **Create**). While email is on, optionally use **CC** (**Search your staff**) to copy people who have a role at your camp; helper text: **Each person picked gets their own copy, without the signing link.** Each CC'd staff member gets a separate email with the same subject as the signer, and the signing link replaced by **Sent to** the person's name **for signature. View in Contracts.** Optionally click **Edit email** to change the **Email subject** and **Email body** for this send, then **Create & Send** or **Create** (or **Cancel**). The same Contracts module and permission rules apply as on **Admin → Contracts**. Staff Hub send does not offer **CC**.
 
     Use **Resend** on an unsigned contract that still has a signing link. The modal title is **Resend** plus the template name. It shows **Sending to** the person and email, plus **Last sent** the date or **Not sent yet.** Optionally use **CC** the same way as on **New Contract**, click **Edit email**, then **Resend** (or **Cancel**). Success: **Contract sent.**
+
+    When staff were copied on a send, the status cell can show **Copied:** plus their names under the status badge.
 
     Use **Preview** on any contract to open it in a new browser tab. Signed contracts open the signed PDF, while unsigned contracts open the document with a note that it has not been signed yet.
 

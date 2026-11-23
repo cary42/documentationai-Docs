@@ -25,16 +25,27 @@ Refunds become available once the original charge has fully settled to your merc
 
 - For **credit card payments**, this is usually the next day.
 
-- For **ACH payments**, settlement usually takes **3-5 business days**. Until an ACH payment settles, the row shows **Refund (after settle)** in place of the **refund** link. On processors other than Finix, use **void** to cancel the debit instead. On **Finix**, ACH payments cannot be voided; wait for settlement, then use **refund**. Hover **Refund (after settle)** for: **Bank (ACH) payments can't be voided. Refund unlocks once this payment settles.**
+- For **ACH payments**, settlement usually takes **3-5 business days**. Until an ACH payment settles, the row shows **Refund (after settle)** in place of the **refund** link. On processors other than Finix, use **void** to cancel the debit instead. On **Finix**, a bank debit that has already gone to Finix cannot be voided; wait for settlement, then use **refund**. Hover **Refund (after settle)** for: **Bank (ACH) payments can't be voided. Refund unlocks once this payment settles.**
 - After an ACH debit settles, the profile **Sales** tab can still show a **Pending** badge for three banking days. Hover for: **This bank (ACH) debit settled, but the bank can still return it (for example, for insufficient funds) until** the clear date. **refund** stays blocked until that clear date so you are not out both the return and a refund.
 - If you try **refund** during that return window, Campium shows a modal (Close only): **The bank can still return this payment until** the clear date. **You can refund it on that day.** On **Canteen → Deposits**, the row shows muted **Refund on** that date instead of a refund link.
 
+### Finix ACH queued before the evening send
+
+When your camp uses **Finix**, bank (ACH) payments, canteen deposits, and tips do not go to the bank at checkout. Campium holds them and sends them between **7 and 8 PM Eastern**. Until then:
+
+- The **Sales** tab (and Payments) can show a **Queued** badge. Hover: **This bank (ACH) payment goes to the bank tonight between 7 and 8 PM Eastern. Until then, Void cancels it and no money moves.**
+- Status can read **Queued (sends tonight)**.
+- Use **void** to cancel the debit while it is still queued. No money moves.
+- After the evening send, the row behaves like a normal Finix ACH transfer (no void; refund after settle).
+
+Donations on Finix still debit at once (they have no void path). Campium can turn the queue off for a camp; when it is off, Finix ACH behaves as an immediate debit again.
+
 Before settlement, the payment is pending. On card payments (and on ACH for processors other than Finix), the row shows **void**. Voiding cancels the payment before it completes. A card payment can show **void** and **refund** side by side during this window.
 
-On an ACH payment that has not settled, the **Sales** tab also shows a **Pending** badge. Hover it for: **This bank (ACH) debit has not settled yet. Void it to cancel the charge; Refund becomes available once it settles.** On Finix (where void is not offered), the tip is: **This bank (ACH) debit has not settled yet. Refund becomes available once it settles.** On Finix, the tip also includes **Estimated deposit:** and the weekday date Campium expects the funds (same estimate as **Est. deposit** on Payments).
+On an ACH payment that has not settled, the **Sales** tab also shows a **Pending** badge. Hover it for: **This bank (ACH) debit has not settled yet. Void it to cancel the charge; Refund becomes available once it settles.** On Finix after the evening send (when void is not offered), the tip is: **This bank (ACH) debit has not settled yet. Refund becomes available once it settles.** On Finix, the tip also includes **Estimated deposit:** and the weekday date Campium expects the funds (same estimate as **Est. deposit** on Payments).
 
 <Callout kind="info" collapsed="false">
-  If you open **refund** on an ACH payment that has not settled yet on a processor that still allows ACH void, Campium shows: **This ACH payment has not settled yet. Void it to cancel the debit. You can refund only after it settles.** Use **Void this payment** (or **Close**), then issue a refund after settlement. On Finix ACH, there is no void path; wait for settlement. The same rules apply on profile payments and on **Canteen** → **Deposits**.
+  If you open **refund** on an ACH payment that has not settled yet on a processor that still allows ACH void, Campium shows: **This ACH payment has not settled yet. Void it to cancel the debit. You can refund only after it settles.** Use **Void this payment** (or **Close**), then issue a refund after settlement. On Finix ACH that is still **Queued**, use **void** before the evening send. After it has been sent to Finix, wait for settlement, then **refund**. The same rules apply on profile payments and on **Canteen** → **Deposits**.
 </Callout>
 
 <Callout kind="info" collapsed="false">
