@@ -33,7 +33,7 @@ Use this page when you want to:
   </Step>
 </Steps>
 
-The page lists your active discounts. Use **Show Me** to switch between **Active** and **Archived** discounts. The **Code Checker**, **Multi-Session**, and **Pay In Full Default** buttons above the list each open a panel for that tool.
+The page lists your discounts. Beside the table search, use the **Active**, **Inactive**, and **Archived** pills (each with a count) to filter the list. The **Code Checker**, **Multi-Session**, and **Pay In Full Default** buttons above the list each open a panel for that tool.
 
 ## Family-level discounts on a profile
 
@@ -324,8 +324,7 @@ Use the action menu on each discount row to update or remove a discount.
   </Step>
 
   <Step title="Archive a discount" icon="archive" title-type="p">
-    Choose **Archive Discount** to stop using a discount but keep its history.\
-    Archived discounts leave the active list and no longer apply to new checkouts. To see them, set **Show Me** to **Archived**.
+    Choose **Archive Discount** to stop using a discount but keep its history. Confirm with **Archive this discount? It will also be set to Not in use, so families can no longer apply it.** and **Yes, archive it!** Archiving sets **Status** to **Not in use** and moves the row to the **Archived** pill. To see archived discounts, choose the **Archived** pill.
   </Step>
 
   <Step title="Delete a discount" icon="trash" title-type="p">
@@ -626,6 +625,8 @@ Use this section when you see an error saving a discount or multi-session config
   </Expandable>
 
   <Expandable title="Discount is not showing for families at checkout" default-open="false">
+    At checkout, a code that does not exist shows **We couldn't find the discount code** followed by what they typed, then **Did you mean** a close match when Campium has one, or **Check the spelling and try again.** A code limited to sessions that are not in the cart shows **This code is only for** those session names **and none of those is in your cart.**
+
     If families cannot see or use a discount code in the parent portal, check the following:
 
     - **Allow On Portal? = Yes** on the discount.

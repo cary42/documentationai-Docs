@@ -92,7 +92,14 @@ If the table cannot load, you may see **We could not load payments. Try again, o
 </ParamField>
 
 <ParamField body="Settlement status" param-type="text" required="true" deprecated="false">
-  Where a credit card or ACH payment is in processing and settlement. Discount, adjustment, balance transfer, cash, and check rows leave this blank.
+  Where a credit card or ACH payment is in processing and settlement. Discount, adjustment, balance transfer, cash, and check rows leave this blank. Hover a status badge for a short tip when one applies:
+
+  - **Queued** (Finix evening ACH): the payment goes to the bank tonight between 7 and 8 PM Eastern; void cancels it before money moves.
+  - **Pending**: **The processor has not settled this payment yet.**
+  - **In transit**: **This bank (ACH) payment was sent to the bank and has not settled yet.**
+  - **Voided**: **This payment was voided before it settled, so no money moved.**
+  - **Authorized**: tip covers capture or void before settlement.
+  - **Settled**: no tip.
 </ParamField>
 
 <ParamField body="Enrolled family members" param-type="text" required="false" deprecated="false">

@@ -55,7 +55,7 @@ Campium shows up to 30 people at a time. If the person you want is not in the li
 Click **Settings** under the search box to choose what the search covers. Each change saves as soon as you click it, and it is saved for your login only. The search box at the top of the admin screens uses the same settings.
 
 <ParamField body="Include Profile Data" param-type="checkbox" required="false" deprecated="false">
-  Off by default, so only names are searched. When on, Campium also searches answers in profile fields. Name matches are listed first, followed by people whose profile answers match. You only see matches in profile fields your role is allowed to view.
+  On by default when you have not saved search settings yet, so Campium searches names and answers in profile fields. Name matches are listed first, followed by people whose profile answers match. You only see matches in profile fields your role is allowed to view. Turn it off to search names only. Settings you already saved for this camp stay as you left them.
 </ParamField>
 
 <ParamField body="Include Active Users" param-type="checkbox" required="false" deprecated="false">
@@ -75,14 +75,14 @@ Click **Settings** under the search box to choose what the search covers. Each c
 </ParamField>
 
 <Callout kind="info" collapsed="false">
-  The status settings filter name matches. If you cannot find someone you know is in the system, check whether their status is turned off here. Archived records and leads are hidden until you turn on **Include Archived & Leads**.
+  The status settings filter name matches. If you cannot find someone you know is in the system, check whether their status is turned off here. Archived records and leads are hidden until you turn on **Include Archived & Leads**. You must keep at least one status type checked; turning the last one off rechecks it with **Keep at least one type of person checked, or search finds nobody.**
 </Callout>
 
 ## Troubleshooting
 
 - **No Results for a name you know exists.** Check the status settings. Merged duplicates are set to Archived, so they only appear with **Include Archived & Leads** on.
 
-- **Searching for an allergy, school, or other answer finds nothing.** Turn on **Include Profile Data**. Without it, only names are searched. If it is already on, the field may be one your role cannot view.
+- **Searching for an allergy, school, or other answer finds nothing.** Confirm **Include Profile Data** is on (it is on for new staff settings). Without it, only names are searched. If it is already on, the field may be one your role cannot view.
 
 - **Searching by middle name or nickname finds nothing.** Names match on the start of the first or last name only. Try the first or last name instead, or turn on **Include Profile Data** if the nickname is stored in a profile field.
 

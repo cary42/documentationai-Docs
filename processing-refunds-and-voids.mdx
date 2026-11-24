@@ -40,6 +40,8 @@ When your camp uses **Finix**, bank (ACH) payments, canteen deposits, and tips d
 
 Donations on Finix still debit at once (they have no void path). Campium can turn the queue off for a camp; when it is off, Finix ACH behaves as an immediate debit again.
 
+If the bank declines the debit at that evening send, no money moves. Families can get the **ACH payment declined** automated email (or **PAD payment declined** in Canada), and staff get an **ACH declined** alert. That is different from a settled ACH return. See [Automated Emails](/automated-emails#payments) and [What is an ACH return?](/what-is-an-ach-return).
+
 Before settlement, the payment is pending. On card payments (and on ACH for processors other than Finix), the row shows **void**. Voiding cancels the payment before it completes. A card payment can show **void** and **refund** side by side during this window.
 
 On an ACH payment that has not settled, the **Sales** tab also shows a **Pending** badge. Hover it for: **This bank (ACH) debit has not settled yet. Void it to cancel the charge; Refund becomes available once it settles.** On Finix after the evening send (when void is not offered), the tip is: **This bank (ACH) debit has not settled yet. Refund becomes available once it settles.** On Finix, the tip also includes **Estimated deposit:** and the weekday date Campium expects the funds (same estimate as **Est. deposit** on Payments).

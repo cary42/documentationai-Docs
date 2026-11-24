@@ -100,7 +100,7 @@ The header gives you a quick snapshot of who you are looking at:
 
 - **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, the pencil control (**Edit name, email, and phone**) opens **Edit contact**, where you update **First name**, **Last name**, **Email**, and phone, then **Save**. A short **Saved.** toast confirms the change, and the family-row email (and this profile's primary email when it matches) refresh in place. You need permission to edit profiles, and you can only edit members of the same family.
 
-- **Profile photo**: Lets you upload, crop, rotate, or delete a profile photo so staff can recognize the person easily.
+- **Profile photo**: Lets you upload, crop, rotate, or delete a profile photo so staff can recognize the person easily. When a full-size photo is already on file, **Adjust Crop** reopens the crop tools on that image without uploading again. **Cancel** closes the modal. On a parent form photo step, **Adjust Crop** appears when a photo already exists.
 
 - **Payment Methods on File**: Shows the family's primary payment method (or the first method if none is marked primary). When more methods exist, use **Show N more** / **Show less** to expand or collapse the rest. While the list is collapsed, **Change primary** opens **Other methods on file** so you can **Set Primary**, open **Payment method settings**, or **Remove** a non-primary method without expanding the list. The visible primary row also has remove (title **Remove this payment method**). Confirm: **Remove [method] from this family? This can not be undone.** Success starts with **Payment method removed.** If another method stays on file, Campium keeps or promotes a primary and moves pending scheduled payments to it (for example, **The card ending #### is now the primary payment method, and N scheduled payments will use it.**). If nothing remains, the message explains that scheduled payments will not charge until you add a method and set it as primary. Empty state: **No payment methods on file.**
 
@@ -240,6 +240,8 @@ Use **Email** or **Actions** when you need to do something specific for this per
 
 ## Log in as this person
 
+### Parent portal (**Login**)
+
 Use **Login** to see exactly what a parent or staff member sees in their portal. It is in the profile action row under their photo, next to **Check Permissions**.
 
 <Steps>
@@ -264,7 +266,15 @@ On a family profile, each adult in the family list also has a small **Login** ba
   **Login** appears for adults only: parents, guardians, staff, and alumni. Campers do not have their own portal login, so log in as the camper's parent instead. Anything you do in that tab is done as that person.
 </Callout>
 
-To check what a staff member can open inside CampiumDB, look at the role on their profile, then review that role in **Admin → Roles & Permissions**.
+### Campium admin (**Log in as** staff)
+
+To open Campium as another staff member at your camp (not the parent portal), use **Log in as** followed by their first name. That button appears only when your role has **Log in as staff** (under **Administration** in **Admin → Roles & permissions**; off by default), you are not already signed in as someone else or previewing a role, and their role does not hold permissions yours lacks.
+
+The session opens in a new tab on a separate host so your own login stays put. A banner shows **Signed in as** their name and that changes are recorded under you. Close that tab when you are done. You cannot reach their password, two-step, or passkey pages, and you stay locked to your camp. The visit is listed on their **Logins** tab.
+
+See [Can I log in as staff?](/help-center/faq/can-i-log-in-as-staff).
+
+To check what a staff member can open inside CampiumDB without signing in as them, look at the role on their profile, then review that role in **Admin → Roles & Permissions**.
 
 ## Check Permissions
 
@@ -533,7 +543,7 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - Click **New Note** to add notes for behavior, special instructions, or follow-ups. When you choose a text message, **Text ends with** can prefill **Do not reply directly to this message.** Helper text: **Replies to this number don't reach you. Clear it to send the note alone.** That footer applies when you are on the shared one-way number (no active camp texting number).
     - When notes exist, use **All notes** / **My notes** at the top of the tab to show every note or only ones you wrote. Each button shows a count.
-    - Edit existing notes when you need to correct or clarify something.
+    - Edit an existing note and save again when you need to correct or clarify something (including on the classic profile page).
     - Remove notes that are no longer relevant, according to your camp policies.
 
     Use clear, professional language in notes, since other staff rely on this tab to make decisions during camp.
@@ -1060,7 +1070,7 @@ Use these quick answers when something on a profile does not look right.
 
     - Make sure the file you upload follows your camp’s guidelines for size and type.
 
-    - After uploading, use the crop and rotate tools, then confirm or save the new image when prompted.
+    - After uploading, use the crop and rotate tools, then confirm or save the new image when prompted. To change the crop on a photo that is already saved, open the photo modal and choose **Adjust Crop** (staff need a full-size copy on file; otherwise upload again).
 
     - If the old image still shows after a refresh, try clearing your browser cache or opening the profile in a different browser.
 
