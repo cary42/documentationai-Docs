@@ -43,3 +43,5 @@ If you want Campium to email the family when an ACH charge fails:
 - Enable the setting to send an email about failed ACH charges.
 
 After you turn this on, families receive an email automatically when an ACH return occurs. The portal banner still appears whether or not that email is on.
+
+On Finix, when the bank declines a payment at the evening send before any money moves, that is an **ACH payment declined** notice (not a return). Campium uses a separate automated email for that case (**ACH payment declined**, or **PAD payment declined** in Canada), still controlled by **Send Email When ACH Return Is Received**. Edit both rows under **Admin → Automated Emails**. See [Automated Emails](/automated-emails#payments).

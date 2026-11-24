@@ -990,6 +990,10 @@
               {
                 "title": "Can I log in as a parent?",
                 "path": "help-center/faq/can-i-login-as-a-parent"
+              },
+              {
+                "title": "Can I log in as staff?",
+                "path": "help-center/faq/can-i-log-in-as-staff"
               }
             ]
           },

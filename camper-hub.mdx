@@ -71,7 +71,7 @@ When the filter names exactly one season (with a ready snapshot), **Profile answ
 
 If that season has no saved answers yet, a note can say the season **has no saved answers, showing today's.** Roster columns and the Season row itself stay on live data. The choice rides with the filter (URLs, last-used, and saved filters keep it). The same control exists on [Staff Hub](/staff-hub#filter-by-profile-fields), custom reports, and Recipients. See [Custom Reports](/custom-reports#look-at-another-year-with-the-season-filter).
 
-Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators depend on the type (for example **is**, **contains any**, **contains all**, **contains**, **is on or after**, **is empty**). You can add up to 20 filter rows. Role-hidden fields do not appear in the picker.
+Supported field types: Choose One, Choose Many, Ranked Choice, Text, and Date. Operators depend on the type (for example **is**, **is one of**, **contains any**, **contains all**, **contains**, **is on or after**, **is empty**). You can add up to 20 filter rows. Role-hidden fields do not appear in the picker.
 
 **Save as...** stores a named filter that everyone at your camp who uses Camper Hub can load. Re-using an existing name replaces that filter. **Delete** asks **Delete the saved filter "..."?** with **Yes, delete it**. Your last-used filter is restored the next time you open the page.
 
@@ -155,13 +155,14 @@ After you send a reminder from Camper Hub, the roster remembers it for that camp
 
 ## Send reminders for missing forms
 
-When at least one enrollment row is missing counted forms, **Send reminders** appears above the roster (to the right of the filter note).
+**Send reminders** lives on the bulk bar that appears when you select roster rows (not as a standing button above the table).
 
-1. Click **Send reminders**. Recipients are everyone in the current season filter who still has forms outstanding, even if you filtered the roster with a tile.
-2. Review the **Send reminders** dialog: how many people still have forms outstanding, how many emails will go out, and a short sample of names and addresses.
-3. Under **Send to**, choose **Primary guardian only** or **Primary and secondary guardian**. Changing the choice recounts recipients before you send.
-4. When some of those campers were already reminded in the last **24 hours**, a checkbox such as **Skip the 2 who were already reminded in the last 24 hours** appears (checked by default). Leave it on to avoid a second email the same day, or clear it if you want those families included again. The summary notes how many were left out, or that they will be emailed again.
-5. Confirm with **Send reminders**, or cancel.
+1. Check the campers (or camper-season rows) you want to remind. The bulk bar shows a count such as **1 selected** or **N selected**, with **Send reminders** and **Clear**. When your selection covers every row on the page, you can use **Select all N matching** to include the rest of the filtered roster.
+2. Click **Send reminders**. The dialog reaches the selected people who still have forms outstanding (and a reachable email). If nobody qualifies, Campium says there is no one to remind.
+3. Review how many people still have forms outstanding, how many emails will go out, and a short sample of names and addresses.
+4. Under **Send to**, choose **Primary guardian only** or **Primary and secondary guardian**. Changing the choice recounts recipients before you send.
+5. When some of those campers were already reminded in the last **24 hours**, a checkbox such as **Skip the 2 who were already reminded in the last 24 hours** appears (checked by default). Leave it on to avoid a second email the same day, or clear it if you want those families included again. The summary notes how many were left out, or that they will be emailed again.
+6. Confirm with **Send reminders**, or cancel. **Clear** drops the selection without sending.
 
 Each recipient gets one email that lists the unfinished forms for that camper. Guardians without an email on file, and guardians who unsubscribed from form notifications, are skipped. The dialog shows those counts when they apply. If a season still has no required forms configured, the dialog notes that those reminders list every form for the season.
 

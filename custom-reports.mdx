@@ -79,7 +79,7 @@ Filters define **who** appears in the report. You can add one filter or many, de
 
     - Choose the field you want to filter by, such as **Session**, **Balance**, **Status**, **Years at camp**, or another data field. **Years at camp** uses operators **is at least**, **is at most**, and **is**. You can also add **Years at camp** as a display column.
 
-    - Pick an operator such as **is**, **contains any**, **is not**, and so on.
+    - Pick an operator such as **is**, **is one of**, **contains any**, **is not**, and so on.
 
     - Enter or choose the value (for example, a specific session name or status).
   </Step>
@@ -139,6 +139,10 @@ When you choose a filter, you also choose an operator. These control **how** Cam
   Use this when you want an exact match.\
   Example: `Status is Active` returns only rows where the status equals “Active”.
 
+- **is one of**\
+  Use this for choice fields (**Choose One**, **Choose Many**, or ranked choice) when you pick one or more values and want people who match **any** of them.\
+  Example: `Grade is one of 3rd, 4th` returns anyone in either grade. On Camper Hub and Staff Hub filter chips, a single picked value can still show as **is**.
+
 - **contains any**\
   Use this when the field can hold multiple values and you want records that match **at least one** of your selected values.\
   Example: `Session contains any Session A, Session B` shows campers in Session A, Session B, or both.
@@ -165,7 +169,7 @@ When you choose a filter, you also choose an operator. These control **how** Cam
   The same operators are available in form Recipients, mass Email / SMS / push recipients, and in Camper Hub / Staff Hub profile filters.
 
 <Callout kind="info" collapsed="false">
-  If you are ever unsure which operator to use, try **is** for simple single-value fields (like Status) and **contains any** for fields where people can have more than one selection (like sessions or tags).
+  If you are ever unsure which operator to use, try **is** for simple single-value fields (like Status), **is one of** when you pick several choice values, and **contains any** for fields where people can have more than one selection (like sessions or tags).
 </Callout>
 
 ## Choose display fields (which columns you see)
