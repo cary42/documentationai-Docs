@@ -140,17 +140,18 @@ The plan type changes how charges are created and managed.
 | --- | --- | --- | --- |
 | Standard | You define each charge manually | Schedule lines with dates and amounts or percentages | Plans with fixed installments or custom timing |
 | Even Split | Campium divides the remaining balance automatically | Charge cadence, dates, and monthly day if needed | Plans that should spread the balance evenly over time |
-| Custom | No automatic charges | Plan Name and Description only (staff rename) | Families you bill by hand on the Sales tab |
+| Custom | Scheduled payments you add still charge on their dates; Campium never adds or changes them | Plan Name and Description only (staff rename) | Families you bill by hand on the Sales tab |
 
 ### Custom (staff only)
 
 Each season gets a built-in **Custom** plan. It shows a **Staff only** badge. Tooltip: **Parents never see this plan. Choose it on a family's Sales tab when they pay on their own schedule. Families also move here when you edit one of their scheduled payments.**
 
 - Parents never see it at checkout. When a family is already on Custom, checkout shows a note that the camp office arranged a custom schedule and they should contact the office to change it.
-- On the plans list, the preview cell says there are no automatic charges and that you manage these families' payments.
+- On the plans list, the **Sample charges** cell reads **Scheduled payments you add still charge on their dates. Campium never adds or changes them.** The plan description defaults to **You set these families' payment schedule by hand.**
 - You can rename **Plan Name** and **Description**. You cannot delete it, copy it, or turn its status off the way you do for Standard and Even Split plans.
 - Assign it from a family's profile **Sales** tab (**Modify Payment Plan**). Editing a scheduled payment by hand, or removing one with **Recalculate remaining scheduled payments** on an Even Split family, can also move the family onto Custom.
 - When you change a family onto **Custom**, **Modify Payment Plan** shows a **Note** field (placeholder **Why is this family on a custom plan?**). Helper text: **This note is added to the Notes tab.** The saved note starts with **Payment plan changed to** the plan name and season.
+- On **Edit Scheduled Payment**, a **Notice** explains: **Changing the date, amount, or payment account moves this family to the Custom plan for this season. Their other scheduled payments stay as they are, but they no longer update when the balance changes.**
 
 ### Standard plans
 
@@ -379,7 +380,7 @@ Change a family's assigned plan from the Sales area on their profile.
   </Step>
   <Step title="Review Scheduled Charges" icon="list">
 
-  **Scheduled Charges** shows what the chosen plan would charge for this family's current balance (for example **Based on a balance of $X…**). For **Custom**, the preview explains that the plan schedules nothing automatically. When you are moving the family onto **Custom**, fill in **Note** if you want a reason on the **Notes** tab.
+  **Scheduled Charges** shows what the chosen plan would charge for this family's current balance (for example **Based on a balance of $X…**). For **Custom**, Campium does not invent new installments for you; any scheduled payments already on the Sales tab still charge on their dates. When you are moving the family onto **Custom**, fill in **Note** if you want a reason on the **Notes** tab.
 
   </Step>
   <Step title="Adjust Charge day when needed" icon="calendar">
@@ -393,7 +394,7 @@ Change a family's assigned plan from the Sales area on their profile.
 
   Click **Save Plan**.
 
-  If the family has no primary payment method on file, Campium still saves the plan and warns that the scheduled payments will not be charged until one is added. Those families also appear on **Reports → System Reports → Payment Follow-up** (usually the **No payment method** or **Schedule at risk** tab).
+  If the family has no primary payment method on file, Campium still saves the plan and rebuilds the schedule. Rows wait for a card or bank account and never charge until one is linked. Those families also appear on **Reports → System Reports → Payment Follow-up** (usually the **No payment method** or **Schedule at risk** tab).
 
   </Step>
 </Steps>

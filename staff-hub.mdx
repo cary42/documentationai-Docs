@@ -20,7 +20,7 @@ You still build and review the staff application itself on **Forms**. See [Staff
 
 Staff Hub is available from **Admin → Staff Hub**. You need the **Staff Hub** permission (under the **Admin** category). Administrators get it by default.
 
-When it loads, you see a **Season** filter, five summary tiles (six when **Returning** appears), and a roster table of staff for the seasons in the filter. Name search, **Application status**, export buttons, and pagination sit in the bar above the table.
+When it loads, you see a **Season** filter, summary tiles (five by default; more when **Returning** or **Submitted** appears), and a roster table of staff for the seasons in the filter. Name search, **Application status**, export buttons, and pagination sit in the bar above the table.
 
 ## Filter by season
 
@@ -37,6 +37,8 @@ When your **Application Status** field has options, an **Application status** fi
 Above the roster, tiles summarize the current season filter:
 
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
+  - **Submitted** - staff whose **Application Status** is **Submitted** (or the option you renamed from Submitted). This tile appears only when that option exists. Clicking it filters the roster the same way **Returning** does. Active filter note: **Showing N staff marked Submitted. Click the tile again to show everyone.**
+
   - **Returning** - staff marked **Returning**. This tile appears only when your **Application Status** field has a Returning option. Active filter note: **Showing N staff marked Returning. Click the tile again to show everyone.**
 
   - **Ready for Offer** - staff whose **Application Status** is one you marked as ready, and who still have no contract for the seasons in the filter (or, with no season filter, for any season that has not ended). Use the gear on this tile (**Choose which statuses count as Ready for Offer**) to open **Ready for Offer statuses**. Helper text: **Staff with one of these statuses and no contract for the season count as Ready for Offer.** Pick statuses, then **Save**. Until you save at least one status, the tile stays at zero and clicking it opens the same modal. Active filter note: **Showing N staff with a Ready for Offer status and no contract yet. Click the tile again to show everyone.**
@@ -172,6 +174,10 @@ The person needs a valid email on their profile. You need the **Staff Hub** perm
 
 Setting **Application Status** to **Hired** or **Full Time** also makes the person's account **Active** (and assigns a staff season when one is available), whether you change status on the roster, in bulk, or on the profile. Success can read **{Name} is now Active.** or **{Name} is now Active and added to** a season (bulk: **N people are now Active.**). If you later move someone off **Hired**, Campium asks **Make {Name} Inactive too?** with **Make Inactive** or **Keep Active**.
 
+Each Application Status change from Staff Hub also writes a profile note such as **Application Status changed from X to Y. [Staff Hub]** (blank values show as **(blank)**).
+
+You can rename built-in options such as **Submitted** or **Hired** under **Admin → Profile Fields → Edit Options**. Staff Hub and contracts still recognize them by their system name. See [Profile Fields](/profile-fields#application-status-colors).
+
 ## See form progress for one person
 
 Click the **Forms** cell in any row to expand a panel titled **Forms for** that person. The Forms and Contracts panels load when you first open them.
@@ -222,7 +228,7 @@ To send the same template to several people, use the roster checkboxes instead o
 6. Enter the **Email subject** and **Email body**. You can personalize them with merge fields such as `{user_name}`, `{template_name}`, `{contract_url}`, and `{agency_name}` (your camp's name). Each person gets their own values. Use **Save for this template** to keep that email for the next send of this template (success: **Email saved for this template.**). See [Contracts](/contracts#generate-a-contract-instance).
 7. Click **Send**. A progress dialog titled **Sending contracts** (or **Sending contract** for one person) lists each person as **Sent**, **Skipped**, or **Failed**, with running tallies and a **Close** button when the run finishes.
 
-**Sent** means the contract was created and emailed. **Skipped** means the person already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People who still need a retry stay checked, the bar can show **Still selected from the last send:** with a count, and **Send contracts** retries them. Someone whose contract was created but whose email did not go out is removed from the selection, so a retry does not skip them as a duplicate.
+**Sent** means the contract was created and emailed. **Skipped** means the person already has that template for that season (detail: **already has this contract for this season**). **Failed** shows a short reason. People on a locked Application Status such as **DNR**, **Fired**, or **Dismissed** are not emailed a contract; the refusal can read **{Name} is {status}, so the contract was not sent. Change their Application Status first if you mean to send it.** People who still need a retry stay checked, the bar can show **Still selected from the last send:** with a count, and **Send contracts** retries them. Someone whose contract was created but whose email did not go out is removed from the selection, so a retry does not skip them as a duplicate.
 
 Contract history and the **Contracts Sent** tile update without a page reload. You need the same access used to generate contracts elsewhere, and at least one active contract template. Click **Clear** when you are done.
 

@@ -216,11 +216,13 @@ Choose One, Choose Many, and Ranked Choice fields depend on an option list. Afte
 
 Each option shows how many people in the selected season have that answer (**No answers**, **1 person**, or **N people**; tooltip starts with **People in** and the season name). Use **Answers in** at the top of the list to switch between the current season and a ready season snapshot when snapshots exist.
 
-When the list is long, use **Type to filter...** beside **Answers in** to narrow options by name. Empty filter result: **No options match.** While a filter is active, **Select all** ticks only the options currently on screen.
+When the list is long, use **Type to filter...** beside **Answers in** to narrow options by name. Empty filter result: **No options match.** While a filter is active, **Select all** ticks only the options currently on screen. The selected-count line notes when some selected options are hidden by that filter.
 
 ### Application Status colors
 
 For the staff **Application Status** field only, each option in **Edit Options** has a color control. Click the dot to pick a color. Helper text: **Click a dot to pick a color for that status on Staff Hub and the staff profile. Until you pick one, the color comes from the name: Hired is green, Returning is orange, DNR and Fired are red.** After you pick a custom color, the option's ⋮ menu offers **Reset to default color**. The same colors appear in **Admin → Staff Hub → Staff Hub Settings** under **Application Status colors**.
+
+You can rename built-in statuses such as **Submitted**, **Hired**, **Returning**, **Full Time**, and **Contract Sent**. Staff Hub, contracts, and hiring rules still match them by their system name, so renaming the label does not break those flows. Reserved Application Status options cannot be deleted; Campium refuses with a message that the option is used by Staff Hub and the staff application, and that you can rename it instead.
 
 ### Hide an option from profile dropdowns
 
@@ -290,7 +292,7 @@ By default, all CampiumDB users can see all profile field data. Restrict access 
 
 Use **Access Rights** on a field (or **Who has access?** when you create or edit the field) to choose which staff roles can see that field's answers. Profile search and autocomplete also respect those grants, so staff only see matching answers for fields their role can access. Changes apply right away.
 
-On the Profile Fields list, a lock icon appears after the field name when at least one staff role cannot see that field. Hover the lock for a short summary (for example **Only Administrators can see this field.** or **Hidden from Counselor and Unit Head.**). With the **Access Rights** permission, click the lock to open Access Rights. Beside the **Filter** box, chips **All** and **Limited access** (with counts) let you focus on restricted fields.
+On the Profile Fields list, a lock icon appears after the field name when at least one staff role cannot see that field. Hover the lock for a short summary (for example **Only Administrators can see this field.** or **Hidden from Counselor and Unit Head.**). With the **Access Rights** permission, click the lock to open Access Rights. Beside the **Filter** box, chips **All**, **Active**, **Inactive**, and **Limited access** (with counts) let you focus on fields by status or access.
 
 <Callout kind="info" collapsed="false">
   Page access controls whether someone can open Profile Fields. Field access controls whether they can see the data in a specific field, including in search results.

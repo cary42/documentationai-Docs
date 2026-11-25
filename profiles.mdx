@@ -270,7 +270,7 @@ On a family profile, each adult in the family list also has a small **Login** ba
 
 To open Campium as another staff member at your camp (not the parent portal), use **Log in as** followed by their first name. That button appears only when your role has **Log in as staff** (under **Administration** in **Admin → Roles & permissions**; off by default), you are not already signed in as someone else or previewing a role, and their role does not hold permissions yours lacks.
 
-The session opens in a new tab on a separate host so your own login stays put. A banner shows **Signed in as** their name and that changes are recorded under you. Close that tab when you are done. You cannot reach their password, two-step, or passkey pages, and you stay locked to your camp. The visit is listed on their **Logins** tab.
+The session opens in a new tab on a separate host so your own login stays put. A banner shows **Signed in as** their name and that changes are recorded under you. Click **End session** on the banner when you are done. You cannot reach their password, two-step, or passkey pages, password and account-settings saves are blocked, and you stay locked to your camp. The visit is listed on their **Logins** tab.
 
 See [Can I log in as staff?](/help-center/faq/can-i-log-in-as-staff).
 
@@ -527,6 +527,8 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - Use **Filter by profile field** to narrow the list.
 
+    - Use **Jump to field...** above the list to jump to a labelled field row. The row flashes so you can spot it.
+
     - When ready season snapshots exist for this person, use the **Season snapshots** multi-select (empty label **Current data only**) to compare up to three seasons side by side, or to edit a season you froze early. Each selected season gets its own snapshot column (for example **Summer 2025 snapshot**). A **Changed** badge marks fields that differ from current data. User-link fields that were never stored in snapshots show **Not saved in snapshots**. Blank snapshot cells mean that field was not answered when the snapshot was taken. Comparing several seasons is view-only; to edit a frozen season, leave only that season checked. On an editable freeze, seasons and products can show **Updates when this season's sessions change**; other read-only snapshot fields show **Can't be changed for this season**.
 
     Fields on this tab often update as soon as you change them, without needing to click a separate save button.
@@ -736,7 +738,7 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     On Finix, a bank (ACH) payment that has not yet gone to the bank can show a **Queued** badge (status **Queued (sends tonight)**). Hover: **This bank (ACH) payment goes to the bank tonight between 7 and 8 PM Eastern. Until then, Void cancels it and no money moves.** See [Processing Refunds and Voids](/processing-refunds-and-voids#finix-ach-queued-before-the-evening-send).
 
-    When a Finix membership recurring charge was declined for a billing-address mismatch and never collected, the Sales tab can show **Membership payment declined, not collected.** With **Process Payments** and a chargeable method on file, use **Charge it now**, then confirm **Yes, charge it**. See [Memberships](/memberships) and [Payment Methods](/payment-methods).
+    When a Finix membership recurring charge was declined for a billing-address mismatch and never collected, the Sales tab can show **Membership payment declined, not collected.** Each row names the member and can show a **Declined:** line. With **Process Payments** and a chargeable method on file, use **Charge the account ending** the last four digits (or **Charge it now** when no last four is available), then confirm **Yes, charge it**. See [Memberships](/memberships) and [Payment Methods](/payment-methods).
 
     <Steps>
       <Step title="Identify the payment and available actions" icon="search" title-type="p">
@@ -869,6 +871,8 @@ Each tab focuses on a different part of the person’s record. Use these section
     - Confirm whether a parent or staff member actually logged in when they said they did.
 
     - Use the history to investigate access issues, such as many failed attempts or sign-ins from unexpected places.
+
+    Above the sign-in list, **Portal errors this family saw** lists error messages shown to this family in the parent portal in the last 30 days, word for word, with the page they were on. Columns: **Time**, **Page**, **Message**. Empty state: **No Portal errors in the last 30 days.**
 
     This tab helps support staff troubleshoot account access questions and verify how and when someone used the portal or app.
   </Tab>
