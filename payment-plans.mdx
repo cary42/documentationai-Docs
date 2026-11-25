@@ -485,6 +485,25 @@ When a family's season balance changes (for example you add or remove a session,
 - **Standard** plans where every non-balance line is the same **Percent** (for example 25% / 25% / 25% / balance): remaining installments re-divide the new balance the same way (whole dollars, cents on the last row). Recording an extra payment on an equal-percent Standard plan also re-spreads the leftover the same way (toast title **Payment plan updated**). Hand-edited installment rows stay as you left them.
 - **Standard** plans with unequal percents or fixed dollar amounts: leftover balance still flexes on the final **Charge Entire Balance** row when that row is set to **Yes**.
 
+## Move a scheduled payment to another date
+
+After you save, the family is charged on the new date instead of the old one. Use this to postpone or push back an installment, for example to move a payment to January or delay a camper's payments a few months. You need **View the 'Sales' tab** and **Process Payments**.
+
+1. Open the family's profile and click the **Sales** tab.
+2. Find the scheduled payment in the payments list and click **edit** beside it. On the new layout, open the row's menu and choose **Edit**.
+3. The **Edit Scheduled Payment** window opens. Change **Date**. You can also change **Amount**, **Payment Account**, or **Apply To** (the season the payment counts toward) in the same window.
+4. Click **Update**.
+5. Check the preview, then click **Yes, save it**. The preview table shows **Date**, **Now**, and **After** for each scheduled payment, a **Total** row, and the **Season balance:** line.
+
+To postpone several installments, edit each one. There is no setting that shifts a whole schedule at once.
+
+Things to know:
+
+- The new date cannot be in the past (**The date you entered is in the past.**), and it cannot be a date that already has a scheduled payment for this family (**There is already a payment scheduled on this date.**).
+- Changing the date, amount, or payment account moves the family onto the season's **Custom** plan. The preview says so: **This family moves to the season's Custom plan. The other scheduled payments stay as they are and are not recalculated.** Their scheduled payments still charge on their dates. Campium just stops rebuilding the schedule for them. See [Choose between Standard, Even Split, and Custom](#choose-between-standard-even-split-and-custom).
+- When the amounts after your change no longer add up to what the family owes, the preview names both totals, for example **Scheduled payments will total 900.00 against a season balance of 1,200.00.** Adjust another installment if you need them to match.
+- Tell the family about the new date. Campium does not email them when you edit a scheduled payment.
+
 ## Remove a scheduled payment
 
 On a family's profile **Sales** tab, remove one upcoming installment when you confirm **Remove this scheduled payment?**

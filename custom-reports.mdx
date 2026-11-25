@@ -172,6 +172,18 @@ When you choose a filter, you also choose an operator. These control **how** Cam
   If you are ever unsure which operator to use, try **is** for simple single-value fields (like Status), **is one of** when you pick several choice values, and **contains any** for fields where people can have more than one selection (like sessions or tags).
 </Callout>
 
+### Find people by age or birth month
+
+There is no **Age** filter. You filter on the birth date field instead, and the report shows each person's age for you.
+
+Date fields, such as your birth date field, offer **is on or after**, **is on or before**, **is**, and **is null**. Both **is on or after** and **is on or before** include the date you enter.
+
+To find everyone older than a given age, add a filter on your birth date field, choose **is on or before**, and enter today's date that many years ago. For example, to find everyone 18 or older on June 1, 2026, use **is on or before** June 1, 2008. To find a range of ages, add two rows on the same field: **is on or after** for the youngest birth date and **is on or before** for the oldest.
+
+When you add a column whose name includes **Birth Date** under **Choose Display Fields**, each row shows the date with the person's current age in parentheses beside it, so you can check the results without doing the math. Sort on that column to order people by age.
+
+Custom report filters cannot match a birth month across different years. To see birthdays by month, use the [Birthday Report](/birthdays) (**Reports → System Reports → Misc → Birthdays**). Its **Birthday** column shows the month and day, and you can sort, search, and export it.
+
 ## Choose display fields (which columns you see)
 
 Display fields control **what information** shows as columns in your report results. **Choose Display Fields** sits on the results table toolbar (on phones it may read **Display Fields**), next to the table rather than in the page header. The header keeps **Take a tour**. A one-time tip can say **Choose Display Fields has moved** with **Got it**.
