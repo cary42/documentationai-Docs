@@ -24,7 +24,7 @@ Use the admin search tools, family views, or **People → All People** to open a
 1. Open **People → All People**.
 2. Optionally filter by **Status**, user type, and **season** (defaults to your signed-in **Default Season**, or pick **All Seasons**), then click **Filter List**. Those filters use the page URL, so you can bookmark or share the filtered list.
 3. When you pick a deactivated season that has a ready profile snapshot, a note appears: **People and extra columns for this season come from the snapshot saved when you deactivated it.** Extra columns then show snapshot values for that season, not live answers.
-4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Selected fields appear as extra columns on this list. When finance reporting is on, you can add **Family Balance** (or **Camper Family Balance** on camper-style lists). That amount is calculated from payments.
+4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Selected fields appear as extra columns on this list, in the alphabetical order of the field list. You cannot drag them into a different order here. When you need columns in your own order, build a custom report instead. In **Choose Display Fields**, drag the rows under **Displayed Fields** into the order you want, then save the report. When finance reporting is on, you can add **Family Balance** (or **Camper Family Balance** on camper-style lists). That amount is calculated from payments.
 5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. **Seasons** lists the seasons that person is registered in. The **Guardian** column appears only when the person-type filter is **All Users** or **Campers** (other types have no guardians, so the column would be blank). A **Guardian** hide you saved in **Display Columns** still applies on camper lists.
 6. Use the export toolbar beside the list filter (**Copy**, **Excel**, **CSV**, **PDF**, **Print**) to download every person who matches your filters, including your **Display Columns**. The file matches the filters and display columns on screen, including snapshot values when you selected a deactivated season with a ready snapshot. On the new layout, those formats fold into one **Export** menu.
 7. Click the person’s name to open their profile.
@@ -44,6 +44,19 @@ Use the admin search tools, family views, or **People → All People** to open a
 </Steps>
 
 When the profile opens successfully, you see the person’s name at the top, a status badge, and a row of tabs such as Data Views, Notes, Sales, Forms, Emails, Files, and more.
+
+## Find a person's Person ID
+
+**Person ID** is not a number Campium assigns. It is a profile field your camp has, usually because you moved from another system (such as CampMinder) and imported each person's ID from there. Campium's imports use it to match rows to the right profile. If your camp never imported one, you do not have this field.
+
+To see someone's Person ID:
+
+1. Open their profile and click the **All User Data** tab. You need permission to view the custom profile tab.
+2. Type `Person ID` in **Filter by profile field** to jump to it.
+
+To see Person IDs for many people at once, add **Person ID** as a column: on **People → All People** with **Display Columns**, or in a custom report with **Choose Display Fields**.
+
+If **Person ID** does not show up in those places, open **Admin → Profile Fields** and check the field's **Status**. An **Inactive** field is hidden from profiles and reports, and it is not offered in **Display Columns**. If you cannot find the field on **Profile Fields** at all, ask support.
 
 ## Add children when creating a parent
 
