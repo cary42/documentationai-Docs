@@ -47,12 +47,36 @@ Campium turns on **Texting Number** for your camp when you are ready for a dedic
 
 1. Open **Communications → SMS**.
 2. Click **Texting Number**. The page title is **Texting Number**.
-3. Complete the application (**Submit application** or **Save and finish later**), including **How families agree to get texts**, **Sample text 1**, and **Sample text 2**. If you paste Site Text wording that still has `{name}` or `{terms}`, Campium fills those with your camp name and terms link before carriers review the application. Cost on that page: **$49.00** one-time setup, then **$15.00** a month, all year, plus **$0.01** per text segment sent or received. Billing starts when your number goes active. The same fees appear under your name → **Billing** → **SMS usage**.
-4. Track status on that page until the number is **active**.
+3. Review the **Pricing** card at the top of the page (see [SMS pricing](#sms-pricing) below).
+4. Complete the application (**Submit application** or **Save and finish later**), including **How families agree to get texts**, **Sample text 1**, and **Sample text 2**. If you paste Site Text wording that still has `{name}` or `{terms}`, Campium fills those with your camp name and terms link before carriers review the application. Choose **Number type**: **Two-way: families can reply** or **One-way: families can't reply** (helper: **Same price either way. A one-way number answers any reply with your support phone number.**). Billing for your own number starts when it goes active. The same fees appear under your name → **Billing** → **SMS usage**.
+5. Track status on that page until the number is **active**.
 
-Once active, administrators can read and answer replies under **Texts**. To give another role access, turn on **Read and reply to text messages from families** on **Admin → Roles & Permissions**.
+Once active, two-way numbers let administrators read and answer replies under **Texts**. One-way numbers do not open **Texts** or reply alerts; a family that replies gets an automatic text with your support phone number. To give another role inbox access on a two-way number, turn on **Read and reply to text messages from families** on **Admin → Roles & Permissions**.
 
 Camps with a texting-number application also have a public opt-in and terms page (linked from form SMS terms) that carriers use as proof of consent. Families see **Can we send you text messages?** with **Yes, text me** / **No thanks**, plus **Terms** and **Privacy**.
+
+## SMS pricing
+
+The **Pricing** card on **Texting Number** compares Campium's shared number with your own number. A long text still counts as more than one segment.
+
+### Campium's number (one-way)
+
+Texts send from Campium's shared number (shown as **(551) 209-2312**). Families cannot reply. There is no setup fee and no monthly fee for the shared number.
+
+- Through **December 31, 2026**: **$10 per 1,000 texts** (same as **$0.01** per segment).
+- From **January 1, 2027**: **$15 per 1,000 texts**.
+
+When you are still on the shared number, that column shows **Current**.
+
+### Your own number (one-way or two-way)
+
+- **$10 per 1,000 texts**, sent or received
+- **$49** setup
+- **$15** per month
+
+**Two-way:** replies appear on **Texts**, with email and app alerts when you have inbox access. **One-way:** families cannot reply; a reply gets an automatic text with your support phone. Use **Apply for your own number** on the Pricing card when you are ready. That apply link is hidden for Canadian camps. Footer note: **A long text counts as more than one. Billing for your own number starts when it goes active.**
+
+Send confirmations and your name → **Billing** → **SMS usage** show the rate that applies to your camp.
 
 ## Texts inbox
 
@@ -165,7 +189,7 @@ Type the text you want families to receive in the **SMS message** box.
 
 <Callout kind="tip">
 
-The helper text under the box reads: up to 160 characters sends as one message; longer text sends as multiple messages, each billed at $0.01. Emoji and special characters are removed, and curly quotes and long dashes become plain ones, because any of them would split the text into more messages. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter shows when the text will send as more than one message.
+The helper text under the box reads: up to 160 characters sends as one message; longer text sends as multiple messages, each billed at your camp's rate (see [SMS pricing](#sms-pricing)). Emoji and special characters are removed, and curly quotes and long dashes become plain ones, because any of them would split the text into more messages. Include opt-out language such as "Reply STOP to opt out" so carriers do not filter your messages. A live character counter shows when the text will send as more than one message. Send confirmations use the same camp rate.
 
 </Callout>
 
