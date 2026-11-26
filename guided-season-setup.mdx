@@ -52,6 +52,21 @@ On the **Sessions** step you manage the season's sessions in **Table** or **Cale
 - On **Edit session** or **Add session**, use **Ask when picked** to require profile answers under that item when a family selects it. See [Ask when picked](/ask-when-picked).
 - If **Cancellation Fees** appears, expand it to define reusable cancellation-fee sessions for the season. Fees are not charged automatically. You add them from a profile **Sales** tab. See [Cancellation Fees](/cancellation-fees).
 - If **Special Weeks** appears for your camp, open it to manage week schedules. See [Special Weeks](/special-weeks). When a session's **Number of Weeks** is higher than the dated week count for the season, a red mismatch alert appears on this step with **Set special week dates** and **Lower Number of Weeks to N on…**. See [Session weeks vs dated weeks warning](/special-weeks#session-weeks-vs-dated-weeks-warning).
+- Use **Shared capacity** when several sessions of the same season should share one enrollment pool (for example Week 1, Week 1 with before care, and Week 1 with after care). See [Shared capacity](#shared-capacity).
+
+### Shared capacity
+
+**Shared capacity** lets two or more sessions in this season share one cap. When the group is full, every session in it wait-lists new registrations. Each session's own **Capacity** still applies too, so the tighter of the two limits wins.
+
+1. On the **Sessions** step, click **Shared capacity**.
+2. The **Shared capacity** window lists existing groups (**Group**, **Sessions**, **Capacity**, **Taken**). Empty state: **No shared capacity in this season yet.** Helper text: **Sessions in a group share one capacity, for a week you sell more than one way, such as with before care or after care. When the group is full, every session in it is full. A session's own capacity still applies too.**
+3. Click **Add group** (title becomes **Add shared capacity**). Enter **Group name** (helper: **Your staff see this name. Families don't.**; placeholder **Week 1 spots**), **Capacity** (helper: **How many campers these sessions hold together.**), and **Sessions** (helper: **Pick at least two. A session can be in one group, so picking it here moves it out of another.**).
+4. Click **Save**. Success: **Shared capacity saved**. Use **Edit** on a row to change a group, or delete with confirm **Delete** the group name **? Its sessions go back to their own capacity.** and **Yes, delete**.
+5. Click **Close** when you are done.
+
+On the sessions table, a session in a group can show **Shared:** taken **of** capacity **taken** (tooltip: **Shares** capacity **spots in** the group name).
+
+Copying a season (or **Copy last season's setup**) carries shared capacity groups into the new season with the matching sessions. Families never see the group name.
 
 ### Copy last season's setup
 

@@ -74,11 +74,16 @@ Subproducts/options:
 
 Helper text under **Capacity** reads **0 or blank = unlimited.** Use a positive number to set a limit.
 
+### Shared capacity
+
+When you sell the same week more than one way (for example Week 1, with before care, and with after care), use **Shared capacity** on the season's **Sessions** step so those sessions share one pool. When the group is full, every member session wait-lists new registrations. Each session's own **Capacity** still applies. Staff see the group name; families do not. Season copy carries groups over with the matching sessions. Full steps: [Guided Season Setup: Shared capacity](/guided-season-setup#shared-capacity).
+
 ### Waitlist
 
-A session or option puts new registrations on the wait list in two cases:
+A session or option puts new registrations on the wait list in these cases:
 
 - It has a **Capacity** above 0 and every spot is taken.
+- It belongs to a **Shared capacity** group that is full (every member session wait-lists, even if that session still has room on its own cap).
 - Its **Status** is **Closed**. The **Edit** session modal labels this field **Status - closed forces wait list**, with the options **Open** and **Closed**.
 
 Wait-listed registrations are added at $0 with no deposit, so the family is not charged at checkout. To see who is waiting, click the **Wait listed** link on the **Sessions** table, or open the [Waitlist Report](/waitlist), where you can also invite families when a spot opens.

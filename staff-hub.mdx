@@ -37,9 +37,9 @@ When your **Application Status** field has options, an **Application status** fi
 Above the roster, tiles summarize the current season filter:
 
 <Card title="Summary tiles" icon="chart-bar" horizontal="false">
-  - **Submitted** - staff whose **Application Status** is **Submitted** (or the option you renamed from Submitted). This tile appears only when that option exists. Clicking it filters the roster the same way **Returning** does. Active filter note: **Showing N staff marked Submitted. Click the tile again to show everyone.**
+  - **Submitted** - staff whose **Application Status** matches your Submitted option. The tile title shows the label you gave that option under **Admin → Profile Fields** (not always the word **Submitted**). This tile appears only when that option exists. Clicking it filters the roster the same way **Returning** does. Active filter note still says **Showing N staff marked Submitted. Click the tile again to show everyone.**
 
-  - **Returning** - staff marked **Returning**. This tile appears only when your **Application Status** field has a Returning option. Active filter note: **Showing N staff marked Returning. Click the tile again to show everyone.**
+  - **Returning** - staff whose **Application Status** matches your Returning option. The tile title shows your renamed label when you changed it. This tile appears only when that option exists. Active filter note: **Showing N staff marked Returning. Click the tile again to show everyone.**
 
   - **Ready for Offer** - staff whose **Application Status** is one you marked as ready, and who still have no contract for the seasons in the filter (or, with no season filter, for any season that has not ended). Use the gear on this tile (**Choose which statuses count as Ready for Offer**) to open **Ready for Offer statuses**. Helper text: **Staff with one of these statuses and no contract for the season count as Ready for Offer.** Pick statuses, then **Save**. Until you save at least one status, the tile stays at zero and clicking it opens the same modal. Active filter note: **Showing N staff with a Ready for Offer status and no contract yet. Click the tile again to show everyone.**
 
@@ -192,7 +192,7 @@ For a completed form, use the printer icon (title **Print form**, with the form 
 
 Click the **Contracts** cell to expand the contract panel for that person. It has two parts:
 
-- **Contract history** - every contract created for the staff member, with its template name, created and signed dates, status, a button to view the contract, and a **Print** icon for a print-friendly page.
+- **Contract history** - every contract created for the staff member, with its template name, created and signed dates, status, a button to view the contract, and a **Print** icon for a print-friendly page. When someone is on a locked **Application Status** such as **DNR**, **Fired**, or **Dismissed**, a sent but unsigned contract shows **Not sent:** plus that status name, with a **Change status** link that opens the row's status menu. Automatic unsigned-contract reminders skip those people instead of failing every day.
 
 - **Create & Send** - send a new contract without leaving Staff Hub.
 

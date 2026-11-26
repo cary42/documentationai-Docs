@@ -24,8 +24,8 @@ Use the admin search tools, family views, or **People → All People** to open a
 1. Open **People → All People**.
 2. Optionally filter by **Status**, user type, and **season** (defaults to your signed-in **Default Season**, or pick **All Seasons**), then click **Filter List**. Those filters use the page URL, so you can bookmark or share the filtered list.
 3. When you pick a deactivated season that has a ready profile snapshot, a note appears: **People and extra columns for this season come from the snapshot saved when you deactivated it.** Extra columns then show snapshot values for that season, not live answers.
-4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Selected fields appear as extra columns on this list, in the alphabetical order of the field list. You cannot drag them into a different order here. When you need columns in your own order, build a custom report instead. In **Choose Display Fields**, drag the rows under **Displayed Fields** into the order you want, then save the report. When finance reporting is on, you can add **Family Balance** (or **Camper Family Balance** on camper-style lists). That amount is calculated from payments.
-5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. **Seasons** lists the seasons that person is registered in. The **Guardian** column appears only when the person-type filter is **All Users** or **Campers** (other types have no guardians, so the column would be blank). A **Guardian** hide you saved in **Display Columns** still applies on camper lists.
+4. Click **Display Columns** to choose extra profile-field columns. Use **Select profile fields to display**, filter with **Type to filter fields...**, then **Save Display Columns**. Helper text: **Selected fields appear as extra columns on this list. Drag any column heading to change its place.** When finance reporting is on, you can add **Family Balance** (or **Camper Family Balance** on camper-style lists). That amount is calculated from payments.
+5. The table shows **Person**, **Guardian**, **Seasons**, **Info**, plus any columns you saved. Drag any column heading (**Person**, **Guardian**, **Seasons**, **Info**, or an extra field) to reorder the list; a grab cursor and hover tint show a heading can move (tooltip: **Drag to reorder**). Your order is saved with the display columns. **Seasons** lists the seasons that person is registered in. The **Guardian** column appears only when the person-type filter is **All Users** or **Campers** (other types have no guardians, so the column would be blank). A **Guardian** hide you saved in **Display Columns** still applies on camper lists; a hidden Guardian column keeps its place when you drag other headings.
 6. Use the export toolbar beside the list filter (**Copy**, **Excel**, **CSV**, **PDF**, **Print**) to download every person who matches your filters, including your **Display Columns**. The file matches the filters and display columns on screen, including snapshot values when you selected a deactivated season with a ready snapshot. On the new layout, those formats fold into one **Export** menu.
 7. Click the person’s name to open their profile.
 
@@ -109,7 +109,9 @@ The header gives you a quick snapshot of who you are looking at:
 
 - **Application Status** (staff only): Under the profile header, staff profiles show a full-width strip with your camp's **Application Status** field name and the current value (for example **Application Status: Hired**). Blank shows **Not set**. The strip uses the same status colors as **Admin → Staff Hub** (including custom colors you set in Staff Hub Settings or Profile Fields). With **Staff Hub** permission, click **Change** on the strip to pick another option; the change saves the same way as on the Staff Hub roster. Without that permission, the strip is read-only. The strip is hidden when your camp has no Application Status dropdown, or when your role cannot see that field. See [Staff Hub](/staff-hub#choose-which-fields-and-statuses-appear).
 
-- **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly. Next to the primary email (or alone when there is no email yet), use **Manage emails** to add or edit addresses on the account. When the primary address has bounced, a **Bounced** badge appears next to it. Click the badge to open **Bounced email**, which shows that email is not being delivered, the **Last bounce** details (**Email** subject and **Reason** when available), and a link **See all bounced emails** to [Bounced Email Addresses](/bounced-emails). With permission to edit profiles, use **Clear bounce** once the address is fixed (confirm **Yes, clear it**). Success: **Bounce cleared. Email is back on.** (or that email stays off if they unsubscribed). If the address bounces again, it is marked bounced again.
+- **Contact information**: Displays primary contact details such as phone number and email address so you can reach out quickly. Next to the primary email (or alone when there is no email yet), use **Manage emails** to add or edit addresses on the account. On the phone row, **Edit** (aria-label **Edit name, email, and phone**) opens the same **Edit contact** modal so you can change cell, home, or work phone, name, and email from this person's profile. When the primary address has bounced, a **Bounced** badge appears next to it. Click the badge to open **Bounced email**, which shows that email is not being delivered, the **Last bounce** details (**Email** subject and **Reason** when available), and a link **See all bounced emails** to [Bounced Email Addresses](/bounced-emails). With permission to edit profiles, use **Clear bounce** once the address is fixed (confirm **Yes, clear it**). Success: **Bounce cleared. Email is back on.** (or that email stays off if they unsubscribed). If the address bounces again, it is marked bounced again.
+
+- **Portal errors**: When this family saw any parent-portal error in the last 90 days, a **Portal errors (N)** control appears above the profile tabs (on Version 4 it can show as an alert chip). It opens **Portal errors this family saw**, with helper text that lists errors from the last 90 days and who saw them. Columns: **Time**, **Parent**, **User ID**, **Page**, **Message**. Empty state: **No Portal errors in the last 90 days.** Use **Close** when you are done. The control is hidden when there were no errors in that window.
 
 - **Family members**: Shows other profiles in the same family or account so you can move between siblings or guardians without going back to search. Under each member's phone, the pencil control (**Edit name, email, and phone**) opens **Edit contact**, where you update **First name**, **Last name**, **Email**, and phone, then **Save**. A short **Saved.** toast confirms the change, and the family-row email (and this profile's primary email when it matches) refresh in place. You need permission to edit profiles, and you can only edit members of the same family.
 
@@ -885,7 +887,7 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     - Use the history to investigate access issues, such as many failed attempts or sign-ins from unexpected places.
 
-    Above the sign-in list, **Portal errors this family saw** lists error messages shown to this family in the parent portal in the last 30 days, word for word, with the page they were on. Columns: **Time**, **Page**, **Message**. Empty state: **No Portal errors in the last 30 days.**
+    Portal error messages the family saw moved out of this tab. When any exist in the last 90 days, use **Portal errors (N)** above the profile tabs instead. See [Header area](#header-area).
 
     This tab helps support staff troubleshoot account access questions and verify how and when someone used the portal or app.
   </Tab>
@@ -981,14 +983,12 @@ Each tab focuses on a different part of the person’s record. Use these section
 
     Status badges help you see where each contract stands without opening it.
 
-    - **Signed**: The contract has been signed and shows a signed date.
+    Status labels match **Admin → Contracts**:
 
+    - **Pending**: Waiting or in progress before a clear sent/signed state.
     - **Sent**: The contract was sent and is waiting for a signature.
-
-    - **Signing**: The signing process is currently in progress.
-
+    - **Signed**: The recipient has signed (includes in-progress signing that used to read as a raw code).
     - **Completed**: The contract workflow is finished.
-
     - **Draft**: The contract was created but has not been sent yet.
 
     ### What you can do from this tab
