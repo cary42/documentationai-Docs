@@ -66,7 +66,22 @@ Requires the **View User Profiles** and **User Stats Section on Dashboard** perm
 
 ### Active Seasons
 
-Lists your active seasons with a count in the title. Under each season you see when its registration form opens and ends (for example, **Registration opens** or **Registration ended** with a date). **Setup** opens guided setup for that season, and **All seasons** opens the Seasons page. If you have no active seasons, the card links you to the Seasons page to add one.
+Shows a countdown for your primary active season, with a count in the title and **All seasons** to open the Seasons page.
+
+The hero can show:
+
+- How many **days** or **hours until families can register**, with a timeline toward the opening date
+- **Day N of M** while camp is running, with **First day** and **Last day** on the timeline
+- **N days until camp starts** after registration is already open
+- **When do families start registering?** when no opening date is set, with **Set opening date**
+
+Pills include labels such as **Ready**, **Opens today**, **Open**, **Setting up**, **Camp is on**, **Closed**, and **Ended**. A **Today** marker sits on the timeline when it applies.
+
+When setup still has required work, the card lists what is left with a **Fix** link on each item, and a primary **Finish setup** button. When everything required is done, it can show **Everything required is done.** plus **Preview the form** (when a registration form is ready) and **Season setup**. Other active seasons appear in a list below, with **Show all N** when there are more.
+
+Camp start and end on the countdown come from your sessions: **Special Weeks** when your camp uses them, otherwise the earliest and latest dated active sessions. The season record's dates are used only when nothing is dated.
+
+If you have no active seasons, the empty state offers **Start your first season**.
 
 Requires the **Access To Modify Seasons & Sessions** permission. See [Guided Season Setup](/guided-season-setup) and [Manage Seasons](/manage-seasons).
 
@@ -104,7 +119,7 @@ Shortcuts to **Payment Follow-up** (tabs **No payment method**, **Nothing schedu
 
 ### Product Rollup
 
-A summary of one season's enrollment: total campers, **Capacity filled**, **Wait listed**, and revenue (when your camp is not free). Below that are the fullest sessions with registered count, capacity, percent full, and a wait-list badge when people are waiting. Click a session to see who is enrolled. **Full report** opens the Product Rollup report. With no default season, the card uses the newest active season. Cached totals can show **Updated N min ago** with **Refresh now**.
+A summary of one season's enrollment: total campers, **Capacity filled**, **Wait listed**, and revenue (when your camp is not free). Below that are the fullest sessions with registered count, capacity, percent full, and a wait-list badge when people are waiting. Sessions in a [Shared capacity](/guided-season-setup#shared-capacity) group show a line such as **Shared: 28 of 28 (group name)** under the session, with a **Group full** badge when the shared cap is reached. Click a session to see who is enrolled. **Full report** opens the Product Rollup report. With no default season, the card uses the newest active season. Cached totals can show **Updated N min ago** with **Refresh now**.
 
 Click the gear icon to pick a different active season for this card. The choice only changes this card, for your login. **Default season** follows the season you picked as your default.
 

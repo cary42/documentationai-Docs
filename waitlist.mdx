@@ -64,7 +64,9 @@ The columns are:
 
 - **Status**: The current situation for that session:
 
-  - **Full**: the session (or subproduct) has no open spots, or it is in a [Shared capacity](/guided-season-setup#shared-capacity) group that is full.
+  - **Full**: the session (or subproduct) has no open spots on its own capacity.
+
+  - **Group full**: the session is in a [Shared capacity](/guided-season-setup#shared-capacity) group that has no open spots left. An uncapped member of a group that still has room shows **Open Spot** instead of reading **Full**.
 
   - **Open Spot**: at least one space is open for someone on the wait list.
 
@@ -74,7 +76,7 @@ The columns are:
 
 - **Session** (your term for sessions): The session the camper is waiting for.
 
-- **# Waitlisted**, **# Subproduct Registered**, **# Total Registered**, **Subproduct Capacity**, and **Session Capacity**: How many campers are waiting, how many are enrolled, and the capacity, so you can see how tight the session is. Subproduct columns show `--` when the registration has no subproduct.
+- **# Waitlisted**, **# Subproduct Registered**, **# Total Registered**, **Subproduct Capacity**, and **Session Capacity**: How many campers are waiting, how many are enrolled, and the capacity, so you can see how tight the session is. Subproduct columns show `--` when the registration has no subproduct. Under **Session Capacity**, a shared-capacity session also shows **Shared: N of N (group name)**.
 
 - **Season**, **Sibling** (Yes or No), and **Email** (the family's primary email).
 
@@ -258,7 +260,7 @@ If the Waitlist Report shows no campers:
 
 - Make sure you selected the right **Session**.
 
-- Confirm that the session is full, its **Shared capacity** group is full, or its **Status** is **Closed**. Registrations only go to the wait list in those cases.
+- Confirm that the session is full, its **Shared capacity** group shows **Group full**, or its **Status** is **Closed**. Registrations only go to the wait list in those cases.
 
 - Try another season or session to see if you have any waitlisted campers at all.
 
