@@ -16,7 +16,7 @@ You need the **Product Rollup** permission. Without it the report and the Dashbo
 
 On the **Dashboard**, the **Product Rollup** card shows season totals for one season: a unique-person count labelled with your camper plural (for example **Campers**), **Capacity filled** (when any session has a capacity), **Wait listed**, and **Revenue** (when financial reporting is on). The camper total counts each person once even when they are in more than one session. **Capacity filled** opens the Product Rollup report for that season. **Wait listed** opens the Wait List for that season.
 
-It lists up to 12 of the fullest sessions with fill bars. Each session name links to that session's enrollee list, and a wait-listed count links to the wait list when above zero.
+It lists up to 12 of the fullest sessions with fill bars. Each session name links to that session's enrollee list, and a wait-listed count links to the wait list when above zero. Sessions that share one capacity show **Shared: N of N (group name)** under the session (tooltip: **Shares one capacity with the other sessions in** the group), with a **Group full** badge when the group is full.
 
 Use **Full report** to open the full Product Rollup for the same season. Use the gear (**Change season**) to pick **Season**, then **Apply** or **Cancel**. The picker offers your **Default season** plus active seasons only. When you have no default season, the card opens on the newest active season instead of **All Seasons**. **All Seasons** appears only when your camp has no active season. Your choice is saved for you. Empty state: **No registrations for this season yet.** with a link to the full report.
 
@@ -49,7 +49,7 @@ Sessions that have more than one price option can be expanded to reveal a sub-ro
 </ParamField>
 
 <ParamField body="Registered / Capacity" param-type="text" required="true" deprecated="false">
-  How many people have registered versus the session's capacity, with the fill percentage and a progress bar. Capacity and percentage appear only when a capacity is set.
+  How many people have registered versus the session's capacity, with the fill percentage and a progress bar. Capacity and percentage appear only when a capacity is set. When the session is in a [Shared capacity](/guided-season-setup#shared-capacity) group, a second line shows **Shared: N of N (group name)** and a **Group full** badge when that shared cap is reached.
 </ParamField>
 
 <ParamField body="Wait Listed" param-type="number" required="true" deprecated="false">

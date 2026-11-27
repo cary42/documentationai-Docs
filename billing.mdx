@@ -37,7 +37,9 @@ When Campium payment processing is configured for your organization and your rol
 
 To store a card or bank account for subscription charges, follow the hint **Enter your card or bank details below, then save your account**, then select **Save account**. When saving the method also charges a due invoice, the button reads **Save and pay** instead. Authorization copy explains the first charge (for example **You will be charged $X on [date].**) and that Campium stores the method for future subscription charges. Balance-due and SMS invoice pay flows still use **Pay now** where those unpaid invoices appear.
 
-If your Campium invoice is past due, admins can see an **Overdue Invoice** banner with **Your invoice is past due. Please pay it here.** During the grace period, the banner also says **You have a grace period until** that date. **After that, you will only be able to open the billing page until you pay.**
+If your Campium invoice is past due, admins can see an **Overdue Invoice** banner with **Your invoice is past due. Please pay it here.** During the grace period, the banner also says **You have a grace period until** that date. **After that, you will only be able to open the billing page until you pay.** Near the due date you can also see **Invoice Due** or **Upcoming Invoice** with a link to pay.
+
+When automatic payments are on and your bank returns a Campium ACH charge on the saved subscription account, Campium cancels that autopay schedule so it does not debit the same account again. Billing contacts get an email titled **Action needed: your Campium payment was returned**. The **Overdue Invoice** or **Invoice Due** banner still shows while a declined or returned charge is on file, even if an old subscription id remains. Update your payment method on **Billing** before the next charge.
 
 If Finix needs you to replace a failed payout bank account, and automatic payments are off with no method on file, the **Payout bank account** page can offer **Also use this bank account to pay for Campium** so the same bank pays your Campium subscription. See [Payment Processors](/payment-processors#also-use-this-bank-account-to-pay-for-campium).
 

@@ -23,6 +23,8 @@ When the module is off, **Admin → Staff Hub** can show an upsell titled **Coll
 4. Helper text: when you set someone's Application status to a selected choice, they get an email asking them to fill out a W-4 for their Staff Hub season. Moving them to an unselected choice cancels a W-4 they have not signed yet. Leave it empty to request W-4s only by hand.
 5. Click **Save Settings**.
 
+Automatic status flips still create new W-4 requests when needed, but Campium emails a staff member at most once every 24 hours. Flipping someone away and back within that window creates the request without sending another email. An emailed link to a request that was cancelled since then opens that person's open request on the portal W-4 page instead.
+
 You need a staff profile field named **Application Status** (any capitalization) for automatic triggers. Staff Hub always uses that field name. See [Staff Hub](/staff-hub).
 
 ## Collect New York IT-2104
