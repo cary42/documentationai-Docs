@@ -222,13 +222,13 @@ Instances track:
 
 On **Admin → Contracts**, the template list includes **Sent** and **Unsigned** count columns (click a count to open those instances). **Unsigned** means sent but not signed yet (tooltip: **Sent but not signed yet**). Drafts are not included in **Sent** or **Unsigned**. When any template has drafts, a **Drafts** column also appears with the same clickable counts. Click the template **Name** to open **Contract Instances** for that template. The page subtitle shows the template name. Status chips filter the list: **All**, **Draft**, **Sent**, **Signed**, and **Waiting on form** (with a live count) when the template has **Forms to finish first** and anyone still owes a form. Search with **Search template, user, email, or season...**. The table shows **Season**, **User**, **Email**, **Status**, **Created**, **Signed**, and **Portal Views** (plus **Template** when you are not filtered to one template). Pagination shows 100 rows at a time.
 
-When someone is on a locked **Application Status** such as **DNR**, **Fired**, or **Dismissed**, a sent but unsigned contract shows **Not sent:** plus that status name, with a **Change status** link that opens their profile **Application Status** menu. Those rows no longer show or count as **Waiting on form**, and you cannot resend until the status is unlocked. The same labels appear on the person's profile **Contracts** tab. See [Staff Hub](/staff-hub#track-and-send-contracts-from-the-hub).
+When someone is on a locked **Application Status** such as **DNR**, **Fired**, or **Dismissed**, a sent but unsigned contract shows **Not sent:** plus that status name, with a **Change status** link that opens their profile **Application Status** menu. Those rows no longer show or count as **Waiting on form**, and the row menu no longer offers **Send to person**. You cannot resend until the status is unlocked. The same labels appear on the person's profile **Contracts** tab. On the portal, that person sees **This link has expired. Contact your camp with questions.** if they open an old signing link, and they cannot sign. See [Staff Hub](/staff-hub#track-and-send-contracts-from-the-hub).
 
 While **Waiting on form** is selected, **Email the form link (N)** appears. It opens **Email the form link** so you can review **Email subject** and **Email body** before sending (merge helpers include `{first_name}`, `{user_name}`, `{template_name}`, `{form_name}`, `{form_url}`, `{forms_list}`, `{forms_owed}`, `{contract_url}`, and `{agency_name}`). The default body can list every form still owed (headline such as **Finish 2 forms before you sign**, with a **Fill out** button per form). **Sending to** shows the person and address, or **N people waiting on a form** for a bulk send. Use **Preview** / **Back to editing**, **Reset to default**, **Save for this template** (success: **Saved. Every form-link email for this template starts from it now.**), then **Send**. That nudge emails only the form links. It does not resend the contract, and automatic contract reminders keep their schedule. Drafts, people without an email, and people who already submitted the form are skipped. After a send, the row can show **Form link emailed** with the date (and a send count when you nudge more than once). The same review modal is available from a person's Staff Hub **Contracts** panel (**Email the form link**).
 
 When the instances page is open for one template (not **All Templates**), **Edit Template** sits beside **Send New Contract** and opens that template's editor.
 
-On each template row, a pencil control (**Edit template**) sits to the left of the row menu. The menu still offers **Edit template**, **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View Contract**, **Print**, **Send to User**, delete an unsigned contract, or **Download Signed Contract** when a signature exists. You can also **Delete** a signed contract that was sent to your own staff login (the confirm names the person and template, then **This cannot be undone.**). Other signed contracts still show **Only contracts that have not been signed can be deleted**.
+On each template row, a pencil control (**Edit template**) sits to the left of the row menu. The menu still offers **Edit template**, **Make a copy**, **Preview**, **Print** (opens a print-friendly blank template), or **Delete**. On each instance row you can **View contract**, **Print**, **Send to person** (hidden while the person is on a locked **Application Status**), delete an unsigned contract, or **Download signed copy** when a signature exists. You can also **Delete** a signed contract that was sent to your own staff login (the confirm names the person and template, then **This cannot be undone.**). Other signed contracts still show **Only contracts that have not been signed can be deleted**.
 
 Opening **Print** shows a **Print** dialog first. Choose **Text size** (10 to 18, default **14**), then **Print** (or **Cancel**). Helper: **14 matches the preview. Pick a smaller size to fit more on each page.** Your browser remembers the size you last used. Use the **Print** button on the page to reopen the dialog.
 
@@ -438,13 +438,15 @@ To keep contract data clean:
   </Expandable>
 
   <Expandable title="Recipient says the contract link expired or does not work" default-open="false">
-    Contract links remain valid until the contract is signed or deleted. If a link no longer works:
+    Contract links usually remain valid until the contract is signed or deleted. If a link no longer works:
 
     - Confirm the contract still exists and is not deleted.
 
     - Check that the contract is not already in **Completed** status.
 
-    - Resend the contract email from **Admin → Contracts** to generate a fresh email with a working link.
+    - If the person is on a locked **Application Status** such as **DNR**, **Fired**, or **Dismissed**, the portal shows **This link has expired. Contact your camp with questions.** and signing is blocked. Change their Application Status first, then use **Send to person** again.
+
+    - Otherwise, resend from **Admin → Contracts** with **Send to person** to generate a fresh email with a working link.
 
     If problems continue, verify that the email address on the recipient profile is correct and that they are clicking the full link (not a truncated version).
   </Expandable>

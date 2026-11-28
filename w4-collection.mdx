@@ -23,7 +23,7 @@ When the module is off, **Admin → Staff Hub** can show an upsell titled **Coll
 4. Helper text: when you set someone's Application status to a selected choice, they get an email asking them to fill out a W-4 for their Staff Hub season. Moving them to an unselected choice cancels a W-4 they have not signed yet. Leave it empty to request W-4s only by hand.
 5. Click **Save Settings**.
 
-Automatic status flips still create new W-4 requests when needed, but Campium emails a staff member at most once every 24 hours. Flipping someone away and back within that window creates the request without sending another email. An emailed link to a request that was cancelled since then opens that person's open request on the portal W-4 page instead.
+Automatic status flips still create new W-4 requests when needed, but Campium emails a staff member at most once every 24 hours. Flipping someone away and back within that window creates the request without sending another email. When an automatic request skips the email for that reason, Campium leaves a system note on the profile that no email went out in the last 24 hours, and that you can use **Request W-4** in Staff Hub to send the link again. An emailed link to a request that was cancelled since then opens that person's open request on the portal W-4 page instead.
 
 You need a staff profile field named **Application Status** (any capitalization) for automatic triggers. Staff Hub always uses that field name. See [Staff Hub](/staff-hub).
 
@@ -44,6 +44,10 @@ Each selected person gets an email with a link to fill out the form(s).
 ### Send from one row
 
 When someone shows **Not requested**, the W-4 line itself includes **Send** (button title **Send a W-4 request**). Confirm with **Request W-4**. That sends the same request as the bulk bar for that one person. IT-2104 and I-9 lines stay plain text (New York IT-2104 goes out with the W-4). Staff Hub picks their season from sent contracts and Season answers when needed, not only from the roster season filter.
+
+### Email the link again when a W-4 is already open
+
+If you request a W-4 for someone who already has one open, Campium does not create a second request. Instead it offers **Email the link again** (for example **Alex already has a W-4 open. Email them the link again?**). Confirm with **Email the link again** to resend the open request's email. Success can read **W-4 link emailed again to** that person. The same follow-up appears after a bulk **Request W-4** when some of the selected people already had an open W-4.
 
 ## Track status in Staff Hub
 
