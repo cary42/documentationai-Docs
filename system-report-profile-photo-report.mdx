@@ -1,6 +1,8 @@
 ---
 title: Profile Photo Report
-description: Use the Profile Photo Report to see which campers are missing photos and send automated profile photo reminder emails by season.
+description: >-
+  Filter Profile Photo Report by Has photo or Missing photo, message those
+  people, and set automated upload reminder emails by season.
 ---
 
 ## What the Profile Photo Report does
@@ -43,19 +45,20 @@ The report refreshes to show campers for the selected season only.
 
 ## Read the report table
 
-The report table shows one row per camper for the selected season.
+The report table shows one row per camper (or staff member, when you switch the report to staff) for the selected season.
 
 Key behaviors:
 
-- **Camper name** appears as a link. Select it to open the camper profile in a new tab.
+- **Camper name** (or staff name) appears as a link. Select it to open the profile in a new tab.
 - A **camera icon** appears when a profile photo exists; select it to preview the photo.
 - The **Profile Photo** column shows **Yes** when a photo is on file and **No** when it is missing.
-- Rows for campers **missing** a profile photo are highlighted in **yellow**.
+- Rows for people **missing** a profile photo are highlighted in **yellow**.
 - Use the column headers to **sort** and the search box to **filter** by name or other visible fields.
+- Beside the Filter box, use **All**, **Has photo**, and **Missing photo** (each with a count) to narrow the table. Your choice is remembered in this browser. Exports and paging follow the filter you pick.
 
 <Callout kind="tip">
 
-Use the search box to find all campers in a cabin or session, then scan the yellow-highlighted rows to see who still needs a photo.
+Use **Missing photo** with the search box to focus on people who still need a photo in a cabin or session.
 
 </Callout>
 
@@ -88,8 +91,9 @@ CampiumDB remembers these display settings the next time you open the **Profile 
 
 Use the quick actions to review photos in bulk.
 
-- **Show All Photos**: Opens a page view of all current profile photos for campers in the report.
+- **Show All Photos**: Opens a page view of all current profile photos for people in the report.
 - **Print All Photos**: Generates a printable layout of all profile photos.
+- **Send Message**: When you have **Manage Email**, opens the shared Email / Text modal for the people currently shown (after **All** / **Has photo** / **Missing photo** and the Filter box). The button is unavailable when no rows are on screen.
 
 These actions use the **current season and filters** shown in the report table.
 
